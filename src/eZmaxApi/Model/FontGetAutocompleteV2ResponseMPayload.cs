@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FontGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Font autocomplete element response. (required).</param>
-        public FontGetAutocompleteV2ResponseMPayload(List<FontAutocompleteElementResponse>  = default(List<FontAutocompleteElementResponse>))
+        /// <param name="aObjFont">An array of Font autocomplete element response. (required).</param>
+        public FontGetAutocompleteV2ResponseMPayload(List<FontAutocompleteElementResponse> aObjFont = default(List<FontAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjFont" is required (not null)
+            if (aObjFont == null)
             {
-                throw new ArgumentNullException(" is a required property for FontGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjFont is a required property for FontGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjFont = ;
+            this.AObjFont = aObjFont;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

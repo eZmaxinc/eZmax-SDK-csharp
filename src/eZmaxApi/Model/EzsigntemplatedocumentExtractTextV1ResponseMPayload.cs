@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentExtractTextV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The text extract from document (required).</param>
-        public EzsigntemplatedocumentExtractTextV1ResponseMPayload(string  = default(string))
+        /// <param name="sText">The text extract from document (required).</param>
+        public EzsigntemplatedocumentExtractTextV1ResponseMPayload(string sText = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sText" is required (not null)
+            if (sText == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentExtractTextV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sText is a required property for EzsigntemplatedocumentExtractTextV1ResponseMPayload and cannot be null");
             }
-            this.SText = ;
+            this.SText = sText;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

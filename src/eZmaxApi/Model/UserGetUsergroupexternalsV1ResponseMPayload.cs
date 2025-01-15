@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetUsergroupexternalsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserGetUsergroupexternalsV1ResponseMPayload(List<UsergroupexternalResponseCompound>  = default(List<UsergroupexternalResponseCompound>))
+        /// <param name="aObjUsergroupexternal">aObjUsergroupexternal (required).</param>
+        public UserGetUsergroupexternalsV1ResponseMPayload(List<UsergroupexternalResponseCompound> aObjUsergroupexternal = default(List<UsergroupexternalResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjUsergroupexternal" is required (not null)
+            if (aObjUsergroupexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for UserGetUsergroupexternalsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjUsergroupexternal is a required property for UserGetUsergroupexternalsV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroupexternal = ;
+            this.AObjUsergroupexternal = aObjUsergroupexternal;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

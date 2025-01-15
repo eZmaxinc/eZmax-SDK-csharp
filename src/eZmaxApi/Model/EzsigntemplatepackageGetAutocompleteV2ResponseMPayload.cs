@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Ezsigntemplatepackage autocomplete element response. (required).</param>
-        public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload(List<EzsigntemplatepackageAutocompleteElementResponse>  = default(List<EzsigntemplatepackageAutocompleteElementResponse>))
+        /// <param name="aObjEzsigntemplatepackage">An array of Ezsigntemplatepackage autocomplete element response. (required).</param>
+        public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload(List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigntemplatepackage" is required (not null)
+            if (aObjEzsigntemplatepackage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsigntemplatepackage is a required property for EzsigntemplatepackageGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigntemplatepackage = ;
+            this.AObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

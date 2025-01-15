@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public CorsCreateObjectV1Request(List<CorsRequestCompound>  = default(List<CorsRequestCompound>))
+        /// <param name="aObjCors">aObjCors (required).</param>
+        public CorsCreateObjectV1Request(List<CorsRequestCompound> aObjCors = default(List<CorsRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCors" is required (not null)
+            if (aObjCors == null)
             {
-                throw new ArgumentNullException(" is a required property for CorsCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjCors is a required property for CorsCreateObjectV1Request and cannot be null");
             }
-            this.AObjCors = ;
+            this.AObjCors = aObjCors;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

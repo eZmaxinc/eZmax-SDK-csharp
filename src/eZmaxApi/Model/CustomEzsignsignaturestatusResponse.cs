@@ -67,18 +67,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignsignaturestatusResponse" /> class.
         /// </summary>
-        /// <param name="">Type of step (required).</param>
-        /// <param name="">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
-        /// <param name="">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
-        /// <param name="">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
-        /// <param name="">The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions. (required).</param>
-        public CustomEzsignsignaturestatusResponse(EEzsignsignaturestatusSteptypeEnum  = default(EEzsignsignaturestatusSteptypeEnum), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="eEzsignsignaturestatusSteptype">Type of step (required).</param>
+        /// <param name="iEzsignsignaturestatusStep">The step at which the Ezsignsigner will be invited to sign or fill the form fields (required).</param>
+        /// <param name="iEzsignsignaturestatusTotal">The total number of signature or form fields the Ezsignsigner must process at the current step (required).</param>
+        /// <param name="iEzsignsignaturestatusSigned">The number of signature or form fields the Ezsignsigner has already processed at the current step (required).</param>
+        /// <param name="iEzsignsignaturestatusConditional">The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions. (required).</param>
+        public CustomEzsignsignaturestatusResponse(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype = default(EEzsignsignaturestatusSteptypeEnum), int iEzsignsignaturestatusStep = default(int), int iEzsignsignaturestatusTotal = default(int), int iEzsignsignaturestatusSigned = default(int), int iEzsignsignaturestatusConditional = default(int))
         {
-            this.EEzsignsignaturestatusSteptype = ;
-            this.IEzsignsignaturestatusStep = ;
-            this.IEzsignsignaturestatusTotal = ;
-            this.IEzsignsignaturestatusSigned = ;
-            this.IEzsignsignaturestatusConditional = ;
+            this.EEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
+            this.IEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
+            this.IEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
+            this.IEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
+            this.IEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

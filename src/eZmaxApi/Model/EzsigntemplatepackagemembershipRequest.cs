@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership.</param>
-        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        public EzsigntemplatepackagemembershipRequest(int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership.</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        public EzsigntemplatepackagemembershipRequest(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int))
         {
-            this.FkiEzsigntemplatepackageID = ;
-            this.FkiEzsigntemplateID = ;
-            this.PkiEzsigntemplatepackagemembershipID = ;
+            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
         }
 
         /// <summary>
@@ -103,24 +103,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatepackagemembershipID (int) minimum
             if (this.PkiEzsigntemplatepackagemembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagemembershipID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagemembershipID" });
             }
 
             // FkiEzsigntemplatepackageID (int) minimum
             if (this.FkiEzsigntemplatepackageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             yield break;

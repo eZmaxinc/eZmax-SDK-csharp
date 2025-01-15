@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicGetFormsDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepublicGetFormsDataV1ResponseMPayload(List<CustomFormsDataFolderResponse>  = default(List<CustomFormsDataFolderResponse>))
+        /// <param name="aObjFormsDataFolder">aObjFormsDataFolder (required).</param>
+        public EzsigntemplatepublicGetFormsDataV1ResponseMPayload(List<CustomFormsDataFolderResponse> aObjFormsDataFolder = default(List<CustomFormsDataFolderResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjFormsDataFolder" is required (not null)
+            if (aObjFormsDataFolder == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicGetFormsDataV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjFormsDataFolder is a required property for EzsigntemplatepublicGetFormsDataV1ResponseMPayload and cannot be null");
             }
-            this.AObjFormsDataFolder = ;
+            this.AObjFormsDataFolder = aObjFormsDataFolder;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

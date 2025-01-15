@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlaccountcontainerGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Glaccountcontainer autocomplete element response. (required).</param>
-        public GlaccountcontainerGetAutocompleteV2ResponseMPayload(List<GlaccountcontainerAutocompleteElementResponse>  = default(List<GlaccountcontainerAutocompleteElementResponse>))
+        /// <param name="aObjGlaccountcontainer">An array of Glaccountcontainer autocomplete element response. (required).</param>
+        public GlaccountcontainerGetAutocompleteV2ResponseMPayload(List<GlaccountcontainerAutocompleteElementResponse> aObjGlaccountcontainer = default(List<GlaccountcontainerAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjGlaccountcontainer" is required (not null)
+            if (aObjGlaccountcontainer == null)
             {
-                throw new ArgumentNullException(" is a required property for GlaccountcontainerGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjGlaccountcontainer is a required property for GlaccountcontainerGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjGlaccountcontainer = ;
+            this.AObjGlaccountcontainer = aObjGlaccountcontainer;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

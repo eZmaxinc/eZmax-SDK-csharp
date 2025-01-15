@@ -82,7 +82,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserlogintypeGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Userlogintypes and IDs
@@ -99,7 +99,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserlogintypeGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -331,7 +331,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserlogintypeGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserlogintypeGetAutocompleteV2Response> UserlogintypeGetAutocompleteV2Async(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResponse = await UserlogintypeGetAutocompleteV2WithHttpInfoAsync(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -349,7 +349,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserlogintypeGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserlogintypeGetAutocompleteV2Response>> UserlogintypeGetAutocompleteV2WithHttpInfoAsync(string sSelector, int? fkiEzsignfoldertypeID = default(int?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)

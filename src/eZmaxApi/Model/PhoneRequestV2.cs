@@ -40,16 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneRequestV2" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Phone..</param>
-        /// <param name="">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="">A phone number in E.164 Format.</param>
-        public PhoneRequestV2(int  = default(int), int  = default(int), string  = default(string), string  = default(string))
+        /// <param name="pkiPhoneID">The unique ID of the Phone..</param>
+        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        public PhoneRequestV2(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), string sPhoneExtension = default(string), string sPhoneE164 = default(string))
         {
-            this.FkiPhonetypeID = ;
-            this.PkiPhoneID = ;
-            this.SPhoneExtension = ;
-            this.SPhoneE164 = ;
+            this.FkiPhonetypeID = fkiPhonetypeID;
+            this.PkiPhoneID = pkiPhoneID;
+            this.SPhoneExtension = sPhoneExtension;
+            this.SPhoneE164 = sPhoneE164;
         }
 
         /// <summary>
@@ -114,18 +114,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPhoneID (int) minimum
             if (this.PkiPhoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
+                yield return new ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
             }
 
             // FkiPhonetypeID (int) minimum
             if (this.FkiPhonetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
+                yield return new ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
             }
 
             if (this.SPhoneE164 != null) {

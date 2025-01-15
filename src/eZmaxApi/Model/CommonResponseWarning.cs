@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseWarning" /> class.
         /// </summary>
-        /// <param name="">More detail about the warning (required).</param>
-        /// <param name="">The warning code. See documentation for valid values (required).</param>
-        public CommonResponseWarning(string  = default(string), string  = default(string))
+        /// <param name="sWarningMessage">More detail about the warning (required).</param>
+        /// <param name="eWarningCode">The warning code. See documentation for valid values (required).</param>
+        public CommonResponseWarning(string sWarningMessage = default(string), string eWarningCode = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sWarningMessage" is required (not null)
+            if (sWarningMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseWarning and cannot be null");
+                throw new ArgumentNullException("sWarningMessage is a required property for CommonResponseWarning and cannot be null");
             }
-            this.SWarningMessage = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWarningMessage = sWarningMessage;
+            // to ensure "eWarningCode" is required (not null)
+            if (eWarningCode == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseWarning and cannot be null");
+                throw new ArgumentNullException("eWarningCode is a required property for CommonResponseWarning and cannot be null");
             }
-            this.EWarningCode = ;
+            this.EWarningCode = eWarningCode;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

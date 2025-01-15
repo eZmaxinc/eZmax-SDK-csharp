@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateEzsignuserV1Response</returns>
-        System.Threading.Tasks.Task<UserCreateEzsignuserV1Response> UserCreateEzsignuserV1Async(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserCreateEzsignuserV1Response> UserCreateEzsignuserV1Async(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new User of type Ezsignuser
@@ -83,7 +83,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateEzsignuserV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserCreateEzsignuserV1Response>> UserCreateEzsignuserV1WithHttpInfoAsync(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserCreateEzsignuserV1Response>> UserCreateEzsignuserV1WithHttpInfoAsync(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -288,7 +288,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateEzsignuserV1Response</returns>
-        public async System.Threading.Tasks.Task<UserCreateEzsignuserV1Response> UserCreateEzsignuserV1Async(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserCreateEzsignuserV1Response> UserCreateEzsignuserV1Async(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserCreateEzsignuserV1Response> localVarResponse = await UserCreateEzsignuserV1WithHttpInfoAsync(userCreateEzsignuserV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -302,7 +302,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateEzsignuserV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateEzsignuserV1Response>> UserCreateEzsignuserV1WithHttpInfoAsync(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateEzsignuserV1Response>> UserCreateEzsignuserV1WithHttpInfoAsync(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userCreateEzsignuserV1Request' is set
             if (userCreateEzsignuserV1Request == null)

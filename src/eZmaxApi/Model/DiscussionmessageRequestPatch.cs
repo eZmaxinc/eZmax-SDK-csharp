@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageRequestPatch" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Discussionmembership.</param>
-        /// <param name="">The content of the Discussionmessage.</param>
-        public DiscussionmessageRequestPatch(int  = default(int), string  = default(string))
+        /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
+        /// <param name="tDiscussionmessageContent">The content of the Discussionmessage.</param>
+        public DiscussionmessageRequestPatch(int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string))
         {
-            this.FkiDiscussionmembershipIDActionrequired = ;
-            this.TDiscussionmessageContent = ;
+            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
+            this.TDiscussionmessageContent = tDiscussionmessageContent;
         }
 
         /// <summary>
@@ -87,18 +87,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiDiscussionmembershipIDActionrequired (int) maximum
             if (this.FkiDiscussionmembershipIDActionrequired > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) minimum
             if (this.FkiDiscussionmembershipIDActionrequired < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             if (this.TDiscussionmessageContent != null) {

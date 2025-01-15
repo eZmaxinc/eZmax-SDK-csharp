@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualBillingentityinternalDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Billingentityinternal in French.</param>
-        /// <param name="">The description of the Billingentityinternal in English.</param>
-        public MultilingualBillingentityinternalDescription(string  = default(string), string  = default(string))
+        /// <param name="sBillingentityinternalDescription1">The description of the Billingentityinternal in French.</param>
+        /// <param name="sBillingentityinternalDescription2">The description of the Billingentityinternal in English.</param>
+        public MultilingualBillingentityinternalDescription(string sBillingentityinternalDescription1 = default(string), string sBillingentityinternalDescription2 = default(string))
         {
-            this.SBillingentityinternalDescription1 = ;
-            this.SBillingentityinternalDescription2 = ;
+            this.SBillingentityinternalDescription1 = sBillingentityinternalDescription1;
+            this.SBillingentityinternalDescription2 = sBillingentityinternalDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SBillingentityinternalDescription1 != null) {
                 // SBillingentityinternalDescription1 (string) pattern

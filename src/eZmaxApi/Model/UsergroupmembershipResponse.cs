@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroupmembership (required).</param>
-        /// <param name="">The unique ID of the Usergroup (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Usergroupexternal.</param>
-        /// <param name="">The first name of the user.</param>
-        /// <param name="">The last name of the user.</param>
-        /// <param name="">The login name of the User..</param>
-        /// <param name="">The email address..</param>
-        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
-        /// <param name="">The name of the Usergroupexternal.</param>
-        public UsergroupmembershipResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership (required).</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupexternalID">The unique ID of the Usergroupexternal.</param>
+        /// <param name="sUserFirstname">The first name of the user.</param>
+        /// <param name="sUserLastname">The last name of the user.</param>
+        /// <param name="sUserLoginname">The login name of the User..</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
+        /// <param name="sUsergroupexternalName">The name of the Usergroupexternal.</param>
+        public UsergroupmembershipResponse(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), int fkiUsergroupexternalID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string), string sUsergroupexternalName = default(string))
         {
-            this.PkiUsergroupmembershipID = ;
-            this.FkiUsergroupID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUsergroupmembershipID = pkiUsergroupmembershipID;
+            this.FkiUsergroupID = fkiUsergroupID;
+            // to ensure "sUsergroupNameX" is required (not null)
+            if (sUsergroupNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupmembershipResponse and cannot be null");
+                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupmembershipResponse and cannot be null");
             }
-            this.SUsergroupNameX = ;
-            this.FkiUserID = ;
-            this.FkiUsergroupexternalID = ;
-            this.SUserFirstname = ;
-            this.SUserLastname = ;
-            this.SUserLoginname = ;
-            this.SEmailAddress = ;
-            this.SUsergroupexternalName = ;
+            this.SUsergroupNameX = sUsergroupNameX;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupexternalID = fkiUsergroupexternalID;
+            this.SUserFirstname = sUserFirstname;
+            this.SUserLastname = sUserLastname;
+            this.SUserLoginname = sUserLoginname;
+            this.SEmailAddress = sEmailAddress;
+            this.SUsergroupexternalName = sUsergroupexternalName;
         }
 
         /// <summary>
@@ -185,48 +185,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupmembershipID (int) maximum
             if (this.PkiUsergroupmembershipID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
             }
 
             // PkiUsergroupmembershipID (int) minimum
             if (this.PkiUsergroupmembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUsergroupexternalID (int) maximum
             if (this.FkiUsergroupexternalID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
             }
 
             // FkiUsergroupexternalID (int) minimum
             if (this.FkiUsergroupexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
             }
 
             if (this.SUserLoginname != null) {

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SystemconfigurationGetObjectV2ResponseMPayload(SystemconfigurationResponseCompound  = default(SystemconfigurationResponseCompound))
+        /// <param name="objSystemconfiguration">objSystemconfiguration (required).</param>
+        public SystemconfigurationGetObjectV2ResponseMPayload(SystemconfigurationResponseCompound objSystemconfiguration = default(SystemconfigurationResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objSystemconfiguration" is required (not null)
+            if (objSystemconfiguration == null)
             {
-                throw new ArgumentNullException(" is a required property for SystemconfigurationGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objSystemconfiguration is a required property for SystemconfigurationGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSystemconfiguration = ;
+            this.ObjSystemconfiguration = objSystemconfiguration;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

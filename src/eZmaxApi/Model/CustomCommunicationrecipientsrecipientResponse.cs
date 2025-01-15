@@ -150,53 +150,53 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationrecipientsrecipientResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Agent..</param>
-        /// <param name="">The unique ID of the Broker..</param>
-        /// <param name="">The unique ID of the Contact.</param>
-        /// <param name="">The unique ID of the Customer..</param>
-        /// <param name="">The unique ID of the Employee..</param>
-        /// <param name="">The unique ID of the Ezsignsigner.</param>
-        /// <param name="">The unique ID of the Franchisereoffice.</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Agentincorporation..</param>
-        /// <param name="">The unique ID of the Assistant..</param>
-        /// <param name="">The unique ID of the Externalbroker..</param>
-        /// <param name="">The unique ID of the Ezcomagent..</param>
-        /// <param name="">The unique ID of the Notary..</param>
-        /// <param name="">The unique ID of the Rewardmember..</param>
-        /// <param name="">The unique ID of the Supplier..</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public CustomCommunicationrecipientsrecipientResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), ECommunicationrecipientsrecipientObjecttypeEnum  = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse  = default(CustomContactNameResponse), EmailResponseCompound  = default(EmailResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound))
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiContactID">The unique ID of the Contact.</param>
+        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiAgentincorporationID">The unique ID of the Agentincorporation..</param>
+        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
+        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
+        /// <param name="fkiEzcomagentID">The unique ID of the Ezcomagent..</param>
+        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
+        /// <param name="fkiRewardmemberID">The unique ID of the Rewardmember..</param>
+        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
+        /// <param name="eCommunicationrecipientsrecipientObjecttype">eCommunicationrecipientsrecipientObjecttype (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="objEmail">An Email Object and children to create a complete structure.</param>
+        /// <param name="objPhoneFax">objPhoneFax.</param>
+        /// <param name="objPhoneSMS">objPhoneSMS.</param>
+        public CustomCommunicationrecipientsrecipientResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponse objEmail = default(EmailResponse), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
         {
-            this.ECommunicationrecipientsrecipientObjecttype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ECommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
+            // to ensure "objContactName" is required (not null)
+            if (objContactName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCommunicationrecipientsrecipientResponse and cannot be null");
+                throw new ArgumentNullException("objContactName is a required property for CustomCommunicationrecipientsrecipientResponse and cannot be null");
             }
-            this.ObjContactName = ;
-            this.FkiAgentID = ;
-            this.FkiBrokerID = ;
-            this.FkiContactID = ;
-            this.FkiCustomerID = ;
-            this.FkiEmployeeID = ;
-            this.FkiEzsignsignerID = ;
-            this.FkiFranchiseofficeID = ;
-            this.FkiUserID = ;
-            this.FkiAgentincorporationID = ;
-            this.FkiAssistantID = ;
-            this.FkiExternalbrokerID = ;
-            this.FkiEzcomagentID = ;
-            this.FkiNotaryID = ;
-            this.FkiRewardmemberID = ;
-            this.FkiSupplierID = ;
-            this.ObjEmail = ;
-            this.ObjPhoneFax = ;
-            this.ObjPhoneSMS = ;
+            this.ObjContactName = objContactName;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiContactID = fkiContactID;
+            this.FkiCustomerID = fkiCustomerID;
+            this.FkiEmployeeID = fkiEmployeeID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
+            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
+            this.FkiUserID = fkiUserID;
+            this.FkiAgentincorporationID = fkiAgentincorporationID;
+            this.FkiAssistantID = fkiAssistantID;
+            this.FkiExternalbrokerID = fkiExternalbrokerID;
+            this.FkiEzcomagentID = fkiEzcomagentID;
+            this.FkiNotaryID = fkiNotaryID;
+            this.FkiRewardmemberID = fkiRewardmemberID;
+            this.FkiSupplierID = fkiSupplierID;
+            this.ObjEmail = objEmail;
+            this.ObjPhoneFax = objPhoneFax;
+            this.ObjPhoneSMS = objPhoneSMS;
         }
 
         /// <summary>
@@ -326,10 +326,11 @@ namespace eZmaxApi.Model
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmail
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", EmitDefaultValue = false)]
-        public EmailResponseCompound ObjEmail { get; set; }
+        public EmailResponse ObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneFax
@@ -389,96 +390,96 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiContactID (int) minimum
             if (this.FkiContactID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
+                yield return new ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
             }
 
             // FkiCustomerID (int) minimum
             if (this.FkiCustomerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
+                yield return new ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
             }
 
             // FkiEmployeeID (int) minimum
             if (this.FkiEmployeeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
             }
 
             // FkiEzsignsignerID (int) minimum
             if (this.FkiEzsignsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
             }
 
             // FkiFranchiseofficeID (int) minimum
             if (this.FkiFranchiseofficeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiAgentincorporationID (int) minimum
             if (this.FkiAgentincorporationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentincorporationID, must be a value greater than or equal to 0.", new [] { "FkiAgentincorporationID" });
+                yield return new ValidationResult("Invalid value for FkiAgentincorporationID, must be a value greater than or equal to 0.", new [] { "FkiAgentincorporationID" });
             }
 
             // FkiAssistantID (int) minimum
             if (this.FkiAssistantID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
+                yield return new ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
             }
 
             // FkiExternalbrokerID (int) minimum
             if (this.FkiExternalbrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
+                yield return new ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
             }
 
             // FkiEzcomagentID (int) minimum
             if (this.FkiEzcomagentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzcomagentID, must be a value greater than or equal to 0.", new [] { "FkiEzcomagentID" });
+                yield return new ValidationResult("Invalid value for FkiEzcomagentID, must be a value greater than or equal to 0.", new [] { "FkiEzcomagentID" });
             }
 
             // FkiNotaryID (int) minimum
             if (this.FkiNotaryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
+                yield return new ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
             }
 
             // FkiRewardmemberID (int) minimum
             if (this.FkiRewardmemberID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiRewardmemberID, must be a value greater than or equal to 0.", new [] { "FkiRewardmemberID" });
+                yield return new ValidationResult("Invalid value for FkiRewardmemberID, must be a value greater than or equal to 0.", new [] { "FkiRewardmemberID" });
             }
 
             // FkiSupplierID (int) minimum
             if (this.FkiSupplierID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
+                yield return new ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
             }
 
             yield break;

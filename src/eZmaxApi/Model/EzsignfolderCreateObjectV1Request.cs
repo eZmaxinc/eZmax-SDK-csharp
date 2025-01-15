@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest  = default(EzsignfolderRequest), EzsignfolderRequestCompound  = default(EzsignfolderRequestCompound))
+        /// <param name="objEzsignfolder">objEzsignfolder.</param>
+        /// <param name="objEzsignfolderCompound">An Ezsignfolder Object and children to create a complete structure.</param>
+        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest objEzsignfolder = default(EzsignfolderRequest), EzsignfolderRequest objEzsignfolderCompound = default(EzsignfolderRequest))
         {
-            this.ObjEzsignfolder = ;
-            this.ObjEzsignfolderCompound = ;
+            this.ObjEzsignfolder = objEzsignfolder;
+            this.ObjEzsignfolderCompound = objEzsignfolderCompound;
         }
 
         /// <summary>
@@ -50,10 +50,11 @@ namespace eZmaxApi.Model
         public EzsignfolderRequest ObjEzsignfolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEzsignfolderCompound
+        /// An Ezsignfolder Object and children to create a complete structure
         /// </summary>
+        /// <value>An Ezsignfolder Object and children to create a complete structure</value>
         [DataMember(Name = "objEzsignfolderCompound", EmitDefaultValue = false)]
-        public EzsignfolderRequestCompound ObjEzsignfolderCompound { get; set; }
+        public EzsignfolderRequest ObjEzsignfolderCompound { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

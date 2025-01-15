@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BillingentityinternalEditObjectV1Response</returns>
-        BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Billingentityinternal
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
-        ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -169,7 +169,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Billingentityinternal
@@ -182,7 +182,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Billingentityinternal
         /// </summary>
@@ -194,8 +194,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Billingentityinternal
@@ -208,8 +208,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalGetAutocompleteV2Response> BillingentityinternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityinternalGetAutocompleteV2Response> BillingentityinternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
@@ -240,7 +240,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetAutocompleteV2Response>> BillingentityinternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetAutocompleteV2Response>> BillingentityinternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Billingentityinternal list
         /// </summary>
@@ -256,7 +256,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetListV1Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Billingentityinternal list
@@ -273,7 +273,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Billingentityinternal
         /// </summary>
@@ -285,7 +285,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Billingentityinternal
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityinternalCreateObjectV1Response> BillingentityinternalCreateObjectV1Async(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityinternalCreateObjectV1Response> localVarResponse = await BillingentityinternalCreateObjectV1WithHttpInfoAsync(billingentityinternalCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -517,7 +517,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalCreateObjectV1Response>> BillingentityinternalCreateObjectV1WithHttpInfoAsync(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
             if (billingentityinternalCreateObjectV1Request == null)
@@ -582,10 +582,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BillingentityinternalEditObjectV1Response</returns>
-        public BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -596,8 +596,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
             if (billingentityinternalEditObjectV1Request == null)
@@ -641,7 +641,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<BillingentityinternalEditObjectV1Response>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BillingentityinternalEditObjectV1", localVarResponse);
@@ -662,10 +662,10 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = await BillingentityinternalEditObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await BillingentityinternalEditObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +677,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
             if (billingentityinternalEditObjectV1Request == null)
@@ -723,7 +723,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<BillingentityinternalEditObjectV1Response>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -841,7 +841,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalGetAutocompleteV2Response> BillingentityinternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityinternalGetAutocompleteV2Response> BillingentityinternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityinternalGetAutocompleteV2Response> localVarResponse = await BillingentityinternalGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -858,7 +858,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetAutocompleteV2Response>> BillingentityinternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetAutocompleteV2Response>> BillingentityinternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1036,7 +1036,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityinternalGetListV1Response> BillingentityinternalGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityinternalGetListV1Response> localVarResponse = await BillingentityinternalGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1054,7 +1054,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetListV1Response>> BillingentityinternalGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1202,7 +1202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityinternalGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityinternalGetObjectV2Response> BillingentityinternalGetObjectV2Async(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityinternalGetObjectV2Response> localVarResponse = await BillingentityinternalGetObjectV2WithHttpInfoAsync(pkiBillingentityinternalID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1216,7 +1216,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityinternalGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalGetObjectV2Response>> BillingentityinternalGetObjectV2WithHttpInfoAsync(int pkiBillingentityinternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

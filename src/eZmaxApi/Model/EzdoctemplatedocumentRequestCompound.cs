@@ -46,29 +46,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezdoctemplatedocument.</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether the ezdoctemplatedocument is active or not (required).</param>
-        /// <param name=""> (required).</param>
-        public EzdoctemplatedocumentRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzdoctemplatedocumentPrivacylevel?  = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool  = default(bool), MultilingualEzdoctemplatedocumentName  = default(MultilingualEzdoctemplatedocumentName))
+        /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument.</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="fkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
+        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
+        /// <param name="eEzdoctemplatedocumentPrivacylevel">eEzdoctemplatedocumentPrivacylevel.</param>
+        /// <param name="bEzdoctemplatedocumentIsactive">Whether the ezdoctemplatedocument is active or not (required).</param>
+        /// <param name="objEzdoctemplatedocumentName">objEzdoctemplatedocumentName (required).</param>
+        public EzdoctemplatedocumentRequestCompound(int pkiEzdoctemplatedocumentID = default(int), int fkiLanguageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzdoctemplatetypeID = default(int), int fkiEzdoctemplatefieldtypecategoryID = default(int), FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool bEzdoctemplatedocumentIsactive = default(bool), MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default(MultilingualEzdoctemplatedocumentName))
         {
-            this.FkiLanguageID = ;
-            this.FkiEzdoctemplatetypeID = ;
-            this.FkiEzdoctemplatefieldtypecategoryID = ;
-            this.BEzdoctemplatedocumentIsactive = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiLanguageID = fkiLanguageID;
+            this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
+            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
+            this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
+            // to ensure "objEzdoctemplatedocumentName" is required (not null)
+            if (objEzdoctemplatedocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatedocumentRequestCompound and cannot be null");
+                throw new ArgumentNullException("objEzdoctemplatedocumentName is a required property for EzdoctemplatedocumentRequestCompound and cannot be null");
             }
-            this.ObjEzdoctemplatedocumentName = ;
-            this.PkiEzdoctemplatedocumentID = ;
-            this.FkiEzsignfoldertypeID = ;
-            this.EEzdoctemplatedocumentPrivacylevel = ;
+            this.ObjEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
+            this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.EEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
         }
 
         /// <summary>
@@ -159,66 +159,66 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzdoctemplatedocumentID (int) maximum
             if (this.PkiEzdoctemplatedocumentID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
             }
 
             // PkiEzdoctemplatedocumentID (int) minimum
             if (this.PkiEzdoctemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzdoctemplatetypeID (int) maximum
             if (this.FkiEzdoctemplatetypeID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
             }
 
             // FkiEzdoctemplatetypeID (int) minimum
             if (this.FkiEzdoctemplatetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
             }
 
             // FkiEzdoctemplatefieldtypecategoryID (int) maximum
             if (this.FkiEzdoctemplatefieldtypecategoryID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
             }
 
             // FkiEzdoctemplatefieldtypecategoryID (int) minimum
             if (this.FkiEzdoctemplatefieldtypecategoryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
             }
 
             yield break;

@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The description of the User in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">Whether the User is active or not (required).</param>
-        public UserAutocompleteElementResponse(FieldEUserType  = default(FieldEUserType), string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="sUserName">The description of the User in the language of the requester (required).</param>
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        public UserAutocompleteElementResponse(FieldEUserType eUserType = default(FieldEUserType), string sUserName = default(string), int pkiUserID = default(int), bool bUserIsactive = default(bool))
         {
-            this.EUserType = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EUserType = eUserType;
+            // to ensure "sUserName" is required (not null)
+            if (sUserName == null)
             {
-                throw new ArgumentNullException(" is a required property for UserAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sUserName is a required property for UserAutocompleteElementResponse and cannot be null");
             }
-            this.SUserName = ;
-            this.PkiUserID = ;
-            this.BUserIsactive = ;
+            this.SUserName = sUserName;
+            this.PkiUserID = pkiUserID;
+            this.BUserIsactive = bUserIsactive;
         }
 
         /// <summary>
@@ -117,12 +117,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             yield break;

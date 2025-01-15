@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsigningreason (required).</param>
-        /// <param name="">The description of the Ezsignsigningreason in the language of the requester (required).</param>
-        /// <param name="">Whether the ezsignsigningreason is active or not (required).</param>
-        public EzsignsigningreasonAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason (required).</param>
+        /// <param name="sEzsignsigningreasonDescriptionX">The description of the Ezsignsigningreason in the language of the requester (required).</param>
+        /// <param name="bEzsignsigningreasonIsactive">Whether the ezsignsigningreason is active or not (required).</param>
+        public EzsignsigningreasonAutocompleteElementResponse(int pkiEzsignsigningreasonID = default(int), string sEzsignsigningreasonDescriptionX = default(string), bool bEzsignsigningreasonIsactive = default(bool))
         {
-            this.PkiEzsignsigningreasonID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
+            // to ensure "sEzsignsigningreasonDescriptionX" is required (not null)
+            if (sEzsignsigningreasonDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsigningreasonAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignsigningreasonDescriptionX is a required property for EzsignsigningreasonAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsignsigningreasonDescriptionX = ;
-            this.BEzsignsigningreasonIsactive = ;
+            this.SEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
+            this.BEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsigningreasonID (int) maximum
             if (this.PkiEzsignsigningreasonID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "PkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "PkiEzsignsigningreasonID" });
             }
 
             // PkiEzsignsigningreasonID (int) minimum
             if (this.PkiEzsignsigningreasonID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsigningreasonID" });
             }
 
             if (this.SEzsignsigningreasonDescriptionX != null) {

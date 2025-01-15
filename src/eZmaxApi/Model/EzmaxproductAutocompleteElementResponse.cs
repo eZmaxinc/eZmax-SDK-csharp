@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxproductAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="">Whether the Ezmaxproduct is active or not (required).</param>
-        public EzmaxproductAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="bEzmaxproductIsactive">Whether the Ezmaxproduct is active or not (required).</param>
+        public EzmaxproductAutocompleteElementResponse(int pkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), bool bEzmaxproductIsactive = default(bool))
         {
-            this.PkiEzmaxproductID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzmaxproductID = pkiEzmaxproductID;
+            // to ensure "sEzmaxproductDescriptionX" is required (not null)
+            if (sEzmaxproductDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxproductAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxproductAutocompleteElementResponse and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = ;
-            this.BEzmaxproductIsactive = ;
+            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+            this.BEzmaxproductIsactive = bEzmaxproductIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxproductID (int) minimum
             if (this.PkiEzmaxproductID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxproductID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxproductID" });
             }
 
             yield break;

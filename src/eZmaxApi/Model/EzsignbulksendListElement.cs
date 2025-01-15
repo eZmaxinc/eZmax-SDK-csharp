@@ -40,40 +40,40 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="">The description of the Ezsignbulksend (required).</param>
-        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        /// <param name="">The total number of Ezsignbulksendtransmissions in the Ezsignbulksend (required).</param>
-        /// <param name="">The total number of Ezsignfolders in the Ezsignbulksend (required).</param>
-        /// <param name="">The total number of Ezsigndocuments in the Ezsignbulksend (required).</param>
-        /// <param name="">The total number of Ezsignsignature in the Ezsignbulksend (required).</param>
-        /// <param name="">The total number of already signed Ezsignsignature blocks in the Ezsignbulksend (required).</param>
-        /// <param name="">Whether the Ezsignbulksend is active or not (required).</param>
-        public EzsignbulksendListElement(int  = default(int), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool))
+        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        /// <param name="iEzsignbulksendtransmission">The total number of Ezsignbulksendtransmissions in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignfolder">The total number of Ezsignfolders in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsigndocument">The total number of Ezsigndocuments in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignsignature">The total number of Ezsignsignature in the Ezsignbulksend (required).</param>
+        /// <param name="iEzsignsignatureSigned">The total number of already signed Ezsignsignature blocks in the Ezsignbulksend (required).</param>
+        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
+        public EzsignbulksendListElement(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), string sEzsignbulksendDescription = default(string), string sEzsignfoldertypeNameX = default(string), bool bEzsignbulksendNeedvalidation = default(bool), int iEzsignbulksendtransmission = default(int), int iEzsignfolder = default(int), int iEzsigndocument = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int), bool bEzsignbulksendIsactive = default(bool))
         {
-            this.PkiEzsignbulksendID = ;
-            this.FkiEzsignfoldertypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignbulksendID = pkiEzsignbulksendID;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            // to ensure "sEzsignbulksendDescription" is required (not null)
+            if (sEzsignbulksendDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendListElement and cannot be null");
+                throw new ArgumentNullException("sEzsignbulksendDescription is a required property for EzsignbulksendListElement and cannot be null");
             }
-            this.SEzsignbulksendDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignbulksendDescription = sEzsignbulksendDescription;
+            // to ensure "sEzsignfoldertypeNameX" is required (not null)
+            if (sEzsignfoldertypeNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendListElement and cannot be null");
+                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsignbulksendListElement and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = ;
-            this.BEzsignbulksendNeedvalidation = ;
-            this.IEzsignbulksendtransmission = ;
-            this.IEzsignfolder = ;
-            this.IEzsigndocument = ;
-            this.IEzsignsignature = ;
-            this.IEzsignsignatureSigned = ;
-            this.BEzsignbulksendIsactive = ;
+            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+            this.IEzsignbulksendtransmission = iEzsignbulksendtransmission;
+            this.IEzsignfolder = iEzsignfolder;
+            this.IEzsigndocument = iEzsigndocument;
+            this.IEzsignsignature = iEzsignsignature;
+            this.IEzsignsignatureSigned = iEzsignsignatureSigned;
+            this.BEzsignbulksendIsactive = bEzsignbulksendIsactive;
         }
 
         /// <summary>
@@ -195,24 +195,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksendID (int) minimum
             if (this.PkiEzsignbulksendID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             yield break;

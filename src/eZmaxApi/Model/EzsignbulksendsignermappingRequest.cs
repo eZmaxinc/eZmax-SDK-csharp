@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignbulksendsignermapping.</param>
-        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The description of the Ezsignbulksendsignermapping (required).</param>
-        public EzsignbulksendsignermappingRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiEzsignbulksendsignermappingID">The unique ID of the Ezsignbulksendsignermapping.</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="sEzsignbulksendsignermappingDescription">The description of the Ezsignbulksendsignermapping (required).</param>
+        public EzsignbulksendsignermappingRequest(int pkiEzsignbulksendsignermappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiUserID = default(int), string sEzsignbulksendsignermappingDescription = default(string))
         {
-            this.FkiEzsignbulksendID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            // to ensure "sEzsignbulksendsignermappingDescription" is required (not null)
+            if (sEzsignbulksendsignermappingDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendsignermappingRequest and cannot be null");
+                throw new ArgumentNullException("sEzsignbulksendsignermappingDescription is a required property for EzsignbulksendsignermappingRequest and cannot be null");
             }
-            this.SEzsignbulksendsignermappingDescription = ;
-            this.PkiEzsignbulksendsignermappingID = ;
-            this.FkiUserID = ;
+            this.SEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
+            this.PkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
+            this.FkiUserID = fkiUserID;
         }
 
         /// <summary>
@@ -119,24 +119,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksendsignermappingID (int) minimum
             if (this.PkiEzsignbulksendsignermappingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendsignermappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendsignermappingID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendsignermappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendsignermappingID" });
             }
 
             // FkiEzsignbulksendID (int) minimum
             if (this.FkiEzsignbulksendID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             yield break;

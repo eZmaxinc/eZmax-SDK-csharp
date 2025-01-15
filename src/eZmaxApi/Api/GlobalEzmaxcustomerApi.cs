@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GlobalEzmaxcustomerGetConfigurationV1Response</returns>
-        System.Threading.Tasks.Task<GlobalEzmaxcustomerGetConfigurationV1Response> GlobalEzmaxcustomerGetConfigurationV1Async(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GlobalEzmaxcustomerGetConfigurationV1Response> GlobalEzmaxcustomerGetConfigurationV1Async(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get ezmaxcustomer configuration
@@ -83,7 +83,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GlobalEzmaxcustomerGetConfigurationV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response>> GlobalEzmaxcustomerGetConfigurationV1WithHttpInfoAsync(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response>> GlobalEzmaxcustomerGetConfigurationV1WithHttpInfoAsync(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -282,7 +282,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GlobalEzmaxcustomerGetConfigurationV1Response</returns>
-        public async System.Threading.Tasks.Task<GlobalEzmaxcustomerGetConfigurationV1Response> GlobalEzmaxcustomerGetConfigurationV1Async(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GlobalEzmaxcustomerGetConfigurationV1Response> GlobalEzmaxcustomerGetConfigurationV1Async(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response> localVarResponse = await GlobalEzmaxcustomerGetConfigurationV1WithHttpInfoAsync(pksEzmaxcustomerCode, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -296,7 +296,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GlobalEzmaxcustomerGetConfigurationV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response>> GlobalEzmaxcustomerGetConfigurationV1WithHttpInfoAsync(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<GlobalEzmaxcustomerGetConfigurationV1Response>> GlobalEzmaxcustomerGetConfigurationV1WithHttpInfoAsync(string pksEzmaxcustomerCode, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'pksEzmaxcustomerCode' is set
             if (pksEzmaxcustomerCode == null)

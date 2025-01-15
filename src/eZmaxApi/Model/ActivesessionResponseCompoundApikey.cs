@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundApikey" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Apikey (required).</param>
-        /// <param name="">The description of the Apikey in the language of the requester (required).</param>
-        public ActivesessionResponseCompoundApikey(int  = default(int), string  = default(string))
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
+        public ActivesessionResponseCompoundApikey(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string))
         {
-            this.PkiApikeyID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiApikeyID = pkiApikeyID;
+            // to ensure "sApikeyDescriptionX" is required (not null)
+            if (sApikeyDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundApikey and cannot be null");
+                throw new ArgumentNullException("sApikeyDescriptionX is a required property for ActivesessionResponseCompoundApikey and cannot be null");
             }
-            this.SApikeyDescriptionX = ;
+            this.SApikeyDescriptionX = sApikeyDescriptionX;
         }
 
         /// <summary>
@@ -97,12 +97,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiApikeyID (int) minimum
             if (this.PkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
+                yield return new ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
             }
 
             yield break;

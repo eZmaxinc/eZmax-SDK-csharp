@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualSubnetDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Subnet in French.</param>
-        /// <param name="">The description of the Subnet in English.</param>
-        public MultilingualSubnetDescription(string  = default(string), string  = default(string))
+        /// <param name="sSubnetDescription1">The description of the Subnet in French.</param>
+        /// <param name="sSubnetDescription2">The description of the Subnet in English.</param>
+        public MultilingualSubnetDescription(string sSubnetDescription1 = default(string), string sSubnetDescription2 = default(string))
         {
-            this.SSubnetDescription1 = ;
-            this.SSubnetDescription2 = ;
+            this.SSubnetDescription1 = sSubnetDescription1;
+            this.SSubnetDescription2 = sSubnetDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SSubnetDescription1 != null) {
                 // SSubnetDescription1 (string) pattern

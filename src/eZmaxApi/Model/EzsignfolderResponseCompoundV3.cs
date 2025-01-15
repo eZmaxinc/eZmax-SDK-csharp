@@ -64,69 +64,69 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderResponseCompoundV3" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="">.</param>
-        /// <param name="">The unique ID of the Timezone.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">The unique ID of the Billingentityinternal..</param>
-        /// <param name="">The description of the Billingentityinternal in the language of the requester.</param>
-        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="">The description of the Ezsigntsarequirement in the language of the requester.</param>
-        /// <param name="">The description of the Ezsignfolder (required).</param>
-        /// <param name="">Note about the Ezsignfolder.</param>
-        /// <param name="">If the Ezsigndocument can be disposed.</param>
-        /// <param name="">The number of days before the the first reminder sending.</param>
-        /// <param name="">The number of days after the first reminder sending.</param>
-        /// <param name="">The date and time at which the Ezsignfolder will be sent in the future..</param>
-        /// <param name="">The maximum date and time at which the Ezsignfolder can be signed..</param>
-        /// <param name="">The date and time at which the Ezsignfolder was sent the last time..</param>
-        /// <param name="">The scheduled date and time at which the Ezsignfolder should be archived..</param>
-        /// <param name="">The scheduled date at which the Ezsignfolder should be Disposed..</param>
-        /// <param name="">.</param>
-        /// <param name="">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
-        /// <param name="">A custom text message that will be added to the email sent..</param>
-        /// <param name="">.</param>
-        /// <param name="">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignfolderResponseCompoundV3(int  = default(int), int  = default(int), CustomEzsignfoldertypeResponse  = default(CustomEzsignfoldertypeResponse), int  = default(int), FieldEEzsignfolderCompletion  = default(FieldEEzsignfolderCompletion), FieldEEzsignfolderDocumentdependency?  = default(FieldEEzsignfolderDocumentdependency?), string  = default(string), int  = default(int), string  = default(string), int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEEzsignfolderStep?  = default(FieldEEzsignfolderStep?), string  = default(string), string  = default(string), CommonAudit  = default(CommonAudit), string  = default(string), ComputedEEzsignfolderAccess?  = default(ComputedEEzsignfolderAccess?), CustomTimezoneWithCodeResponse  = default(CustomTimezoneWithCodeResponse))
+        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="objEzsignfoldertype">A Custom Ezsignfoldertype Object.</param>
+        /// <param name="fkiTimezoneID">The unique ID of the Timezone.</param>
+        /// <param name="eEzsignfolderCompletion">eEzsignfolderCompletion (required).</param>
+        /// <param name="eEzsignfolderDocumentdependency">eEzsignfolderDocumentdependency.</param>
+        /// <param name="sEzsignfoldertypeNameX">sEzsignfoldertypeNameX.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
+        /// <param name="bEzsignfolderIsdisposable">If the Ezsigndocument can be disposed.</param>
+        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the the first reminder sending.</param>
+        /// <param name="iEzsignfolderSendreminderotherdays">The number of days after the first reminder sending.</param>
+        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
+        /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
+        /// <param name="dtEzsignfolderSentdate">The date and time at which the Ezsignfolder was sent the last time..</param>
+        /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived..</param>
+        /// <param name="dtEzsignfolderScheduleddispose">The scheduled date at which the Ezsignfolder should be Disposed..</param>
+        /// <param name="eEzsignfolderStep">eEzsignfolderStep.</param>
+        /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
+        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
+        /// <param name="objAudit">objAudit.</param>
+        /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
+        /// <param name="eEzsignfolderAccess">eEzsignfolderAccess.</param>
+        /// <param name="objTimezone">objTimezone.</param>
+        public EzsignfolderResponseCompoundV3(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), Object objEzsignfoldertype = default(Object), int fkiTimezoneID = default(int), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default(FieldEEzsignfolderDocumentdependency?), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string), ComputedEEzsignfolderAccess? eEzsignfolderAccess = default(ComputedEEzsignfolderAccess?), CustomTimezoneWithCodeResponse objTimezone = default(CustomTimezoneWithCodeResponse))
         {
-            this.PkiEzsignfolderID = ;
-            this.EEzsignfolderCompletion = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignfolderID = pkiEzsignfolderID;
+            this.EEzsignfolderCompletion = eEzsignfolderCompletion;
+            // to ensure "sEzsignfolderDescription" is required (not null)
+            if (sEzsignfolderDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderResponseCompoundV3 and cannot be null");
+                throw new ArgumentNullException("sEzsignfolderDescription is a required property for EzsignfolderResponseCompoundV3 and cannot be null");
             }
-            this.SEzsignfolderDescription = ;
-            this.FkiEzsignfoldertypeID = ;
-            this.ObjEzsignfoldertype = ;
-            this.FkiTimezoneID = ;
-            this.EEzsignfolderDocumentdependency = ;
-            this.SEzsignfoldertypeNameX = ;
-            this.FkiBillingentityinternalID = ;
-            this.SBillingentityinternalDescriptionX = ;
-            this.FkiEzsigntsarequirementID = ;
-            this.SEzsigntsarequirementDescriptionX = ;
-            this.TEzsignfolderNote = ;
-            this.BEzsignfolderIsdisposable = ;
-            this.IEzsignfolderSendreminderfirstdays = ;
-            this.IEzsignfolderSendreminderotherdays = ;
-            this.DtEzsignfolderDelayedsenddate = ;
-            this.DtEzsignfolderDuedate = ;
-            this.DtEzsignfolderSentdate = ;
-            this.DtEzsignfolderScheduledarchive = ;
-            this.DtEzsignfolderScheduleddispose = ;
-            this.EEzsignfolderStep = ;
-            this.DtEzsignfolderClose = ;
-            this.TEzsignfolderMessage = ;
-            this.ObjAudit = ;
-            this.SEzsignfolderExternalid = ;
-            this.EEzsignfolderAccess = ;
-            this.ObjTimezone = ;
+            this.SEzsignfolderDescription = sEzsignfolderDescription;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.ObjEzsignfoldertype = objEzsignfoldertype;
+            this.FkiTimezoneID = fkiTimezoneID;
+            this.EEzsignfolderDocumentdependency = eEzsignfolderDocumentdependency;
+            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+            this.FkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
+            this.SEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
+            this.TEzsignfolderNote = tEzsignfolderNote;
+            this.BEzsignfolderIsdisposable = bEzsignfolderIsdisposable;
+            this.IEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
+            this.IEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
+            this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
+            this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
+            this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
+            this.DtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+            this.DtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
+            this.EEzsignfolderStep = eEzsignfolderStep;
+            this.DtEzsignfolderClose = dtEzsignfolderClose;
+            this.TEzsignfolderMessage = tEzsignfolderMessage;
+            this.ObjAudit = objAudit;
+            this.SEzsignfolderExternalid = sEzsignfolderExternalid;
+            this.EEzsignfolderAccess = eEzsignfolderAccess;
+            this.ObjTimezone = objTimezone;
         }
 
         /// <summary>
@@ -146,10 +146,11 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEzsignfoldertype
+        /// A Custom Ezsignfoldertype Object
         /// </summary>
+        /// <value>A Custom Ezsignfoldertype Object</value>
         [DataMember(Name = "objEzsignfoldertype", EmitDefaultValue = false)]
-        public CustomEzsignfoldertypeResponse ObjEzsignfoldertype { get; set; }
+        public Object ObjEzsignfoldertype { get; set; }
 
         /// <summary>
         /// The unique ID of the Timezone
@@ -376,48 +377,48 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfolderID (int) minimum
             if (this.PkiEzsignfolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiTimezoneID (int) minimum
             if (this.FkiTimezoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
+                yield return new ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiEzsigntsarequirementID (int) maximum
             if (this.FkiEzsigntsarequirementID > (int)3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiEzsigntsarequirementID (int) minimum
             if (this.FkiEzsigntsarequirementID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             if (this.SEzsignfolderDescription != null) {
@@ -432,25 +433,25 @@ Mary</example>*/
             // IEzsignfolderSendreminderfirstdays (int) maximum
             if (this.IEzsignfolderSendreminderfirstdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderfirstdays" });
             }
 
             // IEzsignfolderSendreminderfirstdays (int) minimum
             if (this.IEzsignfolderSendreminderfirstdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderfirstdays" });
             }
 
             // IEzsignfolderSendreminderotherdays (int) maximum
             if (this.IEzsignfolderSendreminderotherdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderotherdays" });
             }
 
             // IEzsignfolderSendreminderotherdays (int) minimum
             if (this.IEzsignfolderSendreminderotherdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderotherdays" });
             }
 
             if (this.SEzsignfolderExternalid != null) {

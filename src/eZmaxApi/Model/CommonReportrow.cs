@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The reportrow height in pixels (required).</param>
-        public CommonReportrow(List<CommonReportcell>  = default(List<CommonReportcell>), int  = default(int))
+        /// <param name="aObjReportcell">aObjReportcell (required).</param>
+        /// <param name="iReportrowHeight">The reportrow height in pixels (required).</param>
+        public CommonReportrow(List<CommonReportcell> aObjReportcell = default(List<CommonReportcell>), int iReportrowHeight = default(int))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjReportcell" is required (not null)
+            if (aObjReportcell == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportrow and cannot be null");
+                throw new ArgumentNullException("aObjReportcell is a required property for CommonReportrow and cannot be null");
             }
-            this.AObjReportcell = ;
-            this.IReportrowHeight = ;
+            this.AObjReportcell = aObjReportcell;
+            this.IReportrowHeight = iReportrowHeight;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

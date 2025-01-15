@@ -90,7 +90,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Customer
@@ -103,7 +103,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Customer
         /// </summary>
@@ -115,7 +115,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<CustomerGetObjectV2Response> CustomerGetObjectV2Async(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CustomerGetObjectV2Response> CustomerGetObjectV2Async(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Customer
@@ -128,7 +128,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerGetObjectV2Response>> CustomerGetObjectV2WithHttpInfoAsync(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CustomerGetObjectV2Response>> CustomerGetObjectV2WithHttpInfoAsync(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -333,7 +333,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response> localVarResponse = await CustomerCreateObjectV1WithHttpInfoAsync(customerCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -347,7 +347,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'customerCreateObjectV1Request' is set
             if (customerCreateObjectV1Request == null)
@@ -482,7 +482,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CustomerGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<CustomerGetObjectV2Response> CustomerGetObjectV2Async(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CustomerGetObjectV2Response> CustomerGetObjectV2Async(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CustomerGetObjectV2Response> localVarResponse = await CustomerGetObjectV2WithHttpInfoAsync(pkiCustomerID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -496,7 +496,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerGetObjectV2Response>> CustomerGetObjectV2WithHttpInfoAsync(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerGetObjectV2Response>> CustomerGetObjectV2WithHttpInfoAsync(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

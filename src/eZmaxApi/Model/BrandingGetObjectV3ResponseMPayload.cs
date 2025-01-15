@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingGetObjectV3ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public BrandingGetObjectV3ResponseMPayload(BrandingResponseCompoundV3  = default(BrandingResponseCompoundV3))
+        /// <param name="objBranding">objBranding (required).</param>
+        public BrandingGetObjectV3ResponseMPayload(BrandingResponseCompoundV3 objBranding = default(BrandingResponseCompoundV3))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objBranding" is required (not null)
+            if (objBranding == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingGetObjectV3ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objBranding is a required property for BrandingGetObjectV3ResponseMPayload and cannot be null");
             }
-            this.ObjBranding = ;
+            this.ObjBranding = objBranding;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiApikeyID = null;
             //ApikeyEditObjectV1Request apikeyEditObjectV1Request = null;
             //var response = instance.ApikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
-            //Assert.IsType<ApikeyEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

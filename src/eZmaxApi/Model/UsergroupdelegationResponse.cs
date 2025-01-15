@@ -40,44 +40,44 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroupdelegation (required).</param>
-        /// <param name="">The unique ID of the Usergroup (required).</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The login name of the User. (required).</param>
-        /// <param name="">The email address..</param>
-        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupdelegationResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation (required).</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
+        public UsergroupdelegationResponse(int pkiUsergroupdelegationID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string))
         {
-            this.PkiUsergroupdelegationID = ;
-            this.FkiUsergroupID = ;
-            this.FkiUserID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUsergroupdelegationID = pkiUsergroupdelegationID;
+            this.FkiUsergroupID = fkiUsergroupID;
+            this.FkiUserID = fkiUserID;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sUserLoginname" is required (not null)
+            if (sUserLoginname == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException("sUserLoginname is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUserLoginname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLoginname = sUserLoginname;
+            // to ensure "sUsergroupNameX" is required (not null)
+            if (sUsergroupNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupdelegationResponse and cannot be null");
+                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupdelegationResponse and cannot be null");
             }
-            this.SUsergroupNameX = ;
-            this.SEmailAddress = ;
+            this.SUsergroupNameX = sUsergroupNameX;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -178,36 +178,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupdelegationID (int) maximum
             if (this.PkiUsergroupdelegationID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupdelegationID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupdelegationID" });
             }
 
             // PkiUsergroupdelegationID (int) minimum
             if (this.PkiUsergroupdelegationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupdelegationID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupdelegationID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             if (this.SUserLoginname != null) {

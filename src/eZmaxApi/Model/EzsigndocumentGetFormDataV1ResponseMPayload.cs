@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetFormDataV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentGetFormDataV1ResponseMPayload(CustomFormDataDocumentResponse  = default(CustomFormDataDocumentResponse))
+        /// <param name="objFormDataDocument">objFormDataDocument (required).</param>
+        public EzsigndocumentGetFormDataV1ResponseMPayload(CustomFormDataDocumentResponse objFormDataDocument = default(CustomFormDataDocumentResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objFormDataDocument" is required (not null)
+            if (objFormDataDocument == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objFormDataDocument is a required property for EzsigndocumentGetFormDataV1ResponseMPayload and cannot be null");
             }
-            this.ObjFormDataDocument = ;
+            this.ObjFormDataDocument = objFormDataDocument;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

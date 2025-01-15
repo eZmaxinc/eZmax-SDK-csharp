@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookGetHistoryV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public WebhookGetHistoryV1ResponseMPayload(List<CustomWebhooklogResponse>  = default(List<CustomWebhooklogResponse>))
+        /// <param name="aObjWebhooklog">aObjWebhooklog (required).</param>
+        public WebhookGetHistoryV1ResponseMPayload(List<CustomWebhooklogResponse> aObjWebhooklog = default(List<CustomWebhooklogResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjWebhooklog" is required (not null)
+            if (aObjWebhooklog == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookGetHistoryV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjWebhooklog is a required property for WebhookGetHistoryV1ResponseMPayload and cannot be null");
             }
-            this.AObjWebhooklog = ;
+            this.AObjWebhooklog = aObjWebhooklog;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

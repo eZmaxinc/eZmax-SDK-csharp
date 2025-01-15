@@ -46,30 +46,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Paymentterm.</param>
-        /// <param name="">The code of the Paymentterm (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The day of the Paymentterm (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the Paymentterm is active or not (required).</param>
-        public PaymenttermRequest(int  = default(int), string  = default(string), FieldEPaymenttermType  = default(FieldEPaymenttermType), int  = default(int), MultilingualPaymenttermDescription  = default(MultilingualPaymenttermDescription), bool  = default(bool))
+        /// <param name="pkiPaymenttermID">The unique ID of the Paymentterm.</param>
+        /// <param name="sPaymenttermCode">The code of the Paymentterm (required).</param>
+        /// <param name="ePaymenttermType">ePaymenttermType (required).</param>
+        /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
+        /// <param name="objPaymenttermDescription">objPaymenttermDescription (required).</param>
+        /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
+        public PaymenttermRequest(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sPaymenttermCode" is required (not null)
+            if (sPaymenttermCode == null)
             {
-                throw new ArgumentNullException(" is a required property for PaymenttermRequest and cannot be null");
+                throw new ArgumentNullException("sPaymenttermCode is a required property for PaymenttermRequest and cannot be null");
             }
-            this.SPaymenttermCode = ;
-            this.EPaymenttermType = ;
-            this.IPaymenttermDay = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SPaymenttermCode = sPaymenttermCode;
+            this.EPaymenttermType = ePaymenttermType;
+            this.IPaymenttermDay = iPaymenttermDay;
+            // to ensure "objPaymenttermDescription" is required (not null)
+            if (objPaymenttermDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for PaymenttermRequest and cannot be null");
+                throw new ArgumentNullException("objPaymenttermDescription is a required property for PaymenttermRequest and cannot be null");
             }
-            this.ObjPaymenttermDescription = ;
-            this.BPaymenttermIsactive = ;
-            this.PkiPaymenttermID = ;
+            this.ObjPaymenttermDescription = objPaymenttermDescription;
+            this.BPaymenttermIsactive = bPaymenttermIsactive;
+            this.PkiPaymenttermID = pkiPaymenttermID;
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SPaymenttermCode != null) {
                 // SPaymenttermCode (string) pattern
@@ -156,13 +156,13 @@ namespace eZmaxApi.Model
             // IPaymenttermDay (int) maximum
             if (this.IPaymenttermDay > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value less than or equal to 255.", new [] { "IPaymenttermDay" });
+                yield return new ValidationResult("Invalid value for IPaymenttermDay, must be a value less than or equal to 255.", new [] { "IPaymenttermDay" });
             }
 
             // IPaymenttermDay (int) minimum
             if (this.IPaymenttermDay < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPaymenttermDay, must be a value greater than or equal to 0.", new [] { "IPaymenttermDay" });
+                yield return new ValidationResult("Invalid value for IPaymenttermDay, must be a value greater than or equal to 0.", new [] { "IPaymenttermDay" });
             }
 
             yield break;

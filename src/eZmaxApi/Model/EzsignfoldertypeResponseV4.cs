@@ -82,156 +82,156 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeResponseV4" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The unique ID of the Branding (required).</param>
-        /// <param name="">The unique ID of the Billingentityinternal..</param>
-        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The unique ID of the Pdfalevel.</param>
-        /// <param name="">.</param>
-        /// <param name="">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="">The description of the Billingentityinternal in the language of the requester.</param>
-        /// <param name="">The description of the Ezsigntsarequirement in the language of the requester.</param>
-        /// <param name="">The email address..</param>
-        /// <param name="">The email address..</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Font size for annotations.</param>
-        /// <param name="">Font size for form fields.</param>
-        /// <param name="">The number of days before the the first reminder sending.</param>
-        /// <param name="">The number of days after the first reminder sending.</param>
-        /// <param name="">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The number of days after the archival before the disposal of the Ezsignfolder.</param>
-        /// <param name="">The number of days to get all Ezsignsignatures (required).</param>
-        /// <param name="">Wheter if document will be ended prematurely after Ezsignfolder expires..</param>
-        /// <param name="">Number of days between Ezsignfolder expiration and automatic prematurely end of Ezsigndocuments..</param>
-        /// <param name="">Whether we allow the automatic signature by an User.</param>
-        /// <param name="">Wheter if delegation of signature is allowed to another user or not.</param>
-        /// <param name="">Wheter if creating a new Discussion is allowed or not.</param>
-        /// <param name="">Whether we log recipient of signed document in proof.</param>
-        /// <param name="">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
-        /// <param name="">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
-        /// <param name="">Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself.</param>
-        /// <param name="">Whether we send an email to Ezsignsigner  when document is completed.</param>
-        /// <param name="">Whether we send an email to User who signed when document is completed.</param>
-        /// <param name="">Whether we send the Ezsigndocument in the email to Ezsignsigner.</param>
-        /// <param name="">Whether we send the proof in the email to Ezsignsigner.</param>
-        /// <param name="">Whether we send the Ezsigndocument in the email to User.</param>
-        /// <param name="">Whether we send the proof in the email to User.</param>
-        /// <param name="">Whether we send the proof in the email to external recipient.</param>
-        /// <param name="">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
-        /// <param name="">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
-        /// <param name="">Whether we send the proof to user and Ezsignsigner who receive all documents..</param>
-        /// <param name="">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="">THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
-        /// <param name="">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
-        /// <param name="">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
-        /// <param name="">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
-        /// <param name="">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
-        /// <param name="">Whether we send the summary to the colleagues (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether the Ezsignfoldertype is active or not (required).</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public EzsignfoldertypeResponseV4(int  = default(int), MultilingualEzsignfoldertypeName  = default(MultilingualEzsignfoldertypeName), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsignfoldertypeDocumentdependency?  = default(FieldEEzsignfoldertypeDocumentdependency?), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEEzsignfoldertypePdfarequirement?  = default(FieldEEzsignfoldertypePdfarequirement?), FieldEEzsignfoldertypePdfanoncompliantaction?  = default(FieldEEzsignfoldertypePdfanoncompliantaction?), FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsignfoldertypeDisposal  = default(FieldEEzsignfoldertypeDisposal), FieldEEzsignfoldertypeCompletion  = default(FieldEEzsignfoldertypeCompletion), int  = default(int), int  = default(int), bool  = default(bool), int  = default(int), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), FieldEEzsignfoldertypeSigneraccess?  = default(FieldEEzsignfoldertypeSigneraccess?), bool  = default(bool), List<int>  = default(List<int>), List<UserlogintypeResponse>  = default(List<UserlogintypeResponse>), List<UsergroupResponse>  = default(List<UsergroupResponse>), List<UsergroupResponse>  = default(List<UsergroupResponse>), List<UsergroupResponse>  = default(List<UsergroupResponse>), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="objEzsignfoldertypeName">objEzsignfoldertypeName (required).</param>
+        /// <param name="fkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="fkiFontIDAnnotation">The unique ID of the Font.</param>
+        /// <param name="fkiFontIDFormfield">The unique ID of the Font.</param>
+        /// <param name="fkiFontIDSignature">The unique ID of the Font.</param>
+        /// <param name="fkiPdfalevelIDConvert">The unique ID of the Pdfalevel.</param>
+        /// <param name="eEzsignfoldertypeDocumentdependency">eEzsignfoldertypeDocumentdependency.</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester.</param>
+        /// <param name="sEmailAddressSigned">The email address..</param>
+        /// <param name="sEmailAddressSummary">The email address..</param>
+        /// <param name="eEzsignfoldertypePdfarequirement">eEzsignfoldertypePdfarequirement.</param>
+        /// <param name="eEzsignfoldertypePdfanoncompliantaction">eEzsignfoldertypePdfanoncompliantaction.</param>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="iEzsignfoldertypeFontsizeannotation">Font size for annotations.</param>
+        /// <param name="iEzsignfoldertypeFontsizeformfield">Font size for form fields.</param>
+        /// <param name="iEzsignfoldertypeSendreminderfirstdays">The number of days before the the first reminder sending.</param>
+        /// <param name="iEzsignfoldertypeSendreminderotherdays">The number of days after the first reminder sending.</param>
+        /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
+        /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
+        /// <param name="eEzsignfoldertypeCompletion">eEzsignfoldertypeCompletion (required).</param>
+        /// <param name="iEzsignfoldertypeDisposaldays">The number of days after the archival before the disposal of the Ezsignfolder.</param>
+        /// <param name="iEzsignfoldertypeDeadlinedays">The number of days to get all Ezsignsignatures (required).</param>
+        /// <param name="bEzsignfoldertypePrematurelyendautomatically">Wheter if document will be ended prematurely after Ezsignfolder expires..</param>
+        /// <param name="iEzsignfoldertypePrematurelyendautomaticallydays">Number of days between Ezsignfolder expiration and automatic prematurely end of Ezsigndocuments..</param>
+        /// <param name="bEzsignfoldertypeAutomaticsignature">Whether we allow the automatic signature by an User.</param>
+        /// <param name="bEzsignfoldertypeDelegate">Wheter if delegation of signature is allowed to another user or not.</param>
+        /// <param name="bEzsignfoldertypeDiscussion">Wheter if creating a new Discussion is allowed or not.</param>
+        /// <param name="bEzsignfoldertypeLogrecipientinproof">Whether we log recipient of signed document in proof.</param>
+        /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
+        /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
+        /// <param name="bEzsignfoldertypeReassigngroup">Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtoezsignsigner">Whether we send an email to Ezsignsigner  when document is completed.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtouser">Whether we send an email to User who signed when document is completed.</param>
+        /// <param name="bEzsignfoldertypeSendattachmentezsignsigner">Whether we send the Ezsigndocument in the email to Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeSendproofezsignsigner">Whether we send the proof in the email to Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeSendattachmentuser">Whether we send the Ezsigndocument in the email to User.</param>
+        /// <param name="bEzsignfoldertypeSendproofuser">Whether we send the proof in the email to User.</param>
+        /// <param name="bEzsignfoldertypeSendproofemail">Whether we send the proof in the email to external recipient.</param>
+        /// <param name="bEzsignfoldertypeAllowdownloadattachmentezsignsigner">Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeAllowdownloadproofezsignsigner">Whether we allow the proof to be downloaded by an Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeSendproofreceivealldocument">Whether we send the proof to user and Ezsignsigner who receive all documents..</param>
+        /// <param name="bEzsignfoldertypeSendsignedtodocumentowner">Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsignedtofolderowner">Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsignedtofullgroup">Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtolimitedgroup">THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsignedtocolleague">Whether we send the signed Ezsigndocument to the colleagues (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytodocumentowner">Whether we send the summary to the Ezsigndocument&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytofolderowner">Whether we send the summary to the Ezsignfolder&#39;s owner (required).</param>
+        /// <param name="bEzsignfoldertypeSendsummarytofullgroup">Whether we send the summary to the Usergroup that has acces to all Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsummarytolimitedgroup">Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders.</param>
+        /// <param name="bEzsignfoldertypeSendsummarytocolleague">Whether we send the summary to the colleagues (required).</param>
+        /// <param name="eEzsignfoldertypeSigneraccess">eEzsignfoldertypeSigneraccess.</param>
+        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
+        /// <param name="aFkiPdfalevelID">aFkiPdfalevelID.</param>
+        /// <param name="aObjUserlogintype">aObjUserlogintype (required).</param>
+        /// <param name="aObjUsergroupAll">aObjUsergroupAll.</param>
+        /// <param name="aObjUsergroupRestricted">aObjUsergroupRestricted.</param>
+        /// <param name="aObjUsergroupTemplate">aObjUsergroupTemplate.</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public EzsignfoldertypeResponseV4(int pkiEzsignfoldertypeID = default(int), MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default(MultilingualEzsignfoldertypeName), int fkiBrandingID = default(int), int fkiBillingentityinternalID = default(int), int fkiEzsigntsarequirementID = default(int), int fkiFontIDAnnotation = default(int), int fkiFontIDFormfield = default(int), int fkiFontIDSignature = default(int), int fkiPdfalevelIDConvert = default(int), FieldEEzsignfoldertypeDocumentdependency? eEzsignfoldertypeDocumentdependency = default(FieldEEzsignfoldertypeDocumentdependency?), string sBrandingDescriptionX = default(string), string sBillingentityinternalDescriptionX = default(string), string sEzsigntsarequirementDescriptionX = default(string), string sEmailAddressSigned = default(string), string sEmailAddressSummary = default(string), FieldEEzsignfoldertypePdfarequirement? eEzsignfoldertypePdfarequirement = default(FieldEEzsignfoldertypePdfarequirement?), FieldEEzsignfoldertypePdfanoncompliantaction? eEzsignfoldertypePdfanoncompliantaction = default(FieldEEzsignfoldertypePdfanoncompliantaction?), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), int iEzsignfoldertypeFontsizeannotation = default(int), int iEzsignfoldertypeFontsizeformfield = default(int), int iEzsignfoldertypeSendreminderfirstdays = default(int), int iEzsignfoldertypeSendreminderotherdays = default(int), int iEzsignfoldertypeArchivaldays = default(int), FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default(FieldEEzsignfoldertypeDisposal), FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = default(FieldEEzsignfoldertypeCompletion), int iEzsignfoldertypeDisposaldays = default(int), int iEzsignfoldertypeDeadlinedays = default(int), bool bEzsignfoldertypePrematurelyendautomatically = default(bool), int iEzsignfoldertypePrematurelyendautomaticallydays = default(int), bool bEzsignfoldertypeAutomaticsignature = default(bool), bool bEzsignfoldertypeDelegate = default(bool), bool bEzsignfoldertypeDiscussion = default(bool), bool bEzsignfoldertypeLogrecipientinproof = default(bool), bool bEzsignfoldertypeReassignezsignsigner = default(bool), bool bEzsignfoldertypeReassignuser = default(bool), bool bEzsignfoldertypeReassigngroup = default(bool), bool bEzsignfoldertypeSendsignedtoezsignsigner = default(bool), bool bEzsignfoldertypeSendsignedtouser = default(bool), bool bEzsignfoldertypeSendattachmentezsignsigner = default(bool), bool bEzsignfoldertypeSendproofezsignsigner = default(bool), bool bEzsignfoldertypeSendattachmentuser = default(bool), bool bEzsignfoldertypeSendproofuser = default(bool), bool bEzsignfoldertypeSendproofemail = default(bool), bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default(bool), bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default(bool), bool bEzsignfoldertypeSendproofreceivealldocument = default(bool), bool bEzsignfoldertypeSendsignedtodocumentowner = default(bool), bool bEzsignfoldertypeSendsignedtofolderowner = default(bool), bool bEzsignfoldertypeSendsignedtofullgroup = default(bool), bool bEzsignfoldertypeSendsignedtolimitedgroup = default(bool), bool bEzsignfoldertypeSendsignedtocolleague = default(bool), bool bEzsignfoldertypeSendsummarytodocumentowner = default(bool), bool bEzsignfoldertypeSendsummarytofolderowner = default(bool), bool bEzsignfoldertypeSendsummarytofullgroup = default(bool), bool bEzsignfoldertypeSendsummarytolimitedgroup = default(bool), bool bEzsignfoldertypeSendsummarytocolleague = default(bool), FieldEEzsignfoldertypeSigneraccess? eEzsignfoldertypeSigneraccess = default(FieldEEzsignfoldertypeSigneraccess?), bool bEzsignfoldertypeIsactive = default(bool), List<int> aFkiPdfalevelID = default(List<int>), List<UserlogintypeResponse> aObjUserlogintype = default(List<UserlogintypeResponse>), List<UsergroupResponse> aObjUsergroupAll = default(List<UsergroupResponse>), List<UsergroupResponse> aObjUsergroupRestricted = default(List<UsergroupResponse>), List<UsergroupResponse> aObjUsergroupTemplate = default(List<UsergroupResponse>), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiEzsignfoldertypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
+            // to ensure "objEzsignfoldertypeName" is required (not null)
+            if (objEzsignfoldertypeName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseV4 and cannot be null");
+                throw new ArgumentNullException("objEzsignfoldertypeName is a required property for EzsignfoldertypeResponseV4 and cannot be null");
             }
-            this.ObjEzsignfoldertypeName = ;
-            this.FkiBrandingID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjEzsignfoldertypeName = objEzsignfoldertypeName;
+            this.FkiBrandingID = fkiBrandingID;
+            // to ensure "sBrandingDescriptionX" is required (not null)
+            if (sBrandingDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseV4 and cannot be null");
+                throw new ArgumentNullException("sBrandingDescriptionX is a required property for EzsignfoldertypeResponseV4 and cannot be null");
             }
-            this.SBrandingDescriptionX = ;
-            this.EEzsignfoldertypePrivacylevel = ;
-            this.IEzsignfoldertypeArchivaldays = ;
-            this.EEzsignfoldertypeDisposal = ;
-            this.EEzsignfoldertypeCompletion = ;
-            this.IEzsignfoldertypeDeadlinedays = ;
-            this.BEzsignfoldertypeSendsignedtodocumentowner = ;
-            this.BEzsignfoldertypeSendsignedtofolderowner = ;
-            this.BEzsignfoldertypeSendsignedtocolleague = ;
-            this.BEzsignfoldertypeSendsummarytodocumentowner = ;
-            this.BEzsignfoldertypeSendsummarytofolderowner = ;
-            this.BEzsignfoldertypeSendsummarytocolleague = ;
-            this.BEzsignfoldertypeIsactive = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SBrandingDescriptionX = sBrandingDescriptionX;
+            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+            this.IEzsignfoldertypeArchivaldays = iEzsignfoldertypeArchivaldays;
+            this.EEzsignfoldertypeDisposal = eEzsignfoldertypeDisposal;
+            this.EEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
+            this.IEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
+            this.BEzsignfoldertypeSendsignedtodocumentowner = bEzsignfoldertypeSendsignedtodocumentowner;
+            this.BEzsignfoldertypeSendsignedtofolderowner = bEzsignfoldertypeSendsignedtofolderowner;
+            this.BEzsignfoldertypeSendsignedtocolleague = bEzsignfoldertypeSendsignedtocolleague;
+            this.BEzsignfoldertypeSendsummarytodocumentowner = bEzsignfoldertypeSendsummarytodocumentowner;
+            this.BEzsignfoldertypeSendsummarytofolderowner = bEzsignfoldertypeSendsummarytofolderowner;
+            this.BEzsignfoldertypeSendsummarytocolleague = bEzsignfoldertypeSendsummarytocolleague;
+            this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+            // to ensure "aObjUserlogintype" is required (not null)
+            if (aObjUserlogintype == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseV4 and cannot be null");
+                throw new ArgumentNullException("aObjUserlogintype is a required property for EzsignfoldertypeResponseV4 and cannot be null");
             }
-            this.AObjUserlogintype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjUserlogintype = aObjUserlogintype;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeResponseV4 and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for EzsignfoldertypeResponseV4 and cannot be null");
             }
-            this.ObjAudit = ;
-            this.FkiBillingentityinternalID = ;
-            this.FkiEzsigntsarequirementID = ;
-            this.FkiFontIDAnnotation = ;
-            this.FkiFontIDFormfield = ;
-            this.FkiFontIDSignature = ;
-            this.FkiPdfalevelIDConvert = ;
-            this.EEzsignfoldertypeDocumentdependency = ;
-            this.SBillingentityinternalDescriptionX = ;
-            this.SEzsigntsarequirementDescriptionX = ;
-            this.SEmailAddressSigned = ;
-            this.SEmailAddressSummary = ;
-            this.EEzsignfoldertypePdfarequirement = ;
-            this.EEzsignfoldertypePdfanoncompliantaction = ;
-            this.IEzsignfoldertypeFontsizeannotation = ;
-            this.IEzsignfoldertypeFontsizeformfield = ;
-            this.IEzsignfoldertypeSendreminderfirstdays = ;
-            this.IEzsignfoldertypeSendreminderotherdays = ;
-            this.IEzsignfoldertypeDisposaldays = ;
-            this.BEzsignfoldertypePrematurelyendautomatically = ;
-            this.IEzsignfoldertypePrematurelyendautomaticallydays = ;
-            this.BEzsignfoldertypeAutomaticsignature = ;
-            this.BEzsignfoldertypeDelegate = ;
-            this.BEzsignfoldertypeDiscussion = ;
-            this.BEzsignfoldertypeLogrecipientinproof = ;
-            this.BEzsignfoldertypeReassignezsignsigner = ;
-            this.BEzsignfoldertypeReassignuser = ;
-            this.BEzsignfoldertypeReassigngroup = ;
-            this.BEzsignfoldertypeSendsignedtoezsignsigner = ;
-            this.BEzsignfoldertypeSendsignedtouser = ;
-            this.BEzsignfoldertypeSendattachmentezsignsigner = ;
-            this.BEzsignfoldertypeSendproofezsignsigner = ;
-            this.BEzsignfoldertypeSendattachmentuser = ;
-            this.BEzsignfoldertypeSendproofuser = ;
-            this.BEzsignfoldertypeSendproofemail = ;
-            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = ;
-            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = ;
-            this.BEzsignfoldertypeSendproofreceivealldocument = ;
-            this.BEzsignfoldertypeSendsignedtofullgroup = ;
-            this.BEzsignfoldertypeSendsignedtolimitedgroup = ;
-            this.BEzsignfoldertypeSendsummarytofullgroup = ;
-            this.BEzsignfoldertypeSendsummarytolimitedgroup = ;
-            this.EEzsignfoldertypeSigneraccess = ;
-            this.AFkiPdfalevelID = ;
-            this.AObjUsergroupAll = ;
-            this.AObjUsergroupRestricted = ;
-            this.AObjUsergroupTemplate = ;
+            this.ObjAudit = objAudit;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            this.FkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
+            this.FkiFontIDAnnotation = fkiFontIDAnnotation;
+            this.FkiFontIDFormfield = fkiFontIDFormfield;
+            this.FkiFontIDSignature = fkiFontIDSignature;
+            this.FkiPdfalevelIDConvert = fkiPdfalevelIDConvert;
+            this.EEzsignfoldertypeDocumentdependency = eEzsignfoldertypeDocumentdependency;
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+            this.SEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
+            this.SEmailAddressSigned = sEmailAddressSigned;
+            this.SEmailAddressSummary = sEmailAddressSummary;
+            this.EEzsignfoldertypePdfarequirement = eEzsignfoldertypePdfarequirement;
+            this.EEzsignfoldertypePdfanoncompliantaction = eEzsignfoldertypePdfanoncompliantaction;
+            this.IEzsignfoldertypeFontsizeannotation = iEzsignfoldertypeFontsizeannotation;
+            this.IEzsignfoldertypeFontsizeformfield = iEzsignfoldertypeFontsizeformfield;
+            this.IEzsignfoldertypeSendreminderfirstdays = iEzsignfoldertypeSendreminderfirstdays;
+            this.IEzsignfoldertypeSendreminderotherdays = iEzsignfoldertypeSendreminderotherdays;
+            this.IEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
+            this.BEzsignfoldertypePrematurelyendautomatically = bEzsignfoldertypePrematurelyendautomatically;
+            this.IEzsignfoldertypePrematurelyendautomaticallydays = iEzsignfoldertypePrematurelyendautomaticallydays;
+            this.BEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+            this.BEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
+            this.BEzsignfoldertypeDiscussion = bEzsignfoldertypeDiscussion;
+            this.BEzsignfoldertypeLogrecipientinproof = bEzsignfoldertypeLogrecipientinproof;
+            this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+            this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+            this.BEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+            this.BEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
+            this.BEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
+            this.BEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
+            this.BEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+            this.BEzsignfoldertypeSendattachmentuser = bEzsignfoldertypeSendattachmentuser;
+            this.BEzsignfoldertypeSendproofuser = bEzsignfoldertypeSendproofuser;
+            this.BEzsignfoldertypeSendproofemail = bEzsignfoldertypeSendproofemail;
+            this.BEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+            this.BEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+            this.BEzsignfoldertypeSendproofreceivealldocument = bEzsignfoldertypeSendproofreceivealldocument;
+            this.BEzsignfoldertypeSendsignedtofullgroup = bEzsignfoldertypeSendsignedtofullgroup;
+            this.BEzsignfoldertypeSendsignedtolimitedgroup = bEzsignfoldertypeSendsignedtolimitedgroup;
+            this.BEzsignfoldertypeSendsummarytofullgroup = bEzsignfoldertypeSendsummarytofullgroup;
+            this.BEzsignfoldertypeSendsummarytolimitedgroup = bEzsignfoldertypeSendsummarytolimitedgroup;
+            this.EEzsignfoldertypeSigneraccess = eEzsignfoldertypeSigneraccess;
+            this.AFkiPdfalevelID = aFkiPdfalevelID;
+            this.AObjUsergroupAll = aObjUsergroupAll;
+            this.AObjUsergroupRestricted = aObjUsergroupRestricted;
+            this.AObjUsergroupTemplate = aObjUsergroupTemplate;
         }
 
         /// <summary>
@@ -766,72 +766,72 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfoldertypeID (int) maximum
             if (this.PkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             // PkiEzsignfoldertypeID (int) minimum
             if (this.PkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             // FkiBrandingID (int) minimum
             if (this.FkiBrandingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
+                yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiEzsigntsarequirementID (int) maximum
             if (this.FkiEzsigntsarequirementID > (int)3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiEzsigntsarequirementID (int) minimum
             if (this.FkiEzsigntsarequirementID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiFontIDAnnotation (int) minimum
             if (this.FkiFontIDAnnotation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDAnnotation, must be a value greater than or equal to 0.", new [] { "FkiFontIDAnnotation" });
+                yield return new ValidationResult("Invalid value for FkiFontIDAnnotation, must be a value greater than or equal to 0.", new [] { "FkiFontIDAnnotation" });
             }
 
             // FkiFontIDFormfield (int) minimum
             if (this.FkiFontIDFormfield < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDFormfield, must be a value greater than or equal to 0.", new [] { "FkiFontIDFormfield" });
+                yield return new ValidationResult("Invalid value for FkiFontIDFormfield, must be a value greater than or equal to 0.", new [] { "FkiFontIDFormfield" });
             }
 
             // FkiFontIDSignature (int) minimum
             if (this.FkiFontIDSignature < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDSignature, must be a value greater than or equal to 0.", new [] { "FkiFontIDSignature" });
+                yield return new ValidationResult("Invalid value for FkiFontIDSignature, must be a value greater than or equal to 0.", new [] { "FkiFontIDSignature" });
             }
 
             // FkiPdfalevelIDConvert (int) maximum
             if (this.FkiPdfalevelIDConvert > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value less than or equal to 255.", new [] { "FkiPdfalevelIDConvert" });
+                yield return new ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value less than or equal to 255.", new [] { "FkiPdfalevelIDConvert" });
             }
 
             // FkiPdfalevelIDConvert (int) minimum
             if (this.FkiPdfalevelIDConvert < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value greater than or equal to 0.", new [] { "FkiPdfalevelIDConvert" });
+                yield return new ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value greater than or equal to 0.", new [] { "FkiPdfalevelIDConvert" });
             }
 
             if (this.SEmailAddressSigned != null) {
@@ -855,97 +855,97 @@ namespace eZmaxApi.Model
             // IEzsignfoldertypeFontsizeannotation (int) maximum
             if (this.IEzsignfoldertypeFontsizeannotation > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeannotation" });
             }
 
             // IEzsignfoldertypeFontsizeannotation (int) minimum
             if (this.IEzsignfoldertypeFontsizeannotation < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeannotation" });
             }
 
             // IEzsignfoldertypeFontsizeformfield (int) maximum
             if (this.IEzsignfoldertypeFontsizeformfield > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeformfield" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeformfield" });
             }
 
             // IEzsignfoldertypeFontsizeformfield (int) minimum
             if (this.IEzsignfoldertypeFontsizeformfield < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeformfield" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeformfield" });
             }
 
             // IEzsignfoldertypeSendreminderfirstdays (int) maximum
             if (this.IEzsignfoldertypeSendreminderfirstdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
             }
 
             // IEzsignfoldertypeSendreminderfirstdays (int) minimum
             if (this.IEzsignfoldertypeSendreminderfirstdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
             }
 
             // IEzsignfoldertypeSendreminderotherdays (int) maximum
             if (this.IEzsignfoldertypeSendreminderotherdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
             }
 
             // IEzsignfoldertypeSendreminderotherdays (int) minimum
             if (this.IEzsignfoldertypeSendreminderotherdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
             }
 
             // IEzsignfoldertypeArchivaldays (int) maximum
             if (this.IEzsignfoldertypeArchivaldays > (int)180)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value less than or equal to 180.", new [] { "IEzsignfoldertypeArchivaldays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value less than or equal to 180.", new [] { "IEzsignfoldertypeArchivaldays" });
             }
 
             // IEzsignfoldertypeArchivaldays (int) minimum
             if (this.IEzsignfoldertypeArchivaldays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeArchivaldays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeArchivaldays" });
             }
 
             // IEzsignfoldertypeDisposaldays (int) maximum
             if (this.IEzsignfoldertypeDisposaldays > (int)9999)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value less than or equal to 9999.", new [] { "IEzsignfoldertypeDisposaldays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value less than or equal to 9999.", new [] { "IEzsignfoldertypeDisposaldays" });
             }
 
             // IEzsignfoldertypeDisposaldays (int) minimum
             if (this.IEzsignfoldertypeDisposaldays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeDisposaldays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeDisposaldays" });
             }
 
             // IEzsignfoldertypeDeadlinedays (int) maximum
             if (this.IEzsignfoldertypeDeadlinedays > (int)60)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value less than or equal to 60.", new [] { "IEzsignfoldertypeDeadlinedays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value less than or equal to 60.", new [] { "IEzsignfoldertypeDeadlinedays" });
             }
 
             // IEzsignfoldertypeDeadlinedays (int) minimum
             if (this.IEzsignfoldertypeDeadlinedays < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeDeadlinedays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeDeadlinedays" });
             }
 
             // IEzsignfoldertypePrematurelyendautomaticallydays (int) maximum
             if (this.IEzsignfoldertypePrematurelyendautomaticallydays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
             }
 
             // IEzsignfoldertypePrematurelyendautomaticallydays (int) minimum
             if (this.IEzsignfoldertypePrematurelyendautomaticallydays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
+                yield return new ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
             }
 
             yield break;

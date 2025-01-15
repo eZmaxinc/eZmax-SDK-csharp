@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The limitexceededsince of the Ezsigntemplatepublic (required).</param>
-        public EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload(string  = default(string))
+        /// <param name="dtEzsigntemplatepublicLimitexceededsince">The limitexceededsince of the Ezsigntemplatepublic (required).</param>
+        public EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload(string dtEzsigntemplatepublicLimitexceededsince = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "dtEzsigntemplatepublicLimitexceededsince" is required (not null)
+            if (dtEzsigntemplatepublicLimitexceededsince == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("dtEzsigntemplatepublicLimitexceededsince is a required property for EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload and cannot be null");
             }
-            this.DtEzsigntemplatepublicLimitexceededsince = ;
+            this.DtEzsigntemplatepublicLimitexceededsince = dtEzsigntemplatepublicLimitexceededsince;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.DtEzsigntemplatepublicLimitexceededsince != null) {
                 // DtEzsigntemplatepublicLimitexceededsince (string) pattern

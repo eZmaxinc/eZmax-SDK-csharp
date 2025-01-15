@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Variableexpense autocomplete element response. (required).</param>
-        public VariableexpenseGetAutocompleteV2ResponseMPayload(List<VariableexpenseAutocompleteElementResponse>  = default(List<VariableexpenseAutocompleteElementResponse>))
+        /// <param name="aObjVariableexpense">An array of Variableexpense autocomplete element response. (required).</param>
+        public VariableexpenseGetAutocompleteV2ResponseMPayload(List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense = default(List<VariableexpenseAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjVariableexpense" is required (not null)
+            if (aObjVariableexpense == null)
             {
-                throw new ArgumentNullException(" is a required property for VariableexpenseGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjVariableexpense is a required property for VariableexpenseGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjVariableexpense = ;
+            this.AObjVariableexpense = aObjVariableexpense;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

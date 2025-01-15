@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The name of the Ezsignfoldertype in the language of the requester (required).</param>
-        /// <param name="">Whether the Ezsignfoldertype is active or not (required).</param>
-        public EzsignfoldertypeListElement(int  = default(int), FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
+        /// <param name="bEzsignfoldertypeIsactive">Whether the Ezsignfoldertype is active or not (required).</param>
+        public EzsignfoldertypeListElement(int pkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), bool bEzsignfoldertypeIsactive = default(bool))
         {
-            this.PkiEzsignfoldertypeID = ;
-            this.EEzsignfoldertypePrivacylevel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
+            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+            // to ensure "sEzsignfoldertypeNameX" is required (not null)
+            if (sEzsignfoldertypeNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeListElement and cannot be null");
+                throw new ArgumentNullException("sEzsignfoldertypeNameX is a required property for EzsignfoldertypeListElement and cannot be null");
             }
-            this.SEzsignfoldertypeNameX = ;
-            this.BEzsignfoldertypeIsactive = ;
+            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.BEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
         }
 
         /// <summary>
@@ -117,18 +117,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfoldertypeID (int) maximum
             if (this.PkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             // PkiEzsignfoldertypeID (int) minimum
             if (this.PkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             yield break;

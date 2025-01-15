@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public VersionhistoryGetObjectV2ResponseMPayload(VersionhistoryResponseCompound  = default(VersionhistoryResponseCompound))
+        /// <param name="objVersionhistory">objVersionhistory (required).</param>
+        public VersionhistoryGetObjectV2ResponseMPayload(VersionhistoryResponseCompound objVersionhistory = default(VersionhistoryResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objVersionhistory" is required (not null)
+            if (objVersionhistory == null)
             {
-                throw new ArgumentNullException(" is a required property for VersionhistoryGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objVersionhistory is a required property for VersionhistoryGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjVersionhistory = ;
+            this.ObjVersionhistory = objVersionhistory;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

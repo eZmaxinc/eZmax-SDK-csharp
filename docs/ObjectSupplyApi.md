@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="supplydeleteobjectv1"></a>
 # **SupplyDeleteObjectV1**
-> SupplyDeleteObjectV1Response SupplyDeleteObjectV1 (int pkiSupplyID)
+> CommonResponse SupplyDeleteObjectV1 (int pkiSupplyID)
 
 Delete an existing Supply
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Delete an existing Supply
-                SupplyDeleteObjectV1Response result = apiInstance.SupplyDeleteObjectV1(pkiSupplyID);
+                CommonResponse result = apiInstance.SupplyDeleteObjectV1(pkiSupplyID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Supply
-    ApiResponse<SupplyDeleteObjectV1Response> response = apiInstance.SupplyDeleteObjectV1WithHttpInfo(pkiSupplyID);
+    ApiResponse<CommonResponse> response = apiInstance.SupplyDeleteObjectV1WithHttpInfo(pkiSupplyID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -182,7 +182,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SupplyDeleteObjectV1Response**](SupplyDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ catch (ApiException e)
 
 <a id="supplyeditobjectv1"></a>
 # **SupplyEditObjectV1**
-> SupplyEditObjectV1Response SupplyEditObjectV1 (int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request)
+> CommonResponse SupplyEditObjectV1 (int pkiSupplyID, SupplyEditObjectV1Request supplyEditObjectV1Request)
 
 Edit an existing Supply
 
@@ -236,7 +236,7 @@ namespace Example
             try
             {
                 // Edit an existing Supply
-                SupplyEditObjectV1Response result = apiInstance.SupplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
+                CommonResponse result = apiInstance.SupplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -257,7 +257,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Supply
-    ApiResponse<SupplyEditObjectV1Response> response = apiInstance.SupplyEditObjectV1WithHttpInfo(pkiSupplyID, supplyEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.SupplyEditObjectV1WithHttpInfo(pkiSupplyID, supplyEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -279,7 +279,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SupplyEditObjectV1Response**](SupplyEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

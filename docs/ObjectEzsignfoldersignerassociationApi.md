@@ -310,7 +310,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersignerassociationdeleteobjectv1"></a>
 # **EzsignfoldersignerassociationDeleteObjectV1**
-> EzsignfoldersignerassociationDeleteObjectV1Response EzsignfoldersignerassociationDeleteObjectV1 (int pkiEzsignfoldersignerassociationID)
+> CommonResponse EzsignfoldersignerassociationDeleteObjectV1 (int pkiEzsignfoldersignerassociationID)
 
 Delete an existing Ezsignfoldersignerassociation
 
@@ -341,7 +341,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignfoldersignerassociation
-                EzsignfoldersignerassociationDeleteObjectV1Response result = apiInstance.EzsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
+                CommonResponse result = apiInstance.EzsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -362,7 +362,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignfoldersignerassociation
-    ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> response = apiInstance.EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -383,7 +383,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfoldersignerassociationDeleteObjectV1Response**](EzsignfoldersignerassociationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersignerassociationeditobjectv1"></a>
 # **EzsignfoldersignerassociationEditObjectV1**
-> EzsignfoldersignerassociationEditObjectV1Response EzsignfoldersignerassociationEditObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request)
+> CommonResponse EzsignfoldersignerassociationEditObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request)
 
 Edit an existing Ezsignfoldersignerassociation
 
@@ -438,7 +438,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignfoldersignerassociation
-                EzsignfoldersignerassociationEditObjectV1Response result = apiInstance.EzsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -459,7 +459,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignfoldersignerassociation
-    ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> response = apiInstance.EzsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -481,7 +481,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfoldersignerassociationEditObjectV1Response**](EzsignfoldersignerassociationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -504,7 +504,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersignerassociationforcedisconnectv1"></a>
 # **EzsignfoldersignerassociationForceDisconnectV1**
-> EzsignfoldersignerassociationForceDisconnectV1Response EzsignfoldersignerassociationForceDisconnectV1 (int pkiEzsignfoldersignerassociationID, Object body)
+> CommonResponse EzsignfoldersignerassociationForceDisconnectV1 (int pkiEzsignfoldersignerassociationID, Object body)
 
 Disconnects the Ezsignfoldersignerassociation
 
@@ -536,7 +536,7 @@ namespace Example
             try
             {
                 // Disconnects the Ezsignfoldersignerassociation
-                EzsignfoldersignerassociationForceDisconnectV1Response result = apiInstance.EzsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
+                CommonResponse result = apiInstance.EzsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -557,7 +557,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Disconnects the Ezsignfoldersignerassociation
-    ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> response = apiInstance.EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -579,7 +579,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfoldersignerassociationForceDisconnectV1Response**](EzsignfoldersignerassociationForceDisconnectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -890,7 +890,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersignerassociationpatchobjectv1"></a>
 # **EzsignfoldersignerassociationPatchObjectV1**
-> EzsignfoldersignerassociationPatchObjectV1Response EzsignfoldersignerassociationPatchObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request)
+> CommonResponse EzsignfoldersignerassociationPatchObjectV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request)
 
 Patch an existing Ezsignfoldersignerassociation
 
@@ -922,7 +922,7 @@ namespace Example
             try
             {
                 // Patch an existing Ezsignfoldersignerassociation
-                EzsignfoldersignerassociationPatchObjectV1Response result = apiInstance.EzsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+                CommonResponse result = apiInstance.EzsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -943,7 +943,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Patch an existing Ezsignfoldersignerassociation
-    ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> response = apiInstance.EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -965,7 +965,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfoldersignerassociationPatchObjectV1Response**](EzsignfoldersignerassociationPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -988,7 +988,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersignerassociationreassignv1"></a>
 # **EzsignfoldersignerassociationReassignV1**
-> EzsignfoldersignerassociationReassignV1Response EzsignfoldersignerassociationReassignV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request)
+> CommonResponse EzsignfoldersignerassociationReassignV1 (int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request)
 
 Reassign remaining unsigned signatures and forms
 
@@ -1022,7 +1022,7 @@ namespace Example
             try
             {
                 // Reassign remaining unsigned signatures and forms
-                EzsignfoldersignerassociationReassignV1Response result = apiInstance.EzsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+                CommonResponse result = apiInstance.EzsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1043,7 +1043,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Reassign remaining unsigned signatures and forms
-    ApiResponse<EzsignfoldersignerassociationReassignV1Response> response = apiInstance.EzsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1065,7 +1065,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfoldersignerassociationReassignV1Response**](EzsignfoldersignerassociationReassignV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

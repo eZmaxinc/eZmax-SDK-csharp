@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignsigningreasonCreateObjectV1Request(List<EzsignsigningreasonRequestCompound>  = default(List<EzsignsigningreasonRequestCompound>))
+        /// <param name="aObjEzsignsigningreason">aObjEzsignsigningreason (required).</param>
+        public EzsignsigningreasonCreateObjectV1Request(List<EzsignsigningreasonRequestCompound> aObjEzsignsigningreason = default(List<EzsignsigningreasonRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignsigningreason" is required (not null)
+            if (aObjEzsignsigningreason == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsigningreasonCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsigningreason is a required property for EzsignsigningreasonCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsignsigningreason = ;
+            this.AObjEzsignsigningreason = aObjEzsignsigningreason;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

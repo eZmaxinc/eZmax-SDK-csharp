@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulesectionResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Modulesection (required).</param>
-        /// <param name="">The unique ID of the Module (required).</param>
-        /// <param name="">The Internal name of the Module section. (required).</param>
-        /// <param name="">The Name of the Modulesection in the language of the requester (required).</param>
-        public ModulesectionResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string))
+        /// <param name="pkiModulesectionID">The unique ID of the Modulesection (required).</param>
+        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
+        /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
+        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
+        public ModulesectionResponse(int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string))
         {
-            this.PkiModulesectionID = ;
-            this.FkiModuleID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiModulesectionID = pkiModulesectionID;
+            this.FkiModuleID = fkiModuleID;
+            // to ensure "sModulesectionInternalname" is required (not null)
+            if (sModulesectionInternalname == null)
             {
-                throw new ArgumentNullException(" is a required property for ModulesectionResponse and cannot be null");
+                throw new ArgumentNullException("sModulesectionInternalname is a required property for ModulesectionResponse and cannot be null");
             }
-            this.SModulesectionInternalname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SModulesectionInternalname = sModulesectionInternalname;
+            // to ensure "sModulesectionNameX" is required (not null)
+            if (sModulesectionNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for ModulesectionResponse and cannot be null");
+                throw new ArgumentNullException("sModulesectionNameX is a required property for ModulesectionResponse and cannot be null");
             }
-            this.SModulesectionNameX = ;
+            this.SModulesectionNameX = sModulesectionNameX;
         }
 
         /// <summary>
@@ -124,18 +124,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiModulesectionID (int) minimum
             if (this.PkiModulesectionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiModulesectionID, must be a value greater than or equal to 0.", new [] { "PkiModulesectionID" });
+                yield return new ValidationResult("Invalid value for PkiModulesectionID, must be a value greater than or equal to 0.", new [] { "PkiModulesectionID" });
             }
 
             // FkiModuleID (int) minimum
             if (this.FkiModuleID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+                yield return new ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
             }
 
             yield break;

@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcell" /> class.
         /// </summary>
-        /// <param name="">The number of Reportcolumns the Reportcell spans (required).</param>
-        /// <param name="">The number of Reportrows the Reportcell spans (required).</param>
-        public CommonReportcell(int  = default(int), int  = default(int))
+        /// <param name="iReportcellColumnspan">The number of Reportcolumns the Reportcell spans (required).</param>
+        /// <param name="iReportcellRowspan">The number of Reportrows the Reportcell spans (required).</param>
+        public CommonReportcell(int iReportcellColumnspan = default(int), int iReportcellRowspan = default(int))
         {
-            this.IReportcellColumnspan = ;
-            this.IReportcellRowspan = ;
+            this.IReportcellColumnspan = iReportcellColumnspan;
+            this.IReportcellRowspan = iReportcellRowspan;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

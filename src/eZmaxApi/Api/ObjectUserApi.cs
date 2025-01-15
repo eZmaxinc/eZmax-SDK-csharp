@@ -105,8 +105,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID">The unique ID of the User</param>
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UserEditObjectV1Response</returns>
-        UserEditObjectV1Response UserEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse UserEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing User
@@ -118,8 +118,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID">The unique ID of the User</param>
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UserEditObjectV1Response</returns>
-        ApiResponse<UserEditObjectV1Response> UserEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> UserEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -378,8 +378,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UserSendPasswordResetV1Response</returns>
-        UserSendPasswordResetV1Response UserSendPasswordResetV1(int pkiUserID, Object body, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse UserSendPasswordResetV1(int pkiUserID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Send password reset
@@ -391,8 +391,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UserSendPasswordResetV1Response</returns>
-        ApiResponse<UserSendPasswordResetV1Response> UserSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> UserSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<UserCreateObjectV1Response> UserCreateObjectV1Async(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserCreateObjectV1Response> UserCreateObjectV1Async(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new User
@@ -426,7 +426,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV1Response>> UserCreateObjectV1WithHttpInfoAsync(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV1Response>> UserCreateObjectV1WithHttpInfoAsync(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new User
         /// </summary>
@@ -438,7 +438,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new User
@@ -451,7 +451,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Colleagues
         /// </summary>
@@ -464,7 +464,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserEditColleaguesV2Response</returns>
-        System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit multiple Colleagues
@@ -478,7 +478,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserEditColleaguesV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing User
         /// </summary>
@@ -490,8 +490,8 @@ namespace eZmaxApi.Api
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UserEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<UserEditObjectV1Response> UserEditObjectV1Async(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> UserEditObjectV1Async(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing User
@@ -504,8 +504,8 @@ namespace eZmaxApi.Api
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UserEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEditObjectV1Response>> UserEditObjectV1WithHttpInfoAsync(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UserEditObjectV1WithHttpInfoAsync(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -518,7 +518,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserEditPermissionsV1Response</returns>
-        System.Threading.Tasks.Task<UserEditPermissionsV1Response> UserEditPermissionsV1Async(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserEditPermissionsV1Response> UserEditPermissionsV1Async(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit multiple Permissions
@@ -532,7 +532,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserEditPermissionsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEditPermissionsV1Response>> UserEditPermissionsV1WithHttpInfoAsync(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserEditPermissionsV1Response>> UserEditPermissionsV1WithHttpInfoAsync(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Apikeys
         /// </summary>
@@ -544,7 +544,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetApikeysV1Response</returns>
-        System.Threading.Tasks.Task<UserGetApikeysV1Response> UserGetApikeysV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetApikeysV1Response> UserGetApikeysV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User&#39;s Apikeys
@@ -557,7 +557,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetApikeysV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetApikeysV1Response>> UserGetApikeysV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetApikeysV1Response>> UserGetApikeysV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Users and IDs
         /// </summary>
@@ -572,7 +572,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Users and IDs
@@ -588,7 +588,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Colleagues
         /// </summary>
@@ -600,7 +600,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetColleaguesV2Response</returns>
-        System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User&#39;s Colleagues
@@ -613,7 +613,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetColleaguesV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Effective Permissions
         /// </summary>
@@ -625,7 +625,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetEffectivePermissionsV1Response</returns>
-        System.Threading.Tasks.Task<UserGetEffectivePermissionsV1Response> UserGetEffectivePermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetEffectivePermissionsV1Response> UserGetEffectivePermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User&#39;s Effective Permissions
@@ -638,7 +638,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetEffectivePermissionsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetEffectivePermissionsV1Response>> UserGetEffectivePermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetEffectivePermissionsV1Response>> UserGetEffectivePermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve User list
         /// </summary>
@@ -654,7 +654,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetListV1Response</returns>
-        System.Threading.Tasks.Task<UserGetListV1Response> UserGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetListV1Response> UserGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve User list
@@ -671,7 +671,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetListV1Response>> UserGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetListV1Response>> UserGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User
         /// </summary>
@@ -683,7 +683,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<UserGetObjectV2Response> UserGetObjectV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetObjectV2Response> UserGetObjectV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User
@@ -696,7 +696,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetObjectV2Response>> UserGetObjectV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetObjectV2Response>> UserGetObjectV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Permissions
         /// </summary>
@@ -708,7 +708,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetPermissionsV1Response</returns>
-        System.Threading.Tasks.Task<UserGetPermissionsV1Response> UserGetPermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetPermissionsV1Response> UserGetPermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User&#39;s Permissions
@@ -721,7 +721,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetPermissionsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetPermissionsV1Response>> UserGetPermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetPermissionsV1Response>> UserGetPermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing User&#39;s Subnets
         /// </summary>
@@ -733,7 +733,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetSubnetsV1Response</returns>
-        System.Threading.Tasks.Task<UserGetSubnetsV1Response> UserGetSubnetsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetSubnetsV1Response> UserGetSubnetsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing User&#39;s Subnets
@@ -746,7 +746,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetSubnetsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetSubnetsV1Response>> UserGetSubnetsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetSubnetsV1Response>> UserGetSubnetsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get User&#39;s Usergroupexternals
         /// </summary>
@@ -758,7 +758,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetUsergroupexternalsV1Response</returns>
-        System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get User&#39;s Usergroupexternals
@@ -771,7 +771,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetUsergroupexternalsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get User&#39;s Usergroups
         /// </summary>
@@ -783,7 +783,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetUsergroupsV1Response</returns>
-        System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get User&#39;s Usergroups
@@ -796,7 +796,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetUsergroupsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Send password reset
         /// </summary>
@@ -808,8 +808,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UserSendPasswordResetV1Response</returns>
-        System.Threading.Tasks.Task<UserSendPasswordResetV1Response> UserSendPasswordResetV1Async(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> UserSendPasswordResetV1Async(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Send password reset
@@ -822,8 +822,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UserSendPasswordResetV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserSendPasswordResetV1Response>> UserSendPasswordResetV1WithHttpInfoAsync(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UserSendPasswordResetV1WithHttpInfoAsync(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1028,7 +1028,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UserCreateObjectV1Response> UserCreateObjectV1Async(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserCreateObjectV1Response> UserCreateObjectV1Async(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserCreateObjectV1Response> localVarResponse = await UserCreateObjectV1WithHttpInfoAsync(userCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1042,7 +1042,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateObjectV1Response>> UserCreateObjectV1WithHttpInfoAsync(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateObjectV1Response>> UserCreateObjectV1WithHttpInfoAsync(UserCreateObjectV1Request userCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userCreateObjectV1Request' is set
             if (userCreateObjectV1Request == null)
@@ -1184,7 +1184,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserCreateObjectV2Response> UserCreateObjectV2Async(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response> localVarResponse = await UserCreateObjectV2WithHttpInfoAsync(userCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1198,7 +1198,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserCreateObjectV2Response>> UserCreateObjectV2WithHttpInfoAsync(UserCreateObjectV2Request userCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userCreateObjectV2Request' is set
             if (userCreateObjectV2Request == null)
@@ -1344,7 +1344,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserEditColleaguesV2Response</returns>
-        public async System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserEditColleaguesV2Response> UserEditColleaguesV2Async(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response> localVarResponse = await UserEditColleaguesV2WithHttpInfoAsync(pkiUserID, userEditColleaguesV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1359,7 +1359,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserEditColleaguesV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditColleaguesV2Response>> UserEditColleaguesV2WithHttpInfoAsync(int pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userEditColleaguesV2Request' is set
             if (userEditColleaguesV2Request == null)
@@ -1425,10 +1425,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID">The unique ID of the User</param>
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UserEditObjectV1Response</returns>
-        public UserEditObjectV1Response UserEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse UserEditObjectV1(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UserEditObjectV1Response> localVarResponse = UserEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UserEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -1439,8 +1439,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID">The unique ID of the User</param>
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UserEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<UserEditObjectV1Response> UserEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> UserEditObjectV1WithHttpInfo(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'userEditObjectV1Request' is set
             if (userEditObjectV1Request == null)
@@ -1484,7 +1484,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<UserEditObjectV1Response>("/1/object/user/{pkiUserID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/user/{pkiUserID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserEditObjectV1", localVarResponse);
@@ -1505,10 +1505,10 @@ namespace eZmaxApi.Api
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UserEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UserEditObjectV1Response> UserEditObjectV1Async(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> UserEditObjectV1Async(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UserEditObjectV1Response> localVarResponse = await UserEditObjectV1WithHttpInfoAsync(pkiUserID, userEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UserEditObjectV1WithHttpInfoAsync(pkiUserID, userEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1520,8 +1520,8 @@ namespace eZmaxApi.Api
         /// <param name="userEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UserEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditObjectV1Response>> UserEditObjectV1WithHttpInfoAsync(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UserEditObjectV1WithHttpInfoAsync(int pkiUserID, UserEditObjectV1Request userEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userEditObjectV1Request' is set
             if (userEditObjectV1Request == null)
@@ -1566,7 +1566,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<UserEditObjectV1Response>("/1/object/user/{pkiUserID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/user/{pkiUserID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1668,7 +1668,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserEditPermissionsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserEditPermissionsV1Response> UserEditPermissionsV1Async(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserEditPermissionsV1Response> UserEditPermissionsV1Async(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserEditPermissionsV1Response> localVarResponse = await UserEditPermissionsV1WithHttpInfoAsync(pkiUserID, userEditPermissionsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1683,7 +1683,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserEditPermissionsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditPermissionsV1Response>> UserEditPermissionsV1WithHttpInfoAsync(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserEditPermissionsV1Response>> UserEditPermissionsV1WithHttpInfoAsync(int pkiUserID, UserEditPermissionsV1Request userEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userEditPermissionsV1Request' is set
             if (userEditPermissionsV1Request == null)
@@ -1819,7 +1819,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetApikeysV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetApikeysV1Response> UserGetApikeysV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetApikeysV1Response> UserGetApikeysV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetApikeysV1Response> localVarResponse = await UserGetApikeysV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1833,7 +1833,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetApikeysV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetApikeysV1Response>> UserGetApikeysV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetApikeysV1Response>> UserGetApikeysV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1988,7 +1988,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> localVarResponse = await UserGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2005,7 +2005,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -2151,7 +2151,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetColleaguesV2Response</returns>
-        public async System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetColleaguesV2Response> UserGetColleaguesV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response> localVarResponse = await UserGetColleaguesV2WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2165,7 +2165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetColleaguesV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetColleaguesV2Response>> UserGetColleaguesV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2293,7 +2293,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetEffectivePermissionsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetEffectivePermissionsV1Response> UserGetEffectivePermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetEffectivePermissionsV1Response> UserGetEffectivePermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetEffectivePermissionsV1Response> localVarResponse = await UserGetEffectivePermissionsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2307,7 +2307,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetEffectivePermissionsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetEffectivePermissionsV1Response>> UserGetEffectivePermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetEffectivePermissionsV1Response>> UserGetEffectivePermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2467,7 +2467,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetListV1Response> UserGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetListV1Response> UserGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetListV1Response> localVarResponse = await UserGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2485,7 +2485,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetListV1Response>> UserGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetListV1Response>> UserGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2633,7 +2633,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<UserGetObjectV2Response> UserGetObjectV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetObjectV2Response> UserGetObjectV2Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetObjectV2Response> localVarResponse = await UserGetObjectV2WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2647,7 +2647,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetObjectV2Response>> UserGetObjectV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetObjectV2Response>> UserGetObjectV2WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2775,7 +2775,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetPermissionsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetPermissionsV1Response> UserGetPermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetPermissionsV1Response> UserGetPermissionsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetPermissionsV1Response> localVarResponse = await UserGetPermissionsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2789,7 +2789,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetPermissionsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetPermissionsV1Response>> UserGetPermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetPermissionsV1Response>> UserGetPermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2917,7 +2917,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetSubnetsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetSubnetsV1Response> UserGetSubnetsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetSubnetsV1Response> UserGetSubnetsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetSubnetsV1Response> localVarResponse = await UserGetSubnetsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2931,7 +2931,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetSubnetsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetSubnetsV1Response>> UserGetSubnetsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetSubnetsV1Response>> UserGetSubnetsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -3059,7 +3059,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetUsergroupexternalsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetUsergroupexternalsV1Response> UserGetUsergroupexternalsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response> localVarResponse = await UserGetUsergroupexternalsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3073,7 +3073,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetUsergroupexternalsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupexternalsV1Response>> UserGetUsergroupexternalsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -3201,7 +3201,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetUsergroupsV1Response</returns>
-        public async System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UserGetUsergroupsV1Response> UserGetUsergroupsV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response> localVarResponse = await UserGetUsergroupsV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3215,7 +3215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetUsergroupsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -3273,10 +3273,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UserSendPasswordResetV1Response</returns>
-        public UserSendPasswordResetV1Response UserSendPasswordResetV1(int pkiUserID, Object body, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse UserSendPasswordResetV1(int pkiUserID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UserSendPasswordResetV1Response> localVarResponse = UserSendPasswordResetV1WithHttpInfo(pkiUserID, body);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UserSendPasswordResetV1WithHttpInfo(pkiUserID, body);
             return localVarResponse.Data;
         }
 
@@ -3287,8 +3287,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UserSendPasswordResetV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<UserSendPasswordResetV1Response> UserSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> UserSendPasswordResetV1WithHttpInfo(int pkiUserID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3332,7 +3332,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<UserSendPasswordResetV1Response>("/1/object/user/{pkiUserID}/sendPasswordReset", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/user/{pkiUserID}/sendPasswordReset", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserSendPasswordResetV1", localVarResponse);
@@ -3353,10 +3353,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UserSendPasswordResetV1Response</returns>
-        public async System.Threading.Tasks.Task<UserSendPasswordResetV1Response> UserSendPasswordResetV1Async(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> UserSendPasswordResetV1Async(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UserSendPasswordResetV1Response> localVarResponse = await UserSendPasswordResetV1WithHttpInfoAsync(pkiUserID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UserSendPasswordResetV1WithHttpInfoAsync(pkiUserID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3368,8 +3368,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UserSendPasswordResetV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserSendPasswordResetV1Response>> UserSendPasswordResetV1WithHttpInfoAsync(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UserSendPasswordResetV1WithHttpInfoAsync(int pkiUserID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3414,7 +3414,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<UserSendPasswordResetV1Response>("/1/object/user/{pkiUserID}/sendPasswordReset", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/user/{pkiUserID}/sendPasswordReset", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

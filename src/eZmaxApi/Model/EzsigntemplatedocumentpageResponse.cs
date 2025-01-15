@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpageResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
-        /// <param name="">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
-        public EzsigntemplatedocumentpageResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiEzsigntemplatedocumentpageID">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
+        /// <param name="sComputedImageurl">The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
+        public EzsigntemplatedocumentpageResponse(int pkiEzsigntemplatedocumentpageID = default(int), int iEzsigntemplatedocumentpageWidthimage = default(int), int iEzsigntemplatedocumentpageHeightimage = default(int), int iEzsigntemplatedocumentpageWidthpdf = default(int), int iEzsigntemplatedocumentpageHeightpdf = default(int), int iEzsigntemplatedocumentpagePagenumber = default(int), string sComputedImageurl = default(string))
         {
-            this.PkiEzsigntemplatedocumentpageID = ;
-            this.IEzsigntemplatedocumentpageWidthimage = ;
-            this.IEzsigntemplatedocumentpageHeightimage = ;
-            this.IEzsigntemplatedocumentpageWidthpdf = ;
-            this.IEzsigntemplatedocumentpageHeightpdf = ;
-            this.IEzsigntemplatedocumentpagePagenumber = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
+            this.IEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
+            this.IEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
+            this.IEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
+            this.IEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
+            this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
+            // to ensure "sComputedImageurl" is required (not null)
+            if (sComputedImageurl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentpageResponse and cannot be null");
+                throw new ArgumentNullException("sComputedImageurl is a required property for EzsigntemplatedocumentpageResponse and cannot be null");
             }
-            this.SComputedImageurl = ;
+            this.SComputedImageurl = sComputedImageurl;
         }
 
         /// <summary>
@@ -151,42 +151,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatedocumentpageID (int) minimum
             if (this.PkiEzsigntemplatedocumentpageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpageID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpageID" });
             }
 
             // IEzsigntemplatedocumentpageWidthimage (int) minimum
             if (this.IEzsigntemplatedocumentpageWidthimage < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthimage" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthimage" });
             }
 
             // IEzsigntemplatedocumentpageHeightimage (int) minimum
             if (this.IEzsigntemplatedocumentpageHeightimage < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightimage" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightimage" });
             }
 
             // IEzsigntemplatedocumentpageWidthpdf (int) minimum
             if (this.IEzsigntemplatedocumentpageWidthpdf < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthpdf" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthpdf" });
             }
 
             // IEzsigntemplatedocumentpageHeightpdf (int) minimum
             if (this.IEzsigntemplatedocumentpageHeightpdf < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightpdf" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightpdf" });
             }
 
             // IEzsigntemplatedocumentpagePagenumber (int) minimum
             if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
             }
 
             yield break;

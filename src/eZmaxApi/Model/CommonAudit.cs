@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAudit" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        public CommonAudit(CommonAuditdetail  = default(CommonAuditdetail), CommonAuditdetail  = default(CommonAuditdetail))
+        /// <param name="objAuditdetailCreated">objAuditdetailCreated (required).</param>
+        /// <param name="objAuditdetailModified">objAuditdetailModified.</param>
+        public CommonAudit(CommonAuditdetail objAuditdetailCreated = default(CommonAuditdetail), CommonAuditdetail objAuditdetailModified = default(CommonAuditdetail))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objAuditdetailCreated" is required (not null)
+            if (objAuditdetailCreated == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonAudit and cannot be null");
+                throw new ArgumentNullException("objAuditdetailCreated is a required property for CommonAudit and cannot be null");
             }
-            this.ObjAuditdetailCreated = ;
-            this.ObjAuditdetailModified = ;
+            this.ObjAuditdetailCreated = objAuditdetailCreated;
+            this.ObjAuditdetailModified = objAuditdetailModified;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -67,7 +67,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VersionhistoryGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<VersionhistoryGetObjectV2Response> VersionhistoryGetObjectV2Async(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<VersionhistoryGetObjectV2Response> VersionhistoryGetObjectV2Async(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Versionhistory
@@ -80,7 +80,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (VersionhistoryGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VersionhistoryGetObjectV2Response>> VersionhistoryGetObjectV2WithHttpInfoAsync(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<VersionhistoryGetObjectV2Response>> VersionhistoryGetObjectV2WithHttpInfoAsync(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -278,7 +278,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VersionhistoryGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<VersionhistoryGetObjectV2Response> VersionhistoryGetObjectV2Async(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<VersionhistoryGetObjectV2Response> VersionhistoryGetObjectV2Async(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<VersionhistoryGetObjectV2Response> localVarResponse = await VersionhistoryGetObjectV2WithHttpInfoAsync(pkiVersionhistoryID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -292,7 +292,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (VersionhistoryGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<VersionhistoryGetObjectV2Response>> VersionhistoryGetObjectV2WithHttpInfoAsync(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<VersionhistoryGetObjectV2Response>> VersionhistoryGetObjectV2WithHttpInfoAsync(int pkiVersionhistoryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

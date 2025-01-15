@@ -35,14 +35,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationCreateEmbeddedUrlV1Request" /> class.
         /// </summary>
-        /// <param name="">The return Url to redirect after the signing is completed  **Warning** Due to the potential for Ezsignsigners to cancel redirection, close their browser post-signing, or spoof the landing URL, it&#39;s advisable not to solely depend on the sReturnUrl for accurate status within your integration.  Once the Ezsignsigner finishes, they are directed back to your application. Your application can retain transaction state details by either storing data in a cookie or incorporating query parameters in the sReturnUrl. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123  The actual url that will be called will have an extra url parameter appended to give details about the process. The possible values are listed in the table below. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123&amp;eEzsignEvent&#x3D;CompletedEzsignfolder   |**Query parameters appended**| |- --| |eEzsignEvent|   |**eEzsignEvent**|**Description**| |- --|- --| |SessionTimeout|The session timed out| |SessionLogout|The Ezsignsigner signed out| |DeclinedTermOfUse|The Ezsignsigner refused the terms| |DeclinedSign|The Ezsignsigner refused to sign| |Reassigned|The Ezsignsigner reassigned his signatures to someone else| |CompletedStep|The Ezsignsigner completed his step. There is other signatures to complete the Ezsigndocument| |CompletedEzsignfolder|The Ezsignfolder is completed. Everyone signed their signatures|.</param>
-        /// <param name="">Domain protection for the iFrame.</param>
-        /// <param name="">Whether the url would be in an iFrame or not.</param>
-        public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="sReturnUrl">The return Url to redirect after the signing is completed  **Warning** Due to the potential for Ezsignsigners to cancel redirection, close their browser post-signing, or spoof the landing URL, it&#39;s advisable not to solely depend on the sReturnUrl for accurate status within your integration.  Once the Ezsignsigner finishes, they are directed back to your application. Your application can retain transaction state details by either storing data in a cookie or incorporating query parameters in the sReturnUrl. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123  The actual url that will be called will have an extra url parameter appended to give details about the process. The possible values are listed in the table below. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123&amp;eEzsignEvent&#x3D;CompletedEzsignfolder   |**Query parameters appended**| |- --| |eEzsignEvent|   |**eEzsignEvent**|**Description**| |- --|- --| |SessionTimeout|The session timed out| |SessionLogout|The Ezsignsigner signed out| |DeclinedTermOfUse|The Ezsignsigner refused the terms| |DeclinedSign|The Ezsignsigner refused to sign| |Reassigned|The Ezsignsigner reassigned his signatures to someone else| |CompletedStep|The Ezsignsigner completed his step. There is other signatures to complete the Ezsigndocument| |CompletedEzsignfolder|The Ezsignfolder is completed. Everyone signed their signatures|.</param>
+        /// <param name="sIframedomain">Domain protection for the iFrame.</param>
+        /// <param name="bIsIframe">Whether the url would be in an iFrame or not.</param>
+        public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request(string sReturnUrl = default(string), string sIframedomain = default(string), bool bIsIframe = default(bool))
         {
-            this.SReturnUrl = ;
-            this.SIframedomain = ;
-            this.BIsIframe = ;
+            this.SReturnUrl = sReturnUrl;
+            this.SIframedomain = sIframedomain;
+            this.BIsIframe = bIsIframe;
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SReturnUrl != null) {
                 // SReturnUrl (string) pattern

@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjSQLQuery" /> class.
         /// </summary>
-        /// <param name="">The SQL Query (required).</param>
-        /// <param name="">Execution time of the SQL Query in seconds (required).</param>
-        public CommonResponseObjSQLQuery(string  = default(string), float  = default(float))
+        /// <param name="sQuery">The SQL Query (required).</param>
+        /// <param name="fDuration">Execution time of the SQL Query in seconds (required).</param>
+        public CommonResponseObjSQLQuery(string sQuery = default(string), float fDuration = default(float))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sQuery" is required (not null)
+            if (sQuery == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseObjSQLQuery and cannot be null");
+                throw new ArgumentNullException("sQuery is a required property for CommonResponseObjSQLQuery and cannot be null");
             }
-            this.SQuery = ;
-            this.FDuration = ;
+            this.SQuery = sQuery;
+            this.FDuration = fDuration;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

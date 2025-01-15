@@ -46,19 +46,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardtypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The name of the Creditcardtype (required).</param>
-        /// <param name="">The unique ID of the Creditcardtype (required).</param>
-        /// <param name=""> (required).</param>
-        public CreditcardtypeAutocompleteElementResponse(string  = default(string), int  = default(int), FieldECreditcardtypeCodename  = default(FieldECreditcardtypeCodename))
+        /// <param name="sCreditcardtypeName">The name of the Creditcardtype (required).</param>
+        /// <param name="pkiCreditcardtypeID">The unique ID of the Creditcardtype (required).</param>
+        /// <param name="eCreditcardtypeCodename">eCreditcardtypeCodename (required).</param>
+        public CreditcardtypeAutocompleteElementResponse(string sCreditcardtypeName = default(string), int pkiCreditcardtypeID = default(int), FieldECreditcardtypeCodename eCreditcardtypeCodename = default(FieldECreditcardtypeCodename))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sCreditcardtypeName" is required (not null)
+            if (sCreditcardtypeName == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardtypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCreditcardtypeName is a required property for CreditcardtypeAutocompleteElementResponse and cannot be null");
             }
-            this.SCreditcardtypeName = ;
-            this.PkiCreditcardtypeID = ;
-            this.ECreditcardtypeCodename = ;
+            this.SCreditcardtypeName = sCreditcardtypeName;
+            this.PkiCreditcardtypeID = pkiCreditcardtypeID;
+            this.ECreditcardtypeCodename = eCreditcardtypeCodename;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SCreditcardtypeName != null) {
                 // SCreditcardtypeName (string) pattern
@@ -120,13 +120,13 @@ namespace eZmaxApi.Model
             // PkiCreditcardtypeID (int) maximum
             if (this.PkiCreditcardtypeID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "PkiCreditcardtypeID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "PkiCreditcardtypeID" });
             }
 
             // PkiCreditcardtypeID (int) minimum
             if (this.PkiCreditcardtypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardtypeID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardtypeID" });
             }
 
             yield break;

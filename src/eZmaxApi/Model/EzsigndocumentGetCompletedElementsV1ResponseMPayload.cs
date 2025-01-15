@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetCompletedElementsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentGetCompletedElementsV1ResponseMPayload(List<EzsignsignatureResponseCompound>  = default(List<EzsignsignatureResponseCompound>), List<EzsignformfieldgroupResponseCompound>  = default(List<EzsignformfieldgroupResponseCompound>))
+        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
+        public EzsigndocumentGetCompletedElementsV1ResponseMPayload(List<EzsignsignatureResponseCompound> aObjEzsignsignature = default(List<EzsignsignatureResponseCompound>), List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = default(List<EzsignformfieldgroupResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignsignature" is required (not null)
+            if (aObjEzsignsignature == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsignature is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignsignature = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjEzsignsignature = aObjEzsignsignature;
+            // to ensure "aObjEzsignformfieldgroup" is required (not null)
+            if (aObjEzsignformfieldgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignformfieldgroup is a required property for EzsigndocumentGetCompletedElementsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignformfieldgroup = ;
+            this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

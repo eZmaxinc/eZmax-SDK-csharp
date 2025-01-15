@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Modulegroup (required).</param>
-        /// <param name="">The name of the Modulegroup in the language of the requester (required).</param>
-        public ModulegroupResponse(int  = default(int), string  = default(string))
+        /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
+        /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
+        public ModulegroupResponse(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string))
         {
-            this.PkiModulegroupID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiModulegroupID = pkiModulegroupID;
+            // to ensure "sModulegroupNameX" is required (not null)
+            if (sModulegroupNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for ModulegroupResponse and cannot be null");
+                throw new ArgumentNullException("sModulegroupNameX is a required property for ModulegroupResponse and cannot be null");
             }
-            this.SModulegroupNameX = ;
+            this.SModulegroupNameX = sModulegroupNameX;
         }
 
         /// <summary>
@@ -97,18 +97,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiModulegroupID (int) maximum
             if (this.PkiModulegroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiModulegroupID, must be a value less than or equal to 255.", new [] { "PkiModulegroupID" });
+                yield return new ValidationResult("Invalid value for PkiModulegroupID, must be a value less than or equal to 255.", new [] { "PkiModulegroupID" });
             }
 
             // PkiModulegroupID (int) minimum
             if (this.PkiModulegroupID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiModulegroupID, must be a value greater than or equal to 1.", new [] { "PkiModulegroupID" });
+                yield return new ValidationResult("Invalid value for PkiModulegroupID, must be a value greater than or equal to 1.", new [] { "PkiModulegroupID" });
             }
 
             if (this.SModulegroupNameX != null) {

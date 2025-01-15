@@ -40,22 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserGetObjectV2ResponseMPayload(UserResponseCompound  = default(UserResponseCompound))
+        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
+        public UserGetObjectV2ResponseMPayload(UserResponse objUser = default(UserResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUser" is required (not null)
+            if (objUser == null)
             {
-                throw new ArgumentNullException(" is a required property for UserGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objUser is a required property for UserGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUser = ;
+            this.ObjUser = objUser;
         }
 
         /// <summary>
-        /// Gets or Sets ObjUser
+        /// A User Object and children to create a complete structure
         /// </summary>
+        /// <value>A User Object and children to create a complete structure</value>
         [DataMember(Name = "objUser", IsRequired = true, EmitDefaultValue = true)]
-        public UserResponseCompound ObjUser { get; set; }
+        public UserResponse ObjUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

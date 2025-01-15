@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaymenttermEditObjectV1Response</returns>
-        PaymenttermEditObjectV1Response PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Paymentterm
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaymenttermEditObjectV1Response</returns>
-        ApiResponse<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Paymentterms and IDs
         /// </summary>
@@ -169,7 +169,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<PaymenttermCreateObjectV1Response> PaymenttermCreateObjectV1Async(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermCreateObjectV1Response> PaymenttermCreateObjectV1Async(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Paymentterm
@@ -182,7 +182,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermCreateObjectV1Response>> PaymenttermCreateObjectV1WithHttpInfoAsync(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermCreateObjectV1Response>> PaymenttermCreateObjectV1WithHttpInfoAsync(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Paymentterm
         /// </summary>
@@ -194,8 +194,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymenttermEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Paymentterm
@@ -208,8 +208,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymenttermEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermEditObjectV1Response>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Paymentterms and IDs
         /// </summary>
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Paymentterms and IDs
@@ -240,7 +240,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Paymentterm list
         /// </summary>
@@ -256,7 +256,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetListV1Response</returns>
-        System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Paymentterm list
@@ -273,7 +273,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Paymentterm
         /// </summary>
@@ -285,7 +285,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<PaymenttermGetObjectV2Response> PaymenttermGetObjectV2Async(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PaymenttermGetObjectV2Response> PaymenttermGetObjectV2Async(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Paymentterm
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetObjectV2Response>> PaymenttermGetObjectV2WithHttpInfoAsync(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermGetObjectV2Response>> PaymenttermGetObjectV2WithHttpInfoAsync(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermCreateObjectV1Response> PaymenttermCreateObjectV1Async(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermCreateObjectV1Response> PaymenttermCreateObjectV1Async(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<PaymenttermCreateObjectV1Response> localVarResponse = await PaymenttermCreateObjectV1WithHttpInfoAsync(paymenttermCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -517,7 +517,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermCreateObjectV1Response>> PaymenttermCreateObjectV1WithHttpInfoAsync(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermCreateObjectV1Response>> PaymenttermCreateObjectV1WithHttpInfoAsync(PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymenttermCreateObjectV1Request' is set
             if (paymenttermCreateObjectV1Request == null)
@@ -582,10 +582,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>PaymenttermEditObjectV1Response</returns>
-        public PaymenttermEditObjectV1Response PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> localVarResponse = PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -596,8 +596,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of PaymenttermEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'paymenttermEditObjectV1Request' is set
             if (paymenttermEditObjectV1Request == null)
@@ -641,7 +641,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<PaymenttermEditObjectV1Response>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymenttermEditObjectV1", localVarResponse);
@@ -662,10 +662,10 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymenttermEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> localVarResponse = await PaymenttermEditObjectV1WithHttpInfoAsync(pkiPaymenttermID, paymenttermEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await PaymenttermEditObjectV1WithHttpInfoAsync(pkiPaymenttermID, paymenttermEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +677,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymenttermEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymenttermEditObjectV1Request' is set
             if (paymenttermEditObjectV1Request == null)
@@ -723,7 +723,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<PaymenttermEditObjectV1Response>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -841,7 +841,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermGetAutocompleteV2Response> PaymenttermGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<PaymenttermGetAutocompleteV2Response> localVarResponse = await PaymenttermGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -858,7 +858,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetAutocompleteV2Response>> PaymenttermGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1036,7 +1036,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermGetListV1Response> PaymenttermGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<PaymenttermGetListV1Response> localVarResponse = await PaymenttermGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1054,7 +1054,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetListV1Response>> PaymenttermGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1202,7 +1202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PaymenttermGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<PaymenttermGetObjectV2Response> PaymenttermGetObjectV2Async(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PaymenttermGetObjectV2Response> PaymenttermGetObjectV2Async(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<PaymenttermGetObjectV2Response> localVarResponse = await PaymenttermGetObjectV2WithHttpInfoAsync(pkiPaymenttermID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1216,7 +1216,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymenttermGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetObjectV2Response>> PaymenttermGetObjectV2WithHttpInfoAsync(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermGetObjectV2Response>> PaymenttermGetObjectV2WithHttpInfoAsync(int pkiPaymenttermID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

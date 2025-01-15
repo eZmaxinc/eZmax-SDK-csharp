@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The YYYYMM period of the Ezmaxinvoicing (required).</param>
-        /// <param name="">The unique ID of the Ezmaxinvoicing (required).</param>
-        /// <param name="">Whether the Ezmaxinvoicing is active or not (required).</param>
-        public EzmaxinvoicingAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="yyyymmEzmaxinvoicing">The YYYYMM period of the Ezmaxinvoicing (required).</param>
+        /// <param name="pkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing (required).</param>
+        /// <param name="bEzmaxinvoicingIsactive">Whether the Ezmaxinvoicing is active or not (required).</param>
+        public EzmaxinvoicingAutocompleteElementResponse(string yyyymmEzmaxinvoicing = default(string), int pkiEzmaxinvoicingID = default(int), bool bEzmaxinvoicingIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "yyyymmEzmaxinvoicing" is required (not null)
+            if (yyyymmEzmaxinvoicing == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("yyyymmEzmaxinvoicing is a required property for EzmaxinvoicingAutocompleteElementResponse and cannot be null");
             }
-            this.YyyymmEzmaxinvoicing = ;
-            this.PkiEzmaxinvoicingID = ;
-            this.BEzmaxinvoicingIsactive = ;
+            this.YyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
+            this.PkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
+            this.BEzmaxinvoicingIsactive = bEzmaxinvoicingIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // YyyymmEzmaxinvoicing (string) maxLength
             if (this.YyyymmEzmaxinvoicing != null && this.YyyymmEzmaxinvoicing.Length > 7)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for YyyymmEzmaxinvoicing, length must be less than 7.", new [] { "YyyymmEzmaxinvoicing" });
+                yield return new ValidationResult("Invalid value for YyyymmEzmaxinvoicing, length must be less than 7.", new [] { "YyyymmEzmaxinvoicing" });
             }
 
             // PkiEzmaxinvoicingID (int) minimum
             if (this.PkiEzmaxinvoicingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingID" });
             }
 
             yield break;

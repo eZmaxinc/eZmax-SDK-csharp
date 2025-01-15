@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DomainDeleteObjectV1Response</returns>
-        DomainDeleteObjectV1Response DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Domain
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DomainDeleteObjectV1Response</returns>
-        ApiResponse<DomainDeleteObjectV1Response> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0);
         /// <summary>
         /// Retrieve Domain list
         /// </summary>
@@ -138,7 +138,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<DomainCreateObjectV1Response> DomainCreateObjectV1Async(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DomainCreateObjectV1Response> DomainCreateObjectV1Async(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Domain
@@ -151,7 +151,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainCreateObjectV1Response>> DomainCreateObjectV1WithHttpInfoAsync(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DomainCreateObjectV1Response>> DomainCreateObjectV1WithHttpInfoAsync(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Domain
         /// </summary>
@@ -162,8 +162,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DomainDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<DomainDeleteObjectV1Response> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Domain
@@ -175,8 +175,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DomainDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainDeleteObjectV1Response>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Domain list
         /// </summary>
@@ -192,7 +192,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainGetListV1Response</returns>
-        System.Threading.Tasks.Task<DomainGetListV1Response> DomainGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DomainGetListV1Response> DomainGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Domain list
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainGetListV1Response>> DomainGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DomainGetListV1Response>> DomainGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Domain
         /// </summary>
@@ -221,7 +221,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<DomainGetObjectV2Response> DomainGetObjectV2Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DomainGetObjectV2Response> DomainGetObjectV2Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Domain
@@ -234,7 +234,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainGetObjectV2Response>> DomainGetObjectV2WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DomainGetObjectV2Response>> DomainGetObjectV2WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -439,7 +439,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DomainCreateObjectV1Response> DomainCreateObjectV1Async(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DomainCreateObjectV1Response> DomainCreateObjectV1Async(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<DomainCreateObjectV1Response> localVarResponse = await DomainCreateObjectV1WithHttpInfoAsync(domainCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -453,7 +453,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainCreateObjectV1Response>> DomainCreateObjectV1WithHttpInfoAsync(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainCreateObjectV1Response>> DomainCreateObjectV1WithHttpInfoAsync(DomainCreateObjectV1Request domainCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'domainCreateObjectV1Request' is set
             if (domainCreateObjectV1Request == null)
@@ -517,10 +517,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DomainDeleteObjectV1Response</returns>
-        public DomainDeleteObjectV1Response DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> localVarResponse = DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
             return localVarResponse.Data;
         }
 
@@ -530,8 +530,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DomainDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -567,7 +567,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<DomainDeleteObjectV1Response>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainDeleteObjectV1", localVarResponse);
@@ -587,10 +587,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DomainDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DomainDeleteObjectV1Response> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> localVarResponse = await DomainDeleteObjectV1WithHttpInfoAsync(pkiDomainID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DomainDeleteObjectV1WithHttpInfoAsync(pkiDomainID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -601,8 +601,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DomainDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -639,7 +639,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DomainDeleteObjectV1Response>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -762,7 +762,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<DomainGetListV1Response> DomainGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DomainGetListV1Response> DomainGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<DomainGetListV1Response> localVarResponse = await DomainGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -780,7 +780,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainGetListV1Response>> DomainGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainGetListV1Response>> DomainGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -928,7 +928,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DomainGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<DomainGetObjectV2Response> DomainGetObjectV2Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DomainGetObjectV2Response> DomainGetObjectV2Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<DomainGetObjectV2Response> localVarResponse = await DomainGetObjectV2WithHttpInfoAsync(pkiDomainID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -942,7 +942,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DomainGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainGetObjectV2Response>> DomainGetObjectV2WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainGetObjectV2Response>> DomainGetObjectV2WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

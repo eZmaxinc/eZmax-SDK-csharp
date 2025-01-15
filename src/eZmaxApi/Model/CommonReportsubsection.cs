@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsubsection" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public CommonReportsubsection(CommonReportsubsectionpart  = default(CommonReportsubsectionpart), CommonReportsubsectionpart  = default(CommonReportsubsectionpart), CommonReportsubsectionpart  = default(CommonReportsubsectionpart))
+        /// <param name="objReportsubsectionpartHeader">objReportsubsectionpartHeader (required).</param>
+        /// <param name="objReportsubsectionpartBody">objReportsubsectionpartBody (required).</param>
+        /// <param name="objReportsubsectionpartFooter">objReportsubsectionpartFooter (required).</param>
+        public CommonReportsubsection(CommonReportsubsectionpart objReportsubsectionpartHeader = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartBody = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartFooter = default(CommonReportsubsectionpart))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objReportsubsectionpartHeader" is required (not null)
+            if (objReportsubsectionpartHeader == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException("objReportsubsectionpartHeader is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartHeader = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjReportsubsectionpartHeader = objReportsubsectionpartHeader;
+            // to ensure "objReportsubsectionpartBody" is required (not null)
+            if (objReportsubsectionpartBody == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException("objReportsubsectionpartBody is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartBody = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjReportsubsectionpartBody = objReportsubsectionpartBody;
+            // to ensure "objReportsubsectionpartFooter" is required (not null)
+            if (objReportsubsectionpartFooter == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportsubsection and cannot be null");
+                throw new ArgumentNullException("objReportsubsectionpartFooter is a required property for CommonReportsubsection and cannot be null");
             }
-            this.ObjReportsubsectionpartFooter = ;
+            this.ObjReportsubsectionpartFooter = objReportsubsectionpartFooter;
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request" /> class.
         /// </summary>
-        /// <param name="">The Ezmaxcustomer code (required).</param>
-        /// <param name="">The referenceid of the Ezsigntemplatepublic (required).</param>
-        public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request(string  = default(string), string  = default(string))
+        /// <param name="pksEzmaxcustomerCode">The Ezmaxcustomer code (required).</param>
+        /// <param name="sEzsigntemplatepublicReferenceid">The referenceid of the Ezsigntemplatepublic (required).</param>
+        public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request(string pksEzmaxcustomerCode = default(string), string sEzsigntemplatepublicReferenceid = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "pksEzmaxcustomerCode" is required (not null)
+            if (pksEzmaxcustomerCode == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request and cannot be null");
+                throw new ArgumentNullException("pksEzmaxcustomerCode is a required property for EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request and cannot be null");
             }
-            this.PksEzmaxcustomerCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PksEzmaxcustomerCode = pksEzmaxcustomerCode;
+            // to ensure "sEzsigntemplatepublicReferenceid" is required (not null)
+            if (sEzsigntemplatepublicReferenceid == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatepublicReferenceid is a required property for EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request and cannot be null");
             }
-            this.SEzsigntemplatepublicReferenceid = ;
+            this.SEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
         }
 
         /// <summary>
@@ -102,18 +102,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PksEzmaxcustomerCode (string) maxLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length > 6)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
+                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
             }
 
             // PksEzmaxcustomerCode (string) minLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length < 2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
+                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
             }
 
             if (this.PksEzmaxcustomerCode != null) {

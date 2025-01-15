@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualUsergroupName" /> class.
         /// </summary>
-        /// <param name="">The name of the Usergroup in French.</param>
-        /// <param name="">The name of the Usergroup in English.</param>
-        public MultilingualUsergroupName(string  = default(string), string  = default(string))
+        /// <param name="sUsergroupName1">The name of the Usergroup in French.</param>
+        /// <param name="sUsergroupName2">The name of the Usergroup in English.</param>
+        public MultilingualUsergroupName(string sUsergroupName1 = default(string), string sUsergroupName2 = default(string))
         {
-            this.SUsergroupName1 = ;
-            this.SUsergroupName2 = ;
+            this.SUsergroupName1 = sUsergroupName1;
+            this.SUsergroupName2 = sUsergroupName2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SUsergroupName1 != null) {
                 // SUsergroupName1 (string) pattern

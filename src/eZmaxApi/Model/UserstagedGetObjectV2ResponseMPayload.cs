@@ -40,22 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponseCompound  = default(UserstagedResponseCompound))
+        /// <param name="objUserstaged">A Userstaged Object (required).</param>
+        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponse objUserstaged = default(UserstagedResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUserstaged" is required (not null)
+            if (objUserstaged == null)
             {
-                throw new ArgumentNullException(" is a required property for UserstagedGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objUserstaged is a required property for UserstagedGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUserstaged = ;
+            this.ObjUserstaged = objUserstaged;
         }
 
         /// <summary>
-        /// Gets or Sets ObjUserstaged
+        /// A Userstaged Object
         /// </summary>
+        /// <value>A Userstaged Object</value>
         [DataMember(Name = "objUserstaged", IsRequired = true, EmitDefaultValue = true)]
-        public UserstagedResponseCompound ObjUserstaged { get; set; }
+        public UserstagedResponse ObjUserstaged { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

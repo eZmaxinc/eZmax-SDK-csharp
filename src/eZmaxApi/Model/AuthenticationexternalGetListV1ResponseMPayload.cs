@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name=""> (required).</param>
-        public AuthenticationexternalGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<AuthenticationexternalListElement>  = default(List<AuthenticationexternalListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name="aObjAuthenticationexternal">aObjAuthenticationexternal (required).</param>
+        public AuthenticationexternalGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<AuthenticationexternalListElement> aObjAuthenticationexternal = default(List<AuthenticationexternalListElement>))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
+            // to ensure "aObjAuthenticationexternal" is required (not null)
+            if (aObjAuthenticationexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjAuthenticationexternal is a required property for AuthenticationexternalGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjAuthenticationexternal = ;
+            this.AObjAuthenticationexternal = aObjAuthenticationexternal;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

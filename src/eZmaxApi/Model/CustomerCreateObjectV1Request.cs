@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public CustomerCreateObjectV1Request(List<CustomerRequestCompound>  = default(List<CustomerRequestCompound>))
+        /// <param name="aObjCustomer">aObjCustomer (required).</param>
+        public CustomerCreateObjectV1Request(List<CustomerRequestCompound> aObjCustomer = default(List<CustomerRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCustomer" is required (not null)
+            if (aObjCustomer == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjCustomer is a required property for CustomerCreateObjectV1Request and cannot be null");
             }
-            this.AObjCustomer = ;
+            this.AObjCustomer = aObjCustomer;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

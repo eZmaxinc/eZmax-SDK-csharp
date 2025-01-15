@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomTimezoneWithCodeResponse" /> class.
         /// </summary>
-        /// <param name="">The Name of timezone (required).</param>
-        /// <param name="">The Code of the time (required).</param>
-        public CustomTimezoneWithCodeResponse(string  = default(string), string  = default(string))
+        /// <param name="sTimezoneName">The Name of timezone (required).</param>
+        /// <param name="sCode">The Code of the time (required).</param>
+        public CustomTimezoneWithCodeResponse(string sTimezoneName = default(string), string sCode = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sTimezoneName" is required (not null)
+            if (sTimezoneName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomTimezoneWithCodeResponse and cannot be null");
+                throw new ArgumentNullException("sTimezoneName is a required property for CustomTimezoneWithCodeResponse and cannot be null");
             }
-            this.STimezoneName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.STimezoneName = sTimezoneName;
+            // to ensure "sCode" is required (not null)
+            if (sCode == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomTimezoneWithCodeResponse and cannot be null");
+                throw new ArgumentNullException("sCode is a required property for CustomTimezoneWithCodeResponse and cannot be null");
             }
-            this.SCode = ;
+            this.SCode = sCode;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

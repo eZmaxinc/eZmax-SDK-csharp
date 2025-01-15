@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public AuthenticationexternalGetObjectV2ResponseMPayload(AuthenticationexternalResponseCompound  = default(AuthenticationexternalResponseCompound))
+        /// <param name="objAuthenticationexternal">objAuthenticationexternal (required).</param>
+        public AuthenticationexternalGetObjectV2ResponseMPayload(AuthenticationexternalResponseCompound objAuthenticationexternal = default(AuthenticationexternalResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objAuthenticationexternal" is required (not null)
+            if (objAuthenticationexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objAuthenticationexternal is a required property for AuthenticationexternalGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjAuthenticationexternal = ;
+            this.ObjAuthenticationexternal = objAuthenticationexternal;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

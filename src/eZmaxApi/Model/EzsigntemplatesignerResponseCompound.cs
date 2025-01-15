@@ -46,33 +46,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignerResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatesigner (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Usergroup.</param>
-        /// <param name="">The unique ID of the Ezdoctemplatedocument.</param>
-        /// <param name="">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
-        /// <param name="">.</param>
-        /// <param name="">The description of the Ezsigntemplatesigner (required).</param>
-        /// <param name="">The description of the User in the language of the requester.</param>
-        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
-        public EzsigntemplatesignerResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), FieldEEzsigntemplatesignerMapping?  = default(FieldEEzsigntemplatesignerMapping?), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="fkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument.</param>
+        /// <param name="bEzsigntemplatesignerReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
+        /// <param name="eEzsigntemplatesignerMapping">eEzsigntemplatesignerMapping.</param>
+        /// <param name="sEzsigntemplatesignerDescription">The description of the Ezsigntemplatesigner (required).</param>
+        /// <param name="sUserName">The description of the User in the language of the requester.</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
+        public EzsigntemplatesignerResponseCompound(int pkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplateID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiEzdoctemplatedocumentID = default(int), bool bEzsigntemplatesignerReceivecopy = default(bool), FieldEEzsigntemplatesignerMapping? eEzsigntemplatesignerMapping = default(FieldEEzsigntemplatesignerMapping?), string sEzsigntemplatesignerDescription = default(string), string sUserName = default(string), string sUsergroupNameX = default(string))
         {
-            this.PkiEzsigntemplatesignerID = ;
-            this.FkiEzsigntemplateID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            // to ensure "sEzsigntemplatesignerDescription" is required (not null)
+            if (sEzsigntemplatesignerDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatesignerResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatesignerDescription is a required property for EzsigntemplatesignerResponseCompound and cannot be null");
             }
-            this.SEzsigntemplatesignerDescription = ;
-            this.FkiUserID = ;
-            this.FkiUsergroupID = ;
-            this.FkiEzdoctemplatedocumentID = ;
-            this.BEzsigntemplatesignerReceivecopy = ;
-            this.EEzsigntemplatesignerMapping = ;
-            this.SUserName = ;
-            this.SUsergroupNameX = ;
+            this.SEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupID = fkiUsergroupID;
+            this.FkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+            this.BEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
+            this.EEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
+            this.SUserName = sUserName;
+            this.SUsergroupNameX = sUsergroupNameX;
         }
 
         /// <summary>
@@ -182,48 +182,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatesignerID (int) minimum
             if (this.PkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignerID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignerID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiEzdoctemplatedocumentID (int) maximum
             if (this.FkiEzdoctemplatedocumentID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
             }
 
             // FkiEzdoctemplatedocumentID (int) minimum
             if (this.FkiEzdoctemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
             }
 
             if (this.SEzsigntemplatesignerDescription != null) {

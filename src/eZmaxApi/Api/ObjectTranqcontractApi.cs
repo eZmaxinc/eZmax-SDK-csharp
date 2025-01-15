@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<TranqcontractGetCommunicationCountV1Response> TranqcontractGetCommunicationCountV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranqcontractGetCommunicationCountV1Response> TranqcontractGetCommunicationCountV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationCountV1Response>> TranqcontractGetCommunicationCountV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationCountV1Response>> TranqcontractGetCommunicationCountV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<TranqcontractGetCommunicationListV1Response> TranqcontractGetCommunicationListV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranqcontractGetCommunicationListV1Response> TranqcontractGetCommunicationListV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationListV1Response>> TranqcontractGetCommunicationListV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationListV1Response>> TranqcontractGetCommunicationListV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Tranqcontract&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<TranqcontractGetCommunicationrecipientsV1Response> TranqcontractGetCommunicationrecipientsV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranqcontractGetCommunicationrecipientsV1Response> TranqcontractGetCommunicationrecipientsV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Tranqcontract&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationrecipientsV1Response>> TranqcontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationrecipientsV1Response>> TranqcontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Tranqcontract&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<TranqcontractGetCommunicationsendersV1Response> TranqcontractGetCommunicationsendersV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranqcontractGetCommunicationsendersV1Response> TranqcontractGetCommunicationsendersV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Tranqcontract&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationsendersV1Response>> TranqcontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranqcontractGetCommunicationsendersV1Response>> TranqcontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationCountV1Response> TranqcontractGetCommunicationCountV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationCountV1Response> TranqcontractGetCommunicationCountV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationCountV1Response> localVarResponse = await TranqcontractGetCommunicationCountV1WithHttpInfoAsync(pkiTranqcontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationCountV1Response>> TranqcontractGetCommunicationCountV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationCountV1Response>> TranqcontractGetCommunicationCountV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationListV1Response> TranqcontractGetCommunicationListV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationListV1Response> TranqcontractGetCommunicationListV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationListV1Response> localVarResponse = await TranqcontractGetCommunicationListV1WithHttpInfoAsync(pkiTranqcontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationListV1Response>> TranqcontractGetCommunicationListV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationListV1Response>> TranqcontractGetCommunicationListV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationrecipientsV1Response> TranqcontractGetCommunicationrecipientsV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationrecipientsV1Response> TranqcontractGetCommunicationrecipientsV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationrecipientsV1Response> localVarResponse = await TranqcontractGetCommunicationrecipientsV1WithHttpInfoAsync(pkiTranqcontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationrecipientsV1Response>> TranqcontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationrecipientsV1Response>> TranqcontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranqcontractGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationsendersV1Response> TranqcontractGetCommunicationsendersV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranqcontractGetCommunicationsendersV1Response> TranqcontractGetCommunicationsendersV1Async(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationsendersV1Response> localVarResponse = await TranqcontractGetCommunicationsendersV1WithHttpInfoAsync(pkiTranqcontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranqcontractGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationsendersV1Response>> TranqcontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<TranqcontractGetCommunicationsendersV1Response>> TranqcontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiTranqcontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

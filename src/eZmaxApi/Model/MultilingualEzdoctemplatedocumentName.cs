@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzdoctemplatedocumentName" /> class.
         /// </summary>
-        /// <param name="">The name1 of the Ezdoctemplatedocument.</param>
-        /// <param name="">The name2 of the Ezdoctemplatedocument.</param>
-        public MultilingualEzdoctemplatedocumentName(string  = default(string), string  = default(string))
+        /// <param name="sEzdoctemplatedocumentName1">The name1 of the Ezdoctemplatedocument.</param>
+        /// <param name="sEzdoctemplatedocumentName2">The name2 of the Ezdoctemplatedocument.</param>
+        public MultilingualEzdoctemplatedocumentName(string sEzdoctemplatedocumentName1 = default(string), string sEzdoctemplatedocumentName2 = default(string))
         {
-            this.SEzdoctemplatedocumentName1 = ;
-            this.SEzdoctemplatedocumentName2 = ;
+            this.SEzdoctemplatedocumentName1 = sEzdoctemplatedocumentName1;
+            this.SEzdoctemplatedocumentName2 = sEzdoctemplatedocumentName2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzdoctemplatedocumentName1 != null) {
                 // SEzdoctemplatedocumentName1 (string) pattern

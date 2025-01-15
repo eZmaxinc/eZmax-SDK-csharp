@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyCreateObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public ApikeyCreateObjectV2ResponseMPayload(List<ApikeyResponseCompound>  = default(List<ApikeyResponseCompound>))
+        /// <param name="aObjApikey">aObjApikey (required).</param>
+        public ApikeyCreateObjectV2ResponseMPayload(List<ApikeyResponseCompound> aObjApikey = default(List<ApikeyResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjApikey" is required (not null)
+            if (aObjApikey == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyCreateObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjApikey is a required property for ApikeyCreateObjectV2ResponseMPayload and cannot be null");
             }
-            this.AObjApikey = ;
+            this.AObjApikey = aObjApikey;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

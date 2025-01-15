@@ -67,7 +67,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModulegroupGetAllV1Response</returns>
-        System.Threading.Tasks.Task<ModulegroupGetAllV1Response> ModulegroupGetAllV1Async(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModulegroupGetAllV1Response> ModulegroupGetAllV1Async(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve all Modulegroups
@@ -80,7 +80,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModulegroupGetAllV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModulegroupGetAllV1Response>> ModulegroupGetAllV1WithHttpInfoAsync(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModulegroupGetAllV1Response>> ModulegroupGetAllV1WithHttpInfoAsync(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -284,7 +284,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModulegroupGetAllV1Response</returns>
-        public async System.Threading.Tasks.Task<ModulegroupGetAllV1Response> ModulegroupGetAllV1Async(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModulegroupGetAllV1Response> ModulegroupGetAllV1Async(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ModulegroupGetAllV1Response> localVarResponse = await ModulegroupGetAllV1WithHttpInfoAsync(eContext, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModulegroupGetAllV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ModulegroupGetAllV1Response>> ModulegroupGetAllV1WithHttpInfoAsync(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ModulegroupGetAllV1Response>> ModulegroupGetAllV1WithHttpInfoAsync(string eContext, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'eContext' is set
             if (eContext == null)

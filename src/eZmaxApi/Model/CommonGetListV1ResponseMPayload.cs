@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public CommonGetListV1ResponseMPayload(int  = default(int), int  = default(int))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        public CommonGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

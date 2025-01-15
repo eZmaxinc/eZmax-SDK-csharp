@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public DiscussionmessageCreateObjectV1Request(List<DiscussionmessageRequestCompound>  = default(List<DiscussionmessageRequestCompound>))
+        /// <param name="aObjDiscussionmessage">aObjDiscussionmessage (required).</param>
+        public DiscussionmessageCreateObjectV1Request(List<DiscussionmessageRequestCompound> aObjDiscussionmessage = default(List<DiscussionmessageRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjDiscussionmessage" is required (not null)
+            if (aObjDiscussionmessage == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmessageCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjDiscussionmessage is a required property for DiscussionmessageCreateObjectV1Request and cannot be null");
             }
-            this.AObjDiscussionmessage = ;
+            this.AObjDiscussionmessage = aObjDiscussionmessage;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

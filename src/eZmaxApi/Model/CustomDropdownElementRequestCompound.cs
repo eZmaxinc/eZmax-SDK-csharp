@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomDropdownElementRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The Description of the element (required).</param>
-        /// <param name="">The Value of the element (required).</param>
-        public CustomDropdownElementRequestCompound(string  = default(string), string  = default(string))
+        /// <param name="sLabel">The Description of the element (required).</param>
+        /// <param name="sValue">The Value of the element (required).</param>
+        public CustomDropdownElementRequestCompound(string sLabel = default(string), string sValue = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sLabel" is required (not null)
+            if (sLabel == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomDropdownElementRequestCompound and cannot be null");
+                throw new ArgumentNullException("sLabel is a required property for CustomDropdownElementRequestCompound and cannot be null");
             }
-            this.SLabel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SLabel = sLabel;
+            // to ensure "sValue" is required (not null)
+            if (sValue == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomDropdownElementRequestCompound and cannot be null");
+                throw new ArgumentNullException("sValue is a required property for CustomDropdownElementRequestCompound and cannot be null");
             }
-            this.SValue = ;
+            this.SValue = sValue;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

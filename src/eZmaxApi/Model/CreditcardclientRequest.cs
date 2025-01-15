@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Creditcardclient.</param>
-        /// <param name="">The creditcard token identifier.</param>
-        /// <param name="">Whether if it&#39;s the creditcardclient is the default one (required).</param>
-        /// <param name="">The description of the Creditcardclient (required).</param>
-        /// <param name="">Whether if it&#39;s an allowedagencypayment (required).</param>
-        /// <param name="">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
-        /// <param name="">Whether if it&#39;s an allowedtranquillit (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The creditcard card CVV (required).</param>
-        public CreditcardclientRequest(int  = default(int), string  = default(string), bool  = default(bool), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), CreditcarddetailRequest  = default(CreditcarddetailRequest), string  = default(string))
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient.</param>
+        /// <param name="fksCreditcardtokenID">The creditcard token identifier.</param>
+        /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s the creditcardclient is the default one (required).</param>
+        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
+        /// <param name="bCreditcardclientAllowedcompanypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
+        /// <param name="bCreditcardclientAllowedezsign">Whether if it&#39;s an allowedroyallepageprotection (required).</param>
+        /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
+        /// <param name="objCreditcarddetail">objCreditcarddetail (required).</param>
+        /// <param name="sCreditcardclientCVV">The creditcard card CVV (required).</param>
+        public CreditcardclientRequest(int pkiCreditcardclientID = default(int), string fksCreditcardtokenID = default(string), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientAllowedcompanypayment = default(bool), bool bCreditcardclientAllowedezsign = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), CreditcarddetailRequest objCreditcarddetail = default(CreditcarddetailRequest), string sCreditcardclientCVV = default(string))
         {
-            this.BCreditcardclientrelationIsdefault = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+            // to ensure "sCreditcardclientDescription" is required (not null)
+            if (sCreditcardclientDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardclientRequest and cannot be null");
+                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientRequest and cannot be null");
             }
-            this.SCreditcardclientDescription = ;
-            this.BCreditcardclientAllowedcompanypayment = ;
-            this.BCreditcardclientAllowedezsign = ;
-            this.BCreditcardclientAllowedtranquillit = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCreditcardclientDescription = sCreditcardclientDescription;
+            this.BCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
+            this.BCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
+            this.BCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
+            // to ensure "objCreditcarddetail" is required (not null)
+            if (objCreditcarddetail == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardclientRequest and cannot be null");
+                throw new ArgumentNullException("objCreditcarddetail is a required property for CreditcardclientRequest and cannot be null");
             }
-            this.ObjCreditcarddetail = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjCreditcarddetail = objCreditcarddetail;
+            // to ensure "sCreditcardclientCVV" is required (not null)
+            if (sCreditcardclientCVV == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardclientRequest and cannot be null");
+                throw new ArgumentNullException("sCreditcardclientCVV is a required property for CreditcardclientRequest and cannot be null");
             }
-            this.SCreditcardclientCVV = ;
-            this.PkiCreditcardclientID = ;
-            this.FksCreditcardtokenID = ;
+            this.SCreditcardclientCVV = sCreditcardclientCVV;
+            this.PkiCreditcardclientID = pkiCreditcardclientID;
+            this.FksCreditcardtokenID = fksCreditcardtokenID;
         }
 
         /// <summary>
@@ -181,18 +181,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCreditcardclientID (int) maximum
             if (this.PkiCreditcardclientID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
             }
 
             // PkiCreditcardclientID (int) minimum
             if (this.PkiCreditcardclientID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
             }
 
             if (this.FksCreditcardtokenID != null) {

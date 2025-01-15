@@ -40,40 +40,40 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Userstaged (required).</param>
-        /// <param name="">The unique ID of the Email (required).</param>
-        /// <param name="">The email address. (required).</param>
-        /// <param name="">The firstname of the Userstaged (required).</param>
-        /// <param name="">The lastname of the Userstaged (required).</param>
-        /// <param name="">The externalid of the Userstaged (required).</param>
-        public UserstagedResponseCompound(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiUserstagedID">The unique ID of the Userstaged (required).</param>
+        /// <param name="fkiEmailID">The unique ID of the Email (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        /// <param name="sUserstagedFirstname">The firstname of the Userstaged (required).</param>
+        /// <param name="sUserstagedLastname">The lastname of the Userstaged (required).</param>
+        /// <param name="sUserstagedExternalid">The externalid of the Userstaged (required).</param>
+        public UserstagedResponseCompound(int pkiUserstagedID = default(int), int fkiEmailID = default(int), string sEmailAddress = default(string), string sUserstagedFirstname = default(string), string sUserstagedLastname = default(string), string sUserstagedExternalid = default(string))
         {
-            this.PkiUserstagedID = ;
-            this.FkiEmailID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUserstagedID = pkiUserstagedID;
+            this.FkiEmailID = fkiEmailID;
+            // to ensure "sEmailAddress" is required (not null)
+            if (sEmailAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for UserstagedResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEmailAddress is a required property for UserstagedResponseCompound and cannot be null");
             }
-            this.SEmailAddress = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEmailAddress = sEmailAddress;
+            // to ensure "sUserstagedFirstname" is required (not null)
+            if (sUserstagedFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserstagedResponseCompound and cannot be null");
+                throw new ArgumentNullException("sUserstagedFirstname is a required property for UserstagedResponseCompound and cannot be null");
             }
-            this.SUserstagedFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserstagedFirstname = sUserstagedFirstname;
+            // to ensure "sUserstagedLastname" is required (not null)
+            if (sUserstagedLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserstagedResponseCompound and cannot be null");
+                throw new ArgumentNullException("sUserstagedLastname is a required property for UserstagedResponseCompound and cannot be null");
             }
-            this.SUserstagedLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserstagedLastname = sUserstagedLastname;
+            // to ensure "sUserstagedExternalid" is required (not null)
+            if (sUserstagedExternalid == null)
             {
-                throw new ArgumentNullException(" is a required property for UserstagedResponseCompound and cannot be null");
+                throw new ArgumentNullException("sUserstagedExternalid is a required property for UserstagedResponseCompound and cannot be null");
             }
-            this.SUserstagedExternalid = ;
+            this.SUserstagedExternalid = sUserstagedExternalid;
         }
 
         /// <summary>
@@ -156,30 +156,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserstagedID (int) maximum
             if (this.PkiUserstagedID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value less than or equal to 65535.", new [] { "PkiUserstagedID" });
+                yield return new ValidationResult("Invalid value for PkiUserstagedID, must be a value less than or equal to 65535.", new [] { "PkiUserstagedID" });
             }
 
             // PkiUserstagedID (int) minimum
             if (this.PkiUserstagedID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value greater than or equal to 1.", new [] { "PkiUserstagedID" });
+                yield return new ValidationResult("Invalid value for PkiUserstagedID, must be a value greater than or equal to 1.", new [] { "PkiUserstagedID" });
             }
 
             // FkiEmailID (int) maximum
             if (this.FkiEmailID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
+                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
             }
 
             // FkiEmailID (int) minimum
             if (this.FkiEmailID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
+                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
             }
 
             if (this.SEmailAddress != null) {

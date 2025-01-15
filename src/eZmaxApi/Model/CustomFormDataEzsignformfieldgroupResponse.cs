@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldgroupResponse" /> class.
         /// </summary>
-        /// <param name="">The Label for the Ezsignformfieldgroup (required).</param>
-        /// <param name=""> (required).</param>
-        public CustomFormDataEzsignformfieldgroupResponse(string  = default(string), List<CustomFormDataEzsignformfieldResponse>  = default(List<CustomFormDataEzsignformfieldResponse>))
+        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup (required).</param>
+        /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
+        public CustomFormDataEzsignformfieldgroupResponse(string sEzsignformfieldgroupLabel = default(string), List<CustomFormDataEzsignformfieldResponse> aObjEzsignformfield = default(List<CustomFormDataEzsignformfieldResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzsignformfieldgroupLabel" is required (not null)
+            if (sEzsignformfieldgroupLabel == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignformfieldgroupLabel is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
             }
-            this.SEzsignformfieldgroupLabel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
+            // to ensure "aObjEzsignformfield" is required (not null)
+            if (aObjEzsignformfield == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
+                throw new ArgumentNullException("aObjEzsignformfield is a required property for CustomFormDataEzsignformfieldgroupResponse and cannot be null");
             }
-            this.AObjEzsignformfield = ;
+            this.AObjEzsignformfield = aObjEzsignformfield;
         }
 
         /// <summary>
@@ -100,18 +100,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SEzsignformfieldgroupLabel (string) maxLength
             if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length > 50)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be less than 50.", new [] { "SEzsignformfieldgroupLabel" });
+                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be less than 50.", new [] { "SEzsignformfieldgroupLabel" });
             }
 
             // SEzsignformfieldgroupLabel (string) minLength
             if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsignformfieldgroupLabel" });
+                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsignformfieldgroupLabel" });
             }
 
             yield break;

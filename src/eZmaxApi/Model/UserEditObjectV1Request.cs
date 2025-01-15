@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserEditObjectV1Request(UserRequestCompound  = default(UserRequestCompound))
+        /// <param name="objUser">objUser (required).</param>
+        public UserEditObjectV1Request(UserRequestCompound objUser = default(UserRequestCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUser" is required (not null)
+            if (objUser == null)
             {
-                throw new ArgumentNullException(" is a required property for UserEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objUser is a required property for UserEditObjectV1Request and cannot be null");
             }
-            this.ObjUser = ;
+            this.ObjUser = objUser;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

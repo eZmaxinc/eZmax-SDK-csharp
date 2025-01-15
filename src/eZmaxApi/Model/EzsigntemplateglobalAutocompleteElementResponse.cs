@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="">The description of the Ezsigntemplate (required).</param>
-        /// <param name="">Whether the Ezsigntemplate is active or not (required).</param>
-        public EzsigntemplateglobalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="sEzsigntemplateglobalDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="bEzsigntemplateglobalIsactive">Whether the Ezsigntemplate is active or not (required).</param>
+        public EzsigntemplateglobalAutocompleteElementResponse(int pkiEzsigntemplateglobalID = default(int), string sEzsigntemplateglobalDescription = default(string), bool bEzsigntemplateglobalIsactive = default(bool))
         {
-            this.PkiEzsigntemplateglobalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
+            // to ensure "sEzsigntemplateglobalDescription" is required (not null)
+            if (sEzsigntemplateglobalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateglobalDescription is a required property for EzsigntemplateglobalAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalDescription = ;
-            this.BEzsigntemplateglobalIsactive = ;
+            this.SEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
+            this.BEzsigntemplateglobalIsactive = bEzsigntemplateglobalIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateglobalID (int) minimum
             if (this.PkiEzsigntemplateglobalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
             }
 
             yield break;

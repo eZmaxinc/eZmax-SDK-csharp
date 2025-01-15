@@ -61,24 +61,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseInformationV1" /> class.
         /// </summary>
-        /// <param name="">The Type of message (required).</param>
-        /// <param name="">The Channel on which to route the websocket message (required).</param>
-        /// <param name=""> (required).</param>
-        public WebsocketResponseInformationV1(EWebsocketMessagetypeEnum  = default(EWebsocketMessagetypeEnum), string  = default(string), WebsocketResponseInformationV1MPayload  = default(WebsocketResponseInformationV1MPayload))
+        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
+        /// <param name="sWebsocketChannel">The Channel on which to route the websocket message (required).</param>
+        /// <param name="mPayload">mPayload (required).</param>
+        public WebsocketResponseInformationV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum), string sWebsocketChannel = default(string), WebsocketResponseInformationV1MPayload mPayload = default(WebsocketResponseInformationV1MPayload))
         {
-            this.EWebsocketMessagetype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EWebsocketMessagetype = eWebsocketMessagetype;
+            // to ensure "sWebsocketChannel" is required (not null)
+            if (sWebsocketChannel == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseInformationV1 and cannot be null");
+                throw new ArgumentNullException("sWebsocketChannel is a required property for WebsocketResponseInformationV1 and cannot be null");
             }
-            this.SWebsocketChannel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWebsocketChannel = sWebsocketChannel;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseInformationV1 and cannot be null");
+                throw new ArgumentNullException("mPayload is a required property for WebsocketResponseInformationV1 and cannot be null");
             }
-            this.MPayload = ;
+            this.MPayload = mPayload;
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SWebsocketChannel != null) {
                 // SWebsocketChannel (string) pattern

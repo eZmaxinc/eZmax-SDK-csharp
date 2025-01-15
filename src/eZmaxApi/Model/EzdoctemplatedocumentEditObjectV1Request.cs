@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzdoctemplatedocumentEditObjectV1Request(EzdoctemplatedocumentRequestCompound  = default(EzdoctemplatedocumentRequestCompound))
+        /// <param name="objEzdoctemplatedocument">objEzdoctemplatedocument (required).</param>
+        public EzdoctemplatedocumentEditObjectV1Request(EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument = default(EzdoctemplatedocumentRequestCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzdoctemplatedocument" is required (not null)
+            if (objEzdoctemplatedocument == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatedocumentEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objEzdoctemplatedocument is a required property for EzdoctemplatedocumentEditObjectV1Request and cannot be null");
             }
-            this.ObjEzdoctemplatedocument = ;
+            this.ObjEzdoctemplatedocument = objEzdoctemplatedocument;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

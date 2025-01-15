@@ -106,25 +106,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomDnsrecordResponse" /> class.
         /// </summary>
-        /// <param name="">The type of the Dnsrecord (required).</param>
-        /// <param name="">The validation of the Dnsrecord (required).</param>
-        /// <param name="">The name of the Dnsrecord (required).</param>
-        /// <param name="">The value of the Dnsrecord.</param>
-        /// <param name="">The expected value of the Dnsrecord.</param>
-        /// <param name="">Whether the Dnsrecord must match or not (required).</param>
-        public CustomDnsrecordResponse(EDnsrecordTypeEnum  = default(EDnsrecordTypeEnum), EDnsrecordValidationEnum  = default(EDnsrecordValidationEnum), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="eDnsrecordType">The type of the Dnsrecord (required).</param>
+        /// <param name="eDnsrecordValidation">The validation of the Dnsrecord (required).</param>
+        /// <param name="sDnsrecordName">The name of the Dnsrecord (required).</param>
+        /// <param name="sDnsrecordValue">The value of the Dnsrecord.</param>
+        /// <param name="sDnsrecordExpectedvalue">The expected value of the Dnsrecord.</param>
+        /// <param name="bDnsrecordMustMatch">Whether the Dnsrecord must match or not (required).</param>
+        public CustomDnsrecordResponse(EDnsrecordTypeEnum eDnsrecordType = default(EDnsrecordTypeEnum), EDnsrecordValidationEnum eDnsrecordValidation = default(EDnsrecordValidationEnum), string sDnsrecordName = default(string), string sDnsrecordValue = default(string), string sDnsrecordExpectedvalue = default(string), bool bDnsrecordMustMatch = default(bool))
         {
-            this.EDnsrecordType = ;
-            this.EDnsrecordValidation = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EDnsrecordType = eDnsrecordType;
+            this.EDnsrecordValidation = eDnsrecordValidation;
+            // to ensure "sDnsrecordName" is required (not null)
+            if (sDnsrecordName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomDnsrecordResponse and cannot be null");
+                throw new ArgumentNullException("sDnsrecordName is a required property for CustomDnsrecordResponse and cannot be null");
             }
-            this.SDnsrecordName = ;
-            this.BDnsrecordMustMatch = ;
-            this.SDnsrecordValue = ;
-            this.SDnsrecordExpectedvalue = ;
+            this.SDnsrecordName = sDnsrecordName;
+            this.BDnsrecordMustMatch = bDnsrecordMustMatch;
+            this.SDnsrecordValue = sDnsrecordValue;
+            this.SDnsrecordExpectedvalue = sDnsrecordExpectedvalue;
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

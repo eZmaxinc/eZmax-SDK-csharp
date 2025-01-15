@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendReorderV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendReorderV1Request(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsignbulksenddocumentmappingID">aPkiEzsignbulksenddocumentmappingID (required).</param>
+        public EzsignbulksendReorderV1Request(List<int> aPkiEzsignbulksenddocumentmappingID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsignbulksenddocumentmappingID" is required (not null)
+            if (aPkiEzsignbulksenddocumentmappingID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendReorderV1Request and cannot be null");
+                throw new ArgumentNullException("aPkiEzsignbulksenddocumentmappingID is a required property for EzsignbulksendReorderV1Request and cannot be null");
             }
-            this.APkiEzsignbulksenddocumentmappingID = ;
+            this.APkiEzsignbulksenddocumentmappingID = aPkiEzsignbulksenddocumentmappingID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

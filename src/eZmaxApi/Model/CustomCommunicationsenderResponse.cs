@@ -84,33 +84,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationsenderResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Agent..</param>
-        /// <param name="">The unique ID of the Broker..</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Mailboxshared.</param>
-        /// <param name="">The unique ID of the Phonelineshared.</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public CustomCommunicationsenderResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), ECommunicationsenderObjecttypeEnum  = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse  = default(CustomContactNameResponse), EmailResponseCompound  = default(EmailResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound))
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
+        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
+        /// <param name="eCommunicationsenderObjecttype">eCommunicationsenderObjecttype (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="objEmail">An Email Object and children to create a complete structure.</param>
+        /// <param name="objPhoneFax">objPhoneFax.</param>
+        /// <param name="objPhoneSMS">objPhoneSMS.</param>
+        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponse objEmail = default(EmailResponse), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
         {
-            this.ECommunicationsenderObjecttype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ECommunicationsenderObjecttype = eCommunicationsenderObjecttype;
+            // to ensure "objContactName" is required (not null)
+            if (objContactName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCommunicationsenderResponse and cannot be null");
+                throw new ArgumentNullException("objContactName is a required property for CustomCommunicationsenderResponse and cannot be null");
             }
-            this.ObjContactName = ;
-            this.FkiAgentID = ;
-            this.FkiBrokerID = ;
-            this.FkiUserID = ;
-            this.FkiMailboxsharedID = ;
-            this.FkiPhonelinesharedID = ;
-            this.ObjEmail = ;
-            this.ObjPhoneFax = ;
-            this.ObjPhoneSMS = ;
+            this.ObjContactName = objContactName;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiUserID = fkiUserID;
+            this.FkiMailboxsharedID = fkiMailboxsharedID;
+            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
+            this.ObjEmail = objEmail;
+            this.ObjPhoneFax = objPhoneFax;
+            this.ObjPhoneSMS = objPhoneSMS;
         }
 
         /// <summary>
@@ -160,10 +160,11 @@ namespace eZmaxApi.Model
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmail
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", EmitDefaultValue = false)]
-        public EmailResponseCompound ObjEmail { get; set; }
+        public EmailResponse ObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneFax
@@ -213,48 +214,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiMailboxsharedID (int) maximum
             if (this.FkiMailboxsharedID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
+                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiMailboxsharedID (int) minimum
             if (this.FkiMailboxsharedID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
+                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiPhonelinesharedID (int) maximum
             if (this.FkiPhonelinesharedID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
+                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
             }
 
             // FkiPhonelinesharedID (int) minimum
             if (this.FkiPhonelinesharedID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
+                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
             }
 
             yield break;

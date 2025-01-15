@@ -58,24 +58,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookSendWebhookV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">The unique ID of the Ezsignfolder.</param>
-        /// <param name="">The unique ID of the Ezsigndocument.</param>
-        /// <param name="">The unique ID of the Ezsignsigner.</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Userstaged.</param>
-        public WebhookSendWebhookV1Request(FieldEWebhookModule  = default(FieldEWebhookModule), CustomEWebhookEzsignevent?  = default(CustomEWebhookEzsignevent?), FieldEWebhookManagementevent?  = default(FieldEWebhookManagementevent?), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="eWebhookModule">eWebhookModule (required).</param>
+        /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
+        /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUserstagedID">The unique ID of the Userstaged.</param>
+        public WebhookSendWebhookV1Request(FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), CustomEWebhookEzsignevent? eWebhookEzsignevent = default(CustomEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), int fkiEzsignfolderID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignsignerID = default(int), int fkiUserID = default(int), int fkiUserstagedID = default(int))
         {
-            this.EWebhookModule = ;
-            this.EWebhookEzsignevent = ;
-            this.EWebhookManagementevent = ;
-            this.FkiEzsignfolderID = ;
-            this.FkiEzsigndocumentID = ;
-            this.FkiEzsignsignerID = ;
-            this.FkiUserID = ;
-            this.FkiUserstagedID = ;
+            this.EWebhookModule = eWebhookModule;
+            this.EWebhookEzsignevent = eWebhookEzsignevent;
+            this.EWebhookManagementevent = eWebhookManagementevent;
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUserstagedID = fkiUserstagedID;
         }
 
         /// <summary>
@@ -152,42 +152,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // FkiEzsignsignerID (int) minimum
             if (this.FkiEzsignsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUserstagedID (int) maximum
             if (this.FkiUserstagedID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserstagedID, must be a value less than or equal to 65535.", new [] { "FkiUserstagedID" });
+                yield return new ValidationResult("Invalid value for FkiUserstagedID, must be a value less than or equal to 65535.", new [] { "FkiUserstagedID" });
             }
 
             // FkiUserstagedID (int) minimum
             if (this.FkiUserstagedID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserstagedID, must be a value greater than or equal to 1.", new [] { "FkiUserstagedID" });
+                yield return new ValidationResult("Invalid value for FkiUserstagedID, must be a value greater than or equal to 1.", new [] { "FkiUserstagedID" });
             }
 
             yield break;

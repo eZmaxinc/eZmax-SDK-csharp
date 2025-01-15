@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetObjectV3ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignfolderGetObjectV3ResponseMPayload(EzsignfolderResponseCompoundV3  = default(EzsignfolderResponseCompoundV3))
+        /// <param name="objEzsignfolder">objEzsignfolder (required).</param>
+        public EzsignfolderGetObjectV3ResponseMPayload(EzsignfolderResponseCompoundV3 objEzsignfolder = default(EzsignfolderResponseCompoundV3))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignfolder" is required (not null)
+            if (objEzsignfolder == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderGetObjectV3ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsignfolder is a required property for EzsignfolderGetObjectV3ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignfolder = ;
+            this.ObjEzsignfolder = objEzsignfolder;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

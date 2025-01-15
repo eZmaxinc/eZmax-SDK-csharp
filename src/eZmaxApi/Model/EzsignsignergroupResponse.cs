@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsignergroup (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Description of the Ezsignsignergroup in the language of the requester.</param>
-        public EzsignsignergroupResponse(int  = default(int), MultilingualEzsignsignergroupDescription  = default(MultilingualEzsignsignergroupDescription), string  = default(string))
+        /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup (required).</param>
+        /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
+        /// <param name="sEzsignsignergroupDescriptionX">The Description of the Ezsignsignergroup in the language of the requester.</param>
+        public EzsignsignergroupResponse(int pkiEzsignsignergroupID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription), string sEzsignsignergroupDescriptionX = default(string))
         {
-            this.PkiEzsignsignergroupID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignsignergroupID = pkiEzsignsignergroupID;
+            // to ensure "objEzsignsignergroupDescription" is required (not null)
+            if (objEzsignsignergroupDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignergroupResponse and cannot be null");
+                throw new ArgumentNullException("objEzsignsignergroupDescription is a required property for EzsignsignergroupResponse and cannot be null");
             }
-            this.ObjEzsignsignergroupDescription = ;
-            this.SEzsignsignergroupDescriptionX = ;
+            this.ObjEzsignsignergroupDescription = objEzsignsignergroupDescription;
+            this.SEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
         }
 
         /// <summary>
@@ -106,18 +106,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsignergroupID (int) maximum
             if (this.PkiEzsignsignergroupID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "PkiEzsignsignergroupID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "PkiEzsignsignergroupID" });
             }
 
             // PkiEzsignsignergroupID (int) minimum
             if (this.PkiEzsignsignergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignergroupID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignergroupID" });
             }
 
             yield break;

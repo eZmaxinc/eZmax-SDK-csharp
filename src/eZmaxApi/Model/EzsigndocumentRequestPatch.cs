@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentRequestPatch" /> class.
         /// </summary>
-        /// <param name="">The maximum date and time at which the Ezsigndocument can be signed..</param>
-        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
-        public EzsigndocumentRequestPatch(string  = default(string), string  = default(string))
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed..</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations.</param>
+        public EzsigndocumentRequestPatch(string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string))
         {
-            this.DtEzsigndocumentDuedate = ;
-            this.SEzsigndocumentName = ;
+            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
+            this.SEzsigndocumentName = sEzsigndocumentName;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

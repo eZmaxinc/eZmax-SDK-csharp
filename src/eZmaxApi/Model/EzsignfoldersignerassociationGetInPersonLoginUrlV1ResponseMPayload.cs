@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The Url to login to the signing application.    Url will expire after 30 minutes.   (required).</param>
-        public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(string  = default(string))
+        /// <param name="sLoginUrl">The Url to login to the signing application.    Url will expire after 30 minutes.   (required).</param>
+        public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload(string sLoginUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sLoginUrl" is required (not null)
+            if (sLoginUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sLoginUrl is a required property for EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload and cannot be null");
             }
-            this.SLoginUrl = ;
+            this.SLoginUrl = sLoginUrl;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

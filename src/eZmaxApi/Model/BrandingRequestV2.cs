@@ -52,31 +52,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingRequestV2" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Branding.</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used..</param>
-        /// <param name="">The primary color. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
-        /// <param name="">The email address..</param>
-        /// <param name="">Whether the Branding is active or not (required).</param>
-        public BrandingRequestV2(int  = default(int), MultilingualBrandingDescription  = default(MultilingualBrandingDescription), FieldEBrandingLogo  = default(FieldEBrandingLogo), FieldEBrandingAlignlogo?  = default(FieldEBrandingAlignlogo?), byte[]  = default(byte[]), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="pkiBrandingID">The unique ID of the Branding.</param>
+        /// <param name="objBrandingDescription">objBrandingDescription (required).</param>
+        /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
+        /// <param name="eBrandingAlignlogo">eBrandingAlignlogo.</param>
+        /// <param name="sBrandingBase64">The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used..</param>
+        /// <param name="iBrandingColor">The primary color. This is a RGB color converted into integer (required).</param>
+        /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
+        public BrandingRequestV2(int pkiBrandingID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), FieldEBrandingAlignlogo? eBrandingAlignlogo = default(FieldEBrandingAlignlogo?), byte[] sBrandingBase64 = default(byte[]), int iBrandingColor = default(int), string sBrandingName = default(string), string sEmailAddress = default(string), bool bBrandingIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objBrandingDescription" is required (not null)
+            if (objBrandingDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingRequestV2 and cannot be null");
+                throw new ArgumentNullException("objBrandingDescription is a required property for BrandingRequestV2 and cannot be null");
             }
-            this.ObjBrandingDescription = ;
-            this.EBrandingLogo = ;
-            this.IBrandingColor = ;
-            this.BBrandingIsactive = ;
-            this.PkiBrandingID = ;
-            this.EBrandingAlignlogo = ;
-            this.SBrandingBase64 = ;
-            this.SBrandingName = ;
-            this.SEmailAddress = ;
+            this.ObjBrandingDescription = objBrandingDescription;
+            this.EBrandingLogo = eBrandingLogo;
+            this.IBrandingColor = iBrandingColor;
+            this.BBrandingIsactive = bBrandingIsactive;
+            this.PkiBrandingID = pkiBrandingID;
+            this.EBrandingAlignlogo = eBrandingAlignlogo;
+            this.SBrandingBase64 = sBrandingBase64;
+            this.SBrandingName = sBrandingName;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.
         /// </summary>
         /// <value>The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.</value>
-        /* <example>[B@4e4efc1b</example>*/
+        /* <example>[B@61a002b1</example>*/
         [DataMember(Name = "sBrandingBase64", EmitDefaultValue = false)]
         public byte[] SBrandingBase64 { get; set; }
 
@@ -168,24 +168,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBrandingID (int) minimum
             if (this.PkiBrandingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
+                yield return new ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
             }
 
             // IBrandingColor (int) maximum
             if (this.IBrandingColor > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
             }
 
             // IBrandingColor (int) minimum
             if (this.IBrandingColor < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
             }
 
             if (this.SBrandingName != null) {

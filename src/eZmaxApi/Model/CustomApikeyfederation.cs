@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomApikeyfederation" /> class.
         /// </summary>
-        /// <param name="">The key of the Apikeyfederation (required).</param>
-        /// <param name="">The secret of the Apikeyfederation (required).</param>
-        public CustomApikeyfederation(string  = default(string), string  = default(string))
+        /// <param name="sApikeyfederationKey">The key of the Apikeyfederation (required).</param>
+        /// <param name="sApikeyfederationSecret">The secret of the Apikeyfederation (required).</param>
+        public CustomApikeyfederation(string sApikeyfederationKey = default(string), string sApikeyfederationSecret = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sApikeyfederationKey" is required (not null)
+            if (sApikeyfederationKey == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomApikeyfederation and cannot be null");
+                throw new ArgumentNullException("sApikeyfederationKey is a required property for CustomApikeyfederation and cannot be null");
             }
-            this.SApikeyfederationKey = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SApikeyfederationKey = sApikeyfederationKey;
+            // to ensure "sApikeyfederationSecret" is required (not null)
+            if (sApikeyfederationSecret == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomApikeyfederation and cannot be null");
+                throw new ArgumentNullException("sApikeyfederationSecret is a required property for CustomApikeyfederation and cannot be null");
             }
-            this.SApikeyfederationSecret = ;
+            this.SApikeyfederationSecret = sApikeyfederationSecret;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SApikeyfederationKey != null) {
                 // SApikeyfederationKey (string) pattern

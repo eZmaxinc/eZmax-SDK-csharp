@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FranchisereferalincomeCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Franchisereferalincome
@@ -83,7 +83,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -288,7 +288,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FranchisereferalincomeCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FranchisereferalincomeCreateObjectV2Response> FranchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<FranchisereferalincomeCreateObjectV2Response> localVarResponse = await FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(franchisereferalincomeCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -302,7 +302,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FranchisereferalincomeCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FranchisereferalincomeCreateObjectV2Response>> FranchisereferalincomeCreateObjectV2WithHttpInfoAsync(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'franchisereferalincomeCreateObjectV2Request' is set
             if (franchisereferalincomeCreateObjectV2Request == null)

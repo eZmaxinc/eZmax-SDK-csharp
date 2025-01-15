@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CountryAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| (required).</param>
-        /// <param name="">The name of the Country in the language of the requester (required).</param>
-        /// <param name="">The shortname of the Country (required).</param>
-        /// <param name="">Whether the Country is active or not (required).</param>
-        public CountryAutocompleteElementResponse(int  = default(int), string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="pkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| (required).</param>
+        /// <param name="sCountryNameX">The name of the Country in the language of the requester (required).</param>
+        /// <param name="sCountryShortname">The shortname of the Country (required).</param>
+        /// <param name="bCountryIsactive">Whether the Country is active or not (required).</param>
+        public CountryAutocompleteElementResponse(int pkiCountryID = default(int), string sCountryNameX = default(string), string sCountryShortname = default(string), bool bCountryIsactive = default(bool))
         {
-            this.PkiCountryID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiCountryID = pkiCountryID;
+            // to ensure "sCountryNameX" is required (not null)
+            if (sCountryNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for CountryAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCountryNameX is a required property for CountryAutocompleteElementResponse and cannot be null");
             }
-            this.SCountryNameX = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCountryNameX = sCountryNameX;
+            // to ensure "sCountryShortname" is required (not null)
+            if (sCountryShortname == null)
             {
-                throw new ArgumentNullException(" is a required property for CountryAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCountryShortname is a required property for CountryAutocompleteElementResponse and cannot be null");
             }
-            this.SCountryShortname = ;
-            this.BCountryIsactive = ;
+            this.SCountryShortname = sCountryShortname;
+            this.BCountryIsactive = bCountryIsactive;
         }
 
         /// <summary>
@@ -124,12 +124,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCountryID (int) minimum
             if (this.PkiCountryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCountryID, must be a value greater than or equal to 0.", new [] { "PkiCountryID" });
+                yield return new ValidationResult("Invalid value for PkiCountryID, must be a value greater than or equal to 0.", new [] { "PkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

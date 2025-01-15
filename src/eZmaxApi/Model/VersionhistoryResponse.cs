@@ -52,40 +52,40 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Versionhistory (required).</param>
-        /// <param name="">The unique ID of the Module.</param>
-        /// <param name="">The unique ID of the Modulesection.</param>
-        /// <param name="">The Name of the Module in the language of the requester.</param>
-        /// <param name="">The Name of the Modulesection in the language of the requester.</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The date  at which the Versionhistory was published or should be published (required).</param>
-        /// <param name="">The date  at which the Versionhistory will no longer be visible.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the Versionhistory is published or still a draft (required).</param>
-        public VersionhistoryResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), FieldEVersionhistoryUsertype?  = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail  = default(MultilingualVersionhistoryDetail), string  = default(string), string  = default(string), FieldEVersionhistoryType  = default(FieldEVersionhistoryType), bool  = default(bool))
+        /// <param name="pkiVersionhistoryID">The unique ID of the Versionhistory (required).</param>
+        /// <param name="fkiModuleID">The unique ID of the Module.</param>
+        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
+        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
+        /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester.</param>
+        /// <param name="eVersionhistoryUsertype">eVersionhistoryUsertype.</param>
+        /// <param name="objVersionhistoryDetail">objVersionhistoryDetail (required).</param>
+        /// <param name="dtVersionhistoryDate">The date  at which the Versionhistory was published or should be published (required).</param>
+        /// <param name="dtVersionhistoryDateend">The date  at which the Versionhistory will no longer be visible.</param>
+        /// <param name="eVersionhistoryType">eVersionhistoryType (required).</param>
+        /// <param name="bVersionhistoryDraft">Whether the Versionhistory is published or still a draft (required).</param>
+        public VersionhistoryResponse(int pkiVersionhistoryID = default(int), int fkiModuleID = default(int), int fkiModulesectionID = default(int), string sModuleNameX = default(string), string sModulesectionNameX = default(string), FieldEVersionhistoryUsertype? eVersionhistoryUsertype = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail objVersionhistoryDetail = default(MultilingualVersionhistoryDetail), string dtVersionhistoryDate = default(string), string dtVersionhistoryDateend = default(string), FieldEVersionhistoryType eVersionhistoryType = default(FieldEVersionhistoryType), bool bVersionhistoryDraft = default(bool))
         {
-            this.PkiVersionhistoryID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiVersionhistoryID = pkiVersionhistoryID;
+            // to ensure "objVersionhistoryDetail" is required (not null)
+            if (objVersionhistoryDetail == null)
             {
-                throw new ArgumentNullException(" is a required property for VersionhistoryResponse and cannot be null");
+                throw new ArgumentNullException("objVersionhistoryDetail is a required property for VersionhistoryResponse and cannot be null");
             }
-            this.ObjVersionhistoryDetail = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjVersionhistoryDetail = objVersionhistoryDetail;
+            // to ensure "dtVersionhistoryDate" is required (not null)
+            if (dtVersionhistoryDate == null)
             {
-                throw new ArgumentNullException(" is a required property for VersionhistoryResponse and cannot be null");
+                throw new ArgumentNullException("dtVersionhistoryDate is a required property for VersionhistoryResponse and cannot be null");
             }
-            this.DtVersionhistoryDate = ;
-            this.EVersionhistoryType = ;
-            this.BVersionhistoryDraft = ;
-            this.FkiModuleID = ;
-            this.FkiModulesectionID = ;
-            this.SModuleNameX = ;
-            this.SModulesectionNameX = ;
-            this.EVersionhistoryUsertype = ;
-            this.DtVersionhistoryDateend = ;
+            this.DtVersionhistoryDate = dtVersionhistoryDate;
+            this.EVersionhistoryType = eVersionhistoryType;
+            this.BVersionhistoryDraft = bVersionhistoryDraft;
+            this.FkiModuleID = fkiModuleID;
+            this.FkiModulesectionID = fkiModulesectionID;
+            this.SModuleNameX = sModuleNameX;
+            this.SModulesectionNameX = sModulesectionNameX;
+            this.EVersionhistoryUsertype = eVersionhistoryUsertype;
+            this.DtVersionhistoryDateend = dtVersionhistoryDateend;
         }
 
         /// <summary>
@@ -194,24 +194,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiVersionhistoryID (int) minimum
             if (this.PkiVersionhistoryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVersionhistoryID, must be a value greater than or equal to 0.", new [] { "PkiVersionhistoryID" });
+                yield return new ValidationResult("Invalid value for PkiVersionhistoryID, must be a value greater than or equal to 0.", new [] { "PkiVersionhistoryID" });
             }
 
             // FkiModuleID (int) minimum
             if (this.FkiModuleID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+                yield return new ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
             }
 
             // FkiModulesectionID (int) minimum
             if (this.FkiModulesectionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
+                yield return new ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
             }
 
             yield break;

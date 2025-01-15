@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetColleaguesV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public UserGetColleaguesV2ResponseMPayload(List<ColleagueResponseCompoundV2>  = default(List<ColleagueResponseCompoundV2>), List<ColleagueResponseCompoundV2>  = default(List<ColleagueResponseCompoundV2>))
+        /// <param name="aObjColleague">aObjColleague (required).</param>
+        /// <param name="aObjColleagueClonable">aObjColleagueClonable (required).</param>
+        public UserGetColleaguesV2ResponseMPayload(List<ColleagueResponseCompoundV2> aObjColleague = default(List<ColleagueResponseCompoundV2>), List<ColleagueResponseCompoundV2> aObjColleagueClonable = default(List<ColleagueResponseCompoundV2>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjColleague" is required (not null)
+            if (aObjColleague == null)
             {
-                throw new ArgumentNullException(" is a required property for UserGetColleaguesV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjColleague is a required property for UserGetColleaguesV2ResponseMPayload and cannot be null");
             }
-            this.AObjColleague = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjColleague = aObjColleague;
+            // to ensure "aObjColleagueClonable" is required (not null)
+            if (aObjColleagueClonable == null)
             {
-                throw new ArgumentNullException(" is a required property for UserGetColleaguesV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjColleagueClonable is a required property for UserGetColleaguesV2ResponseMPayload and cannot be null");
             }
-            this.AObjColleagueClonable = ;
+            this.AObjColleagueClonable = aObjColleagueClonable;
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

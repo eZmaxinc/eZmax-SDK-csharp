@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWebhooklogResponse" /> class.
         /// </summary>
-        /// <param name="">The date and time at which the Webhooklog happened. (required).</param>
-        /// <param name="">The Json containing the Webhook call and return (required).</param>
-        public CustomWebhooklogResponse(string  = default(string), string  = default(string))
+        /// <param name="dtWebhooklogDate">The date and time at which the Webhooklog happened. (required).</param>
+        /// <param name="tWebhooklogJson">The Json containing the Webhook call and return (required).</param>
+        public CustomWebhooklogResponse(string dtWebhooklogDate = default(string), string tWebhooklogJson = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "dtWebhooklogDate" is required (not null)
+            if (dtWebhooklogDate == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomWebhooklogResponse and cannot be null");
+                throw new ArgumentNullException("dtWebhooklogDate is a required property for CustomWebhooklogResponse and cannot be null");
             }
-            this.DtWebhooklogDate = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtWebhooklogDate = dtWebhooklogDate;
+            // to ensure "tWebhooklogJson" is required (not null)
+            if (tWebhooklogJson == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomWebhooklogResponse and cannot be null");
+                throw new ArgumentNullException("tWebhooklogJson is a required property for CustomWebhooklogResponse and cannot be null");
             }
-            this.TWebhooklogJson = ;
+            this.TWebhooklogJson = tWebhooklogJson;
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

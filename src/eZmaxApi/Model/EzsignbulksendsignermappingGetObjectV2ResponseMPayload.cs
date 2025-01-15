@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendsignermappingGetObjectV2ResponseMPayload(EzsignbulksendsignermappingResponseCompound  = default(EzsignbulksendsignermappingResponseCompound))
+        /// <param name="objEzsignbulksendsignermapping">objEzsignbulksendsignermapping (required).</param>
+        public EzsignbulksendsignermappingGetObjectV2ResponseMPayload(EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping = default(EzsignbulksendsignermappingResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignbulksendsignermapping" is required (not null)
+            if (objEzsignbulksendsignermapping == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendsignermappingGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsignbulksendsignermapping is a required property for EzsignbulksendsignermappingGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignbulksendsignermapping = ;
+            this.ObjEzsignbulksendsignermapping = objEzsignbulksendsignermapping;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

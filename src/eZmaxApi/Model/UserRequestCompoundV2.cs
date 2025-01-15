@@ -58,84 +58,84 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRequestCompoundV2" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Agent..</param>
-        /// <param name="">The unique ID of the Broker..</param>
-        /// <param name="">The unique ID of the Assistant..</param>
-        /// <param name="">The unique ID of the Employee..</param>
-        /// <param name="">The unique ID of the Company (required).</param>
-        /// <param name="">The unique ID of the Department (required).</param>
-        /// <param name="">The unique ID of the Timezone (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|.</param>
-        /// <param name="">The answer to the Secretquestion.</param>
-        /// <param name="">The unique ID of the Module.</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The login name of the User. (required).</param>
-        /// <param name="">The job title of the user.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the User is active or not (required).</param>
-        /// <param name="">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
-        /// <param name="">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
-        /// <param name="">Whether if Attachments uploaded by the User must be validated or not.</param>
-        /// <param name="">Whether if the User is forced to change its password.</param>
-        public UserRequestCompoundV2(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), EmailRequestCompound  = default(EmailRequestCompound), int  = default(int), PhoneRequestCompoundV2  = default(PhoneRequestCompoundV2), PhoneRequestCompoundV2  = default(PhoneRequestCompoundV2), int  = default(int), string  = default(string), int  = default(int), FieldEUserType  = default(FieldEUserType), FieldEUserLogintype  = default(FieldEUserLogintype), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEUserEzsignaccess  = default(FieldEUserEzsignaccess), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiCompanyIDDefault">The unique ID of the Company (required).</param>
+        /// <param name="fkiDepartmentIDDefault">The unique ID of the Department (required).</param>
+        /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="objEmail">An Email Object and children to create a complete structure (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="objPhoneHome">A Phone Object and children to create a complete structure.</param>
+        /// <param name="objPhoneSMS">A Phone Object and children to create a complete structure.</param>
+        /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|.</param>
+        /// <param name="sUserSecretresponse">The answer to the Secretquestion.</param>
+        /// <param name="fkiModuleIDForm">The unique ID of the Module.</param>
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="eUserLogintype">eUserLogintype (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sUserJobtitle">The job title of the user.</param>
+        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="bUserValidatebyadministration">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
+        /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
+        /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
+        /// <param name="bUserChangepassword">Whether if the User is forced to change its password.</param>
+        public UserRequestCompoundV2(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequest objEmail = default(EmailRequest), int fkiBillingentityinternalID = default(int), PhoneRequestV2 objPhoneHome = default(PhoneRequestV2), PhoneRequestV2 objPhoneSMS = default(PhoneRequestV2), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
         {
-            this.FkiCompanyIDDefault = ;
-            this.FkiDepartmentIDDefault = ;
-            this.FkiTimezoneID = ;
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiCompanyIDDefault = fkiCompanyIDDefault;
+            this.FkiDepartmentIDDefault = fkiDepartmentIDDefault;
+            this.FkiTimezoneID = fkiTimezoneID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "objEmail" is required (not null)
+            if (objEmail == null)
             {
-                throw new ArgumentNullException(" is a required property for UserRequestCompoundV2 and cannot be null");
+                throw new ArgumentNullException("objEmail is a required property for UserRequestCompoundV2 and cannot be null");
             }
-            this.ObjEmail = ;
-            this.FkiBillingentityinternalID = ;
-            this.EUserType = ;
-            this.EUserLogintype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjEmail = objEmail;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            this.EUserType = eUserType;
+            this.EUserLogintype = eUserLogintype;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserRequestCompoundV2 and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for UserRequestCompoundV2 and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserRequestCompoundV2 and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for UserRequestCompoundV2 and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sUserLoginname" is required (not null)
+            if (sUserLoginname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserRequestCompoundV2 and cannot be null");
+                throw new ArgumentNullException("sUserLoginname is a required property for UserRequestCompoundV2 and cannot be null");
             }
-            this.SUserLoginname = ;
-            this.EUserEzsignaccess = ;
-            this.BUserIsactive = ;
-            this.PkiUserID = ;
-            this.FkiAgentID = ;
-            this.FkiBrokerID = ;
-            this.FkiAssistantID = ;
-            this.FkiEmployeeID = ;
-            this.ObjPhoneHome = ;
-            this.ObjPhoneSMS = ;
-            this.FkiSecretquestionID = ;
-            this.SUserSecretresponse = ;
-            this.FkiModuleIDForm = ;
-            this.SUserJobtitle = ;
-            this.BUserValidatebyadministration = ;
-            this.BUserValidatebydirector = ;
-            this.BUserAttachmentautoverified = ;
-            this.BUserChangepassword = ;
+            this.SUserLoginname = sUserLoginname;
+            this.EUserEzsignaccess = eUserEzsignaccess;
+            this.BUserIsactive = bUserIsactive;
+            this.PkiUserID = pkiUserID;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiAssistantID = fkiAssistantID;
+            this.FkiEmployeeID = fkiEmployeeID;
+            this.ObjPhoneHome = objPhoneHome;
+            this.ObjPhoneSMS = objPhoneSMS;
+            this.FkiSecretquestionID = fkiSecretquestionID;
+            this.SUserSecretresponse = sUserSecretresponse;
+            this.FkiModuleIDForm = fkiModuleIDForm;
+            this.SUserJobtitle = sUserJobtitle;
+            this.BUserValidatebyadministration = bUserValidatebyadministration;
+            this.BUserValidatebydirector = bUserValidatebydirector;
+            this.BUserAttachmentautoverified = bUserAttachmentautoverified;
+            this.BUserChangepassword = bUserChangepassword;
         }
 
         /// <summary>
@@ -211,10 +211,11 @@ namespace eZmaxApi.Model
         public int FkiLanguageID { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmail
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", IsRequired = true, EmitDefaultValue = true)]
-        public EmailRequestCompound ObjEmail { get; set; }
+        public EmailRequest ObjEmail { get; set; }
 
         /// <summary>
         /// The unique ID of the Billingentityinternal.
@@ -225,16 +226,18 @@ namespace eZmaxApi.Model
         public int FkiBillingentityinternalID { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjPhoneHome
+        /// A Phone Object and children to create a complete structure
         /// </summary>
+        /// <value>A Phone Object and children to create a complete structure</value>
         [DataMember(Name = "objPhoneHome", EmitDefaultValue = false)]
-        public PhoneRequestCompoundV2 ObjPhoneHome { get; set; }
+        public PhoneRequestV2 ObjPhoneHome { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjPhoneSMS
+        /// A Phone Object and children to create a complete structure
         /// </summary>
+        /// <value>A Phone Object and children to create a complete structure</value>
         [DataMember(Name = "objPhoneSMS", EmitDefaultValue = false)]
-        public PhoneRequestCompoundV2 ObjPhoneSMS { get; set; }
+        public PhoneRequestV2 ObjPhoneSMS { get; set; }
 
         /// <summary>
         /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
@@ -386,90 +389,90 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiAssistantID (int) minimum
             if (this.FkiAssistantID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
+                yield return new ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
             }
 
             // FkiEmployeeID (int) minimum
             if (this.FkiEmployeeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
             }
 
             // FkiCompanyIDDefault (int) maximum
             if (this.FkiCompanyIDDefault > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value less than or equal to 255.", new [] { "FkiCompanyIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value less than or equal to 255.", new [] { "FkiCompanyIDDefault" });
             }
 
             // FkiCompanyIDDefault (int) minimum
             if (this.FkiCompanyIDDefault < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value greater than or equal to 1.", new [] { "FkiCompanyIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value greater than or equal to 1.", new [] { "FkiCompanyIDDefault" });
             }
 
             // FkiDepartmentIDDefault (int) minimum
             if (this.FkiDepartmentIDDefault < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentIDDefault, must be a value greater than or equal to 0.", new [] { "FkiDepartmentIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiDepartmentIDDefault, must be a value greater than or equal to 0.", new [] { "FkiDepartmentIDDefault" });
             }
 
             // FkiTimezoneID (int) minimum
             if (this.FkiTimezoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
+                yield return new ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiSecretquestionID (int) minimum
             if (this.FkiSecretquestionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
+                yield return new ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
             }
 
             // FkiModuleIDForm (int) minimum
             if (this.FkiModuleIDForm < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleIDForm, must be a value greater than or equal to 0.", new [] { "FkiModuleIDForm" });
+                yield return new ValidationResult("Invalid value for FkiModuleIDForm, must be a value greater than or equal to 0.", new [] { "FkiModuleIDForm" });
             }
 
             if (this.SUserLoginname != null) {

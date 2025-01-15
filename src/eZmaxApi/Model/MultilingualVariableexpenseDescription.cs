@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVariableexpenseDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Variableexpense in French.</param>
-        /// <param name="">The description of the Variableexpense in English.</param>
-        public MultilingualVariableexpenseDescription(string  = default(string), string  = default(string))
+        /// <param name="sVariableexpenseDescription1">The description of the Variableexpense in French.</param>
+        /// <param name="sVariableexpenseDescription2">The description of the Variableexpense in English.</param>
+        public MultilingualVariableexpenseDescription(string sVariableexpenseDescription1 = default(string), string sVariableexpenseDescription2 = default(string))
         {
-            this.SVariableexpenseDescription1 = ;
-            this.SVariableexpenseDescription2 = ;
+            this.SVariableexpenseDescription1 = sVariableexpenseDescription1;
+            this.SVariableexpenseDescription2 = sVariableexpenseDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SVariableexpenseDescription1 != null) {
                 // SVariableexpenseDescription1 (string) pattern

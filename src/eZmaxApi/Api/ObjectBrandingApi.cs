@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingEditObjectV2Response</returns>
-        BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Branding
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
-        ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -172,7 +172,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Branding
@@ -185,7 +185,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Branding
         /// </summary>
@@ -197,8 +197,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingEditObjectV2Response</returns>
-        System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Branding
@@ -211,8 +211,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -227,7 +227,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Brandings and IDs
@@ -243,7 +243,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Branding list
         /// </summary>
@@ -259,7 +259,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetListV1Response</returns>
-        System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Branding list
@@ -276,7 +276,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Branding
         /// </summary>
@@ -288,7 +288,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetObjectV3Response</returns>
-        System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Branding
@@ -301,7 +301,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetObjectV3Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -506,7 +506,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingCreateObjectV2Response> BrandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response> localVarResponse = await BrandingCreateObjectV2WithHttpInfoAsync(brandingCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -520,7 +520,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingCreateObjectV2Response>> BrandingCreateObjectV2WithHttpInfoAsync(BrandingCreateObjectV2Request brandingCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'brandingCreateObjectV2Request' is set
             if (brandingCreateObjectV2Request == null)
@@ -585,10 +585,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>BrandingEditObjectV2Response</returns>
-        public BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -599,8 +599,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
             // verify the required parameter 'brandingEditObjectV2Request' is set
             if (brandingEditObjectV2Request == null)
@@ -644,7 +644,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BrandingEditObjectV2", localVarResponse);
@@ -665,10 +665,10 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of BrandingEditObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = await BrandingEditObjectV2WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await BrandingEditObjectV2WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -680,8 +680,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'brandingEditObjectV2Request' is set
             if (brandingEditObjectV2Request == null)
@@ -726,7 +726,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -844,7 +844,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingGetAutocompleteV2Response> BrandingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BrandingGetAutocompleteV2Response> localVarResponse = await BrandingGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -861,7 +861,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetAutocompleteV2Response>> BrandingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1039,7 +1039,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingGetListV1Response> BrandingGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BrandingGetListV1Response> localVarResponse = await BrandingGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1057,7 +1057,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetListV1Response>> BrandingGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1205,7 +1205,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrandingGetObjectV3Response</returns>
-        public async System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrandingGetObjectV3Response> BrandingGetObjectV3Async(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response> localVarResponse = await BrandingGetObjectV3WithHttpInfoAsync(pkiBrandingID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1219,7 +1219,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrandingGetObjectV3Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingGetObjectV3Response>> BrandingGetObjectV3WithHttpInfoAsync(int pkiBrandingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

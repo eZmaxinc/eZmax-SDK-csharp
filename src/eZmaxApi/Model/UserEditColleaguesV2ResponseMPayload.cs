@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditColleaguesV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserEditColleaguesV2ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiColleagueID">aPkiColleagueID (required).</param>
+        public UserEditColleaguesV2ResponseMPayload(List<int> aPkiColleagueID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiColleagueID" is required (not null)
+            if (aPkiColleagueID == null)
             {
-                throw new ArgumentNullException(" is a required property for UserEditColleaguesV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiColleagueID is a required property for UserEditColleaguesV2ResponseMPayload and cannot be null");
             }
-            this.APkiColleagueID = ;
+            this.APkiColleagueID = aPkiColleagueID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

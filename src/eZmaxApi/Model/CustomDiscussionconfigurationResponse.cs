@@ -40,18 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomDiscussionconfigurationResponse" /> class.
         /// </summary>
-        /// <param name="">If the added Discussionmembership will have access to the entire history or not (required).</param>
-        /// <param name="">If the the creation of the Discussion is allowed or not (required).</param>
-        /// <param name="">If the the destruction of the Discussion is allowed or not (required).</param>
-        /// <param name="">If the the destruction of the Discussionmessage is allowed or not (required).</param>
-        /// <param name="">If the the creation of the Discussionmessage is allowed or not (required).</param>
-        public CustomDiscussionconfigurationResponse(bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool))
+        /// <param name="bDiscussionconfigurationCompletehistorywhenadded">If the added Discussionmembership will have access to the entire history or not (required).</param>
+        /// <param name="bDiscussionconfigurationCreateallowed">If the the creation of the Discussion is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationDeleteallowed">If the the destruction of the Discussion is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationDeletediscussionmessageallowed">If the the destruction of the Discussionmessage is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationEditdiscussionmessageallowed">If the the creation of the Discussionmessage is allowed or not (required).</param>
+        public CustomDiscussionconfigurationResponse(bool bDiscussionconfigurationCompletehistorywhenadded = default(bool), bool bDiscussionconfigurationCreateallowed = default(bool), bool bDiscussionconfigurationDeleteallowed = default(bool), bool bDiscussionconfigurationDeletediscussionmessageallowed = default(bool), bool bDiscussionconfigurationEditdiscussionmessageallowed = default(bool))
         {
-            this.BDiscussionconfigurationCompletehistorywhenadded = ;
-            this.BDiscussionconfigurationCreateallowed = ;
-            this.BDiscussionconfigurationDeleteallowed = ;
-            this.BDiscussionconfigurationDeletediscussionmessageallowed = ;
-            this.BDiscussionconfigurationEditdiscussionmessageallowed = ;
+            this.BDiscussionconfigurationCompletehistorywhenadded = bDiscussionconfigurationCompletehistorywhenadded;
+            this.BDiscussionconfigurationCreateallowed = bDiscussionconfigurationCreateallowed;
+            this.BDiscussionconfigurationDeleteallowed = bDiscussionconfigurationDeleteallowed;
+            this.BDiscussionconfigurationDeletediscussionmessageallowed = bDiscussionconfigurationDeletediscussionmessageallowed;
+            this.BDiscussionconfigurationEditdiscussionmessageallowed = bDiscussionconfigurationEditdiscussionmessageallowed;
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

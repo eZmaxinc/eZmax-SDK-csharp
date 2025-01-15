@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload(EzsigntemplatepackagesignermembershipResponseCompound  = default(EzsigntemplatepackagesignermembershipResponseCompound))
+        /// <param name="objEzsigntemplatepackagesignermembership">objEzsigntemplatepackagesignermembership (required).</param>
+        public EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload(EzsigntemplatepackagesignermembershipResponseCompound objEzsigntemplatepackagesignermembership = default(EzsigntemplatepackagesignermembershipResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplatepackagesignermembership" is required (not null)
+            if (objEzsigntemplatepackagesignermembership == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplatepackagesignermembership is a required property for EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplatepackagesignermembership = ;
+            this.ObjEzsigntemplatepackagesignermembership = objEzsigntemplatepackagesignermembership;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

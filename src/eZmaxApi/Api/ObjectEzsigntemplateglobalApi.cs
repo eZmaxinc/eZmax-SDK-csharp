@@ -99,7 +99,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateglobalGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateglobalGetAutocompleteV2Response> EzsigntemplateglobalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplateglobalGetAutocompleteV2Response> EzsigntemplateglobalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplateglobals and IDs
@@ -115,7 +115,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateglobalGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response>> EzsigntemplateglobalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response>> EzsigntemplateglobalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplateglobal
         /// </summary>
@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateglobalGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplateglobalGetObjectV2Response> EzsigntemplateglobalGetObjectV2Async(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplateglobalGetObjectV2Response> EzsigntemplateglobalGetObjectV2Async(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplateglobal
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateglobalGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateglobalGetObjectV2Response>> EzsigntemplateglobalGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplateglobalGetObjectV2Response>> EzsigntemplateglobalGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -365,7 +365,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateglobalGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateglobalGetAutocompleteV2Response> EzsigntemplateglobalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplateglobalGetAutocompleteV2Response> EzsigntemplateglobalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response> localVarResponse = await EzsigntemplateglobalGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -382,7 +382,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateglobalGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response>> EzsigntemplateglobalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetAutocompleteV2Response>> EzsigntemplateglobalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -528,7 +528,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplateglobalGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplateglobalGetObjectV2Response> EzsigntemplateglobalGetObjectV2Async(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplateglobalGetObjectV2Response> EzsigntemplateglobalGetObjectV2Async(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetObjectV2Response> localVarResponse = await EzsigntemplateglobalGetObjectV2WithHttpInfoAsync(pkiEzsigntemplateglobalID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -542,7 +542,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplateglobalGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetObjectV2Response>> EzsigntemplateglobalGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplateglobalGetObjectV2Response>> EzsigntemplateglobalGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplateglobalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

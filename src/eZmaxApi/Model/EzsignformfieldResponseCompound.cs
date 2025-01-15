@@ -52,43 +52,43 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignformfield (required).</param>
-        /// <param name="">The page number in the Ezsigndocument (required).</param>
-        /// <param name="">The Label for the Ezsignformfield (required).</param>
-        /// <param name="">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
-        /// <param name="">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="">The Width of the Ezsignformfield in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Height of the Ezsignformfield in pixels calculated at 100 DPI  (required).</param>
-        /// <param name="">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
-        /// <param name="">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignformfieldResponseCompound(int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), string  = default(string), FieldEEzsignformfieldDependencyrequirement?  = default(FieldEEzsignformfieldDependencyrequirement?), EnumHorizontalalignment?  = default(EnumHorizontalalignment?), TextstylestaticResponseCompound  = default(TextstylestaticResponseCompound), List<EzsignelementdependencyResponseCompound>  = default(List<EzsignelementdependencyResponseCompound>))
+        /// <param name="pkiEzsignformfieldID">The unique ID of the Ezsignformfield (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
+        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio.</param>
+        /// <param name="iEzsignformfieldX">The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsignformfieldY">The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignformfieldWidth">The Width of the Ezsignformfield in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsignformfieldHeight">The Height of the Ezsignformfield in pixels calculated at 100 DPI  (required).</param>
+        /// <param name="bEzsignformfieldAutocomplete">Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**.</param>
+        /// <param name="bEzsignformfieldSelected">Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="sEzsignformfieldEnteredvalue">This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**.</param>
+        /// <param name="eEzsignformfieldDependencyrequirement">eEzsignformfieldDependencyrequirement.</param>
+        /// <param name="eEzsignformfieldHorizontalalignment">eEzsignformfieldHorizontalalignment.</param>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
+        /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
+        public EzsignformfieldResponseCompound(int pkiEzsignformfieldID = default(int), int iEzsignpagePagenumber = default(int), string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string), int iEzsignformfieldX = default(int), int iEzsignformfieldY = default(int), int iEzsignformfieldWidth = default(int), int iEzsignformfieldHeight = default(int), bool bEzsignformfieldAutocomplete = default(bool), bool bEzsignformfieldSelected = default(bool), string sEzsignformfieldEnteredvalue = default(string), FieldEEzsignformfieldDependencyrequirement? eEzsignformfieldDependencyrequirement = default(FieldEEzsignformfieldDependencyrequirement?), EnumHorizontalalignment? eEzsignformfieldHorizontalalignment = default(EnumHorizontalalignment?), TextstylestaticResponseCompound objTextstylestatic = default(TextstylestaticResponseCompound), List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyResponseCompound>))
         {
-            this.PkiEzsignformfieldID = ;
-            this.IEzsignpagePagenumber = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignformfieldID = pkiEzsignformfieldID;
+            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
+            // to ensure "sEzsignformfieldLabel" is required (not null)
+            if (sEzsignformfieldLabel == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignformfieldResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsignformfieldLabel is a required property for EzsignformfieldResponseCompound and cannot be null");
             }
-            this.SEzsignformfieldLabel = ;
-            this.IEzsignformfieldX = ;
-            this.IEzsignformfieldY = ;
-            this.IEzsignformfieldWidth = ;
-            this.IEzsignformfieldHeight = ;
-            this.SEzsignformfieldValue = ;
-            this.BEzsignformfieldAutocomplete = ;
-            this.BEzsignformfieldSelected = ;
-            this.SEzsignformfieldEnteredvalue = ;
-            this.EEzsignformfieldDependencyrequirement = ;
-            this.EEzsignformfieldHorizontalalignment = ;
-            this.ObjTextstylestatic = ;
-            this.AObjEzsignelementdependency = ;
+            this.SEzsignformfieldLabel = sEzsignformfieldLabel;
+            this.IEzsignformfieldX = iEzsignformfieldX;
+            this.IEzsignformfieldY = iEzsignformfieldY;
+            this.IEzsignformfieldWidth = iEzsignformfieldWidth;
+            this.IEzsignformfieldHeight = iEzsignformfieldHeight;
+            this.SEzsignformfieldValue = sEzsignformfieldValue;
+            this.BEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
+            this.BEzsignformfieldSelected = bEzsignformfieldSelected;
+            this.SEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
+            this.EEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+            this.EEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
+            this.ObjTextstylestatic = objTextstylestatic;
+            this.AObjEzsignelementdependency = aObjEzsignelementdependency;
         }
 
         /// <summary>
@@ -230,42 +230,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignformfieldID (int) minimum
             if (this.PkiEzsignformfieldID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldID" });
             }
 
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             // IEzsignformfieldX (int) minimum
             if (this.IEzsignformfieldX < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldX" });
+                yield return new ValidationResult("Invalid value for IEzsignformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldX" });
             }
 
             // IEzsignformfieldY (int) minimum
             if (this.IEzsignformfieldY < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldY" });
+                yield return new ValidationResult("Invalid value for IEzsignformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldY" });
             }
 
             // IEzsignformfieldWidth (int) minimum
             if (this.IEzsignformfieldWidth < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldWidth" });
+                yield return new ValidationResult("Invalid value for IEzsignformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldWidth" });
             }
 
             // IEzsignformfieldHeight (int) minimum
             if (this.IEzsignformfieldHeight < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldHeight" });
+                yield return new ValidationResult("Invalid value for IEzsignformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldHeight" });
             }
 
             yield break;

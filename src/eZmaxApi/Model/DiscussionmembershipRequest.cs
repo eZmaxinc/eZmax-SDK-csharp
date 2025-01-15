@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmembershipRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Discussionmembership.</param>
-        /// <param name="">The unique ID of the Discussion (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Usergroup.</param>
-        /// <param name="">The unique ID of the Modulesection.</param>
-        /// <param name="">The joined date of the Discussionmembership (required).</param>
-        public DiscussionmembershipRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership.</param>
+        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="fkiModulesectionID">The unique ID of the Modulesection.</param>
+        /// <param name="dtDiscussionmembershipJoined">The joined date of the Discussionmembership (required).</param>
+        public DiscussionmembershipRequest(int pkiDiscussionmembershipID = default(int), int fkiDiscussionID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiModulesectionID = default(int), string dtDiscussionmembershipJoined = default(string))
         {
-            this.FkiDiscussionID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiDiscussionID = fkiDiscussionID;
+            // to ensure "dtDiscussionmembershipJoined" is required (not null)
+            if (dtDiscussionmembershipJoined == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmembershipRequest and cannot be null");
+                throw new ArgumentNullException("dtDiscussionmembershipJoined is a required property for DiscussionmembershipRequest and cannot be null");
             }
-            this.DtDiscussionmembershipJoined = ;
-            this.PkiDiscussionmembershipID = ;
-            this.FkiUserID = ;
-            this.FkiUsergroupID = ;
-            this.FkiModulesectionID = ;
+            this.DtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
+            this.PkiDiscussionmembershipID = pkiDiscussionmembershipID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupID = fkiUsergroupID;
+            this.FkiModulesectionID = fkiModulesectionID;
         }
 
         /// <summary>
@@ -141,54 +141,54 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDiscussionmembershipID (int) maximum
             if (this.PkiDiscussionmembershipID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmembershipID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmembershipID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmembershipID" });
             }
 
             // PkiDiscussionmembershipID (int) minimum
             if (this.PkiDiscussionmembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmembershipID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmembershipID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmembershipID" });
             }
 
             // FkiDiscussionID (int) maximum
             if (this.FkiDiscussionID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
             }
 
             // FkiDiscussionID (int) minimum
             if (this.FkiDiscussionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiModulesectionID (int) minimum
             if (this.FkiModulesectionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
+                yield return new ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
             }
 
             if (this.DtDiscussionmembershipJoined != null) {

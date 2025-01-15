@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigndiscussionCreateObjectV1ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsigndiscussionID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigndiscussionCreateObjectV1ResponseMPayload(List<int> aPkiEzsigndiscussionID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsigndiscussionID" is required (not null)
+            if (aPkiEzsigndiscussionID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndiscussionCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsigndiscussionID is a required property for EzsigndiscussionCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigndiscussionID = ;
+            this.APkiEzsigndiscussionID = aPkiEzsigndiscussionID;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

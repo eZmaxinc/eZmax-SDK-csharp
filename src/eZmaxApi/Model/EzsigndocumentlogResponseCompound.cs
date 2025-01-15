@@ -46,49 +46,49 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentlogResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Ezsignsigner.</param>
-        /// <param name="">The date and time at which the event was logged (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The detail of the Ezsigndocumentlog (required).</param>
-        /// <param name="">The last name of the User or Ezsignsigner (required).</param>
-        /// <param name="">The first name of the User or Ezsignsigner (required).</param>
-        /// <param name="">Represent an IP address. (required).</param>
-        public EzsigndocumentlogResponseCompound(int  = default(int), int  = default(int), string  = default(string), FieldEEzsigndocumentlogType  = default(FieldEEzsigndocumentlogType), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="dtEzsigndocumentlogDatetime">The date and time at which the event was logged (required).</param>
+        /// <param name="eEzsigndocumentlogType">eEzsigndocumentlogType (required).</param>
+        /// <param name="sEzsigndocumentlogDetail">The detail of the Ezsigndocumentlog (required).</param>
+        /// <param name="sEzsigndocumentlogLastname">The last name of the User or Ezsignsigner (required).</param>
+        /// <param name="sEzsigndocumentlogFirstname">The first name of the User or Ezsignsigner (required).</param>
+        /// <param name="sEzsigndocumentlogIP">Represent an IP address. (required).</param>
+        public EzsigndocumentlogResponseCompound(int fkiUserID = default(int), int fkiEzsignsignerID = default(int), string dtEzsigndocumentlogDatetime = default(string), FieldEEzsigndocumentlogType eEzsigndocumentlogType = default(FieldEEzsigndocumentlogType), string sEzsigndocumentlogDetail = default(string), string sEzsigndocumentlogLastname = default(string), string sEzsigndocumentlogFirstname = default(string), string sEzsigndocumentlogIP = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "dtEzsigndocumentlogDatetime" is required (not null)
+            if (dtEzsigndocumentlogDatetime == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentlogResponseCompound and cannot be null");
+                throw new ArgumentNullException("dtEzsigndocumentlogDatetime is a required property for EzsigndocumentlogResponseCompound and cannot be null");
             }
-            this.DtEzsigndocumentlogDatetime = ;
-            this.EEzsigndocumentlogType = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtEzsigndocumentlogDatetime = dtEzsigndocumentlogDatetime;
+            this.EEzsigndocumentlogType = eEzsigndocumentlogType;
+            // to ensure "sEzsigndocumentlogDetail" is required (not null)
+            if (sEzsigndocumentlogDetail == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentlogResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentlogDetail is a required property for EzsigndocumentlogResponseCompound and cannot be null");
             }
-            this.SEzsigndocumentlogDetail = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigndocumentlogDetail = sEzsigndocumentlogDetail;
+            // to ensure "sEzsigndocumentlogLastname" is required (not null)
+            if (sEzsigndocumentlogLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentlogResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentlogLastname is a required property for EzsigndocumentlogResponseCompound and cannot be null");
             }
-            this.SEzsigndocumentlogLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigndocumentlogLastname = sEzsigndocumentlogLastname;
+            // to ensure "sEzsigndocumentlogFirstname" is required (not null)
+            if (sEzsigndocumentlogFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentlogResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentlogFirstname is a required property for EzsigndocumentlogResponseCompound and cannot be null");
             }
-            this.SEzsigndocumentlogFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigndocumentlogFirstname = sEzsigndocumentlogFirstname;
+            // to ensure "sEzsigndocumentlogIP" is required (not null)
+            if (sEzsigndocumentlogIP == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentlogResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentlogIP is a required property for EzsigndocumentlogResponseCompound and cannot be null");
             }
-            this.SEzsigndocumentlogIP = ;
-            this.FkiUserID = ;
-            this.FkiEzsignsignerID = ;
+            this.SEzsigndocumentlogIP = sEzsigndocumentlogIP;
+            this.FkiUserID = fkiUserID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
         }
 
         /// <summary>
@@ -181,18 +181,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiEzsignsignerID (int) minimum
             if (this.FkiEzsignsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
             }
 
             yield break;

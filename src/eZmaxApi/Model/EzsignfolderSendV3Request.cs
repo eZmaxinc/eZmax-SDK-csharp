@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV3Request" /> class.
         /// </summary>
-        /// <param name="">A custom text message that will be added to the email sent..</param>
-        /// <param name="">.</param>
-        /// <param name="">The date and time at which the Ezsignfolder will be sent in the future..</param>
-        /// <param name=""> (required).</param>
-        public EzsignfolderSendV3Request(string  = default(string), FieldEEzsignfolderMessageorder?  = default(FieldEEzsignfolderMessageorder?), string  = default(string), List<int>  = default(List<int>))
+        /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
+        /// <param name="eEzsignfolderMessageorder">eEzsignfolderMessageorder.</param>
+        /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
+        /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
+        public EzsignfolderSendV3Request(string tEzsignfolderMessage = default(string), FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder = default(FieldEEzsignfolderMessageorder?), string dtEzsignfolderDelayedsenddate = default(string), List<int> aFkiEzsignfoldersignerassociationID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aFkiEzsignfoldersignerassociationID" is required (not null)
+            if (aFkiEzsignfoldersignerassociationID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderSendV3Request and cannot be null");
+                throw new ArgumentNullException("aFkiEzsignfoldersignerassociationID is a required property for EzsignfolderSendV3Request and cannot be null");
             }
-            this.AFkiEzsignfoldersignerassociationID = ;
-            this.TEzsignfolderMessage = ;
-            this.EEzsignfolderMessageorder = ;
-            this.DtEzsignfolderDelayedsenddate = ;
+            this.AFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
+            this.TEzsignfolderMessage = tEzsignfolderMessage;
+            this.EEzsignfolderMessageorder = eEzsignfolderMessageorder;
+            this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetAttachmentCountV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The count of Attachment. (required).</param>
-        public EzsignfolderGetAttachmentCountV1ResponseMPayload(int  = default(int))
+        /// <param name="iAttachmentCount">The count of Attachment. (required).</param>
+        public EzsignfolderGetAttachmentCountV1ResponseMPayload(int iAttachmentCount = default(int))
         {
-            this.IAttachmentCount = ;
+            this.IAttachmentCount = iAttachmentCount;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

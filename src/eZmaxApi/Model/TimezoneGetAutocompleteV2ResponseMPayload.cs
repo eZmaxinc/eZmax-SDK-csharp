@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Timezone autocomplete element response. (required).</param>
-        public TimezoneGetAutocompleteV2ResponseMPayload(List<TimezoneAutocompleteElementResponse>  = default(List<TimezoneAutocompleteElementResponse>))
+        /// <param name="aObjTimezone">An array of Timezone autocomplete element response. (required).</param>
+        public TimezoneGetAutocompleteV2ResponseMPayload(List<TimezoneAutocompleteElementResponse> aObjTimezone = default(List<TimezoneAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjTimezone" is required (not null)
+            if (aObjTimezone == null)
             {
-                throw new ArgumentNullException(" is a required property for TimezoneGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjTimezone is a required property for TimezoneGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjTimezone = ;
+            this.AObjTimezone = aObjTimezone;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

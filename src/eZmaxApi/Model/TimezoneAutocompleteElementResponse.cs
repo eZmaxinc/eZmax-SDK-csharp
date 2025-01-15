@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The description of the Timezone (required).</param>
-        /// <param name="">The unique ID of the Timezone (required).</param>
-        /// <param name="">Whether the Timezone is active or not (required).</param>
-        public TimezoneAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sTimezoneName">The description of the Timezone (required).</param>
+        /// <param name="pkiTimezoneID">The unique ID of the Timezone (required).</param>
+        /// <param name="bTimezoneIsactive">Whether the Timezone is active or not (required).</param>
+        public TimezoneAutocompleteElementResponse(string sTimezoneName = default(string), int pkiTimezoneID = default(int), bool bTimezoneIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sTimezoneName" is required (not null)
+            if (sTimezoneName == null)
             {
-                throw new ArgumentNullException(" is a required property for TimezoneAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sTimezoneName is a required property for TimezoneAutocompleteElementResponse and cannot be null");
             }
-            this.STimezoneName = ;
-            this.PkiTimezoneID = ;
-            this.BTimezoneIsactive = ;
+            this.STimezoneName = sTimezoneName;
+            this.PkiTimezoneID = pkiTimezoneID;
+            this.BTimezoneIsactive = bTimezoneIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiTimezoneID (int) minimum
             if (this.PkiTimezoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiTimezoneID, must be a value greater than or equal to 0.", new [] { "PkiTimezoneID" });
+                yield return new ValidationResult("Invalid value for PkiTimezoneID, must be a value greater than or equal to 0.", new [] { "PkiTimezoneID" });
             }
 
             yield break;

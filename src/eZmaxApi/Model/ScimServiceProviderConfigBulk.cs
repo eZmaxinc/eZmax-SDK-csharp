@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigBulk" /> class.
         /// </summary>
-        /// <param name="">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="">An integer value specifying the maximum number of operations. (required).</param>
-        /// <param name="">An integer value specifying the maximum payload size in bytes. (required).</param>
-        public ScimServiceProviderConfigBulk(bool  = default(bool), int  = default(int), int  = default(int))
+        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="maxOperations">An integer value specifying the maximum number of operations. (required).</param>
+        /// <param name="maxPayloadSize">An integer value specifying the maximum payload size in bytes. (required).</param>
+        public ScimServiceProviderConfigBulk(bool supported = default(bool), int maxOperations = default(int), int maxPayloadSize = default(int))
         {
-            this.Supported = ;
-            this.MaxOperations = ;
-            this.MaxPayloadSize = ;
+            this.Supported = supported;
+            this.MaxOperations = maxOperations;
+            this.MaxPayloadSize = maxPayloadSize;
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

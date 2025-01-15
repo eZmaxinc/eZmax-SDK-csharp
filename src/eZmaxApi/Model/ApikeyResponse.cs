@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Apikey (required).</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="">Whether the apikey is active or not (required).</param>
-        /// <param name="">Whether the apikey is signed or not.</param>
-        /// <param name=""> (required).</param>
-        public ApikeyResponse(int  = default(int), int  = default(int), MultilingualApikeyDescription  = default(MultilingualApikeyDescription), CustomContactNameResponse  = default(CustomContactNameResponse), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="sApikeySecret">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public ApikeyResponse(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), CustomContactNameResponse objContactName = default(CustomContactNameResponse), string sApikeyApikey = default(string), string sApikeySecret = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiApikeyID = ;
-            this.FkiUserID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiApikeyID = pkiApikeyID;
+            this.FkiUserID = fkiUserID;
+            // to ensure "objApikeyDescription" is required (not null)
+            if (objApikeyDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException("objApikeyDescription is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjApikeyDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjApikeyDescription = objApikeyDescription;
+            // to ensure "objContactName" is required (not null)
+            if (objContactName == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException("objContactName is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjContactName = ;
-            this.BApikeyIsactive = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjContactName = objContactName;
+            this.BApikeyIsactive = bApikeyIsactive;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyResponse and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for ApikeyResponse and cannot be null");
             }
-            this.ObjAudit = ;
-            this.SApikeyApikey = ;
-            this.SApikeySecret = ;
-            this.BApikeyIssigned = ;
+            this.ObjAudit = objAudit;
+            this.SApikeyApikey = sApikeyApikey;
+            this.SApikeySecret = sApikeySecret;
+            this.BApikeyIssigned = bApikeyIssigned;
         }
 
         /// <summary>
@@ -176,18 +176,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiApikeyID (int) minimum
             if (this.PkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
+                yield return new ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             yield break;

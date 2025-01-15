@@ -46,31 +46,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezmaxinvoicinguser.</param>
-        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The number of ezsign documents (required).</param>
-        /// <param name="">Whether there is an eZsign account (required).</param>
-        /// <param name="">Whether it is billable for eZsign (required).</param>
-        /// <param name=""> (required).</param>
-        public EzmaxinvoicinguserResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), FieldEEzmaxinvoicinguserVariationezsign  = default(FieldEEzmaxinvoicinguserVariationezsign))
+        /// <param name="pkiEzmaxinvoicinguserID">The unique ID of the Ezmaxinvoicinguser.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="iEzmaxinvoicinguserEzsigndocument">The number of ezsign documents (required).</param>
+        /// <param name="bEzmaxinvoicinguserEzsignaccount">Whether there is an eZsign account (required).</param>
+        /// <param name="bEzmaxinvoicinguserBillableezsign">Whether it is billable for eZsign (required).</param>
+        /// <param name="eEzmaxinvoicinguserVariationezsign">eEzmaxinvoicinguserVariationezsign (required).</param>
+        public EzmaxinvoicinguserResponse(int pkiEzmaxinvoicinguserID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiUserID = default(int), int iEzmaxinvoicinguserEzsigndocument = default(int), bool bEzmaxinvoicinguserEzsignaccount = default(bool), bool bEzmaxinvoicinguserBillableezsign = default(bool), FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign = default(FieldEEzmaxinvoicinguserVariationezsign))
         {
-            this.FkiBillingentityinternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
+            if (sBillingentityinternalDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicinguserResponse and cannot be null");
+                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicinguserResponse and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = ;
-            this.FkiUserID = ;
-            this.IEzmaxinvoicinguserEzsigndocument = ;
-            this.BEzmaxinvoicinguserEzsignaccount = ;
-            this.BEzmaxinvoicinguserBillableezsign = ;
-            this.EEzmaxinvoicinguserVariationezsign = ;
-            this.PkiEzmaxinvoicinguserID = ;
-            this.FkiEzmaxinvoicingID = ;
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+            this.FkiUserID = fkiUserID;
+            this.IEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
+            this.BEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
+            this.BEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
+            this.EEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
+            this.PkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
+            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
         }
 
         /// <summary>
@@ -172,36 +172,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicinguserID (int) minimum
             if (this.PkiEzmaxinvoicinguserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicinguserID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicinguserID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicinguserID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicinguserID" });
             }
 
             // FkiEzmaxinvoicingID (int) minimum
             if (this.FkiEzmaxinvoicingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // IEzmaxinvoicinguserEzsigndocument (int) minimum
             if (this.IEzmaxinvoicinguserEzsigndocument < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicinguserEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicinguserEzsigndocument" });
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicinguserEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicinguserEzsigndocument" });
             }
 
             yield break;

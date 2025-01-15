@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="">The description of the Billingentityexternal (required).</param>
-        /// <param name="">Whether the Billingentityexternal is active or not (required).</param>
-        public BillingentityexternalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
+        /// <param name="bBillingentityexternalIsactive">Whether the Billingentityexternal is active or not (required).</param>
+        public BillingentityexternalAutocompleteElementResponse(int pkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), bool bBillingentityexternalIsactive = default(bool))
         {
-            this.PkiBillingentityexternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiBillingentityexternalID = pkiBillingentityexternalID;
+            // to ensure "sBillingentityexternalDescription" is required (not null)
+            if (sBillingentityexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityexternalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for BillingentityexternalAutocompleteElementResponse and cannot be null");
             }
-            this.SBillingentityexternalDescription = ;
-            this.BBillingentityexternalIsactive = ;
+            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
+            this.BBillingentityexternalIsactive = bBillingentityexternalIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBillingentityexternalID (int) minimum
             if (this.PkiBillingentityexternalID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "PkiBillingentityexternalID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "PkiBillingentityexternalID" });
             }
 
             yield break;

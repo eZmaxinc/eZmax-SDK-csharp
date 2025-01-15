@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="subnetdeleteobjectv1"></a>
 # **SubnetDeleteObjectV1**
-> SubnetDeleteObjectV1Response SubnetDeleteObjectV1 (int pkiSubnetID)
+> CommonResponse SubnetDeleteObjectV1 (int pkiSubnetID)
 
 Delete an existing Subnet
 
@@ -139,7 +139,7 @@ namespace Example
             try
             {
                 // Delete an existing Subnet
-                SubnetDeleteObjectV1Response result = apiInstance.SubnetDeleteObjectV1(pkiSubnetID);
+                CommonResponse result = apiInstance.SubnetDeleteObjectV1(pkiSubnetID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -160,7 +160,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Subnet
-    ApiResponse<SubnetDeleteObjectV1Response> response = apiInstance.SubnetDeleteObjectV1WithHttpInfo(pkiSubnetID);
+    ApiResponse<CommonResponse> response = apiInstance.SubnetDeleteObjectV1WithHttpInfo(pkiSubnetID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -181,7 +181,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SubnetDeleteObjectV1Response**](SubnetDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ catch (ApiException e)
 
 <a id="subneteditobjectv1"></a>
 # **SubnetEditObjectV1**
-> SubnetEditObjectV1Response SubnetEditObjectV1 (int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request)
+> CommonResponse SubnetEditObjectV1 (int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request)
 
 Edit an existing Subnet
 
@@ -236,7 +236,7 @@ namespace Example
             try
             {
                 // Edit an existing Subnet
-                SubnetEditObjectV1Response result = apiInstance.SubnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
+                CommonResponse result = apiInstance.SubnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -257,7 +257,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Subnet
-    ApiResponse<SubnetEditObjectV1Response> response = apiInstance.SubnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.SubnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -279,7 +279,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SubnetEditObjectV1Response**](SubnetEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

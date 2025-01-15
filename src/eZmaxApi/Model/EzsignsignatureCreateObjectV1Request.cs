@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignsignatureCreateObjectV1Request(EzsignsignatureRequest  = default(EzsignsignatureRequest), EzsignsignatureRequestCompound  = default(EzsignsignatureRequestCompound))
+        /// <param name="objEzsignsignature">objEzsignsignature.</param>
+        /// <param name="objEzsignsignatureCompound">objEzsignsignatureCompound.</param>
+        public EzsignsignatureCreateObjectV1Request(EzsignsignatureRequest objEzsignsignature = default(EzsignsignatureRequest), EzsignsignatureRequestCompound objEzsignsignatureCompound = default(EzsignsignatureRequestCompound))
         {
-            this.ObjEzsignsignature = ;
-            this.ObjEzsignsignatureCompound = ;
+            this.ObjEzsignsignature = objEzsignsignature;
+            this.ObjEzsignsignatureCompound = objEzsignsignatureCompound;
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

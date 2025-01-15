@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureattachmentResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsignatureattachment (required).</param>
-        /// <param name="">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name="">The md5 of the Ezsignsignatureattachment (required).</param>
-        /// <param name="">The name of the Ezsignsignatureattachment (required).</param>
-        /// <param name="">The Url to the requested document.  Url will expire after 3 hours. (required).</param>
-        public EzsignsignatureattachmentResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiEzsignsignatureattachmentID">The unique ID of the Ezsignsignatureattachment (required).</param>
+        /// <param name="fkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="binEzsignsignatureattachmentMD5">The md5 of the Ezsignsignatureattachment (required).</param>
+        /// <param name="sEzsignsignatureattachmentName">The name of the Ezsignsignatureattachment (required).</param>
+        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 3 hours. (required).</param>
+        public EzsignsignatureattachmentResponse(int pkiEzsignsignatureattachmentID = default(int), int fkiEzsignsignatureID = default(int), string binEzsignsignatureattachmentMD5 = default(string), string sEzsignsignatureattachmentName = default(string), string sDownloadUrl = default(string))
         {
-            this.PkiEzsignsignatureattachmentID = ;
-            this.FkiEzsignsignatureID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignsignatureattachmentID = pkiEzsignsignatureattachmentID;
+            this.FkiEzsignsignatureID = fkiEzsignsignatureID;
+            // to ensure "binEzsignsignatureattachmentMD5" is required (not null)
+            if (binEzsignsignatureattachmentMD5 == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureattachmentResponse and cannot be null");
+                throw new ArgumentNullException("binEzsignsignatureattachmentMD5 is a required property for EzsignsignatureattachmentResponse and cannot be null");
             }
-            this.BinEzsignsignatureattachmentMD5 = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.BinEzsignsignatureattachmentMD5 = binEzsignsignatureattachmentMD5;
+            // to ensure "sEzsignsignatureattachmentName" is required (not null)
+            if (sEzsignsignatureattachmentName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureattachmentResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignsignatureattachmentName is a required property for EzsignsignatureattachmentResponse and cannot be null");
             }
-            this.SEzsignsignatureattachmentName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignsignatureattachmentName = sEzsignsignatureattachmentName;
+            // to ensure "sDownloadUrl" is required (not null)
+            if (sDownloadUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureattachmentResponse and cannot be null");
+                throw new ArgumentNullException("sDownloadUrl is a required property for EzsignsignatureattachmentResponse and cannot be null");
             }
-            this.SDownloadUrl = ;
+            this.SDownloadUrl = sDownloadUrl;
         }
 
         /// <summary>
@@ -140,24 +140,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsignatureattachmentID (int) maximum
             if (this.PkiEzsignsignatureattachmentID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignsignatureattachmentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignsignatureattachmentID" });
             }
 
             // PkiEzsignsignatureattachmentID (int) minimum
             if (this.PkiEzsignsignatureattachmentID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value greater than or equal to 1.", new [] { "PkiEzsignsignatureattachmentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignatureattachmentID, must be a value greater than or equal to 1.", new [] { "PkiEzsignsignatureattachmentID" });
             }
 
             // FkiEzsignsignatureID (int) minimum
             if (this.FkiEzsignsignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignatureID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignatureID" });
             }
 
             if (this.SEzsignsignatureattachmentName != null) {

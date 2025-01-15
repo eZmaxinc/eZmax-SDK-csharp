@@ -46,14 +46,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignsignatureEzsignsignaturesAutomaticResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The page number in the Ezsigndocument (required).</param>
-        public CustomEzsignsignatureEzsignsignaturesAutomaticResponse(int  = default(int), FieldEEzsignsignatureType  = default(FieldEEzsignsignatureType), int  = default(int))
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        public CustomEzsignsignatureEzsignsignaturesAutomaticResponse(int pkiEzsignsignatureID = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int iEzsignpagePagenumber = default(int))
         {
-            this.PkiEzsignsignatureID = ;
-            this.EEzsignsignatureType = ;
-            this.IEzsignpagePagenumber = ;
+            this.PkiEzsignsignatureID = pkiEzsignsignatureID;
+            this.EEzsignsignatureType = eEzsignsignatureType;
+            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
         }
 
         /// <summary>
@@ -101,18 +101,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsignatureID (int) minimum
             if (this.PkiEzsignsignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
             }
 
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             yield break;

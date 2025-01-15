@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **FkiDepartmentIDDefault** | **int** | The unique ID of the Department | 
 **FkiTimezoneID** | **int** | The unique ID of the Timezone | 
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
-**ObjEmail** | [**EmailRequestCompound**](EmailRequestCompound.md) |  | 
+**ObjEmail** | [**EmailRequest**](EmailRequest.md) | An Email Object and children to create a complete structure | 
 **FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | 
-**ObjPhoneHome** | [**PhoneRequestCompoundV2**](PhoneRequestCompoundV2.md) |  | [optional] 
-**ObjPhoneSMS** | [**PhoneRequestCompoundV2**](PhoneRequestCompoundV2.md) |  | [optional] 
+**ObjPhoneHome** | [**PhoneRequestV2**](PhoneRequestV2.md) | A Phone Object and children to create a complete structure | [optional] 
+**ObjPhoneSMS** | [**PhoneRequestV2**](PhoneRequestV2.md) | A Phone Object and children to create a complete structure | [optional] 
 **FkiSecretquestionID** | **int** | The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code| | [optional] 
 **SUserSecretresponse** | **string** | The answer to the Secretquestion | [optional] 
 **FkiModuleIDForm** | **int** | The unique ID of the Module | [optional] 

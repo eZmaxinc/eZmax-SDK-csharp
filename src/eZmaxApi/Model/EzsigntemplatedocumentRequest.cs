@@ -169,38 +169,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatedocument.</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="">The unique ID of the Ezsigndocument.</param>
-        /// <param name="">The unique ID of the Ezsigntemplatesigner.</param>
-        /// <param name="">The name of the Ezsigntemplatedocument. (required).</param>
-        /// <param name="">Indicates where to look for the document binary content. (required).</param>
-        /// <param name="">Indicates the format of the template..</param>
-        /// <param name="">The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64..</param>
-        /// <param name="">The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url..</param>
-        /// <param name="">Try to repair the document or flatten it if it cannot be used for electronic signature..</param>
-        /// <param name="">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document..</param>
-        /// <param name="">If the source template is password protected, the password to open/modify it. (default to &quot;&quot;).</param>
-        public EzsigntemplatedocumentRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), EEzsigntemplatedocumentSourceEnum  = default(EEzsigntemplatedocumentSourceEnum), EEzsigntemplatedocumentFormatEnum?  = default(EEzsigntemplatedocumentFormatEnum?), byte[]  = default(byte[]), string  = default(string), bool  = default(bool), EEzsigntemplatedocumentFormEnum?  = default(EEzsigntemplatedocumentFormEnum?), string  = @"")
+        /// <param name="pkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument.</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
+        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner.</param>
+        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
+        /// <param name="eEzsigntemplatedocumentSource">Indicates where to look for the document binary content. (required).</param>
+        /// <param name="eEzsigntemplatedocumentFormat">Indicates the format of the template..</param>
+        /// <param name="sEzsigntemplatedocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64..</param>
+        /// <param name="sEzsigntemplatedocumentUrl">The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url..</param>
+        /// <param name="bEzsigntemplatedocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature..</param>
+        /// <param name="eEzsigntemplatedocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document..</param>
+        /// <param name="sEzsigntemplatedocumentPassword">If the source template is password protected, the password to open/modify it. (default to &quot;&quot;).</param>
+        public EzsigntemplatedocumentRequest(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), string sEzsigntemplatedocumentName = default(string), EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource = default(EEzsigntemplatedocumentSourceEnum), EEzsigntemplatedocumentFormatEnum? eEzsigntemplatedocumentFormat = default(EEzsigntemplatedocumentFormatEnum?), byte[] sEzsigntemplatedocumentBase64 = default(byte[]), string sEzsigntemplatedocumentUrl = default(string), bool bEzsigntemplatedocumentForcerepair = default(bool), EEzsigntemplatedocumentFormEnum? eEzsigntemplatedocumentForm = default(EEzsigntemplatedocumentFormEnum?), string sEzsigntemplatedocumentPassword = @"")
         {
-            this.FkiEzsigntemplateID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            // to ensure "sEzsigntemplatedocumentName" is required (not null)
+            if (sEzsigntemplatedocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentRequest and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatedocumentName is a required property for EzsigntemplatedocumentRequest and cannot be null");
             }
-            this.SEzsigntemplatedocumentName = ;
-            this.EEzsigntemplatedocumentSource = ;
-            this.PkiEzsigntemplatedocumentID = ;
-            this.FkiEzsigndocumentID = ;
-            this.FkiEzsigntemplatesignerID = ;
-            this.EEzsigntemplatedocumentFormat = ;
-            this.SEzsigntemplatedocumentBase64 = ;
-            this.SEzsigntemplatedocumentUrl = ;
-            this.BEzsigntemplatedocumentForcerepair = ;
-            this.EEzsigntemplatedocumentForm = ;
-            // use default value if no "" provided
-            this.SEzsigntemplatedocumentPassword =  ?? @"";
+            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
+            this.EEzsigntemplatedocumentSource = eEzsigntemplatedocumentSource;
+            this.PkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+            this.EEzsigntemplatedocumentFormat = eEzsigntemplatedocumentFormat;
+            this.SEzsigntemplatedocumentBase64 = sEzsigntemplatedocumentBase64;
+            this.SEzsigntemplatedocumentUrl = sEzsigntemplatedocumentUrl;
+            this.BEzsigntemplatedocumentForcerepair = bEzsigntemplatedocumentForcerepair;
+            this.EEzsigntemplatedocumentForm = eEzsigntemplatedocumentForm;
+            // use default value if no "sEzsigntemplatedocumentPassword" provided
+            this.SEzsigntemplatedocumentPassword = sEzsigntemplatedocumentPassword ?? @"";
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.</value>
-        /* <example>[B@7db534f2</example>*/
+        /* <example>[B@e24ddd0</example>*/
         [DataMember(Name = "sEzsigntemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigntemplatedocumentBase64 { get; set; }
 
@@ -312,30 +312,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatedocumentID (int) minimum
             if (this.PkiEzsigntemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // FkiEzsigntemplatesignerID (int) minimum
             if (this.FkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
             }
 
             yield break;

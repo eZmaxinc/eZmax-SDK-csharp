@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TranqcontractGetCommunicationListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public TranqcontractGetCommunicationListV1ResponseMPayload(List<CustomCommunicationListElementResponse>  = default(List<CustomCommunicationListElementResponse>))
+        /// <param name="aObjCommunication">aObjCommunication (required).</param>
+        public TranqcontractGetCommunicationListV1ResponseMPayload(List<CustomCommunicationListElementResponse> aObjCommunication = default(List<CustomCommunicationListElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCommunication" is required (not null)
+            if (aObjCommunication == null)
             {
-                throw new ArgumentNullException(" is a required property for TranqcontractGetCommunicationListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjCommunication is a required property for TranqcontractGetCommunicationListV1ResponseMPayload and cannot be null");
             }
-            this.AObjCommunication = ;
+            this.AObjCommunication = aObjCommunication;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

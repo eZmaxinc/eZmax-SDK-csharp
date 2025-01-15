@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicResetUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The url of the Ezsigntemplatepublic  You can add these value as query parameters to prefill the corresponding role  |Parameter|Description| |-|-| |sEzsigntemplatesignerDescription|The role to fill| |sContactFirstname|The contact firstname| |sContactLastname|The contact lastname| |sEmailAddress|The contact email| |sPhoneE164|The contact phone number| |sPhoneE164Cell|The contact cell phone number| (required).</param>
-        public EzsigntemplatepublicResetUrlV1ResponseMPayload(string  = default(string))
+        /// <param name="sEzsigntemplatepublicUrl">The url of the Ezsigntemplatepublic  You can add these value as query parameters to prefill the corresponding role  |Parameter|Description| |-|-| |sEzsigntemplatesignerDescription|The role to fill| |sContactFirstname|The contact firstname| |sContactLastname|The contact lastname| |sEmailAddress|The contact email| |sPhoneE164|The contact phone number| |sPhoneE164Cell|The contact cell phone number| (required).</param>
+        public EzsigntemplatepublicResetUrlV1ResponseMPayload(string sEzsigntemplatepublicUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzsigntemplatepublicUrl" is required (not null)
+            if (sEzsigntemplatepublicUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicResetUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatepublicUrl is a required property for EzsigntemplatepublicResetUrlV1ResponseMPayload and cannot be null");
             }
-            this.SEzsigntemplatepublicUrl = ;
+            this.SEzsigntemplatepublicUrl = sEzsigntemplatepublicUrl;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzsigntemplatepublicUrl != null) {
                 // SEzsigntemplatepublicUrl (string) pattern

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezdoctemplatedocument (required).</param>
-        /// <param name="">The name of the Ezdoctemplatedocument in the language of the requester (required).</param>
-        /// <param name="">Whether the ezdoctemplatedocument is active or not (required).</param>
-        public EzdoctemplatedocumentAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument (required).</param>
+        /// <param name="sEzdoctemplatedocumentNameX">The name of the Ezdoctemplatedocument in the language of the requester (required).</param>
+        /// <param name="bEzdoctemplatedocumentIsactive">Whether the ezdoctemplatedocument is active or not (required).</param>
+        public EzdoctemplatedocumentAutocompleteElementResponse(int pkiEzdoctemplatedocumentID = default(int), string sEzdoctemplatedocumentNameX = default(string), bool bEzdoctemplatedocumentIsactive = default(bool))
         {
-            this.PkiEzdoctemplatedocumentID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
+            // to ensure "sEzdoctemplatedocumentNameX" is required (not null)
+            if (sEzdoctemplatedocumentNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatedocumentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzdoctemplatedocumentNameX is a required property for EzdoctemplatedocumentAutocompleteElementResponse and cannot be null");
             }
-            this.SEzdoctemplatedocumentNameX = ;
-            this.BEzdoctemplatedocumentIsactive = ;
+            this.SEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
+            this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzdoctemplatedocumentID (int) maximum
             if (this.PkiEzdoctemplatedocumentID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
             }
 
             // PkiEzdoctemplatedocumentID (int) minimum
             if (this.PkiEzdoctemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
             }
 
             if (this.SEzdoctemplatedocumentNameX != null) {

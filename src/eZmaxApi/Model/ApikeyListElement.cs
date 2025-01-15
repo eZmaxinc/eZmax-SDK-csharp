@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Apikey (required).</param>
-        /// <param name="">The description of the Apikey in the language of the requester (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">Whether the apikey is active or not (required).</param>
-        /// <param name="">Whether the apikey is signed or not (required).</param>
-        public ApikeyListElement(int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not (required).</param>
+        public ApikeyListElement(int pkiApikeyID = default(int), string sApikeyDescriptionX = default(string), string sUserFirstname = default(string), string sUserLastname = default(string), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
         {
-            this.PkiApikeyID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiApikeyID = pkiApikeyID;
+            // to ensure "sApikeyDescriptionX" is required (not null)
+            if (sApikeyDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException("sApikeyDescriptionX is a required property for ApikeyListElement and cannot be null");
             }
-            this.SApikeyDescriptionX = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SApikeyDescriptionX = sApikeyDescriptionX;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for ApikeyListElement and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyListElement and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for ApikeyListElement and cannot be null");
             }
-            this.SUserLastname = ;
-            this.BApikeyIsactive = ;
-            this.BApikeyIssigned = ;
+            this.SUserLastname = sUserLastname;
+            this.BApikeyIsactive = bApikeyIsactive;
+            this.BApikeyIssigned = bApikeyIssigned;
         }
 
         /// <summary>
@@ -151,12 +151,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiApikeyID (int) minimum
             if (this.PkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
+                yield return new ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
             }
 
             yield break;

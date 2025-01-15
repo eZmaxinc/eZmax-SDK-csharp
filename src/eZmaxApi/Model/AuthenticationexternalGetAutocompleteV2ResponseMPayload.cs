@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Authenticationexternal autocomplete element response. (required).</param>
-        public AuthenticationexternalGetAutocompleteV2ResponseMPayload(List<AuthenticationexternalAutocompleteElementResponse>  = default(List<AuthenticationexternalAutocompleteElementResponse>))
+        /// <param name="aObjAuthenticationexternal">An array of Authenticationexternal autocomplete element response. (required).</param>
+        public AuthenticationexternalGetAutocompleteV2ResponseMPayload(List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal = default(List<AuthenticationexternalAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjAuthenticationexternal" is required (not null)
+            if (aObjAuthenticationexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjAuthenticationexternal is a required property for AuthenticationexternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjAuthenticationexternal = ;
+            this.AObjAuthenticationexternal = aObjAuthenticationexternal;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

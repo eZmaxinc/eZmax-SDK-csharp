@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendtransmissionGetObjectV2ResponseMPayload(EzsignbulksendtransmissionResponseCompound  = default(EzsignbulksendtransmissionResponseCompound))
+        /// <param name="objEzsignbulksendtransmission">objEzsignbulksendtransmission (required).</param>
+        public EzsignbulksendtransmissionGetObjectV2ResponseMPayload(EzsignbulksendtransmissionResponseCompound objEzsignbulksendtransmission = default(EzsignbulksendtransmissionResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignbulksendtransmission" is required (not null)
+            if (objEzsignbulksendtransmission == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsignbulksendtransmission is a required property for EzsignbulksendtransmissionGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignbulksendtransmission = ;
+            this.ObjEzsignbulksendtransmission = objEzsignbulksendtransmission;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

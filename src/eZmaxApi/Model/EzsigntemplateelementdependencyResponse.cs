@@ -52,26 +52,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateelementdependencyResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateelementdependency (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplateformfield.</param>
-        /// <param name="">The unique ID of the Ezsigntemplatesignature.</param>
-        /// <param name="">The unique ID of the Ezsigntemplateformfield.</param>
-        /// <param name="">The unique ID of the Ezsigntemplateformfieldgroup.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether if it&#39;s selected or not when using eEzsigntemplateelementdependencyValidation &#x3D; Selected.</param>
-        /// <param name="">.</param>
-        /// <param name="">The value of the Ezsignelementdependency.</param>
-        public EzsigntemplateelementdependencyResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsigntemplateelementdependencyValidation  = default(FieldEEzsigntemplateelementdependencyValidation), bool  = default(bool), FieldEEzsigntemplateelementdependencyOperator?  = default(FieldEEzsigntemplateelementdependencyOperator?), string  = default(string))
+        /// <param name="pkiEzsigntemplateelementdependencyID">The unique ID of the Ezsigntemplateelementdependency (required).</param>
+        /// <param name="fkiEzsigntemplateformfieldID">The unique ID of the Ezsigntemplateformfield.</param>
+        /// <param name="fkiEzsigntemplatesignatureID">The unique ID of the Ezsigntemplatesignature.</param>
+        /// <param name="fkiEzsigntemplateformfieldIDValidation">The unique ID of the Ezsigntemplateformfield.</param>
+        /// <param name="fkiEzsigntemplateformfieldgroupIDValidation">The unique ID of the Ezsigntemplateformfieldgroup.</param>
+        /// <param name="eEzsigntemplateelementdependencyValidation">eEzsigntemplateelementdependencyValidation (required).</param>
+        /// <param name="bEzsigntemplateelementdependencySelected">Whether if it&#39;s selected or not when using eEzsigntemplateelementdependencyValidation &#x3D; Selected.</param>
+        /// <param name="eEzsigntemplateelementdependencyOperator">eEzsigntemplateelementdependencyOperator.</param>
+        /// <param name="sEzsigntemplateelementdependencyValue">The value of the Ezsignelementdependency.</param>
+        public EzsigntemplateelementdependencyResponse(int pkiEzsigntemplateelementdependencyID = default(int), int fkiEzsigntemplateformfieldID = default(int), int fkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplateformfieldIDValidation = default(int), int fkiEzsigntemplateformfieldgroupIDValidation = default(int), FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation = default(FieldEEzsigntemplateelementdependencyValidation), bool bEzsigntemplateelementdependencySelected = default(bool), FieldEEzsigntemplateelementdependencyOperator? eEzsigntemplateelementdependencyOperator = default(FieldEEzsigntemplateelementdependencyOperator?), string sEzsigntemplateelementdependencyValue = default(string))
         {
-            this.PkiEzsigntemplateelementdependencyID = ;
-            this.EEzsigntemplateelementdependencyValidation = ;
-            this.FkiEzsigntemplateformfieldID = ;
-            this.FkiEzsigntemplatesignatureID = ;
-            this.FkiEzsigntemplateformfieldIDValidation = ;
-            this.FkiEzsigntemplateformfieldgroupIDValidation = ;
-            this.BEzsigntemplateelementdependencySelected = ;
-            this.EEzsigntemplateelementdependencyOperator = ;
-            this.SEzsigntemplateelementdependencyValue = ;
+            this.PkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
+            this.EEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
+            this.FkiEzsigntemplateformfieldID = fkiEzsigntemplateformfieldID;
+            this.FkiEzsigntemplatesignatureID = fkiEzsigntemplatesignatureID;
+            this.FkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
+            this.FkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
+            this.BEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
+            this.EEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
+            this.SEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
         }
 
         /// <summary>
@@ -165,42 +165,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateelementdependencyID (int) maximum
             if (this.PkiEzsigntemplateelementdependencyID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplateelementdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplateelementdependencyID" });
             }
 
             // PkiEzsigntemplateelementdependencyID (int) minimum
             if (this.PkiEzsigntemplateelementdependencyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateelementdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateelementdependencyID" });
             }
 
             // FkiEzsigntemplateformfieldID (int) minimum
             if (this.FkiEzsigntemplateformfieldID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldID" });
             }
 
             // FkiEzsigntemplatesignatureID (int) minimum
             if (this.FkiEzsigntemplatesignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignatureID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignatureID" });
             }
 
             // FkiEzsigntemplateformfieldIDValidation (int) minimum
             if (this.FkiEzsigntemplateformfieldIDValidation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldIDValidation" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldIDValidation" });
             }
 
             // FkiEzsigntemplateformfieldgroupIDValidation (int) minimum
             if (this.FkiEzsigntemplateformfieldgroupIDValidation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldgroupIDValidation" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldgroupIDValidation" });
             }
 
             if (this.SEzsigntemplateelementdependencyValue != null) {

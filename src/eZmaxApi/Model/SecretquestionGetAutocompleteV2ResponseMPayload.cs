@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SecretquestionGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Secretquestion autocomplete element response. (required).</param>
-        public SecretquestionGetAutocompleteV2ResponseMPayload(List<SecretquestionAutocompleteElementResponse>  = default(List<SecretquestionAutocompleteElementResponse>))
+        /// <param name="aObjSecretquestion">An array of Secretquestion autocomplete element response. (required).</param>
+        public SecretquestionGetAutocompleteV2ResponseMPayload(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion = default(List<SecretquestionAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjSecretquestion" is required (not null)
+            if (aObjSecretquestion == null)
             {
-                throw new ArgumentNullException(" is a required property for SecretquestionGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjSecretquestion is a required property for SecretquestionGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjSecretquestion = ;
+            this.AObjSecretquestion = aObjSecretquestion;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

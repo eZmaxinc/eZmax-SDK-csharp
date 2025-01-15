@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentGetAttachmentlogsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public AttachmentGetAttachmentlogsV1ResponseMPayload(List<AttachmentlogResponseCompound>  = default(List<AttachmentlogResponseCompound>))
+        /// <param name="aObjAttachmentlog">aObjAttachmentlog (required).</param>
+        public AttachmentGetAttachmentlogsV1ResponseMPayload(List<AttachmentlogResponseCompound> aObjAttachmentlog = default(List<AttachmentlogResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjAttachmentlog" is required (not null)
+            if (aObjAttachmentlog == null)
             {
-                throw new ArgumentNullException(" is a required property for AttachmentGetAttachmentlogsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjAttachmentlog is a required property for AttachmentGetAttachmentlogsV1ResponseMPayload and cannot be null");
             }
-            this.AObjAttachmentlog = ;
+            this.AObjAttachmentlog = aObjAttachmentlog;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -46,28 +46,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Variableexpense.</param>
-        /// <param name="">The code of the Variableexpense (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the variableexpense is active or not (required).</param>
-        public VariableexpenseRequestCompound(int  = default(int), string  = default(string), MultilingualVariableexpenseDescription  = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable  = default(FieldEVariableexpenseTaxable), bool  = default(bool))
+        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense.</param>
+        /// <param name="sVariableexpenseCode">The code of the Variableexpense (required).</param>
+        /// <param name="objVariableexpenseDescription">objVariableexpenseDescription (required).</param>
+        /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable (required).</param>
+        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
+        public VariableexpenseRequestCompound(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), MultilingualVariableexpenseDescription objVariableexpenseDescription = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable), bool bVariableexpenseIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sVariableexpenseCode" is required (not null)
+            if (sVariableexpenseCode == null)
             {
-                throw new ArgumentNullException(" is a required property for VariableexpenseRequestCompound and cannot be null");
+                throw new ArgumentNullException("sVariableexpenseCode is a required property for VariableexpenseRequestCompound and cannot be null");
             }
-            this.SVariableexpenseCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SVariableexpenseCode = sVariableexpenseCode;
+            // to ensure "objVariableexpenseDescription" is required (not null)
+            if (objVariableexpenseDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for VariableexpenseRequestCompound and cannot be null");
+                throw new ArgumentNullException("objVariableexpenseDescription is a required property for VariableexpenseRequestCompound and cannot be null");
             }
-            this.ObjVariableexpenseDescription = ;
-            this.EVariableexpenseTaxable = ;
-            this.BVariableexpenseIsactive = ;
-            this.PkiVariableexpenseID = ;
+            this.ObjVariableexpenseDescription = objVariableexpenseDescription;
+            this.EVariableexpenseTaxable = eVariableexpenseTaxable;
+            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
+            this.PkiVariableexpenseID = pkiVariableexpenseID;
         }
 
         /// <summary>
@@ -131,18 +131,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiVariableexpenseID (int) maximum
             if (this.PkiVariableexpenseID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
             }
 
             // PkiVariableexpenseID (int) minimum
             if (this.PkiVariableexpenseID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
             }
 
             if (this.SVariableexpenseCode != null) {

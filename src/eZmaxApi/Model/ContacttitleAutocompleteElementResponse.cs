@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContacttitleAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
-        /// <param name="">The name of the Contacttitle in the language of the requester (required).</param>
-        public ContacttitleAutocompleteElementResponse(int  = default(int), string  = default(string))
+        /// <param name="pkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
+        /// <param name="sContacttitleNameX">The name of the Contacttitle in the language of the requester (required).</param>
+        public ContacttitleAutocompleteElementResponse(int pkiContacttitleID = default(int), string sContacttitleNameX = default(string))
         {
-            this.PkiContacttitleID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiContacttitleID = pkiContacttitleID;
+            // to ensure "sContacttitleNameX" is required (not null)
+            if (sContacttitleNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for ContacttitleAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sContacttitleNameX is a required property for ContacttitleAutocompleteElementResponse and cannot be null");
             }
-            this.SContacttitleNameX = ;
+            this.SContacttitleNameX = sContacttitleNameX;
         }
 
         /// <summary>
@@ -97,12 +97,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiContacttitleID (int) minimum
             if (this.PkiContacttitleID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContacttitleID, must be a value greater than or equal to 0.", new [] { "PkiContacttitleID" });
+                yield return new ValidationResult("Invalid value for PkiContacttitleID, must be a value greater than or equal to 0.", new [] { "PkiContacttitleID" });
             }
 
             if (this.SContacttitleNameX != null) {

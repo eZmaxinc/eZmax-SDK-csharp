@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualNotificationtestName" /> class.
         /// </summary>
-        /// <param name="">The name of the Notificationtest in French.</param>
-        /// <param name="">The name of the Notificationtest in English.</param>
-        public MultilingualNotificationtestName(string  = default(string), string  = default(string))
+        /// <param name="sNotificationtestName1">The name of the Notificationtest in French.</param>
+        /// <param name="sNotificationtestName2">The name of the Notificationtest in English.</param>
+        public MultilingualNotificationtestName(string sNotificationtestName1 = default(string), string sNotificationtestName2 = default(string))
         {
-            this.SNotificationtestName1 = ;
-            this.SNotificationtestName2 = ;
+            this.SNotificationtestName1 = sNotificationtestName1;
+            this.SNotificationtestName2 = sNotificationtestName2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

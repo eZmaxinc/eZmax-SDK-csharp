@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsignannotationdeleteobjectv1"></a>
 # **EzsignannotationDeleteObjectV1**
-> EzsignannotationDeleteObjectV1Response EzsignannotationDeleteObjectV1 (int pkiEzsignannotationID)
+> CommonResponse EzsignannotationDeleteObjectV1 (int pkiEzsignannotationID)
 
 Delete an existing Ezsignannotation
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignannotation
-                EzsignannotationDeleteObjectV1Response result = apiInstance.EzsignannotationDeleteObjectV1(pkiEzsignannotationID);
+                CommonResponse result = apiInstance.EzsignannotationDeleteObjectV1(pkiEzsignannotationID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignannotation
-    ApiResponse<EzsignannotationDeleteObjectV1Response> response = apiInstance.EzsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignannotationDeleteObjectV1Response**](EzsignannotationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="ezsignannotationeditobjectv1"></a>
 # **EzsignannotationEditObjectV1**
-> EzsignannotationEditObjectV1Response EzsignannotationEditObjectV1 (int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request)
+> CommonResponse EzsignannotationEditObjectV1 (int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request)
 
 Edit an existing Ezsignannotation
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignannotation
-                EzsignannotationEditObjectV1Response result = apiInstance.EzsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignannotation
-    ApiResponse<EzsignannotationEditObjectV1Response> response = apiInstance.EzsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignannotationEditObjectV1Response**](EzsignannotationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

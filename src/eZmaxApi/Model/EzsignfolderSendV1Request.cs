@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderSendV1Request" /> class.
         /// </summary>
-        /// <param name="">A custom text message that will be added to the email sent. (required).</param>
-        public EzsignfolderSendV1Request(string  = default(string))
+        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
+        public EzsignfolderSendV1Request(string tExtraMessage = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "tExtraMessage" is required (not null)
+            if (tExtraMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderSendV1Request and cannot be null");
+                throw new ArgumentNullException("tExtraMessage is a required property for EzsignfolderSendV1Request and cannot be null");
             }
-            this.TExtraMessage = ;
+            this.TExtraMessage = tExtraMessage;
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationListV1Response> RejectedoffertopurchaseGetCommunicationListV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationListV1Response> RejectedoffertopurchaseGetCommunicationListV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response>> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response>> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Rejectedoffertopurchase&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationCountV1Response> RejectedoffertopurchaseGetCommunicationCountV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response>> RejectedoffertopurchaseGetCommunicationCountV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationListV1Response> RejectedoffertopurchaseGetCommunicationListV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationListV1Response> RejectedoffertopurchaseGetCommunicationListV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response>> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response>> RejectedoffertopurchaseGetCommunicationListV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> RejectedoffertopurchaseGetCommunicationrecipientsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>> RejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RejectedoffertopurchaseGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetCommunicationsendersV1Response> RejectedoffertopurchaseGetCommunicationsendersV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> localVarResponse = await RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response>> RejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

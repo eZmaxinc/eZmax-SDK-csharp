@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetCorsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public ApikeyGetCorsV1ResponseMPayload(List<CorsResponseCompound>  = default(List<CorsResponseCompound>))
+        /// <param name="aObjCors">aObjCors (required).</param>
+        public ApikeyGetCorsV1ResponseMPayload(List<CorsResponseCompound> aObjCors = default(List<CorsResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCors" is required (not null)
+            if (aObjCors == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyGetCorsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjCors is a required property for ApikeyGetCorsV1ResponseMPayload and cannot be null");
             }
-            this.AObjCors = ;
+            this.AObjCors = aObjCors;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonetypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="">The name of the Phonetype in the language of the requester (required).</param>
-        /// <param name="">Whether the Phonetype is active or not (required).</param>
-        public PhonetypeAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="sPhonetypeNameX">The name of the Phonetype in the language of the requester (required).</param>
+        /// <param name="bPhonetypeIsactive">Whether the Phonetype is active or not (required).</param>
+        public PhonetypeAutocompleteElementResponse(int pkiPhonetypeID = default(int), string sPhonetypeNameX = default(string), bool bPhonetypeIsactive = default(bool))
         {
-            this.PkiPhonetypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiPhonetypeID = pkiPhonetypeID;
+            // to ensure "sPhonetypeNameX" is required (not null)
+            if (sPhonetypeNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for PhonetypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sPhonetypeNameX is a required property for PhonetypeAutocompleteElementResponse and cannot be null");
             }
-            this.SPhonetypeNameX = ;
-            this.BPhonetypeIsactive = ;
+            this.SPhonetypeNameX = sPhonetypeNameX;
+            this.BPhonetypeIsactive = bPhonetypeIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPhonetypeID (int) minimum
             if (this.PkiPhonetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "PkiPhonetypeID" });
+                yield return new ValidationResult("Invalid value for PkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "PkiPhonetypeID" });
             }
 
             if (this.SPhonetypeNameX != null) {

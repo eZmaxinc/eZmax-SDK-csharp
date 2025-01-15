@@ -52,43 +52,43 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
-        /// <param name="">The unique ID of the Module (required).</param>
-        /// <param name="">The Name of the Module in the language of the requester.</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The Name of the Language in the language of the requester (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Code of the Ezsigntemplateglobal (required).</param>
-        /// <param name="">The description of the Ezsigntemplate (required).</param>
-        public EzsigntemplateglobalResponse(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), string  = default(string), FieldEEzsigntemplateglobalModule  = default(FieldEEzsigntemplateglobalModule), FieldEEzsigntemplateglobalSupplier  = default(FieldEEzsigntemplateglobalSupplier), string  = default(string), string  = default(string))
+        /// <param name="pkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="fkiEzsigntemplateglobaldocumentID">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
+        /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
+        /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
+        /// <param name="eEzsigntemplateglobalModule">eEzsigntemplateglobalModule (required).</param>
+        /// <param name="eEzsigntemplateglobalSupplier">eEzsigntemplateglobalSupplier (required).</param>
+        /// <param name="sEzsigntemplateglobalCode">The Code of the Ezsigntemplateglobal (required).</param>
+        /// <param name="sEzsigntemplateglobalDescription">The description of the Ezsigntemplate (required).</param>
+        public EzsigntemplateglobalResponse(int pkiEzsigntemplateglobalID = default(int), int fkiEzsigntemplateglobaldocumentID = default(int), int fkiModuleID = default(int), string sModuleNameX = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule = default(FieldEEzsigntemplateglobalModule), FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier = default(FieldEEzsigntemplateglobalSupplier), string sEzsigntemplateglobalCode = default(string), string sEzsigntemplateglobalDescription = default(string))
         {
-            this.PkiEzsigntemplateglobalID = ;
-            this.FkiEzsigntemplateglobaldocumentID = ;
-            this.FkiModuleID = ;
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
+            this.FkiEzsigntemplateglobaldocumentID = fkiEzsigntemplateglobaldocumentID;
+            this.FkiModuleID = fkiModuleID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sLanguageNameX" is required (not null)
+            if (sLanguageNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException("sLanguageNameX is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SLanguageNameX = ;
-            this.EEzsigntemplateglobalModule = ;
-            this.EEzsigntemplateglobalSupplier = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SLanguageNameX = sLanguageNameX;
+            this.EEzsigntemplateglobalModule = eEzsigntemplateglobalModule;
+            this.EEzsigntemplateglobalSupplier = eEzsigntemplateglobalSupplier;
+            // to ensure "sEzsigntemplateglobalCode" is required (not null)
+            if (sEzsigntemplateglobalCode == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateglobalCode is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigntemplateglobalCode = sEzsigntemplateglobalCode;
+            // to ensure "sEzsigntemplateglobalDescription" is required (not null)
+            if (sEzsigntemplateglobalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateglobalDescription is a required property for EzsigntemplateglobalResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalDescription = ;
-            this.SModuleNameX = ;
+            this.SEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
+            this.SModuleNameX = sModuleNameX;
         }
 
         /// <summary>
@@ -191,36 +191,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateglobalID (int) minimum
             if (this.PkiEzsigntemplateglobalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
             }
 
             // FkiEzsigntemplateglobaldocumentID (int) minimum
             if (this.FkiEzsigntemplateglobaldocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobaldocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobaldocumentID" });
             }
 
             // FkiModuleID (int) minimum
             if (this.FkiModuleID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+                yield return new ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             if (this.SEzsigntemplateglobalCode != null) {

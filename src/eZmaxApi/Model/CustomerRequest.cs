@@ -52,155 +52,155 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Customer..</param>
-        /// <param name="">The unique ID of the Company (required).</param>
-        /// <param name="">The unique ID of the Customergroup (required).</param>
-        /// <param name="">The name of the Customer (required).</param>
-        /// <param name="">The unique ID of the Contactinformations (required).</param>
-        /// <param name="">The unique ID of the Contactcontainer (required).</param>
-        /// <param name="">The unique ID of the Image (required).</param>
-        /// <param name="">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The unique ID of the Department (required).</param>
-        /// <param name="">The unique ID of the Paymentmethod (required).</param>
-        /// <param name="">The unique ID of the Electronicfundstransferbankaccount (required).</param>
-        /// <param name="">The unique ID of the Electronicfundstransferbankaccount (required).</param>
-        /// <param name="">The unique ID of the Sendingmethod (required).</param>
-        /// <param name="">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
-        /// <param name="">The unique ID of the Attendancestatus (required).</param>
-        /// <param name="">The unique ID of the Agent. (required).</param>
-        /// <param name="">The unique ID of the Broker. (required).</param>
-        /// <param name="">The unique ID of the Customer. (required).</param>
-        /// <param name="">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="">The unique ID of the Agent. (required).</param>
-        /// <param name="">The unique ID of the Broker. (required).</param>
-        /// <param name="">The unique ID of the Customer. (required).</param>
-        /// <param name="">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="">The unique ID of the Invoicealternatelogo (required).</param>
-        /// <param name="">The unique ID of the Synchronizationlinkserver (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The code of the Customer.</param>
-        /// <param name="">The code of the Customer (required).</param>
-        /// <param name="">The fulltimeequivalent of the Customer (required).</param>
-        /// <param name="">The photocopiercode of the Customer (required).</param>
-        /// <param name="">The longdistancecode of the Customer (required).</param>
-        /// <param name="">The timewindowstart of the Customer (required).</param>
-        /// <param name="">The timewindowend of the Customer (required).</param>
-        /// <param name="">The minimumchargeableinterests of the Customer (required).</param>
-        /// <param name="">The birthdate of the Customer (required).</param>
-        /// <param name="">The transfer of the Customer (required).</param>
-        /// <param name="">The transferappointment of the Customer (required).</param>
-        /// <param name="">The transfersurvey of the Customer (required).</param>
-        /// <param name="">Whether the customer is active or not (required).</param>
-        /// <param name="">Whether if it&#39;s an variableexpensefinanced (required).</param>
-        /// <param name="">Whether if it&#39;s an variableexpensefinancedtaxes (required).</param>
-        /// <param name="">Whether if it&#39;s an supplychargefinanced (required).</param>
-        /// <param name="">Whether if it&#39;s an supplychargefinancedtaxes (required).</param>
-        /// <param name="">Whether if it&#39;s an attendance (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether if it&#39;s an blackcopycarbon (required).</param>
-        /// <param name="">Whether if it&#39;s an unsubscribeinfo (required).</param>
-        /// <param name="">The comment of the Customer (required).</param>
-        /// <param name="">.</param>
-        public CustomerRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), FieldECustomerType  = default(FieldECustomerType), FieldECustomerMarketingcorrespondence  = default(FieldECustomerMarketingcorrespondence), bool  = default(bool), bool  = default(bool), string  = default(string), string  = default(string))
+        /// <param name="pkiCustomerID">The unique ID of the Customer..</param>
+        /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
+        /// <param name="fkiCustomergroupID">The unique ID of the Customergroup (required).</param>
+        /// <param name="sCustomerName">The name of the Customer (required).</param>
+        /// <param name="fkiContactinformationsID">The unique ID of the Contactinformations (required).</param>
+        /// <param name="fkiContactcontainerID">The unique ID of the Contactcontainer (required).</param>
+        /// <param name="fkiImageID">The unique ID of the Image (required).</param>
+        /// <param name="fkiGlaccountcontainerID">The unique ID of the Glaccountcontainer (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
+        /// <param name="fkiPaymentmethodID">The unique ID of the Paymentmethod (required).</param>
+        /// <param name="fkiElectronicfundstransferbankaccountID">The unique ID of the Electronicfundstransferbankaccount (required).</param>
+        /// <param name="fkiElectronicfundstransferbankaccountIDDirectdebit">The unique ID of the Electronicfundstransferbankaccount (required).</param>
+        /// <param name="fkiSendingmethodID">The unique ID of the Sendingmethod (required).</param>
+        /// <param name="fkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
+        /// <param name="fkiAttendancestatusID">The unique ID of the Attendancestatus (required).</param>
+        /// <param name="fkiAgentIDVariableexpensechargeto">The unique ID of the Agent. (required).</param>
+        /// <param name="fkiBrokerIDVariableexpensechargeto">The unique ID of the Broker. (required).</param>
+        /// <param name="fkiCustomerIDVariableexpensechargeto">The unique ID of the Customer. (required).</param>
+        /// <param name="fkiGlaccountcontainerIDVariableexpensechargeto">The unique ID of the Glaccountcontainer (required).</param>
+        /// <param name="fkiAgentIDSupplychargechargeto">The unique ID of the Agent. (required).</param>
+        /// <param name="fkiBrokerIDSupplychargechargeto">The unique ID of the Broker. (required).</param>
+        /// <param name="fkiCustomerIDSupplychargechargeto">The unique ID of the Customer. (required).</param>
+        /// <param name="fkiGlaccountcontainerIDSupplychargechargeto">The unique ID of the Glaccountcontainer (required).</param>
+        /// <param name="fkiInvoicealternatelogoID">The unique ID of the Invoicealternatelogo (required).</param>
+        /// <param name="fkiSynchronizationlinkserverID">The unique ID of the Synchronizationlinkserver (required).</param>
+        /// <param name="efkiUserID">The unique ID of the User.</param>
+        /// <param name="efksCustomerCode">The code of the Customer.</param>
+        /// <param name="sCustomerCode">The code of the Customer (required).</param>
+        /// <param name="dCustomerFulltimeequivalent">The fulltimeequivalent of the Customer (required).</param>
+        /// <param name="iCustomerPhotocopiercode">The photocopiercode of the Customer (required).</param>
+        /// <param name="iCustomerLongdistancecode">The longdistancecode of the Customer (required).</param>
+        /// <param name="iCustomerTimewindowstart">The timewindowstart of the Customer (required).</param>
+        /// <param name="iCustomerTimewindowend">The timewindowend of the Customer (required).</param>
+        /// <param name="dCustomerMinimumchargeableinterests">The minimumchargeableinterests of the Customer (required).</param>
+        /// <param name="dtCustomerBirthdate">The birthdate of the Customer (required).</param>
+        /// <param name="dtCustomerTransfer">The transfer of the Customer (required).</param>
+        /// <param name="dtCustomerTransferappointment">The transferappointment of the Customer (required).</param>
+        /// <param name="dtCustomerTransfersurvey">The transfersurvey of the Customer (required).</param>
+        /// <param name="bCustomerIsactive">Whether the customer is active or not (required).</param>
+        /// <param name="bCustomerVariableexpensefinanced">Whether if it&#39;s an variableexpensefinanced (required).</param>
+        /// <param name="bCustomerVariableexpensefinancedtaxes">Whether if it&#39;s an variableexpensefinancedtaxes (required).</param>
+        /// <param name="bCustomerSupplychargefinanced">Whether if it&#39;s an supplychargefinanced (required).</param>
+        /// <param name="bCustomerSupplychargefinancedtaxes">Whether if it&#39;s an supplychargefinancedtaxes (required).</param>
+        /// <param name="bCustomerAttendance">Whether if it&#39;s an attendance (required).</param>
+        /// <param name="eCustomerType">eCustomerType (required).</param>
+        /// <param name="eCustomerMarketingcorrespondence">eCustomerMarketingcorrespondence (required).</param>
+        /// <param name="bCustomerBlackcopycarbon">Whether if it&#39;s an blackcopycarbon (required).</param>
+        /// <param name="bCustomerUnsubscribeinfo">Whether if it&#39;s an unsubscribeinfo (required).</param>
+        /// <param name="tCustomerComment">The comment of the Customer (required).</param>
+        /// <param name="iMPORTID">iMPORTID.</param>
+        public CustomerRequest(int pkiCustomerID = default(int), int fkiCompanyID = default(int), int fkiCustomergroupID = default(int), string sCustomerName = default(string), int fkiContactinformationsID = default(int), int fkiContactcontainerID = default(int), int fkiImageID = default(int), int fkiGlaccountcontainerID = default(int), int fkiLanguageID = default(int), int fkiDepartmentID = default(int), int fkiPaymentmethodID = default(int), int fkiElectronicfundstransferbankaccountID = default(int), int fkiElectronicfundstransferbankaccountIDDirectdebit = default(int), int fkiSendingmethodID = default(int), int fkiTaxassignmentID = default(int), int fkiAttendancestatusID = default(int), int fkiAgentIDVariableexpensechargeto = default(int), int fkiBrokerIDVariableexpensechargeto = default(int), int fkiCustomerIDVariableexpensechargeto = default(int), int fkiGlaccountcontainerIDVariableexpensechargeto = default(int), int fkiAgentIDSupplychargechargeto = default(int), int fkiBrokerIDSupplychargechargeto = default(int), int fkiCustomerIDSupplychargechargeto = default(int), int fkiGlaccountcontainerIDSupplychargechargeto = default(int), int fkiInvoicealternatelogoID = default(int), int fkiSynchronizationlinkserverID = default(int), int efkiUserID = default(int), string efksCustomerCode = default(string), string sCustomerCode = default(string), string dCustomerFulltimeequivalent = default(string), int iCustomerPhotocopiercode = default(int), int iCustomerLongdistancecode = default(int), int iCustomerTimewindowstart = default(int), int iCustomerTimewindowend = default(int), string dCustomerMinimumchargeableinterests = default(string), string dtCustomerBirthdate = default(string), string dtCustomerTransfer = default(string), string dtCustomerTransferappointment = default(string), string dtCustomerTransfersurvey = default(string), bool bCustomerIsactive = default(bool), bool bCustomerVariableexpensefinanced = default(bool), bool bCustomerVariableexpensefinancedtaxes = default(bool), bool bCustomerSupplychargefinanced = default(bool), bool bCustomerSupplychargefinancedtaxes = default(bool), bool bCustomerAttendance = default(bool), FieldECustomerType eCustomerType = default(FieldECustomerType), FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence = default(FieldECustomerMarketingcorrespondence), bool bCustomerBlackcopycarbon = default(bool), bool bCustomerUnsubscribeinfo = default(bool), string tCustomerComment = default(string), string iMPORTID = default(string))
         {
-            this.FkiCompanyID = ;
-            this.FkiCustomergroupID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiCompanyID = fkiCompanyID;
+            this.FkiCustomergroupID = fkiCustomergroupID;
+            // to ensure "sCustomerName" is required (not null)
+            if (sCustomerName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("sCustomerName is a required property for CustomerRequest and cannot be null");
             }
-            this.SCustomerName = ;
-            this.FkiContactinformationsID = ;
-            this.FkiContactcontainerID = ;
-            this.FkiImageID = ;
-            this.FkiGlaccountcontainerID = ;
-            this.FkiLanguageID = ;
-            this.FkiDepartmentID = ;
-            this.FkiPaymentmethodID = ;
-            this.FkiElectronicfundstransferbankaccountID = ;
-            this.FkiElectronicfundstransferbankaccountIDDirectdebit = ;
-            this.FkiSendingmethodID = ;
-            this.FkiTaxassignmentID = ;
-            this.FkiAttendancestatusID = ;
-            this.FkiAgentIDVariableexpensechargeto = ;
-            this.FkiBrokerIDVariableexpensechargeto = ;
-            this.FkiCustomerIDVariableexpensechargeto = ;
-            this.FkiGlaccountcontainerIDVariableexpensechargeto = ;
-            this.FkiAgentIDSupplychargechargeto = ;
-            this.FkiBrokerIDSupplychargechargeto = ;
-            this.FkiCustomerIDSupplychargechargeto = ;
-            this.FkiGlaccountcontainerIDSupplychargechargeto = ;
-            this.FkiInvoicealternatelogoID = ;
-            this.FkiSynchronizationlinkserverID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCustomerName = sCustomerName;
+            this.FkiContactinformationsID = fkiContactinformationsID;
+            this.FkiContactcontainerID = fkiContactcontainerID;
+            this.FkiImageID = fkiImageID;
+            this.FkiGlaccountcontainerID = fkiGlaccountcontainerID;
+            this.FkiLanguageID = fkiLanguageID;
+            this.FkiDepartmentID = fkiDepartmentID;
+            this.FkiPaymentmethodID = fkiPaymentmethodID;
+            this.FkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
+            this.FkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
+            this.FkiSendingmethodID = fkiSendingmethodID;
+            this.FkiTaxassignmentID = fkiTaxassignmentID;
+            this.FkiAttendancestatusID = fkiAttendancestatusID;
+            this.FkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
+            this.FkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
+            this.FkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
+            this.FkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
+            this.FkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
+            this.FkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
+            this.FkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
+            this.FkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
+            this.FkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
+            this.FkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
+            // to ensure "sCustomerCode" is required (not null)
+            if (sCustomerCode == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("sCustomerCode is a required property for CustomerRequest and cannot be null");
             }
-            this.SCustomerCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCustomerCode = sCustomerCode;
+            // to ensure "dCustomerFulltimeequivalent" is required (not null)
+            if (dCustomerFulltimeequivalent == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dCustomerFulltimeequivalent is a required property for CustomerRequest and cannot be null");
             }
-            this.DCustomerFulltimeequivalent = ;
-            this.ICustomerPhotocopiercode = ;
-            this.ICustomerLongdistancecode = ;
-            this.ICustomerTimewindowstart = ;
-            this.ICustomerTimewindowend = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
+            this.ICustomerPhotocopiercode = iCustomerPhotocopiercode;
+            this.ICustomerLongdistancecode = iCustomerLongdistancecode;
+            this.ICustomerTimewindowstart = iCustomerTimewindowstart;
+            this.ICustomerTimewindowend = iCustomerTimewindowend;
+            // to ensure "dCustomerMinimumchargeableinterests" is required (not null)
+            if (dCustomerMinimumchargeableinterests == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dCustomerMinimumchargeableinterests is a required property for CustomerRequest and cannot be null");
             }
-            this.DCustomerMinimumchargeableinterests = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
+            // to ensure "dtCustomerBirthdate" is required (not null)
+            if (dtCustomerBirthdate == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dtCustomerBirthdate is a required property for CustomerRequest and cannot be null");
             }
-            this.DtCustomerBirthdate = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtCustomerBirthdate = dtCustomerBirthdate;
+            // to ensure "dtCustomerTransfer" is required (not null)
+            if (dtCustomerTransfer == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dtCustomerTransfer is a required property for CustomerRequest and cannot be null");
             }
-            this.DtCustomerTransfer = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtCustomerTransfer = dtCustomerTransfer;
+            // to ensure "dtCustomerTransferappointment" is required (not null)
+            if (dtCustomerTransferappointment == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dtCustomerTransferappointment is a required property for CustomerRequest and cannot be null");
             }
-            this.DtCustomerTransferappointment = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtCustomerTransferappointment = dtCustomerTransferappointment;
+            // to ensure "dtCustomerTransfersurvey" is required (not null)
+            if (dtCustomerTransfersurvey == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("dtCustomerTransfersurvey is a required property for CustomerRequest and cannot be null");
             }
-            this.DtCustomerTransfersurvey = ;
-            this.BCustomerIsactive = ;
-            this.BCustomerVariableexpensefinanced = ;
-            this.BCustomerVariableexpensefinancedtaxes = ;
-            this.BCustomerSupplychargefinanced = ;
-            this.BCustomerSupplychargefinancedtaxes = ;
-            this.BCustomerAttendance = ;
-            this.ECustomerType = ;
-            this.ECustomerMarketingcorrespondence = ;
-            this.BCustomerBlackcopycarbon = ;
-            this.BCustomerUnsubscribeinfo = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtCustomerTransfersurvey = dtCustomerTransfersurvey;
+            this.BCustomerIsactive = bCustomerIsactive;
+            this.BCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
+            this.BCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
+            this.BCustomerSupplychargefinanced = bCustomerSupplychargefinanced;
+            this.BCustomerSupplychargefinancedtaxes = bCustomerSupplychargefinancedtaxes;
+            this.BCustomerAttendance = bCustomerAttendance;
+            this.ECustomerType = eCustomerType;
+            this.ECustomerMarketingcorrespondence = eCustomerMarketingcorrespondence;
+            this.BCustomerBlackcopycarbon = bCustomerBlackcopycarbon;
+            this.BCustomerUnsubscribeinfo = bCustomerUnsubscribeinfo;
+            // to ensure "tCustomerComment" is required (not null)
+            if (tCustomerComment == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerRequest and cannot be null");
+                throw new ArgumentNullException("tCustomerComment is a required property for CustomerRequest and cannot be null");
             }
-            this.TCustomerComment = ;
-            this.PkiCustomerID = ;
-            this.EfkiUserID = ;
-            this.EfksCustomerCode = ;
-            this.IMPORTID = ;
+            this.TCustomerComment = tCustomerComment;
+            this.PkiCustomerID = pkiCustomerID;
+            this.EfkiUserID = efkiUserID;
+            this.EfksCustomerCode = efksCustomerCode;
+            this.IMPORTID = iMPORTID;
         }
 
         /// <summary>
@@ -670,36 +670,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCustomerID (int) minimum
             if (this.PkiCustomerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCustomerID, must be a value greater than or equal to 0.", new [] { "PkiCustomerID" });
+                yield return new ValidationResult("Invalid value for PkiCustomerID, must be a value greater than or equal to 0.", new [] { "PkiCustomerID" });
             }
 
             // FkiCompanyID (int) maximum
             if (this.FkiCompanyID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
+                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
             }
 
             // FkiCompanyID (int) minimum
             if (this.FkiCompanyID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
+                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
             }
 
             // FkiCustomergroupID (int) maximum
             if (this.FkiCustomergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomergroupID, must be a value less than or equal to 255.", new [] { "FkiCustomergroupID" });
+                yield return new ValidationResult("Invalid value for FkiCustomergroupID, must be a value less than or equal to 255.", new [] { "FkiCustomergroupID" });
             }
 
             // FkiCustomergroupID (int) minimum
             if (this.FkiCustomergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomergroupID, must be a value greater than or equal to 0.", new [] { "FkiCustomergroupID" });
+                yield return new ValidationResult("Invalid value for FkiCustomergroupID, must be a value greater than or equal to 0.", new [] { "FkiCustomergroupID" });
             }
 
             if (this.SCustomerName != null) {
@@ -714,199 +714,199 @@ namespace eZmaxApi.Model
             // FkiContactinformationsID (int) maximum
             if (this.FkiContactinformationsID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "FkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for FkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "FkiContactinformationsID" });
             }
 
             // FkiContactinformationsID (int) minimum
             if (this.FkiContactinformationsID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "FkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for FkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "FkiContactinformationsID" });
             }
 
             // FkiContactcontainerID (int) maximum
             if (this.FkiContactcontainerID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactcontainerID, must be a value less than or equal to 16777215.", new [] { "FkiContactcontainerID" });
+                yield return new ValidationResult("Invalid value for FkiContactcontainerID, must be a value less than or equal to 16777215.", new [] { "FkiContactcontainerID" });
             }
 
             // FkiContactcontainerID (int) minimum
             if (this.FkiContactcontainerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactcontainerID, must be a value greater than or equal to 0.", new [] { "FkiContactcontainerID" });
+                yield return new ValidationResult("Invalid value for FkiContactcontainerID, must be a value greater than or equal to 0.", new [] { "FkiContactcontainerID" });
             }
 
             // FkiGlaccountcontainerID (int) minimum
             if (this.FkiGlaccountcontainerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
+                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiDepartmentID (int) minimum
             if (this.FkiDepartmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             // FkiPaymentmethodID (int) maximum
             if (this.FkiPaymentmethodID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentmethodID, must be a value less than or equal to 255.", new [] { "FkiPaymentmethodID" });
+                yield return new ValidationResult("Invalid value for FkiPaymentmethodID, must be a value less than or equal to 255.", new [] { "FkiPaymentmethodID" });
             }
 
             // FkiPaymentmethodID (int) minimum
             if (this.FkiPaymentmethodID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentmethodID, must be a value greater than or equal to 0.", new [] { "FkiPaymentmethodID" });
+                yield return new ValidationResult("Invalid value for FkiPaymentmethodID, must be a value greater than or equal to 0.", new [] { "FkiPaymentmethodID" });
             }
 
             // FkiElectronicfundstransferbankaccountID (int) maximum
             if (this.FkiElectronicfundstransferbankaccountID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountID, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferbankaccountID" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountID, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferbankaccountID" });
             }
 
             // FkiElectronicfundstransferbankaccountID (int) minimum
             if (this.FkiElectronicfundstransferbankaccountID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountID, must be a value greater than or equal to 0.", new [] { "FkiElectronicfundstransferbankaccountID" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountID, must be a value greater than or equal to 0.", new [] { "FkiElectronicfundstransferbankaccountID" });
             }
 
             // FkiElectronicfundstransferbankaccountIDDirectdebit (int) maximum
             if (this.FkiElectronicfundstransferbankaccountIDDirectdebit > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountIDDirectdebit, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferbankaccountIDDirectdebit" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountIDDirectdebit, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferbankaccountIDDirectdebit" });
             }
 
             // FkiElectronicfundstransferbankaccountIDDirectdebit (int) minimum
             if (this.FkiElectronicfundstransferbankaccountIDDirectdebit < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountIDDirectdebit, must be a value greater than or equal to 0.", new [] { "FkiElectronicfundstransferbankaccountIDDirectdebit" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferbankaccountIDDirectdebit, must be a value greater than or equal to 0.", new [] { "FkiElectronicfundstransferbankaccountIDDirectdebit" });
             }
 
             // FkiSendingmethodID (int) maximum
             if (this.FkiSendingmethodID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSendingmethodID, must be a value less than or equal to 255.", new [] { "FkiSendingmethodID" });
+                yield return new ValidationResult("Invalid value for FkiSendingmethodID, must be a value less than or equal to 255.", new [] { "FkiSendingmethodID" });
             }
 
             // FkiSendingmethodID (int) minimum
             if (this.FkiSendingmethodID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSendingmethodID, must be a value greater than or equal to 0.", new [] { "FkiSendingmethodID" });
+                yield return new ValidationResult("Invalid value for FkiSendingmethodID, must be a value greater than or equal to 0.", new [] { "FkiSendingmethodID" });
             }
 
             // FkiTaxassignmentID (int) maximum
             if (this.FkiTaxassignmentID > (int)15)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
+                yield return new ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
             }
 
             // FkiTaxassignmentID (int) minimum
             if (this.FkiTaxassignmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
+                yield return new ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
             }
 
             // FkiAttendancestatusID (int) maximum
             if (this.FkiAttendancestatusID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAttendancestatusID, must be a value less than or equal to 65535.", new [] { "FkiAttendancestatusID" });
+                yield return new ValidationResult("Invalid value for FkiAttendancestatusID, must be a value less than or equal to 65535.", new [] { "FkiAttendancestatusID" });
             }
 
             // FkiAttendancestatusID (int) minimum
             if (this.FkiAttendancestatusID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAttendancestatusID, must be a value greater than or equal to 0.", new [] { "FkiAttendancestatusID" });
+                yield return new ValidationResult("Invalid value for FkiAttendancestatusID, must be a value greater than or equal to 0.", new [] { "FkiAttendancestatusID" });
             }
 
             // FkiAgentIDVariableexpensechargeto (int) minimum
             if (this.FkiAgentIDVariableexpensechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiAgentIDVariableexpensechargeto" });
+                yield return new ValidationResult("Invalid value for FkiAgentIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiAgentIDVariableexpensechargeto" });
             }
 
             // FkiBrokerIDVariableexpensechargeto (int) minimum
             if (this.FkiBrokerIDVariableexpensechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiBrokerIDVariableexpensechargeto" });
+                yield return new ValidationResult("Invalid value for FkiBrokerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiBrokerIDVariableexpensechargeto" });
             }
 
             // FkiCustomerIDVariableexpensechargeto (int) minimum
             if (this.FkiCustomerIDVariableexpensechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiCustomerIDVariableexpensechargeto" });
+                yield return new ValidationResult("Invalid value for FkiCustomerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiCustomerIDVariableexpensechargeto" });
             }
 
             // FkiGlaccountcontainerIDVariableexpensechargeto (int) minimum
             if (this.FkiGlaccountcontainerIDVariableexpensechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerIDVariableexpensechargeto" });
+                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerIDVariableexpensechargeto, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerIDVariableexpensechargeto" });
             }
 
             // FkiAgentIDSupplychargechargeto (int) minimum
             if (this.FkiAgentIDSupplychargechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiAgentIDSupplychargechargeto" });
+                yield return new ValidationResult("Invalid value for FkiAgentIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiAgentIDSupplychargechargeto" });
             }
 
             // FkiBrokerIDSupplychargechargeto (int) minimum
             if (this.FkiBrokerIDSupplychargechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiBrokerIDSupplychargechargeto" });
+                yield return new ValidationResult("Invalid value for FkiBrokerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiBrokerIDSupplychargechargeto" });
             }
 
             // FkiCustomerIDSupplychargechargeto (int) minimum
             if (this.FkiCustomerIDSupplychargechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiCustomerIDSupplychargechargeto" });
+                yield return new ValidationResult("Invalid value for FkiCustomerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiCustomerIDSupplychargechargeto" });
             }
 
             // FkiGlaccountcontainerIDSupplychargechargeto (int) minimum
             if (this.FkiGlaccountcontainerIDSupplychargechargeto < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerIDSupplychargechargeto" });
+                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerIDSupplychargechargeto, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerIDSupplychargechargeto" });
             }
 
             // FkiInvoicealternatelogoID (int) maximum
             if (this.FkiInvoicealternatelogoID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInvoicealternatelogoID, must be a value less than or equal to 255.", new [] { "FkiInvoicealternatelogoID" });
+                yield return new ValidationResult("Invalid value for FkiInvoicealternatelogoID, must be a value less than or equal to 255.", new [] { "FkiInvoicealternatelogoID" });
             }
 
             // FkiInvoicealternatelogoID (int) minimum
             if (this.FkiInvoicealternatelogoID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInvoicealternatelogoID, must be a value greater than or equal to 0.", new [] { "FkiInvoicealternatelogoID" });
+                yield return new ValidationResult("Invalid value for FkiInvoicealternatelogoID, must be a value greater than or equal to 0.", new [] { "FkiInvoicealternatelogoID" });
             }
 
             // FkiSynchronizationlinkserverID (int) maximum
             if (this.FkiSynchronizationlinkserverID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSynchronizationlinkserverID, must be a value less than or equal to 255.", new [] { "FkiSynchronizationlinkserverID" });
+                yield return new ValidationResult("Invalid value for FkiSynchronizationlinkserverID, must be a value less than or equal to 255.", new [] { "FkiSynchronizationlinkserverID" });
             }
 
             // FkiSynchronizationlinkserverID (int) minimum
             if (this.FkiSynchronizationlinkserverID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSynchronizationlinkserverID, must be a value greater than or equal to 0.", new [] { "FkiSynchronizationlinkserverID" });
+                yield return new ValidationResult("Invalid value for FkiSynchronizationlinkserverID, must be a value greater than or equal to 0.", new [] { "FkiSynchronizationlinkserverID" });
             }
 
             // EfkiUserID (int) minimum
             if (this.EfkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for EfkiUserID, must be a value greater than or equal to 0.", new [] { "EfkiUserID" });
+                yield return new ValidationResult("Invalid value for EfkiUserID, must be a value greater than or equal to 0.", new [] { "EfkiUserID" });
             }
 
             if (this.EfksCustomerCode != null) {
@@ -939,49 +939,49 @@ namespace eZmaxApi.Model
             // ICustomerPhotocopiercode (int) maximum
             if (this.ICustomerPhotocopiercode > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "ICustomerPhotocopiercode" });
+                yield return new ValidationResult("Invalid value for ICustomerPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "ICustomerPhotocopiercode" });
             }
 
             // ICustomerPhotocopiercode (int) minimum
             if (this.ICustomerPhotocopiercode < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerPhotocopiercode, must be a value greater than or equal to 0.", new [] { "ICustomerPhotocopiercode" });
+                yield return new ValidationResult("Invalid value for ICustomerPhotocopiercode, must be a value greater than or equal to 0.", new [] { "ICustomerPhotocopiercode" });
             }
 
             // ICustomerLongdistancecode (int) maximum
             if (this.ICustomerLongdistancecode > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerLongdistancecode, must be a value less than or equal to 16777215.", new [] { "ICustomerLongdistancecode" });
+                yield return new ValidationResult("Invalid value for ICustomerLongdistancecode, must be a value less than or equal to 16777215.", new [] { "ICustomerLongdistancecode" });
             }
 
             // ICustomerLongdistancecode (int) minimum
             if (this.ICustomerLongdistancecode < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerLongdistancecode, must be a value greater than or equal to 0.", new [] { "ICustomerLongdistancecode" });
+                yield return new ValidationResult("Invalid value for ICustomerLongdistancecode, must be a value greater than or equal to 0.", new [] { "ICustomerLongdistancecode" });
             }
 
             // ICustomerTimewindowstart (int) maximum
             if (this.ICustomerTimewindowstart > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerTimewindowstart, must be a value less than or equal to 255.", new [] { "ICustomerTimewindowstart" });
+                yield return new ValidationResult("Invalid value for ICustomerTimewindowstart, must be a value less than or equal to 255.", new [] { "ICustomerTimewindowstart" });
             }
 
             // ICustomerTimewindowstart (int) minimum
             if (this.ICustomerTimewindowstart < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerTimewindowstart, must be a value greater than or equal to 0.", new [] { "ICustomerTimewindowstart" });
+                yield return new ValidationResult("Invalid value for ICustomerTimewindowstart, must be a value greater than or equal to 0.", new [] { "ICustomerTimewindowstart" });
             }
 
             // ICustomerTimewindowend (int) maximum
             if (this.ICustomerTimewindowend > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerTimewindowend, must be a value less than or equal to 255.", new [] { "ICustomerTimewindowend" });
+                yield return new ValidationResult("Invalid value for ICustomerTimewindowend, must be a value less than or equal to 255.", new [] { "ICustomerTimewindowend" });
             }
 
             // ICustomerTimewindowend (int) minimum
             if (this.ICustomerTimewindowend < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICustomerTimewindowend, must be a value greater than or equal to 0.", new [] { "ICustomerTimewindowend" });
+                yield return new ValidationResult("Invalid value for ICustomerTimewindowend, must be a value greater than or equal to 0.", new [] { "ICustomerTimewindowend" });
             }
 
             if (this.DCustomerMinimumchargeableinterests != null) {

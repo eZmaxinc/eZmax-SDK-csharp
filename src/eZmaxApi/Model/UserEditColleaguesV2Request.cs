@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserEditColleaguesV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserEditColleaguesV2Request(List<ColleagueRequestCompoundV2>  = default(List<ColleagueRequestCompoundV2>))
+        /// <param name="aObjColleague">aObjColleague (required).</param>
+        public UserEditColleaguesV2Request(List<ColleagueRequestCompoundV2> aObjColleague = default(List<ColleagueRequestCompoundV2>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjColleague" is required (not null)
+            if (aObjColleague == null)
             {
-                throw new ArgumentNullException(" is a required property for UserEditColleaguesV2Request and cannot be null");
+                throw new ArgumentNullException("aObjColleague is a required property for UserEditColleaguesV2Request and cannot be null");
             }
-            this.AObjColleague = ;
+            this.AObjColleague = aObjColleague;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

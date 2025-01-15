@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SignatureGetObjectV2ResponseMPayload(SignatureResponseCompound  = default(SignatureResponseCompound))
+        /// <param name="objSignature">objSignature (required).</param>
+        public SignatureGetObjectV2ResponseMPayload(SignatureResponseCompound objSignature = default(SignatureResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objSignature" is required (not null)
+            if (objSignature == null)
             {
-                throw new ArgumentNullException(" is a required property for SignatureGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objSignature is a required property for SignatureGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSignature = ;
+            this.ObjSignature = objSignature;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

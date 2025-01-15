@@ -93,7 +93,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the content
@@ -106,7 +106,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve the Attachmentlogs
         /// </summary>
@@ -118,7 +118,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttachmentGetAttachmentlogsV1Response</returns>
-        System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the Attachmentlogs
@@ -131,7 +131,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -333,7 +333,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task AttachmentDownloadV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await AttachmentDownloadV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -346,7 +346,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> AttachmentDownloadV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -479,7 +479,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AttachmentGetAttachmentlogsV1Response</returns>
-        public async System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1Async(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response> localVarResponse = await AttachmentGetAttachmentlogsV1WithHttpInfoAsync(pkiAttachmentID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -493,7 +493,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

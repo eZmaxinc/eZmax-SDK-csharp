@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UsergroupdelegationGetObjectV2ResponseMPayload(UsergroupdelegationResponseCompound  = default(UsergroupdelegationResponseCompound))
+        /// <param name="objUsergroupdelegation">objUsergroupdelegation (required).</param>
+        public UsergroupdelegationGetObjectV2ResponseMPayload(UsergroupdelegationResponseCompound objUsergroupdelegation = default(UsergroupdelegationResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUsergroupdelegation" is required (not null)
+            if (objUsergroupdelegation == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupdelegationGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objUsergroupdelegation is a required property for UsergroupdelegationGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjUsergroupdelegation = ;
+            this.ObjUsergroupdelegation = objUsergroupdelegation;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

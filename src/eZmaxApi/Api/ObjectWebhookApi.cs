@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookDeleteObjectV1Response</returns>
-        WebhookDeleteObjectV1Response WebhookDeleteObjectV1(int pkiWebhookID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse WebhookDeleteObjectV1(int pkiWebhookID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Webhook
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookDeleteObjectV1Response</returns>
-        ApiResponse<WebhookDeleteObjectV1Response> WebhookDeleteObjectV1WithHttpInfo(int pkiWebhookID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> WebhookDeleteObjectV1WithHttpInfo(int pkiWebhookID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Webhook
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEditObjectV1Response</returns>
-        WebhookEditObjectV1Response WebhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse WebhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Webhook
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEditObjectV1Response</returns>
-        ApiResponse<WebhookEditObjectV1Response> WebhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> WebhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve the logs for recent Webhook calls
         /// </summary>
@@ -193,8 +193,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookSendWebhookV1Response</returns>
-        WebhookSendWebhookV1Response WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Emit a Webhook event
@@ -205,8 +205,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookSendWebhookV1Response</returns>
-        ApiResponse<WebhookSendWebhookV1Response> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0);
         /// <summary>
         /// Test the Webhook by calling the Url
         /// </summary>
@@ -214,8 +214,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookTestV1Response</returns>
-        WebhookTestV1Response WebhookTestV1(int pkiWebhookID, Object body, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse WebhookTestV1(int pkiWebhookID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Test the Webhook by calling the Url
@@ -227,8 +227,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookTestV1Response</returns>
-        ApiResponse<WebhookTestV1Response> WebhookTestV1WithHttpInfo(int pkiWebhookID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> WebhookTestV1WithHttpInfo(int pkiWebhookID, Object body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -249,7 +249,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<WebhookCreateObjectV2Response> WebhookCreateObjectV2Async(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookCreateObjectV2Response> WebhookCreateObjectV2Async(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Webhook
@@ -262,7 +262,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookCreateObjectV2Response>> WebhookCreateObjectV2WithHttpInfoAsync(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookCreateObjectV2Response>> WebhookCreateObjectV2WithHttpInfoAsync(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Webhook
         /// </summary>
@@ -273,8 +273,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<WebhookDeleteObjectV1Response> WebhookDeleteObjectV1Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> WebhookDeleteObjectV1Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Webhook
@@ -286,8 +286,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookDeleteObjectV1Response>> WebhookDeleteObjectV1WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> WebhookDeleteObjectV1WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Webhook
         /// </summary>
@@ -299,8 +299,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<WebhookEditObjectV1Response> WebhookEditObjectV1Async(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> WebhookEditObjectV1Async(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Webhook
@@ -313,8 +313,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookEditObjectV1Response>> WebhookEditObjectV1WithHttpInfoAsync(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> WebhookEditObjectV1WithHttpInfoAsync(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve the logs for recent Webhook calls
         /// </summary>
@@ -327,7 +327,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetHistoryV1Response</returns>
-        System.Threading.Tasks.Task<WebhookGetHistoryV1Response> WebhookGetHistoryV1Async(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookGetHistoryV1Response> WebhookGetHistoryV1Async(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the logs for recent Webhook calls
@@ -341,7 +341,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetHistoryV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookGetHistoryV1Response>> WebhookGetHistoryV1WithHttpInfoAsync(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookGetHistoryV1Response>> WebhookGetHistoryV1WithHttpInfoAsync(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Webhook list
         /// </summary>
@@ -357,7 +357,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetListV1Response</returns>
-        System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Webhook list
@@ -374,7 +374,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Webhook
         /// </summary>
@@ -386,7 +386,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<WebhookGetObjectV2Response> WebhookGetObjectV2Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookGetObjectV2Response> WebhookGetObjectV2Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Webhook
@@ -399,7 +399,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookGetObjectV2Response>> WebhookGetObjectV2WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookGetObjectV2Response>> WebhookGetObjectV2WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Regenerate the Apikey
         /// </summary>
@@ -412,7 +412,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookRegenerateApikeyV1Response</returns>
-        System.Threading.Tasks.Task<WebhookRegenerateApikeyV1Response> WebhookRegenerateApikeyV1Async(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebhookRegenerateApikeyV1Response> WebhookRegenerateApikeyV1Async(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Regenerate the Apikey
@@ -426,7 +426,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookRegenerateApikeyV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookRegenerateApikeyV1Response>> WebhookRegenerateApikeyV1WithHttpInfoAsync(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebhookRegenerateApikeyV1Response>> WebhookRegenerateApikeyV1WithHttpInfoAsync(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Emit a Webhook event
         /// </summary>
@@ -437,8 +437,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookSendWebhookV1Response</returns>
-        System.Threading.Tasks.Task<WebhookSendWebhookV1Response> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Emit a Webhook event
@@ -450,8 +450,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookSendWebhookV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookSendWebhookV1Response>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Test the Webhook by calling the Url
         /// </summary>
@@ -463,8 +463,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookTestV1Response</returns>
-        System.Threading.Tasks.Task<WebhookTestV1Response> WebhookTestV1Async(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> WebhookTestV1Async(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Test the Webhook by calling the Url
@@ -477,8 +477,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookTestV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebhookTestV1Response>> WebhookTestV1WithHttpInfoAsync(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> WebhookTestV1WithHttpInfoAsync(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -683,7 +683,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<WebhookCreateObjectV2Response> WebhookCreateObjectV2Async(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookCreateObjectV2Response> WebhookCreateObjectV2Async(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<WebhookCreateObjectV2Response> localVarResponse = await WebhookCreateObjectV2WithHttpInfoAsync(webhookCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookCreateObjectV2Response>> WebhookCreateObjectV2WithHttpInfoAsync(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookCreateObjectV2Response>> WebhookCreateObjectV2WithHttpInfoAsync(WebhookCreateObjectV2Request webhookCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookCreateObjectV2Request' is set
             if (webhookCreateObjectV2Request == null)
@@ -761,10 +761,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookDeleteObjectV1Response</returns>
-        public WebhookDeleteObjectV1Response WebhookDeleteObjectV1(int pkiWebhookID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse WebhookDeleteObjectV1(int pkiWebhookID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<WebhookDeleteObjectV1Response> localVarResponse = WebhookDeleteObjectV1WithHttpInfo(pkiWebhookID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = WebhookDeleteObjectV1WithHttpInfo(pkiWebhookID);
             return localVarResponse.Data;
         }
 
@@ -774,8 +774,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<WebhookDeleteObjectV1Response> WebhookDeleteObjectV1WithHttpInfo(int pkiWebhookID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> WebhookDeleteObjectV1WithHttpInfo(int pkiWebhookID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -811,7 +811,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<WebhookDeleteObjectV1Response>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookDeleteObjectV1", localVarResponse);
@@ -831,10 +831,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookDeleteObjectV1Response> WebhookDeleteObjectV1Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> WebhookDeleteObjectV1Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<WebhookDeleteObjectV1Response> localVarResponse = await WebhookDeleteObjectV1WithHttpInfoAsync(pkiWebhookID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await WebhookDeleteObjectV1WithHttpInfoAsync(pkiWebhookID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -845,8 +845,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookDeleteObjectV1Response>> WebhookDeleteObjectV1WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> WebhookDeleteObjectV1WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -883,7 +883,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<WebhookDeleteObjectV1Response>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -904,10 +904,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookEditObjectV1Response</returns>
-        public WebhookEditObjectV1Response WebhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse WebhookEditObjectV1(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<WebhookEditObjectV1Response> localVarResponse = WebhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = WebhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -918,8 +918,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<WebhookEditObjectV1Response> WebhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> WebhookEditObjectV1WithHttpInfo(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'webhookEditObjectV1Request' is set
             if (webhookEditObjectV1Request == null)
@@ -963,7 +963,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<WebhookEditObjectV1Response>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookEditObjectV1", localVarResponse);
@@ -984,10 +984,10 @@ namespace eZmaxApi.Api
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookEditObjectV1Response> WebhookEditObjectV1Async(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> WebhookEditObjectV1Async(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<WebhookEditObjectV1Response> localVarResponse = await WebhookEditObjectV1WithHttpInfoAsync(pkiWebhookID, webhookEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await WebhookEditObjectV1WithHttpInfoAsync(pkiWebhookID, webhookEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -999,8 +999,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookEditObjectV1Response>> WebhookEditObjectV1WithHttpInfoAsync(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> WebhookEditObjectV1WithHttpInfoAsync(int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookEditObjectV1Request' is set
             if (webhookEditObjectV1Request == null)
@@ -1045,7 +1045,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<WebhookEditObjectV1Response>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/webhook/{pkiWebhookID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1146,7 +1146,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetHistoryV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookGetHistoryV1Response> WebhookGetHistoryV1Async(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookGetHistoryV1Response> WebhookGetHistoryV1Async(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<WebhookGetHistoryV1Response> localVarResponse = await WebhookGetHistoryV1WithHttpInfoAsync(pkiWebhookID, eWebhookHistoryinterval, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1161,7 +1161,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetHistoryV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetHistoryV1Response>> WebhookGetHistoryV1WithHttpInfoAsync(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetHistoryV1Response>> WebhookGetHistoryV1WithHttpInfoAsync(int pkiWebhookID, string eWebhookHistoryinterval, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'eWebhookHistoryinterval' is set
             if (eWebhookHistoryinterval == null)
@@ -1328,7 +1328,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookGetListV1Response> WebhookGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<WebhookGetListV1Response> localVarResponse = await WebhookGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1346,7 +1346,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetListV1Response>> WebhookGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1494,7 +1494,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<WebhookGetObjectV2Response> WebhookGetObjectV2Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookGetObjectV2Response> WebhookGetObjectV2Async(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<WebhookGetObjectV2Response> localVarResponse = await WebhookGetObjectV2WithHttpInfoAsync(pkiWebhookID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1508,7 +1508,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetObjectV2Response>> WebhookGetObjectV2WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookGetObjectV2Response>> WebhookGetObjectV2WithHttpInfoAsync(int pkiWebhookID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1647,7 +1647,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebhookRegenerateApikeyV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookRegenerateApikeyV1Response> WebhookRegenerateApikeyV1Async(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebhookRegenerateApikeyV1Response> WebhookRegenerateApikeyV1Async(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<WebhookRegenerateApikeyV1Response> localVarResponse = await WebhookRegenerateApikeyV1WithHttpInfoAsync(pkiWebhookID, webhookRegenerateApikeyV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1662,7 +1662,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebhookRegenerateApikeyV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookRegenerateApikeyV1Response>> WebhookRegenerateApikeyV1WithHttpInfoAsync(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookRegenerateApikeyV1Response>> WebhookRegenerateApikeyV1WithHttpInfoAsync(int pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookRegenerateApikeyV1Request' is set
             if (webhookRegenerateApikeyV1Request == null)
@@ -1727,10 +1727,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookSendWebhookV1Response</returns>
-        public WebhookSendWebhookV1Response WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse WebhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> localVarResponse = WebhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = WebhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
             return localVarResponse.Data;
         }
 
@@ -1740,8 +1740,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookSendWebhookV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> WebhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'webhookSendWebhookV1Request' is set
             if (webhookSendWebhookV1Request == null)
@@ -1784,7 +1784,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<WebhookSendWebhookV1Response>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookSendWebhookV1", localVarResponse);
@@ -1804,10 +1804,10 @@ namespace eZmaxApi.Api
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookSendWebhookV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookSendWebhookV1Response> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> WebhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response> localVarResponse = await WebhookSendWebhookV1WithHttpInfoAsync(webhookSendWebhookV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await WebhookSendWebhookV1WithHttpInfoAsync(webhookSendWebhookV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1818,8 +1818,8 @@ namespace eZmaxApi.Api
         /// <param name="webhookSendWebhookV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookSendWebhookV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookSendWebhookV1Response>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> WebhookSendWebhookV1WithHttpInfoAsync(WebhookSendWebhookV1Request webhookSendWebhookV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'webhookSendWebhookV1Request' is set
             if (webhookSendWebhookV1Request == null)
@@ -1863,7 +1863,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<WebhookSendWebhookV1Response>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/webhook/sendWebhook", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1884,10 +1884,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>WebhookTestV1Response</returns>
-        public WebhookTestV1Response WebhookTestV1(int pkiWebhookID, Object body, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse WebhookTestV1(int pkiWebhookID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<WebhookTestV1Response> localVarResponse = WebhookTestV1WithHttpInfo(pkiWebhookID, body);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = WebhookTestV1WithHttpInfo(pkiWebhookID, body);
             return localVarResponse.Data;
         }
 
@@ -1898,8 +1898,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiWebhookID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of WebhookTestV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<WebhookTestV1Response> WebhookTestV1WithHttpInfo(int pkiWebhookID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> WebhookTestV1WithHttpInfo(int pkiWebhookID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1943,7 +1943,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<WebhookTestV1Response>("/1/object/webhook/{pkiWebhookID}/test", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/webhook/{pkiWebhookID}/test", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("WebhookTestV1", localVarResponse);
@@ -1964,10 +1964,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of WebhookTestV1Response</returns>
-        public async System.Threading.Tasks.Task<WebhookTestV1Response> WebhookTestV1Async(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> WebhookTestV1Async(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<WebhookTestV1Response> localVarResponse = await WebhookTestV1WithHttpInfoAsync(pkiWebhookID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await WebhookTestV1WithHttpInfoAsync(pkiWebhookID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1979,8 +1979,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (WebhookTestV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<WebhookTestV1Response>> WebhookTestV1WithHttpInfoAsync(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> WebhookTestV1WithHttpInfoAsync(int pkiWebhookID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2025,7 +2025,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<WebhookTestV1Response>("/1/object/webhook/{pkiWebhookID}/test", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/webhook/{pkiWebhookID}/test", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

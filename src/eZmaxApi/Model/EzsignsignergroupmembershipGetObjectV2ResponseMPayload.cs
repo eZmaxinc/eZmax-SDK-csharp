@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignsignergroupmembershipGetObjectV2ResponseMPayload(EzsignsignergroupmembershipResponseCompound  = default(EzsignsignergroupmembershipResponseCompound))
+        /// <param name="objEzsignsignergroupmembership">objEzsignsignergroupmembership (required).</param>
+        public EzsignsignergroupmembershipGetObjectV2ResponseMPayload(EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership = default(EzsignsignergroupmembershipResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignsignergroupmembership" is required (not null)
+            if (objEzsignsignergroupmembership == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignergroupmembershipGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsignsignergroupmembership is a required property for EzsignsignergroupmembershipGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignsignergroupmembership = ;
+            this.ObjEzsignsignergroupmembership = objEzsignsignergroupmembership;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

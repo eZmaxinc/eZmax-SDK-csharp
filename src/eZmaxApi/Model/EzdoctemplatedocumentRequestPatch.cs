@@ -68,14 +68,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentRequestPatch" /> class.
         /// </summary>
-        /// <param name="">Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set..</param>
-        /// <param name="">List of field in Ezdoctemplatedocument.</param>
-        /// <param name="">The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set..</param>
-        public EzdoctemplatedocumentRequestPatch(EEzdoctemplatedocumentFormatEnum?  = default(EEzdoctemplatedocumentFormatEnum?), string  = default(string), byte[]  = default(byte[]))
+        /// <param name="eEzdoctemplatedocumentFormat">Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set..</param>
+        /// <param name="sEzdoctemplatedocumentFields">List of field in Ezdoctemplatedocument.</param>
+        /// <param name="sEzdoctemplatedocumentBase64">The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set..</param>
+        public EzdoctemplatedocumentRequestPatch(EEzdoctemplatedocumentFormatEnum? eEzdoctemplatedocumentFormat = default(EEzdoctemplatedocumentFormatEnum?), string sEzdoctemplatedocumentFields = default(string), byte[] sEzdoctemplatedocumentBase64 = default(byte[]))
         {
-            this.EEzdoctemplatedocumentFormat = ;
-            this.SEzdoctemplatedocumentFields = ;
-            this.SEzdoctemplatedocumentBase64 = ;
+            this.EEzdoctemplatedocumentFormat = eEzdoctemplatedocumentFormat;
+            this.SEzdoctemplatedocumentFields = sEzdoctemplatedocumentFields;
+            this.SEzdoctemplatedocumentBase64 = sEzdoctemplatedocumentBase64;
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set.</value>
-        /* <example>[B@459f7aa3</example>*/
+        /* <example>[B@4eeea57d</example>*/
         [DataMember(Name = "sEzdoctemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzdoctemplatedocumentBase64 { get; set; }
 
@@ -122,12 +122,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SEzdoctemplatedocumentFields (string) maxLength
             if (this.SEzdoctemplatedocumentFields != null && this.SEzdoctemplatedocumentFields.Length > 16000000)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatedocumentFields, length must be less than 16000000.", new [] { "SEzdoctemplatedocumentFields" });
+                yield return new ValidationResult("Invalid value for SEzdoctemplatedocumentFields, length must be less than 16000000.", new [] { "SEzdoctemplatedocumentFields" });
             }
 
             if (this.SEzdoctemplatedocumentFields != null) {

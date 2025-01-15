@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignergroupDeleteObjectV1Response</returns>
-        EzsignsignergroupDeleteObjectV1Response EzsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsignsignergroup
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignergroupDeleteObjectV1Response</returns>
-        ApiResponse<EzsignsignergroupDeleteObjectV1Response> EzsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Ezsignsignergroupmemberships
         /// </summary>
@@ -102,8 +102,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignergroupEditObjectV1Response</returns>
-        EzsignsignergroupEditObjectV1Response EzsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignsignergroup
@@ -115,8 +115,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignergroupEditObjectV1Response</returns>
-        ApiResponse<EzsignsignergroupEditObjectV1Response> EzsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupCreateObjectV1Response> EzsignsignergroupCreateObjectV1Async(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsignergroupCreateObjectV1Response> EzsignsignergroupCreateObjectV1Async(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsignsignergroup
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupCreateObjectV1Response>> EzsignsignergroupCreateObjectV1WithHttpInfoAsync(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupCreateObjectV1Response>> EzsignsignergroupCreateObjectV1WithHttpInfoAsync(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsignsignergroup
         /// </summary>
@@ -201,8 +201,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignergroupDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupDeleteObjectV1Response> EzsignsignergroupDeleteObjectV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignsignergroupDeleteObjectV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsignsignergroup
@@ -214,8 +214,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignergroupDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupDeleteObjectV1Response>> EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Ezsignsignergroupmemberships
         /// </summary>
@@ -228,7 +228,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupEditEzsignsignergroupmembershipsV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> EzsignsignergroupEditEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> EzsignsignergroupEditEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit multiple Ezsignsignergroupmemberships
@@ -242,7 +242,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupEditEzsignsignergroupmembershipsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response>> EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response>> EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsignsignergroup
         /// </summary>
@@ -254,8 +254,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignergroupEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupEditObjectV1Response> EzsignsignergroupEditObjectV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignsignergroupEditObjectV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignsignergroup
@@ -268,8 +268,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignergroupEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupEditObjectV1Response>> EzsignsignergroupEditObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignsignergroupEditObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
         /// </summary>
@@ -281,7 +281,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupGetEzsignsignergroupmembershipsV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> EzsignsignergroupGetEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> EzsignsignergroupGetEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignsignergroup&#39;s Ezsignsignergroupmemberships
@@ -294,7 +294,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupGetEzsignsignergroupmembershipsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response>> EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response>> EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignsignergroup
         /// </summary>
@@ -306,7 +306,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsignsignergroupGetObjectV2Response> EzsignsignergroupGetObjectV2Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsignergroupGetObjectV2Response> EzsignsignergroupGetObjectV2Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignsignergroup
@@ -319,7 +319,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupGetObjectV2Response>> EzsignsignergroupGetObjectV2WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsignergroupGetObjectV2Response>> EzsignsignergroupGetObjectV2WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -524,7 +524,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupCreateObjectV1Response> EzsignsignergroupCreateObjectV1Async(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsignergroupCreateObjectV1Response> EzsignsignergroupCreateObjectV1Async(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsignergroupCreateObjectV1Response> localVarResponse = await EzsignsignergroupCreateObjectV1WithHttpInfoAsync(ezsignsignergroupCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -538,7 +538,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupCreateObjectV1Response>> EzsignsignergroupCreateObjectV1WithHttpInfoAsync(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupCreateObjectV1Response>> EzsignsignergroupCreateObjectV1WithHttpInfoAsync(EzsignsignergroupCreateObjectV1Request ezsignsignergroupCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsignergroupCreateObjectV1Request' is set
             if (ezsignsignergroupCreateObjectV1Request == null)
@@ -602,10 +602,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignergroupDeleteObjectV1Response</returns>
-        public EzsignsignergroupDeleteObjectV1Response EzsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignsignergroupDeleteObjectV1(int pkiEzsignsignergroupID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignergroupDeleteObjectV1Response> localVarResponse = EzsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
             return localVarResponse.Data;
         }
 
@@ -615,8 +615,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignergroupDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignsignergroupDeleteObjectV1Response> EzsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignsignergroupDeleteObjectV1WithHttpInfo(int pkiEzsignsignergroupID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -652,7 +652,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<EzsignsignergroupDeleteObjectV1Response>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignsignergroupDeleteObjectV1", localVarResponse);
@@ -672,10 +672,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignergroupDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupDeleteObjectV1Response> EzsignsignergroupDeleteObjectV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignsignergroupDeleteObjectV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignergroupDeleteObjectV1Response> localVarResponse = await EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(pkiEzsignsignergroupID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(pkiEzsignsignergroupID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -686,8 +686,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignergroupDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupDeleteObjectV1Response>> EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignsignergroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -724,7 +724,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsignsignergroupDeleteObjectV1Response>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -826,7 +826,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupEditEzsignsignergroupmembershipsV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> EzsignsignergroupEditEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> EzsignsignergroupEditEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> localVarResponse = await EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfoAsync(pkiEzsignsignergroupID, ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -841,7 +841,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupEditEzsignsignergroupmembershipsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response>> EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response>> EzsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsignergroupEditEzsignsignergroupmembershipsV1Request' is set
             if (ezsignsignergroupEditEzsignsignergroupmembershipsV1Request == null)
@@ -907,10 +907,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsignergroupEditObjectV1Response</returns>
-        public EzsignsignergroupEditObjectV1Response EzsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignsignergroupEditObjectV1(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignergroupEditObjectV1Response> localVarResponse = EzsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -921,8 +921,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup</param>
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsignergroupEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignsignergroupEditObjectV1Response> EzsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignsignergroupEditObjectV1WithHttpInfo(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignsignergroupEditObjectV1Request' is set
             if (ezsignsignergroupEditObjectV1Request == null)
@@ -966,7 +966,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsignsignergroupEditObjectV1Response>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignsignergroupEditObjectV1", localVarResponse);
@@ -987,10 +987,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsignergroupEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupEditObjectV1Response> EzsignsignergroupEditObjectV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignsignergroupEditObjectV1Async(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignsignergroupEditObjectV1Response> localVarResponse = await EzsignsignergroupEditObjectV1WithHttpInfoAsync(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignsignergroupEditObjectV1WithHttpInfoAsync(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1002,8 +1002,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsignergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsignergroupEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupEditObjectV1Response>> EzsignsignergroupEditObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignsignergroupEditObjectV1WithHttpInfoAsync(int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsignergroupEditObjectV1Request' is set
             if (ezsignsignergroupEditObjectV1Request == null)
@@ -1048,7 +1048,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignsignergroupEditObjectV1Response>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsignsignergroup/{pkiEzsignsignergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1139,7 +1139,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupGetEzsignsignergroupmembershipsV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> EzsignsignergroupGetEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> EzsignsignergroupGetEzsignsignergroupmembershipsV1Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> localVarResponse = await EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfoAsync(pkiEzsignsignergroupID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1153,7 +1153,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupGetEzsignsignergroupmembershipsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response>> EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response>> EzsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1281,7 +1281,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsignergroupGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsignergroupGetObjectV2Response> EzsignsignergroupGetObjectV2Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsignergroupGetObjectV2Response> EzsignsignergroupGetObjectV2Async(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsignergroupGetObjectV2Response> localVarResponse = await EzsignsignergroupGetObjectV2WithHttpInfoAsync(pkiEzsignsignergroupID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1295,7 +1295,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsignergroupGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupGetObjectV2Response>> EzsignsignergroupGetObjectV2WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsignergroupGetObjectV2Response>> EzsignsignergroupGetObjectV2WithHttpInfoAsync(int pkiEzsignsignergroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

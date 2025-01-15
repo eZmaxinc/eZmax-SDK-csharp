@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateObjectV3ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of objets that contain unique IDs representing the object that were requested to be created and possibly matching template IDs.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigndocumentCreateObjectV3ResponseMPayload(List<EzsigndocumentCreateElementV3Response>  = default(List<EzsigndocumentCreateElementV3Response>))
+        /// <param name="aObjEzsigndocument">An array of objets that contain unique IDs representing the object that were requested to be created and possibly matching template IDs.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigndocumentCreateObjectV3ResponseMPayload(List<EzsigndocumentCreateElementV3Response> aObjEzsigndocument = default(List<EzsigndocumentCreateElementV3Response>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigndocument" is required (not null)
+            if (aObjEzsigndocument == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateObjectV3ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsigndocument is a required property for EzsigndocumentCreateObjectV3ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigndocument = ;
+            this.AObjEzsigndocument = aObjEzsigndocument;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

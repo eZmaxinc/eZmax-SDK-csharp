@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentMatchingtemplateV3Response" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="">The unique ID of the Ezsigntemplateglobal.</param>
-        public EzsigndocumentMatchingtemplateV3Response(int  = default(int), int  = default(int))
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="pkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal.</param>
+        public EzsigndocumentMatchingtemplateV3Response(int pkiEzsigntemplateID = default(int), int pkiEzsigntemplateglobalID = default(int))
         {
-            this.PkiEzsigntemplateID = ;
-            this.PkiEzsigntemplateglobalID = ;
+            this.PkiEzsigntemplateID = pkiEzsigntemplateID;
+            this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
         }
 
         /// <summary>
@@ -87,18 +87,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateID (int) minimum
             if (this.PkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
             }
 
             // PkiEzsigntemplateglobalID (int) minimum
             if (this.PkiEzsigntemplateglobalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalID" });
             }
 
             yield break;

@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignsigningreasonDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Ezsignsigningreason in French.</param>
-        /// <param name="">The description of the Ezsignsigningreason in English.</param>
-        public MultilingualEzsignsigningreasonDescription(string  = default(string), string  = default(string))
+        /// <param name="sEzsignsigningreasonDescription1">The description of the Ezsignsigningreason in French.</param>
+        /// <param name="sEzsignsigningreasonDescription2">The description of the Ezsignsigningreason in English.</param>
+        public MultilingualEzsignsigningreasonDescription(string sEzsignsigningreasonDescription1 = default(string), string sEzsignsigningreasonDescription2 = default(string))
         {
-            this.SEzsignsigningreasonDescription1 = ;
-            this.SEzsignsigningreasonDescription2 = ;
+            this.SEzsignsigningreasonDescription1 = sEzsignsigningreasonDescription1;
+            this.SEzsignsigningreasonDescription2 = sEzsignsigningreasonDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzsignsigningreasonDescription1 != null) {
                 // SEzsignsigningreasonDescription1 (string) pattern

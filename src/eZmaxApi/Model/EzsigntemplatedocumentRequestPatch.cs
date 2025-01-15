@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentRequestPatch" /> class.
         /// </summary>
-        /// <param name="">The name of the Ezsigntemplatedocument..</param>
-        public EzsigntemplatedocumentRequestPatch(string  = default(string))
+        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument..</param>
+        public EzsigntemplatedocumentRequestPatch(string sEzsigntemplatedocumentName = default(string))
         {
-            this.SEzsigntemplatedocumentName = ;
+            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

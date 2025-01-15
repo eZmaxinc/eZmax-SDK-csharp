@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationCountV1Response> InscriptionnotauthenticatedGetCommunicationCountV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationCountV1Response> InscriptionnotauthenticatedGetCommunicationCountV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response>> InscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response>> InscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationListV1Response> InscriptionnotauthenticatedGetCommunicationListV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationListV1Response> InscriptionnotauthenticatedGetCommunicationListV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationListV1Response>> InscriptionnotauthenticatedGetCommunicationListV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationListV1Response>> InscriptionnotauthenticatedGetCommunicationListV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> InscriptionnotauthenticatedGetCommunicationrecipientsV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> InscriptionnotauthenticatedGetCommunicationrecipientsV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>> InscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>> InscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationsendersV1Response> InscriptionnotauthenticatedGetCommunicationsendersV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationsendersV1Response> InscriptionnotauthenticatedGetCommunicationsendersV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response>> InscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response>> InscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationCountV1Response> InscriptionnotauthenticatedGetCommunicationCountV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationCountV1Response> InscriptionnotauthenticatedGetCommunicationCountV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response> localVarResponse = await InscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfoAsync(pkiInscriptionnotauthenticatedID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response>> InscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response>> InscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationListV1Response> InscriptionnotauthenticatedGetCommunicationListV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationListV1Response> InscriptionnotauthenticatedGetCommunicationListV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationListV1Response> localVarResponse = await InscriptionnotauthenticatedGetCommunicationListV1WithHttpInfoAsync(pkiInscriptionnotauthenticatedID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationListV1Response>> InscriptionnotauthenticatedGetCommunicationListV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationListV1Response>> InscriptionnotauthenticatedGetCommunicationListV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> InscriptionnotauthenticatedGetCommunicationrecipientsV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> InscriptionnotauthenticatedGetCommunicationrecipientsV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> localVarResponse = await InscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfoAsync(pkiInscriptionnotauthenticatedID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>> InscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>> InscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionnotauthenticatedGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationsendersV1Response> InscriptionnotauthenticatedGetCommunicationsendersV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InscriptionnotauthenticatedGetCommunicationsendersV1Response> InscriptionnotauthenticatedGetCommunicationsendersV1Async(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response> localVarResponse = await InscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfoAsync(pkiInscriptionnotauthenticatedID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionnotauthenticatedGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response>> InscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response>> InscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfoAsync(int pkiInscriptionnotauthenticatedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

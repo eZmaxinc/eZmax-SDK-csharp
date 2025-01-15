@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigFilter" /> class.
         /// </summary>
-        /// <param name="">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        /// <param name="">An integer value specifying the maximum number of resources returned in a response. (required).</param>
-        public ScimServiceProviderConfigFilter(bool  = default(bool), int  = default(int))
+        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        /// <param name="maxResults">An integer value specifying the maximum number of resources returned in a response. (required).</param>
+        public ScimServiceProviderConfigFilter(bool supported = default(bool), int maxResults = default(int))
         {
-            this.Supported = ;
-            this.MaxResults = ;
+            this.Supported = supported;
+            this.MaxResults = maxResults;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

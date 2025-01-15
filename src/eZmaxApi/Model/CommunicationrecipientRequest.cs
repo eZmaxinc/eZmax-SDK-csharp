@@ -41,38 +41,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationrecipientRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Communicationrecipient..</param>
-        /// <param name="">The unique ID of the Agent..</param>
-        /// <param name="">The unique ID of the Broker..</param>
-        /// <param name="">The unique ID of the Contact.</param>
-        /// <param name="">The unique ID of the Customer..</param>
-        /// <param name="">The unique ID of the Employee..</param>
-        /// <param name="">The unique ID of the Assistant..</param>
-        /// <param name="">The unique ID of the Externalbroker..</param>
-        /// <param name="">The unique ID of the Ezsignsigner.</param>
-        /// <param name="">The unique ID of the Notary..</param>
-        /// <param name="">The unique ID of the Supplier..</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Mailboxshared.</param>
-        /// <param name="">The unique ID of the Phonelineshared.</param>
-        /// <param name="">.</param>
-        public CommunicationrecipientRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldECommunicationrecipientType?  = default(FieldECommunicationrecipientType?))
+        /// <param name="pkiCommunicationrecipientID">The unique ID of the Communicationrecipient..</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiContactID">The unique ID of the Contact.</param>
+        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
+        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
+        /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
+        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
+        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiMailboxsharedID">The unique ID of the Mailboxshared.</param>
+        /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
+        /// <param name="eCommunicationrecipientType">eCommunicationrecipientType.</param>
+        public CommunicationrecipientRequest(int pkiCommunicationrecipientID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzsignsignerID = default(int), int fkiNotaryID = default(int), int fkiSupplierID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), FieldECommunicationrecipientType? eCommunicationrecipientType = default(FieldECommunicationrecipientType?))
         {
-            this.PkiCommunicationrecipientID = ;
-            this.FkiAgentID = ;
-            this.FkiBrokerID = ;
-            this.FkiContactID = ;
-            this.FkiCustomerID = ;
-            this.FkiEmployeeID = ;
-            this.FkiAssistantID = ;
-            this.FkiExternalbrokerID = ;
-            this.FkiEzsignsignerID = ;
-            this.FkiNotaryID = ;
-            this.FkiSupplierID = ;
-            this.FkiUserID = ;
-            this.FkiMailboxsharedID = ;
-            this.FkiPhonelinesharedID = ;
-            this.ECommunicationrecipientType = ;
+            this.PkiCommunicationrecipientID = pkiCommunicationrecipientID;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiContactID = fkiContactID;
+            this.FkiCustomerID = fkiCustomerID;
+            this.FkiEmployeeID = fkiEmployeeID;
+            this.FkiAssistantID = fkiAssistantID;
+            this.FkiExternalbrokerID = fkiExternalbrokerID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
+            this.FkiNotaryID = fkiNotaryID;
+            this.FkiSupplierID = fkiSupplierID;
+            this.FkiUserID = fkiUserID;
+            this.FkiMailboxsharedID = fkiMailboxsharedID;
+            this.FkiPhonelinesharedID = fkiPhonelinesharedID;
+            this.ECommunicationrecipientType = eCommunicationrecipientType;
         }
 
         /// <summary>
@@ -228,102 +228,102 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCommunicationrecipientID (int) minimum
             if (this.PkiCommunicationrecipientID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationrecipientID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationrecipientID" });
+                yield return new ValidationResult("Invalid value for PkiCommunicationrecipientID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationrecipientID" });
             }
 
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiContactID (int) minimum
             if (this.FkiContactID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
+                yield return new ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
             }
 
             // FkiCustomerID (int) minimum
             if (this.FkiCustomerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
+                yield return new ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
             }
 
             // FkiEmployeeID (int) minimum
             if (this.FkiEmployeeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
             }
 
             // FkiAssistantID (int) minimum
             if (this.FkiAssistantID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
+                yield return new ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
             }
 
             // FkiExternalbrokerID (int) minimum
             if (this.FkiExternalbrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
+                yield return new ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
             }
 
             // FkiEzsignsignerID (int) minimum
             if (this.FkiEzsignsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
             }
 
             // FkiNotaryID (int) minimum
             if (this.FkiNotaryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
+                yield return new ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
             }
 
             // FkiSupplierID (int) minimum
             if (this.FkiSupplierID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
+                yield return new ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiMailboxsharedID (int) maximum
             if (this.FkiMailboxsharedID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
+                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiMailboxsharedID (int) minimum
             if (this.FkiMailboxsharedID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
+                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiPhonelinesharedID (int) maximum
             if (this.FkiPhonelinesharedID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
+                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
             }
 
             // FkiPhonelinesharedID (int) minimum
             if (this.FkiPhonelinesharedID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
+                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
             }
 
             yield break;

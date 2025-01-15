@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfieldgroupRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignformfieldgroup.</param>
-        /// <param name="">The Label for the Ezsignformfieldgroup.</param>
-        /// <param name="">An array containing all the values to fill the Ezsignform. (required).</param>
-        public CustomEzsignformfieldgroupRequest(int  = default(int), string  = default(string), List<CustomEzsignformfieldRequest>  = default(List<CustomEzsignformfieldRequest>))
+        /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup.</param>
+        /// <param name="sEzsignformfieldgroupLabel">The Label for the Ezsignformfieldgroup.</param>
+        /// <param name="aObjEzsignformfield">An array containing all the values to fill the Ezsignform. (required).</param>
+        public CustomEzsignformfieldgroupRequest(int pkiEzsignformfieldgroupID = default(int), string sEzsignformfieldgroupLabel = default(string), List<CustomEzsignformfieldRequest> aObjEzsignformfield = default(List<CustomEzsignformfieldRequest>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignformfield" is required (not null)
+            if (aObjEzsignformfield == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignformfieldgroupRequest and cannot be null");
+                throw new ArgumentNullException("aObjEzsignformfield is a required property for CustomEzsignformfieldgroupRequest and cannot be null");
             }
-            this.AObjEzsignformfield = ;
-            this.PkiEzsignformfieldgroupID = ;
-            this.SEzsignformfieldgroupLabel = ;
+            this.AObjEzsignformfield = aObjEzsignformfield;
+            this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
+            this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
         }
 
         /// <summary>
@@ -107,24 +107,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignformfieldgroupID (int) minimum
             if (this.PkiEzsignformfieldgroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignformfieldgroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldgroupID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignformfieldgroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldgroupID" });
             }
 
             // SEzsignformfieldgroupLabel (string) maxLength
             if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length > 50)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be less than 50.", new [] { "SEzsignformfieldgroupLabel" });
+                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be less than 50.", new [] { "SEzsignformfieldgroupLabel" });
             }
 
             // SEzsignformfieldgroupLabel (string) minLength
             if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsignformfieldgroupLabel" });
+                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsignformfieldgroupLabel" });
             }
 
             yield break;

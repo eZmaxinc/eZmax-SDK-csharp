@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendGetObjectV2ResponseMPayload(EzsignbulksendResponseCompound  = default(EzsignbulksendResponseCompound))
+        /// <param name="objEzsignbulksend">objEzsignbulksend (required).</param>
+        public EzsignbulksendGetObjectV2ResponseMPayload(EzsignbulksendResponseCompound objEzsignbulksend = default(EzsignbulksendResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignbulksend" is required (not null)
+            if (objEzsignbulksend == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsignbulksend is a required property for EzsignbulksendGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsignbulksend = ;
+            this.ObjEzsignbulksend = objEzsignbulksend;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

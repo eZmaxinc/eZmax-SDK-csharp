@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
-        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplatepackage.</param>
-        /// <param name="">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignbulksenddocumentmappingResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), EzsigntemplateResponseCompound  = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound  = default(EzsigntemplatepackageResponseCompound))
+        /// <param name="pkiEzsignbulksenddocumentmappingID">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage.</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="iEzsignbulksenddocumentmappingOrder">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
+        /// <param name="objEzsigntemplate">objEzsigntemplate.</param>
+        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage.</param>
+        public EzsignbulksenddocumentmappingResponseCompound(int pkiEzsignbulksenddocumentmappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsignbulksenddocumentmappingOrder = default(int), EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound objEzsigntemplatepackage = default(EzsigntemplatepackageResponseCompound))
         {
-            this.PkiEzsignbulksenddocumentmappingID = ;
-            this.FkiEzsignbulksendID = ;
-            this.IEzsignbulksenddocumentmappingOrder = ;
-            this.FkiEzsigntemplatepackageID = ;
-            this.FkiEzsigntemplateID = ;
-            this.ObjEzsigntemplate = ;
-            this.ObjEzsigntemplatepackage = ;
+            this.PkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            this.IEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
+            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            this.ObjEzsigntemplate = objEzsigntemplate;
+            this.ObjEzsigntemplatepackage = objEzsigntemplatepackage;
         }
 
         /// <summary>
@@ -143,36 +143,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksenddocumentmappingID (int) minimum
             if (this.PkiEzsignbulksenddocumentmappingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksenddocumentmappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksenddocumentmappingID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksenddocumentmappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksenddocumentmappingID" });
             }
 
             // FkiEzsignbulksendID (int) minimum
             if (this.FkiEzsignbulksendID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
             }
 
             // FkiEzsigntemplatepackageID (int) minimum
             if (this.FkiEzsigntemplatepackageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // IEzsignbulksenddocumentmappingOrder (int) minimum
             if (this.IEzsignbulksenddocumentmappingOrder < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignbulksenddocumentmappingOrder, must be a value greater than or equal to 0.", new [] { "IEzsignbulksenddocumentmappingOrder" });
+                yield return new ValidationResult("Invalid value for IEzsignbulksenddocumentmappingOrder, must be a value greater than or equal to 0.", new [] { "IEzsignbulksenddocumentmappingOrder" });
             }
 
             yield break;

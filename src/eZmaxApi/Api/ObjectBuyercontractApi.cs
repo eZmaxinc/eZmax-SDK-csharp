@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<BuyercontractGetCommunicationListV1Response> BuyercontractGetCommunicationListV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationListV1Response> BuyercontractGetCommunicationListV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationListV1Response>> BuyercontractGetCommunicationListV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationListV1Response>> BuyercontractGetCommunicationListV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Buyercontract&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Buyercontract&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Buyercontract&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Buyercontract&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationCountV1Response> BuyercontractGetCommunicationCountV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response> localVarResponse = await BuyercontractGetCommunicationCountV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationCountV1Response>> BuyercontractGetCommunicationCountV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationListV1Response> BuyercontractGetCommunicationListV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationListV1Response> BuyercontractGetCommunicationListV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationListV1Response> localVarResponse = await BuyercontractGetCommunicationListV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationListV1Response>> BuyercontractGetCommunicationListV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationListV1Response>> BuyercontractGetCommunicationListV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationrecipientsV1Response> BuyercontractGetCommunicationrecipientsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> localVarResponse = await BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationrecipientsV1Response>> BuyercontractGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BuyercontractGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response> localVarResponse = await BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

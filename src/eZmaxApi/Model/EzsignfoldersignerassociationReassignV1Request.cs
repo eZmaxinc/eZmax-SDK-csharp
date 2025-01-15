@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationReassignV1Request" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation.</param>
-        public EzsignfoldersignerassociationReassignV1Request(int  = default(int))
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
+        public EzsignfoldersignerassociationReassignV1Request(int fkiEzsignfoldersignerassociationID = default(int))
         {
-            this.FkiEzsignfoldersignerassociationID = ;
+            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
         }
 
         /// <summary>
@@ -76,12 +76,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsignfoldersignerassociationID (int) minimum
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
             }
 
             yield break;

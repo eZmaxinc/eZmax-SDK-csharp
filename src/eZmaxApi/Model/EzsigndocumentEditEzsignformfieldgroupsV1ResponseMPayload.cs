@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsignformfieldgroupID">aPkiEzsignformfieldgroupID (required).</param>
+        public EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload(List<int> aPkiEzsignformfieldgroupID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsignformfieldgroupID" is required (not null)
+            if (aPkiEzsignformfieldgroupID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsignformfieldgroupID is a required property for EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignformfieldgroupID = ;
+            this.APkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

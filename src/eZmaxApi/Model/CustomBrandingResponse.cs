@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomBrandingResponse" /> class.
         /// </summary>
-        /// <param name="">The primary color. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The url of the picture used as logo in the Branding (required).</param>
-        public CustomBrandingResponse(int  = default(int), string  = default(string))
+        /// <param name="iBrandingColor">The primary color. This is a RGB color converted into integer (required).</param>
+        /// <param name="sBrandingLogointerfaceurl">The url of the picture used as logo in the Branding (required).</param>
+        public CustomBrandingResponse(int iBrandingColor = default(int), string sBrandingLogointerfaceurl = default(string))
         {
-            this.IBrandingColor = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IBrandingColor = iBrandingColor;
+            // to ensure "sBrandingLogointerfaceurl" is required (not null)
+            if (sBrandingLogointerfaceurl == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomBrandingResponse and cannot be null");
+                throw new ArgumentNullException("sBrandingLogointerfaceurl is a required property for CustomBrandingResponse and cannot be null");
             }
-            this.SBrandingLogointerfaceurl = ;
+            this.SBrandingLogointerfaceurl = sBrandingLogointerfaceurl;
         }
 
         /// <summary>
@@ -97,18 +97,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // IBrandingColor (int) maximum
             if (this.IBrandingColor > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
             }
 
             // IBrandingColor (int) minimum
             if (this.IBrandingColor < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
             }
 
             if (this.SBrandingLogointerfaceurl != null) {

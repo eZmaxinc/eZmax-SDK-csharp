@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SubnetGetObjectV2ResponseMPayload(SubnetResponseCompound  = default(SubnetResponseCompound))
+        /// <param name="objSubnet">objSubnet (required).</param>
+        public SubnetGetObjectV2ResponseMPayload(SubnetResponseCompound objSubnet = default(SubnetResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objSubnet" is required (not null)
+            if (objSubnet == null)
             {
-                throw new ArgumentNullException(" is a required property for SubnetGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objSubnet is a required property for SubnetGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSubnet = ;
+            this.ObjSubnet = objSubnet;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

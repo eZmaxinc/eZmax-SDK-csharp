@@ -40,31 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Branding (required).</param>
-        /// <param name="">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="">The color of the text. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The color of the text in the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The color of the background. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The color of the background of the button. This is a RGB color converted into integer (required).</param>
-        /// <param name="">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
-        /// <param name="">Whether the Branding is active or not (required).</param>
-        public BrandingListElement(int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool))
+        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="iBrandingColortext">The color of the text. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextlinkbox">The color of the text in the link box. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColortextbutton">The color of the text in the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackground">The color of the background. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundbutton">The color of the background of the button. This is a RGB color converted into integer (required).</param>
+        /// <param name="iBrandingColorbackgroundsmallbox">The color of the background of the small box. This is a RGB color converted into integer (required).</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
+        public BrandingListElement(int pkiBrandingID = default(int), string sBrandingDescriptionX = default(string), int iBrandingColortext = default(int), int iBrandingColortextlinkbox = default(int), int iBrandingColortextbutton = default(int), int iBrandingColorbackground = default(int), int iBrandingColorbackgroundbutton = default(int), int iBrandingColorbackgroundsmallbox = default(int), bool bBrandingIsactive = default(bool))
         {
-            this.PkiBrandingID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiBrandingID = pkiBrandingID;
+            // to ensure "sBrandingDescriptionX" is required (not null)
+            if (sBrandingDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingListElement and cannot be null");
+                throw new ArgumentNullException("sBrandingDescriptionX is a required property for BrandingListElement and cannot be null");
             }
-            this.SBrandingDescriptionX = ;
-            this.IBrandingColortext = ;
-            this.IBrandingColortextlinkbox = ;
-            this.IBrandingColortextbutton = ;
-            this.IBrandingColorbackground = ;
-            this.IBrandingColorbackgroundbutton = ;
-            this.IBrandingColorbackgroundsmallbox = ;
-            this.BBrandingIsactive = ;
+            this.SBrandingDescriptionX = sBrandingDescriptionX;
+            this.IBrandingColortext = iBrandingColortext;
+            this.IBrandingColortextlinkbox = iBrandingColortextlinkbox;
+            this.IBrandingColortextbutton = iBrandingColortextbutton;
+            this.IBrandingColorbackground = iBrandingColorbackground;
+            this.IBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
+            this.IBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
+            this.BBrandingIsactive = bBrandingIsactive;
         }
 
         /// <summary>
@@ -174,84 +174,84 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBrandingID (int) minimum
             if (this.PkiBrandingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
+                yield return new ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
             }
 
             // IBrandingColortext (int) maximum
             if (this.IBrandingColortext > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortext, must be a value less than or equal to 16777215.", new [] { "IBrandingColortext" });
+                yield return new ValidationResult("Invalid value for IBrandingColortext, must be a value less than or equal to 16777215.", new [] { "IBrandingColortext" });
             }
 
             // IBrandingColortext (int) minimum
             if (this.IBrandingColortext < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortext, must be a value greater than or equal to 0.", new [] { "IBrandingColortext" });
+                yield return new ValidationResult("Invalid value for IBrandingColortext, must be a value greater than or equal to 0.", new [] { "IBrandingColortext" });
             }
 
             // IBrandingColortextlinkbox (int) maximum
             if (this.IBrandingColortextlinkbox > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextlinkbox" });
+                yield return new ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextlinkbox" });
             }
 
             // IBrandingColortextlinkbox (int) minimum
             if (this.IBrandingColortextlinkbox < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value greater than or equal to 0.", new [] { "IBrandingColortextlinkbox" });
+                yield return new ValidationResult("Invalid value for IBrandingColortextlinkbox, must be a value greater than or equal to 0.", new [] { "IBrandingColortextlinkbox" });
             }
 
             // IBrandingColortextbutton (int) maximum
             if (this.IBrandingColortextbutton > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextbutton" });
+                yield return new ValidationResult("Invalid value for IBrandingColortextbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColortextbutton" });
             }
 
             // IBrandingColortextbutton (int) minimum
             if (this.IBrandingColortextbutton < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColortextbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColortextbutton" });
+                yield return new ValidationResult("Invalid value for IBrandingColortextbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColortextbutton" });
             }
 
             // IBrandingColorbackground (int) maximum
             if (this.IBrandingColorbackground > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackground, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackground" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackground, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackground" });
             }
 
             // IBrandingColorbackground (int) minimum
             if (this.IBrandingColorbackground < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackground, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackground" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackground, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackground" });
             }
 
             // IBrandingColorbackgroundbutton (int) maximum
             if (this.IBrandingColorbackgroundbutton > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundbutton" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundbutton" });
             }
 
             // IBrandingColorbackgroundbutton (int) minimum
             if (this.IBrandingColorbackgroundbutton < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundbutton" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackgroundbutton, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundbutton" });
             }
 
             // IBrandingColorbackgroundsmallbox (int) maximum
             if (this.IBrandingColorbackgroundsmallbox > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundsmallbox" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value less than or equal to 16777215.", new [] { "IBrandingColorbackgroundsmallbox" });
             }
 
             // IBrandingColorbackgroundsmallbox (int) minimum
             if (this.IBrandingColorbackgroundsmallbox < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundsmallbox" });
+                yield return new ValidationResult("Invalid value for IBrandingColorbackgroundsmallbox, must be a value greater than or equal to 0.", new [] { "IBrandingColorbackgroundsmallbox" });
             }
 
             yield break;

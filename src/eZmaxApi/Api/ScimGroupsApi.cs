@@ -149,7 +149,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        System.Threading.Tasks.Task<ScimGroup> GroupsCreateObjectScimV2Async(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ScimGroup> GroupsCreateObjectScimV2Async(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Usergroup
@@ -162,7 +162,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsCreateObjectScimV2WithHttpInfoAsync(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsCreateObjectScimV2WithHttpInfoAsync(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Usergroup
         /// </summary>
@@ -174,7 +174,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GroupsDeleteObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task GroupsDeleteObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Usergroup
@@ -187,7 +187,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GroupsDeleteObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> GroupsDeleteObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Usergroup
         /// </summary>
@@ -200,7 +200,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        System.Threading.Tasks.Task<ScimGroup> GroupsEditObjectScimV2Async(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ScimGroup> GroupsEditObjectScimV2Async(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Usergroup
@@ -214,7 +214,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsEditObjectScimV2WithHttpInfoAsync(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsEditObjectScimV2WithHttpInfoAsync(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Usergroup list
         /// </summary>
@@ -226,7 +226,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Usergroup list
@@ -239,7 +239,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Usergroup
         /// </summary>
@@ -251,7 +251,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        System.Threading.Tasks.Task<ScimGroup> GroupsGetObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ScimGroup> GroupsGetObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Usergroup
@@ -264,7 +264,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ScimGroup>> GroupsGetObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -470,7 +470,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        public async System.Threading.Tasks.Task<ScimGroup> GroupsCreateObjectScimV2Async(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ScimGroup> GroupsCreateObjectScimV2Async(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ScimGroup> localVarResponse = await GroupsCreateObjectScimV2WithHttpInfoAsync(scimGroup, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -484,7 +484,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsCreateObjectScimV2WithHttpInfoAsync(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsCreateObjectScimV2WithHttpInfoAsync(ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'scimGroup' is set
             if (scimGroup == null)
@@ -625,7 +625,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GroupsDeleteObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task GroupsDeleteObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await GroupsDeleteObjectScimV2WithHttpInfoAsync(groupId, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -638,7 +638,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> GroupsDeleteObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> GroupsDeleteObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -790,7 +790,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        public async System.Threading.Tasks.Task<ScimGroup> GroupsEditObjectScimV2Async(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ScimGroup> GroupsEditObjectScimV2Async(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ScimGroup> localVarResponse = await GroupsEditObjectScimV2WithHttpInfoAsync(groupId, scimGroup, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -805,7 +805,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsEditObjectScimV2WithHttpInfoAsync(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsEditObjectScimV2WithHttpInfoAsync(string groupId, ScimGroup scimGroup, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -952,7 +952,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetListScimV2Async(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ScimGroup> localVarResponse = await GroupsGetListScimV2WithHttpInfoAsync(filter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -966,7 +966,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsGetListScimV2WithHttpInfoAsync(string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1105,7 +1105,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ScimGroup</returns>
-        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ScimGroup> GroupsGetObjectScimV2Async(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ScimGroup> localVarResponse = await GroupsGetObjectScimV2WithHttpInfoAsync(groupId, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1119,7 +1119,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ScimGroup)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsGetObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ScimGroup>> GroupsGetObjectScimV2WithHttpInfoAsync(string groupId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)

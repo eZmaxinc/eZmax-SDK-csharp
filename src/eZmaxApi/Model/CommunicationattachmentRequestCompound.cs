@@ -35,16 +35,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationattachmentRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Communicationattachment.</param>
-        /// <param name="">The unique ID of the Attachment..</param>
-        /// <param name="">The unique ID of the Invoice..</param>
-        /// <param name="">The unique ID of the Salarypreparation..</param>
-        public CommunicationattachmentRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="pkiCommunicationattachmentID">The unique ID of the Communicationattachment.</param>
+        /// <param name="fkiAttachmentID">The unique ID of the Attachment..</param>
+        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
+        /// <param name="fkiSalarypreparationID">The unique ID of the Salarypreparation..</param>
+        public CommunicationattachmentRequestCompound(int pkiCommunicationattachmentID = default(int), int fkiAttachmentID = default(int), int fkiInvoiceID = default(int), int fkiSalarypreparationID = default(int))
         {
-            this.PkiCommunicationattachmentID = ;
-            this.FkiAttachmentID = ;
-            this.FkiInvoiceID = ;
-            this.FkiSalarypreparationID = ;
+            this.PkiCommunicationattachmentID = pkiCommunicationattachmentID;
+            this.FkiAttachmentID = fkiAttachmentID;
+            this.FkiInvoiceID = fkiInvoiceID;
+            this.FkiSalarypreparationID = fkiSalarypreparationID;
         }
 
         /// <summary>
@@ -109,24 +109,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAttachmentID (int) minimum
             if (this.FkiAttachmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
+                yield return new ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
             }
 
             // FkiInvoiceID (int) minimum
             if (this.FkiInvoiceID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
+                yield return new ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
             }
 
             // FkiSalarypreparationID (int) minimum
             if (this.FkiSalarypreparationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalarypreparationID, must be a value greater than or equal to 0.", new [] { "FkiSalarypreparationID" });
+                yield return new ValidationResult("Invalid value for FkiSalarypreparationID, must be a value greater than or equal to 0.", new [] { "FkiSalarypreparationID" });
             }
 
             yield break;

@@ -46,37 +46,37 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorWrongFranchiseoffice" /> class.
         /// </summary>
-        /// <param name="">The message giving details about the error (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">More error message detail.</param>
-        /// <param name="">The unique ID of the Franchiseagence (required).</param>
-        /// <param name="">The name of the Franchiseagence (required).</param>
-        /// <param name="">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="">The code of the Franchiseoffice (required).</param>
-        public CommonResponseErrorWrongFranchiseoffice(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode), List<string>  = default(List<string>), int  = default(int), string  = default(string), int  = default(int), string  = default(string))
+        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
+        /// <param name="eErrorCode">eErrorCode (required).</param>
+        /// <param name="aSErrorMessagedetail">More error message detail.</param>
+        /// <param name="fkiFranchiseagenceID">The unique ID of the Franchiseagence (required).</param>
+        /// <param name="sFranchiseagenceName">The name of the Franchiseagence (required).</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="iFranchiseofficeCode">The code of the Franchiseoffice (required).</param>
+        public CommonResponseErrorWrongFranchiseoffice(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>), int fkiFranchiseagenceID = default(int), string sFranchiseagenceName = default(string), int fkiFranchiseofficeID = default(int), string iFranchiseofficeCode = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sErrorMessage" is required (not null)
+            if (sErrorMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
+                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
             }
-            this.SErrorMessage = ;
-            this.EErrorCode = ;
-            this.FkiFranchiseagenceID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SErrorMessage = sErrorMessage;
+            this.EErrorCode = eErrorCode;
+            this.FkiFranchiseagenceID = fkiFranchiseagenceID;
+            // to ensure "sFranchiseagenceName" is required (not null)
+            if (sFranchiseagenceName == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
+                throw new ArgumentNullException("sFranchiseagenceName is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
             }
-            this.SFranchiseagenceName = ;
-            this.FkiFranchiseofficeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SFranchiseagenceName = sFranchiseagenceName;
+            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
+            // to ensure "iFranchiseofficeCode" is required (not null)
+            if (iFranchiseofficeCode == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
+                throw new ArgumentNullException("iFranchiseofficeCode is a required property for CommonResponseErrorWrongFranchiseoffice and cannot be null");
             }
-            this.IFranchiseofficeCode = ;
-            this.ASErrorMessagedetail = ;
+            this.IFranchiseofficeCode = iFranchiseofficeCode;
+            this.ASErrorMessagedetail = aSErrorMessagedetail;
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SErrorMessage != null) {
                 // SErrorMessage (string) pattern
@@ -173,19 +173,19 @@ namespace eZmaxApi.Model
             // FkiFranchiseagenceID (int) maximum
             if (this.FkiFranchiseagenceID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseagenceID (int) minimum
             if (this.FkiFranchiseagenceID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseofficeID (int) minimum
             if (this.FkiFranchiseofficeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
             }
 
             yield break;

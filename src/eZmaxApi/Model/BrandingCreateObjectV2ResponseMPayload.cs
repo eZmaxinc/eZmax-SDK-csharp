@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingCreateObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public BrandingCreateObjectV2ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiBrandingID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public BrandingCreateObjectV2ResponseMPayload(List<int> aPkiBrandingID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiBrandingID" is required (not null)
+            if (aPkiBrandingID == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingCreateObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiBrandingID is a required property for BrandingCreateObjectV2ResponseMPayload and cannot be null");
             }
-            this.APkiBrandingID = ;
+            this.APkiBrandingID = aPkiBrandingID;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -82,61 +82,61 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponse" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="">Whether the active session is in debug or not (required).</param>
-        /// <param name="">Whether the active session is superadmin or not (required).</param>
-        /// <param name="">Can access attachment when we clone a user.</param>
-        /// <param name="">Can access canafe when we clone a user.</param>
-        /// <param name="">Can access financial element when we clone a user.</param>
-        /// <param name="">Can access closed realestate folders when we clone a user.</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">The customer code assigned to your account (required).</param>
-        /// <param name="">The unique ID of the Systemconfigurationtype (required).</param>
-        /// <param name="">The unique ID of the Signature.</param>
-        public ActivesessionResponse(FieldEActivesessionUsertype  = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin  = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart  = default(FieldEActivesessionWeekdaystart), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), FieldEActivesessionEzsign?  = default(FieldEActivesessionEzsign?), FieldEActivesessionEzsignaccess  = default(FieldEActivesessionEzsignaccess), FieldEActivesessionEzsignprepaid?  = default(FieldEActivesessionEzsignprepaid?), FieldEActivesessionRealestateinprogress?  = default(FieldEActivesessionRealestateinprogress?), string  = default(string), int  = default(int), int  = default(int))
+        /// <param name="eActivesessionUsertype">eActivesessionUsertype (required).</param>
+        /// <param name="eActivesessionOrigin">eActivesessionOrigin (required).</param>
+        /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
+        /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
+        /// <param name="bActivesessionAttachment">Can access attachment when we clone a user.</param>
+        /// <param name="bActivesessionCanafe">Can access canafe when we clone a user.</param>
+        /// <param name="bActivesessionFinancial">Can access financial element when we clone a user.</param>
+        /// <param name="bActivesessionRealestatecompleted">Can access closed realestate folders when we clone a user.</param>
+        /// <param name="eActivesessionEzsign">eActivesessionEzsign.</param>
+        /// <param name="eActivesessionEzsignaccess">eActivesessionEzsignaccess (required).</param>
+        /// <param name="eActivesessionEzsignprepaid">eActivesessionEzsignprepaid.</param>
+        /// <param name="eActivesessionRealestateinprogress">eActivesessionRealestateinprogress.</param>
+        /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
+        /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
+        /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
+        public ActivesessionResponse(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), bool bActivesessionAttachment = default(bool), bool bActivesessionCanafe = default(bool), bool bActivesessionFinancial = default(bool), bool bActivesessionRealestatecompleted = default(bool), FieldEActivesessionEzsign? eActivesessionEzsign = default(FieldEActivesessionEzsign?), FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default(FieldEActivesessionEzsignaccess), FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default(FieldEActivesessionEzsignprepaid?), FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default(FieldEActivesessionRealestateinprogress?), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int))
         {
-            this.EActivesessionUsertype = ;
-            this.EActivesessionOrigin = ;
-            this.EActivesessionWeekdaystart = ;
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EActivesessionUsertype = eActivesessionUsertype;
+            this.EActivesessionOrigin = eActivesessionOrigin;
+            this.EActivesessionWeekdaystart = eActivesessionWeekdaystart;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sCompanyNameX" is required (not null)
+            if (sCompanyNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException("sCompanyNameX is a required property for ActivesessionResponse and cannot be null");
             }
-            this.SCompanyNameX = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCompanyNameX = sCompanyNameX;
+            // to ensure "sDepartmentNameX" is required (not null)
+            if (sDepartmentNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException("sDepartmentNameX is a required property for ActivesessionResponse and cannot be null");
             }
-            this.SDepartmentNameX = ;
-            this.BActivesessionDebug = ;
-            this.BActivesessionIssuperadmin = ;
-            this.EActivesessionEzsignaccess = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SDepartmentNameX = sDepartmentNameX;
+            this.BActivesessionDebug = bActivesessionDebug;
+            this.BActivesessionIssuperadmin = bActivesessionIssuperadmin;
+            this.EActivesessionEzsignaccess = eActivesessionEzsignaccess;
+            // to ensure "pksCustomerCode" is required (not null)
+            if (pksCustomerCode == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponse and cannot be null");
+                throw new ArgumentNullException("pksCustomerCode is a required property for ActivesessionResponse and cannot be null");
             }
-            this.PksCustomerCode = ;
-            this.FkiSystemconfigurationtypeID = ;
-            this.BActivesessionAttachment = ;
-            this.BActivesessionCanafe = ;
-            this.BActivesessionFinancial = ;
-            this.BActivesessionRealestatecompleted = ;
-            this.EActivesessionEzsign = ;
-            this.EActivesessionEzsignprepaid = ;
-            this.EActivesessionRealestateinprogress = ;
-            this.FkiSignatureID = ;
+            this.PksCustomerCode = pksCustomerCode;
+            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+            this.BActivesessionAttachment = bActivesessionAttachment;
+            this.BActivesessionCanafe = bActivesessionCanafe;
+            this.BActivesessionFinancial = bActivesessionFinancial;
+            this.BActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+            this.EActivesessionEzsign = eActivesessionEzsign;
+            this.EActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+            this.EActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+            this.FkiSignatureID = fkiSignatureID;
         }
 
         /// <summary>
@@ -280,48 +280,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // PksCustomerCode (string) maxLength
             if (this.PksCustomerCode != null && this.PksCustomerCode.Length > 6)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
+                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
             }
 
             // PksCustomerCode (string) minLength
             if (this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
+                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
             }
 
             // FkiSystemconfigurationtypeID (int) minimum
             if (this.FkiSystemconfigurationtypeID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+                yield return new ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
             }
 
             // FkiSignatureID (int) maximum
             if (this.FkiSignatureID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSignatureID, must be a value less than or equal to 16777215.", new [] { "FkiSignatureID" });
+                yield return new ValidationResult("Invalid value for FkiSignatureID, must be a value less than or equal to 16777215.", new [] { "FkiSignatureID" });
             }
 
             // FkiSignatureID (int) minimum
             if (this.FkiSignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSignatureID, must be a value greater than or equal to 0.", new [] { "FkiSignatureID" });
+                yield return new ValidationResult("Invalid value for FkiSignatureID, must be a value greater than or equal to 0.", new [] { "FkiSignatureID" });
             }
 
             yield break;

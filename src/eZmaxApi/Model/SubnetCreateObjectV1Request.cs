@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SubnetCreateObjectV1Request(List<SubnetRequestCompound>  = default(List<SubnetRequestCompound>))
+        /// <param name="aObjSubnet">aObjSubnet (required).</param>
+        public SubnetCreateObjectV1Request(List<SubnetRequestCompound> aObjSubnet = default(List<SubnetRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjSubnet" is required (not null)
+            if (aObjSubnet == null)
             {
-                throw new ArgumentNullException(" is a required property for SubnetCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjSubnet is a required property for SubnetCreateObjectV1Request and cannot be null");
             }
-            this.AObjSubnet = ;
+            this.AObjSubnet = aObjSubnet;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload(List<CustomCommunicationsenderResponse>  = default(List<CustomCommunicationsenderResponse>))
+        /// <param name="aObjCommunicationsenders">aObjCommunicationsenders (required).</param>
+        public RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload(List<CustomCommunicationsenderResponse> aObjCommunicationsenders = default(List<CustomCommunicationsenderResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCommunicationsenders" is required (not null)
+            if (aObjCommunicationsenders == null)
             {
-                throw new ArgumentNullException(" is a required property for RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjCommunicationsenders is a required property for RejectedoffertopurchaseGetCommunicationsendersV1ResponseMPayload and cannot be null");
             }
-            this.AObjCommunicationsenders = ;
+            this.AObjCommunicationsenders = aObjCommunicationsenders;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

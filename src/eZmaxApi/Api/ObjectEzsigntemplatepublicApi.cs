@@ -80,8 +80,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatepublicEditObjectV1Response</returns>
-        EzsigntemplatepublicEditObjectV1Response EzsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsigntemplatepublic
@@ -93,8 +93,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatepublicEditObjectV1Response</returns>
-        ApiResponse<EzsigntemplatepublicEditObjectV1Response> EzsigntemplatepublicEditObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsigntemplatepublicEditObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve the Ezsigntemplatepublic details
         /// </summary>
@@ -253,7 +253,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicCreateEzsignfolderV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicCreateEzsignfolderV1Response> EzsigntemplatepublicCreateEzsignfolderV1Async(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicCreateEzsignfolderV1Response> EzsigntemplatepublicCreateEzsignfolderV1Async(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create an Ezsignfolder
@@ -266,7 +266,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicCreateEzsignfolderV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicCreateEzsignfolderV1Response>> EzsigntemplatepublicCreateEzsignfolderV1WithHttpInfoAsync(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicCreateEzsignfolderV1Response>> EzsigntemplatepublicCreateEzsignfolderV1WithHttpInfoAsync(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new Ezsigntemplatepublic
         /// </summary>
@@ -278,7 +278,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicCreateObjectV1Response> EzsigntemplatepublicCreateObjectV1Async(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicCreateObjectV1Response> EzsigntemplatepublicCreateObjectV1Async(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsigntemplatepublic
@@ -291,7 +291,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicCreateObjectV1Response>> EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicCreateObjectV1Response>> EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsigntemplatepublic
         /// </summary>
@@ -303,8 +303,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatepublicEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicEditObjectV1Response> EzsigntemplatepublicEditObjectV1Async(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsigntemplatepublicEditObjectV1Async(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsigntemplatepublic
@@ -317,8 +317,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatepublicEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicEditObjectV1Response>> EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve the Ezsigntemplatepublic details
         /// </summary>
@@ -330,7 +330,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Async(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Async(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the Ezsigntemplatepublic details
@@ -343,7 +343,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response>> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithHttpInfoAsync(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response>> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithHttpInfoAsync(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepublic&#39;s forms data
         /// </summary>
@@ -355,7 +355,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetFormsDataV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicGetFormsDataV1Response> EzsigntemplatepublicGetFormsDataV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicGetFormsDataV1Response> EzsigntemplatepublicGetFormsDataV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepublic&#39;s forms data
@@ -368,7 +368,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetFormsDataV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetFormsDataV1Response>> EzsigntemplatepublicGetFormsDataV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetFormsDataV1Response>> EzsigntemplatepublicGetFormsDataV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsigntemplatepublic list
         /// </summary>
@@ -384,7 +384,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicGetListV1Response> EzsigntemplatepublicGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicGetListV1Response> EzsigntemplatepublicGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsigntemplatepublic list
@@ -401,7 +401,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetListV1Response>> EzsigntemplatepublicGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetListV1Response>> EzsigntemplatepublicGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepublic
         /// </summary>
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicGetObjectV2Response> EzsigntemplatepublicGetObjectV2Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicGetObjectV2Response> EzsigntemplatepublicGetObjectV2Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepublic
@@ -426,7 +426,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetObjectV2Response>> EzsigntemplatepublicGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicGetObjectV2Response>> EzsigntemplatepublicGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Reset the limit exceeded counter
         /// </summary>
@@ -439,7 +439,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicResetLimitExceededCounterV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicResetLimitExceededCounterV1Response> EzsigntemplatepublicResetLimitExceededCounterV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicResetLimitExceededCounterV1Response> EzsigntemplatepublicResetLimitExceededCounterV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Reset the limit exceeded counter
@@ -453,7 +453,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicResetLimitExceededCounterV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicResetLimitExceededCounterV1Response>> EzsigntemplatepublicResetLimitExceededCounterV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicResetLimitExceededCounterV1Response>> EzsigntemplatepublicResetLimitExceededCounterV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Reset the Ezsigntemplatepublic url
         /// </summary>
@@ -466,7 +466,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicResetUrlV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepublicResetUrlV1Response> EzsigntemplatepublicResetUrlV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatepublicResetUrlV1Response> EzsigntemplatepublicResetUrlV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Reset the Ezsigntemplatepublic url
@@ -480,7 +480,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicResetUrlV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicResetUrlV1Response>> EzsigntemplatepublicResetUrlV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicResetUrlV1Response>> EzsigntemplatepublicResetUrlV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -685,7 +685,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicCreateEzsignfolderV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicCreateEzsignfolderV1Response> EzsigntemplatepublicCreateEzsignfolderV1Async(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicCreateEzsignfolderV1Response> EzsigntemplatepublicCreateEzsignfolderV1Async(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateEzsignfolderV1Response> localVarResponse = await EzsigntemplatepublicCreateEzsignfolderV1WithHttpInfoAsync(ezsigntemplatepublicCreateEzsignfolderV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -699,7 +699,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicCreateEzsignfolderV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateEzsignfolderV1Response>> EzsigntemplatepublicCreateEzsignfolderV1WithHttpInfoAsync(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateEzsignfolderV1Response>> EzsigntemplatepublicCreateEzsignfolderV1WithHttpInfoAsync(EzsigntemplatepublicCreateEzsignfolderV1Request ezsigntemplatepublicCreateEzsignfolderV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatepublicCreateEzsignfolderV1Request' is set
             if (ezsigntemplatepublicCreateEzsignfolderV1Request == null)
@@ -841,7 +841,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicCreateObjectV1Response> EzsigntemplatepublicCreateObjectV1Async(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicCreateObjectV1Response> EzsigntemplatepublicCreateObjectV1Async(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateObjectV1Response> localVarResponse = await EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(ezsigntemplatepublicCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -855,7 +855,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateObjectV1Response>> EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicCreateObjectV1Response>> EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatepublicCreateObjectV1Request' is set
             if (ezsigntemplatepublicCreateObjectV1Request == null)
@@ -920,10 +920,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatepublicEditObjectV1Response</returns>
-        public EzsigntemplatepublicEditObjectV1Response EzsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsigntemplatepublicEditObjectV1(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepublicEditObjectV1Response> localVarResponse = EzsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -934,8 +934,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatepublicEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplatepublicEditObjectV1Response> EzsigntemplatepublicEditObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigntemplatepublicEditObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigntemplatepublicEditObjectV1Request' is set
             if (ezsigntemplatepublicEditObjectV1Request == null)
@@ -979,7 +979,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsigntemplatepublicEditObjectV1Response>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatepublicEditObjectV1", localVarResponse);
@@ -1000,10 +1000,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatepublicEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicEditObjectV1Response> EzsigntemplatepublicEditObjectV1Async(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsigntemplatepublicEditObjectV1Async(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepublicEditObjectV1Response> localVarResponse = await EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1015,8 +1015,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatepublicEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatepublicEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicEditObjectV1Response>> EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigntemplatepublicEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatepublicEditObjectV1Request' is set
             if (ezsigntemplatepublicEditObjectV1Request == null)
@@ -1061,7 +1061,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplatepublicEditObjectV1Response>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1159,7 +1159,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Async(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Async(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response> localVarResponse = await EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithHttpInfoAsync(ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1173,7 +1173,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response>> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithHttpInfoAsync(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response>> EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1WithHttpInfoAsync(EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request' is set
             if (ezsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request == null)
@@ -1309,7 +1309,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetFormsDataV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetFormsDataV1Response> EzsigntemplatepublicGetFormsDataV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetFormsDataV1Response> EzsigntemplatepublicGetFormsDataV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetFormsDataV1Response> localVarResponse = await EzsigntemplatepublicGetFormsDataV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1323,7 +1323,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetFormsDataV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetFormsDataV1Response>> EzsigntemplatepublicGetFormsDataV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetFormsDataV1Response>> EzsigntemplatepublicGetFormsDataV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1484,7 +1484,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetListV1Response> EzsigntemplatepublicGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetListV1Response> EzsigntemplatepublicGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetListV1Response> localVarResponse = await EzsigntemplatepublicGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1502,7 +1502,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetListV1Response>> EzsigntemplatepublicGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetListV1Response>> EzsigntemplatepublicGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1650,7 +1650,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetObjectV2Response> EzsigntemplatepublicGetObjectV2Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicGetObjectV2Response> EzsigntemplatepublicGetObjectV2Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetObjectV2Response> localVarResponse = await EzsigntemplatepublicGetObjectV2WithHttpInfoAsync(pkiEzsigntemplatepublicID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1664,7 +1664,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetObjectV2Response>> EzsigntemplatepublicGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicGetObjectV2Response>> EzsigntemplatepublicGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1803,7 +1803,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicResetLimitExceededCounterV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicResetLimitExceededCounterV1Response> EzsigntemplatepublicResetLimitExceededCounterV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicResetLimitExceededCounterV1Response> EzsigntemplatepublicResetLimitExceededCounterV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetLimitExceededCounterV1Response> localVarResponse = await EzsigntemplatepublicResetLimitExceededCounterV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1818,7 +1818,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicResetLimitExceededCounterV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetLimitExceededCounterV1Response>> EzsigntemplatepublicResetLimitExceededCounterV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetLimitExceededCounterV1Response>> EzsigntemplatepublicResetLimitExceededCounterV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1965,7 +1965,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatepublicResetUrlV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepublicResetUrlV1Response> EzsigntemplatepublicResetUrlV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicResetUrlV1Response> EzsigntemplatepublicResetUrlV1Async(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetUrlV1Response> localVarResponse = await EzsigntemplatepublicResetUrlV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1980,7 +1980,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicResetUrlV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetUrlV1Response>> EzsigntemplatepublicResetUrlV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicResetUrlV1Response>> EzsigntemplatepublicResetUrlV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)

@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name=""> (required).</param>
-        public BillingentityinternalResponse(int  = default(int), MultilingualBillingentityinternalDescription  = default(MultilingualBillingentityinternalDescription))
+        /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
+        public BillingentityinternalResponse(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription))
         {
-            this.PkiBillingentityinternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiBillingentityinternalID = pkiBillingentityinternalID;
+            // to ensure "objBillingentityinternalDescription" is required (not null)
+            if (objBillingentityinternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalResponse and cannot be null");
+                throw new ArgumentNullException("objBillingentityinternalDescription is a required property for BillingentityinternalResponse and cannot be null");
             }
-            this.ObjBillingentityinternalDescription = ;
+            this.ObjBillingentityinternalDescription = objBillingentityinternalDescription;
         }
 
         /// <summary>
@@ -95,12 +95,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBillingentityinternalID (int) minimum
             if (this.PkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalID" });
             }
 
             yield break;

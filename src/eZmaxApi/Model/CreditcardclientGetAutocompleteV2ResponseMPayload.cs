@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Creditcardclient autocomplete element response. (required).</param>
-        public CreditcardclientGetAutocompleteV2ResponseMPayload(List<CreditcardclientAutocompleteElementResponse>  = default(List<CreditcardclientAutocompleteElementResponse>))
+        /// <param name="aObjCreditcardclient">An array of Creditcardclient autocomplete element response. (required).</param>
+        public CreditcardclientGetAutocompleteV2ResponseMPayload(List<CreditcardclientAutocompleteElementResponse> aObjCreditcardclient = default(List<CreditcardclientAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCreditcardclient" is required (not null)
+            if (aObjCreditcardclient == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardclientGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjCreditcardclient is a required property for CreditcardclientGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjCreditcardclient = ;
+            this.AObjCreditcardclient = aObjCreditcardclient;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

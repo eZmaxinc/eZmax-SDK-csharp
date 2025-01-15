@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
-        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload(bool  = default(bool), bool  = default(bool))
+        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload(bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsignbulksendNeedvalidation = default(bool))
         {
-            this.BEzsigntemplatepackageNeedvalidation = ;
-            this.BEzsignbulksendNeedvalidation = ;
+            this.BEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
+            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

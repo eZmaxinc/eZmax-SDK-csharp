@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignerCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatesignerCreateObjectV1Request(List<EzsigntemplatesignerRequestCompound>  = default(List<EzsigntemplatesignerRequestCompound>))
+        /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
+        public EzsigntemplatesignerCreateObjectV1Request(List<EzsigntemplatesignerRequestCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigntemplatesigner" is required (not null)
+            if (aObjEzsigntemplatesigner == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatesignerCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsigntemplatesigner is a required property for EzsigntemplatesignerCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsigntemplatesigner = ;
+            this.AObjEzsigntemplatesigner = aObjEzsigntemplatesigner;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

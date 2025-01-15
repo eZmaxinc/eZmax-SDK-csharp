@@ -35,16 +35,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroupMember" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public ScimGroupMember(string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="value">value.</param>
+        /// <param name="display">display.</param>
+        /// <param name="type">type.</param>
+        /// <param name="varRef">varRef.</param>
+        public ScimGroupMember(string value = default(string), string display = default(string), string type = default(string), string varRef = default(string))
         {
-            this.Value = ;
-            this.Display = ;
-            this.Type = ;
-            this.Ref = ;
+            this.Value = value;
+            this.Display = display;
+            this.Type = type;
+            this.Ref = varRef;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

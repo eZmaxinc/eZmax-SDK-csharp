@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CountryGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Country autocomplete element response. (required).</param>
-        public CountryGetAutocompleteV2ResponseMPayload(List<CountryAutocompleteElementResponse>  = default(List<CountryAutocompleteElementResponse>))
+        /// <param name="aObjCountry">An array of Country autocomplete element response. (required).</param>
+        public CountryGetAutocompleteV2ResponseMPayload(List<CountryAutocompleteElementResponse> aObjCountry = default(List<CountryAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjCountry" is required (not null)
+            if (aObjCountry == null)
             {
-                throw new ArgumentNullException(" is a required property for CountryGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjCountry is a required property for CountryGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjCountry = ;
+            this.AObjCountry = aObjCountry;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

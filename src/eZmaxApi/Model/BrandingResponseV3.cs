@@ -52,38 +52,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingResponseV3" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Branding (required).</param>
-        /// <param name="">The unique ID of the Email.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Description of the Branding in the language of the requester (required).</param>
-        /// <param name="">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
-        /// <param name="">The email address..</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The primary color. This is a RGB color converted into integer (required).</param>
-        /// <param name="">Whether the Branding is active or not (required).</param>
-        public BrandingResponseV3(int  = default(int), int  = default(int), MultilingualBrandingDescription  = default(MultilingualBrandingDescription), string  = default(string), string  = default(string), string  = default(string), FieldEBrandingLogo  = default(FieldEBrandingLogo), FieldEBrandingAlignlogo  = default(FieldEBrandingAlignlogo), int  = default(int), bool  = default(bool))
+        /// <param name="pkiBrandingID">The unique ID of the Branding (required).</param>
+        /// <param name="fkiEmailID">The unique ID of the Email.</param>
+        /// <param name="objBrandingDescription">objBrandingDescription (required).</param>
+        /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
+        /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="eBrandingLogo">eBrandingLogo (required).</param>
+        /// <param name="eBrandingAlignlogo">eBrandingAlignlogo (required).</param>
+        /// <param name="iBrandingColor">The primary color. This is a RGB color converted into integer (required).</param>
+        /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
+        public BrandingResponseV3(int pkiBrandingID = default(int), int fkiEmailID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), string sBrandingDescriptionX = default(string), string sBrandingName = default(string), string sEmailAddress = default(string), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), FieldEBrandingAlignlogo eBrandingAlignlogo = default(FieldEBrandingAlignlogo), int iBrandingColor = default(int), bool bBrandingIsactive = default(bool))
         {
-            this.PkiBrandingID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiBrandingID = pkiBrandingID;
+            // to ensure "objBrandingDescription" is required (not null)
+            if (objBrandingDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingResponseV3 and cannot be null");
+                throw new ArgumentNullException("objBrandingDescription is a required property for BrandingResponseV3 and cannot be null");
             }
-            this.ObjBrandingDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjBrandingDescription = objBrandingDescription;
+            // to ensure "sBrandingDescriptionX" is required (not null)
+            if (sBrandingDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingResponseV3 and cannot be null");
+                throw new ArgumentNullException("sBrandingDescriptionX is a required property for BrandingResponseV3 and cannot be null");
             }
-            this.SBrandingDescriptionX = ;
-            this.EBrandingLogo = ;
-            this.EBrandingAlignlogo = ;
-            this.IBrandingColor = ;
-            this.BBrandingIsactive = ;
-            this.FkiEmailID = ;
-            this.SBrandingName = ;
-            this.SEmailAddress = ;
+            this.SBrandingDescriptionX = sBrandingDescriptionX;
+            this.EBrandingLogo = eBrandingLogo;
+            this.EBrandingAlignlogo = eBrandingAlignlogo;
+            this.IBrandingColor = iBrandingColor;
+            this.BBrandingIsactive = bBrandingIsactive;
+            this.FkiEmailID = fkiEmailID;
+            this.SBrandingName = sBrandingName;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -184,24 +184,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBrandingID (int) minimum
             if (this.PkiBrandingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
+                yield return new ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
             }
 
             // FkiEmailID (int) maximum
             if (this.FkiEmailID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
+                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
             }
 
             // FkiEmailID (int) minimum
             if (this.FkiEmailID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
+                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
             }
 
             if (this.SBrandingName != null) {
@@ -225,13 +225,13 @@ namespace eZmaxApi.Model
             // IBrandingColor (int) maximum
             if (this.IBrandingColor > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
             }
 
             // IBrandingColor (int) minimum
             if (this.IBrandingColor < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
+                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
             }
 
             yield break;

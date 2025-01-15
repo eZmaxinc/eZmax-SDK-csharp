@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public FranchisereferalincomeCreateObjectV2Request(List<FranchisereferalincomeRequestCompound>  = default(List<FranchisereferalincomeRequestCompound>))
+        /// <param name="aObjFranchisereferalincome">aObjFranchisereferalincome (required).</param>
+        public FranchisereferalincomeCreateObjectV2Request(List<FranchisereferalincomeRequestCompound> aObjFranchisereferalincome = default(List<FranchisereferalincomeRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjFranchisereferalincome" is required (not null)
+            if (aObjFranchisereferalincome == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException("aObjFranchisereferalincome is a required property for FranchisereferalincomeCreateObjectV2Request and cannot be null");
             }
-            this.AObjFranchisereferalincome = ;
+            this.AObjFranchisereferalincome = aObjFranchisereferalincome;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

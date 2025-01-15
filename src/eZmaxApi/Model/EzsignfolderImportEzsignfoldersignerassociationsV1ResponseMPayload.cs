@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsignfoldersignerassociationID">aPkiEzsignfoldersignerassociationID (required).</param>
+        public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload(List<int> aPkiEzsignfoldersignerassociationID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsignfoldersignerassociationID" is required (not null)
+            if (aPkiEzsignfoldersignerassociationID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsignfoldersignerassociationID is a required property for EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsignfoldersignerassociationID = ;
+            this.APkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

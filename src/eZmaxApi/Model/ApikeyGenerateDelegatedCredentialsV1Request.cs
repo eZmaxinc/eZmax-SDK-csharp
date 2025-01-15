@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGenerateDelegatedCredentialsV1Request" /> class.
         /// </summary>
-        /// <param name="">The number of minute before key is no longer active (required).</param>
-        public ApikeyGenerateDelegatedCredentialsV1Request(int  = default(int))
+        /// <param name="iExpirationMinutes">The number of minute before key is no longer active (required).</param>
+        public ApikeyGenerateDelegatedCredentialsV1Request(int iExpirationMinutes = default(int))
         {
-            this.IExpirationMinutes = ;
+            this.IExpirationMinutes = iExpirationMinutes;
         }
 
         /// <summary>
@@ -80,18 +80,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // IExpirationMinutes (int) maximum
             if (this.IExpirationMinutes > (int)180)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IExpirationMinutes, must be a value less than or equal to 180.", new [] { "IExpirationMinutes" });
+                yield return new ValidationResult("Invalid value for IExpirationMinutes, must be a value less than or equal to 180.", new [] { "IExpirationMinutes" });
             }
 
             // IExpirationMinutes (int) minimum
             if (this.IExpirationMinutes < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IExpirationMinutes, must be a value greater than or equal to 1.", new [] { "IExpirationMinutes" });
+                yield return new ValidationResult("Invalid value for IExpirationMinutes, must be a value greater than or equal to 1.", new [] { "IExpirationMinutes" });
             }
 
             yield break;

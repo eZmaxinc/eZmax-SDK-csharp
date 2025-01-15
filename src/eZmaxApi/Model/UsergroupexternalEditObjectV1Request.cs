@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UsergroupexternalEditObjectV1Request(UsergroupexternalRequestCompound  = default(UsergroupexternalRequestCompound))
+        /// <param name="objUsergroupexternal">objUsergroupexternal (required).</param>
+        public UsergroupexternalEditObjectV1Request(UsergroupexternalRequestCompound objUsergroupexternal = default(UsergroupexternalRequestCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUsergroupexternal" is required (not null)
+            if (objUsergroupexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupexternalEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objUsergroupexternal is a required property for UsergroupexternalEditObjectV1Request and cannot be null");
             }
-            this.ObjUsergroupexternal = ;
+            this.ObjUsergroupexternal = objUsergroupexternal;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

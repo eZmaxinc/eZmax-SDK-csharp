@@ -46,26 +46,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorEzsignformValidation" /> class.
         /// </summary>
-        /// <param name="">The message giving details about the error (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">More error message detail.</param>
-        /// <param name=""> (required).</param>
-        public CommonResponseErrorEzsignformValidation(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode), List<string>  = default(List<string>), List<CustomEzsignformfielderrorResponse>  = default(List<CustomEzsignformfielderrorResponse>))
+        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
+        /// <param name="eErrorCode">eErrorCode (required).</param>
+        /// <param name="aSErrorMessagedetail">More error message detail.</param>
+        /// <param name="aObjEzsignformfielderror">aObjEzsignformfielderror (required).</param>
+        public CommonResponseErrorEzsignformValidation(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>), List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = default(List<CustomEzsignformfielderrorResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sErrorMessage" is required (not null)
+            if (sErrorMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
+                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
             }
-            this.SErrorMessage = ;
-            this.EErrorCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SErrorMessage = sErrorMessage;
+            this.EErrorCode = eErrorCode;
+            // to ensure "aObjEzsignformfielderror" is required (not null)
+            if (aObjEzsignformfielderror == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
+                throw new ArgumentNullException("aObjEzsignformfielderror is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
             }
-            this.AObjEzsignformfielderror = ;
-            this.ASErrorMessagedetail = ;
+            this.AObjEzsignformfielderror = aObjEzsignformfielderror;
+            this.ASErrorMessagedetail = aSErrorMessagedetail;
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SErrorMessage != null) {
                 // SErrorMessage (string) pattern

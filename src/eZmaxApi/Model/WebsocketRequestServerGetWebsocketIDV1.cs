@@ -61,10 +61,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketRequestServerGetWebsocketIDV1" /> class.
         /// </summary>
-        /// <param name="">The Type of message (required).</param>
-        public WebsocketRequestServerGetWebsocketIDV1(EWebsocketMessagetypeEnum  = default(EWebsocketMessagetypeEnum))
+        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
+        public WebsocketRequestServerGetWebsocketIDV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum))
         {
-            this.EWebsocketMessagetype = ;
+            this.EWebsocketMessagetype = eWebsocketMessagetype;
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

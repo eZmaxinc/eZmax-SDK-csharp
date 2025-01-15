@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public WebhookCreateObjectV2Request(List<WebhookRequestCompound>  = default(List<WebhookRequestCompound>))
+        /// <param name="aObjWebhook">aObjWebhook (required).</param>
+        public WebhookCreateObjectV2Request(List<WebhookRequestCompound> aObjWebhook = default(List<WebhookRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjWebhook" is required (not null)
+            if (aObjWebhook == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException("aObjWebhook is a required property for WebhookCreateObjectV2Request and cannot be null");
             }
-            this.AObjWebhook = ;
+            this.AObjWebhook = aObjWebhook;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentPatchObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatedocumentPatchObjectV1Request(EzsigntemplatedocumentRequestPatch  = default(EzsigntemplatedocumentRequestPatch))
+        /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument (required).</param>
+        public EzsigntemplatedocumentPatchObjectV1Request(EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument = default(EzsigntemplatedocumentRequestPatch))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplatedocument" is required (not null)
+            if (objEzsigntemplatedocument == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentPatchObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplatedocument is a required property for EzsigntemplatedocumentPatchObjectV1Request and cannot be null");
             }
-            this.ObjEzsigntemplatedocument = ;
+            this.ObjEzsigntemplatedocument = objEzsigntemplatedocument;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

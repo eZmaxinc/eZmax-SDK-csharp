@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupmembershipDeleteObjectV1Response</returns>
-        UsergroupmembershipDeleteObjectV1Response UsergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse UsergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Usergroupmembership
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupmembershipDeleteObjectV1Response</returns>
-        ApiResponse<UsergroupmembershipDeleteObjectV1Response> UsergroupmembershipDeleteObjectV1WithHttpInfo(int pkiUsergroupmembershipID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> UsergroupmembershipDeleteObjectV1WithHttpInfo(int pkiUsergroupmembershipID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Usergroupmembership
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupmembershipEditObjectV1Response</returns>
-        UsergroupmembershipEditObjectV1Response UsergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse UsergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Usergroupmembership
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupmembershipEditObjectV1Response</returns>
-        ApiResponse<UsergroupmembershipEditObjectV1Response> UsergroupmembershipEditObjectV1WithHttpInfo(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> UsergroupmembershipEditObjectV1WithHttpInfo(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Usergroupmembership
         /// </summary>
@@ -132,7 +132,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsergroupmembershipCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<UsergroupmembershipCreateObjectV1Response> UsergroupmembershipCreateObjectV1Async(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UsergroupmembershipCreateObjectV1Response> UsergroupmembershipCreateObjectV1Async(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Usergroupmembership
@@ -145,7 +145,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsergroupmembershipCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipCreateObjectV1Response>> UsergroupmembershipCreateObjectV1WithHttpInfoAsync(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipCreateObjectV1Response>> UsergroupmembershipCreateObjectV1WithHttpInfoAsync(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Usergroupmembership
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupmembershipDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<UsergroupmembershipDeleteObjectV1Response> UsergroupmembershipDeleteObjectV1Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> UsergroupmembershipDeleteObjectV1Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Usergroupmembership
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupmembershipDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipDeleteObjectV1Response>> UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Usergroupmembership
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupmembershipEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<UsergroupmembershipEditObjectV1Response> UsergroupmembershipEditObjectV1Async(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> UsergroupmembershipEditObjectV1Async(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Usergroupmembership
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupmembershipEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipEditObjectV1Response>> UsergroupmembershipEditObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupmembershipEditObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Usergroupmembership
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsergroupmembershipGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<UsergroupmembershipGetObjectV2Response> UsergroupmembershipGetObjectV2Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UsergroupmembershipGetObjectV2Response> UsergroupmembershipGetObjectV2Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Usergroupmembership
@@ -222,7 +222,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsergroupmembershipGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipGetObjectV2Response>> UsergroupmembershipGetObjectV2WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UsergroupmembershipGetObjectV2Response>> UsergroupmembershipGetObjectV2WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsergroupmembershipCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupmembershipCreateObjectV1Response> UsergroupmembershipCreateObjectV1Async(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UsergroupmembershipCreateObjectV1Response> UsergroupmembershipCreateObjectV1Async(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UsergroupmembershipCreateObjectV1Response> localVarResponse = await UsergroupmembershipCreateObjectV1WithHttpInfoAsync(usergroupmembershipCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -441,7 +441,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsergroupmembershipCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipCreateObjectV1Response>> UsergroupmembershipCreateObjectV1WithHttpInfoAsync(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipCreateObjectV1Response>> UsergroupmembershipCreateObjectV1WithHttpInfoAsync(UsergroupmembershipCreateObjectV1Request usergroupmembershipCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'usergroupmembershipCreateObjectV1Request' is set
             if (usergroupmembershipCreateObjectV1Request == null)
@@ -505,10 +505,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupmembershipDeleteObjectV1Response</returns>
-        public UsergroupmembershipDeleteObjectV1Response UsergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse UsergroupmembershipDeleteObjectV1(int pkiUsergroupmembershipID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UsergroupmembershipDeleteObjectV1Response> localVarResponse = UsergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID);
             return localVarResponse.Data;
         }
 
@@ -518,8 +518,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupmembershipDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<UsergroupmembershipDeleteObjectV1Response> UsergroupmembershipDeleteObjectV1WithHttpInfo(int pkiUsergroupmembershipID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupmembershipDeleteObjectV1WithHttpInfo(int pkiUsergroupmembershipID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<UsergroupmembershipDeleteObjectV1Response>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupmembershipDeleteObjectV1", localVarResponse);
@@ -575,10 +575,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupmembershipDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupmembershipDeleteObjectV1Response> UsergroupmembershipDeleteObjectV1Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> UsergroupmembershipDeleteObjectV1Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UsergroupmembershipDeleteObjectV1Response> localVarResponse = await UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(pkiUsergroupmembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(pkiUsergroupmembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -589,8 +589,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupmembershipDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipDeleteObjectV1Response>> UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupmembershipDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -627,7 +627,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<UsergroupmembershipDeleteObjectV1Response>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +648,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupmembershipEditObjectV1Response</returns>
-        public UsergroupmembershipEditObjectV1Response UsergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse UsergroupmembershipEditObjectV1(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UsergroupmembershipEditObjectV1Response> localVarResponse = UsergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +662,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupmembershipID"></param>
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupmembershipEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<UsergroupmembershipEditObjectV1Response> UsergroupmembershipEditObjectV1WithHttpInfo(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupmembershipEditObjectV1WithHttpInfo(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'usergroupmembershipEditObjectV1Request' is set
             if (usergroupmembershipEditObjectV1Request == null)
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<UsergroupmembershipEditObjectV1Response>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupmembershipEditObjectV1", localVarResponse);
@@ -728,10 +728,10 @@ namespace eZmaxApi.Api
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupmembershipEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupmembershipEditObjectV1Response> UsergroupmembershipEditObjectV1Async(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> UsergroupmembershipEditObjectV1Async(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UsergroupmembershipEditObjectV1Response> localVarResponse = await UsergroupmembershipEditObjectV1WithHttpInfoAsync(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupmembershipEditObjectV1WithHttpInfoAsync(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +743,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupmembershipEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupmembershipEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipEditObjectV1Response>> UsergroupmembershipEditObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupmembershipEditObjectV1WithHttpInfoAsync(int pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'usergroupmembershipEditObjectV1Request' is set
             if (usergroupmembershipEditObjectV1Request == null)
@@ -789,7 +789,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<UsergroupmembershipEditObjectV1Response>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/usergroupmembership/{pkiUsergroupmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -880,7 +880,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsergroupmembershipGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupmembershipGetObjectV2Response> UsergroupmembershipGetObjectV2Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UsergroupmembershipGetObjectV2Response> UsergroupmembershipGetObjectV2Async(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<UsergroupmembershipGetObjectV2Response> localVarResponse = await UsergroupmembershipGetObjectV2WithHttpInfoAsync(pkiUsergroupmembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -894,7 +894,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsergroupmembershipGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipGetObjectV2Response>> UsergroupmembershipGetObjectV2WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupmembershipGetObjectV2Response>> UsergroupmembershipGetObjectV2WithHttpInfoAsync(int pkiUsergroupmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

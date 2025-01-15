@@ -40,16 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroupmembership.</param>
-        /// <param name="">The unique ID of the Usergroup (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Usergroupexternal.</param>
-        public UsergroupmembershipRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="pkiUsergroupmembershipID">The unique ID of the Usergroupmembership.</param>
+        /// <param name="fkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiUsergroupexternalID">The unique ID of the Usergroupexternal.</param>
+        public UsergroupmembershipRequest(int pkiUsergroupmembershipID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), int fkiUsergroupexternalID = default(int))
         {
-            this.FkiUsergroupID = ;
-            this.PkiUsergroupmembershipID = ;
-            this.FkiUserID = ;
-            this.FkiUsergroupexternalID = ;
+            this.FkiUsergroupID = fkiUsergroupID;
+            this.PkiUsergroupmembershipID = pkiUsergroupmembershipID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupexternalID = fkiUsergroupexternalID;
         }
 
         /// <summary>
@@ -114,48 +114,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupmembershipID (int) maximum
             if (this.PkiUsergroupmembershipID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupmembershipID" });
             }
 
             // PkiUsergroupmembershipID (int) minimum
             if (this.PkiUsergroupmembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupmembershipID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUsergroupexternalID (int) maximum
             if (this.FkiUsergroupexternalID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "FkiUsergroupexternalID" });
             }
 
             // FkiUsergroupexternalID (int) minimum
             if (this.FkiUsergroupexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupexternalID" });
             }
 
             yield break;

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetUsergroupsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UserGetUsergroupsV1ResponseMPayload(List<UsergroupResponseCompound>  = default(List<UsergroupResponseCompound>))
+        /// <param name="aObjUsergroup">aObjUsergroup (required).</param>
+        public UserGetUsergroupsV1ResponseMPayload(List<UsergroupResponseCompound> aObjUsergroup = default(List<UsergroupResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjUsergroup" is required (not null)
+            if (aObjUsergroup == null)
             {
-                throw new ArgumentNullException(" is a required property for UserGetUsergroupsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjUsergroup is a required property for UserGetUsergroupsV1ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroup = ;
+            this.AObjUsergroup = aObjUsergroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

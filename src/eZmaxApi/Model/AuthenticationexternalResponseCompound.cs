@@ -46,30 +46,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Authenticationexternal (required).</param>
-        /// <param name="">The description of the Authenticationexternal (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the Authenticationexternal has been connected or not.</param>
-        /// <param name="">The url to authorize the Authenticationexternal.</param>
-        /// <param name=""> (required).</param>
-        public AuthenticationexternalResponseCompound(int  = default(int), string  = default(string), FieldEAuthenticationexternalType  = default(FieldEAuthenticationexternalType), bool  = default(bool), string  = default(string), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal (required).</param>
+        /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal (required).</param>
+        /// <param name="eAuthenticationexternalType">eAuthenticationexternalType (required).</param>
+        /// <param name="bAuthenticationexternalConnected">Whether the Authenticationexternal has been connected or not.</param>
+        /// <param name="sAuthenticationexternalAuthorizationurl">The url to authorize the Authenticationexternal.</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public AuthenticationexternalResponseCompound(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), FieldEAuthenticationexternalType eAuthenticationexternalType = default(FieldEAuthenticationexternalType), bool bAuthenticationexternalConnected = default(bool), string sAuthenticationexternalAuthorizationurl = default(string), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiAuthenticationexternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiAuthenticationexternalID = pkiAuthenticationexternalID;
+            // to ensure "sAuthenticationexternalDescription" is required (not null)
+            if (sAuthenticationexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException("sAuthenticationexternalDescription is a required property for AuthenticationexternalResponseCompound and cannot be null");
             }
-            this.SAuthenticationexternalDescription = ;
-            this.EAuthenticationexternalType = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
+            this.EAuthenticationexternalType = eAuthenticationexternalType;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for AuthenticationexternalResponseCompound and cannot be null");
             }
-            this.ObjAudit = ;
-            this.BAuthenticationexternalConnected = ;
-            this.SAuthenticationexternalAuthorizationurl = ;
+            this.ObjAudit = objAudit;
+            this.BAuthenticationexternalConnected = bAuthenticationexternalConnected;
+            this.SAuthenticationexternalAuthorizationurl = sAuthenticationexternalAuthorizationurl;
         }
 
         /// <summary>
@@ -142,18 +142,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAuthenticationexternalID (int) maximum
             if (this.PkiAuthenticationexternalID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
             }
 
             // PkiAuthenticationexternalID (int) minimum
             if (this.PkiAuthenticationexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
             }
 
             if (this.SAuthenticationexternalDescription != null) {

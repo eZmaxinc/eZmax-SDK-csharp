@@ -40,25 +40,25 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigndiscussion.</param>
-        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
-        /// <param name="">The x of the Ezsigndiscussion (required).</param>
-        /// <param name="">The y of the Ezsigndiscussion (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigndiscussionRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), DiscussionRequest  = default(DiscussionRequest))
+        /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion.</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="iEzsigndiscussionPagenumber">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
+        /// <param name="iEzsigndiscussionX">The x of the Ezsigndiscussion (required).</param>
+        /// <param name="iEzsigndiscussionY">The y of the Ezsigndiscussion (required).</param>
+        /// <param name="objDiscussion">objDiscussion (required).</param>
+        public EzsigndiscussionRequestCompound(int pkiEzsigndiscussionID = default(int), int fkiEzsigndocumentID = default(int), int iEzsigndiscussionPagenumber = default(int), int iEzsigndiscussionX = default(int), int iEzsigndiscussionY = default(int), DiscussionRequest objDiscussion = default(DiscussionRequest))
         {
-            this.FkiEzsigndocumentID = ;
-            this.IEzsigndiscussionPagenumber = ;
-            this.IEzsigndiscussionX = ;
-            this.IEzsigndiscussionY = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.IEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
+            this.IEzsigndiscussionX = iEzsigndiscussionX;
+            this.IEzsigndiscussionY = iEzsigndiscussionY;
+            // to ensure "objDiscussion" is required (not null)
+            if (objDiscussion == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndiscussionRequestCompound and cannot be null");
+                throw new ArgumentNullException("objDiscussion is a required property for EzsigndiscussionRequestCompound and cannot be null");
             }
-            this.ObjDiscussion = ;
-            this.PkiEzsigndiscussionID = ;
+            this.ObjDiscussion = objDiscussion;
+            this.PkiEzsigndiscussionID = pkiEzsigndiscussionID;
         }
 
         /// <summary>
@@ -139,48 +139,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigndiscussionID (int) maximum
             if (this.PkiEzsigndiscussionID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigndiscussionID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigndiscussionID" });
             }
 
             // PkiEzsigndiscussionID (int) minimum
             if (this.PkiEzsigndiscussionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndiscussionID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndiscussionID" });
             }
 
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // IEzsigndiscussionX (int) maximum
             if (this.IEzsigndiscussionX > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndiscussionX, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionX" });
+                yield return new ValidationResult("Invalid value for IEzsigndiscussionX, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionX" });
             }
 
             // IEzsigndiscussionX (int) minimum
             if (this.IEzsigndiscussionX < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndiscussionX, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionX" });
+                yield return new ValidationResult("Invalid value for IEzsigndiscussionX, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionX" });
             }
 
             // IEzsigndiscussionY (int) maximum
             if (this.IEzsigndiscussionY > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndiscussionY, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionY" });
+                yield return new ValidationResult("Invalid value for IEzsigndiscussionY, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionY" });
             }
 
             // IEzsigndiscussionY (int) minimum
             if (this.IEzsigndiscussionY < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndiscussionY, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionY" });
+                yield return new ValidationResult("Invalid value for IEzsigndiscussionY, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionY" });
             }
 
             yield break;

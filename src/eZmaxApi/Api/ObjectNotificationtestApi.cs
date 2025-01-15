@@ -67,7 +67,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NotificationtestGetElementsV1Response</returns>
-        System.Threading.Tasks.Task<NotificationtestGetElementsV1Response> NotificationtestGetElementsV1Async(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<NotificationtestGetElementsV1Response> NotificationtestGetElementsV1Async(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Notificationtest&#39;s Elements
@@ -80,7 +80,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NotificationtestGetElementsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificationtestGetElementsV1Response>> NotificationtestGetElementsV1WithHttpInfoAsync(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<NotificationtestGetElementsV1Response>> NotificationtestGetElementsV1WithHttpInfoAsync(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -278,7 +278,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of NotificationtestGetElementsV1Response</returns>
-        public async System.Threading.Tasks.Task<NotificationtestGetElementsV1Response> NotificationtestGetElementsV1Async(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<NotificationtestGetElementsV1Response> NotificationtestGetElementsV1Async(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<NotificationtestGetElementsV1Response> localVarResponse = await NotificationtestGetElementsV1WithHttpInfoAsync(pkiNotificationtestID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -292,7 +292,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NotificationtestGetElementsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotificationtestGetElementsV1Response>> NotificationtestGetElementsV1WithHttpInfoAsync(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotificationtestGetElementsV1Response>> NotificationtestGetElementsV1WithHttpInfoAsync(int pkiNotificationtestID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

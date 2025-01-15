@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Ezsignfoldertype autocomplete element response. (required).</param>
-        public EzsignfoldertypeGetAutocompleteV2ResponseMPayload(List<EzsignfoldertypeAutocompleteElementResponse>  = default(List<EzsignfoldertypeAutocompleteElementResponse>))
+        /// <param name="aObjEzsignfoldertype">An array of Ezsignfoldertype autocomplete element response. (required).</param>
+        public EzsignfoldertypeGetAutocompleteV2ResponseMPayload(List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype = default(List<EzsignfoldertypeAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignfoldertype" is required (not null)
+            if (aObjEzsignfoldertype == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignfoldertype is a required property for EzsignfoldertypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignfoldertype = ;
+            this.AObjEzsignfoldertype = aObjEzsignfoldertype;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

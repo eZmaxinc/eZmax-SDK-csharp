@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzmaxinvoicingEzsigndocumentResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="">The unique ID of the Billingentityinternal..</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The description of the Ezsignfolder (required).</param>
-        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name="">Whether you have access to the Ezsignfolder or not (required).</param>
-        public CustomEzmaxinvoicingEzsigndocumentResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal..</param>
+        /// <param name="sName">sName (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="bEzsignfolderAllowed">Whether you have access to the Ezsignfolder or not (required).</param>
+        public CustomEzmaxinvoicingEzsigndocumentResponse(int fkiEzsignfolderID = default(int), int fkiBillingentityinternalID = default(int), string sName = default(string), string sEzsignfolderDescription = default(string), string sEzsigndocumentName = default(string), bool bEzsignfolderAllowed = default(bool))
         {
-            this.FkiEzsignfolderID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            // to ensure "sName" is required (not null)
+            if (sName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
+                throw new ArgumentNullException("sName is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
             }
-            this.SName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SName = sName;
+            // to ensure "sEzsignfolderDescription" is required (not null)
+            if (sEzsignfolderDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignfolderDescription is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
             }
-            this.SEzsignfolderDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignfolderDescription = sEzsignfolderDescription;
+            // to ensure "sEzsigndocumentName" is required (not null)
+            if (sEzsigndocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentName is a required property for CustomEzmaxinvoicingEzsigndocumentResponse and cannot be null");
             }
-            this.SEzsigndocumentName = ;
-            this.BEzsignfolderAllowed = ;
-            this.FkiBillingentityinternalID = ;
+            this.SEzsigndocumentName = sEzsigndocumentName;
+            this.BEzsignfolderAllowed = bEzsignfolderAllowed;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
         }
 
         /// <summary>
@@ -148,18 +148,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             if (this.SEzsignfolderDescription != null) {

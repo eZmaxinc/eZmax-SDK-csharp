@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignpageconsultv1"></a>
 # **EzsignpageConsultV1**
-> EzsignpageConsultV1Response EzsignpageConsultV1 (int pkiEzsignpageID, Object body)
+> CommonResponse EzsignpageConsultV1 (int pkiEzsignpageID, Object body)
 
 Consult an Ezsignpage
 
@@ -40,7 +40,7 @@ namespace Example
             try
             {
                 // Consult an Ezsignpage
-                EzsignpageConsultV1Response result = apiInstance.EzsignpageConsultV1(pkiEzsignpageID, body);
+                CommonResponse result = apiInstance.EzsignpageConsultV1(pkiEzsignpageID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Consult an Ezsignpage
-    ApiResponse<EzsignpageConsultV1Response> response = apiInstance.EzsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -83,7 +83,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignpageConsultV1Response**](EzsignpageConsultV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

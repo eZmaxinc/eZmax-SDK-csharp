@@ -33,8 +33,8 @@ Name | Type | Description | Notes
 **SEzsignsignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **EEzsignsignatureDependencyrequirement** | **FieldEEzsignsignatureDependencyrequirement** |  | [optional] 
 **BEzsignsignatureCustomdate** | **bool** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
-**AObjEzsignsignaturecustomdate** | [**List&lt;EzsignsignaturecustomdateRequestCompound&gt;**](EzsignsignaturecustomdateRequestCompound.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
-**AObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequestCompound.md) |  | [optional] 
+**AObjEzsignsignaturecustomdate** | [**List&lt;EzsignsignaturecustomdateRequestCompound&gt;**](EzsignsignaturecustomdateRequest.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
+**AObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

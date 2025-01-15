@@ -52,36 +52,36 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ColleagueRequestV2" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Colleague.</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">Whether the email can be used by the cloning user in Ezsign (required).</param>
-        /// <param name="">Whether the cloning user has access to the financial (required).</param>
-        /// <param name="">Whether the cloning user has access to the cloned user email to send communications (required).</param>
-        /// <param name="">Whether the cloning user has access to the attachment (required).</param>
-        /// <param name="">Whether the cloning user has access to canafe (required).</param>
-        /// <param name="">Whether the cloning user copies the permission of the cloned user (required).</param>
-        /// <param name="">Whether if the cloning user has access to the completed folders in real estate (required).</param>
-        /// <param name="">The from of the Colleague.</param>
-        /// <param name="">The to of the Colleague.</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public ColleagueRequestV2(int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), string  = default(string), string  = default(string), FieldEColleagueEzsign  = default(FieldEColleagueEzsign), FieldEColleagueRealestateinprogess  = default(FieldEColleagueRealestateinprogess))
+        /// <param name="pkiColleagueID">The unique ID of the Colleague.</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiUserIDColleague">The unique ID of the User (required).</param>
+        /// <param name="bColleagueEzsignemail">Whether the email can be used by the cloning user in Ezsign (required).</param>
+        /// <param name="bColleagueFinancial">Whether the cloning user has access to the financial (required).</param>
+        /// <param name="bColleagueUsecloneemail">Whether the cloning user has access to the cloned user email to send communications (required).</param>
+        /// <param name="bColleagueAttachment">Whether the cloning user has access to the attachment (required).</param>
+        /// <param name="bColleagueCanafe">Whether the cloning user has access to canafe (required).</param>
+        /// <param name="bColleaguePermission">Whether the cloning user copies the permission of the cloned user (required).</param>
+        /// <param name="bColleagueRealestatecompleted">Whether if the cloning user has access to the completed folders in real estate (required).</param>
+        /// <param name="dtColleagueFrom">The from of the Colleague.</param>
+        /// <param name="dtColleagueTo">The to of the Colleague.</param>
+        /// <param name="eColleagueEzsign">eColleagueEzsign (required).</param>
+        /// <param name="eColleagueRealestateinprogress">eColleagueRealestateinprogress (required).</param>
+        public ColleagueRequestV2(int pkiColleagueID = default(int), int fkiUserID = default(int), int fkiUserIDColleague = default(int), bool bColleagueEzsignemail = default(bool), bool bColleagueFinancial = default(bool), bool bColleagueUsecloneemail = default(bool), bool bColleagueAttachment = default(bool), bool bColleagueCanafe = default(bool), bool bColleaguePermission = default(bool), bool bColleagueRealestatecompleted = default(bool), string dtColleagueFrom = default(string), string dtColleagueTo = default(string), FieldEColleagueEzsign eColleagueEzsign = default(FieldEColleagueEzsign), FieldEColleagueRealestateinprogess eColleagueRealestateinprogress = default(FieldEColleagueRealestateinprogess))
         {
-            this.FkiUserID = ;
-            this.FkiUserIDColleague = ;
-            this.BColleagueEzsignemail = ;
-            this.BColleagueFinancial = ;
-            this.BColleagueUsecloneemail = ;
-            this.BColleagueAttachment = ;
-            this.BColleagueCanafe = ;
-            this.BColleaguePermission = ;
-            this.BColleagueRealestatecompleted = ;
-            this.EColleagueEzsign = ;
-            this.EColleagueRealestateinprogress = ;
-            this.PkiColleagueID = ;
-            this.DtColleagueFrom = ;
-            this.DtColleagueTo = ;
+            this.FkiUserID = fkiUserID;
+            this.FkiUserIDColleague = fkiUserIDColleague;
+            this.BColleagueEzsignemail = bColleagueEzsignemail;
+            this.BColleagueFinancial = bColleagueFinancial;
+            this.BColleagueUsecloneemail = bColleagueUsecloneemail;
+            this.BColleagueAttachment = bColleagueAttachment;
+            this.BColleagueCanafe = bColleagueCanafe;
+            this.BColleaguePermission = bColleaguePermission;
+            this.BColleagueRealestatecompleted = bColleagueRealestatecompleted;
+            this.EColleagueEzsign = eColleagueEzsign;
+            this.EColleagueRealestateinprogress = eColleagueRealestateinprogress;
+            this.PkiColleagueID = pkiColleagueID;
+            this.DtColleagueFrom = dtColleagueFrom;
+            this.DtColleagueTo = dtColleagueTo;
         }
 
         /// <summary>
@@ -220,30 +220,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiColleagueID (int) maximum
             if (this.PkiColleagueID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiColleagueID, must be a value less than or equal to 65535.", new [] { "PkiColleagueID" });
+                yield return new ValidationResult("Invalid value for PkiColleagueID, must be a value less than or equal to 65535.", new [] { "PkiColleagueID" });
             }
 
             // PkiColleagueID (int) minimum
             if (this.PkiColleagueID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiColleagueID, must be a value greater than or equal to 0.", new [] { "PkiColleagueID" });
+                yield return new ValidationResult("Invalid value for PkiColleagueID, must be a value greater than or equal to 0.", new [] { "PkiColleagueID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiUserIDColleague (int) minimum
             if (this.FkiUserIDColleague < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDColleague, must be a value greater than or equal to 0.", new [] { "FkiUserIDColleague" });
+                yield return new ValidationResult("Invalid value for FkiUserIDColleague, must be a value greater than or equal to 0.", new [] { "FkiUserIDColleague" });
             }
 
             if (this.DtColleagueFrom != null) {

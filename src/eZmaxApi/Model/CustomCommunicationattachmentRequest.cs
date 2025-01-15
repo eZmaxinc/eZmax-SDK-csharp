@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCommunicationattachmentRequest" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public CustomCommunicationattachmentRequest(CommunicationattachmentRequestCompound  = default(CommunicationattachmentRequestCompound), CommonFile  = default(CommonFile))
+        /// <param name="objCommunicationattachment">objCommunicationattachment.</param>
+        /// <param name="objCommunicationexternalattachment">objCommunicationexternalattachment.</param>
+        public CustomCommunicationattachmentRequest(CommunicationattachmentRequestCompound objCommunicationattachment = default(CommunicationattachmentRequestCompound), CommonFile objCommunicationexternalattachment = default(CommonFile))
         {
-            this.ObjCommunicationattachment = ;
-            this.ObjCommunicationexternalattachment = ;
+            this.ObjCommunicationattachment = objCommunicationattachment;
+            this.ObjCommunicationexternalattachment = objCommunicationexternalattachment;
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

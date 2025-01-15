@@ -99,7 +99,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityexternalGenerateFederationTokenV1Response</returns>
-        System.Threading.Tasks.Task<BillingentityexternalGenerateFederationTokenV1Response> BillingentityexternalGenerateFederationTokenV1Async(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityexternalGenerateFederationTokenV1Response> BillingentityexternalGenerateFederationTokenV1Async(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Generate a federation token
@@ -113,7 +113,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityexternalGenerateFederationTokenV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityexternalGenerateFederationTokenV1Response>> BillingentityexternalGenerateFederationTokenV1WithHttpInfoAsync(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityexternalGenerateFederationTokenV1Response>> BillingentityexternalGenerateFederationTokenV1WithHttpInfoAsync(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Billingentityexternals and IDs
         /// </summary>
@@ -128,7 +128,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityexternalGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<BillingentityexternalGetAutocompleteV2Response> BillingentityexternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BillingentityexternalGetAutocompleteV2Response> BillingentityexternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Billingentityexternals and IDs
@@ -144,7 +144,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityexternalGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BillingentityexternalGetAutocompleteV2Response>> BillingentityexternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BillingentityexternalGetAutocompleteV2Response>> BillingentityexternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -353,7 +353,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityexternalGenerateFederationTokenV1Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityexternalGenerateFederationTokenV1Response> BillingentityexternalGenerateFederationTokenV1Async(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityexternalGenerateFederationTokenV1Response> BillingentityexternalGenerateFederationTokenV1Async(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityexternalGenerateFederationTokenV1Response> localVarResponse = await BillingentityexternalGenerateFederationTokenV1WithHttpInfoAsync(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -368,7 +368,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityexternalGenerateFederationTokenV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityexternalGenerateFederationTokenV1Response>> BillingentityexternalGenerateFederationTokenV1WithHttpInfoAsync(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityexternalGenerateFederationTokenV1Response>> BillingentityexternalGenerateFederationTokenV1WithHttpInfoAsync(int pkiBillingentityexternalID, BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'billingentityexternalGenerateFederationTokenV1Request' is set
             if (billingentityexternalGenerateFederationTokenV1Request == null)
@@ -531,7 +531,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BillingentityexternalGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<BillingentityexternalGetAutocompleteV2Response> BillingentityexternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BillingentityexternalGetAutocompleteV2Response> BillingentityexternalGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<BillingentityexternalGetAutocompleteV2Response> localVarResponse = await BillingentityexternalGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -548,7 +548,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BillingentityexternalGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityexternalGetAutocompleteV2Response>> BillingentityexternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityexternalGetAutocompleteV2Response>> BillingentityexternalGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)

@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcolumn" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Reportcolumn width in pixels (required).</param>
-        public CommonReportcolumn(CommonReportcellstyle  = default(CommonReportcellstyle), int  = default(int))
+        /// <param name="objReportcellstyleDefault">objReportcellstyleDefault (required).</param>
+        /// <param name="iReportcolumnWidth">The Reportcolumn width in pixels (required).</param>
+        public CommonReportcolumn(CommonReportcellstyle objReportcellstyleDefault = default(CommonReportcellstyle), int iReportcolumnWidth = default(int))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objReportcellstyleDefault" is required (not null)
+            if (objReportcellstyleDefault == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportcolumn and cannot be null");
+                throw new ArgumentNullException("objReportcellstyleDefault is a required property for CommonReportcolumn and cannot be null");
             }
-            this.ObjReportcellstyleDefault = ;
-            this.IReportcolumnWidth = ;
+            this.ObjReportcellstyleDefault = objReportcellstyleDefault;
+            this.IReportcolumnWidth = iReportcolumnWidth;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

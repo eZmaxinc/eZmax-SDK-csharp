@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1MPayload" /> class.
         /// </summary>
-        /// <param name="">The Unique ID of the Websocket Connection (required).</param>
-        public WebsocketResponseGetWebsocketIDV1MPayload(string  = default(string))
+        /// <param name="sWebsocketID">The Unique ID of the Websocket Connection (required).</param>
+        public WebsocketResponseGetWebsocketIDV1MPayload(string sWebsocketID = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sWebsocketID" is required (not null)
+            if (sWebsocketID == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseGetWebsocketIDV1MPayload and cannot be null");
+                throw new ArgumentNullException("sWebsocketID is a required property for WebsocketResponseGetWebsocketIDV1MPayload and cannot be null");
             }
-            this.SWebsocketID = ;
+            this.SWebsocketID = sWebsocketID;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SWebsocketID != null) {
                 // SWebsocketID (string) pattern

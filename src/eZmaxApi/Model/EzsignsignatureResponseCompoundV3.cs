@@ -82,95 +82,95 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureResponseCompoundV3" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsignature (required).</param>
-        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="">The unique ID of the Ezsignsigningreason.</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The description of the Ezsignsigningreason in the language of the requester.</param>
-        /// <param name="">The page number in the Ezsigndocument (required).</param>
-        /// <param name="">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
-        /// <param name="">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
-        /// <param name="">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
-        /// <param name="">The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth..</param>
-        /// <param name="">The step when the Ezsignsigner will be invited to sign (required).</param>
-        /// <param name="">The step when the Ezsignsigner will be invited to sign.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments.</param>
-        /// <param name="">The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType &#x3D; Signature..</param>
-        /// <param name="">Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType &#x3D; Signature..</param>
-        /// <param name="">Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments, Text or Textarea..</param>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation.</param>
-        /// <param name="">The date the Ezsignsignature was signed.</param>
-        /// <param name="">The count of Ezsignsignatureattachment.</param>
-        /// <param name="">The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**.</param>
-        /// <param name="">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
-        /// <param name="">.</param>
-        /// <param name="">Description of validation rule. Show by signatory..</param>
-        /// <param name="">.</param>
-        /// <param name="">The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |.</param>
-        /// <param name="">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignsignatureResponseCompoundV3(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEEzsignsignatureType  = default(FieldEEzsignsignatureType), string  = default(string), FieldEEzsignsignatureTooltipposition?  = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont?  = default(FieldEEzsignsignatureFont?), int  = default(int), string  = default(string), FieldEEzsignsignatureAttachmentnamesource?  = default(FieldEEzsignsignatureAttachmentnamesource?), FieldEEzsignsignatureConsultationtrigger?  = default(FieldEEzsignsignatureConsultationtrigger?), bool  = default(bool), bool  = default(bool), bool  = default(bool), int  = default(int), string  = default(string), int  = default(int), string  = default(string), int  = default(int), EnumTextvalidation?  = default(EnumTextvalidation?), string  = default(string), FieldEEzsignsignatureDependencyrequirement?  = default(FieldEEzsignsignatureDependencyrequirement?), string  = default(string), string  = default(string), CustomContactNameResponse  = default(CustomContactNameResponse), CustomContactNameResponse  = default(CustomContactNameResponse), SignatureResponseCompound  = default(SignatureResponseCompound), bool  = default(bool), List<EzsignsignaturecustomdateResponseCompoundV2>  = default(List<EzsignsignaturecustomdateResponseCompoundV2>), CustomCreditcardtransactionResponse  = default(CustomCreditcardtransactionResponse), List<EzsignelementdependencyResponseCompound>  = default(List<EzsignelementdependencyResponseCompound>))
+        /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature (required).</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
+        /// <param name="fkiFontID">The unique ID of the Font.</param>
+        /// <param name="sEzsignsigningreasonDescriptionX">The description of the Ezsignsigningreason in the language of the requester.</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
+        /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
+        /// <param name="iEzsignsignatureHeight">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
+        /// <param name="iEzsignsignatureWidth">The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth..</param>
+        /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
+        /// <param name="iEzsignsignatureStepadjusted">The step when the Ezsignsigner will be invited to sign.</param>
+        /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
+        /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
+        /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
+        /// <param name="eEzsignsignatureFont">eEzsignsignatureFont.</param>
+        /// <param name="iEzsignsignatureValidationstep">The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments.</param>
+        /// <param name="sEzsignsignatureAttachmentdescription">The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments.</param>
+        /// <param name="eEzsignsignatureAttachmentnamesource">eEzsignsignatureAttachmentnamesource.</param>
+        /// <param name="eEzsignsignatureConsultationtrigger">eEzsignsignatureConsultationtrigger.</param>
+        /// <param name="bEzsignsignatureHandwritten">Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType &#x3D; Signature..</param>
+        /// <param name="bEzsignsignatureReason">Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType &#x3D; Signature..</param>
+        /// <param name="bEzsignsignatureRequired">Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments, Text or Textarea..</param>
+        /// <param name="fkiEzsignfoldersignerassociationIDValidation">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="dtEzsignsignatureDate">The date the Ezsignsignature was signed.</param>
+        /// <param name="iEzsignsignatureattachmentCount">The count of Ezsignsignatureattachment.</param>
+        /// <param name="sEzsignsignatureDescription">The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**.</param>
+        /// <param name="iEzsignsignatureMaxlength">The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**.</param>
+        /// <param name="eEzsignsignatureTextvalidation">eEzsignsignatureTextvalidation.</param>
+        /// <param name="sEzsignsignatureTextvalidationcustommessage">Description of validation rule. Show by signatory..</param>
+        /// <param name="eEzsignsignatureDependencyrequirement">eEzsignsignatureDependencyrequirement.</param>
+        /// <param name="sEzsignsignatureDefaultvalue">The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |.</param>
+        /// <param name="sEzsignsignatureRegexp">A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**.</param>
+        /// <param name="objContactName">objContactName (required).</param>
+        /// <param name="objContactNameDelegation">objContactNameDelegation.</param>
+        /// <param name="objSignature">objSignature.</param>
+        /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
+        /// <param name="objCreditcardtransaction">objCreditcardtransaction.</param>
+        /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
+        public EzsignsignatureResponseCompoundV3(int pkiEzsignsignatureID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiEzsignsigningreasonID = default(int), int fkiFontID = default(int), string sEzsignsigningreasonDescriptionX = default(string), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureStep = default(int), int iEzsignsignatureStepadjusted = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int iEzsignsignatureValidationstep = default(int), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger = default(FieldEEzsignsignatureConsultationtrigger?), bool bEzsignsignatureHandwritten = default(bool), bool bEzsignsignatureReason = default(bool), bool bEzsignsignatureRequired = default(bool), int fkiEzsignfoldersignerassociationIDValidation = default(int), string dtEzsignsignatureDate = default(string), int iEzsignsignatureattachmentCount = default(int), string sEzsignsignatureDescription = default(string), int iEzsignsignatureMaxlength = default(int), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureTextvalidationcustommessage = default(string), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), string sEzsignsignatureDefaultvalue = default(string), string sEzsignsignatureRegexp = default(string), CustomContactNameResponse objContactName = default(CustomContactNameResponse), CustomContactNameResponse objContactNameDelegation = default(CustomContactNameResponse), SignatureResponseCompound objSignature = default(SignatureResponseCompound), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateResponseCompoundV2> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateResponseCompoundV2>), CustomCreditcardtransactionResponse objCreditcardtransaction = default(CustomCreditcardtransactionResponse), List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyResponseCompound>))
         {
-            this.PkiEzsignsignatureID = ;
-            this.FkiEzsigndocumentID = ;
-            this.FkiEzsignfoldersignerassociationID = ;
-            this.IEzsignpagePagenumber = ;
-            this.IEzsignsignatureX = ;
-            this.IEzsignsignatureY = ;
-            this.IEzsignsignatureStep = ;
-            this.EEzsignsignatureType = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignsignatureID = pkiEzsignsignatureID;
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
+            this.IEzsignsignatureX = iEzsignsignatureX;
+            this.IEzsignsignatureY = iEzsignsignatureY;
+            this.IEzsignsignatureStep = iEzsignsignatureStep;
+            this.EEzsignsignatureType = eEzsignsignatureType;
+            // to ensure "objContactName" is required (not null)
+            if (objContactName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureResponseCompoundV3 and cannot be null");
+                throw new ArgumentNullException("objContactName is a required property for EzsignsignatureResponseCompoundV3 and cannot be null");
             }
-            this.ObjContactName = ;
-            this.FkiEzsignsigningreasonID = ;
-            this.FkiFontID = ;
-            this.SEzsignsigningreasonDescriptionX = ;
-            this.IEzsignsignatureHeight = ;
-            this.IEzsignsignatureWidth = ;
-            this.IEzsignsignatureStepadjusted = ;
-            this.TEzsignsignatureTooltip = ;
-            this.EEzsignsignatureTooltipposition = ;
-            this.EEzsignsignatureFont = ;
-            this.IEzsignsignatureValidationstep = ;
-            this.SEzsignsignatureAttachmentdescription = ;
-            this.EEzsignsignatureAttachmentnamesource = ;
-            this.EEzsignsignatureConsultationtrigger = ;
-            this.BEzsignsignatureHandwritten = ;
-            this.BEzsignsignatureReason = ;
-            this.BEzsignsignatureRequired = ;
-            this.FkiEzsignfoldersignerassociationIDValidation = ;
-            this.DtEzsignsignatureDate = ;
-            this.IEzsignsignatureattachmentCount = ;
-            this.SEzsignsignatureDescription = ;
-            this.IEzsignsignatureMaxlength = ;
-            this.EEzsignsignatureTextvalidation = ;
-            this.SEzsignsignatureTextvalidationcustommessage = ;
-            this.EEzsignsignatureDependencyrequirement = ;
-            this.SEzsignsignatureDefaultvalue = ;
-            this.SEzsignsignatureRegexp = ;
-            this.ObjContactNameDelegation = ;
-            this.ObjSignature = ;
-            this.BEzsignsignatureCustomdate = ;
-            this.AObjEzsignsignaturecustomdate = ;
-            this.ObjCreditcardtransaction = ;
-            this.AObjEzsignelementdependency = ;
+            this.ObjContactName = objContactName;
+            this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+            this.FkiFontID = fkiFontID;
+            this.SEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
+            this.IEzsignsignatureHeight = iEzsignsignatureHeight;
+            this.IEzsignsignatureWidth = iEzsignsignatureWidth;
+            this.IEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
+            this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
+            this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+            this.EEzsignsignatureFont = eEzsignsignatureFont;
+            this.IEzsignsignatureValidationstep = iEzsignsignatureValidationstep;
+            this.SEzsignsignatureAttachmentdescription = sEzsignsignatureAttachmentdescription;
+            this.EEzsignsignatureAttachmentnamesource = eEzsignsignatureAttachmentnamesource;
+            this.EEzsignsignatureConsultationtrigger = eEzsignsignatureConsultationtrigger;
+            this.BEzsignsignatureHandwritten = bEzsignsignatureHandwritten;
+            this.BEzsignsignatureReason = bEzsignsignatureReason;
+            this.BEzsignsignatureRequired = bEzsignsignatureRequired;
+            this.FkiEzsignfoldersignerassociationIDValidation = fkiEzsignfoldersignerassociationIDValidation;
+            this.DtEzsignsignatureDate = dtEzsignsignatureDate;
+            this.IEzsignsignatureattachmentCount = iEzsignsignatureattachmentCount;
+            this.SEzsignsignatureDescription = sEzsignsignatureDescription;
+            this.IEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+            this.EEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
+            this.SEzsignsignatureTextvalidationcustommessage = sEzsignsignatureTextvalidationcustommessage;
+            this.EEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+            this.SEzsignsignatureDefaultvalue = sEzsignsignatureDefaultvalue;
+            this.SEzsignsignatureRegexp = sEzsignsignatureRegexp;
+            this.ObjContactNameDelegation = objContactNameDelegation;
+            this.ObjSignature = objSignature;
+            this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
+            this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+            this.ObjCreditcardtransaction = objCreditcardtransaction;
+            this.AObjEzsignelementdependency = aObjEzsignelementdependency;
         }
 
         /// <summary>
@@ -497,42 +497,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsignatureID (int) minimum
             if (this.PkiEzsignsignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignatureID" });
             }
 
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // FkiEzsignfoldersignerassociationID (int) minimum
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
             }
 
             // FkiEzsignsigningreasonID (int) maximum
             if (this.FkiEzsignsigningreasonID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
             }
 
             // FkiEzsignsigningreasonID (int) minimum
             if (this.FkiEzsignsigningreasonID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
             }
 
             // FkiFontID (int) minimum
             if (this.FkiFontID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             if (this.SEzsignsigningreasonDescriptionX != null) {
@@ -547,37 +547,37 @@ namespace eZmaxApi.Model
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             // IEzsignsignatureX (int) minimum
             if (this.IEzsignsignatureX < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureX, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureX" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureX, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureX" });
             }
 
             // IEzsignsignatureY (int) minimum
             if (this.IEzsignsignatureY < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureY, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureY" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureY, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureY" });
             }
 
             // IEzsignsignatureHeight (int) minimum
             if (this.IEzsignsignatureHeight < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureHeight" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureHeight" });
             }
 
             // IEzsignsignatureWidth (int) minimum
             if (this.IEzsignsignatureWidth < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureWidth" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureWidth" });
             }
 
             // FkiEzsignfoldersignerassociationIDValidation (int) minimum
             if (this.FkiEzsignfoldersignerassociationIDValidation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDValidation" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDValidation" });
             }
 
             if (this.DtEzsignsignatureDate != null) {
@@ -592,25 +592,25 @@ namespace eZmaxApi.Model
             // IEzsignsignatureMaxlength (int) maximum
             if (this.IEzsignsignatureMaxlength > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsignsignatureMaxlength" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsignsignatureMaxlength" });
             }
 
             // IEzsignsignatureMaxlength (int) minimum
             if (this.IEzsignsignatureMaxlength < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignatureMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureMaxlength" });
+                yield return new ValidationResult("Invalid value for IEzsignsignatureMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsignsignatureMaxlength" });
             }
 
             // SEzsignsignatureTextvalidationcustommessage (string) maxLength
             if (this.SEzsignsignatureTextvalidationcustommessage != null && this.SEzsignsignatureTextvalidationcustommessage.Length > 50)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignsignatureTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsignsignatureTextvalidationcustommessage" });
+                yield return new ValidationResult("Invalid value for SEzsignsignatureTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsignsignatureTextvalidationcustommessage" });
             }
 
             // SEzsignsignatureTextvalidationcustommessage (string) minLength
             if (this.SEzsignsignatureTextvalidationcustommessage != null && this.SEzsignsignatureTextvalidationcustommessage.Length < 0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignsignatureTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsignsignatureTextvalidationcustommessage" });
+                yield return new ValidationResult("Invalid value for SEzsignsignatureTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsignsignatureTextvalidationcustommessage" });
             }
 
             if (this.SEzsignsignatureRegexp != null) {

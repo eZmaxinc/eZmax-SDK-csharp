@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserCreateEzsignuserV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of email addresses that succeeded. (required).</param>
-        /// <param name="">An array of email addresses that failed. (required).</param>
-        public UserCreateEzsignuserV1ResponseMPayload(List<string>  = default(List<string>), List<string>  = default(List<string>))
+        /// <param name="aSEmailAddressSuccess">An array of email addresses that succeeded. (required).</param>
+        /// <param name="aSEmailAddressFailure">An array of email addresses that failed. (required).</param>
+        public UserCreateEzsignuserV1ResponseMPayload(List<string> aSEmailAddressSuccess = default(List<string>), List<string> aSEmailAddressFailure = default(List<string>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aSEmailAddressSuccess" is required (not null)
+            if (aSEmailAddressSuccess == null)
             {
-                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aSEmailAddressSuccess is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
             }
-            this.ASEmailAddressSuccess = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ASEmailAddressSuccess = aSEmailAddressSuccess;
+            // to ensure "aSEmailAddressFailure" is required (not null)
+            if (aSEmailAddressFailure == null)
             {
-                throw new ArgumentNullException(" is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aSEmailAddressFailure is a required property for UserCreateEzsignuserV1ResponseMPayload and cannot be null");
             }
-            this.ASEmailAddressFailure = ;
+            this.ASEmailAddressFailure = aSEmailAddressFailure;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

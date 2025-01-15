@@ -35,14 +35,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseFilter" /> class.
         /// </summary>
-        /// <param name="">List of filters that can be used in *sFilter* (Automatic types).</param>
-        /// <param name="">List of computed filters that can be used in *sFilter* (Automatic types).</param>
-        /// <param name="">List of filters that can be used in *sFilter* (Enum types).</param>
-        public CommonResponseFilter(Dictionary<string, string>  = default(Dictionary<string, string>), Dictionary<string, string>  = default(Dictionary<string, string>), Dictionary<string, Dictionary<string, string>>  = default(Dictionary<string, Dictionary<string, string>>))
+        /// <param name="aAutoType">List of filters that can be used in *sFilter* (Automatic types).</param>
+        /// <param name="aAutoTypeHaving">List of computed filters that can be used in *sFilter* (Automatic types).</param>
+        /// <param name="aEnum">List of filters that can be used in *sFilter* (Enum types).</param>
+        public CommonResponseFilter(Dictionary<string, string> aAutoType = default(Dictionary<string, string>), Dictionary<string, string> aAutoTypeHaving = default(Dictionary<string, string>), Dictionary<string, Dictionary<string, string>> aEnum = default(Dictionary<string, Dictionary<string, string>>))
         {
-            this.AAutoType = ;
-            this.AAutoTypeHaving = ;
-            this.AEnum = ;
+            this.AAutoType = aAutoType;
+            this.AAutoTypeHaving = aAutoTypeHaving;
+            this.AEnum = aEnum;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

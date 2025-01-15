@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseRedirectSSecretquestionTextX" /> class.
         /// </summary>
-        /// <param name="">The text of the Secretquestion in the language of the requester (required).</param>
-        public CommonResponseRedirectSSecretquestionTextX(string  = default(string))
+        /// <param name="sSecretquestionTextX">The text of the Secretquestion in the language of the requester (required).</param>
+        public CommonResponseRedirectSSecretquestionTextX(string sSecretquestionTextX = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sSecretquestionTextX" is required (not null)
+            if (sSecretquestionTextX == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseRedirectSSecretquestionTextX and cannot be null");
+                throw new ArgumentNullException("sSecretquestionTextX is a required property for CommonResponseRedirectSSecretquestionTextX and cannot be null");
             }
-            this.SSecretquestionTextX = ;
+            this.SSecretquestionTextX = sSecretquestionTextX;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

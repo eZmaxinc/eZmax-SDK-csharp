@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalGenerateFederationTokenV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The url of the server the Ezmaxcustomer is located (required).</param>
-        public BillingentityexternalGenerateFederationTokenV1ResponseMPayload(CustomApikeyfederation  = default(CustomApikeyfederation), string  = default(string))
+        /// <param name="objApikeyfederation">objApikeyfederation (required).</param>
+        /// <param name="sEzmaxcustomercodeUrl">The url of the server the Ezmaxcustomer is located (required).</param>
+        public BillingentityexternalGenerateFederationTokenV1ResponseMPayload(CustomApikeyfederation objApikeyfederation = default(CustomApikeyfederation), string sEzmaxcustomercodeUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objApikeyfederation" is required (not null)
+            if (objApikeyfederation == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityexternalGenerateFederationTokenV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objApikeyfederation is a required property for BillingentityexternalGenerateFederationTokenV1ResponseMPayload and cannot be null");
             }
-            this.ObjApikeyfederation = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjApikeyfederation = objApikeyfederation;
+            // to ensure "sEzmaxcustomercodeUrl" is required (not null)
+            if (sEzmaxcustomercodeUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityexternalGenerateFederationTokenV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sEzmaxcustomercodeUrl is a required property for BillingentityexternalGenerateFederationTokenV1ResponseMPayload and cannot be null");
             }
-            this.SEzmaxcustomercodeUrl = ;
+            this.SEzmaxcustomercodeUrl = sEzmaxcustomercodeUrl;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzmaxcustomercodeUrl != null) {
                 // SEzmaxcustomercodeUrl (string) pattern

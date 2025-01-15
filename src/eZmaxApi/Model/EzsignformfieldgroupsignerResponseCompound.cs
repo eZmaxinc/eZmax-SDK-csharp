@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupsignerResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignformfieldgroupsigner (required).</param>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        public EzsignformfieldgroupsignerResponseCompound(int  = default(int), int  = default(int))
+        /// <param name="pkiEzsignformfieldgroupsignerID">The unique ID of the Ezsignformfieldgroupsigner (required).</param>
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        public EzsignformfieldgroupsignerResponseCompound(int pkiEzsignformfieldgroupsignerID = default(int), int fkiEzsignfoldersignerassociationID = default(int))
         {
-            this.PkiEzsignformfieldgroupsignerID = ;
-            this.FkiEzsignfoldersignerassociationID = ;
+            this.PkiEzsignformfieldgroupsignerID = pkiEzsignformfieldgroupsignerID;
+            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
         }
 
         /// <summary>
@@ -92,18 +92,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignformfieldgroupsignerID (int) minimum
             if (this.PkiEzsignformfieldgroupsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldgroupsignerID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldgroupsignerID" });
             }
 
             // FkiEzsignfoldersignerassociationID (int) minimum
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
             }
 
             yield break;

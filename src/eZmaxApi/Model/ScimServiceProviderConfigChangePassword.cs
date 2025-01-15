@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimServiceProviderConfigChangePassword" /> class.
         /// </summary>
-        /// <param name="">A Boolean value specifying whether or not the operation is supported. (required).</param>
-        public ScimServiceProviderConfigChangePassword(bool  = default(bool))
+        /// <param name="supported">A Boolean value specifying whether or not the operation is supported. (required).</param>
+        public ScimServiceProviderConfigChangePassword(bool supported = default(bool))
         {
-            this.Supported = ;
+            this.Supported = supported;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

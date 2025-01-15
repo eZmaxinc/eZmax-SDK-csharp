@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportgroup" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public CommonReportgroup(List<CommonReport>  = default(List<CommonReport>), List<CommonReportcellstyle>  = default(List<CommonReportcellstyle>))
+        /// <param name="aObjReport">aObjReport (required).</param>
+        /// <param name="aObjReportcellstyleCustom">aObjReportcellstyleCustom (required).</param>
+        public CommonReportgroup(List<CommonReport> aObjReport = default(List<CommonReport>), List<CommonReportcellstyle> aObjReportcellstyleCustom = default(List<CommonReportcellstyle>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjReport" is required (not null)
+            if (aObjReport == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportgroup and cannot be null");
+                throw new ArgumentNullException("aObjReport is a required property for CommonReportgroup and cannot be null");
             }
-            this.AObjReport = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjReport = aObjReport;
+            // to ensure "aObjReportcellstyleCustom" is required (not null)
+            if (aObjReportcellstyleCustom == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportgroup and cannot be null");
+                throw new ArgumentNullException("aObjReportcellstyleCustom is a required property for CommonReportgroup and cannot be null");
             }
-            this.AObjReportcellstyleCustom = ;
+            this.AObjReportcellstyleCustom = aObjReportcellstyleCustom;
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

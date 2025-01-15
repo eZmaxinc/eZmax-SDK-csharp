@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionUpdateDiscussionreadstatusV1Request" /> class.
         /// </summary>
-        /// <param name="">The date of the last discussion message read.</param>
-        public DiscussionUpdateDiscussionreadstatusV1Request(string  = default(string))
+        /// <param name="dtDiscussionreadstatusDate">The date of the last discussion message read.</param>
+        public DiscussionUpdateDiscussionreadstatusV1Request(string dtDiscussionreadstatusDate = default(string))
         {
-            this.DtDiscussionreadstatusDate = ;
+            this.DtDiscussionreadstatusDate = dtDiscussionreadstatusDate;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.DtDiscussionreadstatusDate != null) {
                 // DtDiscussionreadstatusDate (string) pattern

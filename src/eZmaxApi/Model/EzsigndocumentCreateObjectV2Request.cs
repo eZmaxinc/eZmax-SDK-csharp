@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentCreateObjectV2Request(List<EzsigndocumentRequestCompound>  = default(List<EzsigndocumentRequestCompound>))
+        /// <param name="aObjEzsigndocument">aObjEzsigndocument (required).</param>
+        public EzsigndocumentCreateObjectV2Request(List<EzsigndocumentRequestCompound> aObjEzsigndocument = default(List<EzsigndocumentRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigndocument" is required (not null)
+            if (aObjEzsigndocument == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsigndocument is a required property for EzsigndocumentCreateObjectV2Request and cannot be null");
             }
-            this.AObjEzsigndocument = ;
+            this.AObjEzsigndocument = aObjEzsigndocument;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

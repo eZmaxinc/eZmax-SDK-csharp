@@ -40,41 +40,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupplyRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Supply.</param>
-        /// <param name="">The unique ID of the Glaccount.</param>
-        /// <param name="">The unique ID of the Glaccountcontainer.</param>
-        /// <param name="">The unique ID of the Variableexpense (required).</param>
-        /// <param name="">The code of the Supply (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The unit price of the Supply (required).</param>
-        /// <param name="">Whether the supply is active or not (required).</param>
-        /// <param name="">Whether if the price is variable (required).</param>
-        public SupplyRequest(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), MultilingualSupplyDescription  = default(MultilingualSupplyDescription), string  = default(string), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiSupplyID">The unique ID of the Supply.</param>
+        /// <param name="fkiGlaccountID">The unique ID of the Glaccount.</param>
+        /// <param name="fkiGlaccountcontainerID">The unique ID of the Glaccountcontainer.</param>
+        /// <param name="fkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
+        /// <param name="sSupplyCode">The code of the Supply (required).</param>
+        /// <param name="objSupplyDescription">objSupplyDescription (required).</param>
+        /// <param name="dSupplyUnitprice">The unit price of the Supply (required).</param>
+        /// <param name="bSupplyIsactive">Whether the supply is active or not (required).</param>
+        /// <param name="bSupplyVariableprice">Whether if the price is variable (required).</param>
+        public SupplyRequest(int pkiSupplyID = default(int), int fkiGlaccountID = default(int), int fkiGlaccountcontainerID = default(int), int fkiVariableexpenseID = default(int), string sSupplyCode = default(string), MultilingualSupplyDescription objSupplyDescription = default(MultilingualSupplyDescription), string dSupplyUnitprice = default(string), bool bSupplyIsactive = default(bool), bool bSupplyVariableprice = default(bool))
         {
-            this.FkiVariableexpenseID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiVariableexpenseID = fkiVariableexpenseID;
+            // to ensure "sSupplyCode" is required (not null)
+            if (sSupplyCode == null)
             {
-                throw new ArgumentNullException(" is a required property for SupplyRequest and cannot be null");
+                throw new ArgumentNullException("sSupplyCode is a required property for SupplyRequest and cannot be null");
             }
-            this.SSupplyCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SSupplyCode = sSupplyCode;
+            // to ensure "objSupplyDescription" is required (not null)
+            if (objSupplyDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for SupplyRequest and cannot be null");
+                throw new ArgumentNullException("objSupplyDescription is a required property for SupplyRequest and cannot be null");
             }
-            this.ObjSupplyDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjSupplyDescription = objSupplyDescription;
+            // to ensure "dSupplyUnitprice" is required (not null)
+            if (dSupplyUnitprice == null)
             {
-                throw new ArgumentNullException(" is a required property for SupplyRequest and cannot be null");
+                throw new ArgumentNullException("dSupplyUnitprice is a required property for SupplyRequest and cannot be null");
             }
-            this.DSupplyUnitprice = ;
-            this.BSupplyIsactive = ;
-            this.BSupplyVariableprice = ;
-            this.PkiSupplyID = ;
-            this.FkiGlaccountID = ;
-            this.FkiGlaccountcontainerID = ;
+            this.DSupplyUnitprice = dSupplyUnitprice;
+            this.BSupplyIsactive = bSupplyIsactive;
+            this.BSupplyVariableprice = bSupplyVariableprice;
+            this.PkiSupplyID = pkiSupplyID;
+            this.FkiGlaccountID = fkiGlaccountID;
+            this.FkiGlaccountcontainerID = fkiGlaccountcontainerID;
         }
 
         /// <summary>
@@ -182,42 +182,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSupplyID (int) maximum
             if (this.PkiSupplyID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSupplyID, must be a value less than or equal to 65535.", new [] { "PkiSupplyID" });
+                yield return new ValidationResult("Invalid value for PkiSupplyID, must be a value less than or equal to 65535.", new [] { "PkiSupplyID" });
             }
 
             // PkiSupplyID (int) minimum
             if (this.PkiSupplyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSupplyID, must be a value greater than or equal to 0.", new [] { "PkiSupplyID" });
+                yield return new ValidationResult("Invalid value for PkiSupplyID, must be a value greater than or equal to 0.", new [] { "PkiSupplyID" });
             }
 
             // FkiGlaccountID (int) minimum
             if (this.FkiGlaccountID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountID" });
+                yield return new ValidationResult("Invalid value for FkiGlaccountID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountID" });
             }
 
             // FkiGlaccountcontainerID (int) minimum
             if (this.FkiGlaccountcontainerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
+                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
             }
 
             // FkiVariableexpenseID (int) maximum
             if (this.FkiVariableexpenseID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "FkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for FkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "FkiVariableexpenseID" });
             }
 
             // FkiVariableexpenseID (int) minimum
             if (this.FkiVariableexpenseID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "FkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for FkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "FkiVariableexpenseID" });
             }
 
             if (this.SSupplyCode != null) {
@@ -232,13 +232,13 @@ namespace eZmaxApi.Model
             // DSupplyUnitprice (string) maxLength
             if (this.DSupplyUnitprice != null && this.DSupplyUnitprice.Length > 13)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSupplyUnitprice, length must be less than 13.", new [] { "DSupplyUnitprice" });
+                yield return new ValidationResult("Invalid value for DSupplyUnitprice, length must be less than 13.", new [] { "DSupplyUnitprice" });
             }
 
             // DSupplyUnitprice (string) minLength
             if (this.DSupplyUnitprice != null && this.DSupplyUnitprice.Length < 4)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSupplyUnitprice, length must be greater than 4.", new [] { "DSupplyUnitprice" });
+                yield return new ValidationResult("Invalid value for DSupplyUnitprice, length must be greater than 4.", new [] { "DSupplyUnitprice" });
             }
 
             if (this.DSupplyUnitprice != null) {

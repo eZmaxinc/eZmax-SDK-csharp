@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedMapV1Request" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        public UserstagedMapV1Request(int  = default(int))
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        public UserstagedMapV1Request(int fkiUserID = default(int))
         {
-            this.FkiUserID = ;
+            this.FkiUserID = fkiUserID;
         }
 
         /// <summary>
@@ -81,12 +81,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             yield break;

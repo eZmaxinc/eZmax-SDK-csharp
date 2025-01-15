@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptResponse" /> class.
         /// </summary>
-        /// <param name="">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        /// <param name="">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
-        /// <param name="">The number of second it took to process the webhook or get an error (required).</param>
-        public AttemptResponse(string  = default(string), string  = default(string), int  = default(int))
+        /// <param name="dtAttemptStart">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        /// <param name="sAttemptResult">The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event. (required).</param>
+        /// <param name="iAttemptDuration">The number of second it took to process the webhook or get an error (required).</param>
+        public AttemptResponse(string dtAttemptStart = default(string), string sAttemptResult = default(string), int iAttemptDuration = default(int))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "dtAttemptStart" is required (not null)
+            if (dtAttemptStart == null)
             {
-                throw new ArgumentNullException(" is a required property for AttemptResponse and cannot be null");
+                throw new ArgumentNullException("dtAttemptStart is a required property for AttemptResponse and cannot be null");
             }
-            this.DtAttemptStart = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtAttemptStart = dtAttemptStart;
+            // to ensure "sAttemptResult" is required (not null)
+            if (sAttemptResult == null)
             {
-                throw new ArgumentNullException(" is a required property for AttemptResponse and cannot be null");
+                throw new ArgumentNullException("sAttemptResult is a required property for AttemptResponse and cannot be null");
             }
-            this.SAttemptResult = ;
-            this.IAttemptDuration = ;
+            this.SAttemptResult = sAttemptResult;
+            this.IAttemptDuration = iAttemptDuration;
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

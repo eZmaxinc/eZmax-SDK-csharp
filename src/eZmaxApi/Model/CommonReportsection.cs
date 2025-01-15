@@ -46,28 +46,28 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportsection" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The number of Reportcolumns in the Reportsection (required).</param>
-        /// <param name="">The combined width of all the Reportcolumns in the Reportsection (required).</param>
-        public CommonReportsection(List<CommonReportsubsection>  = default(List<CommonReportsubsection>), List<CommonReportcolumn>  = default(List<CommonReportcolumn>), EnumHorizontalalignment  = default(EnumHorizontalalignment), int  = default(int), int  = default(int))
+        /// <param name="aObjReportsubsection">aObjReportsubsection (required).</param>
+        /// <param name="aObjReportcolumn">aObjReportcolumn (required).</param>
+        /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
+        /// <param name="iReportsectionColumncount">The number of Reportcolumns in the Reportsection (required).</param>
+        /// <param name="iReportsectionWidth">The combined width of all the Reportcolumns in the Reportsection (required).</param>
+        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default(List<CommonReportsubsection>), List<CommonReportcolumn> aObjReportcolumn = default(List<CommonReportcolumn>), EnumHorizontalalignment eReportsectionHorizontalalignment = default(EnumHorizontalalignment), int iReportsectionColumncount = default(int), int iReportsectionWidth = default(int))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjReportsubsection" is required (not null)
+            if (aObjReportsubsection == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportsection and cannot be null");
+                throw new ArgumentNullException("aObjReportsubsection is a required property for CommonReportsection and cannot be null");
             }
-            this.AObjReportsubsection = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjReportsubsection = aObjReportsubsection;
+            // to ensure "aObjReportcolumn" is required (not null)
+            if (aObjReportcolumn == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonReportsection and cannot be null");
+                throw new ArgumentNullException("aObjReportcolumn is a required property for CommonReportsection and cannot be null");
             }
-            this.AObjReportcolumn = ;
-            this.EReportsectionHorizontalalignment = ;
-            this.IReportsectionColumncount = ;
-            this.IReportsectionWidth = ;
+            this.AObjReportcolumn = aObjReportcolumn;
+            this.EReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
+            this.IReportsectionColumncount = iReportsectionColumncount;
+            this.IReportsectionWidth = iReportsectionWidth;
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

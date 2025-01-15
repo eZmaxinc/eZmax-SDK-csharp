@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvinceGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Province autocomplete element response. (required).</param>
-        public ProvinceGetAutocompleteV2ResponseMPayload(List<ProvinceAutocompleteElementResponse>  = default(List<ProvinceAutocompleteElementResponse>))
+        /// <param name="aObjProvince">An array of Province autocomplete element response. (required).</param>
+        public ProvinceGetAutocompleteV2ResponseMPayload(List<ProvinceAutocompleteElementResponse> aObjProvince = default(List<ProvinceAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjProvince" is required (not null)
+            if (aObjProvince == null)
             {
-                throw new ArgumentNullException(" is a required property for ProvinceGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjProvince is a required property for ProvinceGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjProvince = ;
+            this.AObjProvince = aObjProvince;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

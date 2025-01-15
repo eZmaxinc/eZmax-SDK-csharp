@@ -40,31 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerConnect" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public WebhookEzsignEzsignsignerConnect(CustomWebhookResponse  = default(CustomWebhookResponse), List<AttemptResponseCompound>  = default(List<AttemptResponseCompound>), EzsignfolderResponse  = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound  = default(EzsignfoldersignerassociationResponseCompound))
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        /// <param name="objEzsignfolder">objEzsignfolder.</param>
+        /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
+        public WebhookEzsignEzsignsignerConnect(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objWebhook" is required (not null)
+            if (objWebhook == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
+                throw new ArgumentNullException("objWebhook is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
             }
-            this.ObjWebhook = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjWebhook = objWebhook;
+            // to ensure "aObjAttempt" is required (not null)
+            if (aObjAttempt == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
+                throw new ArgumentNullException("aObjAttempt is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
             }
-            this.AObjAttempt = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjAttempt = aObjAttempt;
+            // to ensure "objEzsignfoldersignerassociation" is required (not null)
+            if (objEzsignfoldersignerassociation == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
+                throw new ArgumentNullException("objEzsignfoldersignerassociation is a required property for WebhookEzsignEzsignsignerConnect and cannot be null");
             }
-            this.ObjEzsignfoldersignerassociation = ;
-            this.ObjEzsignfolder = ;
+            this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+            this.ObjEzsignfolder = objEzsignfolder;
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

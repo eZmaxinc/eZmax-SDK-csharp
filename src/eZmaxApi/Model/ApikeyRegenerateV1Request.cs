@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyRegenerateV1Request" /> class.
         /// </summary>
-        /// <param name="">Whether the apikey is signed or not.</param>
-        public ApikeyRegenerateV1Request(bool  = default(bool))
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
+        public ApikeyRegenerateV1Request(bool bApikeyIssigned = default(bool))
         {
-            this.BApikeyIssigned = ;
+            this.BApikeyIssigned = bApikeyIssigned;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

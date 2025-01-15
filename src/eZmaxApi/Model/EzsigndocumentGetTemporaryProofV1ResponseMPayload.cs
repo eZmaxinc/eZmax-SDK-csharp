@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetTemporaryProofV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(List<EzsigndocumentlogResponseCompound>  = default(List<EzsigndocumentlogResponseCompound>))
+        /// <param name="aObjEzsigndocumentlog">aObjEzsigndocumentlog (required).</param>
+        public EzsigndocumentGetTemporaryProofV1ResponseMPayload(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = default(List<EzsigndocumentlogResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigndocumentlog" is required (not null)
+            if (aObjEzsigndocumentlog == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetTemporaryProofV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsigndocumentlog is a required property for EzsigndocumentGetTemporaryProofV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigndocumentlog = ;
+            this.AObjEzsigndocumentlog = aObjEzsigndocumentlog;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

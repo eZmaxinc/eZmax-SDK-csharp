@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroup (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The Name of the Usergroup in the language of the requester.</param>
-        /// <param name="">.</param>
-        public UsergroupResponse(int  = default(int), MultilingualUsergroupName  = default(MultilingualUsergroupName), string  = default(string), EmailRequest  = default(EmailRequest))
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
+        /// <param name="objUsergroupName">objUsergroupName (required).</param>
+        /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
+        /// <param name="objEmail">objEmail.</param>
+        public UsergroupResponse(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName), string sUsergroupNameX = default(string), EmailRequest objEmail = default(EmailRequest))
         {
-            this.PkiUsergroupID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUsergroupID = pkiUsergroupID;
+            // to ensure "objUsergroupName" is required (not null)
+            if (objUsergroupName == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupResponse and cannot be null");
+                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupResponse and cannot be null");
             }
-            this.ObjUsergroupName = ;
-            this.SUsergroupNameX = ;
-            this.ObjEmail = ;
+            this.ObjUsergroupName = objUsergroupName;
+            this.SUsergroupNameX = sUsergroupNameX;
+            this.ObjEmail = objEmail;
         }
 
         /// <summary>
@@ -115,18 +115,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupID (int) maximum
             if (this.PkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
             }
 
             // PkiUsergroupID (int) minimum
             if (this.PkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
             }
 
             if (this.SUsergroupNameX != null) {

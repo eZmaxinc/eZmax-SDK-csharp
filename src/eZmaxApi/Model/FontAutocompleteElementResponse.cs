@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FontAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The name of the Font (required).</param>
-        /// <param name="">The unique ID of the Font (required).</param>
-        /// <param name="">Whether the Font is active or not (required).</param>
-        public FontAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sFontName">The name of the Font (required).</param>
+        /// <param name="pkiFontID">The unique ID of the Font (required).</param>
+        /// <param name="bFontIsactive">Whether the Font is active or not (required).</param>
+        public FontAutocompleteElementResponse(string sFontName = default(string), int pkiFontID = default(int), bool bFontIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sFontName" is required (not null)
+            if (sFontName == null)
             {
-                throw new ArgumentNullException(" is a required property for FontAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sFontName is a required property for FontAutocompleteElementResponse and cannot be null");
             }
-            this.SFontName = ;
-            this.PkiFontID = ;
-            this.BFontIsactive = ;
+            this.SFontName = sFontName;
+            this.PkiFontID = pkiFontID;
+            this.BFontIsactive = bFontIsactive;
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SFontName != null) {
                 // SFontName (string) pattern
@@ -122,7 +122,7 @@ namespace eZmaxApi.Model
             // PkiFontID (int) minimum
             if (this.PkiFontID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFontID, must be a value greater than or equal to 0.", new [] { "PkiFontID" });
+                yield return new ValidationResult("Invalid value for PkiFontID, must be a value greater than or equal to 0.", new [] { "PkiFontID" });
             }
 
             yield break;

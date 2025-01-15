@@ -58,50 +58,50 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The login name of the User. (required).</param>
-        /// <param name="">Whether the User is active or not (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The eZsign prepaid expiration date.</param>
-        /// <param name="">The email address. (required).</param>
-        /// <param name="">The job title of the user.</param>
-        public UserListElement(int  = default(int), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), FieldEUserType  = default(FieldEUserType), FieldEUserOrigin  = default(FieldEUserOrigin), FieldEUserEzsignaccess  = default(FieldEUserEzsignaccess), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="eUserType">eUserType (required).</param>
+        /// <param name="eUserOrigin">eUserOrigin (required).</param>
+        /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
+        /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        /// <param name="sUserJobtitle">The job title of the user.</param>
+        public UserListElement(int pkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), bool bUserIsactive = default(bool), FieldEUserType eUserType = default(FieldEUserType), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserEzsignprepaidexpiration = default(string), string sEmailAddress = default(string), string sUserJobtitle = default(string))
         {
-            this.PkiUserID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUserID = pkiUserID;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserListElement and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for UserListElement and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserListElement and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for UserListElement and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sUserLoginname" is required (not null)
+            if (sUserLoginname == null)
             {
-                throw new ArgumentNullException(" is a required property for UserListElement and cannot be null");
+                throw new ArgumentNullException("sUserLoginname is a required property for UserListElement and cannot be null");
             }
-            this.SUserLoginname = ;
-            this.BUserIsactive = ;
-            this.EUserType = ;
-            this.EUserOrigin = ;
-            this.EUserEzsignaccess = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLoginname = sUserLoginname;
+            this.BUserIsactive = bUserIsactive;
+            this.EUserType = eUserType;
+            this.EUserOrigin = eUserOrigin;
+            this.EUserEzsignaccess = eUserEzsignaccess;
+            // to ensure "sEmailAddress" is required (not null)
+            if (sEmailAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for UserListElement and cannot be null");
+                throw new ArgumentNullException("sEmailAddress is a required property for UserListElement and cannot be null");
             }
-            this.SEmailAddress = ;
-            this.DtUserEzsignprepaidexpiration = ;
-            this.SUserJobtitle = ;
+            this.SEmailAddress = sEmailAddress;
+            this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+            this.SUserJobtitle = sUserJobtitle;
         }
 
         /// <summary>
@@ -205,12 +205,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             if (this.SUserLoginname != null) {

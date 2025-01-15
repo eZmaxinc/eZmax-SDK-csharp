@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **EEzsigntemplateformfieldgroupTextvalidation** | **EnumTextvalidation** |  | [optional] 
 **TEzsigntemplateformfieldgroupTooltip** | **string** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup | [optional] 
 **EEzsigntemplateformfieldgroupTooltipposition** | **FieldEEzsigntemplateformfieldgroupTooltipposition** |  | [optional] 
-**AObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerRequestCompound&gt;**](EzsigntemplateformfieldgroupsignerRequestCompound.md) |  | 
-**AObjDropdownElement** | [**List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequestCompound.md) |  | [optional] 
+**AObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerRequestCompound&gt;**](EzsigntemplateformfieldgroupsignerRequest.md) |  | 
+**AObjDropdownElement** | [**List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequest.md) |  | [optional] 
 **AObjEzsigntemplateformfield** | [**List&lt;EzsigntemplateformfieldRequestCompound&gt;**](EzsigntemplateformfieldRequestCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

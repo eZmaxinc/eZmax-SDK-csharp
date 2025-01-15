@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfalevelAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Pdfalevel (required).</param>
-        /// <param name="">The name of the Pdfalevel (required).</param>
-        /// <param name="">Whether the Pdfalevel is active or not (required).</param>
-        public PdfalevelAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiPdfalevelID">The unique ID of the Pdfalevel (required).</param>
+        /// <param name="sPdfalevelName">The name of the Pdfalevel (required).</param>
+        /// <param name="bPdfalevelIsactive">Whether the Pdfalevel is active or not (required).</param>
+        public PdfalevelAutocompleteElementResponse(int pkiPdfalevelID = default(int), string sPdfalevelName = default(string), bool bPdfalevelIsactive = default(bool))
         {
-            this.PkiPdfalevelID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiPdfalevelID = pkiPdfalevelID;
+            // to ensure "sPdfalevelName" is required (not null)
+            if (sPdfalevelName == null)
             {
-                throw new ArgumentNullException(" is a required property for PdfalevelAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sPdfalevelName is a required property for PdfalevelAutocompleteElementResponse and cannot be null");
             }
-            this.SPdfalevelName = ;
-            this.BPdfalevelIsactive = ;
+            this.SPdfalevelName = sPdfalevelName;
+            this.BPdfalevelIsactive = bPdfalevelIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPdfalevelID (int) maximum
             if (this.PkiPdfalevelID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPdfalevelID, must be a value less than or equal to 255.", new [] { "PkiPdfalevelID" });
+                yield return new ValidationResult("Invalid value for PkiPdfalevelID, must be a value less than or equal to 255.", new [] { "PkiPdfalevelID" });
             }
 
             // PkiPdfalevelID (int) minimum
             if (this.PkiPdfalevelID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPdfalevelID, must be a value greater than or equal to 0.", new [] { "PkiPdfalevelID" });
+                yield return new ValidationResult("Invalid value for PkiPdfalevelID, must be a value greater than or equal to 0.", new [] { "PkiPdfalevelID" });
             }
 
             if (this.SPdfalevelName != null) {

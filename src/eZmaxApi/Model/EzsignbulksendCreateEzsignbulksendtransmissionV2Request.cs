@@ -40,44 +40,44 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendCreateEzsignbulksendtransmissionV2Request" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won&#39;t have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|      (required).</param>
-        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
-        /// <param name="">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
-        /// <param name="">The number of days before the the first reminder sending (required).</param>
-        /// <param name="">The number of days after the first reminder sending (required).</param>
-        /// <param name="">A custom text message that will be added to the email sent. (required).</param>
-        /// <param name="">The Base64 encoded binary content of the CSV file. (required).</param>
-        public EzsignbulksendCreateEzsignbulksendtransmissionV2Request(int  = default(int), int  = default(int), string  = default(string), string  = default(string), int  = default(int), int  = default(int), string  = default(string), byte[]  = default(byte[]))
+        /// <param name="fkiUserlogintypeID">The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won&#39;t have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|      (required).</param>
+        /// <param name="fkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|.</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the the first reminder sending (required).</param>
+        /// <param name="iEzsignfolderSendreminderotherdays">The number of days after the first reminder sending (required).</param>
+        /// <param name="tExtraMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="sCsvBase64">The Base64 encoded binary content of the CSV file. (required).</param>
+        public EzsignbulksendCreateEzsignbulksendtransmissionV2Request(int fkiUserlogintypeID = default(int), int fkiEzsigntsarequirementID = default(int), string sEzsignbulksendtransmissionDescription = default(string), string dtEzsigndocumentDuedate = default(string), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string tExtraMessage = default(string), byte[] sCsvBase64 = default(byte[]))
         {
-            this.FkiUserlogintypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiUserlogintypeID = fkiUserlogintypeID;
+            // to ensure "sEzsignbulksendtransmissionDescription" is required (not null)
+            if (sEzsignbulksendtransmissionDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
+                throw new ArgumentNullException("sEzsignbulksendtransmissionDescription is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
             }
-            this.SEzsignbulksendtransmissionDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+            // to ensure "dtEzsigndocumentDuedate" is required (not null)
+            if (dtEzsigndocumentDuedate == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
+                throw new ArgumentNullException("dtEzsigndocumentDuedate is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
             }
-            this.DtEzsigndocumentDuedate = ;
-            this.IEzsignfolderSendreminderfirstdays = ;
-            this.IEzsignfolderSendreminderotherdays = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
+            this.IEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
+            this.IEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
+            // to ensure "tExtraMessage" is required (not null)
+            if (tExtraMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
+                throw new ArgumentNullException("tExtraMessage is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
             }
-            this.TExtraMessage = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.TExtraMessage = tExtraMessage;
+            // to ensure "sCsvBase64" is required (not null)
+            if (sCsvBase64 == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
+                throw new ArgumentNullException("sCsvBase64 is a required property for EzsignbulksendCreateEzsignbulksendtransmissionV2Request and cannot be null");
             }
-            this.SCsvBase64 = ;
-            this.FkiEzsigntsarequirementID = ;
+            this.SCsvBase64 = sCsvBase64;
+            this.FkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
         }
 
         /// <summary>
@@ -185,48 +185,48 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiUserlogintypeID (int) minimum
             if (this.FkiUserlogintypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
+                yield return new ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
             }
 
             // FkiEzsigntsarequirementID (int) maximum
             if (this.FkiEzsigntsarequirementID > (int)3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiEzsigntsarequirementID (int) minimum
             if (this.FkiEzsigntsarequirementID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // IEzsignfolderSendreminderfirstdays (int) maximum
             if (this.IEzsignfolderSendreminderfirstdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderfirstdays" });
             }
 
             // IEzsignfolderSendreminderfirstdays (int) minimum
             if (this.IEzsignfolderSendreminderfirstdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderfirstdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderfirstdays" });
             }
 
             // IEzsignfolderSendreminderotherdays (int) maximum
             if (this.IEzsignfolderSendreminderotherdays > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfolderSendreminderotherdays" });
             }
 
             // IEzsignfolderSendreminderotherdays (int) minimum
             if (this.IEzsignfolderSendreminderotherdays < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderotherdays" });
+                yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderotherdays" });
             }
 
             yield break;

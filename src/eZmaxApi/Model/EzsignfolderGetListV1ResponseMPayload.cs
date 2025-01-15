@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsignfolderGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<EzsignfolderListElement>  = default(List<EzsignfolderListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
+        public EzsignfolderGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzsignfolderListElement> aObjEzsignfolder = default(List<EzsignfolderListElement>))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
+            // to ensure "aObjEzsignfolder" is required (not null)
+            if (aObjEzsignfolder == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignfolder is a required property for EzsignfolderGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignfolder = ;
+            this.AObjEzsignfolder = aObjEzsignfolder;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

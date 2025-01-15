@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateElementV3Response" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="">An array of possibly matching template. (required).</param>
-        public EzsigndocumentCreateElementV3Response(int  = default(int), List<EzsigndocumentMatchingtemplateV3Response>  = default(List<EzsigndocumentMatchingtemplateV3Response>))
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="aObjMatchingtemplate">An array of possibly matching template. (required).</param>
+        public EzsigndocumentCreateElementV3Response(int pkiEzsigndocumentID = default(int), List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate = default(List<EzsigndocumentMatchingtemplateV3Response>))
         {
-            this.PkiEzsigndocumentID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
+            // to ensure "aObjMatchingtemplate" is required (not null)
+            if (aObjMatchingtemplate == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateElementV3Response and cannot be null");
+                throw new ArgumentNullException("aObjMatchingtemplate is a required property for EzsigndocumentCreateElementV3Response and cannot be null");
             }
-            this.AObjMatchingtemplate = ;
+            this.AObjMatchingtemplate = aObjMatchingtemplate;
         }
 
         /// <summary>
@@ -96,12 +96,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigndocumentID (int) minimum
             if (this.PkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
             }
 
             yield break;

@@ -114,7 +114,7 @@ catch (ApiException e)
 
 <a id="usergroupeditobjectv1"></a>
 # **UsergroupEditObjectV1**
-> UsergroupEditObjectV1Response UsergroupEditObjectV1 (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request)
+> CommonResponse UsergroupEditObjectV1 (int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request)
 
 Edit an existing Usergroup
 
@@ -146,7 +146,7 @@ namespace Example
             try
             {
                 // Edit an existing Usergroup
-                UsergroupEditObjectV1Response result = apiInstance.UsergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
+                CommonResponse result = apiInstance.UsergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -167,7 +167,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Usergroup
-    ApiResponse<UsergroupEditObjectV1Response> response = apiInstance.UsergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.UsergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -189,7 +189,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

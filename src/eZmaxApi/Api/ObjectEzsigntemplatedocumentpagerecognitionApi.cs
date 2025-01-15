@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response EzsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsigntemplatedocumentpagerecognition
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Ezsigntemplatedocumentpagerecognition
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        EzsigntemplatedocumentpagerecognitionEditObjectV1Response EzsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsigntemplatedocumentpagerecognition
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocumentpagerecognition
         /// </summary>
@@ -132,7 +132,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatedocumentpagerecognitionCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response> EzsigntemplatedocumentpagerecognitionCreateObjectV1Async(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response> EzsigntemplatedocumentpagerecognitionCreateObjectV1Async(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsigntemplatedocumentpagerecognition
@@ -145,7 +145,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response>> EzsigntemplatedocumentpagerecognitionCreateObjectV1WithHttpInfoAsync(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response>> EzsigntemplatedocumentpagerecognitionCreateObjectV1WithHttpInfoAsync(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsigntemplatedocumentpagerecognition
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsigntemplatedocumentpagerecognition
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsigntemplatedocumentpagerecognition
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> EzsigntemplatedocumentpagerecognitionEditObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsigntemplatedocumentpagerecognitionEditObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsigntemplatedocumentpagerecognition
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocumentpagerecognition
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatedocumentpagerecognitionGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionGetObjectV2Response> EzsigntemplatedocumentpagerecognitionGetObjectV2Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionGetObjectV2Response> EzsigntemplatedocumentpagerecognitionGetObjectV2Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocumentpagerecognition
@@ -222,7 +222,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionGetObjectV2Response>> EzsigntemplatedocumentpagerecognitionGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentpagerecognitionGetObjectV2Response>> EzsigntemplatedocumentpagerecognitionGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatedocumentpagerecognitionCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response> EzsigntemplatedocumentpagerecognitionCreateObjectV1Async(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response> EzsigntemplatedocumentpagerecognitionCreateObjectV1Async(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response> localVarResponse = await EzsigntemplatedocumentpagerecognitionCreateObjectV1WithHttpInfoAsync(ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -441,7 +441,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response>> EzsigntemplatedocumentpagerecognitionCreateObjectV1WithHttpInfoAsync(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionCreateObjectV1Response>> EzsigntemplatedocumentpagerecognitionCreateObjectV1WithHttpInfoAsync(EzsigntemplatedocumentpagerecognitionCreateObjectV1Request ezsigntemplatedocumentpagerecognitionCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatedocumentpagerecognitionCreateObjectV1Request' is set
             if (ezsigntemplatedocumentpagerecognitionCreateObjectV1Request == null)
@@ -505,10 +505,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        public EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response EzsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsigntemplatedocumentpagerecognitionDeleteObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> localVarResponse = EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
             return localVarResponse.Data;
         }
 
@@ -518,8 +518,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentpagerecognitionDeleteObjectV1", localVarResponse);
@@ -575,10 +575,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> localVarResponse = await EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatedocumentpagerecognitionID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatedocumentpagerecognitionID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -589,8 +589,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -627,7 +627,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +648,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        public EzsigntemplatedocumentpagerecognitionEditObjectV1Response EzsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsigntemplatedocumentpagerecognitionEditObjectV1(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> localVarResponse = EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +662,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatedocumentpagerecognitionID">The unique ID of the Ezsigntemplatedocumentpagerecognition</param>
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigntemplatedocumentpagerecognitionEditObjectV1Request' is set
             if (ezsigntemplatedocumentpagerecognitionEditObjectV1Request == null)
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentpagerecognitionEditObjectV1", localVarResponse);
@@ -728,10 +728,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatedocumentpagerecognitionEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> EzsigntemplatedocumentpagerecognitionEditObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsigntemplatedocumentpagerecognitionEditObjectV1Async(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> localVarResponse = await EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +743,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigntemplatedocumentpagerecognitionEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigntemplatedocumentpagerecognitionEditObjectV1Request' is set
             if (ezsigntemplatedocumentpagerecognitionEditObjectV1Request == null)
@@ -789,7 +789,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -880,7 +880,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigntemplatedocumentpagerecognitionGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionGetObjectV2Response> EzsigntemplatedocumentpagerecognitionGetObjectV2Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigntemplatedocumentpagerecognitionGetObjectV2Response> EzsigntemplatedocumentpagerecognitionGetObjectV2Async(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionGetObjectV2Response> localVarResponse = await EzsigntemplatedocumentpagerecognitionGetObjectV2WithHttpInfoAsync(pkiEzsigntemplatedocumentpagerecognitionID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -894,7 +894,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentpagerecognitionGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionGetObjectV2Response>> EzsigntemplatedocumentpagerecognitionGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentpagerecognitionGetObjectV2Response>> EzsigntemplatedocumentpagerecognitionGetObjectV2WithHttpInfoAsync(int pkiEzsigntemplatedocumentpagerecognitionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

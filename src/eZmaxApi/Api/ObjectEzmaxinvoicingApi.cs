@@ -117,7 +117,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezmaxinvoicings and IDs
@@ -133,7 +133,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezmaxinvoicing
         /// </summary>
@@ -145,7 +145,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzmaxinvoicingGetObjectV2Response> EzmaxinvoicingGetObjectV2Async(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzmaxinvoicingGetObjectV2Response> EzmaxinvoicingGetObjectV2Async(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezmaxinvoicing
@@ -158,7 +158,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetObjectV2Response>> EzmaxinvoicingGetObjectV2WithHttpInfoAsync(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetObjectV2Response>> EzmaxinvoicingGetObjectV2WithHttpInfoAsync(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve provisional Ezmaxinvoicing
         /// </summary>
@@ -169,7 +169,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetProvisionalV1Response</returns>
-        System.Threading.Tasks.Task<EzmaxinvoicingGetProvisionalV1Response> EzmaxinvoicingGetProvisionalV1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzmaxinvoicingGetProvisionalV1Response> EzmaxinvoicingGetProvisionalV1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve provisional Ezmaxinvoicing
@@ -181,7 +181,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetProvisionalV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetProvisionalV1Response>> EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzmaxinvoicingGetProvisionalV1Response>> EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -406,7 +406,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzmaxinvoicingGetAutocompleteV2Response> EzmaxinvoicingGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetAutocompleteV2Response> localVarResponse = await EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -423,7 +423,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetAutocompleteV2Response>> EzmaxinvoicingGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzmaxinvoicingGetObjectV2Response> EzmaxinvoicingGetObjectV2Async(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzmaxinvoicingGetObjectV2Response> EzmaxinvoicingGetObjectV2Async(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetObjectV2Response> localVarResponse = await EzmaxinvoicingGetObjectV2WithHttpInfoAsync(pkiEzmaxinvoicingID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -583,7 +583,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetObjectV2Response>> EzmaxinvoicingGetObjectV2WithHttpInfoAsync(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetObjectV2Response>> EzmaxinvoicingGetObjectV2WithHttpInfoAsync(int pkiEzmaxinvoicingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzmaxinvoicingGetProvisionalV1Response</returns>
-        public async System.Threading.Tasks.Task<EzmaxinvoicingGetProvisionalV1Response> EzmaxinvoicingGetProvisionalV1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzmaxinvoicingGetProvisionalV1Response> EzmaxinvoicingGetProvisionalV1Async(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetProvisionalV1Response> localVarResponse = await EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -720,7 +720,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzmaxinvoicingGetProvisionalV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetProvisionalV1Response>> EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxinvoicingGetProvisionalV1Response>> EzmaxinvoicingGetProvisionalV1WithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

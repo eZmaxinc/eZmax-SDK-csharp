@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<OtherincomeGetCommunicationListV1Response> OtherincomeGetCommunicationListV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationListV1Response> OtherincomeGetCommunicationListV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationListV1Response>> OtherincomeGetCommunicationListV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationListV1Response>> OtherincomeGetCommunicationListV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Otherincome&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Otherincome&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Otherincome&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Otherincome&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationCountV1Response> OtherincomeGetCommunicationCountV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response> localVarResponse = await OtherincomeGetCommunicationCountV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationCountV1Response>> OtherincomeGetCommunicationCountV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationListV1Response> OtherincomeGetCommunicationListV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationListV1Response> OtherincomeGetCommunicationListV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationListV1Response> localVarResponse = await OtherincomeGetCommunicationListV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationListV1Response>> OtherincomeGetCommunicationListV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationListV1Response>> OtherincomeGetCommunicationListV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationrecipientsV1Response> OtherincomeGetCommunicationrecipientsV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> localVarResponse = await OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationrecipientsV1Response>> OtherincomeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OtherincomeGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OtherincomeGetCommunicationsendersV1Response> OtherincomeGetCommunicationsendersV1Async(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response> localVarResponse = await OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(pkiOtherincomeID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OtherincomeGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OtherincomeGetCommunicationsendersV1Response>> OtherincomeGetCommunicationsendersV1WithHttpInfoAsync(int pkiOtherincomeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

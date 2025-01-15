@@ -61,17 +61,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseGetWebsocketIDV1" /> class.
         /// </summary>
-        /// <param name="">The Type of message (required).</param>
-        /// <param name=""> (required).</param>
-        public WebsocketResponseGetWebsocketIDV1(EWebsocketMessagetypeEnum  = default(EWebsocketMessagetypeEnum), WebsocketResponseGetWebsocketIDV1MPayload  = default(WebsocketResponseGetWebsocketIDV1MPayload))
+        /// <param name="eWebsocketMessagetype">The Type of message (required).</param>
+        /// <param name="mPayload">mPayload (required).</param>
+        public WebsocketResponseGetWebsocketIDV1(EWebsocketMessagetypeEnum eWebsocketMessagetype = default(EWebsocketMessagetypeEnum), WebsocketResponseGetWebsocketIDV1MPayload mPayload = default(WebsocketResponseGetWebsocketIDV1MPayload))
         {
-            this.EWebsocketMessagetype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EWebsocketMessagetype = eWebsocketMessagetype;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseGetWebsocketIDV1 and cannot be null");
+                throw new ArgumentNullException("mPayload is a required property for WebsocketResponseGetWebsocketIDV1 and cannot be null");
             }
-            this.MPayload = ;
+            this.MPayload = mPayload;
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

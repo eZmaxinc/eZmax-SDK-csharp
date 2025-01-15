@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserlogintypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Userlogintype autocomplete element response. (required).</param>
-        public UserlogintypeGetAutocompleteV2ResponseMPayload(List<UserlogintypeAutocompleteElementResponse>  = default(List<UserlogintypeAutocompleteElementResponse>))
+        /// <param name="aObjUserlogintype">An array of Userlogintype autocomplete element response. (required).</param>
+        public UserlogintypeGetAutocompleteV2ResponseMPayload(List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype = default(List<UserlogintypeAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjUserlogintype" is required (not null)
+            if (aObjUserlogintype == null)
             {
-                throw new ArgumentNullException(" is a required property for UserlogintypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjUserlogintype is a required property for UserlogintypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjUserlogintype = ;
+            this.AObjUserlogintype = aObjUserlogintype;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

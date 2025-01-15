@@ -110,7 +110,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepackagedeleteobjectv1"></a>
 # **EzsigntemplatepackageDeleteObjectV1**
-> EzsigntemplatepackageDeleteObjectV1Response EzsigntemplatepackageDeleteObjectV1 (int pkiEzsigntemplatepackageID)
+> CommonResponse EzsigntemplatepackageDeleteObjectV1 (int pkiEzsigntemplatepackageID)
 
 Delete an existing Ezsigntemplatepackage
 
@@ -141,7 +141,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplatepackage
-                EzsigntemplatepackageDeleteObjectV1Response result = apiInstance.EzsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
+                CommonResponse result = apiInstance.EzsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplatepackage
-    ApiResponse<EzsigntemplatepackageDeleteObjectV1Response> response = apiInstance.EzsigntemplatepackageDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackageID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatepackageDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackageID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplatepackageDeleteObjectV1Response**](EzsigntemplatepackageDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepackageeditobjectv1"></a>
 # **EzsigntemplatepackageEditObjectV1**
-> EzsigntemplatepackageEditObjectV1Response EzsigntemplatepackageEditObjectV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request)
+> CommonResponse EzsigntemplatepackageEditObjectV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackage
 
@@ -337,7 +337,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplatepackage
-                EzsigntemplatepackageEditObjectV1Response result = apiInstance.EzsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -358,7 +358,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplatepackage
-    ApiResponse<EzsigntemplatepackageEditObjectV1Response> response = apiInstance.EzsigntemplatepackageEditObjectV1WithHttpInfo(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatepackageEditObjectV1WithHttpInfo(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -380,7 +380,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplatepackageEditObjectV1Response**](EzsigntemplatepackageEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

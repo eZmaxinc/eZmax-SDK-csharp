@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserstagedUserstagedCreated" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name=""> (required).</param>
-        public WebhookUserstagedUserstagedCreated(CustomWebhookResponse  = default(CustomWebhookResponse), List<AttemptResponseCompound>  = default(List<AttemptResponseCompound>), UserstagedResponseCompound  = default(UserstagedResponseCompound))
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        /// <param name="objUserstaged">A Userstaged Object (required).</param>
+        public WebhookUserstagedUserstagedCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserstagedResponse objUserstaged = default(UserstagedResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objWebhook" is required (not null)
+            if (objWebhook == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
+                throw new ArgumentNullException("objWebhook is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
             }
-            this.ObjWebhook = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjWebhook = objWebhook;
+            // to ensure "aObjAttempt" is required (not null)
+            if (aObjAttempt == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
+                throw new ArgumentNullException("aObjAttempt is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
             }
-            this.AObjAttempt = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjAttempt = aObjAttempt;
+            // to ensure "objUserstaged" is required (not null)
+            if (objUserstaged == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
+                throw new ArgumentNullException("objUserstaged is a required property for WebhookUserstagedUserstagedCreated and cannot be null");
             }
-            this.ObjUserstaged = ;
+            this.ObjUserstaged = objUserstaged;
         }
 
         /// <summary>
@@ -79,10 +79,11 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjUserstaged
+        /// A Userstaged Object
         /// </summary>
+        /// <value>A Userstaged Object</value>
         [DataMember(Name = "objUserstaged", IsRequired = true, EmitDefaultValue = true)]
-        public UserstagedResponseCompound ObjUserstaged { get; set; }
+        public UserstagedResponse ObjUserstaged { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -113,7 +114,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

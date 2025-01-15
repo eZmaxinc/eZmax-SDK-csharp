@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The name of the Franchisebroker (required).</param>
-        /// <param name="">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="">Whether the Franchisebroker is active or not (required).</param>
-        public FranchisebrokerAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sFranchisebrokerName">The name of the Franchisebroker (required).</param>
+        /// <param name="pkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="bFranchisebrokerIsactive">Whether the Franchisebroker is active or not (required).</param>
+        public FranchisebrokerAutocompleteElementResponse(string sFranchisebrokerName = default(string), int pkiFranchisebrokerID = default(int), bool bFranchisebrokerIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sFranchisebrokerName" is required (not null)
+            if (sFranchisebrokerName == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisebrokerAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sFranchisebrokerName is a required property for FranchisebrokerAutocompleteElementResponse and cannot be null");
             }
-            this.SFranchisebrokerName = ;
-            this.PkiFranchisebrokerID = ;
-            this.BFranchisebrokerIsactive = ;
+            this.SFranchisebrokerName = sFranchisebrokerName;
+            this.PkiFranchisebrokerID = pkiFranchisebrokerID;
+            this.BFranchisebrokerIsactive = bFranchisebrokerIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiFranchisebrokerID (int) minimum
             if (this.PkiFranchisebrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "PkiFranchisebrokerID" });
+                yield return new ValidationResult("Invalid value for PkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "PkiFranchisebrokerID" });
             }
 
             yield break;

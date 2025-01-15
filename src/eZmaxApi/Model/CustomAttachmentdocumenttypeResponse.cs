@@ -46,17 +46,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentdocumenttypeResponse" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public CustomAttachmentdocumenttypeResponse(FieldEAttachmentDocumenttype  = default(FieldEAttachmentDocumenttype), List<CustomAttachmentResponse>  = default(List<CustomAttachmentResponse>))
+        /// <param name="eAttachmentDocumenttype">eAttachmentDocumenttype (required).</param>
+        /// <param name="aObjAttachment">aObjAttachment (required).</param>
+        public CustomAttachmentdocumenttypeResponse(FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), List<CustomAttachmentResponse> aObjAttachment = default(List<CustomAttachmentResponse>))
         {
-            this.EAttachmentDocumenttype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EAttachmentDocumenttype = eAttachmentDocumenttype;
+            // to ensure "aObjAttachment" is required (not null)
+            if (aObjAttachment == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomAttachmentdocumenttypeResponse and cannot be null");
+                throw new ArgumentNullException("aObjAttachment is a required property for CustomAttachmentdocumenttypeResponse and cannot be null");
             }
-            this.AObjAttachment = ;
+            this.AObjAttachment = aObjAttachment;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

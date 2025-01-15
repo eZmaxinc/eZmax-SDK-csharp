@@ -40,31 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="">If this flag is true the signatory is part of a delayed send. (required).</param>
-        /// <param name="">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
-        /// <param name="">A custom text message that will be added to the email sent. (required).</param>
-        /// <param name="">If the Ezsignfoldersignerassociation is allowed to sign in person or not (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsignfoldersignerassociationResponseCompound(int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), string  = default(string), bool  = default(bool), EzsignsignergroupResponseCompound  = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser  = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound  = default(EzsignsignerResponseCompound))
+        /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="bEzsignfoldersignerassociationDelayedsend">If this flag is true the signatory is part of a delayed send. (required).</param>
+        /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document. (required).</param>
+        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent. (required).</param>
+        /// <param name="bEzsignfoldersignerassociationAllowsigninginperson">If the Ezsignfoldersignerassociation is allowed to sign in person or not (required).</param>
+        /// <param name="objEzsignsignergroup">objEzsignsignergroup.</param>
+        /// <param name="objUser">objUser.</param>
+        /// <param name="objEzsignsigner">objEzsignsigner.</param>
+        public EzsignfoldersignerassociationResponseCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), bool bEzsignfoldersignerassociationAllowsigninginperson = default(bool), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound))
         {
-            this.PkiEzsignfoldersignerassociationID = ;
-            this.FkiEzsignfolderID = ;
-            this.BEzsignfoldersignerassociationDelayedsend = ;
-            this.BEzsignfoldersignerassociationReceivecopy = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            this.BEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
+            this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
+            // to ensure "tEzsignfoldersignerassociationMessage" is required (not null)
+            if (tEzsignfoldersignerassociationMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompound and cannot be null");
+                throw new ArgumentNullException("tEzsignfoldersignerassociationMessage is a required property for EzsignfoldersignerassociationResponseCompound and cannot be null");
             }
-            this.TEzsignfoldersignerassociationMessage = ;
-            this.BEzsignfoldersignerassociationAllowsigninginperson = ;
-            this.ObjEzsignsignergroup = ;
-            this.ObjUser = ;
-            this.ObjEzsignsigner = ;
+            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+            this.BEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+            this.ObjEzsignsignergroup = objEzsignsignergroup;
+            this.ObjUser = objUser;
+            this.ObjEzsignsigner = objEzsignsigner;
         }
 
         /// <summary>
@@ -174,18 +174,18 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfoldersignerassociationID (int) minimum
             if (this.PkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
             }
 
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             yield break;

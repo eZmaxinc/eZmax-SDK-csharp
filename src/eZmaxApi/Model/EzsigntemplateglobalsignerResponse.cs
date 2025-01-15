@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalsignerResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateglobalsigner (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplateglobal (required).</param>
-        /// <param name="">The description of the Ezsigntemplateglobalsigner (required).</param>
-        public EzsigntemplateglobalsignerResponse(int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiEzsigntemplateglobalsignerID">The unique ID of the Ezsigntemplateglobalsigner (required).</param>
+        /// <param name="fkiEzsigntemplateglobalID">The unique ID of the Ezsigntemplateglobal (required).</param>
+        /// <param name="sEzsigntemplateglobalsignerDescription">The description of the Ezsigntemplateglobalsigner (required).</param>
+        public EzsigntemplateglobalsignerResponse(int pkiEzsigntemplateglobalsignerID = default(int), int fkiEzsigntemplateglobalID = default(int), string sEzsigntemplateglobalsignerDescription = default(string))
         {
-            this.PkiEzsigntemplateglobalsignerID = ;
-            this.FkiEzsigntemplateglobalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
+            this.FkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
+            // to ensure "sEzsigntemplateglobalsignerDescription" is required (not null)
+            if (sEzsigntemplateglobalsignerDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobalsignerResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateglobalsignerDescription is a required property for EzsigntemplateglobalsignerResponse and cannot be null");
             }
-            this.SEzsigntemplateglobalsignerDescription = ;
+            this.SEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateglobalsignerID (int) minimum
             if (this.PkiEzsigntemplateglobalsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobalsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalsignerID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobalsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalsignerID" });
             }
 
             // FkiEzsigntemplateglobalID (int) minimum
             if (this.FkiEzsigntemplateglobalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobalID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobalID" });
             }
 
             if (this.SEzsigntemplateglobalsignerDescription != null) {

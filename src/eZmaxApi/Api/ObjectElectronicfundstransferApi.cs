@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationCountV1Response> ElectronicfundstransferGetCommunicationCountV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationCountV1Response> ElectronicfundstransferGetCommunicationCountV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response>> ElectronicfundstransferGetCommunicationCountV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response>> ElectronicfundstransferGetCommunicationCountV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationListV1Response> ElectronicfundstransferGetCommunicationListV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationListV1Response> ElectronicfundstransferGetCommunicationListV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationListV1Response>> ElectronicfundstransferGetCommunicationListV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationListV1Response>> ElectronicfundstransferGetCommunicationListV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Electronicfundstransfer&#39;s Communicationrecipient
         /// </summary>
@@ -177,7 +177,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationrecipientsV1Response> ElectronicfundstransferGetCommunicationrecipientsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationrecipientsV1Response> ElectronicfundstransferGetCommunicationrecipientsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Electronicfundstransfer&#39;s Communicationrecipient
@@ -190,7 +190,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response>> ElectronicfundstransferGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response>> ElectronicfundstransferGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Electronicfundstransfer&#39;s Communicationsender
         /// </summary>
@@ -202,7 +202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationsendersV1Response> ElectronicfundstransferGetCommunicationsendersV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationsendersV1Response> ElectronicfundstransferGetCommunicationsendersV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Electronicfundstransfer&#39;s Communicationsender
@@ -215,7 +215,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response>> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response>> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -413,7 +413,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationCountV1Response> ElectronicfundstransferGetCommunicationCountV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationCountV1Response> ElectronicfundstransferGetCommunicationCountV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response> localVarResponse = await ElectronicfundstransferGetCommunicationCountV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response>> ElectronicfundstransferGetCommunicationCountV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response>> ElectronicfundstransferGetCommunicationCountV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationListV1Response> ElectronicfundstransferGetCommunicationListV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationListV1Response> ElectronicfundstransferGetCommunicationListV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> localVarResponse = await ElectronicfundstransferGetCommunicationListV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -569,7 +569,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationListV1Response>> ElectronicfundstransferGetCommunicationListV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationListV1Response>> ElectronicfundstransferGetCommunicationListV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -697,7 +697,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationrecipientsV1Response> ElectronicfundstransferGetCommunicationrecipientsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationrecipientsV1Response> ElectronicfundstransferGetCommunicationrecipientsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response> localVarResponse = await ElectronicfundstransferGetCommunicationrecipientsV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -711,7 +711,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response>> ElectronicfundstransferGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response>> ElectronicfundstransferGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -839,7 +839,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ElectronicfundstransferGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationsendersV1Response> ElectronicfundstransferGetCommunicationsendersV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetCommunicationsendersV1Response> ElectronicfundstransferGetCommunicationsendersV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response> localVarResponse = await ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -853,7 +853,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response>> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response>> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

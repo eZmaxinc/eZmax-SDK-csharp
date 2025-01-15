@@ -52,26 +52,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignelementdependencyRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignelementdependency.</param>
-        /// <param name="">The unique ID of the Ezsignformfield.</param>
-        /// <param name="">The unique ID of the Ezsignformfieldgroup.</param>
-        /// <param name="">The Label for the Ezsignformfieldgroup.</param>
-        /// <param name="">The Label for the Ezsignformfield.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether if it&#39;s selected or not when using eEzsignelementdependencyValidation &#x3D; Selected.</param>
-        /// <param name="">.</param>
-        /// <param name="">The value of the Ezsignelementdependency.</param>
-        public EzsignelementdependencyRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), FieldEEzsignelementdependencyValidation  = default(FieldEEzsignelementdependencyValidation), bool  = default(bool), FieldEEzsignelementdependencyOperator?  = default(FieldEEzsignelementdependencyOperator?), string  = default(string))
+        /// <param name="pkiEzsignelementdependencyID">The unique ID of the Ezsignelementdependency.</param>
+        /// <param name="fkiEzsignformfieldIDValidation">The unique ID of the Ezsignformfield.</param>
+        /// <param name="fkiEzsignformfieldgroupIDValidation">The unique ID of the Ezsignformfieldgroup.</param>
+        /// <param name="sEzsignelementdependencyEzsignformfieldgrouplabel">The Label for the Ezsignformfieldgroup.</param>
+        /// <param name="sEzsignelementdependencyEzsignformfieldlabel">The Label for the Ezsignformfield.</param>
+        /// <param name="eEzsignelementdependencyValidation">eEzsignelementdependencyValidation (required).</param>
+        /// <param name="bEzsignelementdependencySelected">Whether if it&#39;s selected or not when using eEzsignelementdependencyValidation &#x3D; Selected.</param>
+        /// <param name="eEzsignelementdependencyOperator">eEzsignelementdependencyOperator.</param>
+        /// <param name="sEzsignelementdependencyValue">The value of the Ezsignelementdependency.</param>
+        public EzsignelementdependencyRequest(int pkiEzsignelementdependencyID = default(int), int fkiEzsignformfieldIDValidation = default(int), int fkiEzsignformfieldgroupIDValidation = default(int), string sEzsignelementdependencyEzsignformfieldgrouplabel = default(string), string sEzsignelementdependencyEzsignformfieldlabel = default(string), FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation = default(FieldEEzsignelementdependencyValidation), bool bEzsignelementdependencySelected = default(bool), FieldEEzsignelementdependencyOperator? eEzsignelementdependencyOperator = default(FieldEEzsignelementdependencyOperator?), string sEzsignelementdependencyValue = default(string))
         {
-            this.EEzsignelementdependencyValidation = ;
-            this.PkiEzsignelementdependencyID = ;
-            this.FkiEzsignformfieldIDValidation = ;
-            this.FkiEzsignformfieldgroupIDValidation = ;
-            this.SEzsignelementdependencyEzsignformfieldgrouplabel = ;
-            this.SEzsignelementdependencyEzsignformfieldlabel = ;
-            this.BEzsignelementdependencySelected = ;
-            this.EEzsignelementdependencyOperator = ;
-            this.SEzsignelementdependencyValue = ;
+            this.EEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
+            this.PkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
+            this.FkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
+            this.FkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
+            this.SEzsignelementdependencyEzsignformfieldgrouplabel = sEzsignelementdependencyEzsignformfieldgrouplabel;
+            this.SEzsignelementdependencyEzsignformfieldlabel = sEzsignelementdependencyEzsignformfieldlabel;
+            this.BEzsignelementdependencySelected = bEzsignelementdependencySelected;
+            this.EEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
+            this.SEzsignelementdependencyValue = sEzsignelementdependencyValue;
         }
 
         /// <summary>
@@ -165,42 +165,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignelementdependencyID (int) maximum
             if (this.PkiEzsignelementdependencyID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // PkiEzsignelementdependencyID (int) minimum
             if (this.PkiEzsignelementdependencyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // FkiEzsignformfieldIDValidation (int) minimum
             if (this.FkiEzsignformfieldIDValidation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
+                yield return new ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
             }
 
             // FkiEzsignformfieldgroupIDValidation (int) minimum
             if (this.FkiEzsignformfieldgroupIDValidation < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
+                yield return new ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
             }
 
             // SEzsignelementdependencyEzsignformfieldgrouplabel (string) maxLength
             if (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null && this.SEzsignelementdependencyEzsignformfieldgrouplabel.Length > 50)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be less than 50.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
+                yield return new ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be less than 50.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
             }
 
             // SEzsignelementdependencyEzsignformfieldgrouplabel (string) minLength
             if (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null && this.SEzsignelementdependencyEzsignformfieldgrouplabel.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be greater than 1.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
+                yield return new ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be greater than 1.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
             }
 
             if (this.SEzsignelementdependencyValue != null) {

@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The url to sign the Ezsignfolder created by the Ezsigntemplatepublic. Only used when fkiUserLogintypeID is **No validation** or **Sms only**.</param>
-        public EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload(string  = default(string))
+        /// <param name="sEzsigntemplatepublicSigningurl">The url to sign the Ezsignfolder created by the Ezsigntemplatepublic. Only used when fkiUserLogintypeID is **No validation** or **Sms only**.</param>
+        public EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload(string sEzsigntemplatepublicSigningurl = default(string))
         {
-            this.SEzsigntemplatepublicSigningurl = ;
+            this.SEzsigntemplatepublicSigningurl = sEzsigntemplatepublicSigningurl;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzsigntemplatepublicSigningurl != null) {
                 // SEzsigntemplatepublicSigningurl (string) pattern

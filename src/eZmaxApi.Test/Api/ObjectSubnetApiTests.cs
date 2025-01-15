@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiSubnetID = null;
             //var response = instance.SubnetDeleteObjectV1(pkiSubnetID);
-            //Assert.IsType<SubnetDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiSubnetID = null;
             //SubnetEditObjectV1Request subnetEditObjectV1Request = null;
             //var response = instance.SubnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
-            //Assert.IsType<SubnetEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

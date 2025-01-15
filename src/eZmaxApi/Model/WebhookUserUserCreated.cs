@@ -40,29 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserUserCreated" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name=""> (required).</param>
-        public WebhookUserUserCreated(CustomWebhookResponse  = default(CustomWebhookResponse), List<AttemptResponseCompound>  = default(List<AttemptResponseCompound>), UserResponseCompound  = default(UserResponseCompound))
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
+        public WebhookUserUserCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserResponse objUser = default(UserResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objWebhook" is required (not null)
+            if (objWebhook == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException("objWebhook is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.ObjWebhook = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjWebhook = objWebhook;
+            // to ensure "aObjAttempt" is required (not null)
+            if (aObjAttempt == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException("aObjAttempt is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.AObjAttempt = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjAttempt = aObjAttempt;
+            // to ensure "objUser" is required (not null)
+            if (objUser == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookUserUserCreated and cannot be null");
+                throw new ArgumentNullException("objUser is a required property for WebhookUserUserCreated and cannot be null");
             }
-            this.ObjUser = ;
+            this.ObjUser = objUser;
         }
 
         /// <summary>
@@ -79,10 +79,11 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjUser
+        /// A User Object and children to create a complete structure
         /// </summary>
+        /// <value>A User Object and children to create a complete structure</value>
         [DataMember(Name = "objUser", IsRequired = true, EmitDefaultValue = true)]
-        public UserResponseCompound ObjUser { get; set; }
+        public UserResponse ObjUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -113,7 +114,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

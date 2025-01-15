@@ -40,23 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldersignerassociationstatusResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfoldersignerassociation (required).</param>
-        /// <param name="">The last name of the Ezsignsigner.</param>
-        /// <param name="">The first name of the Ezsignsigner.</param>
-        /// <param name="">The description of the Ezsignsigner.</param>
-        /// <param name=""> (required).</param>
-        public CustomEzsignfoldersignerassociationstatusResponse(int  = default(int), string  = default(string), string  = default(string), string  = default(string), List<CustomEzsignsignaturestatusResponse>  = default(List<CustomEzsignsignaturestatusResponse>))
+        /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="sEzsignfoldersignerassociationstatusLastname">The last name of the Ezsignsigner.</param>
+        /// <param name="sEzsignfoldersignerassociationstatusFirstname">The first name of the Ezsignsigner.</param>
+        /// <param name="sEzsignfoldersignerassociationstatusDescriptionX">The description of the Ezsignsigner.</param>
+        /// <param name="aObjEzsignsignaturestatus">aObjEzsignsignaturestatus (required).</param>
+        public CustomEzsignfoldersignerassociationstatusResponse(int fkiEzsignfoldersignerassociationID = default(int), string sEzsignfoldersignerassociationstatusLastname = default(string), string sEzsignfoldersignerassociationstatusFirstname = default(string), string sEzsignfoldersignerassociationstatusDescriptionX = default(string), List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = default(List<CustomEzsignsignaturestatusResponse>))
         {
-            this.FkiEzsignfoldersignerassociationID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+            // to ensure "aObjEzsignsignaturestatus" is required (not null)
+            if (aObjEzsignsignaturestatus == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignfoldersignerassociationstatusResponse and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsignaturestatus is a required property for CustomEzsignfoldersignerassociationstatusResponse and cannot be null");
             }
-            this.AObjEzsignsignaturestatus = ;
-            this.SEzsignfoldersignerassociationstatusLastname = ;
-            this.SEzsignfoldersignerassociationstatusFirstname = ;
-            this.SEzsignfoldersignerassociationstatusDescriptionX = ;
+            this.AObjEzsignsignaturestatus = aObjEzsignsignaturestatus;
+            this.SEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
+            this.SEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
+            this.SEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
         }
 
         /// <summary>
@@ -130,12 +130,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsignfoldersignerassociationID (int) minimum
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
             }
 
             yield break;

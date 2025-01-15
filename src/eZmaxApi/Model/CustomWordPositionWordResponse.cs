@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWordPositionWordResponse" /> class.
         /// </summary>
-        /// <param name="">The searched word (required).</param>
-        /// <param name="">The found occurences for the seached word (required).</param>
-        public CustomWordPositionWordResponse(string  = default(string), List<CustomWordPositionOccurenceResponse>  = default(List<CustomWordPositionOccurenceResponse>))
+        /// <param name="sWord">The searched word (required).</param>
+        /// <param name="aObjWordPositionOccurence">The found occurences for the seached word (required).</param>
+        public CustomWordPositionWordResponse(string sWord = default(string), List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = default(List<CustomWordPositionOccurenceResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sWord" is required (not null)
+            if (sWord == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomWordPositionWordResponse and cannot be null");
+                throw new ArgumentNullException("sWord is a required property for CustomWordPositionWordResponse and cannot be null");
             }
-            this.SWord = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWord = sWord;
+            // to ensure "aObjWordPositionOccurence" is required (not null)
+            if (aObjWordPositionOccurence == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomWordPositionWordResponse and cannot be null");
+                throw new ArgumentNullException("aObjWordPositionOccurence is a required property for CustomWordPositionWordResponse and cannot be null");
             }
-            this.AObjWordPositionOccurence = ;
+            this.AObjWordPositionOccurence = aObjWordPositionOccurence;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

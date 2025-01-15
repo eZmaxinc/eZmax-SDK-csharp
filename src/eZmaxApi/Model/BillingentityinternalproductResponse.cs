@@ -40,37 +40,37 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Billingentityinternalproduct (required).</param>
-        /// <param name="">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="">The description of the Billingentityinternal in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="">The description of the Ezmaxproduct in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="">The description of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductResponse(int  = default(int), int  = default(int), string  = default(string), int  = default(int), string  = default(string), int  = default(int), string  = default(string))
+        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct (required).</param>
+        /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
+        /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
+        public BillingentityinternalproductResponse(int pkiBillingentityinternalproductID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string))
         {
-            this.PkiBillingentityinternalproductID = ;
-            this.FkiBillingentityinternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
+            if (sBillingentityinternalDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponse and cannot be null");
+                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalproductResponse and cannot be null");
             }
-            this.SBillingentityinternalDescriptionX = ;
-            this.FkiEzmaxproductID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+            this.FkiEzmaxproductID = fkiEzmaxproductID;
+            // to ensure "sEzmaxproductDescriptionX" is required (not null)
+            if (sEzmaxproductDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponse and cannot be null");
+                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for BillingentityinternalproductResponse and cannot be null");
             }
-            this.SEzmaxproductDescriptionX = ;
-            this.FkiBillingentityexternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
+            // to ensure "sBillingentityexternalDescription" is required (not null)
+            if (sBillingentityexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalproductResponse and cannot be null");
+                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for BillingentityinternalproductResponse and cannot be null");
             }
-            this.SBillingentityexternalDescription = ;
+            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
         }
 
         /// <summary>
@@ -162,36 +162,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBillingentityinternalproductID (int) maximum
             if (this.PkiBillingentityinternalproductID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
             }
 
             // PkiBillingentityinternalproductID (int) minimum
             if (this.PkiBillingentityinternalproductID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiEzmaxproductID (int) minimum
             if (this.FkiEzmaxproductID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
             }
 
             // FkiBillingentityexternalID (int) minimum
             if (this.FkiBillingentityexternalID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
             }
 
             yield break;

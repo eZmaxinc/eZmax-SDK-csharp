@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SubnetDeleteObjectV1Response</returns>
-        SubnetDeleteObjectV1Response SubnetDeleteObjectV1(int pkiSubnetID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse SubnetDeleteObjectV1(int pkiSubnetID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Subnet
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SubnetDeleteObjectV1Response</returns>
-        ApiResponse<SubnetDeleteObjectV1Response> SubnetDeleteObjectV1WithHttpInfo(int pkiSubnetID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> SubnetDeleteObjectV1WithHttpInfo(int pkiSubnetID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Subnet
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SubnetEditObjectV1Response</returns>
-        SubnetEditObjectV1Response SubnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse SubnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Subnet
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SubnetEditObjectV1Response</returns>
-        ApiResponse<SubnetEditObjectV1Response> SubnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> SubnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Subnet
         /// </summary>
@@ -132,7 +132,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubnetCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<SubnetCreateObjectV1Response> SubnetCreateObjectV1Async(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SubnetCreateObjectV1Response> SubnetCreateObjectV1Async(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Subnet
@@ -145,7 +145,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubnetCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubnetCreateObjectV1Response>> SubnetCreateObjectV1WithHttpInfoAsync(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SubnetCreateObjectV1Response>> SubnetCreateObjectV1WithHttpInfoAsync(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Subnet
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SubnetDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<SubnetDeleteObjectV1Response> SubnetDeleteObjectV1Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> SubnetDeleteObjectV1Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Subnet
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SubnetDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubnetDeleteObjectV1Response>> SubnetDeleteObjectV1WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> SubnetDeleteObjectV1WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Subnet
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SubnetEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<SubnetEditObjectV1Response> SubnetEditObjectV1Async(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> SubnetEditObjectV1Async(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Subnet
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SubnetEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubnetEditObjectV1Response>> SubnetEditObjectV1WithHttpInfoAsync(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> SubnetEditObjectV1WithHttpInfoAsync(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Subnet
         /// </summary>
@@ -209,7 +209,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubnetGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<SubnetGetObjectV2Response> SubnetGetObjectV2Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SubnetGetObjectV2Response> SubnetGetObjectV2Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Subnet
@@ -222,7 +222,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubnetGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubnetGetObjectV2Response>> SubnetGetObjectV2WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SubnetGetObjectV2Response>> SubnetGetObjectV2WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -427,7 +427,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubnetCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<SubnetCreateObjectV1Response> SubnetCreateObjectV1Async(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SubnetCreateObjectV1Response> SubnetCreateObjectV1Async(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<SubnetCreateObjectV1Response> localVarResponse = await SubnetCreateObjectV1WithHttpInfoAsync(subnetCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -441,7 +441,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubnetCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetCreateObjectV1Response>> SubnetCreateObjectV1WithHttpInfoAsync(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetCreateObjectV1Response>> SubnetCreateObjectV1WithHttpInfoAsync(SubnetCreateObjectV1Request subnetCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'subnetCreateObjectV1Request' is set
             if (subnetCreateObjectV1Request == null)
@@ -505,10 +505,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SubnetDeleteObjectV1Response</returns>
-        public SubnetDeleteObjectV1Response SubnetDeleteObjectV1(int pkiSubnetID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse SubnetDeleteObjectV1(int pkiSubnetID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<SubnetDeleteObjectV1Response> localVarResponse = SubnetDeleteObjectV1WithHttpInfo(pkiSubnetID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = SubnetDeleteObjectV1WithHttpInfo(pkiSubnetID);
             return localVarResponse.Data;
         }
 
@@ -518,8 +518,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SubnetDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<SubnetDeleteObjectV1Response> SubnetDeleteObjectV1WithHttpInfo(int pkiSubnetID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> SubnetDeleteObjectV1WithHttpInfo(int pkiSubnetID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<SubnetDeleteObjectV1Response>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubnetDeleteObjectV1", localVarResponse);
@@ -575,10 +575,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SubnetDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<SubnetDeleteObjectV1Response> SubnetDeleteObjectV1Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> SubnetDeleteObjectV1Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<SubnetDeleteObjectV1Response> localVarResponse = await SubnetDeleteObjectV1WithHttpInfoAsync(pkiSubnetID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await SubnetDeleteObjectV1WithHttpInfoAsync(pkiSubnetID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -589,8 +589,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SubnetDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetDeleteObjectV1Response>> SubnetDeleteObjectV1WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> SubnetDeleteObjectV1WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -627,7 +627,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<SubnetDeleteObjectV1Response>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +648,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SubnetEditObjectV1Response</returns>
-        public SubnetEditObjectV1Response SubnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse SubnetEditObjectV1(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<SubnetEditObjectV1Response> localVarResponse = SubnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = SubnetEditObjectV1WithHttpInfo(pkiSubnetID, subnetEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +662,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSubnetID">The unique ID of the Subnet</param>
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SubnetEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<SubnetEditObjectV1Response> SubnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> SubnetEditObjectV1WithHttpInfo(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'subnetEditObjectV1Request' is set
             if (subnetEditObjectV1Request == null)
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<SubnetEditObjectV1Response>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubnetEditObjectV1", localVarResponse);
@@ -728,10 +728,10 @@ namespace eZmaxApi.Api
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SubnetEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<SubnetEditObjectV1Response> SubnetEditObjectV1Async(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> SubnetEditObjectV1Async(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<SubnetEditObjectV1Response> localVarResponse = await SubnetEditObjectV1WithHttpInfoAsync(pkiSubnetID, subnetEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await SubnetEditObjectV1WithHttpInfoAsync(pkiSubnetID, subnetEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +743,8 @@ namespace eZmaxApi.Api
         /// <param name="subnetEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SubnetEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetEditObjectV1Response>> SubnetEditObjectV1WithHttpInfoAsync(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> SubnetEditObjectV1WithHttpInfoAsync(int pkiSubnetID, SubnetEditObjectV1Request subnetEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'subnetEditObjectV1Request' is set
             if (subnetEditObjectV1Request == null)
@@ -789,7 +789,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<SubnetEditObjectV1Response>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/subnet/{pkiSubnetID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -880,7 +880,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SubnetGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<SubnetGetObjectV2Response> SubnetGetObjectV2Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SubnetGetObjectV2Response> SubnetGetObjectV2Async(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<SubnetGetObjectV2Response> localVarResponse = await SubnetGetObjectV2WithHttpInfoAsync(pkiSubnetID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -894,7 +894,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SubnetGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetGetObjectV2Response>> SubnetGetObjectV2WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SubnetGetObjectV2Response>> SubnetGetObjectV2WithHttpInfoAsync(int pkiSubnetID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

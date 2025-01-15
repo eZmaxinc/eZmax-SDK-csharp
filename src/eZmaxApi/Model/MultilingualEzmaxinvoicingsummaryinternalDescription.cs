@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzmaxinvoicingsummaryinternalDescription" /> class.
         /// </summary>
-        /// <param name="">The Ezmaxinvoicingsummaryinternal description in French.</param>
-        /// <param name="">The Ezmaxinvoicingsummaryinternal description in English.</param>
-        public MultilingualEzmaxinvoicingsummaryinternalDescription(string  = default(string), string  = default(string))
+        /// <param name="sEzmaxinvoicingsummaryinternalDescription1">The Ezmaxinvoicingsummaryinternal description in French.</param>
+        /// <param name="sEzmaxinvoicingsummaryinternalDescription2">The Ezmaxinvoicingsummaryinternal description in English.</param>
+        public MultilingualEzmaxinvoicingsummaryinternalDescription(string sEzmaxinvoicingsummaryinternalDescription1 = default(string), string sEzmaxinvoicingsummaryinternalDescription2 = default(string))
         {
-            this.SEzmaxinvoicingsummaryinternalDescription1 = ;
-            this.SEzmaxinvoicingsummaryinternalDescription2 = ;
+            this.SEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
+            this.SEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;
         }
 
         /// <summary>
@@ -87,18 +87,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SEzmaxinvoicingsummaryinternalDescription1 (string) maxLength
             if (this.SEzmaxinvoicingsummaryinternalDescription1 != null && this.SEzmaxinvoicingsummaryinternalDescription1.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription1, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription1" });
+                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription1, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription1" });
             }
 
             // SEzmaxinvoicingsummaryinternalDescription2 (string) maxLength
             if (this.SEzmaxinvoicingsummaryinternalDescription2 != null && this.SEzmaxinvoicingsummaryinternalDescription2.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription2, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription2" });
+                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription2, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription2" });
             }
 
             yield break;

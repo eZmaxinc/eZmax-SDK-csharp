@@ -40,30 +40,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplatepackage (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepackagemembershipResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), EzsigntemplateResponseCompound  = default(EzsigntemplateResponseCompound), List<EzsigntemplatepackagesignermembershipResponseCompound>  = default(List<EzsigntemplatepackagesignermembershipResponseCompound>))
+        /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership (required).</param>
+        /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="iEzsigntemplatepackagemembershipOrder">The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage. (required).</param>
+        /// <param name="objEzsigntemplate">objEzsigntemplate (required).</param>
+        /// <param name="aObjEzsigntemplatepackagesignermembership">aObjEzsigntemplatepackagesignermembership (required).</param>
+        public EzsigntemplatepackagemembershipResponseCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsigntemplatepackagemembershipOrder = default(int), EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), List<EzsigntemplatepackagesignermembershipResponseCompound> aObjEzsigntemplatepackagesignermembership = default(List<EzsigntemplatepackagesignermembershipResponseCompound>))
         {
-            this.PkiEzsigntemplatepackagemembershipID = ;
-            this.FkiEzsigntemplatepackageID = ;
-            this.FkiEzsigntemplateID = ;
-            this.IEzsigntemplatepackagemembershipOrder = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
+            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            this.IEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
+            // to ensure "objEzsigntemplate" is required (not null)
+            if (objEzsigntemplate == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplate is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
             }
-            this.ObjEzsigntemplate = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjEzsigntemplate = objEzsigntemplate;
+            // to ensure "aObjEzsigntemplatepackagesignermembership" is required (not null)
+            if (aObjEzsigntemplatepackagesignermembership == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
+                throw new ArgumentNullException("aObjEzsigntemplatepackagesignermembership is a required property for EzsigntemplatepackagemembershipResponseCompound and cannot be null");
             }
-            this.AObjEzsigntemplatepackagesignermembership = ;
+            this.AObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;
         }
 
         /// <summary>
@@ -142,30 +142,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatepackagemembershipID (int) minimum
             if (this.PkiEzsigntemplatepackagemembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagemembershipID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagemembershipID" });
             }
 
             // FkiEzsigntemplatepackageID (int) minimum
             if (this.FkiEzsigntemplatepackageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // IEzsigntemplatepackagemembershipOrder (int) minimum
             if (this.IEzsigntemplatepackagemembershipOrder < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepackagemembershipOrder, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagemembershipOrder" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatepackagemembershipOrder, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagemembershipOrder" });
             }
 
             yield break;

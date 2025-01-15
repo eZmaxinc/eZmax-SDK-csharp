@@ -64,51 +64,51 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateformfield.</param>
-        /// <param name="">.</param>
-        /// <param name="">The page number in the Ezsigntemplatedocument (required).</param>
-        /// <param name="">The Label for the Ezsigntemplateformfield (required).</param>
-        /// <param name="">The value for the Ezsigntemplateformfield.</param>
-        /// <param name="">The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate..</param>
-        /// <param name="">The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate..</param>
-        /// <param name="">The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  (required).</param>
-        /// <param name="">Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**.</param>
-        /// <param name="">Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**.</param>
-        /// <param name="">.</param>
-        /// <param name="">The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
-        /// <param name="">The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
-        /// <param name="">The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public EzsigntemplateformfieldRequestCompound(int  = default(int), FieldEEzsigntemplateformfieldPositioning?  = default(FieldEEzsigntemplateformfieldPositioning?), int  = default(int), string  = default(string), string  = default(string), int  = default(int), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool), bool  = default(bool), FieldEEzsigntemplateformfieldDependencyrequirement?  = default(FieldEEzsigntemplateformfieldDependencyrequirement?), string  = default(string), int  = default(int), int  = default(int), FieldEEzsigntemplateformfieldPositioningoccurence?  = default(FieldEEzsigntemplateformfieldPositioningoccurence?), EnumHorizontalalignment?  = default(EnumHorizontalalignment?), TextstylestaticRequestCompound  = default(TextstylestaticRequestCompound), List<EzsigntemplateelementdependencyRequestCompound>  = default(List<EzsigntemplateelementdependencyRequestCompound>))
+        /// <param name="pkiEzsigntemplateformfieldID">The unique ID of the Ezsigntemplateformfield.</param>
+        /// <param name="eEzsigntemplateformfieldPositioning">eEzsigntemplateformfieldPositioning.</param>
+        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
+        /// <param name="sEzsigntemplateformfieldLabel">The Label for the Ezsigntemplateformfield (required).</param>
+        /// <param name="sEzsigntemplateformfieldValue">The value for the Ezsigntemplateformfield.</param>
+        /// <param name="iEzsigntemplateformfieldX">The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate..</param>
+        /// <param name="iEzsigntemplateformfieldY">The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate..</param>
+        /// <param name="iEzsigntemplateformfieldWidth">The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsigntemplateformfieldHeight">The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  (required).</param>
+        /// <param name="bEzsigntemplateformfieldAutocomplete">Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**.</param>
+        /// <param name="bEzsigntemplateformfieldSelected">Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**.</param>
+        /// <param name="eEzsigntemplateformfieldDependencyrequirement">eEzsigntemplateformfieldDependencyrequirement.</param>
+        /// <param name="sEzsigntemplateformfieldPositioningpattern">The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
+        /// <param name="iEzsigntemplateformfieldPositioningoffsetx">The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
+        /// <param name="iEzsigntemplateformfieldPositioningoffsety">The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**.</param>
+        /// <param name="eEzsigntemplateformfieldPositioningoccurence">eEzsigntemplateformfieldPositioningoccurence.</param>
+        /// <param name="eEzsigntemplateformfieldHorizontalalignment">eEzsigntemplateformfieldHorizontalalignment.</param>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
+        /// <param name="aObjEzsigntemplateelementdependency">aObjEzsigntemplateelementdependency.</param>
+        public EzsigntemplateformfieldRequestCompound(int pkiEzsigntemplateformfieldID = default(int), FieldEEzsigntemplateformfieldPositioning? eEzsigntemplateformfieldPositioning = default(FieldEEzsigntemplateformfieldPositioning?), int iEzsigntemplatedocumentpagePagenumber = default(int), string sEzsigntemplateformfieldLabel = default(string), string sEzsigntemplateformfieldValue = default(string), int iEzsigntemplateformfieldX = default(int), int iEzsigntemplateformfieldY = default(int), int iEzsigntemplateformfieldWidth = default(int), int iEzsigntemplateformfieldHeight = default(int), bool bEzsigntemplateformfieldAutocomplete = default(bool), bool bEzsigntemplateformfieldSelected = default(bool), FieldEEzsigntemplateformfieldDependencyrequirement? eEzsigntemplateformfieldDependencyrequirement = default(FieldEEzsigntemplateformfieldDependencyrequirement?), string sEzsigntemplateformfieldPositioningpattern = default(string), int iEzsigntemplateformfieldPositioningoffsetx = default(int), int iEzsigntemplateformfieldPositioningoffsety = default(int), FieldEEzsigntemplateformfieldPositioningoccurence? eEzsigntemplateformfieldPositioningoccurence = default(FieldEEzsigntemplateformfieldPositioningoccurence?), EnumHorizontalalignment? eEzsigntemplateformfieldHorizontalalignment = default(EnumHorizontalalignment?), TextstylestaticRequestCompound objTextstylestatic = default(TextstylestaticRequestCompound), List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency = default(List<EzsigntemplateelementdependencyRequestCompound>))
         {
-            this.IEzsigntemplatedocumentpagePagenumber = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
+            // to ensure "sEzsigntemplateformfieldLabel" is required (not null)
+            if (sEzsigntemplateformfieldLabel == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldRequestCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateformfieldLabel is a required property for EzsigntemplateformfieldRequestCompound and cannot be null");
             }
-            this.SEzsigntemplateformfieldLabel = ;
-            this.IEzsigntemplateformfieldWidth = ;
-            this.IEzsigntemplateformfieldHeight = ;
-            this.PkiEzsigntemplateformfieldID = ;
-            this.EEzsigntemplateformfieldPositioning = ;
-            this.SEzsigntemplateformfieldValue = ;
-            this.IEzsigntemplateformfieldX = ;
-            this.IEzsigntemplateformfieldY = ;
-            this.BEzsigntemplateformfieldAutocomplete = ;
-            this.BEzsigntemplateformfieldSelected = ;
-            this.EEzsigntemplateformfieldDependencyrequirement = ;
-            this.SEzsigntemplateformfieldPositioningpattern = ;
-            this.IEzsigntemplateformfieldPositioningoffsetx = ;
-            this.IEzsigntemplateformfieldPositioningoffsety = ;
-            this.EEzsigntemplateformfieldPositioningoccurence = ;
-            this.EEzsigntemplateformfieldHorizontalalignment = ;
-            this.ObjTextstylestatic = ;
-            this.AObjEzsigntemplateelementdependency = ;
+            this.SEzsigntemplateformfieldLabel = sEzsigntemplateformfieldLabel;
+            this.IEzsigntemplateformfieldWidth = iEzsigntemplateformfieldWidth;
+            this.IEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
+            this.PkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
+            this.EEzsigntemplateformfieldPositioning = eEzsigntemplateformfieldPositioning;
+            this.SEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
+            this.IEzsigntemplateformfieldX = iEzsigntemplateformfieldX;
+            this.IEzsigntemplateformfieldY = iEzsigntemplateformfieldY;
+            this.BEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+            this.BEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
+            this.EEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+            this.SEzsigntemplateformfieldPositioningpattern = sEzsigntemplateformfieldPositioningpattern;
+            this.IEzsigntemplateformfieldPositioningoffsetx = iEzsigntemplateformfieldPositioningoffsetx;
+            this.IEzsigntemplateformfieldPositioningoffsety = iEzsigntemplateformfieldPositioningoffsety;
+            this.EEzsigntemplateformfieldPositioningoccurence = eEzsigntemplateformfieldPositioningoccurence;
+            this.EEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+            this.ObjTextstylestatic = objTextstylestatic;
+            this.AObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
         }
 
         /// <summary>
@@ -270,42 +270,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateformfieldID (int) minimum
             if (this.PkiEzsigntemplateformfieldID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldID" });
             }
 
             // IEzsigntemplatedocumentpagePagenumber (int) minimum
             if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
             }
 
             // IEzsigntemplateformfieldX (int) minimum
             if (this.IEzsigntemplateformfieldX < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldX" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplateformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldX" });
             }
 
             // IEzsigntemplateformfieldY (int) minimum
             if (this.IEzsigntemplateformfieldY < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldY" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplateformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldY" });
             }
 
             // IEzsigntemplateformfieldWidth (int) minimum
             if (this.IEzsigntemplateformfieldWidth < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldWidth" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplateformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldWidth" });
             }
 
             // IEzsigntemplateformfieldHeight (int) minimum
             if (this.IEzsigntemplateformfieldHeight < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldHeight" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplateformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateformfieldHeight" });
             }
 
             if (this.SEzsigntemplateformfieldPositioningpattern != null) {

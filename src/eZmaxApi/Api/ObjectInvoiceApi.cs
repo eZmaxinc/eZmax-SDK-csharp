@@ -147,7 +147,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetAttachmentsV1Response</returns>
-        System.Threading.Tasks.Task<InvoiceGetAttachmentsV1Response> InvoiceGetAttachmentsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceGetAttachmentsV1Response> InvoiceGetAttachmentsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Invoice&#39;s Attachments
@@ -160,7 +160,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetAttachmentsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceGetAttachmentsV1Response>> InvoiceGetAttachmentsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetAttachmentsV1Response>> InvoiceGetAttachmentsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication count
         /// </summary>
@@ -172,7 +172,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationCountV1Response</returns>
-        System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication count
@@ -185,7 +185,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationCountV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Communication list
         /// </summary>
@@ -197,7 +197,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationListV1Response</returns>
-        System.Threading.Tasks.Task<InvoiceGetCommunicationListV1Response> InvoiceGetCommunicationListV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceGetCommunicationListV1Response> InvoiceGetCommunicationListV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Communication list
@@ -210,7 +210,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationListV1Response>> InvoiceGetCommunicationListV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationListV1Response>> InvoiceGetCommunicationListV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Invoice&#39;s Communicationrecipient
         /// </summary>
@@ -222,7 +222,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationrecipientsV1Response</returns>
-        System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Invoice&#39;s Communicationrecipient
@@ -235,7 +235,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationrecipientsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Invoice&#39;s Communicationsender
         /// </summary>
@@ -247,7 +247,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationsendersV1Response</returns>
-        System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Invoice&#39;s Communicationsender
@@ -260,7 +260,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationsendersV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -458,7 +458,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetAttachmentsV1Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceGetAttachmentsV1Response> InvoiceGetAttachmentsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceGetAttachmentsV1Response> InvoiceGetAttachmentsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InvoiceGetAttachmentsV1Response> localVarResponse = await InvoiceGetAttachmentsV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -472,7 +472,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetAttachmentsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetAttachmentsV1Response>> InvoiceGetAttachmentsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetAttachmentsV1Response>> InvoiceGetAttachmentsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -600,7 +600,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationCountV1Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationCountV1Response> InvoiceGetCommunicationCountV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response> localVarResponse = await InvoiceGetCommunicationCountV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -614,7 +614,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationCountV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationCountV1Response>> InvoiceGetCommunicationCountV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -742,7 +742,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationListV1Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceGetCommunicationListV1Response> InvoiceGetCommunicationListV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationListV1Response> InvoiceGetCommunicationListV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationListV1Response> localVarResponse = await InvoiceGetCommunicationListV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -756,7 +756,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationListV1Response>> InvoiceGetCommunicationListV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationListV1Response>> InvoiceGetCommunicationListV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -884,7 +884,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationrecipientsV1Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationrecipientsV1Response> InvoiceGetCommunicationrecipientsV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response> localVarResponse = await InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -898,7 +898,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationrecipientsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationrecipientsV1Response>> InvoiceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1026,7 +1026,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InvoiceGetCommunicationsendersV1Response</returns>
-        public async System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1Async(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response> localVarResponse = await InvoiceGetCommunicationsendersV1WithHttpInfoAsync(pkiInvoiceID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1040,7 +1040,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationsendersV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

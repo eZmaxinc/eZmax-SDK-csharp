@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimEmail" /> class.
         /// </summary>
-        /// <param name="">The email address..</param>
-        /// <param name="">.</param>
-        public ScimEmail(string  = default(string), bool  = default(bool))
+        /// <param name="value">The email address..</param>
+        /// <param name="primary">primary.</param>
+        public ScimEmail(string value = default(string), bool primary = default(bool))
         {
-            this.Value = ;
-            this.Primary = ;
+            this.Value = value;
+            this.Primary = primary;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.Value != null) {
                 // Value (string) pattern

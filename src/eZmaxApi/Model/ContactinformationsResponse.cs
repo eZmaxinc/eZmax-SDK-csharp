@@ -46,30 +46,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Contactinformations (required).</param>
-        /// <param name="">The unique ID of the Address.</param>
-        /// <param name="">The unique ID of the Phone..</param>
-        /// <param name="">The unique ID of the Email.</param>
-        /// <param name="">The unique ID of the Website Default.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The url of the Contactinformations.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public ContactinformationsResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEContactinformationsType  = default(FieldEContactinformationsType), string  = default(string), AddressResponseCompound  = default(AddressResponseCompound), PhoneResponseCompound  = default(PhoneResponseCompound), EmailResponseCompound  = default(EmailResponseCompound), WebsiteResponseCompound  = default(WebsiteResponseCompound))
+        /// <param name="pkiContactinformationsID">The unique ID of the Contactinformations (required).</param>
+        /// <param name="fkiAddressIDDefault">The unique ID of the Address.</param>
+        /// <param name="fkiPhoneIDDefault">The unique ID of the Phone..</param>
+        /// <param name="fkiEmailIDDefault">The unique ID of the Email.</param>
+        /// <param name="fkiWebsiteIDDefault">The unique ID of the Website Default.</param>
+        /// <param name="eContactinformationsType">eContactinformationsType (required).</param>
+        /// <param name="sContactinformationsUrl">The url of the Contactinformations.</param>
+        /// <param name="objAddressDefault">An Address Object and children to create a complete structure.</param>
+        /// <param name="objPhoneDefault">objPhoneDefault.</param>
+        /// <param name="objEmailDefault">An Email Object and children to create a complete structure.</param>
+        /// <param name="objWebsiteDefault">A Website Object and children to create a complete structure.</param>
+        public ContactinformationsResponse(int pkiContactinformationsID = default(int), int fkiAddressIDDefault = default(int), int fkiPhoneIDDefault = default(int), int fkiEmailIDDefault = default(int), int fkiWebsiteIDDefault = default(int), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), string sContactinformationsUrl = default(string), AddressResponse objAddressDefault = default(AddressResponse), PhoneResponseCompound objPhoneDefault = default(PhoneResponseCompound), EmailResponse objEmailDefault = default(EmailResponse), WebsiteResponse objWebsiteDefault = default(WebsiteResponse))
         {
-            this.PkiContactinformationsID = ;
-            this.EContactinformationsType = ;
-            this.FkiAddressIDDefault = ;
-            this.FkiPhoneIDDefault = ;
-            this.FkiEmailIDDefault = ;
-            this.FkiWebsiteIDDefault = ;
-            this.SContactinformationsUrl = ;
-            this.ObjAddressDefault = ;
-            this.ObjPhoneDefault = ;
-            this.ObjEmailDefault = ;
-            this.ObjWebsiteDefault = ;
+            this.PkiContactinformationsID = pkiContactinformationsID;
+            this.EContactinformationsType = eContactinformationsType;
+            this.FkiAddressIDDefault = fkiAddressIDDefault;
+            this.FkiPhoneIDDefault = fkiPhoneIDDefault;
+            this.FkiEmailIDDefault = fkiEmailIDDefault;
+            this.FkiWebsiteIDDefault = fkiWebsiteIDDefault;
+            this.SContactinformationsUrl = sContactinformationsUrl;
+            this.ObjAddressDefault = objAddressDefault;
+            this.ObjPhoneDefault = objPhoneDefault;
+            this.ObjEmailDefault = objEmailDefault;
+            this.ObjWebsiteDefault = objWebsiteDefault;
         }
 
         /// <summary>
@@ -121,10 +121,11 @@ namespace eZmaxApi.Model
         public string SContactinformationsUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjAddressDefault
+        /// An Address Object and children to create a complete structure
         /// </summary>
+        /// <value>An Address Object and children to create a complete structure</value>
         [DataMember(Name = "objAddressDefault", EmitDefaultValue = false)]
-        public AddressResponseCompound ObjAddressDefault { get; set; }
+        public AddressResponse ObjAddressDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneDefault
@@ -133,16 +134,18 @@ namespace eZmaxApi.Model
         public PhoneResponseCompound ObjPhoneDefault { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmailDefault
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmailDefault", EmitDefaultValue = false)]
-        public EmailResponseCompound ObjEmailDefault { get; set; }
+        public EmailResponse ObjEmailDefault { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjWebsiteDefault
+        /// A Website Object and children to create a complete structure
         /// </summary>
+        /// <value>A Website Object and children to create a complete structure</value>
         [DataMember(Name = "objWebsiteDefault", EmitDefaultValue = false)]
-        public WebsiteResponseCompound ObjWebsiteDefault { get; set; }
+        public WebsiteResponse ObjWebsiteDefault { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -181,54 +184,54 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiContactinformationsID (int) maximum
             if (this.PkiContactinformationsID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "PkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "PkiContactinformationsID" });
             }
 
             // PkiContactinformationsID (int) minimum
             if (this.PkiContactinformationsID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "PkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "PkiContactinformationsID" });
             }
 
             // FkiAddressIDDefault (int) minimum
             if (this.FkiAddressIDDefault < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAddressIDDefault, must be a value greater than or equal to 0.", new [] { "FkiAddressIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiAddressIDDefault, must be a value greater than or equal to 0.", new [] { "FkiAddressIDDefault" });
             }
 
             // FkiPhoneIDDefault (int) minimum
             if (this.FkiPhoneIDDefault < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiPhoneIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiPhoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiPhoneIDDefault" });
             }
 
             // FkiEmailIDDefault (int) maximum
             if (this.FkiEmailIDDefault > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiEmailIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiEmailIDDefault" });
             }
 
             // FkiEmailIDDefault (int) minimum
             if (this.FkiEmailIDDefault < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailIDDefault, must be a value greater than or equal to 1.", new [] { "FkiEmailIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value greater than or equal to 1.", new [] { "FkiEmailIDDefault" });
             }
 
             // FkiWebsiteIDDefault (int) maximum
             if (this.FkiWebsiteIDDefault > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiWebsiteIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiWebsiteIDDefault" });
             }
 
             // FkiWebsiteIDDefault (int) minimum
             if (this.FkiWebsiteIDDefault < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value greater than or equal to 0.", new [] { "FkiWebsiteIDDefault" });
+                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value greater than or equal to 0.", new [] { "FkiWebsiteIDDefault" });
             }
 
             if (this.SContactinformationsUrl != null) {

@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionGetObjectV2Response" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public DiscussionGetObjectV2Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), DiscussionGetObjectV2ResponseMPayload  = default(DiscussionGetObjectV2ResponseMPayload))
+        /// <param name="objDebugPayload">objDebugPayload (required).</param>
+        /// <param name="objDebug">objDebug.</param>
+        /// <param name="mPayload">mPayload (required).</param>
+        public DiscussionGetObjectV2Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), DiscussionGetObjectV2ResponseMPayload mPayload = default(DiscussionGetObjectV2ResponseMPayload))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionGetObjectV2Response and cannot be null");
+                throw new ArgumentNullException("objDebugPayload is a required property for DiscussionGetObjectV2Response and cannot be null");
             }
-            this.ObjDebugPayload = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjDebugPayload = objDebugPayload;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionGetObjectV2Response and cannot be null");
+                throw new ArgumentNullException("mPayload is a required property for DiscussionGetObjectV2Response and cannot be null");
             }
-            this.MPayload = ;
-            this.ObjDebug = ;
+            this.MPayload = mPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

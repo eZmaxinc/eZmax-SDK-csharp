@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplatedocument (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="">The name of the Ezsigntemplatedocument. (required).</param>
-        /// <param name="">The number of pages in the Ezsigntemplatedocument. (required).</param>
-        /// <param name="">The number of total signatures in the Ezsigntemplate. (required).</param>
-        /// <param name="">The number of total form fields in the Ezsigntemplate. (required).</param>
-        /// <param name="">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
-        public EzsigntemplatedocumentResponseCompound(int  = default(int), int  = default(int), string  = default(string), int  = default(int), int  = default(int), int  = default(int), bool  = default(bool))
+        /// <param name="pkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
+        /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="sEzsigntemplatedocumentName">The name of the Ezsigntemplatedocument. (required).</param>
+        /// <param name="iEzsigntemplatedocumentPagetotal">The number of pages in the Ezsigntemplatedocument. (required).</param>
+        /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
+        /// <param name="iEzsigntemplatedocumentFormfieldtotal">The number of total form fields in the Ezsigntemplate. (required).</param>
+        /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
+        public EzsigntemplatedocumentResponseCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), int iEzsigntemplatedocumentFormfieldtotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool))
         {
-            this.PkiEzsigntemplatedocumentID = ;
-            this.FkiEzsigntemplateID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
+            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
+            // to ensure "sEzsigntemplatedocumentName" is required (not null)
+            if (sEzsigntemplatedocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatedocumentName is a required property for EzsigntemplatedocumentResponseCompound and cannot be null");
             }
-            this.SEzsigntemplatedocumentName = ;
-            this.IEzsigntemplatedocumentPagetotal = ;
-            this.IEzsigntemplatedocumentSignaturetotal = ;
-            this.IEzsigntemplatedocumentFormfieldtotal = ;
-            this.BEzsigntemplatedocumentHassignedsignatures = ;
+            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
+            this.IEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
+            this.IEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
+            this.IEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
+            this.BEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
         }
 
         /// <summary>
@@ -152,24 +152,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatedocumentID (int) minimum
             if (this.PkiEzsigntemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // IEzsigntemplatedocumentPagetotal (int) minimum
             if (this.IEzsigntemplatedocumentPagetotal < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentPagetotal" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentPagetotal" });
             }
 
             yield break;

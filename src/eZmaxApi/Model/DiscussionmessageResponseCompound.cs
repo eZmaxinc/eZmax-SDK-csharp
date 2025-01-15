@@ -46,41 +46,41 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Discussionmessage (required).</param>
-        /// <param name="">The unique ID of the Discussion (required).</param>
-        /// <param name="">The unique ID of the Discussionmembership.</param>
-        /// <param name="">The unique ID of the Discussionmembership.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The content of the Discussionmessage (required).</param>
-        /// <param name="">The name the creator of the Discussionmessage. (required).</param>
-        /// <param name="">The name the Actionrequired of the Discussionmessage..</param>
-        /// <param name=""> (required).</param>
-        public DiscussionmessageResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEDiscussionmessageStatus  = default(FieldEDiscussionmessageStatus), string  = default(string), string  = default(string), string  = default(string), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiDiscussionmessageID">The unique ID of the Discussionmessage (required).</param>
+        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
+        /// <param name="fkiDiscussionmembershipID">The unique ID of the Discussionmembership.</param>
+        /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
+        /// <param name="eDiscussionmessageStatus">eDiscussionmessageStatus (required).</param>
+        /// <param name="tDiscussionmessageContent">The content of the Discussionmessage (required).</param>
+        /// <param name="sDiscussionmessageCreatorname">The name the creator of the Discussionmessage. (required).</param>
+        /// <param name="sDiscussionmessageActionrequiredname">The name the Actionrequired of the Discussionmessage..</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public DiscussionmessageResponseCompound(int pkiDiscussionmessageID = default(int), int fkiDiscussionID = default(int), int fkiDiscussionmembershipID = default(int), int fkiDiscussionmembershipIDActionrequired = default(int), FieldEDiscussionmessageStatus eDiscussionmessageStatus = default(FieldEDiscussionmessageStatus), string tDiscussionmessageContent = default(string), string sDiscussionmessageCreatorname = default(string), string sDiscussionmessageActionrequiredname = default(string), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiDiscussionmessageID = ;
-            this.FkiDiscussionID = ;
-            this.EDiscussionmessageStatus = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiDiscussionmessageID = pkiDiscussionmessageID;
+            this.FkiDiscussionID = fkiDiscussionID;
+            this.EDiscussionmessageStatus = eDiscussionmessageStatus;
+            // to ensure "tDiscussionmessageContent" is required (not null)
+            if (tDiscussionmessageContent == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmessageResponseCompound and cannot be null");
+                throw new ArgumentNullException("tDiscussionmessageContent is a required property for DiscussionmessageResponseCompound and cannot be null");
             }
-            this.TDiscussionmessageContent = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.TDiscussionmessageContent = tDiscussionmessageContent;
+            // to ensure "sDiscussionmessageCreatorname" is required (not null)
+            if (sDiscussionmessageCreatorname == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmessageResponseCompound and cannot be null");
+                throw new ArgumentNullException("sDiscussionmessageCreatorname is a required property for DiscussionmessageResponseCompound and cannot be null");
             }
-            this.SDiscussionmessageCreatorname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SDiscussionmessageCreatorname = sDiscussionmessageCreatorname;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmessageResponseCompound and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for DiscussionmessageResponseCompound and cannot be null");
             }
-            this.ObjAudit = ;
-            this.FkiDiscussionmembershipID = ;
-            this.FkiDiscussionmembershipIDActionrequired = ;
-            this.SDiscussionmessageActionrequiredname = ;
+            this.ObjAudit = objAudit;
+            this.FkiDiscussionmembershipID = fkiDiscussionmembershipID;
+            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
+            this.SDiscussionmessageActionrequiredname = sDiscussionmessageActionrequiredname;
         }
 
         /// <summary>
@@ -180,54 +180,54 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDiscussionmessageID (int) maximum
             if (this.PkiDiscussionmessageID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmessageID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmessageID" });
             }
 
             // PkiDiscussionmessageID (int) minimum
             if (this.PkiDiscussionmessageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmessageID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmessageID" });
             }
 
             // FkiDiscussionID (int) maximum
             if (this.FkiDiscussionID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
             }
 
             // FkiDiscussionID (int) minimum
             if (this.FkiDiscussionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
             }
 
             // FkiDiscussionmembershipID (int) maximum
             if (this.FkiDiscussionmembershipID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipID" });
             }
 
             // FkiDiscussionmembershipID (int) minimum
             if (this.FkiDiscussionmembershipID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipID" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) maximum
             if (this.FkiDiscussionmembershipIDActionrequired > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) minimum
             if (this.FkiDiscussionmembershipIDActionrequired < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             if (this.TDiscussionmessageContent != null) {

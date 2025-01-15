@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualPaymenttermDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Paymentterm in French.</param>
-        /// <param name="">The description of the Paymentterm in English.</param>
-        public MultilingualPaymenttermDescription(string  = default(string), string  = default(string))
+        /// <param name="sPaymenttermDescription1">The description of the Paymentterm in French.</param>
+        /// <param name="sPaymenttermDescription2">The description of the Paymentterm in English.</param>
+        public MultilingualPaymenttermDescription(string sPaymenttermDescription1 = default(string), string sPaymenttermDescription2 = default(string))
         {
-            this.SPaymenttermDescription1 = ;
-            this.SPaymenttermDescription2 = ;
+            this.SPaymenttermDescription1 = sPaymenttermDescription1;
+            this.SPaymenttermDescription2 = sPaymenttermDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SPaymenttermDescription1 != null) {
                 // SPaymenttermDescription1 (string) pattern

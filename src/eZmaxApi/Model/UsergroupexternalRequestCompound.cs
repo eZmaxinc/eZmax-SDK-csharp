@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroupexternal.</param>
-        /// <param name="">The name of the Usergroupexternal (required).</param>
-        /// <param name="">The id of the Usergroupexternal (required).</param>
-        public UsergroupexternalRequestCompound(int  = default(int), string  = default(string), string  = default(string))
+        /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal.</param>
+        /// <param name="sUsergroupexternalName">The name of the Usergroupexternal (required).</param>
+        /// <param name="sUsergroupexternalID">The id of the Usergroupexternal (required).</param>
+        public UsergroupexternalRequestCompound(int pkiUsergroupexternalID = default(int), string sUsergroupexternalName = default(string), string sUsergroupexternalID = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sUsergroupexternalName" is required (not null)
+            if (sUsergroupexternalName == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupexternalRequestCompound and cannot be null");
+                throw new ArgumentNullException("sUsergroupexternalName is a required property for UsergroupexternalRequestCompound and cannot be null");
             }
-            this.SUsergroupexternalName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUsergroupexternalName = sUsergroupexternalName;
+            // to ensure "sUsergroupexternalID" is required (not null)
+            if (sUsergroupexternalID == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupexternalRequestCompound and cannot be null");
+                throw new ArgumentNullException("sUsergroupexternalID is a required property for UsergroupexternalRequestCompound and cannot be null");
             }
-            this.SUsergroupexternalID = ;
-            this.PkiUsergroupexternalID = ;
+            this.SUsergroupexternalID = sUsergroupexternalID;
+            this.PkiUsergroupexternalID = pkiUsergroupexternalID;
         }
 
         /// <summary>
@@ -113,18 +113,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupexternalID (int) maximum
             if (this.PkiUsergroupexternalID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "PkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "PkiUsergroupexternalID" });
             }
 
             // PkiUsergroupexternalID (int) minimum
             if (this.PkiUsergroupexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupexternalID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupexternalID" });
             }
 
             if (this.SUsergroupexternalName != null) {

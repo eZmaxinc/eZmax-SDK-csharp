@@ -40,32 +40,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignbulksend.</param>
-        /// <param name="">The unique ID of the Ezsignfoldertype. (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The description of the Ezsignbulksend (required).</param>
-        /// <param name="">Note about the Ezsignbulksend (required).</param>
-        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        /// <param name="">Whether the Ezsignbulksend is active or not (required).</param>
-        public EzsignbulksendRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiEzsignbulksendID">The unique ID of the Ezsignbulksend.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend (required).</param>
+        /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
+        public EzsignbulksendRequest(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool))
         {
-            this.FkiEzsignfoldertypeID = ;
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sEzsignbulksendDescription" is required (not null)
+            if (sEzsignbulksendDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendRequest and cannot be null");
+                throw new ArgumentNullException("sEzsignbulksendDescription is a required property for EzsignbulksendRequest and cannot be null");
             }
-            this.SEzsignbulksendDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignbulksendDescription = sEzsignbulksendDescription;
+            // to ensure "tEzsignbulksendNote" is required (not null)
+            if (tEzsignbulksendNote == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendRequest and cannot be null");
+                throw new ArgumentNullException("tEzsignbulksendNote is a required property for EzsignbulksendRequest and cannot be null");
             }
-            this.TEzsignbulksendNote = ;
-            this.BEzsignbulksendNeedvalidation = ;
-            this.BEzsignbulksendIsactive = ;
-            this.PkiEzsignbulksendID = ;
+            this.TEzsignbulksendNote = tEzsignbulksendNote;
+            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+            this.BEzsignbulksendIsactive = bEzsignbulksendIsactive;
+            this.PkiEzsignbulksendID = pkiEzsignbulksendID;
         }
 
         /// <summary>
@@ -156,36 +156,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksendID (int) minimum
             if (this.PkiEzsignbulksendID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             yield break;

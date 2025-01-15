@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualUserlogintypeDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Userlogintype in French.</param>
-        /// <param name="">The description of the Userlogintype in English.</param>
-        public MultilingualUserlogintypeDescription(string  = default(string), string  = default(string))
+        /// <param name="sUserlogintypeDescription1">The description of the Userlogintype in French.</param>
+        /// <param name="sUserlogintypeDescription2">The description of the Userlogintype in English.</param>
+        public MultilingualUserlogintypeDescription(string sUserlogintypeDescription1 = default(string), string sUserlogintypeDescription2 = default(string))
         {
-            this.SUserlogintypeDescription1 = ;
-            this.SUserlogintypeDescription2 = ;
+            this.SUserlogintypeDescription1 = sUserlogintypeDescription1;
+            this.SUserlogintypeDescription2 = sUserlogintypeDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SUserlogintypeDescription1 != null) {
                 // SUserlogintypeDescription1 (string) pattern

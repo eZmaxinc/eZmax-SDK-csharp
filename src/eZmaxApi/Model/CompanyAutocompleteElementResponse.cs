@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CompanyAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Company (required).</param>
-        /// <param name="">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="">Whether the Company is active or not (required).</param>
-        public CompanyAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiCompanyID">The unique ID of the Company (required).</param>
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="bCompanyIsactive">Whether the Company is active or not (required).</param>
+        public CompanyAutocompleteElementResponse(int pkiCompanyID = default(int), string sCompanyNameX = default(string), bool bCompanyIsactive = default(bool))
         {
-            this.PkiCompanyID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiCompanyID = pkiCompanyID;
+            // to ensure "sCompanyNameX" is required (not null)
+            if (sCompanyNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for CompanyAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCompanyNameX is a required property for CompanyAutocompleteElementResponse and cannot be null");
             }
-            this.SCompanyNameX = ;
-            this.BCompanyIsactive = ;
+            this.SCompanyNameX = sCompanyNameX;
+            this.BCompanyIsactive = bCompanyIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCompanyID (int) maximum
             if (this.PkiCompanyID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCompanyID, must be a value less than or equal to 255.", new [] { "PkiCompanyID" });
+                yield return new ValidationResult("Invalid value for PkiCompanyID, must be a value less than or equal to 255.", new [] { "PkiCompanyID" });
             }
 
             // PkiCompanyID (int) minimum
             if (this.PkiCompanyID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCompanyID, must be a value greater than or equal to 1.", new [] { "PkiCompanyID" });
+                yield return new ValidationResult("Invalid value for PkiCompanyID, must be a value greater than or equal to 1.", new [] { "PkiCompanyID" });
             }
 
             yield break;

@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentdependencyRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigndocumentdependency.</param>
-        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
-        public EzsigndocumentdependencyRequestCompound(int  = default(int), int  = default(int))
+        /// <param name="pkiEzsigndocumentdependencyID">The unique ID of the Ezsigndocumentdependency.</param>
+        /// <param name="fkiEzsigndocumentIDdependency">The unique ID of the Ezsigndocument (required).</param>
+        public EzsigndocumentdependencyRequestCompound(int pkiEzsigndocumentdependencyID = default(int), int fkiEzsigndocumentIDdependency = default(int))
         {
-            this.FkiEzsigndocumentIDdependency = ;
-            this.PkiEzsigndocumentdependencyID = ;
+            this.FkiEzsigndocumentIDdependency = fkiEzsigndocumentIDdependency;
+            this.PkiEzsigndocumentdependencyID = pkiEzsigndocumentdependencyID;
         }
 
         /// <summary>
@@ -92,24 +92,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigndocumentdependencyID (int) maximum
             if (this.PkiEzsigndocumentdependencyID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigndocumentdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndocumentdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigndocumentdependencyID" });
             }
 
             // PkiEzsigndocumentdependencyID (int) minimum
             if (this.PkiEzsigndocumentdependencyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndocumentdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentdependencyID" });
             }
 
             // FkiEzsigndocumentIDdependency (int) minimum
             if (this.FkiEzsigndocumentIDdependency < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentIDdependency, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentIDdependency" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentIDdependency, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentIDdependency" });
             }
 
             yield break;

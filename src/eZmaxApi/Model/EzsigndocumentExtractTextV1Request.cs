@@ -74,20 +74,20 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentExtractTextV1Request" /> class.
         /// </summary>
-        /// <param name="">The page where the area is located (required).</param>
-        /// <param name="">The section of the page.</param>
-        /// <param name="">The X coordinate (Horizontal). Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
-        /// <param name="">The Y coordinate (Vertical). Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
-        /// <param name="">Area&#39;s width. Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
-        /// <param name="">Area&#39;s height. Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
-        public EzsigndocumentExtractTextV1Request(int  = default(int), ESectionEnum?  = default(ESectionEnum?), int  = default(int), int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="iPage">The page where the area is located (required).</param>
+        /// <param name="eSection">The section of the page.</param>
+        /// <param name="iX">The X coordinate (Horizontal). Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
+        /// <param name="iY">The Y coordinate (Vertical). Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
+        /// <param name="iWidth">Area&#39;s width. Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
+        /// <param name="iHeight">Area&#39;s height. Require when eSection &#x3D; &#39;Region&#39; or eSection is not set..</param>
+        public EzsigndocumentExtractTextV1Request(int iPage = default(int), ESectionEnum? eSection = default(ESectionEnum?), int iX = default(int), int iY = default(int), int iWidth = default(int), int iHeight = default(int))
         {
-            this.IPage = ;
-            this.ESection = ;
-            this.IX = ;
-            this.IY = ;
-            this.IWidth = ;
-            this.IHeight = ;
+            this.IPage = iPage;
+            this.ESection = eSection;
+            this.IX = iX;
+            this.IY = iY;
+            this.IWidth = iWidth;
+            this.IHeight = iHeight;
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

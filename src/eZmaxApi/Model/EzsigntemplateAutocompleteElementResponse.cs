@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The description of the Ezsigntemplate (required).</param>
-        /// <param name="">The unique ID of the Ezsigntemplate (required).</param>
-        /// <param name="">Whether the Ezsigntemplate is active or not (required).</param>
-        public EzsigntemplateAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel  = default(FieldEEzsignfoldertypePrivacylevel), string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
+        /// <param name="bEzsigntemplateIsactive">Whether the Ezsigntemplate is active or not (required).</param>
+        public EzsigntemplateAutocompleteElementResponse(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsigntemplateDescription = default(string), int pkiEzsigntemplateID = default(int), bool bEzsigntemplateIsactive = default(bool))
         {
-            this.EEzsignfoldertypePrivacylevel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+            // to ensure "sEzsigntemplateDescription" is required (not null)
+            if (sEzsigntemplateDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateDescription is a required property for EzsigntemplateAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntemplateDescription = ;
-            this.PkiEzsigntemplateID = ;
-            this.BEzsigntemplateIsactive = ;
+            this.SEzsigntemplateDescription = sEzsigntemplateDescription;
+            this.PkiEzsigntemplateID = pkiEzsigntemplateID;
+            this.BEzsigntemplateIsactive = bEzsigntemplateIsactive;
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzsigntemplateDescription != null) {
                 // SEzsigntemplateDescription (string) pattern
@@ -131,7 +131,7 @@ namespace eZmaxApi.Model
             // PkiEzsigntemplateID (int) minimum
             if (this.PkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
             }
 
             yield break;

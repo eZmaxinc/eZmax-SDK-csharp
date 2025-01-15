@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Branding object containing the description, ID and active status about the element. (required).</param>
-        public BrandingGetAutocompleteV2ResponseMPayload(List<BrandingAutocompleteElementResponse>  = default(List<BrandingAutocompleteElementResponse>))
+        /// <param name="aObjBranding">An array of Branding object containing the description, ID and active status about the element. (required).</param>
+        public BrandingGetAutocompleteV2ResponseMPayload(List<BrandingAutocompleteElementResponse> aObjBranding = default(List<BrandingAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjBranding" is required (not null)
+            if (aObjBranding == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjBranding is a required property for BrandingGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjBranding = ;
+            this.AObjBranding = aObjBranding;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

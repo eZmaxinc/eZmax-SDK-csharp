@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload(EzsigntemplateformfieldgroupResponseCompound  = default(EzsigntemplateformfieldgroupResponseCompound))
+        /// <param name="objEzsigntemplateformfieldgroup">objEzsigntemplateformfieldgroup (required).</param>
+        public EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload(EzsigntemplateformfieldgroupResponseCompound objEzsigntemplateformfieldgroup = default(EzsigntemplateformfieldgroupResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplateformfieldgroup" is required (not null)
+            if (objEzsigntemplateformfieldgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplateformfieldgroup is a required property for EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplateformfieldgroup = ;
+            this.ObjEzsigntemplateformfieldgroup = objEzsigntemplateformfieldgroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

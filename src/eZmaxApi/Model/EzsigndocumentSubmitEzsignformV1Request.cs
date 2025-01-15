@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentSubmitEzsignformV1Request" /> class.
         /// </summary>
-        /// <param name="">Whether the Ezsignform submitted is a draft or not. (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentSubmitEzsignformV1Request(bool  = default(bool), List<CustomEzsignformfieldgroupRequest>  = default(List<CustomEzsignformfieldgroupRequest>))
+        /// <param name="bEzsignformIsdraft">Whether the Ezsignform submitted is a draft or not. (required).</param>
+        /// <param name="aObjEzsignformfieldgroup">aObjEzsignformfieldgroup (required).</param>
+        public EzsigndocumentSubmitEzsignformV1Request(bool bEzsignformIsdraft = default(bool), List<CustomEzsignformfieldgroupRequest> aObjEzsignformfieldgroup = default(List<CustomEzsignformfieldgroupRequest>))
         {
-            this.BEzsignformIsdraft = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.BEzsignformIsdraft = bEzsignformIsdraft;
+            // to ensure "aObjEzsignformfieldgroup" is required (not null)
+            if (aObjEzsignformfieldgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentSubmitEzsignformV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsignformfieldgroup is a required property for EzsigndocumentSubmitEzsignformV1Request and cannot be null");
             }
-            this.AObjEzsignformfieldgroup = ;
+            this.AObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

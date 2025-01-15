@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name=""> (required).</param>
-        public ActivesessionGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<ActivesessionListElement>  = default(List<ActivesessionListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name="aObjActivesession">aObjActivesession (required).</param>
+        public ActivesessionGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<ActivesessionListElement> aObjActivesession = default(List<ActivesessionListElement>))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
+            // to ensure "aObjActivesession" is required (not null)
+            if (aObjActivesession == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjActivesession is a required property for ActivesessionGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjActivesession = ;
+            this.AObjActivesession = aObjActivesession;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

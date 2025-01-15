@@ -35,18 +35,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfolderezsigntemplatepublicSignerResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">The unique ID of the Ezsignsignergroup.</param>
-        /// <param name="">The First name of the contact.</param>
-        /// <param name="">The Last name of the contact.</param>
-        /// <param name="">The Description of the Ezsignsignergroup in the language of the requester.</param>
-        public CustomEzsignfolderezsigntemplatepublicSignerResponse(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="fkiUserID">The unique ID of the User.</param>
+        /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
+        /// <param name="sContactFirstname">The First name of the contact.</param>
+        /// <param name="sContactLastname">The Last name of the contact.</param>
+        /// <param name="sEzsignsignergroupDescriptionX">The Description of the Ezsignsignergroup in the language of the requester.</param>
+        public CustomEzsignfolderezsigntemplatepublicSignerResponse(int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sEzsignsignergroupDescriptionX = default(string))
         {
-            this.FkiUserID = ;
-            this.FkiEzsignsignergroupID = ;
-            this.SContactFirstname = ;
-            this.SContactLastname = ;
-            this.SEzsignsignergroupDescriptionX = ;
+            this.FkiUserID = fkiUserID;
+            this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
+            this.SContactFirstname = sContactFirstname;
+            this.SContactLastname = sContactLastname;
+            this.SEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
         }
 
         /// <summary>
@@ -120,24 +120,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiEzsignsignergroupID (int) maximum
             if (this.FkiEzsignsignergroupID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "FkiEzsignsignergroupID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "FkiEzsignsignergroupID" });
             }
 
             // FkiEzsignsignergroupID (int) minimum
             if (this.FkiEzsignsignergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignergroupID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignergroupID" });
             }
 
             yield break;

@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatetypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="">The description of the Ezdoctemplatetype in the language of the requester (required).</param>
-        /// <param name="">Whether the Ezdoctemplatetype is active or not (required).</param>
-        public EzdoctemplatetypeAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
+        /// <param name="sEzdoctemplatetypeDescriptionX">The description of the Ezdoctemplatetype in the language of the requester (required).</param>
+        /// <param name="bEzdoctemplatetypeIsactive">Whether the Ezdoctemplatetype is active or not (required).</param>
+        public EzdoctemplatetypeAutocompleteElementResponse(int pkiEzdoctemplatetypeID = default(int), string sEzdoctemplatetypeDescriptionX = default(string), bool bEzdoctemplatetypeIsactive = default(bool))
         {
-            this.PkiEzdoctemplatetypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzdoctemplatetypeID = pkiEzdoctemplatetypeID;
+            // to ensure "sEzdoctemplatetypeDescriptionX" is required (not null)
+            if (sEzdoctemplatetypeDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatetypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzdoctemplatetypeDescriptionX is a required property for EzdoctemplatetypeAutocompleteElementResponse and cannot be null");
             }
-            this.SEzdoctemplatetypeDescriptionX = ;
-            this.BEzdoctemplatetypeIsactive = ;
+            this.SEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
+            this.BEzdoctemplatetypeIsactive = bEzdoctemplatetypeIsactive;
         }
 
         /// <summary>
@@ -108,18 +108,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzdoctemplatetypeID (int) maximum
             if (this.PkiEzdoctemplatetypeID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "PkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "PkiEzdoctemplatetypeID" });
             }
 
             // PkiEzdoctemplatetypeID (int) minimum
             if (this.PkiEzdoctemplatetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatetypeID" });
             }
 
             if (this.SEzdoctemplatetypeDescriptionX != null) {

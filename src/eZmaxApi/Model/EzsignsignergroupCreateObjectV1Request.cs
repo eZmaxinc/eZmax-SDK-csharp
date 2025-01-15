@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignsignergroupCreateObjectV1Request(List<EzsignsignergroupRequestCompound>  = default(List<EzsignsignergroupRequestCompound>))
+        /// <param name="aObjEzsignsignergroup">aObjEzsignsignergroup (required).</param>
+        public EzsignsignergroupCreateObjectV1Request(List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup = default(List<EzsignsignergroupRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignsignergroup" is required (not null)
+            if (aObjEzsignsignergroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignergroupCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsignergroup is a required property for EzsignsignergroupCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsignsignergroup = ;
+            this.AObjEzsignsignergroup = aObjEzsignsignergroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

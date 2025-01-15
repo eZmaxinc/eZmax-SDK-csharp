@@ -40,16 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Signature (required).</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The URL of the SVG file for the Signature.</param>
-        /// <param name="">The URL of the SVG file for the Initials.</param>
-        public SignatureResponseCompound(int  = default(int), int  = default(int), string  = default(string), string  = default(string))
+        /// <param name="pkiSignatureID">The unique ID of the Signature (required).</param>
+        /// <param name="fkiFontID">The unique ID of the Font.</param>
+        /// <param name="sSignatureUrl">The URL of the SVG file for the Signature.</param>
+        /// <param name="sSignatureUrlinitials">The URL of the SVG file for the Initials.</param>
+        public SignatureResponseCompound(int pkiSignatureID = default(int), int fkiFontID = default(int), string sSignatureUrl = default(string), string sSignatureUrlinitials = default(string))
         {
-            this.PkiSignatureID = ;
-            this.FkiFontID = ;
-            this.SSignatureUrl = ;
-            this.SSignatureUrlinitials = ;
+            this.PkiSignatureID = pkiSignatureID;
+            this.FkiFontID = fkiFontID;
+            this.SSignatureUrl = sSignatureUrl;
+            this.SSignatureUrlinitials = sSignatureUrlinitials;
         }
 
         /// <summary>
@@ -114,24 +114,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSignatureID (int) maximum
             if (this.PkiSignatureID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSignatureID, must be a value less than or equal to 16777215.", new [] { "PkiSignatureID" });
+                yield return new ValidationResult("Invalid value for PkiSignatureID, must be a value less than or equal to 16777215.", new [] { "PkiSignatureID" });
             }
 
             // PkiSignatureID (int) minimum
             if (this.PkiSignatureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSignatureID, must be a value greater than or equal to 0.", new [] { "PkiSignatureID" });
+                yield return new ValidationResult("Invalid value for PkiSignatureID, must be a value greater than or equal to 0.", new [] { "PkiSignatureID" });
             }
 
             // FkiFontID (int) minimum
             if (this.FkiFontID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             if (this.SSignatureUrl != null) {

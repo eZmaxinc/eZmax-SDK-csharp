@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationResponseCompoundUser" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The email address. (required).</param>
-        public EzsignfoldersignerassociationResponseCompoundUser(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        public EzsignfoldersignerassociationResponseCompoundUser(int pkiUserID = default(int), int fkiLanguageID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string))
         {
-            this.PkiUserID = ;
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUserID = pkiUserID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sEmailAddress" is required (not null)
+            if (sEmailAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException("sEmailAddress is a required property for EzsignfoldersignerassociationResponseCompoundUser and cannot be null");
             }
-            this.SEmailAddress = ;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -140,24 +140,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             if (this.SEmailAddress != null) {

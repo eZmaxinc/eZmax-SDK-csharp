@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignuserResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignuser (required).</param>
-        /// <param name="">The unique ID of the Contact (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsignuserResponse(int  = default(int), int  = default(int), ContactResponseCompound  = default(ContactResponseCompound), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiEzsignuserID">The unique ID of the Ezsignuser (required).</param>
+        /// <param name="fkiContactID">The unique ID of the Contact (required).</param>
+        /// <param name="objContact">objContact (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public EzsignuserResponse(int pkiEzsignuserID = default(int), int fkiContactID = default(int), ContactResponseCompound objContact = default(ContactResponseCompound), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiEzsignuserID = ;
-            this.FkiContactID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignuserID = pkiEzsignuserID;
+            this.FkiContactID = fkiContactID;
+            // to ensure "objContact" is required (not null)
+            if (objContact == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignuserResponse and cannot be null");
+                throw new ArgumentNullException("objContact is a required property for EzsignuserResponse and cannot be null");
             }
-            this.ObjContact = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjContact = objContact;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignuserResponse and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for EzsignuserResponse and cannot be null");
             }
-            this.ObjAudit = ;
+            this.ObjAudit = objAudit;
         }
 
         /// <summary>
@@ -120,24 +120,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignuserID (int) maximum
             if (this.PkiEzsignuserID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignuserID, must be a value less than or equal to 65535.", new [] { "PkiEzsignuserID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value less than or equal to 65535.", new [] { "PkiEzsignuserID" });
             }
 
             // PkiEzsignuserID (int) minimum
             if (this.PkiEzsignuserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignuserID, must be a value greater than or equal to 0.", new [] { "PkiEzsignuserID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value greater than or equal to 0.", new [] { "PkiEzsignuserID" });
             }
 
             // FkiContactID (int) minimum
             if (this.FkiContactID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
+                yield return new ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
             }
 
             yield break;

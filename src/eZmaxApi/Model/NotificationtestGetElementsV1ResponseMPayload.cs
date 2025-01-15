@@ -40,31 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationtestGetElementsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Notificationtest (required).</param>
-        /// <param name="">The function name of the Notificationtest (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public NotificationtestGetElementsV1ResponseMPayload(int  = default(int), string  = default(string), List<string>  = default(List<string>), List<Dictionary<string, Object>>  = default(List<Dictionary<string, Object>>))
+        /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
+        /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
+        /// <param name="aSVariableobjectProperty">aSVariableobjectProperty (required).</param>
+        /// <param name="aObjVariableobject">aObjVariableobject (required).</param>
+        public NotificationtestGetElementsV1ResponseMPayload(int pkiNotificationtestID = default(int), string sNotificationtestFunction = default(string), List<string> aSVariableobjectProperty = default(List<string>), List<Dictionary<string, Object>> aObjVariableobject = default(List<Dictionary<string, Object>>))
         {
-            this.PkiNotificationtestID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiNotificationtestID = pkiNotificationtestID;
+            // to ensure "sNotificationtestFunction" is required (not null)
+            if (sNotificationtestFunction == null)
             {
-                throw new ArgumentNullException(" is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sNotificationtestFunction is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
             }
-            this.SNotificationtestFunction = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SNotificationtestFunction = sNotificationtestFunction;
+            // to ensure "aSVariableobjectProperty" is required (not null)
+            if (aSVariableobjectProperty == null)
             {
-                throw new ArgumentNullException(" is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aSVariableobjectProperty is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
             }
-            this.ASVariableobjectProperty = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ASVariableobjectProperty = aSVariableobjectProperty;
+            // to ensure "aObjVariableobject" is required (not null)
+            if (aObjVariableobject == null)
             {
-                throw new ArgumentNullException(" is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjVariableobject is a required property for NotificationtestGetElementsV1ResponseMPayload and cannot be null");
             }
-            this.AObjVariableobject = ;
+            this.AObjVariableobject = aObjVariableobject;
         }
 
         /// <summary>
@@ -125,12 +125,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiNotificationtestID (int) minimum
             if (this.PkiNotificationtestID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiNotificationtestID, must be a value greater than or equal to 0.", new [] { "PkiNotificationtestID" });
+                yield return new ValidationResult("Invalid value for PkiNotificationtestID, must be a value greater than or equal to 0.", new [] { "PkiNotificationtestID" });
             }
 
             yield break;

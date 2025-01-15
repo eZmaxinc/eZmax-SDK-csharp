@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScimGroup" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">The Name of the Usergroup in the language of the requester (required).</param>
-        /// <param name="">.</param>
-        public ScimGroup(string  = default(string), string  = default(string), List<ScimGroupMember>  = default(List<ScimGroupMember>))
+        /// <param name="id">id.</param>
+        /// <param name="displayName">The Name of the Usergroup in the language of the requester (required).</param>
+        /// <param name="members">members.</param>
+        public ScimGroup(string id = default(string), string displayName = default(string), List<ScimGroupMember> members = default(List<ScimGroupMember>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "displayName" is required (not null)
+            if (displayName == null)
             {
-                throw new ArgumentNullException(" is a required property for ScimGroup and cannot be null");
+                throw new ArgumentNullException("displayName is a required property for ScimGroup and cannot be null");
             }
-            this.DisplayName = ;
-            this.Id = ;
-            this.Members = ;
+            this.DisplayName = displayName;
+            this.Id = id;
+            this.Members = members;
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.DisplayName != null) {
                 // DisplayName (string) pattern

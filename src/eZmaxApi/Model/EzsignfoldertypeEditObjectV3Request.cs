@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldertypeEditObjectV3Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignfoldertypeEditObjectV3Request(EzsignfoldertypeRequestCompoundV3  = default(EzsignfoldertypeRequestCompoundV3))
+        /// <param name="objEzsignfoldertype">objEzsignfoldertype (required).</param>
+        public EzsignfoldertypeEditObjectV3Request(EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype = default(EzsignfoldertypeRequestCompoundV3))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignfoldertype" is required (not null)
+            if (objEzsignfoldertype == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldertypeEditObjectV3Request and cannot be null");
+                throw new ArgumentNullException("objEzsignfoldertype is a required property for EzsignfoldertypeEditObjectV3Request and cannot be null");
             }
-            this.ObjEzsignfoldertype = ;
+            this.ObjEzsignfoldertype = objEzsignfoldertype;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

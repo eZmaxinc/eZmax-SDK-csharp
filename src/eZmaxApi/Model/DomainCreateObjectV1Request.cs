@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public DomainCreateObjectV1Request(List<DomainRequestCompound>  = default(List<DomainRequestCompound>))
+        /// <param name="aObjDomain">aObjDomain (required).</param>
+        public DomainCreateObjectV1Request(List<DomainRequestCompound> aObjDomain = default(List<DomainRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjDomain" is required (not null)
+            if (aObjDomain == null)
             {
-                throw new ArgumentNullException(" is a required property for DomainCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjDomain is a required property for DomainCreateObjectV1Request and cannot be null");
             }
-            this.AObjDomain = ;
+            this.AObjDomain = aObjDomain;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

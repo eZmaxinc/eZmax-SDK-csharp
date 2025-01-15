@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public CustomerGetObjectV2ResponseMPayload(CustomerResponseCompound  = default(CustomerResponseCompound))
+        /// <param name="objCustomer">objCustomer (required).</param>
+        public CustomerGetObjectV2ResponseMPayload(CustomerResponseCompound objCustomer = default(CustomerResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objCustomer" is required (not null)
+            if (objCustomer == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomerGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objCustomer is a required property for CustomerGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjCustomer = ;
+            this.ObjCustomer = objCustomer;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

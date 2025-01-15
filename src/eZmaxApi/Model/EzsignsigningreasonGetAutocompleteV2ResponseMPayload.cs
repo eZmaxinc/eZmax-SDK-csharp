@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Ezsignsigningreason autocomplete element response. (required).</param>
-        public EzsignsigningreasonGetAutocompleteV2ResponseMPayload(List<EzsignsigningreasonAutocompleteElementResponse>  = default(List<EzsignsigningreasonAutocompleteElementResponse>))
+        /// <param name="aObjEzsignsigningreason">An array of Ezsignsigningreason autocomplete element response. (required).</param>
+        public EzsignsigningreasonGetAutocompleteV2ResponseMPayload(List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason = default(List<EzsignsigningreasonAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignsigningreason" is required (not null)
+            if (aObjEzsignsigningreason == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsigningreasonGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsigningreason is a required property for EzsignsigningreasonGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignsigningreason = ;
+            this.AObjEzsignsigningreason = aObjEzsignsigningreason;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

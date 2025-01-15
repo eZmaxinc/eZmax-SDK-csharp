@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Domain.</param>
-        /// <param name="">The name of the Domain (required).</param>
-        public DomainRequest(int  = default(int), string  = default(string))
+        /// <param name="pkiDomainID">The unique ID of the Domain.</param>
+        /// <param name="sDomainName">The name of the Domain (required).</param>
+        public DomainRequest(int pkiDomainID = default(int), string sDomainName = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sDomainName" is required (not null)
+            if (sDomainName == null)
             {
-                throw new ArgumentNullException(" is a required property for DomainRequest and cannot be null");
+                throw new ArgumentNullException("sDomainName is a required property for DomainRequest and cannot be null");
             }
-            this.SDomainName = ;
-            this.PkiDomainID = ;
+            this.SDomainName = sDomainName;
+            this.PkiDomainID = pkiDomainID;
         }
 
         /// <summary>
@@ -97,18 +97,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDomainID (int) maximum
             if (this.PkiDomainID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDomainID, must be a value less than or equal to 255.", new [] { "PkiDomainID" });
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value less than or equal to 255.", new [] { "PkiDomainID" });
             }
 
             // PkiDomainID (int) minimum
             if (this.PkiDomainID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDomainID, must be a value greater than or equal to 0.", new [] { "PkiDomainID" });
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value greater than or equal to 0.", new [] { "PkiDomainID" });
             }
 
             if (this.SDomainName != null) {

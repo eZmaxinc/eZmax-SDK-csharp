@@ -76,7 +76,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContacttitleGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<ContacttitleGetAutocompleteV2Response> ContacttitleGetAutocompleteV2Async(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ContacttitleGetAutocompleteV2Response> ContacttitleGetAutocompleteV2Async(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Contacttitles and IDs
@@ -91,7 +91,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContacttitleGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContacttitleGetAutocompleteV2Response>> ContacttitleGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ContacttitleGetAutocompleteV2Response>> ContacttitleGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -309,7 +309,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContacttitleGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<ContacttitleGetAutocompleteV2Response> ContacttitleGetAutocompleteV2Async(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ContacttitleGetAutocompleteV2Response> ContacttitleGetAutocompleteV2Async(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ContacttitleGetAutocompleteV2Response> localVarResponse = await ContacttitleGetAutocompleteV2WithHttpInfoAsync(sSelector, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -325,7 +325,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContacttitleGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ContacttitleGetAutocompleteV2Response>> ContacttitleGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ContacttitleGetAutocompleteV2Response>> ContacttitleGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)

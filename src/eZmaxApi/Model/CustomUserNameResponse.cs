@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomUserNameResponse" /> class.
         /// </summary>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        public CustomUserNameResponse(string  = default(string), string  = default(string))
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        public CustomUserNameResponse(string sUserLastname = default(string), string sUserFirstname = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomUserNameResponse and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for CustomUserNameResponse and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomUserNameResponse and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for CustomUserNameResponse and cannot be null");
             }
-            this.SUserFirstname = ;
+            this.SUserFirstname = sUserFirstname;
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

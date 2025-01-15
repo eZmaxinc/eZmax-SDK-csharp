@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatefieldtypecategoryAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
-        /// <param name="">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="">The description of the Ezdoctemplatefieldtypecategory in the language of the requester (required).</param>
-        /// <param name="">Whether the Ezdoctemplatefieldtypecategory is active or not (required).</param>
-        public EzdoctemplatefieldtypecategoryAutocompleteElementResponse(int  = default(int), int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
+        /// <param name="fkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
+        /// <param name="sEzdoctemplatefieldtypecategoryDescriptionX">The description of the Ezdoctemplatefieldtypecategory in the language of the requester (required).</param>
+        /// <param name="bEzdoctemplatefieldtypecategoryIsactive">Whether the Ezdoctemplatefieldtypecategory is active or not (required).</param>
+        public EzdoctemplatefieldtypecategoryAutocompleteElementResponse(int pkiEzdoctemplatefieldtypecategoryID = default(int), int fkiEzdoctemplatetypeID = default(int), string sEzdoctemplatefieldtypecategoryDescriptionX = default(string), bool bEzdoctemplatefieldtypecategoryIsactive = default(bool))
         {
-            this.PkiEzdoctemplatefieldtypecategoryID = ;
-            this.FkiEzdoctemplatetypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzdoctemplatefieldtypecategoryID = pkiEzdoctemplatefieldtypecategoryID;
+            this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
+            // to ensure "sEzdoctemplatefieldtypecategoryDescriptionX" is required (not null)
+            if (sEzdoctemplatefieldtypecategoryDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatefieldtypecategoryAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzdoctemplatefieldtypecategoryDescriptionX is a required property for EzdoctemplatefieldtypecategoryAutocompleteElementResponse and cannot be null");
             }
-            this.SEzdoctemplatefieldtypecategoryDescriptionX = ;
-            this.BEzdoctemplatefieldtypecategoryIsactive = ;
+            this.SEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
+            this.BEzdoctemplatefieldtypecategoryIsactive = bEzdoctemplatefieldtypecategoryIsactive;
         }
 
         /// <summary>
@@ -119,30 +119,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzdoctemplatefieldtypecategoryID (int) maximum
             if (this.PkiEzdoctemplatefieldtypecategoryID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "PkiEzdoctemplatefieldtypecategoryID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "PkiEzdoctemplatefieldtypecategoryID" });
             }
 
             // PkiEzdoctemplatefieldtypecategoryID (int) minimum
             if (this.PkiEzdoctemplatefieldtypecategoryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatefieldtypecategoryID" });
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatefieldtypecategoryID" });
             }
 
             // FkiEzdoctemplatetypeID (int) maximum
             if (this.FkiEzdoctemplatetypeID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
             }
 
             // FkiEzdoctemplatetypeID (int) minimum
             if (this.FkiEzdoctemplatetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
             }
 
             if (this.SEzdoctemplatefieldtypecategoryDescriptionX != null) {

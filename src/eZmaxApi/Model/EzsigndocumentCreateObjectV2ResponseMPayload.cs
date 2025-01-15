@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public EzsigndocumentCreateObjectV2ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsigndocumentID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        public EzsigndocumentCreateObjectV2ResponseMPayload(List<int> aPkiEzsigndocumentID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsigndocumentID" is required (not null)
+            if (aPkiEzsigndocumentID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentCreateObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsigndocumentID is a required property for EzsigndocumentCreateObjectV2ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigndocumentID = ;
+            this.APkiEzsigndocumentID = aPkiEzsigndocumentID;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

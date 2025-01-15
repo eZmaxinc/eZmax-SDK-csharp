@@ -73,21 +73,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreateEzsignelementsPositionedByWordRequest" /> class.
         /// </summary>
-        /// <param name="">The word to search (required).</param>
-        /// <param name="">The X offset (required).</param>
-        /// <param name="">The Y offset (required).</param>
-        /// <param name="">The occurance in the search to add the ezsign element (required).</param>
-        public CustomCreateEzsignelementsPositionedByWordRequest(string  = default(string), int  = default(int), int  = default(int), ECreateezsignelementspositionedbywordOccuranceEnum  = default(ECreateezsignelementspositionedbywordOccuranceEnum))
+        /// <param name="sCreateezsignelementspositionedbywordPattern">The word to search (required).</param>
+        /// <param name="iCreateezsignelementspositionedbywordOffsetx">The X offset (required).</param>
+        /// <param name="iCreateezsignelementspositionedbywordOffsety">The Y offset (required).</param>
+        /// <param name="eCreateezsignelementspositionedbywordOccurance">The occurance in the search to add the ezsign element (required).</param>
+        public CustomCreateEzsignelementsPositionedByWordRequest(string sCreateezsignelementspositionedbywordPattern = default(string), int iCreateezsignelementspositionedbywordOffsetx = default(int), int iCreateezsignelementspositionedbywordOffsety = default(int), ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance = default(ECreateezsignelementspositionedbywordOccuranceEnum))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sCreateezsignelementspositionedbywordPattern" is required (not null)
+            if (sCreateezsignelementspositionedbywordPattern == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCreateEzsignelementsPositionedByWordRequest and cannot be null");
+                throw new ArgumentNullException("sCreateezsignelementspositionedbywordPattern is a required property for CustomCreateEzsignelementsPositionedByWordRequest and cannot be null");
             }
-            this.SCreateezsignelementspositionedbywordPattern = ;
-            this.ICreateezsignelementspositionedbywordOffsetx = ;
-            this.ICreateezsignelementspositionedbywordOffsety = ;
-            this.ECreateezsignelementspositionedbywordOccurance = ;
+            this.SCreateezsignelementspositionedbywordPattern = sCreateezsignelementspositionedbywordPattern;
+            this.ICreateezsignelementspositionedbywordOffsetx = iCreateezsignelementspositionedbywordOffsetx;
+            this.ICreateezsignelementspositionedbywordOffsety = iCreateezsignelementspositionedbywordOffsety;
+            this.ECreateezsignelementspositionedbywordOccurance = eCreateezsignelementspositionedbywordOccurance;
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SCreateezsignelementspositionedbywordPattern != null) {
                 // SCreateezsignelementspositionedbywordPattern (string) pattern

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SignatureCreateObjectV1Request(List<SignatureRequestCompound>  = default(List<SignatureRequestCompound>))
+        /// <param name="aObjSignature">aObjSignature (required).</param>
+        public SignatureCreateObjectV1Request(List<SignatureRequestCompound> aObjSignature = default(List<SignatureRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjSignature" is required (not null)
+            if (aObjSignature == null)
             {
-                throw new ArgumentNullException(" is a required property for SignatureCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjSignature is a required property for SignatureCreateObjectV1Request and cannot be null");
             }
-            this.AObjSignature = ;
+            this.AObjSignature = aObjSignature;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

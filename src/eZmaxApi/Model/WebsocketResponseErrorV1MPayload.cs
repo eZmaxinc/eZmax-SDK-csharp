@@ -46,17 +46,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseErrorV1MPayload" /> class.
         /// </summary>
-        /// <param name="">The message giving details about the error (required).</param>
-        /// <param name=""> (required).</param>
-        public WebsocketResponseErrorV1MPayload(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode))
+        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
+        /// <param name="eErrorCode">eErrorCode (required).</param>
+        public WebsocketResponseErrorV1MPayload(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sErrorMessage" is required (not null)
+            if (sErrorMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseErrorV1MPayload and cannot be null");
+                throw new ArgumentNullException("sErrorMessage is a required property for WebsocketResponseErrorV1MPayload and cannot be null");
             }
-            this.SErrorMessage = ;
-            this.EErrorCode = ;
+            this.SErrorMessage = sErrorMessage;
+            this.EErrorCode = eErrorCode;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SErrorMessage != null) {
                 // SErrorMessage (string) pattern

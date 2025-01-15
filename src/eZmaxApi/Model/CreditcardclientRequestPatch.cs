@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientRequestPatch" /> class.
         /// </summary>
-        /// <param name="">Whether if it&#39;s the creditcardclient is the default one.</param>
-        public CreditcardclientRequestPatch(bool  = default(bool))
+        /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s the creditcardclient is the default one.</param>
+        public CreditcardclientRequestPatch(bool bCreditcardclientrelationIsdefault = default(bool))
         {
-            this.BCreditcardclientrelationIsdefault = ;
+            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

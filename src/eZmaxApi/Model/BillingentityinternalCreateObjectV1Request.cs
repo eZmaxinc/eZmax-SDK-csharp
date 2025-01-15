@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public BillingentityinternalCreateObjectV1Request(List<BillingentityinternalRequestCompound>  = default(List<BillingentityinternalRequestCompound>))
+        /// <param name="aObjBillingentityinternal">aObjBillingentityinternal (required).</param>
+        public BillingentityinternalCreateObjectV1Request(List<BillingentityinternalRequestCompound> aObjBillingentityinternal = default(List<BillingentityinternalRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjBillingentityinternal" is required (not null)
+            if (aObjBillingentityinternal == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjBillingentityinternal is a required property for BillingentityinternalCreateObjectV1Request and cannot be null");
             }
-            this.AObjBillingentityinternal = ;
+            this.AObjBillingentityinternal = aObjBillingentityinternal;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzmaxpricingResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezmaxpricing (required).</param>
-        /// <param name="">The rebate offered when eZsign is taken for all agents (required).</param>
-        /// <param name="">The start date of the Ezmaxpricing (required).</param>
-        /// <param name="">The end date of the Ezmaxpricing.</param>
-        public CustomEzmaxpricingResponse(int  = default(int), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiEzmaxpricingID">The unique ID of the Ezmaxpricing (required).</param>
+        /// <param name="dEzmaxpricingRebateezsignallagents">The rebate offered when eZsign is taken for all agents (required).</param>
+        /// <param name="dtEzmaxpricingStart">The start date of the Ezmaxpricing (required).</param>
+        /// <param name="dtEzmaxpricingEnd">The end date of the Ezmaxpricing.</param>
+        public CustomEzmaxpricingResponse(int pkiEzmaxpricingID = default(int), string dEzmaxpricingRebateezsignallagents = default(string), string dtEzmaxpricingStart = default(string), string dtEzmaxpricingEnd = default(string))
         {
-            this.PkiEzmaxpricingID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzmaxpricingID = pkiEzmaxpricingID;
+            // to ensure "dEzmaxpricingRebateezsignallagents" is required (not null)
+            if (dEzmaxpricingRebateezsignallagents == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzmaxpricingResponse and cannot be null");
+                throw new ArgumentNullException("dEzmaxpricingRebateezsignallagents is a required property for CustomEzmaxpricingResponse and cannot be null");
             }
-            this.DEzmaxpricingRebateezsignallagents = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DEzmaxpricingRebateezsignallagents = dEzmaxpricingRebateezsignallagents;
+            // to ensure "dtEzmaxpricingStart" is required (not null)
+            if (dtEzmaxpricingStart == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzmaxpricingResponse and cannot be null");
+                throw new ArgumentNullException("dtEzmaxpricingStart is a required property for CustomEzmaxpricingResponse and cannot be null");
             }
-            this.DtEzmaxpricingStart = ;
-            this.DtEzmaxpricingEnd = ;
+            this.DtEzmaxpricingStart = dtEzmaxpricingStart;
+            this.DtEzmaxpricingEnd = dtEzmaxpricingEnd;
         }
 
         /// <summary>
@@ -124,12 +124,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxpricingID (int) minimum
             if (this.PkiEzmaxpricingID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxpricingID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxpricingID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxpricingID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxpricingID" });
             }
 
             if (this.DEzmaxpricingRebateezsignallagents != null) {

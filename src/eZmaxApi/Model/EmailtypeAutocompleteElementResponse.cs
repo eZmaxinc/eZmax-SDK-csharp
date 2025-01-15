@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailtypeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="">The name of the Emailtype in the language of the requester (required).</param>
-        /// <param name="">Whether the Emailtype is active or not (required).</param>
-        public EmailtypeAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="sEmailtypeNameX">The name of the Emailtype in the language of the requester (required).</param>
+        /// <param name="bEmailtypeIsactive">Whether the Emailtype is active or not (required).</param>
+        public EmailtypeAutocompleteElementResponse(int pkiEmailtypeID = default(int), string sEmailtypeNameX = default(string), bool bEmailtypeIsactive = default(bool))
         {
-            this.PkiEmailtypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEmailtypeID = pkiEmailtypeID;
+            // to ensure "sEmailtypeNameX" is required (not null)
+            if (sEmailtypeNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for EmailtypeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEmailtypeNameX is a required property for EmailtypeAutocompleteElementResponse and cannot be null");
             }
-            this.SEmailtypeNameX = ;
-            this.BEmailtypeIsactive = ;
+            this.SEmailtypeNameX = sEmailtypeNameX;
+            this.BEmailtypeIsactive = bEmailtypeIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEmailtypeID (int) minimum
             if (this.PkiEmailtypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEmailtypeID, must be a value greater than or equal to 0.", new [] { "PkiEmailtypeID" });
+                yield return new ValidationResult("Invalid value for PkiEmailtypeID, must be a value greater than or equal to 0.", new [] { "PkiEmailtypeID" });
             }
 
             if (this.SEmailtypeNameX != null) {

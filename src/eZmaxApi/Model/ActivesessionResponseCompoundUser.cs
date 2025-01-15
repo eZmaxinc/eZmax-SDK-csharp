@@ -46,38 +46,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionResponseCompoundUser" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The unique ID of the Timezone (required).</param>
-        /// <param name="">The url of the picture used as avatar.</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The email address..</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 (required).</param>
-        /// <param name="">Whether to use a dark mode interface (required).</param>
-        /// <param name="">The number of rows to return by default in lists (required).</param>
-        public ActivesessionResponseCompoundUser(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEUserEzsignsendreminderfrequency  = default(FieldEUserEzsignsendreminderfrequency), int  = default(int), bool  = default(bool), int  = default(int))
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
+        /// <param name="sAvatarUrl">The url of the picture used as avatar.</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="eUserEzsignsendreminderfrequency">eUserEzsignsendreminderfrequency (required).</param>
+        /// <param name="iUserInterfacecolor">The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 (required).</param>
+        /// <param name="bUserInterfacedark">Whether to use a dark mode interface (required).</param>
+        /// <param name="iUserListresult">The number of rows to return by default in lists (required).</param>
+        public ActivesessionResponseCompoundUser(int pkiUserID = default(int), int fkiTimezoneID = default(int), string sAvatarUrl = default(string), string sUserFirstname = default(string), string sUserLastname = default(string), string sEmailAddress = default(string), FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency = default(FieldEUserEzsignsendreminderfrequency), int iUserInterfacecolor = default(int), bool bUserInterfacedark = default(bool), int iUserListresult = default(int))
         {
-            this.PkiUserID = ;
-            this.FkiTimezoneID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiUserID = pkiUserID;
+            this.FkiTimezoneID = fkiTimezoneID;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for ActivesessionResponseCompoundUser and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for ActivesessionResponseCompoundUser and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for ActivesessionResponseCompoundUser and cannot be null");
             }
-            this.SUserLastname = ;
-            this.EUserEzsignsendreminderfrequency = ;
-            this.IUserInterfacecolor = ;
-            this.BUserInterfacedark = ;
-            this.IUserListresult = ;
-            this.SAvatarUrl = ;
-            this.SEmailAddress = ;
+            this.SUserLastname = sUserLastname;
+            this.EUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
+            this.IUserInterfacecolor = iUserInterfacecolor;
+            this.BUserInterfacedark = bUserInterfacedark;
+            this.IUserListresult = iUserListresult;
+            this.SAvatarUrl = sAvatarUrl;
+            this.SEmailAddress = sEmailAddress;
         }
 
         /// <summary>
@@ -188,18 +188,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             // FkiTimezoneID (int) minimum
             if (this.FkiTimezoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
+                yield return new ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
             }
 
             if (this.SAvatarUrl != null) {
@@ -223,19 +223,19 @@ namespace eZmaxApi.Model
             // IUserInterfacecolor (int) minimum
             if (this.IUserInterfacecolor < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserInterfacecolor, must be a value greater than or equal to 0.", new [] { "IUserInterfacecolor" });
+                yield return new ValidationResult("Invalid value for IUserInterfacecolor, must be a value greater than or equal to 0.", new [] { "IUserInterfacecolor" });
             }
 
             // IUserListresult (int) maximum
             if (this.IUserListresult > (int)500)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value less than or equal to 500.", new [] { "IUserListresult" });
+                yield return new ValidationResult("Invalid value for IUserListresult, must be a value less than or equal to 500.", new [] { "IUserListresult" });
             }
 
             // IUserListresult (int) minimum
             if (this.IUserListresult < (int)5)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value greater than or equal to 5.", new [] { "IUserListresult" });
+                yield return new ValidationResult("Invalid value for IUserListresult, must be a value greater than or equal to 5.", new [] { "IUserListresult" });
             }
 
             yield break;

@@ -40,22 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public ApikeyGetObjectV2ResponseMPayload(ApikeyResponseCompound  = default(ApikeyResponseCompound))
+        /// <param name="objApikey">An Apikey Object and children to create a complete structure (required).</param>
+        public ApikeyGetObjectV2ResponseMPayload(ApikeyResponse objApikey = default(ApikeyResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objApikey" is required (not null)
+            if (objApikey == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objApikey is a required property for ApikeyGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjApikey = ;
+            this.ObjApikey = objApikey;
         }
 
         /// <summary>
-        /// Gets or Sets ObjApikey
+        /// An Apikey Object and children to create a complete structure
         /// </summary>
+        /// <value>An Apikey Object and children to create a complete structure</value>
         [DataMember(Name = "objApikey", IsRequired = true, EmitDefaultValue = true)]
-        public ApikeyResponseCompound ObjApikey { get; set; }
+        public ApikeyResponse ObjApikey { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

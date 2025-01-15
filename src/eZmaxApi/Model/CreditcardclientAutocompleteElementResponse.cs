@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Creditcardclient (required).</param>
-        /// <param name="">The description of the Creditcardclient (required).</param>
-        public CreditcardclientAutocompleteElementResponse(int  = default(int), string  = default(string))
+        /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient (required).</param>
+        /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
+        public CreditcardclientAutocompleteElementResponse(int pkiCreditcardclientID = default(int), string sCreditcardclientDescription = default(string))
         {
-            this.PkiCreditcardclientID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiCreditcardclientID = pkiCreditcardclientID;
+            // to ensure "sCreditcardclientDescription" is required (not null)
+            if (sCreditcardclientDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcardclientAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientAutocompleteElementResponse and cannot be null");
             }
-            this.SCreditcardclientDescription = ;
+            this.SCreditcardclientDescription = sCreditcardclientDescription;
         }
 
         /// <summary>
@@ -97,18 +97,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCreditcardclientID (int) maximum
             if (this.PkiCreditcardclientID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
             }
 
             // PkiCreditcardclientID (int) minimum
             if (this.PkiCreditcardclientID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
             }
 
             if (this.SCreditcardclientDescription != null) {

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The embedded Url to the signing application.    Url will expire after 5 minutes.   (required).</param>
-        public EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload(string  = default(string))
+        /// <param name="sEmbeddedUrl">The embedded Url to the signing application.    Url will expire after 5 minutes.   (required).</param>
+        public EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload(string sEmbeddedUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEmbeddedUrl" is required (not null)
+            if (sEmbeddedUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sEmbeddedUrl is a required property for EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload and cannot be null");
             }
-            this.SEmbeddedUrl = ;
+            this.SEmbeddedUrl = sEmbeddedUrl;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

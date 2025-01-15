@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public PaymenttermCreateObjectV1Request(List<PaymenttermRequestCompound>  = default(List<PaymenttermRequestCompound>))
+        /// <param name="aObjPaymentterm">aObjPaymentterm (required).</param>
+        public PaymenttermCreateObjectV1Request(List<PaymenttermRequestCompound> aObjPaymentterm = default(List<PaymenttermRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjPaymentterm" is required (not null)
+            if (aObjPaymentterm == null)
             {
-                throw new ArgumentNullException(" is a required property for PaymenttermCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjPaymentterm is a required property for PaymenttermCreateObjectV1Request and cannot be null");
             }
-            this.AObjPaymentterm = ;
+            this.AObjPaymentterm = aObjPaymentterm;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

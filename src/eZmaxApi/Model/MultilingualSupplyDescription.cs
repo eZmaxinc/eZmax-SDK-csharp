@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualSupplyDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Supply in French.</param>
-        /// <param name="">The description of the Supply in English.</param>
-        public MultilingualSupplyDescription(string  = default(string), string  = default(string))
+        /// <param name="sSupplyDescription1">The description of the Supply in French.</param>
+        /// <param name="sSupplyDescription2">The description of the Supply in English.</param>
+        public MultilingualSupplyDescription(string sSupplyDescription1 = default(string), string sSupplyDescription2 = default(string))
         {
-            this.SSupplyDescription1 = ;
-            this.SSupplyDescription2 = ;
+            this.SSupplyDescription1 = sSupplyDescription1;
+            this.SSupplyDescription2 = sSupplyDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SSupplyDescription1 != null) {
                 // SSupplyDescription1 (string) pattern

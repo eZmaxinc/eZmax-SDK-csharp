@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEditObjectV1Response" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        public WebhookEditObjectV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug))
+        /// <param name="objDebugPayload">objDebugPayload (required).</param>
+        /// <param name="objDebug">objDebug.</param>
+        public WebhookEditObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookEditObjectV1Response and cannot be null");
+                throw new ArgumentNullException("objDebugPayload is a required property for WebhookEditObjectV1Response and cannot be null");
             }
-            this.ObjDebugPayload = ;
-            this.ObjDebug = ;
+            this.ObjDebugPayload = objDebugPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupplyGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public SupplyGetObjectV2ResponseMPayload(SupplyResponseCompound  = default(SupplyResponseCompound))
+        /// <param name="objSupply">objSupply (required).</param>
+        public SupplyGetObjectV2ResponseMPayload(SupplyResponseCompound objSupply = default(SupplyResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objSupply" is required (not null)
+            if (objSupply == null)
             {
-                throw new ArgumentNullException(" is a required property for SupplyGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objSupply is a required property for SupplyGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjSupply = ;
+            this.ObjSupply = objSupply;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

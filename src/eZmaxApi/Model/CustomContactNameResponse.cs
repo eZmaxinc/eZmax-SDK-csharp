@@ -35,14 +35,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomContactNameResponse" /> class.
         /// </summary>
-        /// <param name="">The First name of the contact.</param>
-        /// <param name="">The Last name of the contact.</param>
-        /// <param name="">The Company name of the contact.</param>
-        public CustomContactNameResponse(string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="sContactFirstname">The First name of the contact.</param>
+        /// <param name="sContactLastname">The Last name of the contact.</param>
+        /// <param name="sContactCompany">The Company name of the contact.</param>
+        public CustomContactNameResponse(string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string))
         {
-            this.SContactFirstname = ;
-            this.SContactLastname = ;
-            this.SContactCompany = ;
+            this.SContactFirstname = sContactFirstname;
+            this.SContactLastname = sContactLastname;
+            this.SContactCompany = sContactCompany;
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

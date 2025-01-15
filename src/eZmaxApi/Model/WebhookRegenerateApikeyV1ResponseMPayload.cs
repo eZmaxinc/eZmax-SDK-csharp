@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRegenerateApikeyV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public WebhookRegenerateApikeyV1ResponseMPayload(WebhookResponseCompound  = default(WebhookResponseCompound))
+        /// <param name="objWebhook">objWebhook (required).</param>
+        public WebhookRegenerateApikeyV1ResponseMPayload(WebhookResponseCompound objWebhook = default(WebhookResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objWebhook" is required (not null)
+            if (objWebhook == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookRegenerateApikeyV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objWebhook is a required property for WebhookRegenerateApikeyV1ResponseMPayload and cannot be null");
             }
-            this.ObjWebhook = ;
+            this.ObjWebhook = objWebhook;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

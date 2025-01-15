@@ -67,14 +67,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentGetWordsPositionsV1Request" /> class.
         /// </summary>
-        /// <param name="">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. (required).</param>
-        /// <param name="">IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. (required).</param>
-        /// <param name="">Array of words to find in the document.</param>
-        public EzsigntemplatedocumentGetWordsPositionsV1Request(EGetEnum  = default(EGetEnum), bool  = default(bool), List<string>  = default(List<string>))
+        /// <param name="eGet">Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*. (required).</param>
+        /// <param name="bWordCaseSensitive">IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive. (required).</param>
+        /// <param name="aSWord">Array of words to find in the document.</param>
+        public EzsigntemplatedocumentGetWordsPositionsV1Request(EGetEnum eGet = default(EGetEnum), bool bWordCaseSensitive = default(bool), List<string> aSWord = default(List<string>))
         {
-            this.EGet = ;
-            this.BWordCaseSensitive = ;
-            this.ASWord = ;
+            this.EGet = eGet;
+            this.BWordCaseSensitive = bWordCaseSensitive;
+            this.ASWord = aSWord;
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

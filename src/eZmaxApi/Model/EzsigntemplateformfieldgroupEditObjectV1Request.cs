@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplateformfieldgroupEditObjectV1Request(EzsigntemplateformfieldgroupRequestCompound  = default(EzsigntemplateformfieldgroupRequestCompound))
+        /// <param name="objEzsigntemplateformfieldgroup">objEzsigntemplateformfieldgroup (required).</param>
+        public EzsigntemplateformfieldgroupEditObjectV1Request(EzsigntemplateformfieldgroupRequestCompound objEzsigntemplateformfieldgroup = default(EzsigntemplateformfieldgroupRequestCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplateformfieldgroup" is required (not null)
+            if (objEzsigntemplateformfieldgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateformfieldgroupEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplateformfieldgroup is a required property for EzsigntemplateformfieldgroupEditObjectV1Request and cannot be null");
             }
-            this.ObjEzsigntemplateformfieldgroup = ;
+            this.ObjEzsigntemplateformfieldgroup = objEzsigntemplateformfieldgroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

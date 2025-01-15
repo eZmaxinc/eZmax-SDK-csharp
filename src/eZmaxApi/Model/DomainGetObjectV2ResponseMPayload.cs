@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public DomainGetObjectV2ResponseMPayload(DomainResponseCompound  = default(DomainResponseCompound))
+        /// <param name="objDomain">objDomain (required).</param>
+        public DomainGetObjectV2ResponseMPayload(DomainResponseCompound objDomain = default(DomainResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objDomain" is required (not null)
+            if (objDomain == null)
             {
-                throw new ArgumentNullException(" is a required property for DomainGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objDomain is a required property for DomainGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjDomain = ;
+            this.ObjDomain = objDomain;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

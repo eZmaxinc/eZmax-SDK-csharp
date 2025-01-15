@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Authenticationexternal (required).</param>
-        /// <param name="">The description of the Authenticationexternal (required).</param>
-        /// <param name="">Whether the Authenticationexternal is active or not (required).</param>
-        public AuthenticationexternalAutocompleteElementResponse(int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal (required).</param>
+        /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal (required).</param>
+        /// <param name="bAuthenticationexternalIsactive">Whether the Authenticationexternal is active or not (required).</param>
+        public AuthenticationexternalAutocompleteElementResponse(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), bool bAuthenticationexternalIsactive = default(bool))
         {
-            this.PkiAuthenticationexternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiAuthenticationexternalID = pkiAuthenticationexternalID;
+            // to ensure "sAuthenticationexternalDescription" is required (not null)
+            if (sAuthenticationexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for AuthenticationexternalAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sAuthenticationexternalDescription is a required property for AuthenticationexternalAutocompleteElementResponse and cannot be null");
             }
-            this.SAuthenticationexternalDescription = ;
-            this.BAuthenticationexternalIsactive = ;
+            this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
+            this.BAuthenticationexternalIsactive = bAuthenticationexternalIsactive;
         }
 
         /// <summary>
@@ -107,18 +107,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAuthenticationexternalID (int) maximum
             if (this.PkiAuthenticationexternalID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
             }
 
             // PkiAuthenticationexternalID (int) minimum
             if (this.PkiAuthenticationexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
             }
 
             if (this.SAuthenticationexternalDescription != null) {

@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobaldocumentResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
-        /// <param name="">The name of the Ezsigntemplateglobaldocument. (required).</param>
-        /// <param name="">The number of pages in the Ezsigntemplateglobaldocument. (required).</param>
-        /// <param name="">The number of total signatures in the Ezsigntemplateglobal. (required).</param>
-        public EzsigntemplateglobaldocumentResponse(int  = default(int), string  = default(string), int  = default(int), int  = default(int))
+        /// <param name="pkiEzsigntemplateglobaldocumentID">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
+        /// <param name="sEzsigntemplateglobaldocumentName">The name of the Ezsigntemplateglobaldocument. (required).</param>
+        /// <param name="iEzsigntemplateglobaldocumentPagetotal">The number of pages in the Ezsigntemplateglobaldocument. (required).</param>
+        /// <param name="iEzsigntemplateglobaldocumentSignaturetotal">The number of total signatures in the Ezsigntemplateglobal. (required).</param>
+        public EzsigntemplateglobaldocumentResponse(int pkiEzsigntemplateglobaldocumentID = default(int), string sEzsigntemplateglobaldocumentName = default(string), int iEzsigntemplateglobaldocumentPagetotal = default(int), int iEzsigntemplateglobaldocumentSignaturetotal = default(int))
         {
-            this.PkiEzsigntemplateglobaldocumentID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigntemplateglobaldocumentID = pkiEzsigntemplateglobaldocumentID;
+            // to ensure "sEzsigntemplateglobaldocumentName" is required (not null)
+            if (sEzsigntemplateglobaldocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateglobaldocumentResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateglobaldocumentName is a required property for EzsigntemplateglobaldocumentResponse and cannot be null");
             }
-            this.SEzsigntemplateglobaldocumentName = ;
-            this.IEzsigntemplateglobaldocumentPagetotal = ;
-            this.IEzsigntemplateglobaldocumentSignaturetotal = ;
+            this.SEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
+            this.IEzsigntemplateglobaldocumentPagetotal = iEzsigntemplateglobaldocumentPagetotal;
+            this.IEzsigntemplateglobaldocumentSignaturetotal = iEzsigntemplateglobaldocumentSignaturetotal;
         }
 
         /// <summary>
@@ -119,18 +119,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateglobaldocumentID (int) minimum
             if (this.PkiEzsigntemplateglobaldocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobaldocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobaldocumentID" });
             }
 
             // IEzsigntemplateglobaldocumentPagetotal (int) minimum
             if (this.IEzsigntemplateglobaldocumentPagetotal < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateglobaldocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateglobaldocumentPagetotal" });
+                yield return new ValidationResult("Invalid value for IEzsigntemplateglobaldocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateglobaldocumentPagetotal" });
             }
 
             yield break;

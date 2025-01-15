@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatetypeGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Ezdoctemplatetype autocomplete element response. (required).</param>
-        public EzdoctemplatetypeGetAutocompleteV2ResponseMPayload(List<EzdoctemplatetypeAutocompleteElementResponse>  = default(List<EzdoctemplatetypeAutocompleteElementResponse>))
+        /// <param name="aObjEzdoctemplatetype">An array of Ezdoctemplatetype autocomplete element response. (required).</param>
+        public EzdoctemplatetypeGetAutocompleteV2ResponseMPayload(List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype = default(List<EzdoctemplatetypeAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzdoctemplatetype" is required (not null)
+            if (aObjEzdoctemplatetype == null)
             {
-                throw new ArgumentNullException(" is a required property for EzdoctemplatetypeGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzdoctemplatetype is a required property for EzdoctemplatetypeGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjEzdoctemplatetype = ;
+            this.AObjEzdoctemplatetype = aObjEzdoctemplatetype;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

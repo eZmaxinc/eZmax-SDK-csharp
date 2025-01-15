@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsocketResponseInformationV1MPayload" /> class.
         /// </summary>
-        /// <param name="">Information message (required).</param>
-        public WebsocketResponseInformationV1MPayload(string  = default(string))
+        /// <param name="sInformationMessage">Information message (required).</param>
+        public WebsocketResponseInformationV1MPayload(string sInformationMessage = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sInformationMessage" is required (not null)
+            if (sInformationMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsocketResponseInformationV1MPayload and cannot be null");
+                throw new ArgumentNullException("sInformationMessage is a required property for WebsocketResponseInformationV1MPayload and cannot be null");
             }
-            this.SInformationMessage = ;
+            this.SInformationMessage = sInformationMessage;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

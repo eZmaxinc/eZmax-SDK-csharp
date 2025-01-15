@@ -67,24 +67,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureSignV1Request" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignsigningreason.</param>
-        /// <param name="">The unique ID of the Font.</param>
-        /// <param name="">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
-        /// <param name="">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
-        /// <param name="">The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false.</param>
-        /// <param name="">.</param>
-        /// <param name="">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  (required).</param>
-        public EzsignsignatureSignV1Request(int  = default(int), int  = default(int), string  = default(string), EAttachmentsConfirmationDecisionEnum?  = default(EAttachmentsConfirmationDecisionEnum?), string  = default(string), string  = default(string), List<CommonFile>  = default(List<CommonFile>), bool  = default(bool))
+        /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
+        /// <param name="fkiFontID">The unique ID of the Font.</param>
+        /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
+        /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
+        /// <param name="sSvg">The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false.</param>
+        /// <param name="aObjFile">aObjFile.</param>
+        /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  (required).</param>
+        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default(int), int fkiFontID = default(int), string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
         {
-            this.BIsAutomatic = ;
-            this.FkiEzsignsigningreasonID = ;
-            this.FkiFontID = ;
-            this.SValue = ;
-            this.EAttachmentsConfirmationDecision = ;
-            this.SAttachmentsRefusalReason = ;
-            this.SSvg = ;
-            this.AObjFile = ;
+            this.BIsAutomatic = bIsAutomatic;
+            this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+            this.FkiFontID = fkiFontID;
+            this.SValue = sValue;
+            this.EAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
+            this.SAttachmentsRefusalReason = sAttachmentsRefusalReason;
+            this.SSvg = sSvg;
+            this.AObjFile = aObjFile;
         }
 
         /// <summary>
@@ -172,24 +172,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsignsigningreasonID (int) maximum
             if (this.FkiEzsignsigningreasonID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "FkiEzsignsigningreasonID" });
             }
 
             // FkiEzsignsigningreasonID (int) minimum
             if (this.FkiEzsignsigningreasonID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsigningreasonID" });
             }
 
             // FkiFontID (int) minimum
             if (this.FkiFontID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             if (this.SSvg != null) {

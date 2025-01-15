@@ -80,8 +80,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzdoctemplatedocumentEditObjectV1Response</returns>
-        EzdoctemplatedocumentEditObjectV1Response EzdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezdoctemplatedocument
@@ -93,8 +93,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzdoctemplatedocumentEditObjectV1Response</returns>
-        ApiResponse<EzdoctemplatedocumentEditObjectV1Response> EzdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezdoctemplatedocuments and IDs
         /// </summary>
@@ -183,8 +183,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzdoctemplatedocumentPatchObjectV1Response</returns>
-        EzdoctemplatedocumentPatchObjectV1Response EzdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Patch an existing Ezdoctemplatedocument
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzdoctemplatedocumentPatchObjectV1Response</returns>
-        ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> EzdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -218,7 +218,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentCreateObjectV1Response> EzdoctemplatedocumentCreateObjectV1Async(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzdoctemplatedocumentCreateObjectV1Response> EzdoctemplatedocumentCreateObjectV1Async(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezdoctemplatedocument
@@ -231,7 +231,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentCreateObjectV1Response>> EzdoctemplatedocumentCreateObjectV1WithHttpInfoAsync(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentCreateObjectV1Response>> EzdoctemplatedocumentCreateObjectV1WithHttpInfoAsync(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve the content
         /// </summary>
@@ -243,7 +243,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task EzdoctemplatedocumentDownloadV1Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task EzdoctemplatedocumentDownloadV1Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve the content
@@ -256,7 +256,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EzdoctemplatedocumentDownloadV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> EzdoctemplatedocumentDownloadV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezdoctemplatedocument
         /// </summary>
@@ -268,8 +268,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzdoctemplatedocumentEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentEditObjectV1Response> EzdoctemplatedocumentEditObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzdoctemplatedocumentEditObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezdoctemplatedocument
@@ -282,8 +282,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzdoctemplatedocumentEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentEditObjectV1Response>> EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezdoctemplatedocuments and IDs
         /// </summary>
@@ -300,7 +300,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentGetAutocompleteV2Response> EzdoctemplatedocumentGetAutocompleteV2Async(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzdoctemplatedocumentGetAutocompleteV2Response> EzdoctemplatedocumentGetAutocompleteV2Async(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezdoctemplatedocuments and IDs
@@ -318,7 +318,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response>> EzdoctemplatedocumentGetAutocompleteV2WithHttpInfoAsync(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response>> EzdoctemplatedocumentGetAutocompleteV2WithHttpInfoAsync(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezdoctemplatedocument list
         /// </summary>
@@ -334,7 +334,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentGetListV1Response> EzdoctemplatedocumentGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzdoctemplatedocumentGetListV1Response> EzdoctemplatedocumentGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezdoctemplatedocument list
@@ -351,7 +351,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetListV1Response>> EzdoctemplatedocumentGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetListV1Response>> EzdoctemplatedocumentGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezdoctemplatedocument
         /// </summary>
@@ -363,7 +363,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentGetObjectV2Response> EzdoctemplatedocumentGetObjectV2Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzdoctemplatedocumentGetObjectV2Response> EzdoctemplatedocumentGetObjectV2Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezdoctemplatedocument
@@ -376,7 +376,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetObjectV2Response>> EzdoctemplatedocumentGetObjectV2WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentGetObjectV2Response>> EzdoctemplatedocumentGetObjectV2WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Patch an existing Ezdoctemplatedocument
         /// </summary>
@@ -388,8 +388,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzdoctemplatedocumentPatchObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzdoctemplatedocumentPatchObjectV1Response> EzdoctemplatedocumentPatchObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzdoctemplatedocumentPatchObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Patch an existing Ezdoctemplatedocument
@@ -402,8 +402,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzdoctemplatedocumentPatchObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzdoctemplatedocumentPatchObjectV1Response>> EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -608,7 +608,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentCreateObjectV1Response> EzdoctemplatedocumentCreateObjectV1Async(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzdoctemplatedocumentCreateObjectV1Response> EzdoctemplatedocumentCreateObjectV1Async(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentCreateObjectV1Response> localVarResponse = await EzdoctemplatedocumentCreateObjectV1WithHttpInfoAsync(ezdoctemplatedocumentCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -622,7 +622,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentCreateObjectV1Response>> EzdoctemplatedocumentCreateObjectV1WithHttpInfoAsync(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentCreateObjectV1Response>> EzdoctemplatedocumentCreateObjectV1WithHttpInfoAsync(EzdoctemplatedocumentCreateObjectV1Request ezdoctemplatedocumentCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezdoctemplatedocumentCreateObjectV1Request' is set
             if (ezdoctemplatedocumentCreateObjectV1Request == null)
@@ -761,7 +761,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task EzdoctemplatedocumentDownloadV1Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task EzdoctemplatedocumentDownloadV1Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             await EzdoctemplatedocumentDownloadV1WithHttpInfoAsync(pkiEzdoctemplatedocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
         }
@@ -774,7 +774,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> EzdoctemplatedocumentDownloadV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<Object>> EzdoctemplatedocumentDownloadV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -837,10 +837,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzdoctemplatedocumentEditObjectV1Response</returns>
-        public EzdoctemplatedocumentEditObjectV1Response EzdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzdoctemplatedocumentEditObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentEditObjectV1Response> localVarResponse = EzdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -851,8 +851,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzdoctemplatedocumentEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentEditObjectV1Response> EzdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzdoctemplatedocumentEditObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezdoctemplatedocumentEditObjectV1Request' is set
             if (ezdoctemplatedocumentEditObjectV1Request == null)
@@ -896,7 +896,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzdoctemplatedocumentEditObjectV1Response>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzdoctemplatedocumentEditObjectV1", localVarResponse);
@@ -917,10 +917,10 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzdoctemplatedocumentEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentEditObjectV1Response> EzdoctemplatedocumentEditObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzdoctemplatedocumentEditObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentEditObjectV1Response> localVarResponse = await EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -932,8 +932,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzdoctemplatedocumentEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentEditObjectV1Response>> EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzdoctemplatedocumentEditObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezdoctemplatedocumentEditObjectV1Request' is set
             if (ezdoctemplatedocumentEditObjectV1Request == null)
@@ -978,7 +978,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzdoctemplatedocumentEditObjectV1Response>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1113,7 +1113,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetAutocompleteV2Response> EzdoctemplatedocumentGetAutocompleteV2Async(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetAutocompleteV2Response> EzdoctemplatedocumentGetAutocompleteV2Async(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response> localVarResponse = await EzdoctemplatedocumentGetAutocompleteV2WithHttpInfoAsync(sSelector, eType, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1132,7 +1132,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response>> EzdoctemplatedocumentGetAutocompleteV2WithHttpInfoAsync(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetAutocompleteV2Response>> EzdoctemplatedocumentGetAutocompleteV2WithHttpInfoAsync(string sSelector, string eType, string? fkiEzsignfoldertypeID = default(string?), string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1321,7 +1321,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetListV1Response> EzdoctemplatedocumentGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetListV1Response> EzdoctemplatedocumentGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetListV1Response> localVarResponse = await EzdoctemplatedocumentGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1339,7 +1339,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetListV1Response>> EzdoctemplatedocumentGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetListV1Response>> EzdoctemplatedocumentGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1487,7 +1487,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzdoctemplatedocumentGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetObjectV2Response> EzdoctemplatedocumentGetObjectV2Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzdoctemplatedocumentGetObjectV2Response> EzdoctemplatedocumentGetObjectV2Async(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetObjectV2Response> localVarResponse = await EzdoctemplatedocumentGetObjectV2WithHttpInfoAsync(pkiEzdoctemplatedocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1501,7 +1501,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzdoctemplatedocumentGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetObjectV2Response>> EzdoctemplatedocumentGetObjectV2WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentGetObjectV2Response>> EzdoctemplatedocumentGetObjectV2WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1559,10 +1559,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzdoctemplatedocumentPatchObjectV1Response</returns>
-        public EzdoctemplatedocumentPatchObjectV1Response EzdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzdoctemplatedocumentPatchObjectV1(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> localVarResponse = EzdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -1573,8 +1573,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument</param>
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzdoctemplatedocumentPatchObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> EzdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzdoctemplatedocumentPatchObjectV1WithHttpInfo(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezdoctemplatedocumentPatchObjectV1Request' is set
             if (ezdoctemplatedocumentPatchObjectV1Request == null)
@@ -1618,7 +1618,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<EzdoctemplatedocumentPatchObjectV1Response>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<CommonResponse>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzdoctemplatedocumentPatchObjectV1", localVarResponse);
@@ -1639,10 +1639,10 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzdoctemplatedocumentPatchObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzdoctemplatedocumentPatchObjectV1Response> EzdoctemplatedocumentPatchObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzdoctemplatedocumentPatchObjectV1Async(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> localVarResponse = await EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1654,8 +1654,8 @@ namespace eZmaxApi.Api
         /// <param name="ezdoctemplatedocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzdoctemplatedocumentPatchObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzdoctemplatedocumentPatchObjectV1Response>> EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzdoctemplatedocumentPatchObjectV1WithHttpInfoAsync(int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezdoctemplatedocumentPatchObjectV1Request' is set
             if (ezdoctemplatedocumentPatchObjectV1Request == null)
@@ -1700,7 +1700,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<EzdoctemplatedocumentPatchObjectV1Response>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<CommonResponse>("/1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

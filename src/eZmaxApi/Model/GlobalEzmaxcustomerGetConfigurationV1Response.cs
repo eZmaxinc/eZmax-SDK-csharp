@@ -40,38 +40,38 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalEzmaxcustomerGetConfigurationV1Response" /> class.
         /// </summary>
-        /// <param name="">The region code (required).</param>
-        /// <param name="">The region code (required).</param>
-        /// <param name="">The environment type Description (required).</param>
-        /// <param name="">The ID of the client in Cognito.</param>
-        /// <param name="">The ID of the client in Cognito (required).</param>
-        public GlobalEzmaxcustomerGetConfigurationV1Response(string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="sInfrastructureregionCode">The region code (required).</param>
+        /// <param name="sInfrastructureregionCodeWeb">The region code (required).</param>
+        /// <param name="sInfrastructureenvironmenttypeDescription">The environment type Description (required).</param>
+        /// <param name="sCognitoClientIDExternal">The ID of the client in Cognito.</param>
+        /// <param name="sCognitoClientIDEzmaxpublic">The ID of the client in Cognito (required).</param>
+        public GlobalEzmaxcustomerGetConfigurationV1Response(string sInfrastructureregionCode = default(string), string sInfrastructureregionCodeWeb = default(string), string sInfrastructureenvironmenttypeDescription = default(string), string sCognitoClientIDExternal = default(string), string sCognitoClientIDEzmaxpublic = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sInfrastructureregionCode" is required (not null)
+            if (sInfrastructureregionCode == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
+                throw new ArgumentNullException("sInfrastructureregionCode is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
             }
-            this.SInfrastructureregionCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SInfrastructureregionCode = sInfrastructureregionCode;
+            // to ensure "sInfrastructureregionCodeWeb" is required (not null)
+            if (sInfrastructureregionCodeWeb == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
+                throw new ArgumentNullException("sInfrastructureregionCodeWeb is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
             }
-            this.SInfrastructureregionCodeWeb = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SInfrastructureregionCodeWeb = sInfrastructureregionCodeWeb;
+            // to ensure "sInfrastructureenvironmenttypeDescription" is required (not null)
+            if (sInfrastructureenvironmenttypeDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
+                throw new ArgumentNullException("sInfrastructureenvironmenttypeDescription is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
             }
-            this.SInfrastructureenvironmenttypeDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
+            // to ensure "sCognitoClientIDEzmaxpublic" is required (not null)
+            if (sCognitoClientIDEzmaxpublic == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
+                throw new ArgumentNullException("sCognitoClientIDEzmaxpublic is a required property for GlobalEzmaxcustomerGetConfigurationV1Response and cannot be null");
             }
-            this.SCognitoClientIDEzmaxpublic = ;
-            this.SCognitoClientIDExternal = ;
+            this.SCognitoClientIDEzmaxpublic = sCognitoClientIDEzmaxpublic;
+            this.SCognitoClientIDExternal = sCognitoClientIDExternal;
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

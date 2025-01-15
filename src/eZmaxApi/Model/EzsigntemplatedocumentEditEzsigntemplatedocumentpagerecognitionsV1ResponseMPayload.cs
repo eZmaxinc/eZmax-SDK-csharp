@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiEzsigntemplatedocumentpagerecognitionID">aPkiEzsigntemplatedocumentpagerecognitionID (required).</param>
+        public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload(List<int> aPkiEzsigntemplatedocumentpagerecognitionID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsigntemplatedocumentpagerecognitionID" is required (not null)
+            if (aPkiEzsigntemplatedocumentpagerecognitionID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsigntemplatedocumentpagerecognitionID is a required property for EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplatedocumentpagerecognitionID = ;
+            this.APkiEzsigntemplatedocumentpagerecognitionID = aPkiEzsigntemplatedocumentpagerecognitionID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

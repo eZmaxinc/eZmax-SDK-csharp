@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OtherincomeGetCommunicationCountV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The count of Communication. (required).</param>
-        public OtherincomeGetCommunicationCountV1ResponseMPayload(int  = default(int))
+        /// <param name="iCommunicationCount">The count of Communication. (required).</param>
+        public OtherincomeGetCommunicationCountV1ResponseMPayload(int iCommunicationCount = default(int))
         {
-            this.ICommunicationCount = ;
+            this.ICommunicationCount = iCommunicationCount;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

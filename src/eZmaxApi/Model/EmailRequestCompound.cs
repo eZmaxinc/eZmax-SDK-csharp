@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Email.</param>
-        /// <param name="">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
-        /// <param name="">The email address. (required).</param>
-        public EmailRequestCompound(int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiEmailID">The unique ID of the Email.</param>
+        /// <param name="fkiEmailtypeID">The unique ID of the Emailtype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| (required).</param>
+        /// <param name="sEmailAddress">The email address. (required).</param>
+        public EmailRequestCompound(int pkiEmailID = default(int), int fkiEmailtypeID = default(int), string sEmailAddress = default(string))
         {
-            this.FkiEmailtypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiEmailtypeID = fkiEmailtypeID;
+            // to ensure "sEmailAddress" is required (not null)
+            if (sEmailAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for EmailRequestCompound and cannot be null");
+                throw new ArgumentNullException("sEmailAddress is a required property for EmailRequestCompound and cannot be null");
             }
-            this.SEmailAddress = ;
-            this.PkiEmailID = ;
+            this.SEmailAddress = sEmailAddress;
+            this.PkiEmailID = pkiEmailID;
         }
 
         /// <summary>
@@ -108,24 +108,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEmailID (int) maximum
             if (this.PkiEmailID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEmailID, must be a value less than or equal to 16777215.", new [] { "PkiEmailID" });
+                yield return new ValidationResult("Invalid value for PkiEmailID, must be a value less than or equal to 16777215.", new [] { "PkiEmailID" });
             }
 
             // PkiEmailID (int) minimum
             if (this.PkiEmailID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEmailID, must be a value greater than or equal to 1.", new [] { "PkiEmailID" });
+                yield return new ValidationResult("Invalid value for PkiEmailID, must be a value greater than or equal to 1.", new [] { "PkiEmailID" });
             }
 
             // FkiEmailtypeID (int) minimum
             if (this.FkiEmailtypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailtypeID, must be a value greater than or equal to 0.", new [] { "FkiEmailtypeID" });
+                yield return new ValidationResult("Invalid value for FkiEmailtypeID, must be a value greater than or equal to 0.", new [] { "FkiEmailtypeID" });
             }
 
             if (this.SEmailAddress != null) {

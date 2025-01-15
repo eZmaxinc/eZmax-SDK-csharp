@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureEditObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignsignatureEditObjectV2Request(EzsignsignatureRequestCompoundV2  = default(EzsignsignatureRequestCompoundV2))
+        /// <param name="objEzsignsignature">objEzsignsignature (required).</param>
+        public EzsignsignatureEditObjectV2Request(EzsignsignatureRequestCompoundV2 objEzsignsignature = default(EzsignsignatureRequestCompoundV2))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsignsignature" is required (not null)
+            if (objEzsignsignature == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureEditObjectV2Request and cannot be null");
+                throw new ArgumentNullException("objEzsignsignature is a required property for EzsignsignatureEditObjectV2Request and cannot be null");
             }
-            this.ObjEzsignsignature = ;
+            this.ObjEzsignsignature = objEzsignsignature;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

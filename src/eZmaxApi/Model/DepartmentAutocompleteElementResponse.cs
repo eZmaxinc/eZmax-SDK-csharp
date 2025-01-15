@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DepartmentAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The Name of the Company in the language of the requester (required).</param>
-        /// <param name="">The Name of the Department in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Department (required).</param>
-        /// <param name="">Whether the Department is active or not (required).</param>
-        public DepartmentAutocompleteElementResponse(string  = default(string), string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
+        /// <param name="pkiDepartmentID">The unique ID of the Department (required).</param>
+        /// <param name="bDepartmentIsactive">Whether the Department is active or not (required).</param>
+        public DepartmentAutocompleteElementResponse(string sCompanyNameX = default(string), string sDepartmentNameX = default(string), int pkiDepartmentID = default(int), bool bDepartmentIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sCompanyNameX" is required (not null)
+            if (sCompanyNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for DepartmentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sCompanyNameX is a required property for DepartmentAutocompleteElementResponse and cannot be null");
             }
-            this.SCompanyNameX = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCompanyNameX = sCompanyNameX;
+            // to ensure "sDepartmentNameX" is required (not null)
+            if (sDepartmentNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for DepartmentAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sDepartmentNameX is a required property for DepartmentAutocompleteElementResponse and cannot be null");
             }
-            this.SDepartmentNameX = ;
-            this.PkiDepartmentID = ;
-            this.BDepartmentIsactive = ;
+            this.SDepartmentNameX = sDepartmentNameX;
+            this.PkiDepartmentID = pkiDepartmentID;
+            this.BDepartmentIsactive = bDepartmentIsactive;
         }
 
         /// <summary>
@@ -124,12 +124,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDepartmentID (int) minimum
             if (this.PkiDepartmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDepartmentID, must be a value greater than or equal to 0.", new [] { "PkiDepartmentID" });
+                yield return new ValidationResult("Invalid value for PkiDepartmentID, must be a value greater than or equal to 0.", new [] { "PkiDepartmentID" });
             }
 
             yield break;

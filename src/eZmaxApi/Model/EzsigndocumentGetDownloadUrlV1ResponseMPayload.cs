@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetDownloadUrlV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The Url to the requested document.  Url will expire after 5 minutes. (required).</param>
-        public EzsigndocumentGetDownloadUrlV1ResponseMPayload(string  = default(string))
+        /// <param name="sDownloadUrl">The Url to the requested document.  Url will expire after 5 minutes. (required).</param>
+        public EzsigndocumentGetDownloadUrlV1ResponseMPayload(string sDownloadUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sDownloadUrl" is required (not null)
+            if (sDownloadUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetDownloadUrlV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("sDownloadUrl is a required property for EzsigndocumentGetDownloadUrlV1ResponseMPayload and cannot be null");
             }
-            this.SDownloadUrl = ;
+            this.SDownloadUrl = sDownloadUrl;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

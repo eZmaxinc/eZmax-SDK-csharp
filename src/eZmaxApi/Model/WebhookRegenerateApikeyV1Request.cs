@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRegenerateApikeyV1Request" /> class.
         /// </summary>
-        /// <param name="">Whether the requests will be signed or not.</param>
-        public WebhookRegenerateApikeyV1Request(bool  = default(bool))
+        /// <param name="bWebhookIssigned">Whether the requests will be signed or not.</param>
+        public WebhookRegenerateApikeyV1Request(bool bWebhookIssigned = default(bool))
         {
-            this.BWebhookIssigned = ;
+            this.BWebhookIssigned = bWebhookIssigned;
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

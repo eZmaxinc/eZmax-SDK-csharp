@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfalevelGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Pdfalevel autocomplete element response. (required).</param>
-        public PdfalevelGetAutocompleteV2ResponseMPayload(List<PdfalevelAutocompleteElementResponse>  = default(List<PdfalevelAutocompleteElementResponse>))
+        /// <param name="aObjPdfalevel">An array of Pdfalevel autocomplete element response. (required).</param>
+        public PdfalevelGetAutocompleteV2ResponseMPayload(List<PdfalevelAutocompleteElementResponse> aObjPdfalevel = default(List<PdfalevelAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjPdfalevel" is required (not null)
+            if (aObjPdfalevel == null)
             {
-                throw new ArgumentNullException(" is a required property for PdfalevelGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjPdfalevel is a required property for PdfalevelGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjPdfalevel = ;
+            this.AObjPdfalevel = aObjPdfalevel;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

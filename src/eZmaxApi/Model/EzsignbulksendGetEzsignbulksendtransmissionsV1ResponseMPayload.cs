@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload(List<EzsignbulksendtransmissionResponseCompound>  = default(List<EzsignbulksendtransmissionResponseCompound>))
+        /// <param name="aObjEzsignbulksendtransmission">aObjEzsignbulksendtransmission (required).</param>
+        public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload(List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission = default(List<EzsignbulksendtransmissionResponseCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignbulksendtransmission" is required (not null)
+            if (aObjEzsignbulksendtransmission == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignbulksendtransmission is a required property for EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignbulksendtransmission = ;
+            this.AObjEzsignbulksendtransmission = aObjEzsignbulksendtransmission;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

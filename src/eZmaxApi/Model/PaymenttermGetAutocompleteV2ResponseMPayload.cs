@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Paymentterm autocomplete element response. (required).</param>
-        public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse>  = default(List<PaymenttermAutocompleteElementResponse>))
+        /// <param name="aObjPaymentterm">An array of Paymentterm autocomplete element response. (required).</param>
+        public PaymenttermGetAutocompleteV2ResponseMPayload(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm = default(List<PaymenttermAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjPaymentterm" is required (not null)
+            if (aObjPaymentterm == null)
             {
-                throw new ArgumentNullException(" is a required property for PaymenttermGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjPaymentterm is a required property for PaymenttermGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjPaymentterm = ;
+            this.AObjPaymentterm = aObjPaymentterm;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

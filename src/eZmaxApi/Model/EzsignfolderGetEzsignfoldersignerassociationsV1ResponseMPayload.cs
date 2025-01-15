@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<CustomEzsignfoldersignerassociationActionableElementResponse>  = default(List<CustomEzsignfoldersignerassociationActionableElementResponse>))
+        /// <param name="aObjEzsignfoldersignerassociation">aObjEzsignfoldersignerassociation (required).</param>
+        public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload(List<CustomEzsignfoldersignerassociationActionableElementResponse> aObjEzsignfoldersignerassociation = default(List<CustomEzsignfoldersignerassociationActionableElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignfoldersignerassociation" is required (not null)
+            if (aObjEzsignfoldersignerassociation == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsignfoldersignerassociation is a required property for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsignfoldersignerassociation = ;
+            this.AObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

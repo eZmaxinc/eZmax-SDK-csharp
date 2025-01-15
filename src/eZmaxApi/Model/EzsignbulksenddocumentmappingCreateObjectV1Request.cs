@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingCreateObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsignbulksenddocumentmappingCreateObjectV1Request(List<EzsignbulksenddocumentmappingRequestCompound>  = default(List<EzsignbulksenddocumentmappingRequestCompound>))
+        /// <param name="aObjEzsignbulksenddocumentmapping">aObjEzsignbulksenddocumentmapping (required).</param>
+        public EzsignbulksenddocumentmappingCreateObjectV1Request(List<EzsignbulksenddocumentmappingRequestCompound> aObjEzsignbulksenddocumentmapping = default(List<EzsignbulksenddocumentmappingRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsignbulksenddocumentmapping" is required (not null)
+            if (aObjEzsignbulksenddocumentmapping == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksenddocumentmappingCreateObjectV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsignbulksenddocumentmapping is a required property for EzsignbulksenddocumentmappingCreateObjectV1Request and cannot be null");
             }
-            this.AObjEzsignbulksenddocumentmapping = ;
+            this.AObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

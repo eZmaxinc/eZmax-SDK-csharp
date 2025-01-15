@@ -40,44 +40,44 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name="">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public ContactinformationsRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), List<AddressRequestCompound>  = default(List<AddressRequestCompound>), List<PhoneRequestCompound>  = default(List<PhoneRequestCompound>), List<EmailRequestCompound>  = default(List<EmailRequestCompound>), List<WebsiteRequestCompound>  = default(List<WebsiteRequestCompound>))
+        /// <param name="iAddressDefault">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iPhoneDefault">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iEmailDefault">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="iWebsiteDefault">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
+        public ContactinformationsRequestCompound(int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int), List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
-            this.IAddressDefault = ;
-            this.IPhoneDefault = ;
-            this.IEmailDefault = ;
-            this.IWebsiteDefault = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IAddressDefault = iAddressDefault;
+            this.IPhoneDefault = iPhoneDefault;
+            this.IEmailDefault = iEmailDefault;
+            this.IWebsiteDefault = iWebsiteDefault;
+            // to ensure "aObjAddress" is required (not null)
+            if (aObjAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactinformationsRequestCompound and cannot be null");
+                throw new ArgumentNullException("aObjAddress is a required property for ContactinformationsRequestCompound and cannot be null");
             }
-            this.AObjAddress = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjAddress = aObjAddress;
+            // to ensure "aObjPhone" is required (not null)
+            if (aObjPhone == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactinformationsRequestCompound and cannot be null");
+                throw new ArgumentNullException("aObjPhone is a required property for ContactinformationsRequestCompound and cannot be null");
             }
-            this.AObjPhone = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjPhone = aObjPhone;
+            // to ensure "aObjEmail" is required (not null)
+            if (aObjEmail == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactinformationsRequestCompound and cannot be null");
+                throw new ArgumentNullException("aObjEmail is a required property for ContactinformationsRequestCompound and cannot be null");
             }
-            this.AObjEmail = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.AObjEmail = aObjEmail;
+            // to ensure "aObjWebsite" is required (not null)
+            if (aObjWebsite == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactinformationsRequestCompound and cannot be null");
+                throw new ArgumentNullException("aObjWebsite is a required property for ContactinformationsRequestCompound and cannot be null");
             }
-            this.AObjWebsite = ;
+            this.AObjWebsite = aObjWebsite;
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

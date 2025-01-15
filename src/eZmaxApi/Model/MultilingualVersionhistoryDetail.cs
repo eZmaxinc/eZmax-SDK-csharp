@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualVersionhistoryDetail" /> class.
         /// </summary>
-        /// <param name="">Detail of the Versionhistory in French.</param>
-        /// <param name="">Detail of the Versionhistory in English.</param>
-        public MultilingualVersionhistoryDetail(string  = default(string), string  = default(string))
+        /// <param name="tVersionhistoryDetail1">Detail of the Versionhistory in French.</param>
+        /// <param name="tVersionhistoryDetail2">Detail of the Versionhistory in English.</param>
+        public MultilingualVersionhistoryDetail(string tVersionhistoryDetail1 = default(string), string tVersionhistoryDetail2 = default(string))
         {
-            this.TVersionhistoryDetail1 = ;
-            this.TVersionhistoryDetail2 = ;
+            this.TVersionhistoryDetail1 = tVersionhistoryDetail1;
+            this.TVersionhistoryDetail2 = tVersionhistoryDetail2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

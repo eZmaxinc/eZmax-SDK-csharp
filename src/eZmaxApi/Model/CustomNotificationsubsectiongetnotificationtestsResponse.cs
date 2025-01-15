@@ -40,30 +40,30 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationsubsectiongetnotificationtestsResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Notificationsubsection (required).</param>
-        /// <param name="">The unique ID of the Notificationsection (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">The name of the Notificationsection in the language of the requester.</param>
-        /// <param name="">The name of the Notificationsubsection in the language of the requester (required).</param>
-        /// <param name=""> (required).</param>
-        public CustomNotificationsubsectiongetnotificationtestsResponse(int  = default(int), int  = default(int), MultilingualNotificationsubsectionName  = default(MultilingualNotificationsubsectionName), string  = default(string), string  = default(string), List<CustomNotificationtestgetnotificationtestsResponse>  = default(List<CustomNotificationtestgetnotificationtestsResponse>))
+        /// <param name="pkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
+        /// <param name="fkiNotificationsectionID">The unique ID of the Notificationsection (required).</param>
+        /// <param name="objNotificationsubsectionName">objNotificationsubsectionName.</param>
+        /// <param name="sNotificationsectionNameX">The name of the Notificationsection in the language of the requester.</param>
+        /// <param name="sNotificationsubsectionNameX">The name of the Notificationsubsection in the language of the requester (required).</param>
+        /// <param name="aObjNotificationtest">aObjNotificationtest (required).</param>
+        public CustomNotificationsubsectiongetnotificationtestsResponse(int pkiNotificationsubsectionID = default(int), int fkiNotificationsectionID = default(int), MultilingualNotificationsubsectionName objNotificationsubsectionName = default(MultilingualNotificationsubsectionName), string sNotificationsectionNameX = default(string), string sNotificationsubsectionNameX = default(string), List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest = default(List<CustomNotificationtestgetnotificationtestsResponse>))
         {
-            this.PkiNotificationsubsectionID = ;
-            this.FkiNotificationsectionID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiNotificationsubsectionID = pkiNotificationsubsectionID;
+            this.FkiNotificationsectionID = fkiNotificationsectionID;
+            // to ensure "sNotificationsubsectionNameX" is required (not null)
+            if (sNotificationsubsectionNameX == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException("sNotificationsubsectionNameX is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
             }
-            this.SNotificationsubsectionNameX = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SNotificationsubsectionNameX = sNotificationsubsectionNameX;
+            // to ensure "aObjNotificationtest" is required (not null)
+            if (aObjNotificationtest == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
+                throw new ArgumentNullException("aObjNotificationtest is a required property for CustomNotificationsubsectiongetnotificationtestsResponse and cannot be null");
             }
-            this.AObjNotificationtest = ;
-            this.ObjNotificationsubsectionName = ;
-            this.SNotificationsectionNameX = ;
+            this.AObjNotificationtest = aObjNotificationtest;
+            this.ObjNotificationsubsectionName = objNotificationsubsectionName;
+            this.SNotificationsectionNameX = sNotificationsectionNameX;
         }
 
         /// <summary>
@@ -142,18 +142,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiNotificationsubsectionID (int) minimum
             if (this.PkiNotificationsubsectionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "PkiNotificationsubsectionID" });
+                yield return new ValidationResult("Invalid value for PkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "PkiNotificationsubsectionID" });
             }
 
             // FkiNotificationsectionID (int) minimum
             if (this.FkiNotificationsectionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotificationsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsectionID" });
+                yield return new ValidationResult("Invalid value for FkiNotificationsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsectionID" });
             }
 
             yield break;

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload(List<EzsigndiscussionResponse>  = default(List<EzsigndiscussionResponse>))
+        /// <param name="aObjEzsigndiscussion">aObjEzsigndiscussion (required).</param>
+        public EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload(List<EzsigndiscussionResponse> aObjEzsigndiscussion = default(List<EzsigndiscussionResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigndiscussion" is required (not null)
+            if (aObjEzsigndiscussion == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsigndiscussion is a required property for EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigndiscussion = ;
+            this.AObjEzsigndiscussion = aObjEzsigndiscussion;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

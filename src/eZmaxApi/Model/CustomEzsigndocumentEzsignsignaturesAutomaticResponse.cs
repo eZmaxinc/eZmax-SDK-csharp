@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsigndocumentEzsignsignaturesAutomaticResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigndocument (required).</param>
-        /// <param name="">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
-        /// <param name=""> (required).</param>
-        public CustomEzsigndocumentEzsignsignaturesAutomaticResponse(int  = default(int), string  = default(string), List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>  = default(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>))
+        /// <param name="pkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
+        /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
+        /// <param name="aObjEzsignsignature">aObjEzsignsignature (required).</param>
+        public CustomEzsigndocumentEzsignsignaturesAutomaticResponse(int pkiEzsigndocumentID = default(int), string sEzsigndocumentName = default(string), List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature = default(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse>))
         {
-            this.PkiEzsigndocumentID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
+            // to ensure "sEzsigndocumentName" is required (not null)
+            if (sEzsigndocumentName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigndocumentName is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.SEzsigndocumentName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigndocumentName = sEzsigndocumentName;
+            // to ensure "aObjEzsignsignature" is required (not null)
+            if (aObjEzsignsignature == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsignature is a required property for CustomEzsigndocumentEzsignsignaturesAutomaticResponse and cannot be null");
             }
-            this.AObjEzsignsignature = ;
+            this.AObjEzsignsignature = aObjEzsignsignature;
         }
 
         /// <summary>
@@ -111,12 +111,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigndocumentID (int) minimum
             if (this.PkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
             }
 
             yield break;

@@ -46,51 +46,51 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingcontractResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The length in years of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="">The start date of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="">The end date of the Ezmaxinvoicingcontract (required).</param>
-        /// <param name="">The price of the license (required).</param>
-        /// <param name="">The price for 121QA (required).</param>
-        /// <param name="">Whether eZsign is for all agents (required).</param>
-        /// <param name=""> (required).</param>
-        public EzmaxinvoicingcontractResponseCompound(int  = default(int), FieldEEzmaxinvoicingcontractPaymenttype  = default(FieldEEzmaxinvoicingcontractPaymenttype), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), CommonAudit  = default(CommonAudit))
+        /// <param name="pkiEzmaxinvoicingcontractID">The unique ID of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="eEzmaxinvoicingcontractPaymenttype">eEzmaxinvoicingcontractPaymenttype (required).</param>
+        /// <param name="iEzmaxinvoicingcontractLength">The length in years of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dtEzmaxinvoicingcontractStart">The start date of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dtEzmaxinvoicingcontractEnd">The end date of the Ezmaxinvoicingcontract (required).</param>
+        /// <param name="dEzmaxinvoicingcontractLicense">The price of the license (required).</param>
+        /// <param name="dEzmaxinvoicingcontract121qa">The price for 121QA (required).</param>
+        /// <param name="bEzmaxinvoicingcontractEzsignallagents">Whether eZsign is for all agents (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        public EzmaxinvoicingcontractResponseCompound(int pkiEzmaxinvoicingcontractID = default(int), FieldEEzmaxinvoicingcontractPaymenttype eEzmaxinvoicingcontractPaymenttype = default(FieldEEzmaxinvoicingcontractPaymenttype), int iEzmaxinvoicingcontractLength = default(int), string dtEzmaxinvoicingcontractStart = default(string), string dtEzmaxinvoicingcontractEnd = default(string), string dEzmaxinvoicingcontractLicense = default(string), string dEzmaxinvoicingcontract121qa = default(string), bool bEzmaxinvoicingcontractEzsignallagents = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
-            this.PkiEzmaxinvoicingcontractID = ;
-            this.EEzmaxinvoicingcontractPaymenttype = ;
-            this.IEzmaxinvoicingcontractLength = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzmaxinvoicingcontractID = pkiEzmaxinvoicingcontractID;
+            this.EEzmaxinvoicingcontractPaymenttype = eEzmaxinvoicingcontractPaymenttype;
+            this.IEzmaxinvoicingcontractLength = iEzmaxinvoicingcontractLength;
+            // to ensure "dtEzmaxinvoicingcontractStart" is required (not null)
+            if (dtEzmaxinvoicingcontractStart == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
+                throw new ArgumentNullException("dtEzmaxinvoicingcontractStart is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingcontractStart = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtEzmaxinvoicingcontractStart = dtEzmaxinvoicingcontractStart;
+            // to ensure "dtEzmaxinvoicingcontractEnd" is required (not null)
+            if (dtEzmaxinvoicingcontractEnd == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
+                throw new ArgumentNullException("dtEzmaxinvoicingcontractEnd is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
             }
-            this.DtEzmaxinvoicingcontractEnd = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtEzmaxinvoicingcontractEnd = dtEzmaxinvoicingcontractEnd;
+            // to ensure "dEzmaxinvoicingcontractLicense" is required (not null)
+            if (dEzmaxinvoicingcontractLicense == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
+                throw new ArgumentNullException("dEzmaxinvoicingcontractLicense is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingcontractLicense = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DEzmaxinvoicingcontractLicense = dEzmaxinvoicingcontractLicense;
+            // to ensure "dEzmaxinvoicingcontract121qa" is required (not null)
+            if (dEzmaxinvoicingcontract121qa == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
+                throw new ArgumentNullException("dEzmaxinvoicingcontract121qa is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
             }
-            this.DEzmaxinvoicingcontract121qa = ;
-            this.BEzmaxinvoicingcontractEzsignallagents = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DEzmaxinvoicingcontract121qa = dEzmaxinvoicingcontract121qa;
+            this.BEzmaxinvoicingcontractEzsignallagents = bEzmaxinvoicingcontractEzsignallagents;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for EzmaxinvoicingcontractResponseCompound and cannot be null");
             }
-            this.ObjAudit = ;
+            this.ObjAudit = objAudit;
         }
 
         /// <summary>
@@ -190,18 +190,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicingcontractID (int) minimum
             if (this.PkiEzmaxinvoicingcontractID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingcontractID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxinvoicingcontractID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingcontractID, must be a value greater than or equal to 1.", new [] { "PkiEzmaxinvoicingcontractID" });
             }
 
             // IEzmaxinvoicingcontractLength (int) minimum
             if (this.IEzmaxinvoicingcontractLength < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingcontractLength, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingcontractLength" });
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingcontractLength, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingcontractLength" });
             }
 
             if (this.DEzmaxinvoicingcontractLicense != null) {

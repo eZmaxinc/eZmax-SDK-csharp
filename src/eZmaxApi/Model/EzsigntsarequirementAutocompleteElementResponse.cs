@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntsarequirementAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The description of the Ezsigntsarequirement in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
-        /// <param name="">Whether the Ezsigntsarequirement is active or not (required).</param>
-        /// <param name="">Indicates if the element is disabled in the context (required).</param>
-        public EzsigntsarequirementAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool), bool  = default(bool))
+        /// <param name="sEzsigntsarequirementDescriptionX">The description of the Ezsigntsarequirement in the language of the requester (required).</param>
+        /// <param name="pkiEzsigntsarequirementID">The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**| (required).</param>
+        /// <param name="bEzsigntsarequirementIsactive">Whether the Ezsigntsarequirement is active or not (required).</param>
+        /// <param name="bDisabled">Indicates if the element is disabled in the context (required).</param>
+        public EzsigntsarequirementAutocompleteElementResponse(string sEzsigntsarequirementDescriptionX = default(string), int pkiEzsigntsarequirementID = default(int), bool bEzsigntsarequirementIsactive = default(bool), bool bDisabled = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzsigntsarequirementDescriptionX" is required (not null)
+            if (sEzsigntsarequirementDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntsarequirementAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sEzsigntsarequirementDescriptionX is a required property for EzsigntsarequirementAutocompleteElementResponse and cannot be null");
             }
-            this.SEzsigntsarequirementDescriptionX = ;
-            this.PkiEzsigntsarequirementID = ;
-            this.BEzsigntsarequirementIsactive = ;
-            this.BDisabled = ;
+            this.SEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
+            this.PkiEzsigntsarequirementID = pkiEzsigntsarequirementID;
+            this.BEzsigntsarequirementIsactive = bEzsigntsarequirementIsactive;
+            this.BDisabled = bDisabled;
         }
 
         /// <summary>
@@ -118,18 +118,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntsarequirementID (int) maximum
             if (this.PkiEzsigntsarequirementID > (int)3)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "PkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "PkiEzsigntsarequirementID" });
             }
 
             // PkiEzsigntsarequirementID (int) minimum
             if (this.PkiEzsigntsarequirementID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "PkiEzsigntsarequirementID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "PkiEzsigntsarequirementID" });
             }
 
             yield break;

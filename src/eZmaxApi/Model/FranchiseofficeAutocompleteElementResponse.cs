@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchiseofficeAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The description of the Franchiseoffice in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name="">Whether the Franchiseoffice is active or not (required).</param>
-        public FranchiseofficeAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sFranchiseofficeDescription">The description of the Franchiseoffice in the language of the requester (required).</param>
+        /// <param name="pkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="bFranchiseofficeIsactive">Whether the Franchiseoffice is active or not (required).</param>
+        public FranchiseofficeAutocompleteElementResponse(string sFranchiseofficeDescription = default(string), int pkiFranchiseofficeID = default(int), bool bFranchiseofficeIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sFranchiseofficeDescription" is required (not null)
+            if (sFranchiseofficeDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchiseofficeAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sFranchiseofficeDescription is a required property for FranchiseofficeAutocompleteElementResponse and cannot be null");
             }
-            this.SFranchiseofficeDescription = ;
-            this.PkiFranchiseofficeID = ;
-            this.BFranchiseofficeIsactive = ;
+            this.SFranchiseofficeDescription = sFranchiseofficeDescription;
+            this.PkiFranchiseofficeID = pkiFranchiseofficeID;
+            this.BFranchiseofficeIsactive = bFranchiseofficeIsactive;
         }
 
         /// <summary>
@@ -108,12 +108,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiFranchiseofficeID (int) minimum
             if (this.PkiFranchiseofficeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "PkiFranchiseofficeID" });
+                yield return new ValidationResult("Invalid value for PkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "PkiFranchiseofficeID" });
             }
 
             yield break;

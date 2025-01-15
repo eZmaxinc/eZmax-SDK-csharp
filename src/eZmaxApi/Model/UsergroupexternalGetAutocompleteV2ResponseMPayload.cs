@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Usergroupexternal autocomplete element response. (required).</param>
-        public UsergroupexternalGetAutocompleteV2ResponseMPayload(List<UsergroupexternalAutocompleteElementResponse>  = default(List<UsergroupexternalAutocompleteElementResponse>))
+        /// <param name="aObjUsergroupexternal">An array of Usergroupexternal autocomplete element response. (required).</param>
+        public UsergroupexternalGetAutocompleteV2ResponseMPayload(List<UsergroupexternalAutocompleteElementResponse> aObjUsergroupexternal = default(List<UsergroupexternalAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjUsergroupexternal" is required (not null)
+            if (aObjUsergroupexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjUsergroupexternal is a required property for UsergroupexternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjUsergroupexternal = ;
+            this.AObjUsergroupexternal = aObjUsergroupexternal;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -46,21 +46,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorSTemporaryFileUrl" /> class.
         /// </summary>
-        /// <param name="">The message giving details about the error (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">More error message detail.</param>
-        /// <param name="">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
-        public CommonResponseErrorSTemporaryFileUrl(string  = default(string), FieldEErrorCode  = default(FieldEErrorCode), List<string>  = default(List<string>), string  = default(string))
+        /// <param name="sErrorMessage">The message giving details about the error (required).</param>
+        /// <param name="eErrorCode">eErrorCode (required).</param>
+        /// <param name="aSErrorMessagedetail">More error message detail.</param>
+        /// <param name="sTemporaryFileUrl">The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again..</param>
+        public CommonResponseErrorSTemporaryFileUrl(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>), string sTemporaryFileUrl = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sErrorMessage" is required (not null)
+            if (sErrorMessage == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonResponseErrorSTemporaryFileUrl and cannot be null");
+                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorSTemporaryFileUrl and cannot be null");
             }
-            this.SErrorMessage = ;
-            this.EErrorCode = ;
-            this.ASErrorMessagedetail = ;
-            this.STemporaryFileUrl = ;
+            this.SErrorMessage = sErrorMessage;
+            this.EErrorCode = eErrorCode;
+            this.ASErrorMessagedetail = aSErrorMessagedetail;
+            this.STemporaryFileUrl = sTemporaryFileUrl;
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SErrorMessage != null) {
                 // SErrorMessage (string) pattern

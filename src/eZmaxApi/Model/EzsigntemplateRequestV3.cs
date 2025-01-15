@@ -52,35 +52,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateRequestV3" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplate.</param>
-        /// <param name="">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The unique ID of the Ezdoctemplatedocument.</param>
-        /// <param name="">The description of the Ezsigntemplate (required).</param>
-        /// <param name="">The external description of the Ezsigntemplate.</param>
-        /// <param name="">The comment of the Ezsigntemplate.</param>
-        /// <param name="">.</param>
-        /// <param name="">The filename regexp of the Ezsigntemplate..</param>
-        /// <param name="">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigntemplateRequestV3(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), FieldEEzsigntemplateRecognition?  = default(FieldEEzsigntemplateRecognition?), string  = default(string), bool  = default(bool), FieldEEzsigntemplateType  = default(FieldEEzsigntemplateType))
+        /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
+        /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="fkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument.</param>
+        /// <param name="sEzsigntemplateDescription">The description of the Ezsigntemplate (required).</param>
+        /// <param name="sEzsigntemplateExternaldescription">The external description of the Ezsigntemplate.</param>
+        /// <param name="tEzsigntemplateComment">The comment of the Ezsigntemplate.</param>
+        /// <param name="eEzsigntemplateRecognition">eEzsigntemplateRecognition.</param>
+        /// <param name="sEzsigntemplateFilenameregexp">The filename regexp of the Ezsigntemplate..</param>
+        /// <param name="bEzsigntemplateAdminonly">Whether the Ezsigntemplate can be accessed by admin users only (eUserType&#x3D;Normal) (required).</param>
+        /// <param name="eEzsigntemplateType">eEzsigntemplateType (required).</param>
+        public EzsigntemplateRequestV3(int pkiEzsigntemplateID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), int fkiEzdoctemplatedocumentID = default(int), string sEzsigntemplateDescription = default(string), string sEzsigntemplateExternaldescription = default(string), string tEzsigntemplateComment = default(string), FieldEEzsigntemplateRecognition? eEzsigntemplateRecognition = default(FieldEEzsigntemplateRecognition?), string sEzsigntemplateFilenameregexp = default(string), bool bEzsigntemplateAdminonly = default(bool), FieldEEzsigntemplateType eEzsigntemplateType = default(FieldEEzsigntemplateType))
         {
-            this.FkiLanguageID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sEzsigntemplateDescription" is required (not null)
+            if (sEzsigntemplateDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplateRequestV3 and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateDescription is a required property for EzsigntemplateRequestV3 and cannot be null");
             }
-            this.SEzsigntemplateDescription = ;
-            this.BEzsigntemplateAdminonly = ;
-            this.EEzsigntemplateType = ;
-            this.PkiEzsigntemplateID = ;
-            this.FkiEzsignfoldertypeID = ;
-            this.FkiEzdoctemplatedocumentID = ;
-            this.SEzsigntemplateExternaldescription = ;
-            this.TEzsigntemplateComment = ;
-            this.EEzsigntemplateRecognition = ;
-            this.SEzsigntemplateFilenameregexp = ;
+            this.SEzsigntemplateDescription = sEzsigntemplateDescription;
+            this.BEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
+            this.EEzsigntemplateType = eEzsigntemplateType;
+            this.PkiEzsigntemplateID = pkiEzsigntemplateID;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+            this.SEzsigntemplateExternaldescription = sEzsigntemplateExternaldescription;
+            this.TEzsigntemplateComment = tEzsigntemplateComment;
+            this.EEzsigntemplateRecognition = eEzsigntemplateRecognition;
+            this.SEzsigntemplateFilenameregexp = sEzsigntemplateFilenameregexp;
         }
 
         /// <summary>
@@ -190,48 +190,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateID (int) minimum
             if (this.PkiEzsigntemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiEzdoctemplatedocumentID (int) maximum
             if (this.FkiEzdoctemplatedocumentID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
             }
 
             // FkiEzdoctemplatedocumentID (int) minimum
             if (this.FkiEzdoctemplatedocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
             }
 
             if (this.SEzsigntemplateDescription != null) {

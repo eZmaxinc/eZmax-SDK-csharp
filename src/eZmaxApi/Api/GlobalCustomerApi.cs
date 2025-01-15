@@ -76,7 +76,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get customer endpoint
@@ -91,7 +91,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -300,7 +300,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GlobalCustomerGetEndpointV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GlobalCustomerGetEndpointV1Response> GlobalCustomerGetEndpointV1Async(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResponse = await GlobalCustomerGetEndpointV1WithHttpInfoAsync(pksCustomerCode, sInfrastructureproductCode, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -316,7 +316,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GlobalCustomerGetEndpointV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<GlobalCustomerGetEndpointV1Response>> GlobalCustomerGetEndpointV1WithHttpInfoAsync(string pksCustomerCode, string? sInfrastructureproductCode = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'pksCustomerCode' is set
             if (pksCustomerCode == null)

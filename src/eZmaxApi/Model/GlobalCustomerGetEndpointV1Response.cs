@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalCustomerGetEndpointV1Response" /> class.
         /// </summary>
-        /// <param name="">The endpoint&#39;s URL (required).</param>
-        public GlobalCustomerGetEndpointV1Response(string  = default(string))
+        /// <param name="sEndpointURL">The endpoint&#39;s URL (required).</param>
+        public GlobalCustomerGetEndpointV1Response(string sEndpointURL = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEndpointURL" is required (not null)
+            if (sEndpointURL == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalCustomerGetEndpointV1Response and cannot be null");
+                throw new ArgumentNullException("sEndpointURL is a required property for GlobalCustomerGetEndpointV1Response and cannot be null");
             }
-            this.SEndpointURL = ;
+            this.SEndpointURL = sEndpointURL;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

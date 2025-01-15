@@ -35,14 +35,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateCopyV1Request" /> class.
         /// </summary>
-        /// <param name="">.</param>
-        /// <param name="">Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate.</param>
-        /// <param name="">Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate.</param>
-        public EzsigntemplateCopyV1Request(List<int>  = default(List<int>), bool  = default(bool), bool  = default(bool))
+        /// <param name="aFkiEzsignfoldertypeID">aFkiEzsignfoldertypeID.</param>
+        /// <param name="bCopyCompany">Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate.</param>
+        /// <param name="bCopyUser">Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate.</param>
+        public EzsigntemplateCopyV1Request(List<int> aFkiEzsignfoldertypeID = default(List<int>), bool bCopyCompany = default(bool), bool bCopyUser = default(bool))
         {
-            this.AFkiEzsignfoldertypeID = ;
-            this.BCopyCompany = ;
-            this.BCopyUser = ;
+            this.AFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
+            this.BCopyCompany = bCopyCompany;
+            this.BCopyUser = bCopyUser;
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

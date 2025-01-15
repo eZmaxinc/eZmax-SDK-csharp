@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebsiteRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Website Default.</param>
-        /// <param name="">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
-        /// <param name="">The URL of the website. (required).</param>
-        public WebsiteRequestCompound(int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiWebsiteID">The unique ID of the Website Default.</param>
+        /// <param name="fkiWebsitetypeID">The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey| (required).</param>
+        /// <param name="sWebsiteAddress">The URL of the website. (required).</param>
+        public WebsiteRequestCompound(int pkiWebsiteID = default(int), int fkiWebsitetypeID = default(int), string sWebsiteAddress = default(string))
         {
-            this.FkiWebsitetypeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiWebsitetypeID = fkiWebsitetypeID;
+            // to ensure "sWebsiteAddress" is required (not null)
+            if (sWebsiteAddress == null)
             {
-                throw new ArgumentNullException(" is a required property for WebsiteRequestCompound and cannot be null");
+                throw new ArgumentNullException("sWebsiteAddress is a required property for WebsiteRequestCompound and cannot be null");
             }
-            this.SWebsiteAddress = ;
-            this.PkiWebsiteID = ;
+            this.SWebsiteAddress = sWebsiteAddress;
+            this.PkiWebsiteID = pkiWebsiteID;
         }
 
         /// <summary>
@@ -108,24 +108,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiWebsiteID (int) maximum
             if (this.PkiWebsiteID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiWebsiteID, must be a value less than or equal to 16777215.", new [] { "PkiWebsiteID" });
+                yield return new ValidationResult("Invalid value for PkiWebsiteID, must be a value less than or equal to 16777215.", new [] { "PkiWebsiteID" });
             }
 
             // PkiWebsiteID (int) minimum
             if (this.PkiWebsiteID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiWebsiteID, must be a value greater than or equal to 0.", new [] { "PkiWebsiteID" });
+                yield return new ValidationResult("Invalid value for PkiWebsiteID, must be a value greater than or equal to 0.", new [] { "PkiWebsiteID" });
             }
 
             // FkiWebsitetypeID (int) minimum
             if (this.FkiWebsitetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiWebsitetypeID, must be a value greater than or equal to 0.", new [] { "FkiWebsitetypeID" });
+                yield return new ValidationResult("Invalid value for FkiWebsitetypeID, must be a value greater than or equal to 0.", new [] { "FkiWebsitetypeID" });
             }
 
             yield break;

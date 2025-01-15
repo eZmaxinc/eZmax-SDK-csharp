@@ -58,48 +58,48 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookListElement" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Webhook (required).</param>
-        /// <param name="">The description of the Webhook (required).</param>
-        /// <param name="">The URL of the Webhook callback (required).</param>
-        /// <param name="">The concatenated string to describe the Webhook event (required).</param>
-        /// <param name="">The email that will receive the Webhook in case all attempts fail (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether the Webhook is active or not (required).</param>
-        /// <param name="">Whether the requests will be signed or not (required).</param>
-        public WebhookListElement(int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), FieldEWebhookModule  = default(FieldEWebhookModule), FieldEWebhookEzsignevent?  = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent?  = default(FieldEWebhookManagementevent?), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiWebhookID">The unique ID of the Webhook (required).</param>
+        /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
+        /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
+        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event (required).</param>
+        /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
+        /// <param name="eWebhookModule">eWebhookModule (required).</param>
+        /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
+        /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
+        /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
+        public WebhookListElement(int pkiWebhookID = default(int), string sWebhookDescription = default(string), string sWebhookUrl = default(string), string sWebhookEvent = default(string), string sWebhookEmailfailed = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool))
         {
-            this.PkiWebhookID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiWebhookID = pkiWebhookID;
+            // to ensure "sWebhookDescription" is required (not null)
+            if (sWebhookDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookListElement and cannot be null");
+                throw new ArgumentNullException("sWebhookDescription is a required property for WebhookListElement and cannot be null");
             }
-            this.SWebhookDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWebhookDescription = sWebhookDescription;
+            // to ensure "sWebhookUrl" is required (not null)
+            if (sWebhookUrl == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookListElement and cannot be null");
+                throw new ArgumentNullException("sWebhookUrl is a required property for WebhookListElement and cannot be null");
             }
-            this.SWebhookUrl = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWebhookUrl = sWebhookUrl;
+            // to ensure "sWebhookEvent" is required (not null)
+            if (sWebhookEvent == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookListElement and cannot be null");
+                throw new ArgumentNullException("sWebhookEvent is a required property for WebhookListElement and cannot be null");
             }
-            this.SWebhookEvent = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWebhookEvent = sWebhookEvent;
+            // to ensure "sWebhookEmailfailed" is required (not null)
+            if (sWebhookEmailfailed == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookListElement and cannot be null");
+                throw new ArgumentNullException("sWebhookEmailfailed is a required property for WebhookListElement and cannot be null");
             }
-            this.SWebhookEmailfailed = ;
-            this.EWebhookModule = ;
-            this.BWebhookIsactive = ;
-            this.BWebhookIssigned = ;
-            this.EWebhookEzsignevent = ;
-            this.EWebhookManagementevent = ;
+            this.SWebhookEmailfailed = sWebhookEmailfailed;
+            this.EWebhookModule = eWebhookModule;
+            this.BWebhookIsactive = bWebhookIsactive;
+            this.BWebhookIssigned = bWebhookIssigned;
+            this.EWebhookEzsignevent = eWebhookEzsignevent;
+            this.EWebhookManagementevent = eWebhookManagementevent;
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SWebhookUrl != null) {
                 // SWebhookUrl (string) pattern

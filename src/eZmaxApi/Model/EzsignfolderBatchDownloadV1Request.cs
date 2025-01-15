@@ -65,22 +65,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderBatchDownloadV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more. (required).</param>
-        public EzsignfolderBatchDownloadV1Request(List<int>  = default(List<int>), List<AEDocumentTypeEnum>  = default(List<AEDocumentTypeEnum>))
+        /// <param name="aPkiEzsigndocumentID">aPkiEzsigndocumentID (required).</param>
+        /// <param name="aEDocumentType">The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more. (required).</param>
+        public EzsignfolderBatchDownloadV1Request(List<int> aPkiEzsigndocumentID = default(List<int>), List<AEDocumentTypeEnum> aEDocumentType = default(List<AEDocumentTypeEnum>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsigndocumentID" is required (not null)
+            if (aPkiEzsigndocumentID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderBatchDownloadV1Request and cannot be null");
+                throw new ArgumentNullException("aPkiEzsigndocumentID is a required property for EzsignfolderBatchDownloadV1Request and cannot be null");
             }
-            this.APkiEzsigndocumentID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.APkiEzsigndocumentID = aPkiEzsigndocumentID;
+            // to ensure "aEDocumentType" is required (not null)
+            if (aEDocumentType == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfolderBatchDownloadV1Request and cannot be null");
+                throw new ArgumentNullException("aEDocumentType is a required property for EzsignfolderBatchDownloadV1Request and cannot be null");
             }
-            this.AEDocumentType = ;
+            this.AEDocumentType = aEDocumentType;
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

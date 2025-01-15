@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingEditObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public BrandingEditObjectV2Request(BrandingRequestCompoundV2  = default(BrandingRequestCompoundV2))
+        /// <param name="objBranding">objBranding (required).</param>
+        public BrandingEditObjectV2Request(BrandingRequestCompoundV2 objBranding = default(BrandingRequestCompoundV2))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objBranding" is required (not null)
+            if (objBranding == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingEditObjectV2Request and cannot be null");
+                throw new ArgumentNullException("objBranding is a required property for BrandingEditObjectV2Request and cannot be null");
             }
-            this.ObjBranding = ;
+            this.ObjBranding = objBranding;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

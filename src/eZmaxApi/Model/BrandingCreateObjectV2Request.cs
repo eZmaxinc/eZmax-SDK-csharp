@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingCreateObjectV2Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public BrandingCreateObjectV2Request(List<BrandingRequestCompoundV2>  = default(List<BrandingRequestCompoundV2>))
+        /// <param name="aObjBranding">aObjBranding (required).</param>
+        public BrandingCreateObjectV2Request(List<BrandingRequestCompoundV2> aObjBranding = default(List<BrandingRequestCompoundV2>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjBranding" is required (not null)
+            if (aObjBranding == null)
             {
-                throw new ArgumentNullException(" is a required property for BrandingCreateObjectV2Request and cannot be null");
+                throw new ArgumentNullException("aObjBranding is a required property for BrandingCreateObjectV2Request and cannot be null");
             }
-            this.AObjBranding = ;
+            this.AObjBranding = aObjBranding;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,12 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateformfieldgroupsignerRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsigntemplateformfieldgroupsigner.</param>
-        /// <param name="">The unique ID of the Ezsigntemplatesigner (required).</param>
-        public EzsigntemplateformfieldgroupsignerRequest(int  = default(int), int  = default(int))
+        /// <param name="pkiEzsigntemplateformfieldgroupsignerID">The unique ID of the Ezsigntemplateformfieldgroupsigner.</param>
+        /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
+        public EzsigntemplateformfieldgroupsignerRequest(int pkiEzsigntemplateformfieldgroupsignerID = default(int), int fkiEzsigntemplatesignerID = default(int))
         {
-            this.FkiEzsigntemplatesignerID = ;
-            this.PkiEzsigntemplateformfieldgroupsignerID = ;
+            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+            this.PkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
         }
 
         /// <summary>
@@ -92,18 +92,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateformfieldgroupsignerID (int) minimum
             if (this.PkiEzsigntemplateformfieldgroupsignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldgroupsignerID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldgroupsignerID" });
             }
 
             // FkiEzsigntemplatesignerID (int) minimum
             if (this.FkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
             }
 
             yield break;

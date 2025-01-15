@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApikeyEditObjectV1Response</returns>
-        ApikeyEditObjectV1Response ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Apikey
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ApikeyEditObjectV1Response</returns>
-        ApiResponse<ApikeyEditObjectV1Response> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -270,7 +270,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Apikey
@@ -283,7 +283,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Apikey
         /// </summary>
@@ -295,8 +295,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApikeyEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyEditObjectV1Response> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Apikey
@@ -309,8 +309,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ApikeyEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyEditObjectV1Response>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -323,7 +323,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyEditPermissionsV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1Async(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1Async(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit multiple Permissions
@@ -337,7 +337,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyEditPermissionsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Generate a delegated credentials
         /// </summary>
@@ -349,7 +349,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGenerateDelegatedCredentialsV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Generate a delegated credentials
@@ -362,7 +362,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGenerateDelegatedCredentialsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey&#39;s cors
         /// </summary>
@@ -374,7 +374,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetCorsV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Apikey&#39;s cors
@@ -387,7 +387,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetCorsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Apikey list
         /// </summary>
@@ -403,7 +403,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetListV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Apikey list
@@ -420,7 +420,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey
         /// </summary>
@@ -432,7 +432,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetObjectV2Response> ApikeyGetObjectV2Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetObjectV2Response> ApikeyGetObjectV2Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Apikey
@@ -445,7 +445,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetObjectV2Response>> ApikeyGetObjectV2WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetObjectV2Response>> ApikeyGetObjectV2WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey&#39;s Permissions
         /// </summary>
@@ -457,7 +457,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetPermissionsV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetPermissionsV1Response> ApikeyGetPermissionsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetPermissionsV1Response> ApikeyGetPermissionsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Apikey&#39;s Permissions
@@ -470,7 +470,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetPermissionsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetPermissionsV1Response>> ApikeyGetPermissionsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetPermissionsV1Response>> ApikeyGetPermissionsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Apikey&#39;s subnets
         /// </summary>
@@ -482,7 +482,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetSubnetsV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyGetSubnetsV1Response> ApikeyGetSubnetsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyGetSubnetsV1Response> ApikeyGetSubnetsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Apikey&#39;s subnets
@@ -495,7 +495,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetSubnetsV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyGetSubnetsV1Response>> ApikeyGetSubnetsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyGetSubnetsV1Response>> ApikeyGetSubnetsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Regenerate the Apikey
         /// </summary>
@@ -508,7 +508,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyRegenerateV1Response</returns>
-        System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Regenerate the Apikey
@@ -522,7 +522,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyRegenerateV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -727,7 +727,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyCreateObjectV2Response> ApikeyCreateObjectV2Async(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyCreateObjectV2Response> localVarResponse = await ApikeyCreateObjectV2WithHttpInfoAsync(apikeyCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -741,7 +741,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyCreateObjectV2Response>> ApikeyCreateObjectV2WithHttpInfoAsync(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyCreateObjectV2Request' is set
             if (apikeyCreateObjectV2Request == null)
@@ -806,10 +806,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApikeyEditObjectV1Response</returns>
-        public ApikeyEditObjectV1Response ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> localVarResponse = ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -820,8 +820,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of ApikeyEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'apikeyEditObjectV1Request' is set
             if (apikeyEditObjectV1Request == null)
@@ -865,7 +865,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<ApikeyEditObjectV1Response>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ApikeyEditObjectV1", localVarResponse);
@@ -886,10 +886,10 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApikeyEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyEditObjectV1Response> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> localVarResponse = await ApikeyEditObjectV1WithHttpInfoAsync(pkiApikeyID, apikeyEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await ApikeyEditObjectV1WithHttpInfoAsync(pkiApikeyID, apikeyEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -901,8 +901,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (ApikeyEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyEditObjectV1Request' is set
             if (apikeyEditObjectV1Request == null)
@@ -947,7 +947,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<ApikeyEditObjectV1Response>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1049,7 +1049,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyEditPermissionsV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1Async(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyEditPermissionsV1Response> ApikeyEditPermissionsV1Async(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyEditPermissionsV1Response> localVarResponse = await ApikeyEditPermissionsV1WithHttpInfoAsync(pkiApikeyID, apikeyEditPermissionsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1064,7 +1064,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyEditPermissionsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyEditPermissionsV1Response>> ApikeyEditPermissionsV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyEditPermissionsV1Request' is set
             if (apikeyEditPermissionsV1Request == null)
@@ -1207,7 +1207,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGenerateDelegatedCredentialsV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGenerateDelegatedCredentialsV1Response> ApikeyGenerateDelegatedCredentialsV1Async(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response> localVarResponse = await ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(apikeyGenerateDelegatedCredentialsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1221,7 +1221,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGenerateDelegatedCredentialsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGenerateDelegatedCredentialsV1Response>> ApikeyGenerateDelegatedCredentialsV1WithHttpInfoAsync(ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyGenerateDelegatedCredentialsV1Request' is set
             if (apikeyGenerateDelegatedCredentialsV1Request == null)
@@ -1356,7 +1356,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetCorsV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetCorsV1Response> ApikeyGetCorsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGetCorsV1Response> localVarResponse = await ApikeyGetCorsV1WithHttpInfoAsync(pkiApikeyID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1370,7 +1370,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetCorsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetCorsV1Response>> ApikeyGetCorsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1530,7 +1530,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetListV1Response> ApikeyGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGetListV1Response> localVarResponse = await ApikeyGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1548,7 +1548,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetListV1Response>> ApikeyGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1696,7 +1696,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetObjectV2Response> ApikeyGetObjectV2Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetObjectV2Response> ApikeyGetObjectV2Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGetObjectV2Response> localVarResponse = await ApikeyGetObjectV2WithHttpInfoAsync(pkiApikeyID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1710,7 +1710,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetObjectV2Response>> ApikeyGetObjectV2WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetObjectV2Response>> ApikeyGetObjectV2WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1838,7 +1838,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetPermissionsV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetPermissionsV1Response> ApikeyGetPermissionsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetPermissionsV1Response> ApikeyGetPermissionsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGetPermissionsV1Response> localVarResponse = await ApikeyGetPermissionsV1WithHttpInfoAsync(pkiApikeyID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1852,7 +1852,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetPermissionsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetPermissionsV1Response>> ApikeyGetPermissionsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetPermissionsV1Response>> ApikeyGetPermissionsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1980,7 +1980,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyGetSubnetsV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyGetSubnetsV1Response> ApikeyGetSubnetsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyGetSubnetsV1Response> ApikeyGetSubnetsV1Async(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyGetSubnetsV1Response> localVarResponse = await ApikeyGetSubnetsV1WithHttpInfoAsync(pkiApikeyID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1994,7 +1994,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyGetSubnetsV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetSubnetsV1Response>> ApikeyGetSubnetsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyGetSubnetsV1Response>> ApikeyGetSubnetsV1WithHttpInfoAsync(int pkiApikeyID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2133,7 +2133,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApikeyRegenerateV1Response</returns>
-        public async System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ApikeyRegenerateV1Response> ApikeyRegenerateV1Async(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<ApikeyRegenerateV1Response> localVarResponse = await ApikeyRegenerateV1WithHttpInfoAsync(pkiApikeyID, apikeyRegenerateV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2148,7 +2148,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApikeyRegenerateV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyRegenerateV1Response>> ApikeyRegenerateV1WithHttpInfoAsync(int pkiApikeyID, ApikeyRegenerateV1Request apikeyRegenerateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyRegenerateV1Request' is set
             if (apikeyRegenerateV1Request == null)

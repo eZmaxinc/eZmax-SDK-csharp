@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomApikey" /> class.
         /// </summary>
-        /// <param name="">The key of the Apikey (required).</param>
-        /// <param name="">The secret of the Apikey (required).</param>
-        public CustomApikey(string  = default(string), string  = default(string))
+        /// <param name="sApikeyKey">The key of the Apikey (required).</param>
+        /// <param name="sApikeySecret">The secret of the Apikey (required).</param>
+        public CustomApikey(string sApikeyKey = default(string), string sApikeySecret = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sApikeyKey" is required (not null)
+            if (sApikeyKey == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomApikey and cannot be null");
+                throw new ArgumentNullException("sApikeyKey is a required property for CustomApikey and cannot be null");
             }
-            this.SApikeyKey = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SApikeyKey = sApikeyKey;
+            // to ensure "sApikeySecret" is required (not null)
+            if (sApikeySecret == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomApikey and cannot be null");
+                throw new ArgumentNullException("sApikeySecret is a required property for CustomApikey and cannot be null");
             }
-            this.SApikeySecret = ;
+            this.SApikeySecret = sApikeySecret;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SApikeyKey != null) {
                 // SApikeyKey (string) pattern

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupEditUsergroupmembershipsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public UsergroupEditUsergroupmembershipsV1ResponseMPayload(List<int>  = default(List<int>))
+        /// <param name="aPkiUsergroupmembershipID">aPkiUsergroupmembershipID (required).</param>
+        public UsergroupEditUsergroupmembershipsV1ResponseMPayload(List<int> aPkiUsergroupmembershipID = default(List<int>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiUsergroupmembershipID" is required (not null)
+            if (aPkiUsergroupmembershipID == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupEditUsergroupmembershipsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiUsergroupmembershipID is a required property for UsergroupEditUsergroupmembershipsV1ResponseMPayload and cannot be null");
             }
-            this.APkiUsergroupmembershipID = ;
+            this.APkiUsergroupmembershipID = aPkiUsergroupmembershipID;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

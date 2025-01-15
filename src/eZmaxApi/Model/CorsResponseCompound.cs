@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Cors (required).</param>
-        /// <param name="">The unique ID of the Apikey (required).</param>
-        /// <param name="">The entryurl of the Cors (required).</param>
-        public CorsResponseCompound(int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiCorsID">The unique ID of the Cors (required).</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
+        /// <param name="sCorsEntryurl">The entryurl of the Cors (required).</param>
+        public CorsResponseCompound(int pkiCorsID = default(int), int fkiApikeyID = default(int), string sCorsEntryurl = default(string))
         {
-            this.PkiCorsID = ;
-            this.FkiApikeyID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiCorsID = pkiCorsID;
+            this.FkiApikeyID = fkiApikeyID;
+            // to ensure "sCorsEntryurl" is required (not null)
+            if (sCorsEntryurl == null)
             {
-                throw new ArgumentNullException(" is a required property for CorsResponseCompound and cannot be null");
+                throw new ArgumentNullException("sCorsEntryurl is a required property for CorsResponseCompound and cannot be null");
             }
-            this.SCorsEntryurl = ;
+            this.SCorsEntryurl = sCorsEntryurl;
         }
 
         /// <summary>
@@ -108,24 +108,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCorsID (int) maximum
             if (this.PkiCorsID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCorsID, must be a value less than or equal to 65535.", new [] { "PkiCorsID" });
+                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value less than or equal to 65535.", new [] { "PkiCorsID" });
             }
 
             // PkiCorsID (int) minimum
             if (this.PkiCorsID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCorsID, must be a value greater than or equal to 0.", new [] { "PkiCorsID" });
+                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value greater than or equal to 0.", new [] { "PkiCorsID" });
             }
 
             // FkiApikeyID (int) minimum
             if (this.FkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
             }
 
             if (this.SCorsEntryurl != null) {

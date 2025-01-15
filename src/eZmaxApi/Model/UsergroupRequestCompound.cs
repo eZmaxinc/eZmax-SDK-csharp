@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Usergroup.</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public UsergroupRequestCompound(int  = default(int), EmailRequest  = default(EmailRequest), MultilingualUsergroupName  = default(MultilingualUsergroupName))
+        /// <param name="pkiUsergroupID">The unique ID of the Usergroup.</param>
+        /// <param name="objEmail">objEmail.</param>
+        /// <param name="objUsergroupName">objUsergroupName (required).</param>
+        public UsergroupRequestCompound(int pkiUsergroupID = default(int), EmailRequest objEmail = default(EmailRequest), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objUsergroupName" is required (not null)
+            if (objUsergroupName == null)
             {
-                throw new ArgumentNullException(" is a required property for UsergroupRequestCompound and cannot be null");
+                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupRequestCompound and cannot be null");
             }
-            this.ObjUsergroupName = ;
-            this.PkiUsergroupID = ;
-            this.ObjEmail = ;
+            this.ObjUsergroupName = objUsergroupName;
+            this.PkiUsergroupID = pkiUsergroupID;
+            this.ObjEmail = objEmail;
         }
 
         /// <summary>
@@ -104,18 +104,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupID (int) maximum
             if (this.PkiUsergroupID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
             }
 
             // PkiUsergroupID (int) minimum
             if (this.PkiUsergroupID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
             }
 
             yield break;

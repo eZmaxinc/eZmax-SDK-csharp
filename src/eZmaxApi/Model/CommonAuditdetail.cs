@@ -40,42 +40,42 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAuditdetail" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name="">The unique ID of the Apikey.</param>
-        /// <param name="">The login name of the User. (required).</param>
-        /// <param name="">The last name of the user (required).</param>
-        /// <param name="">The first name of the user (required).</param>
-        /// <param name="">The description of the Apikey in the language of the requester.</param>
-        /// <param name="">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        public CommonAuditdetail(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="sUserLoginname">The login name of the User. (required).</param>
+        /// <param name="sUserLastname">The last name of the user (required).</param>
+        /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sApikeyDescriptionX">The description of the Apikey in the language of the requester.</param>
+        /// <param name="dtAuditdetailDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
+        public CommonAuditdetail(int fkiUserID = default(int), int fkiApikeyID = default(int), string sUserLoginname = default(string), string sUserLastname = default(string), string sUserFirstname = default(string), string sApikeyDescriptionX = default(string), string dtAuditdetailDate = default(string))
         {
-            this.FkiUserID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiUserID = fkiUserID;
+            // to ensure "sUserLoginname" is required (not null)
+            if (sUserLoginname == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonAuditdetail and cannot be null");
+                throw new ArgumentNullException("sUserLoginname is a required property for CommonAuditdetail and cannot be null");
             }
-            this.SUserLoginname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLoginname = sUserLoginname;
+            // to ensure "sUserLastname" is required (not null)
+            if (sUserLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonAuditdetail and cannot be null");
+                throw new ArgumentNullException("sUserLastname is a required property for CommonAuditdetail and cannot be null");
             }
-            this.SUserLastname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserLastname = sUserLastname;
+            // to ensure "sUserFirstname" is required (not null)
+            if (sUserFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonAuditdetail and cannot be null");
+                throw new ArgumentNullException("sUserFirstname is a required property for CommonAuditdetail and cannot be null");
             }
-            this.SUserFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SUserFirstname = sUserFirstname;
+            // to ensure "dtAuditdetailDate" is required (not null)
+            if (dtAuditdetailDate == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonAuditdetail and cannot be null");
+                throw new ArgumentNullException("dtAuditdetailDate is a required property for CommonAuditdetail and cannot be null");
             }
-            this.DtAuditdetailDate = ;
-            this.FkiApikeyID = ;
-            this.SApikeyDescriptionX = ;
+            this.DtAuditdetailDate = dtAuditdetailDate;
+            this.FkiApikeyID = fkiApikeyID;
+            this.SApikeyDescriptionX = sApikeyDescriptionX;
         }
 
         /// <summary>
@@ -167,18 +167,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiApikeyID (int) minimum
             if (this.FkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
             }
 
             if (this.SUserLoginname != null) {

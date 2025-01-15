@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonGetReportV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public CommonGetReportV1ResponseMPayload(CommonReportgroup  = default(CommonReportgroup))
+        /// <param name="objReportgroup">objReportgroup (required).</param>
+        public CommonGetReportV1ResponseMPayload(CommonReportgroup objReportgroup = default(CommonReportgroup))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objReportgroup" is required (not null)
+            if (objReportgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for CommonGetReportV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objReportgroup is a required property for CommonGetReportV1ResponseMPayload and cannot be null");
             }
-            this.ObjReportgroup = ;
+            this.ObjReportgroup = objReportgroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

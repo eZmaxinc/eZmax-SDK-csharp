@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepackageGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<EzsigntemplatepackageListElement>  = default(List<EzsigntemplatepackageListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name="aObjEzsigntemplatepackage">aObjEzsigntemplatepackage (required).</param>
+        public EzsigntemplatepackageGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = default(List<EzsigntemplatepackageListElement>))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
+            // to ensure "aObjEzsigntemplatepackage" is required (not null)
+            if (aObjEzsigntemplatepackage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjEzsigntemplatepackage is a required property for EzsigntemplatepackageGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjEzsigntemplatepackage = ;
+            this.AObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

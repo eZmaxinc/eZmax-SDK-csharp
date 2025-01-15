@@ -106,8 +106,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        EzsignfoldersignerassociationDeleteObjectV1Response EzsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsignfoldersignerassociation
@@ -118,8 +118,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -127,8 +127,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationEditObjectV1Response</returns>
-        EzsignfoldersignerassociationEditObjectV1Response EzsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignfoldersignerassociation
@@ -140,8 +140,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationEditObjectV1Response</returns>
-        ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Disconnects the Ezsignfoldersignerassociation
         /// </summary>
@@ -149,8 +149,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        EzsignfoldersignerassociationForceDisconnectV1Response EzsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Disconnects the Ezsignfoldersignerassociation
@@ -162,8 +162,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0);
         /// <summary>
         /// Retrieve a Login Url to allow In-Person signing
         /// </summary>
@@ -236,8 +236,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        EzsignfoldersignerassociationPatchObjectV1Response EzsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Patch an existing Ezsignfoldersignerassociation
@@ -249,8 +249,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Reassign remaining unsigned signatures and forms
         /// </summary>
@@ -261,8 +261,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationReassignV1Response</returns>
-        EzsignfoldersignerassociationReassignV1Response EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Reassign remaining unsigned signatures and forms
@@ -274,8 +274,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationReassignV1Response</returns>
-        ApiResponse<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -297,7 +297,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Creates an Url to allow embedded signing
@@ -311,7 +311,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateEmbeddedUrlV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new Ezsignfoldersignerassociation
         /// </summary>
@@ -324,7 +324,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsignfoldersignerassociation
@@ -338,7 +338,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create a new Ezsignfoldersignerassociation
         /// </summary>
@@ -350,7 +350,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsignfoldersignerassociation
@@ -363,7 +363,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -374,8 +374,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationDeleteObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsignfoldersignerassociation
@@ -387,8 +387,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -400,8 +400,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationEditObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignfoldersignerassociation
@@ -414,8 +414,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Disconnects the Ezsignfoldersignerassociation
         /// </summary>
@@ -427,8 +427,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationForceDisconnectV1Response> EzsignfoldersignerassociationForceDisconnectV1Async(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationForceDisconnectV1Async(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Disconnects the Ezsignfoldersignerassociation
@@ -441,8 +441,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationForceDisconnectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response>> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve a Login Url to allow In-Person signing
         /// </summary>
@@ -454,7 +454,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve a Login Url to allow In-Person signing
@@ -467,7 +467,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetInPersonLoginUrlV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -480,7 +480,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignfoldersignerassociation
@@ -494,7 +494,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -506,7 +506,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV2Response> EzsignfoldersignerassociationGetObjectV2Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV2Response> EzsignfoldersignerassociationGetObjectV2Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignfoldersignerassociation
@@ -519,7 +519,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV2Response>> EzsignfoldersignerassociationGetObjectV2WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationGetObjectV2Response>> EzsignfoldersignerassociationGetObjectV2WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Patch an existing Ezsignfoldersignerassociation
         /// </summary>
@@ -531,8 +531,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationPatchObjectV1Response> EzsignfoldersignerassociationPatchObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationPatchObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Patch an existing Ezsignfoldersignerassociation
@@ -545,8 +545,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationPatchObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response>> EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Reassign remaining unsigned signatures and forms
         /// </summary>
@@ -558,8 +558,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationReassignV1Response</returns>
-        System.Threading.Tasks.Task<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Reassign remaining unsigned signatures and forms
@@ -572,8 +572,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationReassignV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignfoldersignerassociationReassignV1Response>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -782,7 +782,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateEmbeddedUrlV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> EzsignfoldersignerassociationCreateEmbeddedUrlV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> localVarResponse = await EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -797,7 +797,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateEmbeddedUrlV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>> EzsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
             if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null)
@@ -943,7 +943,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV1Response> EzsignfoldersignerassociationCreateObjectV1Async(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> localVarResponse = await EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(ezsignfoldersignerassociationCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -958,7 +958,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response>> EzsignfoldersignerassociationCreateObjectV1WithHttpInfoAsync(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV1Request' is set
             if (ezsignfoldersignerassociationCreateObjectV1Request == null)
@@ -1100,7 +1100,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationCreateObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationCreateObjectV2Response> EzsignfoldersignerassociationCreateObjectV2Async(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> localVarResponse = await EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(ezsignfoldersignerassociationCreateObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1114,7 +1114,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationCreateObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response>> EzsignfoldersignerassociationCreateObjectV2WithHttpInfoAsync(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
             if (ezsignfoldersignerassociationCreateObjectV2Request == null)
@@ -1178,10 +1178,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        public EzsignfoldersignerassociationDeleteObjectV1Response EzsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignfoldersignerassociationDeleteObjectV1(int pkiEzsignfoldersignerassociationID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> localVarResponse = EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
             return localVarResponse.Data;
         }
 
@@ -1191,8 +1191,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -1228,7 +1228,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<EzsignfoldersignerassociationDeleteObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationDeleteObjectV1", localVarResponse);
@@ -1248,10 +1248,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationDeleteObjectV1Response> EzsignfoldersignerassociationDeleteObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationDeleteObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> localVarResponse = await EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1262,8 +1262,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignfoldersignerassociationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1300,7 +1300,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsignfoldersignerassociationDeleteObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1321,10 +1321,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationEditObjectV1Response</returns>
-        public EzsignfoldersignerassociationEditObjectV1Response EzsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignfoldersignerassociationEditObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> localVarResponse = EzsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -1335,8 +1335,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignfoldersignerassociationEditObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignfoldersignerassociationEditObjectV1Request' is set
             if (ezsignfoldersignerassociationEditObjectV1Request == null)
@@ -1380,7 +1380,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsignfoldersignerassociationEditObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationEditObjectV1", localVarResponse);
@@ -1401,10 +1401,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationEditObjectV1Response> EzsignfoldersignerassociationEditObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationEditObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> localVarResponse = await EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1416,8 +1416,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationEditObjectV1Response>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignfoldersignerassociationEditObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationEditObjectV1Request' is set
             if (ezsignfoldersignerassociationEditObjectV1Request == null)
@@ -1462,7 +1462,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignfoldersignerassociationEditObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1483,10 +1483,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        public EzsignfoldersignerassociationForceDisconnectV1Response EzsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignfoldersignerassociationForceDisconnectV1(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> localVarResponse = EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
             return localVarResponse.Data;
         }
 
@@ -1497,8 +1497,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1542,7 +1542,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<EzsignfoldersignerassociationForceDisconnectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationForceDisconnectV1", localVarResponse);
@@ -1563,10 +1563,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationForceDisconnectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationForceDisconnectV1Response> EzsignfoldersignerassociationForceDisconnectV1Async(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationForceDisconnectV1Async(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> localVarResponse = await EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1578,8 +1578,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationForceDisconnectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response>> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignfoldersignerassociationForceDisconnectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1624,7 +1624,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfoldersignerassociationForceDisconnectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1715,7 +1715,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetInPersonLoginUrlV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> EzsignfoldersignerassociationGetInPersonLoginUrlV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> localVarResponse = await EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1729,7 +1729,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetInPersonLoginUrlV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>> EzsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1860,7 +1860,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV1Response> EzsignfoldersignerassociationGetObjectV1Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV1Response> localVarResponse = await EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1875,7 +1875,7 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV1Response>> EzsignfoldersignerassociationGetObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2003,7 +2003,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignfoldersignerassociationGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV2Response> EzsignfoldersignerassociationGetObjectV2Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationGetObjectV2Response> EzsignfoldersignerassociationGetObjectV2Async(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV2Response> localVarResponse = await EzsignfoldersignerassociationGetObjectV2WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2017,7 +2017,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignfoldersignerassociationGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV2Response>> EzsignfoldersignerassociationGetObjectV2WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationGetObjectV2Response>> EzsignfoldersignerassociationGetObjectV2WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -2075,10 +2075,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        public EzsignfoldersignerassociationPatchObjectV1Response EzsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignfoldersignerassociationPatchObjectV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> localVarResponse = EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -2089,8 +2089,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignfoldersignerassociationPatchObjectV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignfoldersignerassociationPatchObjectV1Request' is set
             if (ezsignfoldersignerassociationPatchObjectV1Request == null)
@@ -2134,7 +2134,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<EzsignfoldersignerassociationPatchObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationPatchObjectV1", localVarResponse);
@@ -2155,10 +2155,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationPatchObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationPatchObjectV1Response> EzsignfoldersignerassociationPatchObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationPatchObjectV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> localVarResponse = await EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2170,8 +2170,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationPatchObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response>> EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignfoldersignerassociationPatchObjectV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationPatchObjectV1Request' is set
             if (ezsignfoldersignerassociationPatchObjectV1Request == null)
@@ -2216,7 +2216,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<EzsignfoldersignerassociationPatchObjectV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2237,10 +2237,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignfoldersignerassociationReassignV1Response</returns>
-        public EzsignfoldersignerassociationReassignV1Response EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignfoldersignerassociationReassignV1(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResponse = EzsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
             return localVarResponse.Data;
         }
 
@@ -2251,8 +2251,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignfoldersignerassociationID"></param>
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignfoldersignerassociationReassignV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignfoldersignerassociationReassignV1WithHttpInfo(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
             if (ezsignfoldersignerassociationReassignV1Request == null)
@@ -2296,7 +2296,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<EzsignfoldersignerassociationReassignV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignfoldersignerassociationReassignV1", localVarResponse);
@@ -2317,10 +2317,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignfoldersignerassociationReassignV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignfoldersignerassociationReassignV1Response> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignfoldersignerassociationReassignV1Async(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResponse = await EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2332,8 +2332,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignfoldersignerassociationReassignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignfoldersignerassociationReassignV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignfoldersignerassociationReassignV1Response>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignfoldersignerassociationReassignV1WithHttpInfoAsync(int pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
             if (ezsignfoldersignerassociationReassignV1Request == null)
@@ -2378,7 +2378,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsignfoldersignerassociationReassignV1Response>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsectionGetNotificationtestsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public NotificationsectionGetNotificationtestsV1ResponseMPayload(List<CustomNotificationsubsectiongetnotificationtestsResponse>  = default(List<CustomNotificationsubsectiongetnotificationtestsResponse>))
+        /// <param name="aObjNotificationsubsection">aObjNotificationsubsection (required).</param>
+        public NotificationsectionGetNotificationtestsV1ResponseMPayload(List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection = default(List<CustomNotificationsubsectiongetnotificationtestsResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjNotificationsubsection" is required (not null)
+            if (aObjNotificationsubsection == null)
             {
-                throw new ArgumentNullException(" is a required property for NotificationsectionGetNotificationtestsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjNotificationsubsection is a required property for NotificationsectionGetNotificationtestsV1ResponseMPayload and cannot be null");
             }
-            this.AObjNotificationsubsection = ;
+            this.AObjNotificationsubsection = aObjNotificationsubsection;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

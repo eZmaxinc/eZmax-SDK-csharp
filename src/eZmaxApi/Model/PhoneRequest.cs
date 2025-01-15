@@ -47,26 +47,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Phone..</param>
-        /// <param name="">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
-        /// <param name="">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
-        /// <param name="">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
-        /// <param name="">The international phone number..</param>
-        /// <param name="">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="">A phone number in E.164 Format.</param>
-        public PhoneRequest(int  = default(int), int  = default(int), FieldEPhoneType?  = default(FieldEPhoneType?), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="pkiPhoneID">The unique ID of the Phone..</param>
+        /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
+        /// <param name="ePhoneType">ePhoneType.</param>
+        /// <param name="sPhoneRegion">The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
+        /// <param name="sPhoneExchange">The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
+        /// <param name="sPhoneNumber">The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123.</param>
+        /// <param name="sPhoneInternational">The international phone number..</param>
+        /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
+        /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
+        public PhoneRequest(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneRegion = default(string), string sPhoneExchange = default(string), string sPhoneNumber = default(string), string sPhoneInternational = default(string), string sPhoneExtension = default(string), string sPhoneE164 = default(string))
         {
-            this.FkiPhonetypeID = ;
-            this.PkiPhoneID = ;
-            this.EPhoneType = ;
-            this.SPhoneRegion = ;
-            this.SPhoneExchange = ;
-            this.SPhoneNumber = ;
-            this.SPhoneInternational = ;
-            this.SPhoneExtension = ;
-            this.SPhoneE164 = ;
+            this.FkiPhonetypeID = fkiPhonetypeID;
+            this.PkiPhoneID = pkiPhoneID;
+            this.EPhoneType = ePhoneType;
+            this.SPhoneRegion = sPhoneRegion;
+            this.SPhoneExchange = sPhoneExchange;
+            this.SPhoneNumber = sPhoneNumber;
+            this.SPhoneInternational = sPhoneInternational;
+            this.SPhoneExtension = sPhoneExtension;
+            this.SPhoneE164 = sPhoneE164;
         }
 
         /// <summary>
@@ -172,18 +172,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPhoneID (int) minimum
             if (this.PkiPhoneID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
+                yield return new ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
             }
 
             // FkiPhonetypeID (int) minimum
             if (this.FkiPhonetypeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
+                yield return new ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
             }
 
             if (this.SPhoneE164 != null) {

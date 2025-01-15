@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisebrokerGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Franchisebroker autocomplete element response. (required).</param>
-        public FranchisebrokerGetAutocompleteV2ResponseMPayload(List<FranchisebrokerAutocompleteElementResponse>  = default(List<FranchisebrokerAutocompleteElementResponse>))
+        /// <param name="aObjFranchisebroker">An array of Franchisebroker autocomplete element response. (required).</param>
+        public FranchisebrokerGetAutocompleteV2ResponseMPayload(List<FranchisebrokerAutocompleteElementResponse> aObjFranchisebroker = default(List<FranchisebrokerAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjFranchisebroker" is required (not null)
+            if (aObjFranchisebroker == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisebrokerGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjFranchisebroker is a required property for FranchisebrokerGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjFranchisebroker = ;
+            this.AObjFranchisebroker = aObjFranchisebroker;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextstylestaticRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Font (required).</param>
-        /// <param name="">Whether the Textstylestatic is Bold or not (required).</param>
-        /// <param name="">Whether the Textstylestatic is Underline or not (required).</param>
-        /// <param name="">Whether the Textstylestatic is Italic or not (required).</param>
-        /// <param name="">Whether the Textstylestatic is Strikethrough or not (required).</param>
-        /// <param name="">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
-        /// <param name="">The Size for the Font of the Textstylestatic (required).</param>
-        public TextstylestaticRequestCompound(int  = default(int), bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), int  = default(int), int  = default(int))
+        /// <param name="fkiFontID">The unique ID of the Font (required).</param>
+        /// <param name="bTextstylestaticBold">Whether the Textstylestatic is Bold or not (required).</param>
+        /// <param name="bTextstylestaticUnderline">Whether the Textstylestatic is Underline or not (required).</param>
+        /// <param name="bTextstylestaticItalic">Whether the Textstylestatic is Italic or not (required).</param>
+        /// <param name="bTextstylestaticStrikethrough">Whether the Textstylestatic is Strikethrough or not (required).</param>
+        /// <param name="iTextstylestaticFontcolor">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
+        /// <param name="iTextstylestaticSize">The Size for the Font of the Textstylestatic (required).</param>
+        public TextstylestaticRequestCompound(int fkiFontID = default(int), bool bTextstylestaticBold = default(bool), bool bTextstylestaticUnderline = default(bool), bool bTextstylestaticItalic = default(bool), bool bTextstylestaticStrikethrough = default(bool), int iTextstylestaticFontcolor = default(int), int iTextstylestaticSize = default(int))
         {
-            this.FkiFontID = ;
-            this.BTextstylestaticBold = ;
-            this.BTextstylestaticUnderline = ;
-            this.BTextstylestaticItalic = ;
-            this.BTextstylestaticStrikethrough = ;
-            this.ITextstylestaticFontcolor = ;
-            this.ITextstylestaticSize = ;
+            this.FkiFontID = fkiFontID;
+            this.BTextstylestaticBold = bTextstylestaticBold;
+            this.BTextstylestaticUnderline = bTextstylestaticUnderline;
+            this.BTextstylestaticItalic = bTextstylestaticItalic;
+            this.BTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
+            this.ITextstylestaticFontcolor = iTextstylestaticFontcolor;
+            this.ITextstylestaticSize = iTextstylestaticSize;
         }
 
         /// <summary>
@@ -147,36 +147,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiFontID (int) minimum
             if (this.FkiFontID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             // ITextstylestaticFontcolor (int) maximum
             if (this.ITextstylestaticFontcolor > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value less than or equal to 16777215.", new [] { "ITextstylestaticFontcolor" });
+                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value less than or equal to 16777215.", new [] { "ITextstylestaticFontcolor" });
             }
 
             // ITextstylestaticFontcolor (int) minimum
             if (this.ITextstylestaticFontcolor < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value greater than or equal to 0.", new [] { "ITextstylestaticFontcolor" });
+                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value greater than or equal to 0.", new [] { "ITextstylestaticFontcolor" });
             }
 
             // ITextstylestaticSize (int) maximum
             if (this.ITextstylestaticSize > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticSize, must be a value less than or equal to 255.", new [] { "ITextstylestaticSize" });
+                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value less than or equal to 255.", new [] { "ITextstylestaticSize" });
             }
 
             // ITextstylestaticSize (int) minimum
             if (this.ITextstylestaticSize < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticSize, must be a value greater than or equal to 1.", new [] { "ITextstylestaticSize" });
+                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value greater than or equal to 1.", new [] { "ITextstylestaticSize" });
             }
 
             yield break;

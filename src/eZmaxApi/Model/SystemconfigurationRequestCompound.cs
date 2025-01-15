@@ -71,32 +71,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Systemconfiguration.</param>
-        /// <param name="">The unique ID of the Branding.</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">Whether if Ezsign is paid by the company or not.</param>
-        /// <param name="">Whether if we allow the creation of personal files in eZsign (required).</param>
-        /// <param name="">Whether if we allow SSPR (required).</param>
-        /// <param name="">The start date where the system will be in read only.</param>
-        /// <param name="">The end date where the system will be in read only.</param>
-        public SystemconfigurationRequestCompound(int  = default(int), int  = default(int), FieldESystemconfigurationNewexternaluseraction  = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1  = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2  = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign?  = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan?  = default(FieldESystemconfigurationEzsignofficeplan?), bool  = default(bool), bool  = default(bool), bool  = default(bool), string  = default(string), string  = default(string))
+        /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration.</param>
+        /// <param name="fkiBrandingID">The unique ID of the Branding.</param>
+        /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
+        /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
+        /// <param name="eSystemconfigurationLanguage2">eSystemconfigurationLanguage2 (required).</param>
+        /// <param name="eSystemconfigurationEzsign">eSystemconfigurationEzsign.</param>
+        /// <param name="eSystemconfigurationEzsignofficeplan">eSystemconfigurationEzsignofficeplan.</param>
+        /// <param name="bSystemconfigurationEzsignpaidbyoffice">Whether if Ezsign is paid by the company or not.</param>
+        /// <param name="bSystemconfigurationEzsignpersonnal">Whether if we allow the creation of personal files in eZsign (required).</param>
+        /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
+        /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
+        /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
+        public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), int fkiBrandingID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
         {
-            this.ESystemconfigurationNewexternaluseraction = ;
-            this.ESystemconfigurationLanguage1 = ;
-            this.ESystemconfigurationLanguage2 = ;
-            this.BSystemconfigurationEzsignpersonnal = ;
-            this.BSystemconfigurationSspr = ;
-            this.PkiSystemconfigurationID = ;
-            this.FkiBrandingID = ;
-            this.ESystemconfigurationEzsign = ;
-            this.ESystemconfigurationEzsignofficeplan = ;
-            this.BSystemconfigurationEzsignpaidbyoffice = ;
-            this.DtSystemconfigurationReadonlyexpirationstart = ;
-            this.DtSystemconfigurationReadonlyexpirationend = ;
+            this.ESystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
+            this.ESystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
+            this.ESystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
+            this.BSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
+            this.BSystemconfigurationSspr = bSystemconfigurationSspr;
+            this.PkiSystemconfigurationID = pkiSystemconfigurationID;
+            this.FkiBrandingID = fkiBrandingID;
+            this.ESystemconfigurationEzsign = eSystemconfigurationEzsign;
+            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+            this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
+            this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
         }
 
         /// <summary>
@@ -193,24 +193,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSystemconfigurationID (int) maximum
             if (this.PkiSystemconfigurationID > (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
             }
 
             // PkiSystemconfigurationID (int) minimum
             if (this.PkiSystemconfigurationID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
             }
 
             // FkiBrandingID (int) minimum
             if (this.FkiBrandingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
+                yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             if (this.DtSystemconfigurationReadonlyexpirationstart != null) {

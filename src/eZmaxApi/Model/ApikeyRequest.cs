@@ -40,23 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Apikey.</param>
-        /// <param name="">The unique ID of the User (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">Whether the apikey is active or not.</param>
-        /// <param name="">Whether the apikey is signed or not.</param>
-        public ApikeyRequest(int  = default(int), int  = default(int), MultilingualApikeyDescription  = default(MultilingualApikeyDescription), bool  = default(bool), bool  = default(bool))
+        /// <param name="pkiApikeyID">The unique ID of the Apikey.</param>
+        /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
+        /// <param name="bApikeyIsactive">Whether the apikey is active or not.</param>
+        /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
+        public ApikeyRequest(int pkiApikeyID = default(int), int fkiUserID = default(int), MultilingualApikeyDescription objApikeyDescription = default(MultilingualApikeyDescription), bool bApikeyIsactive = default(bool), bool bApikeyIssigned = default(bool))
         {
-            this.FkiUserID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiUserID = fkiUserID;
+            // to ensure "objApikeyDescription" is required (not null)
+            if (objApikeyDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyRequest and cannot be null");
+                throw new ArgumentNullException("objApikeyDescription is a required property for ApikeyRequest and cannot be null");
             }
-            this.ObjApikeyDescription = ;
-            this.PkiApikeyID = ;
-            this.BApikeyIsactive = ;
-            this.BApikeyIssigned = ;
+            this.ObjApikeyDescription = objApikeyDescription;
+            this.PkiApikeyID = pkiApikeyID;
+            this.BApikeyIsactive = bApikeyIsactive;
+            this.BApikeyIssigned = bApikeyIssigned;
         }
 
         /// <summary>
@@ -128,18 +128,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiApikeyID (int) minimum
             if (this.PkiApikeyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
+                yield return new ValidationResult("Invalid value for PkiApikeyID, must be a value greater than or equal to 0.", new [] { "PkiApikeyID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             yield break;

@@ -35,12 +35,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualEzsignsignergroupDescription" /> class.
         /// </summary>
-        /// <param name="">The description of the Ezsignsignergroup in French.</param>
-        /// <param name="">The description of the Ezsignsignergroup in English.</param>
-        public MultilingualEzsignsignergroupDescription(string  = default(string), string  = default(string))
+        /// <param name="sEzsignsignergroupDescription1">The description of the Ezsignsignergroup in French.</param>
+        /// <param name="sEzsignsignergroupDescription2">The description of the Ezsignsignergroup in English.</param>
+        public MultilingualEzsignsignergroupDescription(string sEzsignsignergroupDescription1 = default(string), string sEzsignsignergroupDescription2 = default(string))
         {
-            this.SEzsignsignergroupDescription1 = ;
-            this.SEzsignsignergroupDescription2 = ;
+            this.SEzsignsignergroupDescription1 = sEzsignsignergroupDescription1;
+            this.SEzsignsignergroupDescription2 = sEzsignsignergroupDescription2;
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

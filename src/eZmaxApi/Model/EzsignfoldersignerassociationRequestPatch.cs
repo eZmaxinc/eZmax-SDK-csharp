@@ -35,10 +35,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestPatch" /> class.
         /// </summary>
-        /// <param name="">A custom text message that will be added to the email sent..</param>
-        public EzsignfoldersignerassociationRequestPatch(string  = default(string))
+        /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
+        public EzsignfoldersignerassociationRequestPatch(string tEzsignfoldersignerassociationMessage = default(string))
         {
-            this.TEzsignfoldersignerassociationMessage = ;
+            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ Mary</example>*/
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

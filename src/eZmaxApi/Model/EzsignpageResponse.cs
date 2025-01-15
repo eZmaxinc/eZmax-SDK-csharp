@@ -40,27 +40,27 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignpageResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignpage (required).</param>
-        /// <param name="">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
-        /// <param name="">The Width of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="">The Height of the page in points calculated at 72 DPI (required).</param>
-        /// <param name="">The page number in the Ezsigndocument (required).</param>
-        /// <param name="">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
-        public EzsignpageResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiEzsignpageID">The unique ID of the Ezsignpage (required).</param>
+        /// <param name="iEzsignpageWidthimage">The Width of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsignpageHeightimage">The Height of the page&#39;s image in pixels calculated at 100 DPI (required).</param>
+        /// <param name="iEzsignpageWidthpdf">The Width of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsignpageHeightpdf">The Height of the page in points calculated at 72 DPI (required).</param>
+        /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
+        /// <param name="sComputedImageurl">The Url to the Ezsignpage&#39;s rasterized image.  Url will expire after 5 minutes. (required).</param>
+        public EzsignpageResponse(int pkiEzsignpageID = default(int), int iEzsignpageWidthimage = default(int), int iEzsignpageHeightimage = default(int), int iEzsignpageWidthpdf = default(int), int iEzsignpageHeightpdf = default(int), int iEzsignpagePagenumber = default(int), string sComputedImageurl = default(string))
         {
-            this.PkiEzsignpageID = ;
-            this.IEzsignpageWidthimage = ;
-            this.IEzsignpageHeightimage = ;
-            this.IEzsignpageWidthpdf = ;
-            this.IEzsignpageHeightpdf = ;
-            this.IEzsignpagePagenumber = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignpageID = pkiEzsignpageID;
+            this.IEzsignpageWidthimage = iEzsignpageWidthimage;
+            this.IEzsignpageHeightimage = iEzsignpageHeightimage;
+            this.IEzsignpageWidthpdf = iEzsignpageWidthpdf;
+            this.IEzsignpageHeightpdf = iEzsignpageHeightpdf;
+            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
+            // to ensure "sComputedImageurl" is required (not null)
+            if (sComputedImageurl == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignpageResponse and cannot be null");
+                throw new ArgumentNullException("sComputedImageurl is a required property for EzsignpageResponse and cannot be null");
             }
-            this.SComputedImageurl = ;
+            this.SComputedImageurl = sComputedImageurl;
         }
 
         /// <summary>
@@ -151,42 +151,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignpageID (int) minimum
             if (this.PkiEzsignpageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsignpageID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsignpageID" });
             }
 
             // IEzsignpageWidthimage (int) minimum
             if (this.IEzsignpageWidthimage < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsignpageWidthimage" });
+                yield return new ValidationResult("Invalid value for IEzsignpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsignpageWidthimage" });
             }
 
             // IEzsignpageHeightimage (int) minimum
             if (this.IEzsignpageHeightimage < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsignpageHeightimage" });
+                yield return new ValidationResult("Invalid value for IEzsignpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsignpageHeightimage" });
             }
 
             // IEzsignpageWidthpdf (int) minimum
             if (this.IEzsignpageWidthpdf < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsignpageWidthpdf" });
+                yield return new ValidationResult("Invalid value for IEzsignpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsignpageWidthpdf" });
             }
 
             // IEzsignpageHeightpdf (int) minimum
             if (this.IEzsignpageHeightpdf < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsignpageHeightpdf" });
+                yield return new ValidationResult("Invalid value for IEzsignpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsignpageHeightpdf" });
             }
 
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             yield break;

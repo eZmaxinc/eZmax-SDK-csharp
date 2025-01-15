@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **DtDiscussionLastread** | **string** | The date the Discussion was last read | [optional] 
 **IDiscussionmessageCount** | **int** | The count of Attachment. | 
 **IDiscussionmessageCountunread** | **int** | The count of Attachment. | 
-**ObjDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse**](CustomDiscussionconfigurationResponse.md) |  | [optional] 
+**ObjDiscussionconfiguration** | **Object** | A Custom Discussionconfiguration Object | [optional] 
 **AObjDiscussionmembership** | [**List&lt;DiscussionmembershipResponseCompound&gt;**](DiscussionmembershipResponseCompound.md) |  | 
 **AObjDiscussionmessage** | [**List&lt;DiscussionmessageResponseCompound&gt;**](DiscussionmessageResponseCompound.md) |  | 
 

@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignformfielderrortestResponse" /> class.
         /// </summary>
-        /// <param name="">The name of the test (required).</param>
-        /// <param name="">The detail why the test failed (required).</param>
-        public CustomEzsignformfielderrortestResponse(string  = default(string), string  = default(string))
+        /// <param name="sEzsignformfielderrortestName">The name of the test (required).</param>
+        /// <param name="sEzsignformfielderrortestDetail">The detail why the test failed (required).</param>
+        public CustomEzsignformfielderrortestResponse(string sEzsignformfielderrortestName = default(string), string sEzsignformfielderrortestDetail = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzsignformfielderrortestName" is required (not null)
+            if (sEzsignformfielderrortestName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignformfielderrortestName is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
             }
-            this.SEzsignformfielderrortestName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignformfielderrortestName = sEzsignformfielderrortestName;
+            // to ensure "sEzsignformfielderrortestDetail" is required (not null)
+            if (sEzsignformfielderrortestDetail == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignformfielderrortestDetail is a required property for CustomEzsignformfielderrortestResponse and cannot be null");
             }
-            this.SEzsignformfielderrortestDetail = ;
+            this.SEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SEzsignformfielderrortestName != null) {
                 // SEzsignformfielderrortestName (string) pattern

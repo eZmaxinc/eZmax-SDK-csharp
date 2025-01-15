@@ -46,32 +46,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomEzsignfoldertransmissionResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignfolder (required).</param>
-        /// <param name="">The description of the Ezsignfolder (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The number of total signatures that were requested in the Ezsignfolder (required).</param>
-        /// <param name="">The number of total form fields that were requested in the Ezsignfolder (required).</param>
-        /// <param name="">The number of signatures that were signed in the Ezsignfolder. (required).</param>
-        /// <param name=""> (required).</param>
-        public CustomEzsignfoldertransmissionResponse(int  = default(int), string  = default(string), FieldEEzsignfolderStep  = default(FieldEEzsignfolderStep), int  = default(int), int  = default(int), int  = default(int), List<CustomEzsignfoldertransmissionSignerResponse>  = default(List<CustomEzsignfoldertransmissionSignerResponse>))
+        /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
+        /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
+        /// <param name="eEzsignfolderStep">eEzsignfolderStep (required).</param>
+        /// <param name="iEzsignfolderSignaturetotal">The number of total signatures that were requested in the Ezsignfolder (required).</param>
+        /// <param name="iEzsignfolderFormfieldtotal">The number of total form fields that were requested in the Ezsignfolder (required).</param>
+        /// <param name="iEzsignfolderSignaturesigned">The number of signatures that were signed in the Ezsignfolder. (required).</param>
+        /// <param name="aObjEzsignfoldertransmissionSigner">aObjEzsignfoldertransmissionSigner (required).</param>
+        public CustomEzsignfoldertransmissionResponse(int pkiEzsignfolderID = default(int), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), int iEzsignfolderSignaturetotal = default(int), int iEzsignfolderFormfieldtotal = default(int), int iEzsignfolderSignaturesigned = default(int), List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner = default(List<CustomEzsignfoldertransmissionSignerResponse>))
         {
-            this.PkiEzsignfolderID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignfolderID = pkiEzsignfolderID;
+            // to ensure "sEzsignfolderDescription" is required (not null)
+            if (sEzsignfolderDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignfoldertransmissionResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignfolderDescription is a required property for CustomEzsignfoldertransmissionResponse and cannot be null");
             }
-            this.SEzsignfolderDescription = ;
-            this.EEzsignfolderStep = ;
-            this.IEzsignfolderSignaturetotal = ;
-            this.IEzsignfolderFormfieldtotal = ;
-            this.IEzsignfolderSignaturesigned = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignfolderDescription = sEzsignfolderDescription;
+            this.EEzsignfolderStep = eEzsignfolderStep;
+            this.IEzsignfolderSignaturetotal = iEzsignfolderSignaturetotal;
+            this.IEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
+            this.IEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
+            // to ensure "aObjEzsignfoldertransmissionSigner" is required (not null)
+            if (aObjEzsignfoldertransmissionSigner == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomEzsignfoldertransmissionResponse and cannot be null");
+                throw new ArgumentNullException("aObjEzsignfoldertransmissionSigner is a required property for CustomEzsignfoldertransmissionResponse and cannot be null");
             }
-            this.AObjEzsignfoldertransmissionSigner = ;
+            this.AObjEzsignfoldertransmissionSigner = aObjEzsignfoldertransmissionSigner;
         }
 
         /// <summary>
@@ -153,12 +153,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfolderID (int) minimum
             if (this.PkiEzsignfolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
             }
 
             if (this.SEzsignfolderDescription != null) {

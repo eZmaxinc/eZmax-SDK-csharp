@@ -70,7 +70,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CommonGetReportV1Response</returns>
-        System.Threading.Tasks.Task<CommonGetReportV1Response> ReportGetReportFromCacheV1Async(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CommonGetReportV1Response> ReportGetReportFromCacheV1Async(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve report from cache
@@ -83,7 +83,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CommonGetReportV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonGetReportV1Response>> ReportGetReportFromCacheV1WithHttpInfoAsync(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CommonGetReportV1Response>> ReportGetReportFromCacheV1WithHttpInfoAsync(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -296,7 +296,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CommonGetReportV1Response</returns>
-        public async System.Threading.Tasks.Task<CommonGetReportV1Response> ReportGetReportFromCacheV1Async(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CommonGetReportV1Response> ReportGetReportFromCacheV1Async(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CommonGetReportV1Response> localVarResponse = await ReportGetReportFromCacheV1WithHttpInfoAsync(sReportgroupCacheID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -310,7 +310,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CommonGetReportV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonGetReportV1Response>> ReportGetReportFromCacheV1WithHttpInfoAsync(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonGetReportV1Response>> ReportGetReportFromCacheV1WithHttpInfoAsync(string sReportgroupCacheID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sReportgroupCacheID' is set
             if (sReportgroupCacheID == null)

@@ -46,49 +46,49 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Contact (required).</param>
-        /// <param name="">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
-        /// <param name="">The unique ID of the Contactinformations (required).</param>
-        /// <param name="">The Birth Date of the contact.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The First name of the contact (required).</param>
-        /// <param name="">The Last name of the contact (required).</param>
-        /// <param name="">The Company name of the contact.</param>
-        /// <param name="">The occupation of the Contact.</param>
-        /// <param name="">The note of the Contact.</param>
-        /// <param name="">Whether the contact is active or not (required).</param>
-        /// <param name=""> (required).</param>
-        public ContactResponseCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), FieldEContactType  = default(FieldEContactType), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), bool  = default(bool), ContactinformationsResponseCompound  = default(ContactinformationsResponseCompound))
+        /// <param name="pkiContactID">The unique ID of the Contact (required).</param>
+        /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="fkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
+        /// <param name="fkiContactinformationsID">The unique ID of the Contactinformations (required).</param>
+        /// <param name="dtContactBirthdate">The Birth Date of the contact.</param>
+        /// <param name="eContactType">eContactType (required).</param>
+        /// <param name="sContactFirstname">The First name of the contact (required).</param>
+        /// <param name="sContactLastname">The Last name of the contact (required).</param>
+        /// <param name="sContactCompany">The Company name of the contact.</param>
+        /// <param name="sContactOccupation">The occupation of the Contact.</param>
+        /// <param name="tContactNote">The note of the Contact.</param>
+        /// <param name="bContactIsactive">Whether the contact is active or not (required).</param>
+        /// <param name="objContactinformations">objContactinformations (required).</param>
+        public ContactResponseCompound(int pkiContactID = default(int), int fkiLanguageID = default(int), int fkiContacttitleID = default(int), int fkiContactinformationsID = default(int), string dtContactBirthdate = default(string), FieldEContactType eContactType = default(FieldEContactType), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string sContactOccupation = default(string), string tContactNote = default(string), bool bContactIsactive = default(bool), ContactinformationsResponseCompound objContactinformations = default(ContactinformationsResponseCompound))
         {
-            this.PkiContactID = ;
-            this.FkiLanguageID = ;
-            this.FkiContacttitleID = ;
-            this.FkiContactinformationsID = ;
-            this.EContactType = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiContactID = pkiContactID;
+            this.FkiLanguageID = fkiLanguageID;
+            this.FkiContacttitleID = fkiContacttitleID;
+            this.FkiContactinformationsID = fkiContactinformationsID;
+            this.EContactType = eContactType;
+            // to ensure "sContactFirstname" is required (not null)
+            if (sContactFirstname == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactResponseCompound and cannot be null");
+                throw new ArgumentNullException("sContactFirstname is a required property for ContactResponseCompound and cannot be null");
             }
-            this.SContactFirstname = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SContactFirstname = sContactFirstname;
+            // to ensure "sContactLastname" is required (not null)
+            if (sContactLastname == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactResponseCompound and cannot be null");
+                throw new ArgumentNullException("sContactLastname is a required property for ContactResponseCompound and cannot be null");
             }
-            this.SContactLastname = ;
-            this.BContactIsactive = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SContactLastname = sContactLastname;
+            this.BContactIsactive = bContactIsactive;
+            // to ensure "objContactinformations" is required (not null)
+            if (objContactinformations == null)
             {
-                throw new ArgumentNullException(" is a required property for ContactResponseCompound and cannot be null");
+                throw new ArgumentNullException("objContactinformations is a required property for ContactResponseCompound and cannot be null");
             }
-            this.ObjContactinformations = ;
-            this.DtContactBirthdate = ;
-            this.SContactCompany = ;
-            this.SContactOccupation = ;
-            this.TContactNote = ;
+            this.ObjContactinformations = objContactinformations;
+            this.DtContactBirthdate = dtContactBirthdate;
+            this.SContactCompany = sContactCompany;
+            this.SContactOccupation = sContactOccupation;
+            this.TContactNote = tContactNote;
         }
 
         /// <summary>
@@ -224,42 +224,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiContactID (int) minimum
             if (this.PkiContactID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContactID, must be a value greater than or equal to 0.", new [] { "PkiContactID" });
+                yield return new ValidationResult("Invalid value for PkiContactID, must be a value greater than or equal to 0.", new [] { "PkiContactID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiContacttitleID (int) minimum
             if (this.FkiContacttitleID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContacttitleID, must be a value greater than or equal to 0.", new [] { "FkiContacttitleID" });
+                yield return new ValidationResult("Invalid value for FkiContacttitleID, must be a value greater than or equal to 0.", new [] { "FkiContacttitleID" });
             }
 
             // FkiContactinformationsID (int) maximum
             if (this.FkiContactinformationsID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "FkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for FkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "FkiContactinformationsID" });
             }
 
             // FkiContactinformationsID (int) minimum
             if (this.FkiContactinformationsID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "FkiContactinformationsID" });
+                yield return new ValidationResult("Invalid value for FkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "FkiContactinformationsID" });
             }
 
             if (this.SContactOccupation != null) {

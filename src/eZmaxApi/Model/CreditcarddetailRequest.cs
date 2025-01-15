@@ -40,33 +40,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcarddetailRequest" /> class.
         /// </summary>
-        /// <param name="">The expirationmonth of the Creditcarddetail (required).</param>
-        /// <param name="">The expirationyear of the Creditcarddetail (required).</param>
-        /// <param name="">The civic of the Creditcarddetail (required).</param>
-        /// <param name="">The street of the Creditcarddetail (required).</param>
-        /// <param name="">The zip of the Creditcarddetail (required).</param>
-        public CreditcarddetailRequest(int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string))
+        /// <param name="iCreditcarddetailExpirationmonth">The expirationmonth of the Creditcarddetail (required).</param>
+        /// <param name="iCreditcarddetailExpirationyear">The expirationyear of the Creditcarddetail (required).</param>
+        /// <param name="sCreditcarddetailCivic">The civic of the Creditcarddetail (required).</param>
+        /// <param name="sCreditcarddetailStreet">The street of the Creditcarddetail (required).</param>
+        /// <param name="sCreditcarddetailZip">The zip of the Creditcarddetail (required).</param>
+        public CreditcarddetailRequest(int iCreditcarddetailExpirationmonth = default(int), int iCreditcarddetailExpirationyear = default(int), string sCreditcarddetailCivic = default(string), string sCreditcarddetailStreet = default(string), string sCreditcarddetailZip = default(string))
         {
-            this.ICreditcarddetailExpirationmonth = ;
-            this.ICreditcarddetailExpirationyear = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ICreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
+            this.ICreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
+            // to ensure "sCreditcarddetailCivic" is required (not null)
+            if (sCreditcarddetailCivic == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcarddetailRequest and cannot be null");
+                throw new ArgumentNullException("sCreditcarddetailCivic is a required property for CreditcarddetailRequest and cannot be null");
             }
-            this.SCreditcarddetailCivic = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCreditcarddetailCivic = sCreditcarddetailCivic;
+            // to ensure "sCreditcarddetailStreet" is required (not null)
+            if (sCreditcarddetailStreet == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcarddetailRequest and cannot be null");
+                throw new ArgumentNullException("sCreditcarddetailStreet is a required property for CreditcarddetailRequest and cannot be null");
             }
-            this.SCreditcarddetailStreet = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCreditcarddetailStreet = sCreditcarddetailStreet;
+            // to ensure "sCreditcarddetailZip" is required (not null)
+            if (sCreditcarddetailZip == null)
             {
-                throw new ArgumentNullException(" is a required property for CreditcarddetailRequest and cannot be null");
+                throw new ArgumentNullException("sCreditcarddetailZip is a required property for CreditcarddetailRequest and cannot be null");
             }
-            this.SCreditcarddetailZip = ;
+            this.SCreditcarddetailZip = sCreditcarddetailZip;
         }
 
         /// <summary>
@@ -140,30 +140,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // ICreditcarddetailExpirationmonth (int) maximum
             if (this.ICreditcarddetailExpirationmonth > (int)12)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationmonth (int) minimum
             if (this.ICreditcarddetailExpirationmonth < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationyear (int) maximum
             if (this.ICreditcarddetailExpirationyear > (int)2200)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             // ICreditcarddetailExpirationyear (int) minimum
             if (this.ICreditcarddetailExpirationyear < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             if (this.SCreditcarddetailCivic != null) {

@@ -40,22 +40,23 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public PermissionEditObjectV1Request(PermissionRequestCompound  = default(PermissionRequestCompound))
+        /// <param name="objPermission">A Permission Object and children to create a complete structure (required).</param>
+        public PermissionEditObjectV1Request(PermissionRequest objPermission = default(PermissionRequest))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objPermission" is required (not null)
+            if (objPermission == null)
             {
-                throw new ArgumentNullException(" is a required property for PermissionEditObjectV1Request and cannot be null");
+                throw new ArgumentNullException("objPermission is a required property for PermissionEditObjectV1Request and cannot be null");
             }
-            this.ObjPermission = ;
+            this.ObjPermission = objPermission;
         }
 
         /// <summary>
-        /// Gets or Sets ObjPermission
+        /// A Permission Object and children to create a complete structure
         /// </summary>
+        /// <value>A Permission Object and children to create a complete structure</value>
         [DataMember(Name = "objPermission", IsRequired = true, EmitDefaultValue = true)]
-        public PermissionRequestCompound ObjPermission { get; set; }
+        public PermissionRequest ObjPermission { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

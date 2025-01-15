@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackageGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepackageGetObjectV2ResponseMPayload(EzsigntemplatepackageResponseCompound  = default(EzsigntemplatepackageResponseCompound))
+        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage (required).</param>
+        public EzsigntemplatepackageGetObjectV2ResponseMPayload(EzsigntemplatepackageResponseCompound objEzsigntemplatepackage = default(EzsigntemplatepackageResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplatepackage" is required (not null)
+            if (objEzsigntemplatepackage == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackageGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplatepackage is a required property for EzsigntemplatepackageGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplatepackage = ;
+            this.ObjEzsigntemplatepackage = objEzsigntemplatepackage;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

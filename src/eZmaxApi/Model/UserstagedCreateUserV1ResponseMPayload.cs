@@ -40,10 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedCreateUserV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the User (required).</param>
-        public UserstagedCreateUserV1ResponseMPayload(int  = default(int))
+        /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        public UserstagedCreateUserV1ResponseMPayload(int pkiUserID = default(int))
         {
-            this.PkiUserID = ;
+            this.PkiUserID = pkiUserID;
         }
 
         /// <summary>
@@ -81,12 +81,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             yield break;

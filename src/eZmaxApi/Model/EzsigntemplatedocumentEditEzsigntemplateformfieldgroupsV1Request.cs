@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request(List<EzsigntemplateformfieldgroupRequestCompound>  = default(List<EzsigntemplateformfieldgroupRequestCompound>))
+        /// <param name="aObjEzsigntemplateformfieldgroup">aObjEzsigntemplateformfieldgroup (required).</param>
+        public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup = default(List<EzsigntemplateformfieldgroupRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjEzsigntemplateformfieldgroup" is required (not null)
+            if (aObjEzsigntemplateformfieldgroup == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsigntemplateformfieldgroup is a required property for EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request and cannot be null");
             }
-            this.AObjEzsigntemplateformfieldgroup = ;
+            this.AObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

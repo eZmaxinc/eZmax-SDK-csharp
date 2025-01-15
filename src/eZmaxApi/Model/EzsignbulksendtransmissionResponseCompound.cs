@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="">The unique ID of the Ezsignbulksend (required).</param>
-        /// <param name="">The description of the Ezsignbulksendtransmission (required).</param>
-        /// <param name="">The number of errors during the Ezsignbulksendtransmission (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsignbulksendtransmissionResponseCompound(int  = default(int), int  = default(int), string  = default(string), int  = default(int), CommonAudit  = default(CommonAudit), List<CustomEzsignfoldertransmissionResponse>  = default(List<CustomEzsignfoldertransmissionResponse>))
+        /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
+        /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
+        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
+        public EzsignbulksendtransmissionResponseCompound(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit), List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = default(List<CustomEzsignfoldertransmissionResponse>))
         {
-            this.PkiEzsignbulksendtransmissionID = ;
-            this.FkiEzsignbulksendID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            // to ensure "sEzsignbulksendtransmissionDescription" is required (not null)
+            if (sEzsignbulksendtransmissionDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzsignbulksendtransmissionDescription is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
             }
-            this.SEzsignbulksendtransmissionDescription = ;
-            this.IEzsignbulksendtransmissionErrors = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+            this.IEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
+                throw new ArgumentNullException("objAudit is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
             }
-            this.ObjAudit = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjAudit = objAudit;
+            // to ensure "aObjEzsignfoldertransmission" is required (not null)
+            if (aObjEzsignfoldertransmission == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
+                throw new ArgumentNullException("aObjEzsignfoldertransmission is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
             }
-            this.AObjEzsignfoldertransmission = ;
+            this.AObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
         }
 
         /// <summary>
@@ -147,24 +147,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksendtransmissionID (int) minimum
             if (this.PkiEzsignbulksendtransmissionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendtransmissionID" });
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendtransmissionID" });
             }
 
             // FkiEzsignbulksendID (int) minimum
             if (this.FkiEzsignbulksendID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
             }
 
             // IEzsignbulksendtransmissionErrors (int) minimum
             if (this.IEzsignbulksendtransmissionErrors < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignbulksendtransmissionErrors, must be a value greater than or equal to 0.", new [] { "IEzsignbulksendtransmissionErrors" });
+                yield return new ValidationResult("Invalid value for IEzsignbulksendtransmissionErrors, must be a value greater than or equal to 0.", new [] { "IEzsignbulksendtransmissionErrors" });
             }
 
             yield break;

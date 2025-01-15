@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetObjectV1Response" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public EzsignfoldersignerassociationGetObjectV1Response(CommonResponseObjDebugPayload  = default(CommonResponseObjDebugPayload), CommonResponseObjDebug  = default(CommonResponseObjDebug), EzsignfoldersignerassociationGetObjectV1ResponseMPayload  = default(EzsignfoldersignerassociationGetObjectV1ResponseMPayload))
+        /// <param name="objDebugPayload">objDebugPayload (required).</param>
+        /// <param name="objDebug">objDebug.</param>
+        /// <param name="mPayload">Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} (required).</param>
+        public EzsignfoldersignerassociationGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfoldersignerassociationResponseCompound mPayload = default(EzsignfoldersignerassociationResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
+                throw new ArgumentNullException("objDebugPayload is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
             }
-            this.ObjDebugPayload = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ObjDebugPayload = objDebugPayload;
+            // to ensure "mPayload" is required (not null)
+            if (mPayload == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
+                throw new ArgumentNullException("mPayload is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
             }
-            this.MPayload = ;
-            this.ObjDebug = ;
+            this.MPayload = mPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
@@ -73,10 +73,11 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Gets or Sets MPayload
+        /// Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
         /// </summary>
+        /// <value>Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzsignfoldersignerassociationGetObjectV1ResponseMPayload MPayload { get; set; }
+        public EzsignfoldersignerassociationResponseCompound MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -107,7 +108,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

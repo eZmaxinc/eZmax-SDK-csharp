@@ -64,24 +64,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcellstyle" /> class.
         /// </summary>
-        /// <param name="">Whether there is a border at the top of the Reportcell (required).</param>
-        /// <param name="">Whether there is a border at the bottom of the Reportcell (required).</param>
-        /// <param name="">Whether there is a border at the left of the Reportcell (required).</param>
-        /// <param name="">Whether there is a border at the right of the Reportcell (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public CommonReportcellstyle(bool  = default(bool), bool  = default(bool), bool  = default(bool), bool  = default(bool), EnumHorizontalalignment  = default(EnumHorizontalalignment), EnumVerticalalignment  = default(EnumVerticalalignment), EnumFontweight  = default(EnumFontweight), EnumFontunderline  = default(EnumFontunderline))
+        /// <param name="bReportcellstyleBordertop">Whether there is a border at the top of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderbottom">Whether there is a border at the bottom of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderleft">Whether there is a border at the left of the Reportcell (required).</param>
+        /// <param name="bReportcellstyleBorderright">Whether there is a border at the right of the Reportcell (required).</param>
+        /// <param name="eReportcellHorizontalalignment">eReportcellHorizontalalignment (required).</param>
+        /// <param name="eReportcellVerticalalignment">eReportcellVerticalalignment (required).</param>
+        /// <param name="eReportcellFontweight">eReportcellFontweight (required).</param>
+        /// <param name="eReportcellFontunderline">eReportcellFontunderline (required).</param>
+        public CommonReportcellstyle(bool bReportcellstyleBordertop = default(bool), bool bReportcellstyleBorderbottom = default(bool), bool bReportcellstyleBorderleft = default(bool), bool bReportcellstyleBorderright = default(bool), EnumHorizontalalignment eReportcellHorizontalalignment = default(EnumHorizontalalignment), EnumVerticalalignment eReportcellVerticalalignment = default(EnumVerticalalignment), EnumFontweight eReportcellFontweight = default(EnumFontweight), EnumFontunderline eReportcellFontunderline = default(EnumFontunderline))
         {
-            this.BReportcellstyleBordertop = ;
-            this.BReportcellstyleBorderbottom = ;
-            this.BReportcellstyleBorderleft = ;
-            this.BReportcellstyleBorderright = ;
-            this.EReportcellHorizontalalignment = ;
-            this.EReportcellVerticalalignment = ;
-            this.EReportcellFontweight = ;
-            this.EReportcellFontunderline = ;
+            this.BReportcellstyleBordertop = bReportcellstyleBordertop;
+            this.BReportcellstyleBorderbottom = bReportcellstyleBorderbottom;
+            this.BReportcellstyleBorderleft = bReportcellstyleBorderleft;
+            this.BReportcellstyleBorderright = bReportcellstyleBorderright;
+            this.EReportcellHorizontalalignment = eReportcellHorizontalalignment;
+            this.EReportcellVerticalalignment = eReportcellVerticalalignment;
+            this.EReportcellFontweight = eReportcellFontweight;
+            this.EReportcellFontunderline = eReportcellFontunderline;
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

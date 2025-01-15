@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupplyGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Supply autocomplete element response. (required).</param>
-        public SupplyGetAutocompleteV2ResponseMPayload(List<SupplyAutocompleteElementResponse>  = default(List<SupplyAutocompleteElementResponse>))
+        /// <param name="aObjSupply">An array of Supply autocomplete element response. (required).</param>
+        public SupplyGetAutocompleteV2ResponseMPayload(List<SupplyAutocompleteElementResponse> aObjSupply = default(List<SupplyAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjSupply" is required (not null)
+            if (aObjSupply == null)
             {
-                throw new ArgumentNullException(" is a required property for SupplyGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjSupply is a required property for SupplyGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjSupply = ;
+            this.AObjSupply = aObjSupply;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

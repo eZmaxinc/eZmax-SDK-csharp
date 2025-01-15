@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlaccountAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Glaccount (required).</param>
-        /// <param name="">The Code of the Glaccount (required).</param>
-        /// <param name="">The Description for the Glaccount in the language of the requester (required).</param>
-        /// <param name="">Whether the Glaccount is active or not (required).</param>
-        public GlaccountAutocompleteElementResponse(int  = default(int), int  = default(int), string  = default(string), bool  = default(bool))
+        /// <param name="pkiGlaccountID">The unique ID of the Glaccount (required).</param>
+        /// <param name="iGlaccountCode">The Code of the Glaccount (required).</param>
+        /// <param name="sGlaccountDescriptionX">The Description for the Glaccount in the language of the requester (required).</param>
+        /// <param name="bGlaccountIsactive">Whether the Glaccount is active or not (required).</param>
+        public GlaccountAutocompleteElementResponse(int pkiGlaccountID = default(int), int iGlaccountCode = default(int), string sGlaccountDescriptionX = default(string), bool bGlaccountIsactive = default(bool))
         {
-            this.PkiGlaccountID = ;
-            this.IGlaccountCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiGlaccountID = pkiGlaccountID;
+            this.IGlaccountCode = iGlaccountCode;
+            // to ensure "sGlaccountDescriptionX" is required (not null)
+            if (sGlaccountDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for GlaccountAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sGlaccountDescriptionX is a required property for GlaccountAutocompleteElementResponse and cannot be null");
             }
-            this.SGlaccountDescriptionX = ;
-            this.BGlaccountIsactive = ;
+            this.SGlaccountDescriptionX = sGlaccountDescriptionX;
+            this.BGlaccountIsactive = bGlaccountIsactive;
         }
 
         /// <summary>
@@ -119,18 +119,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiGlaccountID (int) minimum
             if (this.PkiGlaccountID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiGlaccountID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountID" });
+                yield return new ValidationResult("Invalid value for PkiGlaccountID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountID" });
             }
 
             // IGlaccountCode (int) minimum
             if (this.IGlaccountCode < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IGlaccountCode, must be a value greater than or equal to 0.", new [] { "IGlaccountCode" });
+                yield return new ValidationResult("Invalid value for IGlaccountCode, must be a value greater than or equal to 0.", new [] { "IGlaccountCode" });
             }
 
             yield break;

@@ -64,148 +64,148 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Attachment. (required).</param>
-        /// <param name="">The unique ID of the Computer.</param>
-        /// <param name="">The unique ID of the Adjustment.</param>
-        /// <param name="">The unique ID of the Agent..</param>
-        /// <param name="">The unique ID of the Bankaccount.</param>
-        /// <param name="">The unique ID of the Broker..</param>
-        /// <param name="">The unique ID of the Commissionadvance.</param>
-        /// <param name="">The unique ID of the Communication..</param>
-        /// <param name="">The unique ID of the Customer..</param>
-        /// <param name="">The unique ID of the Customertemplate.</param>
-        /// <param name="">The unique ID of the Deposit.</param>
-        /// <param name="">The unique ID of the Deposittransitcheque.</param>
-        /// <param name="">The unique ID of the Electronicfundstransfer.</param>
-        /// <param name="">The unique ID of the Employee..</param>
-        /// <param name="">The unique ID of the Externalbroker..</param>
-        /// <param name="">The unique ID of the Ezcomadvanceserver.</param>
-        /// <param name="">The unique ID of the Ezcomcompany.</param>
-        /// <param name="">The unique ID of the Ezsigndocument.</param>
-        /// <param name="">The unique ID of the Ghacqcontract.</param>
-        /// <param name="">The unique ID of the Inscription..</param>
-        /// <param name="">The unique ID of the Inscriptiontemp.</param>
-        /// <param name="">The unique ID of the Inscriptionnotauthenticated..</param>
-        /// <param name="">The unique ID of the Invoice..</param>
-        /// <param name="">The unique ID of the Buyercontract.</param>
-        /// <param name="">The unique ID of the Franchisebroker.</param>
-        /// <param name="">The unique ID of the Franchiseagence.</param>
-        /// <param name="">The unique ID of the Franchisereoffice.</param>
-        /// <param name="">The unique ID of the Franchisefranchise.</param>
-        /// <param name="">The unique ID of the Franchisecomplaint.</param>
-        /// <param name="">The unique ID of the Lead.</param>
-        /// <param name="">The unique ID of the Marketingprogram.</param>
-        /// <param name="">The unique ID of the Marketingfollow.</param>
-        /// <param name="">The unique ID of the Notary..</param>
-        /// <param name="">The unique ID of the Officetaxreport.</param>
-        /// <param name="">The unique ID of the Otherincome.</param>
-        /// <param name="">The unique ID of the Paymentpreparation.</param>
-        /// <param name="">The unique ID of the Purchase.</param>
-        /// <param name="">The unique ID of the Salary.</param>
-        /// <param name="">The unique ID of the Supplier..</param>
-        /// <param name="">The unique ID of the Tranqcontract.</param>
-        /// <param name="">The unique ID of the Template.</param>
-        /// <param name="">The unique ID of the Inscriptionchecklist.</param>
-        /// <param name="">The unique ID of the Folder.</param>
-        /// <param name="">The unique ID of the Rejectedoffertopurchase.</param>
-        /// <param name="">The unique ID of the Disclosure.</param>
-        /// <param name="">The unique ID of the Reconciliation.</param>
-        /// <param name="">The unique ID of the Ezsigndocument.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The name of the Attachment (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The size of the Attachment (required).</param>
-        /// <param name="">The edmmoduleflag of the Attachment.</param>
-        /// <param name="">The md5 of the Attachment (required).</param>
-        /// <param name="">Whether if it&#39;s deleted (required).</param>
-        /// <param name="">Whether if it&#39;s valid (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">The rejectioncomment of the Attachment.</param>
-        /// <param name="">The unique ID of the User.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public CustomAttachmentResponse(int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), int  = default(int), FieldEAttachmentDocumenttype  = default(FieldEAttachmentDocumenttype), string  = default(string), FieldEAttachmentPrivacy  = default(FieldEAttachmentPrivacy), int  = default(int), FieldEAttachmentType  = default(FieldEAttachmentType), int  = default(int), int  = default(int), string  = default(string), bool  = default(bool), bool  = default(bool), FieldEAttachmentVerified  = default(FieldEAttachmentVerified), string  = default(string), int  = default(int), CommonAudit  = default(CommonAudit), AttachmentResponseCompound  = default(AttachmentResponseCompound), AttachmentResponseCompound  = default(AttachmentResponseCompound), List<AttachmentResponseCompound>  = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound>  = default(List<AttachmentResponseCompound>))
+        /// <param name="pkiAttachmentID">The unique ID of the Attachment. (required).</param>
+        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
+        /// <param name="fkiAdjustmentID">The unique ID of the Adjustment.</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBankaccountID">The unique ID of the Bankaccount.</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
+        /// <param name="fkiCommissionadvanceID">The unique ID of the Commissionadvance.</param>
+        /// <param name="fkiCommunicationID">The unique ID of the Communication..</param>
+        /// <param name="fkiCustomerID">The unique ID of the Customer..</param>
+        /// <param name="fkiCustomertemplateID">The unique ID of the Customertemplate.</param>
+        /// <param name="fkiDepositID">The unique ID of the Deposit.</param>
+        /// <param name="fkiDeposittransitchequeID">The unique ID of the Deposittransitcheque.</param>
+        /// <param name="fkiElectronicfundstransferID">The unique ID of the Electronicfundstransfer.</param>
+        /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiExternalbrokerID">The unique ID of the Externalbroker..</param>
+        /// <param name="fkiEzcomadvanceserverID">The unique ID of the Ezcomadvanceserver.</param>
+        /// <param name="fkiEzcomcompanyID">The unique ID of the Ezcomcompany.</param>
+        /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument.</param>
+        /// <param name="fkiGhacqcontractID">The unique ID of the Ghacqcontract.</param>
+        /// <param name="fkiInscriptionID">The unique ID of the Inscription..</param>
+        /// <param name="fkiInscriptiontempID">The unique ID of the Inscriptiontemp.</param>
+        /// <param name="fkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
+        /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
+        /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
+        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker.</param>
+        /// <param name="fkiFranchiseagenceID">The unique ID of the Franchiseagence.</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice.</param>
+        /// <param name="fkiFranchisefranchiseID">The unique ID of the Franchisefranchise.</param>
+        /// <param name="fkiFranchisecomplaintID">The unique ID of the Franchisecomplaint.</param>
+        /// <param name="fkiLeadID">The unique ID of the Lead.</param>
+        /// <param name="fkiMarketingprogramID">The unique ID of the Marketingprogram.</param>
+        /// <param name="fkiMarketingfollowID">The unique ID of the Marketingfollow.</param>
+        /// <param name="fkiNotaryID">The unique ID of the Notary..</param>
+        /// <param name="fkiOfficetaxreportID">The unique ID of the Officetaxreport.</param>
+        /// <param name="fkiOtherincomeID">The unique ID of the Otherincome.</param>
+        /// <param name="fkiPaymentpreparationID">The unique ID of the Paymentpreparation.</param>
+        /// <param name="fkiPurchaseID">The unique ID of the Purchase.</param>
+        /// <param name="fkiSalaryID">The unique ID of the Salary.</param>
+        /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
+        /// <param name="fkiTranqcontractID">The unique ID of the Tranqcontract.</param>
+        /// <param name="fkiTemplateID">The unique ID of the Template.</param>
+        /// <param name="fkiInscriptionchecklistID">The unique ID of the Inscriptionchecklist.</param>
+        /// <param name="fkiFolderID">The unique ID of the Folder.</param>
+        /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
+        /// <param name="fkiDisclosureID">The unique ID of the Disclosure.</param>
+        /// <param name="fkiReconciliationID">The unique ID of the Reconciliation.</param>
+        /// <param name="fkiEzsigndocumentIDReference">The unique ID of the Ezsigndocument.</param>
+        /// <param name="eAttachmentDocumenttype">eAttachmentDocumenttype (required).</param>
+        /// <param name="sAttachmentName">The name of the Attachment (required).</param>
+        /// <param name="eAttachmentPrivacy">eAttachmentPrivacy (required).</param>
+        /// <param name="fkiUserIDSpecific">The unique ID of the User.</param>
+        /// <param name="eAttachmentType">eAttachmentType (required).</param>
+        /// <param name="iAttachmentSize">The size of the Attachment (required).</param>
+        /// <param name="iAttachmentEDMmoduleflag">The edmmoduleflag of the Attachment.</param>
+        /// <param name="sAttachmentMD5">The md5 of the Attachment (required).</param>
+        /// <param name="bAttachmentDeleted">Whether if it&#39;s deleted (required).</param>
+        /// <param name="bAttachmentValid">Whether if it&#39;s valid (required).</param>
+        /// <param name="eAttachmentVerified">eAttachmentVerified (required).</param>
+        /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
+        /// <param name="fkiUserIDOwner">The unique ID of the User.</param>
+        /// <param name="objAudit">objAudit.</param>
+        /// <param name="objAttachmentProof">objAttachmentProof.</param>
+        /// <param name="objAttachmentProofdocument">objAttachmentProofdocument.</param>
+        /// <param name="aObjAttachmentAttachment">aObjAttachmentAttachment.</param>
+        /// <param name="aObjAttachmentVersion">aObjAttachmentVersion.</param>
+        public CustomAttachmentResponse(int pkiAttachmentID = default(int), int fkiComputerID = default(int), int fkiAdjustmentID = default(int), int fkiAgentID = default(int), int fkiBankaccountID = default(int), int fkiBrokerID = default(int), int fkiCommissionadvanceID = default(int), int fkiCommunicationID = default(int), int fkiCustomerID = default(int), int fkiCustomertemplateID = default(int), int fkiDepositID = default(int), int fkiDeposittransitchequeID = default(int), int fkiElectronicfundstransferID = default(int), int fkiEmployeeID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomadvanceserverID = default(int), int fkiEzcomcompanyID = default(int), int fkiEzsigndocumentID = default(int), int fkiGhacqcontractID = default(int), int fkiInscriptionID = default(int), int fkiInscriptiontempID = default(int), int fkiInscriptionnotauthenticatedID = default(int), int fkiInvoiceID = default(int), int fkiBuyercontractID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchiseagenceID = default(int), int fkiFranchiseofficeID = default(int), int fkiFranchisefranchiseID = default(int), int fkiFranchisecomplaintID = default(int), int fkiLeadID = default(int), int fkiMarketingprogramID = default(int), int fkiMarketingfollowID = default(int), int fkiNotaryID = default(int), int fkiOfficetaxreportID = default(int), int fkiOtherincomeID = default(int), int fkiPaymentpreparationID = default(int), int fkiPurchaseID = default(int), int fkiSalaryID = default(int), int fkiSupplierID = default(int), int fkiTranqcontractID = default(int), int fkiTemplateID = default(int), int fkiInscriptionchecklistID = default(int), int fkiFolderID = default(int), int fkiRejectedoffertopurchaseID = default(int), int fkiDisclosureID = default(int), int fkiReconciliationID = default(int), int fkiEzsigndocumentIDReference = default(int), FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), string sAttachmentName = default(string), FieldEAttachmentPrivacy eAttachmentPrivacy = default(FieldEAttachmentPrivacy), int fkiUserIDSpecific = default(int), FieldEAttachmentType eAttachmentType = default(FieldEAttachmentType), int iAttachmentSize = default(int), int iAttachmentEDMmoduleflag = default(int), string sAttachmentMD5 = default(string), bool bAttachmentDeleted = default(bool), bool bAttachmentValid = default(bool), FieldEAttachmentVerified eAttachmentVerified = default(FieldEAttachmentVerified), string tAttachmentRejectioncomment = default(string), int fkiUserIDOwner = default(int), CommonAudit objAudit = default(CommonAudit), AttachmentResponseCompound objAttachmentProof = default(AttachmentResponseCompound), AttachmentResponseCompound objAttachmentProofdocument = default(AttachmentResponseCompound), List<AttachmentResponseCompound> aObjAttachmentAttachment = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound> aObjAttachmentVersion = default(List<AttachmentResponseCompound>))
         {
-            this.PkiAttachmentID = ;
-            this.EAttachmentDocumenttype = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiAttachmentID = pkiAttachmentID;
+            this.EAttachmentDocumenttype = eAttachmentDocumenttype;
+            // to ensure "sAttachmentName" is required (not null)
+            if (sAttachmentName == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomAttachmentResponse and cannot be null");
+                throw new ArgumentNullException("sAttachmentName is a required property for CustomAttachmentResponse and cannot be null");
             }
-            this.SAttachmentName = ;
-            this.EAttachmentPrivacy = ;
-            this.EAttachmentType = ;
-            this.IAttachmentSize = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SAttachmentName = sAttachmentName;
+            this.EAttachmentPrivacy = eAttachmentPrivacy;
+            this.EAttachmentType = eAttachmentType;
+            this.IAttachmentSize = iAttachmentSize;
+            // to ensure "sAttachmentMD5" is required (not null)
+            if (sAttachmentMD5 == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomAttachmentResponse and cannot be null");
+                throw new ArgumentNullException("sAttachmentMD5 is a required property for CustomAttachmentResponse and cannot be null");
             }
-            this.SAttachmentMD5 = ;
-            this.BAttachmentDeleted = ;
-            this.BAttachmentValid = ;
-            this.EAttachmentVerified = ;
-            this.FkiComputerID = ;
-            this.FkiAdjustmentID = ;
-            this.FkiAgentID = ;
-            this.FkiBankaccountID = ;
-            this.FkiBrokerID = ;
-            this.FkiCommissionadvanceID = ;
-            this.FkiCommunicationID = ;
-            this.FkiCustomerID = ;
-            this.FkiCustomertemplateID = ;
-            this.FkiDepositID = ;
-            this.FkiDeposittransitchequeID = ;
-            this.FkiElectronicfundstransferID = ;
-            this.FkiEmployeeID = ;
-            this.FkiExternalbrokerID = ;
-            this.FkiEzcomadvanceserverID = ;
-            this.FkiEzcomcompanyID = ;
-            this.FkiEzsigndocumentID = ;
-            this.FkiGhacqcontractID = ;
-            this.FkiInscriptionID = ;
-            this.FkiInscriptiontempID = ;
-            this.FkiInscriptionnotauthenticatedID = ;
-            this.FkiInvoiceID = ;
-            this.FkiBuyercontractID = ;
-            this.FkiFranchisebrokerID = ;
-            this.FkiFranchiseagenceID = ;
-            this.FkiFranchiseofficeID = ;
-            this.FkiFranchisefranchiseID = ;
-            this.FkiFranchisecomplaintID = ;
-            this.FkiLeadID = ;
-            this.FkiMarketingprogramID = ;
-            this.FkiMarketingfollowID = ;
-            this.FkiNotaryID = ;
-            this.FkiOfficetaxreportID = ;
-            this.FkiOtherincomeID = ;
-            this.FkiPaymentpreparationID = ;
-            this.FkiPurchaseID = ;
-            this.FkiSalaryID = ;
-            this.FkiSupplierID = ;
-            this.FkiTranqcontractID = ;
-            this.FkiTemplateID = ;
-            this.FkiInscriptionchecklistID = ;
-            this.FkiFolderID = ;
-            this.FkiRejectedoffertopurchaseID = ;
-            this.FkiDisclosureID = ;
-            this.FkiReconciliationID = ;
-            this.FkiEzsigndocumentIDReference = ;
-            this.FkiUserIDSpecific = ;
-            this.IAttachmentEDMmoduleflag = ;
-            this.TAttachmentRejectioncomment = ;
-            this.FkiUserIDOwner = ;
-            this.ObjAudit = ;
-            this.ObjAttachmentProof = ;
-            this.ObjAttachmentProofdocument = ;
-            this.AObjAttachmentAttachment = ;
-            this.AObjAttachmentVersion = ;
+            this.SAttachmentMD5 = sAttachmentMD5;
+            this.BAttachmentDeleted = bAttachmentDeleted;
+            this.BAttachmentValid = bAttachmentValid;
+            this.EAttachmentVerified = eAttachmentVerified;
+            this.FkiComputerID = fkiComputerID;
+            this.FkiAdjustmentID = fkiAdjustmentID;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBankaccountID = fkiBankaccountID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiCommissionadvanceID = fkiCommissionadvanceID;
+            this.FkiCommunicationID = fkiCommunicationID;
+            this.FkiCustomerID = fkiCustomerID;
+            this.FkiCustomertemplateID = fkiCustomertemplateID;
+            this.FkiDepositID = fkiDepositID;
+            this.FkiDeposittransitchequeID = fkiDeposittransitchequeID;
+            this.FkiElectronicfundstransferID = fkiElectronicfundstransferID;
+            this.FkiEmployeeID = fkiEmployeeID;
+            this.FkiExternalbrokerID = fkiExternalbrokerID;
+            this.FkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
+            this.FkiEzcomcompanyID = fkiEzcomcompanyID;
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.FkiGhacqcontractID = fkiGhacqcontractID;
+            this.FkiInscriptionID = fkiInscriptionID;
+            this.FkiInscriptiontempID = fkiInscriptiontempID;
+            this.FkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+            this.FkiInvoiceID = fkiInvoiceID;
+            this.FkiBuyercontractID = fkiBuyercontractID;
+            this.FkiFranchisebrokerID = fkiFranchisebrokerID;
+            this.FkiFranchiseagenceID = fkiFranchiseagenceID;
+            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
+            this.FkiFranchisefranchiseID = fkiFranchisefranchiseID;
+            this.FkiFranchisecomplaintID = fkiFranchisecomplaintID;
+            this.FkiLeadID = fkiLeadID;
+            this.FkiMarketingprogramID = fkiMarketingprogramID;
+            this.FkiMarketingfollowID = fkiMarketingfollowID;
+            this.FkiNotaryID = fkiNotaryID;
+            this.FkiOfficetaxreportID = fkiOfficetaxreportID;
+            this.FkiOtherincomeID = fkiOtherincomeID;
+            this.FkiPaymentpreparationID = fkiPaymentpreparationID;
+            this.FkiPurchaseID = fkiPurchaseID;
+            this.FkiSalaryID = fkiSalaryID;
+            this.FkiSupplierID = fkiSupplierID;
+            this.FkiTranqcontractID = fkiTranqcontractID;
+            this.FkiTemplateID = fkiTemplateID;
+            this.FkiInscriptionchecklistID = fkiInscriptionchecklistID;
+            this.FkiFolderID = fkiFolderID;
+            this.FkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
+            this.FkiDisclosureID = fkiDisclosureID;
+            this.FkiReconciliationID = fkiReconciliationID;
+            this.FkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
+            this.FkiUserIDSpecific = fkiUserIDSpecific;
+            this.IAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
+            this.TAttachmentRejectioncomment = tAttachmentRejectioncomment;
+            this.FkiUserIDOwner = fkiUserIDOwner;
+            this.ObjAudit = objAudit;
+            this.ObjAttachmentProof = objAttachmentProof;
+            this.ObjAttachmentProofdocument = objAttachmentProofdocument;
+            this.AObjAttachmentAttachment = aObjAttachmentAttachment;
+            this.AObjAttachmentVersion = aObjAttachmentVersion;
         }
 
         /// <summary>
@@ -777,462 +777,462 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAttachmentID (int) minimum
             if (this.PkiAttachmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAttachmentID, must be a value greater than or equal to 0.", new [] { "PkiAttachmentID" });
+                yield return new ValidationResult("Invalid value for PkiAttachmentID, must be a value greater than or equal to 0.", new [] { "PkiAttachmentID" });
             }
 
             // FkiComputerID (int) maximum
             if (this.FkiComputerID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
+                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
             }
 
             // FkiComputerID (int) minimum
             if (this.FkiComputerID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
+                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
             }
 
             // FkiAdjustmentID (int) maximum
             if (this.FkiAdjustmentID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAdjustmentID, must be a value less than or equal to 65535.", new [] { "FkiAdjustmentID" });
+                yield return new ValidationResult("Invalid value for FkiAdjustmentID, must be a value less than or equal to 65535.", new [] { "FkiAdjustmentID" });
             }
 
             // FkiAdjustmentID (int) minimum
             if (this.FkiAdjustmentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAdjustmentID, must be a value greater than or equal to 0.", new [] { "FkiAdjustmentID" });
+                yield return new ValidationResult("Invalid value for FkiAdjustmentID, must be a value greater than or equal to 0.", new [] { "FkiAdjustmentID" });
             }
 
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBankaccountID (int) maximum
             if (this.FkiBankaccountID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
+                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
             }
 
             // FkiBankaccountID (int) minimum
             if (this.FkiBankaccountID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
+                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiCommissionadvanceID (int) maximum
             if (this.FkiCommissionadvanceID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value less than or equal to 65535.", new [] { "FkiCommissionadvanceID" });
+                yield return new ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value less than or equal to 65535.", new [] { "FkiCommissionadvanceID" });
             }
 
             // FkiCommissionadvanceID (int) minimum
             if (this.FkiCommissionadvanceID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value greater than or equal to 0.", new [] { "FkiCommissionadvanceID" });
+                yield return new ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value greater than or equal to 0.", new [] { "FkiCommissionadvanceID" });
             }
 
             // FkiCommunicationID (int) minimum
             if (this.FkiCommunicationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCommunicationID, must be a value greater than or equal to 0.", new [] { "FkiCommunicationID" });
+                yield return new ValidationResult("Invalid value for FkiCommunicationID, must be a value greater than or equal to 0.", new [] { "FkiCommunicationID" });
             }
 
             // FkiCustomerID (int) minimum
             if (this.FkiCustomerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
+                yield return new ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
             }
 
             // FkiCustomertemplateID (int) maximum
             if (this.FkiCustomertemplateID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomertemplateID, must be a value less than or equal to 65535.", new [] { "FkiCustomertemplateID" });
+                yield return new ValidationResult("Invalid value for FkiCustomertemplateID, must be a value less than or equal to 65535.", new [] { "FkiCustomertemplateID" });
             }
 
             // FkiCustomertemplateID (int) minimum
             if (this.FkiCustomertemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomertemplateID, must be a value greater than or equal to 0.", new [] { "FkiCustomertemplateID" });
+                yield return new ValidationResult("Invalid value for FkiCustomertemplateID, must be a value greater than or equal to 0.", new [] { "FkiCustomertemplateID" });
             }
 
             // FkiDepositID (int) maximum
             if (this.FkiDepositID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepositID, must be a value less than or equal to 16777215.", new [] { "FkiDepositID" });
+                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value less than or equal to 16777215.", new [] { "FkiDepositID" });
             }
 
             // FkiDepositID (int) minimum
             if (this.FkiDepositID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepositID, must be a value greater than or equal to 0.", new [] { "FkiDepositID" });
+                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value greater than or equal to 0.", new [] { "FkiDepositID" });
             }
 
             // FkiDeposittransitchequeID (int) maximum
             if (this.FkiDeposittransitchequeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value less than or equal to 65535.", new [] { "FkiDeposittransitchequeID" });
+                yield return new ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value less than or equal to 65535.", new [] { "FkiDeposittransitchequeID" });
             }
 
             // FkiDeposittransitchequeID (int) minimum
             if (this.FkiDeposittransitchequeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value greater than or equal to 0.", new [] { "FkiDeposittransitchequeID" });
+                yield return new ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value greater than or equal to 0.", new [] { "FkiDeposittransitchequeID" });
             }
 
             // FkiElectronicfundstransferID (int) maximum
             if (this.FkiElectronicfundstransferID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferID" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferID" });
             }
 
             // FkiElectronicfundstransferID (int) minimum
             if (this.FkiElectronicfundstransferID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value greater than or equal to 1.", new [] { "FkiElectronicfundstransferID" });
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value greater than or equal to 1.", new [] { "FkiElectronicfundstransferID" });
             }
 
             // FkiEmployeeID (int) minimum
             if (this.FkiEmployeeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
             }
 
             // FkiExternalbrokerID (int) minimum
             if (this.FkiExternalbrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
+                yield return new ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
             }
 
             // FkiEzcomadvanceserverID (int) maximum
             if (this.FkiEzcomadvanceserverID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value less than or equal to 16777215.", new [] { "FkiEzcomadvanceserverID" });
+                yield return new ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value less than or equal to 16777215.", new [] { "FkiEzcomadvanceserverID" });
             }
 
             // FkiEzcomadvanceserverID (int) minimum
             if (this.FkiEzcomadvanceserverID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value greater than or equal to 0.", new [] { "FkiEzcomadvanceserverID" });
+                yield return new ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value greater than or equal to 0.", new [] { "FkiEzcomadvanceserverID" });
             }
 
             // FkiEzcomcompanyID (int) maximum
             if (this.FkiEzcomcompanyID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value less than or equal to 65535.", new [] { "FkiEzcomcompanyID" });
+                yield return new ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value less than or equal to 65535.", new [] { "FkiEzcomcompanyID" });
             }
 
             // FkiEzcomcompanyID (int) minimum
             if (this.FkiEzcomcompanyID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value greater than or equal to 0.", new [] { "FkiEzcomcompanyID" });
+                yield return new ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value greater than or equal to 0.", new [] { "FkiEzcomcompanyID" });
             }
 
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // FkiGhacqcontractID (int) maximum
             if (this.FkiGhacqcontractID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGhacqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiGhacqcontractID" });
+                yield return new ValidationResult("Invalid value for FkiGhacqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiGhacqcontractID" });
             }
 
             // FkiGhacqcontractID (int) minimum
             if (this.FkiGhacqcontractID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGhacqcontractID, must be a value greater than or equal to 0.", new [] { "FkiGhacqcontractID" });
+                yield return new ValidationResult("Invalid value for FkiGhacqcontractID, must be a value greater than or equal to 0.", new [] { "FkiGhacqcontractID" });
             }
 
             // FkiInscriptionID (int) minimum
             if (this.FkiInscriptionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
             }
 
             // FkiInscriptiontempID (int) maximum
             if (this.FkiInscriptiontempID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontempID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptiontempID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptiontempID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptiontempID" });
             }
 
             // FkiInscriptiontempID (int) minimum
             if (this.FkiInscriptiontempID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontempID, must be a value greater than or equal to 1.", new [] { "FkiInscriptiontempID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptiontempID, must be a value greater than or equal to 1.", new [] { "FkiInscriptiontempID" });
             }
 
             // FkiInscriptionnotauthenticatedID (int) minimum
             if (this.FkiInscriptionnotauthenticatedID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
             }
 
             // FkiInvoiceID (int) minimum
             if (this.FkiInvoiceID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
+                yield return new ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
             }
 
             // FkiBuyercontractID (int) maximum
             if (this.FkiBuyercontractID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
             }
 
             // FkiBuyercontractID (int) minimum
             if (this.FkiBuyercontractID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
             }
 
             // FkiFranchisebrokerID (int) minimum
             if (this.FkiFranchisebrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
             }
 
             // FkiFranchiseagenceID (int) maximum
             if (this.FkiFranchiseagenceID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseagenceID (int) minimum
             if (this.FkiFranchiseagenceID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseofficeID (int) minimum
             if (this.FkiFranchiseofficeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
             }
 
             // FkiFranchisefranchiseID (int) maximum
             if (this.FkiFranchisefranchiseID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value less than or equal to 65535.", new [] { "FkiFranchisefranchiseID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value less than or equal to 65535.", new [] { "FkiFranchisefranchiseID" });
             }
 
             // FkiFranchisefranchiseID (int) minimum
             if (this.FkiFranchisefranchiseID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value greater than or equal to 0.", new [] { "FkiFranchisefranchiseID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value greater than or equal to 0.", new [] { "FkiFranchisefranchiseID" });
             }
 
             // FkiFranchisecomplaintID (int) maximum
             if (this.FkiFranchisecomplaintID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value less than or equal to 65535.", new [] { "FkiFranchisecomplaintID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value less than or equal to 65535.", new [] { "FkiFranchisecomplaintID" });
             }
 
             // FkiFranchisecomplaintID (int) minimum
             if (this.FkiFranchisecomplaintID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value greater than or equal to 0.", new [] { "FkiFranchisecomplaintID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value greater than or equal to 0.", new [] { "FkiFranchisecomplaintID" });
             }
 
             // FkiLeadID (int) maximum
             if (this.FkiLeadID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLeadID, must be a value less than or equal to 65535.", new [] { "FkiLeadID" });
+                yield return new ValidationResult("Invalid value for FkiLeadID, must be a value less than or equal to 65535.", new [] { "FkiLeadID" });
             }
 
             // FkiLeadID (int) minimum
             if (this.FkiLeadID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLeadID, must be a value greater than or equal to 0.", new [] { "FkiLeadID" });
+                yield return new ValidationResult("Invalid value for FkiLeadID, must be a value greater than or equal to 0.", new [] { "FkiLeadID" });
             }
 
             // FkiMarketingprogramID (int) maximum
             if (this.FkiMarketingprogramID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMarketingprogramID, must be a value less than or equal to 255.", new [] { "FkiMarketingprogramID" });
+                yield return new ValidationResult("Invalid value for FkiMarketingprogramID, must be a value less than or equal to 255.", new [] { "FkiMarketingprogramID" });
             }
 
             // FkiMarketingprogramID (int) minimum
             if (this.FkiMarketingprogramID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMarketingprogramID, must be a value greater than or equal to 0.", new [] { "FkiMarketingprogramID" });
+                yield return new ValidationResult("Invalid value for FkiMarketingprogramID, must be a value greater than or equal to 0.", new [] { "FkiMarketingprogramID" });
             }
 
             // FkiMarketingfollowID (int) maximum
             if (this.FkiMarketingfollowID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMarketingfollowID, must be a value less than or equal to 65535.", new [] { "FkiMarketingfollowID" });
+                yield return new ValidationResult("Invalid value for FkiMarketingfollowID, must be a value less than or equal to 65535.", new [] { "FkiMarketingfollowID" });
             }
 
             // FkiMarketingfollowID (int) minimum
             if (this.FkiMarketingfollowID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMarketingfollowID, must be a value greater than or equal to 0.", new [] { "FkiMarketingfollowID" });
+                yield return new ValidationResult("Invalid value for FkiMarketingfollowID, must be a value greater than or equal to 0.", new [] { "FkiMarketingfollowID" });
             }
 
             // FkiNotaryID (int) minimum
             if (this.FkiNotaryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
+                yield return new ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
             }
 
             // FkiOfficetaxreportID (int) maximum
             if (this.FkiOfficetaxreportID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value less than or equal to 65535.", new [] { "FkiOfficetaxreportID" });
+                yield return new ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value less than or equal to 65535.", new [] { "FkiOfficetaxreportID" });
             }
 
             // FkiOfficetaxreportID (int) minimum
             if (this.FkiOfficetaxreportID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value greater than or equal to 0.", new [] { "FkiOfficetaxreportID" });
+                yield return new ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value greater than or equal to 0.", new [] { "FkiOfficetaxreportID" });
             }
 
             // FkiOtherincomeID (int) maximum
             if (this.FkiOtherincomeID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOtherincomeID, must be a value less than or equal to 65535.", new [] { "FkiOtherincomeID" });
+                yield return new ValidationResult("Invalid value for FkiOtherincomeID, must be a value less than or equal to 65535.", new [] { "FkiOtherincomeID" });
             }
 
             // FkiOtherincomeID (int) minimum
             if (this.FkiOtherincomeID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOtherincomeID, must be a value greater than or equal to 1.", new [] { "FkiOtherincomeID" });
+                yield return new ValidationResult("Invalid value for FkiOtherincomeID, must be a value greater than or equal to 1.", new [] { "FkiOtherincomeID" });
             }
 
             // FkiPaymentpreparationID (int) maximum
             if (this.FkiPaymentpreparationID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value less than or equal to 16777215.", new [] { "FkiPaymentpreparationID" });
+                yield return new ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value less than or equal to 16777215.", new [] { "FkiPaymentpreparationID" });
             }
 
             // FkiPaymentpreparationID (int) minimum
             if (this.FkiPaymentpreparationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value greater than or equal to 0.", new [] { "FkiPaymentpreparationID" });
+                yield return new ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value greater than or equal to 0.", new [] { "FkiPaymentpreparationID" });
             }
 
             // FkiSalaryID (int) maximum
             if (this.FkiSalaryID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalaryID, must be a value less than or equal to 16777215.", new [] { "FkiSalaryID" });
+                yield return new ValidationResult("Invalid value for FkiSalaryID, must be a value less than or equal to 16777215.", new [] { "FkiSalaryID" });
             }
 
             // FkiSalaryID (int) minimum
             if (this.FkiSalaryID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalaryID, must be a value greater than or equal to 0.", new [] { "FkiSalaryID" });
+                yield return new ValidationResult("Invalid value for FkiSalaryID, must be a value greater than or equal to 0.", new [] { "FkiSalaryID" });
             }
 
             // FkiSupplierID (int) minimum
             if (this.FkiSupplierID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
+                yield return new ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
             }
 
             // FkiTranqcontractID (int) maximum
             if (this.FkiTranqcontractID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTranqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiTranqcontractID" });
+                yield return new ValidationResult("Invalid value for FkiTranqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiTranqcontractID" });
             }
 
             // FkiTranqcontractID (int) minimum
             if (this.FkiTranqcontractID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTranqcontractID, must be a value greater than or equal to 0.", new [] { "FkiTranqcontractID" });
+                yield return new ValidationResult("Invalid value for FkiTranqcontractID, must be a value greater than or equal to 0.", new [] { "FkiTranqcontractID" });
             }
 
             // FkiTemplateID (int) maximum
             if (this.FkiTemplateID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTemplateID, must be a value less than or equal to 65535.", new [] { "FkiTemplateID" });
+                yield return new ValidationResult("Invalid value for FkiTemplateID, must be a value less than or equal to 65535.", new [] { "FkiTemplateID" });
             }
 
             // FkiTemplateID (int) minimum
             if (this.FkiTemplateID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTemplateID, must be a value greater than or equal to 0.", new [] { "FkiTemplateID" });
+                yield return new ValidationResult("Invalid value for FkiTemplateID, must be a value greater than or equal to 0.", new [] { "FkiTemplateID" });
             }
 
             // FkiInscriptionchecklistID (int) maximum
             if (this.FkiInscriptionchecklistID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
             }
 
             // FkiInscriptionchecklistID (int) minimum
             if (this.FkiInscriptionchecklistID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
+                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
             }
 
             // FkiFolderID (int) maximum
             if (this.FkiFolderID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFolderID, must be a value less than or equal to 65535.", new [] { "FkiFolderID" });
+                yield return new ValidationResult("Invalid value for FkiFolderID, must be a value less than or equal to 65535.", new [] { "FkiFolderID" });
             }
 
             // FkiFolderID (int) minimum
             if (this.FkiFolderID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFolderID, must be a value greater than or equal to 0.", new [] { "FkiFolderID" });
+                yield return new ValidationResult("Invalid value for FkiFolderID, must be a value greater than or equal to 0.", new [] { "FkiFolderID" });
             }
 
             // FkiRejectedoffertopurchaseID (int) maximum
             if (this.FkiRejectedoffertopurchaseID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value less than or equal to 65535.", new [] { "FkiRejectedoffertopurchaseID" });
+                yield return new ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value less than or equal to 65535.", new [] { "FkiRejectedoffertopurchaseID" });
             }
 
             // FkiRejectedoffertopurchaseID (int) minimum
             if (this.FkiRejectedoffertopurchaseID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value greater than or equal to 1.", new [] { "FkiRejectedoffertopurchaseID" });
+                yield return new ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value greater than or equal to 1.", new [] { "FkiRejectedoffertopurchaseID" });
             }
 
             // FkiDisclosureID (int) maximum
             if (this.FkiDisclosureID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDisclosureID, must be a value less than or equal to 65535.", new [] { "FkiDisclosureID" });
+                yield return new ValidationResult("Invalid value for FkiDisclosureID, must be a value less than or equal to 65535.", new [] { "FkiDisclosureID" });
             }
 
             // FkiDisclosureID (int) minimum
             if (this.FkiDisclosureID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDisclosureID, must be a value greater than or equal to 0.", new [] { "FkiDisclosureID" });
+                yield return new ValidationResult("Invalid value for FkiDisclosureID, must be a value greater than or equal to 0.", new [] { "FkiDisclosureID" });
             }
 
             // FkiReconciliationID (int) maximum
             if (this.FkiReconciliationID > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiReconciliationID, must be a value less than or equal to 65535.", new [] { "FkiReconciliationID" });
+                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value less than or equal to 65535.", new [] { "FkiReconciliationID" });
             }
 
             // FkiReconciliationID (int) minimum
             if (this.FkiReconciliationID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiReconciliationID, must be a value greater than or equal to 0.", new [] { "FkiReconciliationID" });
+                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value greater than or equal to 0.", new [] { "FkiReconciliationID" });
             }
 
             // FkiEzsigndocumentIDReference (int) minimum
             if (this.FkiEzsigndocumentIDReference < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentIDReference, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentIDReference" });
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentIDReference, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentIDReference" });
             }
 
             if (this.SAttachmentName != null) {
@@ -1247,31 +1247,31 @@ namespace eZmaxApi.Model
             // FkiUserIDSpecific (int) minimum
             if (this.FkiUserIDSpecific < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
+                yield return new ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
             }
 
             // IAttachmentSize (long) maximum
             if (this.IAttachmentSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentSize, must be a value less than or equal to 4294967295.", new [] { "IAttachmentSize" });
+                yield return new ValidationResult("Invalid value for IAttachmentSize, must be a value less than or equal to 4294967295.", new [] { "IAttachmentSize" });
             }
 
             // IAttachmentSize (long) minimum
             if (this.IAttachmentSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentSize, must be a value greater than or equal to 0.", new [] { "IAttachmentSize" });
+                yield return new ValidationResult("Invalid value for IAttachmentSize, must be a value greater than or equal to 0.", new [] { "IAttachmentSize" });
             }
 
             // IAttachmentEDMmoduleflag (int) maximum
             if (this.IAttachmentEDMmoduleflag > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value less than or equal to 255.", new [] { "IAttachmentEDMmoduleflag" });
+                yield return new ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value less than or equal to 255.", new [] { "IAttachmentEDMmoduleflag" });
             }
 
             // IAttachmentEDMmoduleflag (int) minimum
             if (this.IAttachmentEDMmoduleflag < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value greater than or equal to 0.", new [] { "IAttachmentEDMmoduleflag" });
+                yield return new ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value greater than or equal to 0.", new [] { "IAttachmentEDMmoduleflag" });
             }
 
             if (this.SAttachmentMD5 != null) {
@@ -1295,7 +1295,7 @@ namespace eZmaxApi.Model
             // FkiUserIDOwner (int) minimum
             if (this.FkiUserIDOwner < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDOwner, must be a value greater than or equal to 0.", new [] { "FkiUserIDOwner" });
+                yield return new ValidationResult("Invalid value for FkiUserIDOwner, must be a value greater than or equal to 0.", new [] { "FkiUserIDOwner" });
             }
 
             yield break;

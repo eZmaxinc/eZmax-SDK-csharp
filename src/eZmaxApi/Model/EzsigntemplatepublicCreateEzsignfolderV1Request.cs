@@ -40,36 +40,36 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepublicCreateEzsignfolderV1Request" /> class.
         /// </summary>
-        /// <param name="">The Ezmaxcustomer code (required).</param>
-        /// <param name="">The referenceid of the Ezsigntemplatepublic (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepublicCreateEzsignfolderV1Request(string  = default(string), string  = default(string), List<string>  = default(List<string>), List<EzsignsignerRequestCompound>  = default(List<EzsignsignerRequestCompound>))
+        /// <param name="pksEzmaxcustomerCode">The Ezmaxcustomer code (required).</param>
+        /// <param name="sEzsigntemplatepublicReferenceid">The referenceid of the Ezsigntemplatepublic (required).</param>
+        /// <param name="aSEzsigntemplatesignerDescription">aSEzsigntemplatesignerDescription (required).</param>
+        /// <param name="aObjEzsignsigner">aObjEzsignsigner (required).</param>
+        public EzsigntemplatepublicCreateEzsignfolderV1Request(string pksEzmaxcustomerCode = default(string), string sEzsigntemplatepublicReferenceid = default(string), List<string> aSEzsigntemplatesignerDescription = default(List<string>), List<EzsignsignerRequestCompound> aObjEzsignsigner = default(List<EzsignsignerRequestCompound>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "pksEzmaxcustomerCode" is required (not null)
+            if (pksEzmaxcustomerCode == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
+                throw new ArgumentNullException("pksEzmaxcustomerCode is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
             }
-            this.PksEzmaxcustomerCode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PksEzmaxcustomerCode = pksEzmaxcustomerCode;
+            // to ensure "sEzsigntemplatepublicReferenceid" is required (not null)
+            if (sEzsigntemplatepublicReferenceid == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplatepublicReferenceid is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
             }
-            this.SEzsigntemplatepublicReferenceid = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
+            // to ensure "aSEzsigntemplatesignerDescription" is required (not null)
+            if (aSEzsigntemplatesignerDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
+                throw new ArgumentNullException("aSEzsigntemplatesignerDescription is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
             }
-            this.ASEzsigntemplatesignerDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.ASEzsigntemplatesignerDescription = aSEzsigntemplatesignerDescription;
+            // to ensure "aObjEzsignsigner" is required (not null)
+            if (aObjEzsignsigner == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
+                throw new ArgumentNullException("aObjEzsignsigner is a required property for EzsigntemplatepublicCreateEzsignfolderV1Request and cannot be null");
             }
-            this.AObjEzsignsigner = ;
+            this.AObjEzsignsigner = aObjEzsignsigner;
         }
 
         /// <summary>
@@ -130,18 +130,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PksEzmaxcustomerCode (string) maxLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length > 6)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
+                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
             }
 
             // PksEzmaxcustomerCode (string) minLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length < 2)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
+                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
             }
 
             if (this.PksEzmaxcustomerCode != null) {

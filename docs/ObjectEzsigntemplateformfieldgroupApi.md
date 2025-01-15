@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplateformfieldgroupdeleteobjectv1"></a>
 # **EzsigntemplateformfieldgroupDeleteObjectV1**
-> EzsigntemplateformfieldgroupDeleteObjectV1Response EzsigntemplateformfieldgroupDeleteObjectV1 (int pkiEzsigntemplateformfieldgroupID)
+> CommonResponse EzsigntemplateformfieldgroupDeleteObjectV1 (int pkiEzsigntemplateformfieldgroupID)
 
 Delete an existing Ezsigntemplateformfieldgroup
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplateformfieldgroup
-                EzsigntemplateformfieldgroupDeleteObjectV1Response result = apiInstance.EzsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID);
+                CommonResponse result = apiInstance.EzsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplateformfieldgroup
-    ApiResponse<EzsigntemplateformfieldgroupDeleteObjectV1Response> response = apiInstance.EzsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplateformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplateformfieldgroupDeleteObjectV1Response**](EzsigntemplateformfieldgroupDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplateformfieldgroupeditobjectv1"></a>
 # **EzsigntemplateformfieldgroupEditObjectV1**
-> EzsigntemplateformfieldgroupEditObjectV1Response EzsigntemplateformfieldgroupEditObjectV1 (int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request)
+> CommonResponse EzsigntemplateformfieldgroupEditObjectV1 (int pkiEzsigntemplateformfieldgroupID, EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsigntemplateformfieldgroup
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplateformfieldgroup
-                EzsigntemplateformfieldgroupEditObjectV1Response result = apiInstance.EzsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplateformfieldgroup
-    ApiResponse<EzsigntemplateformfieldgroupEditObjectV1Response> response = apiInstance.EzsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplateformfieldgroupEditObjectV1WithHttpInfo(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplateformfieldgroupEditObjectV1Response**](EzsigntemplateformfieldgroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

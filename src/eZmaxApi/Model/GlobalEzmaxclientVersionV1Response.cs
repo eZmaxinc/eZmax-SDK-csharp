@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalEzmaxclientVersionV1Response" /> class.
         /// </summary>
-        /// <param name="">The version on the store (required).</param>
-        /// <param name="">The latest OS version of the system running the application at the time of release (required) (default to &quot;11&quot;).</param>
-        public GlobalEzmaxclientVersionV1Response(string  = default(string), string  = @"11")
+        /// <param name="sEzmaxclientVersion">The version on the store (required).</param>
+        /// <param name="sEzmaxclientOslatestversion">The latest OS version of the system running the application at the time of release (required) (default to &quot;11&quot;).</param>
+        public GlobalEzmaxclientVersionV1Response(string sEzmaxclientVersion = default(string), string sEzmaxclientOslatestversion = @"11")
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzmaxclientVersion" is required (not null)
+            if (sEzmaxclientVersion == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
+                throw new ArgumentNullException("sEzmaxclientVersion is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
             }
-            this.SEzmaxclientVersion = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzmaxclientVersion = sEzmaxclientVersion;
+            // to ensure "sEzmaxclientOslatestversion" is required (not null)
+            if (sEzmaxclientOslatestversion == null)
             {
-                throw new ArgumentNullException(" is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
+                throw new ArgumentNullException("sEzmaxclientOslatestversion is a required property for GlobalEzmaxclientVersionV1Response and cannot be null");
             }
-            this.SEzmaxclientOslatestversion = ;
+            this.SEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

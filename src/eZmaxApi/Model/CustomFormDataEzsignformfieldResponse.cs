@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomFormDataEzsignformfieldResponse" /> class.
         /// </summary>
-        /// <param name="">The Label for the Ezsignformfield (required).</param>
-        /// <param name="">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio (required).</param>
-        public CustomFormDataEzsignformfieldResponse(string  = default(string), string  = default(string))
+        /// <param name="sEzsignformfieldLabel">The Label for the Ezsignformfield (required).</param>
+        /// <param name="sEzsignformfieldValue">The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio (required).</param>
+        public CustomFormDataEzsignformfieldResponse(string sEzsignformfieldLabel = default(string), string sEzsignformfieldValue = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sEzsignformfieldLabel" is required (not null)
+            if (sEzsignformfieldLabel == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignformfieldLabel is a required property for CustomFormDataEzsignformfieldResponse and cannot be null");
             }
-            this.SEzsignformfieldLabel = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzsignformfieldLabel = sEzsignformfieldLabel;
+            // to ensure "sEzsignformfieldValue" is required (not null)
+            if (sEzsignformfieldValue == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomFormDataEzsignformfieldResponse and cannot be null");
+                throw new ArgumentNullException("sEzsignformfieldValue is a required property for CustomFormDataEzsignformfieldResponse and cannot be null");
             }
-            this.SEzsignformfieldValue = ;
+            this.SEzsignformfieldValue = sEzsignformfieldValue;
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

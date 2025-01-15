@@ -40,17 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignatureSignV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The date the Ezsignsignature was signed in folder&#39;s timezone (required).</param>
-        /// <param name="">.</param>
-        public EzsignsignatureSignV1ResponseMPayload(string  = default(string), CustomTimezoneWithCodeResponse  = default(CustomTimezoneWithCodeResponse))
+        /// <param name="dtEzsignsignatureDateInFolderTimezone">The date the Ezsignsignature was signed in folder&#39;s timezone (required).</param>
+        /// <param name="objTimezone">objTimezone.</param>
+        public EzsignsignatureSignV1ResponseMPayload(string dtEzsignsignatureDateInFolderTimezone = default(string), CustomTimezoneWithCodeResponse objTimezone = default(CustomTimezoneWithCodeResponse))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "dtEzsignsignatureDateInFolderTimezone" is required (not null)
+            if (dtEzsignsignatureDateInFolderTimezone == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsignsignatureSignV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("dtEzsignsignatureDateInFolderTimezone is a required property for EzsignsignatureSignV1ResponseMPayload and cannot be null");
             }
-            this.DtEzsignsignatureDateInFolderTimezone = ;
-            this.ObjTimezone = ;
+            this.DtEzsignsignatureDateInFolderTimezone = dtEzsignsignatureDateInFolderTimezone;
+            this.ObjTimezone = objTimezone;
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.DtEzsignsignatureDateInFolderTimezone != null) {
                 // DtEzsignsignatureDateInFolderTimezone (string) pattern

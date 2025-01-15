@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        /// <param name="">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
-        /// <param name="">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
-        public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload(List<int>  = default(List<int>), bool  = default(bool), bool  = default(bool))
+        /// <param name="aPkiEzsigntemplatepackagemembershipID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
+        /// <param name="bEzsigntemplatepackageNeedvalidation">Whether the Ezsignbulksend was automatically modified and needs a manual validation (required).</param>
+        /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
+        public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload(List<int> aPkiEzsigntemplatepackagemembershipID = default(List<int>), bool bEzsigntemplatepackageNeedvalidation = default(bool), bool bEzsignbulksendNeedvalidation = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aPkiEzsigntemplatepackagemembershipID" is required (not null)
+            if (aPkiEzsigntemplatepackagemembershipID == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aPkiEzsigntemplatepackagemembershipID is a required property for EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload and cannot be null");
             }
-            this.APkiEzsigntemplatepackagemembershipID = ;
-            this.BEzsigntemplatepackageNeedvalidation = ;
-            this.BEzsignbulksendNeedvalidation = ;
+            this.APkiEzsigntemplatepackagemembershipID = aPkiEzsigntemplatepackagemembershipID;
+            this.BEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
+            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

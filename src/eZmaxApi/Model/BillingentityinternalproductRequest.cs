@@ -40,14 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Billingentityinternalproduct.</param>
-        /// <param name="">The unique ID of the Ezmaxproduct (required).</param>
-        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductRequest(int  = default(int), int  = default(int), int  = default(int))
+        /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct.</param>
+        /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        public BillingentityinternalproductRequest(int pkiBillingentityinternalproductID = default(int), int fkiEzmaxproductID = default(int), int fkiBillingentityexternalID = default(int))
         {
-            this.FkiEzmaxproductID = ;
-            this.FkiBillingentityexternalID = ;
-            this.PkiBillingentityinternalproductID = ;
+            this.FkiEzmaxproductID = fkiEzmaxproductID;
+            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
+            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
         }
 
         /// <summary>
@@ -103,30 +103,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBillingentityinternalproductID (int) maximum
             if (this.PkiBillingentityinternalproductID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
             }
 
             // PkiBillingentityinternalproductID (int) minimum
             if (this.PkiBillingentityinternalproductID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
             }
 
             // FkiEzmaxproductID (int) minimum
             if (this.FkiEzmaxproductID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
             }
 
             // FkiBillingentityexternalID (int) minimum
             if (this.FkiBillingentityexternalID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
             }
 
             yield break;

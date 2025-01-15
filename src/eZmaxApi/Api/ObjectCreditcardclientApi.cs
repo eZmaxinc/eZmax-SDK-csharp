@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientDeleteObjectV1Response</returns>
-        CreditcardclientDeleteObjectV1Response CreditcardclientDeleteObjectV1(int pkiCreditcardclientID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse CreditcardclientDeleteObjectV1(int pkiCreditcardclientID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Creditcardclient
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientDeleteObjectV1Response</returns>
-        ApiResponse<CreditcardclientDeleteObjectV1Response> CreditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> CreditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Creditcardclient
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientEditObjectV1Response</returns>
-        CreditcardclientEditObjectV1Response CreditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse CreditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Creditcardclient
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientEditObjectV1Response</returns>
-        ApiResponse<CreditcardclientEditObjectV1Response> CreditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> CreditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Creditcardclients and IDs
         /// </summary>
@@ -176,8 +176,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientPatchObjectV1Response</returns>
-        CreditcardclientPatchObjectV1Response CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Patch an existing Creditcardclient
@@ -189,8 +189,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientPatchObjectV1Response</returns>
-        ApiResponse<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -211,7 +211,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientCreateObjectV1Response> CreditcardclientCreateObjectV1Async(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreditcardclientCreateObjectV1Response> CreditcardclientCreateObjectV1Async(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Creditcardclient
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientCreateObjectV1Response>> CreditcardclientCreateObjectV1WithHttpInfoAsync(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreditcardclientCreateObjectV1Response>> CreditcardclientCreateObjectV1WithHttpInfoAsync(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Creditcardclient
         /// </summary>
@@ -235,8 +235,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientDeleteObjectV1Response> CreditcardclientDeleteObjectV1Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> CreditcardclientDeleteObjectV1Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Creditcardclient
@@ -248,8 +248,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientDeleteObjectV1Response>> CreditcardclientDeleteObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> CreditcardclientDeleteObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Creditcardclient
         /// </summary>
@@ -261,8 +261,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientEditObjectV1Response> CreditcardclientEditObjectV1Async(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> CreditcardclientEditObjectV1Async(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Creditcardclient
@@ -275,8 +275,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientEditObjectV1Response>> CreditcardclientEditObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> CreditcardclientEditObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Creditcardclients and IDs
         /// </summary>
@@ -291,7 +291,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientGetAutocompleteV2Response> CreditcardclientGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreditcardclientGetAutocompleteV2Response> CreditcardclientGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Creditcardclients and IDs
@@ -307,7 +307,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetAutocompleteV2Response>> CreditcardclientGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetAutocompleteV2Response>> CreditcardclientGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Creditcardclient list
         /// </summary>
@@ -323,7 +323,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetListV1Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientGetListV1Response> CreditcardclientGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreditcardclientGetListV1Response> CreditcardclientGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Creditcardclient list
@@ -340,7 +340,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetListV1Response>> CreditcardclientGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetListV1Response>> CreditcardclientGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Creditcardclient
         /// </summary>
@@ -352,7 +352,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientGetObjectV2Response> CreditcardclientGetObjectV2Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreditcardclientGetObjectV2Response> CreditcardclientGetObjectV2Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Creditcardclient
@@ -365,7 +365,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetObjectV2Response>> CreditcardclientGetObjectV2WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreditcardclientGetObjectV2Response>> CreditcardclientGetObjectV2WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Patch an existing Creditcardclient
         /// </summary>
@@ -377,8 +377,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientPatchObjectV1Response</returns>
-        System.Threading.Tasks.Task<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Patch an existing Creditcardclient
@@ -391,8 +391,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientPatchObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreditcardclientPatchObjectV1Response>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -597,7 +597,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientCreateObjectV1Response> CreditcardclientCreateObjectV1Async(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreditcardclientCreateObjectV1Response> CreditcardclientCreateObjectV1Async(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CreditcardclientCreateObjectV1Response> localVarResponse = await CreditcardclientCreateObjectV1WithHttpInfoAsync(creditcardclientCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -611,7 +611,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientCreateObjectV1Response>> CreditcardclientCreateObjectV1WithHttpInfoAsync(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientCreateObjectV1Response>> CreditcardclientCreateObjectV1WithHttpInfoAsync(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'creditcardclientCreateObjectV1Request' is set
             if (creditcardclientCreateObjectV1Request == null)
@@ -675,10 +675,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientDeleteObjectV1Response</returns>
-        public CreditcardclientDeleteObjectV1Response CreditcardclientDeleteObjectV1(int pkiCreditcardclientID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse CreditcardclientDeleteObjectV1(int pkiCreditcardclientID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientDeleteObjectV1Response> localVarResponse = CreditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = CreditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID);
             return localVarResponse.Data;
         }
 
@@ -688,8 +688,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<CreditcardclientDeleteObjectV1Response> CreditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> CreditcardclientDeleteObjectV1WithHttpInfo(int pkiCreditcardclientID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -725,7 +725,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CreditcardclientDeleteObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreditcardclientDeleteObjectV1", localVarResponse);
@@ -745,10 +745,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientDeleteObjectV1Response> CreditcardclientDeleteObjectV1Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> CreditcardclientDeleteObjectV1Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientDeleteObjectV1Response> localVarResponse = await CreditcardclientDeleteObjectV1WithHttpInfoAsync(pkiCreditcardclientID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await CreditcardclientDeleteObjectV1WithHttpInfoAsync(pkiCreditcardclientID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -759,8 +759,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientDeleteObjectV1Response>> CreditcardclientDeleteObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> CreditcardclientDeleteObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -797,7 +797,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CreditcardclientDeleteObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -818,10 +818,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientEditObjectV1Response</returns>
-        public CreditcardclientEditObjectV1Response CreditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse CreditcardclientEditObjectV1(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientEditObjectV1Response> localVarResponse = CreditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = CreditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -832,8 +832,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<CreditcardclientEditObjectV1Response> CreditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> CreditcardclientEditObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'creditcardclientEditObjectV1Request' is set
             if (creditcardclientEditObjectV1Request == null)
@@ -877,7 +877,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CreditcardclientEditObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreditcardclientEditObjectV1", localVarResponse);
@@ -898,10 +898,10 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientEditObjectV1Response> CreditcardclientEditObjectV1Async(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> CreditcardclientEditObjectV1Async(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientEditObjectV1Response> localVarResponse = await CreditcardclientEditObjectV1WithHttpInfoAsync(pkiCreditcardclientID, creditcardclientEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await CreditcardclientEditObjectV1WithHttpInfoAsync(pkiCreditcardclientID, creditcardclientEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -913,8 +913,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientEditObjectV1Response>> CreditcardclientEditObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> CreditcardclientEditObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'creditcardclientEditObjectV1Request' is set
             if (creditcardclientEditObjectV1Request == null)
@@ -959,7 +959,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CreditcardclientEditObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1077,7 +1077,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientGetAutocompleteV2Response> CreditcardclientGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreditcardclientGetAutocompleteV2Response> CreditcardclientGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CreditcardclientGetAutocompleteV2Response> localVarResponse = await CreditcardclientGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1094,7 +1094,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetAutocompleteV2Response>> CreditcardclientGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetAutocompleteV2Response>> CreditcardclientGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1272,7 +1272,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientGetListV1Response> CreditcardclientGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreditcardclientGetListV1Response> CreditcardclientGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CreditcardclientGetListV1Response> localVarResponse = await CreditcardclientGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1290,7 +1290,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetListV1Response>> CreditcardclientGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetListV1Response>> CreditcardclientGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1438,7 +1438,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreditcardclientGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientGetObjectV2Response> CreditcardclientGetObjectV2Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreditcardclientGetObjectV2Response> CreditcardclientGetObjectV2Async(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<CreditcardclientGetObjectV2Response> localVarResponse = await CreditcardclientGetObjectV2WithHttpInfoAsync(pkiCreditcardclientID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1452,7 +1452,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreditcardclientGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetObjectV2Response>> CreditcardclientGetObjectV2WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientGetObjectV2Response>> CreditcardclientGetObjectV2WithHttpInfoAsync(int pkiCreditcardclientID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1510,10 +1510,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CreditcardclientPatchObjectV1Response</returns>
-        public CreditcardclientPatchObjectV1Response CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse CreditcardclientPatchObjectV1(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> localVarResponse = CreditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = CreditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -1524,8 +1524,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCreditcardclientID">The unique ID of the Creditcardclient</param>
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CreditcardclientPatchObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> CreditcardclientPatchObjectV1WithHttpInfo(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
             if (creditcardclientPatchObjectV1Request == null)
@@ -1569,7 +1569,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<CreditcardclientPatchObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreditcardclientPatchObjectV1", localVarResponse);
@@ -1590,10 +1590,10 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CreditcardclientPatchObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CreditcardclientPatchObjectV1Response> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> CreditcardclientPatchObjectV1Async(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response> localVarResponse = await CreditcardclientPatchObjectV1WithHttpInfoAsync(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await CreditcardclientPatchObjectV1WithHttpInfoAsync(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1605,8 +1605,8 @@ namespace eZmaxApi.Api
         /// <param name="creditcardclientPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CreditcardclientPatchObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CreditcardclientPatchObjectV1Response>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> CreditcardclientPatchObjectV1WithHttpInfoAsync(int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
             if (creditcardclientPatchObjectV1Request == null)
@@ -1651,7 +1651,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<CreditcardclientPatchObjectV1Response>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<CommonResponse>("/1/object/creditcardclient/{pkiCreditcardclientID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

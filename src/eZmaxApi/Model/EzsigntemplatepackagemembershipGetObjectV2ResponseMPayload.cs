@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload(EzsigntemplatepackagemembershipResponseCompound  = default(EzsigntemplatepackagemembershipResponseCompound))
+        /// <param name="objEzsigntemplatepackagemembership">objEzsigntemplatepackagemembership (required).</param>
+        public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload(EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership = default(EzsigntemplatepackagemembershipResponseCompound))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objEzsigntemplatepackagemembership" is required (not null)
+            if (objEzsigntemplatepackagemembership == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objEzsigntemplatepackagemembership is a required property for EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload and cannot be null");
             }
-            this.ObjEzsigntemplatepackagemembership = ;
+            this.ObjEzsigntemplatepackagemembership = objEzsigntemplatepackagemembership;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

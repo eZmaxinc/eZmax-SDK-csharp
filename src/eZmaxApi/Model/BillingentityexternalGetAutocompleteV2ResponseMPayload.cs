@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityexternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Billingentityexternal autocomplete element response. (required).</param>
-        public BillingentityexternalGetAutocompleteV2ResponseMPayload(List<BillingentityexternalAutocompleteElementResponse>  = default(List<BillingentityexternalAutocompleteElementResponse>))
+        /// <param name="aObjBillingentityexternal">An array of Billingentityexternal autocomplete element response. (required).</param>
+        public BillingentityexternalGetAutocompleteV2ResponseMPayload(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal = default(List<BillingentityexternalAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjBillingentityexternal" is required (not null)
+            if (aObjBillingentityexternal == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityexternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjBillingentityexternal is a required property for BillingentityexternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjBillingentityexternal = ;
+            this.AObjBillingentityexternal = aObjBillingentityexternal;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

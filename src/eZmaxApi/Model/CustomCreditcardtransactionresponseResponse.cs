@@ -52,33 +52,33 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomCreditcardtransactionresponseResponse" /> class.
         /// </summary>
-        /// <param name="">The ISO code (required).</param>
-        /// <param name="">The response code (required).</param>
-        /// <param name="">The terminal response message (required).</param>
-        /// <param name="">.</param>
-        /// <param name="">.</param>
-        public CustomCreditcardtransactionresponseResponse(string  = default(string), string  = default(string), string  = default(string), FieldECreditcardtransactionAvsresult?  = default(FieldECreditcardtransactionAvsresult?), FieldECreditcardtransactionCvdresult?  = default(FieldECreditcardtransactionCvdresult?))
+        /// <param name="sCreditcardtransactionISOcode">The ISO code (required).</param>
+        /// <param name="sCreditcardtransactionResponsecode">The response code (required).</param>
+        /// <param name="sCreditcardtransactionResponseterminalmessage">The terminal response message (required).</param>
+        /// <param name="eCreditcardtransactionAvsresult">eCreditcardtransactionAvsresult.</param>
+        /// <param name="eCreditcardtransactionCvdresult">eCreditcardtransactionCvdresult.</param>
+        public CustomCreditcardtransactionresponseResponse(string sCreditcardtransactionISOcode = default(string), string sCreditcardtransactionResponsecode = default(string), string sCreditcardtransactionResponseterminalmessage = default(string), FieldECreditcardtransactionAvsresult? eCreditcardtransactionAvsresult = default(FieldECreditcardtransactionAvsresult?), FieldECreditcardtransactionCvdresult? eCreditcardtransactionCvdresult = default(FieldECreditcardtransactionCvdresult?))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sCreditcardtransactionISOcode" is required (not null)
+            if (sCreditcardtransactionISOcode == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
+                throw new ArgumentNullException("sCreditcardtransactionISOcode is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
             }
-            this.SCreditcardtransactionISOcode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCreditcardtransactionISOcode = sCreditcardtransactionISOcode;
+            // to ensure "sCreditcardtransactionResponsecode" is required (not null)
+            if (sCreditcardtransactionResponsecode == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
+                throw new ArgumentNullException("sCreditcardtransactionResponsecode is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
             }
-            this.SCreditcardtransactionResponsecode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SCreditcardtransactionResponsecode = sCreditcardtransactionResponsecode;
+            // to ensure "sCreditcardtransactionResponseterminalmessage" is required (not null)
+            if (sCreditcardtransactionResponseterminalmessage == null)
             {
-                throw new ArgumentNullException(" is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
+                throw new ArgumentNullException("sCreditcardtransactionResponseterminalmessage is a required property for CustomCreditcardtransactionresponseResponse and cannot be null");
             }
-            this.SCreditcardtransactionResponseterminalmessage = ;
-            this.ECreditcardtransactionAvsresult = ;
-            this.ECreditcardtransactionCvdresult = ;
+            this.SCreditcardtransactionResponseterminalmessage = sCreditcardtransactionResponseterminalmessage;
+            this.ECreditcardtransactionAvsresult = eCreditcardtransactionAvsresult;
+            this.ECreditcardtransactionCvdresult = eCreditcardtransactionCvdresult;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SCreditcardtransactionISOcode != null) {
                 // SCreditcardtransactionISOcode (string) pattern

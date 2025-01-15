@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGenerateDelegatedCredentialsV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name=""> (required).</param>
-        public ApikeyGenerateDelegatedCredentialsV1ResponseMPayload(CustomApikey  = default(CustomApikey))
+        /// <param name="objApikey">objApikey (required).</param>
+        public ApikeyGenerateDelegatedCredentialsV1ResponseMPayload(CustomApikey objApikey = default(CustomApikey))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "objApikey" is required (not null)
+            if (objApikey == null)
             {
-                throw new ArgumentNullException(" is a required property for ApikeyGenerateDelegatedCredentialsV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("objApikey is a required property for ApikeyGenerateDelegatedCredentialsV1ResponseMPayload and cannot be null");
             }
-            this.ObjApikey = ;
+            this.ObjApikey = objApikey;
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

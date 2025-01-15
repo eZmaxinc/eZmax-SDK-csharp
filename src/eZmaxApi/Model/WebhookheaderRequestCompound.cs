@@ -40,24 +40,24 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookheaderRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Webhookheader.</param>
-        /// <param name="">The Name of the Webhookheader (required).</param>
-        /// <param name="">The Value of the Webhookheader (required).</param>
-        public WebhookheaderRequestCompound(int  = default(int), string  = default(string), string  = default(string))
+        /// <param name="pkiWebhookheaderID">The unique ID of the Webhookheader.</param>
+        /// <param name="sWebhookheaderName">The Name of the Webhookheader (required).</param>
+        /// <param name="sWebhookheaderValue">The Value of the Webhookheader (required).</param>
+        public WebhookheaderRequestCompound(int pkiWebhookheaderID = default(int), string sWebhookheaderName = default(string), string sWebhookheaderValue = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sWebhookheaderName" is required (not null)
+            if (sWebhookheaderName == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookheaderRequestCompound and cannot be null");
+                throw new ArgumentNullException("sWebhookheaderName is a required property for WebhookheaderRequestCompound and cannot be null");
             }
-            this.SWebhookheaderName = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SWebhookheaderName = sWebhookheaderName;
+            // to ensure "sWebhookheaderValue" is required (not null)
+            if (sWebhookheaderValue == null)
             {
-                throw new ArgumentNullException(" is a required property for WebhookheaderRequestCompound and cannot be null");
+                throw new ArgumentNullException("sWebhookheaderValue is a required property for WebhookheaderRequestCompound and cannot be null");
             }
-            this.SWebhookheaderValue = ;
-            this.PkiWebhookheaderID = ;
+            this.SWebhookheaderValue = sWebhookheaderValue;
+            this.PkiWebhookheaderID = pkiWebhookheaderID;
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SWebhookheaderName != null) {
                 // SWebhookheaderName (string) pattern

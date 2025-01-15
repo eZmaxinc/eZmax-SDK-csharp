@@ -40,26 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlaccountcontainerAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="">The Code for the Glaccountcontainer (required).</param>
-        /// <param name="">The Description for the Glaccountcontainer in the language of the requester (required).</param>
-        /// <param name="">Whether the glaccountcontainer is active or not (required).</param>
-        public GlaccountcontainerAutocompleteElementResponse(int  = default(int), string  = default(string), string  = default(string), bool  = default(bool))
+        /// <param name="pkiGlaccountcontainerID">The unique ID of the Glaccountcontainer (required).</param>
+        /// <param name="sGlaccountcontainerLongcode">The Code for the Glaccountcontainer (required).</param>
+        /// <param name="sGlaccountcontainerLongdescriptionX">The Description for the Glaccountcontainer in the language of the requester (required).</param>
+        /// <param name="bGlaccountcontainerIsactive">Whether the glaccountcontainer is active or not (required).</param>
+        public GlaccountcontainerAutocompleteElementResponse(int pkiGlaccountcontainerID = default(int), string sGlaccountcontainerLongcode = default(string), string sGlaccountcontainerLongdescriptionX = default(string), bool bGlaccountcontainerIsactive = default(bool))
         {
-            this.PkiGlaccountcontainerID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.PkiGlaccountcontainerID = pkiGlaccountcontainerID;
+            // to ensure "sGlaccountcontainerLongcode" is required (not null)
+            if (sGlaccountcontainerLongcode == null)
             {
-                throw new ArgumentNullException(" is a required property for GlaccountcontainerAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sGlaccountcontainerLongcode is a required property for GlaccountcontainerAutocompleteElementResponse and cannot be null");
             }
-            this.SGlaccountcontainerLongcode = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SGlaccountcontainerLongcode = sGlaccountcontainerLongcode;
+            // to ensure "sGlaccountcontainerLongdescriptionX" is required (not null)
+            if (sGlaccountcontainerLongdescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for GlaccountcontainerAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sGlaccountcontainerLongdescriptionX is a required property for GlaccountcontainerAutocompleteElementResponse and cannot be null");
             }
-            this.SGlaccountcontainerLongdescriptionX = ;
-            this.BGlaccountcontainerIsactive = ;
+            this.SGlaccountcontainerLongdescriptionX = sGlaccountcontainerLongdescriptionX;
+            this.BGlaccountcontainerIsactive = bGlaccountcontainerIsactive;
         }
 
         /// <summary>
@@ -124,12 +124,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiGlaccountcontainerID (int) minimum
             if (this.PkiGlaccountcontainerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountcontainerID" });
+                yield return new ValidationResult("Invalid value for PkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountcontainerID" });
             }
 
             yield break;

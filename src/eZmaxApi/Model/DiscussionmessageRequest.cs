@@ -40,21 +40,21 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageRequest" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Discussionmessage.</param>
-        /// <param name="">The unique ID of the Discussion (required).</param>
-        /// <param name="">The unique ID of the Discussionmembership.</param>
-        /// <param name="">The content of the Discussionmessage (required).</param>
-        public DiscussionmessageRequest(int  = default(int), int  = default(int), int  = default(int), string  = default(string))
+        /// <param name="pkiDiscussionmessageID">The unique ID of the Discussionmessage.</param>
+        /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
+        /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
+        /// <param name="tDiscussionmessageContent">The content of the Discussionmessage (required).</param>
+        public DiscussionmessageRequest(int pkiDiscussionmessageID = default(int), int fkiDiscussionID = default(int), int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string))
         {
-            this.FkiDiscussionID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiDiscussionID = fkiDiscussionID;
+            // to ensure "tDiscussionmessageContent" is required (not null)
+            if (tDiscussionmessageContent == null)
             {
-                throw new ArgumentNullException(" is a required property for DiscussionmessageRequest and cannot be null");
+                throw new ArgumentNullException("tDiscussionmessageContent is a required property for DiscussionmessageRequest and cannot be null");
             }
-            this.TDiscussionmessageContent = ;
-            this.PkiDiscussionmessageID = ;
-            this.FkiDiscussionmembershipIDActionrequired = ;
+            this.TDiscussionmessageContent = tDiscussionmessageContent;
+            this.PkiDiscussionmessageID = pkiDiscussionmessageID;
+            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
         }
 
         /// <summary>
@@ -119,42 +119,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDiscussionmessageID (int) maximum
             if (this.PkiDiscussionmessageID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmessageID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmessageID" });
             }
 
             // PkiDiscussionmessageID (int) minimum
             if (this.PkiDiscussionmessageID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmessageID" });
+                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmessageID" });
             }
 
             // FkiDiscussionID (int) maximum
             if (this.FkiDiscussionID > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
             }
 
             // FkiDiscussionID (int) minimum
             if (this.FkiDiscussionID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) maximum
             if (this.FkiDiscussionmembershipIDActionrequired > (int)16777215)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) minimum
             if (this.FkiDiscussionmembershipIDActionrequired < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             if (this.TDiscussionmessageContent != null) {

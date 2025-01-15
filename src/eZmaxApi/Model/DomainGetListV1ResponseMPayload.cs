@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">The number of rows returned (required).</param>
-        /// <param name="">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name=""> (required).</param>
-        public DomainGetListV1ResponseMPayload(int  = default(int), int  = default(int), List<DomainListElement>  = default(List<DomainListElement>))
+        /// <param name="iRowReturned">The number of rows returned (required).</param>
+        /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
+        /// <param name="aObjDomain">aObjDomain (required).</param>
+        public DomainGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<DomainListElement> aObjDomain = default(List<DomainListElement>))
         {
-            this.IRowReturned = ;
-            this.IRowFiltered = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
+            // to ensure "aObjDomain" is required (not null)
+            if (aObjDomain == null)
             {
-                throw new ArgumentNullException(" is a required property for DomainGetListV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjDomain is a required property for DomainGetListV1ResponseMPayload and cannot be null");
             }
-            this.AObjDomain = ;
+            this.AObjDomain = aObjDomain;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

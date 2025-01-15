@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentDeclineToSignV1Request" /> class.
         /// </summary>
-        /// <param name="">Reason for refusal (required).</param>
-        public EzsigndocumentDeclineToSignV1Request(string  = default(string))
+        /// <param name="sReason">Reason for refusal (required).</param>
+        public EzsigndocumentDeclineToSignV1Request(string sReason = default(string))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sReason" is required (not null)
+            if (sReason == null)
             {
-                throw new ArgumentNullException(" is a required property for EzsigndocumentDeclineToSignV1Request and cannot be null");
+                throw new ArgumentNullException("sReason is a required property for EzsigndocumentDeclineToSignV1Request and cannot be null");
             }
-            this.SReason = ;
+            this.SReason = sReason;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SReason != null) {
                 // SReason (string) pattern

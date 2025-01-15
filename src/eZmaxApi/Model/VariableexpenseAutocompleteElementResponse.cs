@@ -40,19 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="">The description of the Variableexpense in the language of the requester (required).</param>
-        /// <param name="">The unique ID of the Variableexpense (required).</param>
-        /// <param name="">Whether the variableexpense is active or not (required).</param>
-        public VariableexpenseAutocompleteElementResponse(string  = default(string), int  = default(int), bool  = default(bool))
+        /// <param name="sVariableexpenseDescriptionX">The description of the Variableexpense in the language of the requester (required).</param>
+        /// <param name="pkiVariableexpenseID">The unique ID of the Variableexpense (required).</param>
+        /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not (required).</param>
+        public VariableexpenseAutocompleteElementResponse(string sVariableexpenseDescriptionX = default(string), int pkiVariableexpenseID = default(int), bool bVariableexpenseIsactive = default(bool))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "sVariableexpenseDescriptionX" is required (not null)
+            if (sVariableexpenseDescriptionX == null)
             {
-                throw new ArgumentNullException(" is a required property for VariableexpenseAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sVariableexpenseDescriptionX is a required property for VariableexpenseAutocompleteElementResponse and cannot be null");
             }
-            this.SVariableexpenseDescriptionX = ;
-            this.PkiVariableexpenseID = ;
-            this.BVariableexpenseIsactive = ;
+            this.SVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
+            this.PkiVariableexpenseID = pkiVariableexpenseID;
+            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SVariableexpenseDescriptionX != null) {
                 // SVariableexpenseDescriptionX (string) pattern
@@ -122,13 +122,13 @@ namespace eZmaxApi.Model
             // PkiVariableexpenseID (int) maximum
             if (this.PkiVariableexpenseID > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
             }
 
             // PkiVariableexpenseID (int) minimum
             if (this.PkiVariableexpenseID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
             }
 
             yield break;

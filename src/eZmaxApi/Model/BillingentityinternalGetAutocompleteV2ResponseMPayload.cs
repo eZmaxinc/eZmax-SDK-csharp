@@ -40,15 +40,15 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalGetAutocompleteV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="">An array of Billingentityinternal object containing the description, ID and active status about the element. (required).</param>
-        public BillingentityinternalGetAutocompleteV2ResponseMPayload(List<BillingentityinternalAutocompleteElementResponse>  = default(List<BillingentityinternalAutocompleteElementResponse>))
+        /// <param name="aObjBillingentityinternal">An array of Billingentityinternal object containing the description, ID and active status about the element. (required).</param>
+        public BillingentityinternalGetAutocompleteV2ResponseMPayload(List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal = default(List<BillingentityinternalAutocompleteElementResponse>))
         {
-            // to ensure "" is required (not null)
-            if ( == null)
+            // to ensure "aObjBillingentityinternal" is required (not null)
+            if (aObjBillingentityinternal == null)
             {
-                throw new ArgumentNullException(" is a required property for BillingentityinternalGetAutocompleteV2ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjBillingentityinternal is a required property for BillingentityinternalGetAutocompleteV2ResponseMPayload and cannot be null");
             }
-            this.AObjBillingentityinternal = ;
+            this.AObjBillingentityinternal = aObjBillingentityinternal;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

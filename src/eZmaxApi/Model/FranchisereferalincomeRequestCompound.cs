@@ -40,76 +40,76 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FranchisereferalincomeRequestCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Franchisereferalincome.</param>
-        /// <param name="">The unique ID of the Franchisebroker (required).</param>
-        /// <param name="">The unique ID of the Franchisereferalincomeprogram (required).</param>
-        /// <param name="">The unique ID of the Period (required).</param>
-        /// <param name="">The loan amount (required).</param>
-        /// <param name="">The amount that will be given to the franchise (required).</param>
-        /// <param name="">The amount that will be kept by the franchisor (required).</param>
-        /// <param name="">The amount that will be given to the agent (required).</param>
-        /// <param name="">The date the amounts were disbursed (required).</param>
-        /// <param name="">Comment about the transaction (required).</param>
-        /// <param name="">The unique ID of the Franchisereoffice (required).</param>
-        /// <param name=""> (required).</param>
-        /// <param name="">.</param>
-        /// <param name=""> (required).</param>
-        public FranchisereferalincomeRequestCompound(int  = default(int), int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), string  = default(string), int  = default(int), string  = default(string), AddressRequest  = default(AddressRequest), List<ContactRequestCompound>  = default(List<ContactRequestCompound>))
+        /// <param name="pkiFranchisereferalincomeID">The unique ID of the Franchisereferalincome.</param>
+        /// <param name="fkiFranchisebrokerID">The unique ID of the Franchisebroker (required).</param>
+        /// <param name="fkiFranchisereferalincomeprogramID">The unique ID of the Franchisereferalincomeprogram (required).</param>
+        /// <param name="fkiPeriodID">The unique ID of the Period (required).</param>
+        /// <param name="dFranchisereferalincomeLoan">The loan amount (required).</param>
+        /// <param name="dFranchisereferalincomeFranchiseamount">The amount that will be given to the franchise (required).</param>
+        /// <param name="dFranchisereferalincomeFranchisoramount">The amount that will be kept by the franchisor (required).</param>
+        /// <param name="dFranchisereferalincomeAgentamount">The amount that will be given to the agent (required).</param>
+        /// <param name="dtFranchisereferalincomeDisbursed">The date the amounts were disbursed (required).</param>
+        /// <param name="tFranchisereferalincomeComment">Comment about the transaction (required).</param>
+        /// <param name="fkiFranchiseofficeID">The unique ID of the Franchisereoffice (required).</param>
+        /// <param name="sFranchisereferalincomeRemoteid">sFranchisereferalincomeRemoteid (required).</param>
+        /// <param name="objAddress">objAddress.</param>
+        /// <param name="aObjContact">aObjContact (required).</param>
+        public FranchisereferalincomeRequestCompound(int pkiFranchisereferalincomeID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchisereferalincomeprogramID = default(int), int fkiPeriodID = default(int), string dFranchisereferalincomeLoan = default(string), string dFranchisereferalincomeFranchiseamount = default(string), string dFranchisereferalincomeFranchisoramount = default(string), string dFranchisereferalincomeAgentamount = default(string), string dtFranchisereferalincomeDisbursed = default(string), string tFranchisereferalincomeComment = default(string), int fkiFranchiseofficeID = default(int), string sFranchisereferalincomeRemoteid = default(string), AddressRequest objAddress = default(AddressRequest), List<ContactRequestCompound> aObjContact = default(List<ContactRequestCompound>))
         {
-            this.FkiFranchisebrokerID = ;
-            this.FkiFranchisereferalincomeprogramID = ;
-            this.FkiPeriodID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiFranchisebrokerID = fkiFranchisebrokerID;
+            this.FkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
+            this.FkiPeriodID = fkiPeriodID;
+            // to ensure "dFranchisereferalincomeLoan" is required (not null)
+            if (dFranchisereferalincomeLoan == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("dFranchisereferalincomeLoan is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeLoan = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
+            // to ensure "dFranchisereferalincomeFranchiseamount" is required (not null)
+            if (dFranchisereferalincomeFranchiseamount == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("dFranchisereferalincomeFranchiseamount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeFranchiseamount = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
+            // to ensure "dFranchisereferalincomeFranchisoramount" is required (not null)
+            if (dFranchisereferalincomeFranchisoramount == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("dFranchisereferalincomeFranchisoramount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeFranchisoramount = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
+            // to ensure "dFranchisereferalincomeAgentamount" is required (not null)
+            if (dFranchisereferalincomeAgentamount == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("dFranchisereferalincomeAgentamount is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DFranchisereferalincomeAgentamount = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
+            // to ensure "dtFranchisereferalincomeDisbursed" is required (not null)
+            if (dtFranchisereferalincomeDisbursed == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("dtFranchisereferalincomeDisbursed is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.DtFranchisereferalincomeDisbursed = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.DtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
+            // to ensure "tFranchisereferalincomeComment" is required (not null)
+            if (tFranchisereferalincomeComment == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("tFranchisereferalincomeComment is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.TFranchisereferalincomeComment = ;
-            this.FkiFranchiseofficeID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.TFranchisereferalincomeComment = tFranchisereferalincomeComment;
+            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
+            // to ensure "sFranchisereferalincomeRemoteid" is required (not null)
+            if (sFranchisereferalincomeRemoteid == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("sFranchisereferalincomeRemoteid is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.SFranchisereferalincomeRemoteid = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
+            // to ensure "aObjContact" is required (not null)
+            if (aObjContact == null)
             {
-                throw new ArgumentNullException(" is a required property for FranchisereferalincomeRequestCompound and cannot be null");
+                throw new ArgumentNullException("aObjContact is a required property for FranchisereferalincomeRequestCompound and cannot be null");
             }
-            this.AObjContact = ;
-            this.PkiFranchisereferalincomeID = ;
-            this.ObjAddress = ;
+            this.AObjContact = aObjContact;
+            this.PkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+            this.ObjAddress = objAddress;
         }
 
         /// <summary>
@@ -258,36 +258,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiFranchisereferalincomeID (int) minimum
             if (this.PkiFranchisereferalincomeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiFranchisereferalincomeID, must be a value greater than or equal to 0.", new [] { "PkiFranchisereferalincomeID" });
+                yield return new ValidationResult("Invalid value for PkiFranchisereferalincomeID, must be a value greater than or equal to 0.", new [] { "PkiFranchisereferalincomeID" });
             }
 
             // FkiFranchisebrokerID (int) minimum
             if (this.FkiFranchisebrokerID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
             }
 
             // FkiFranchisereferalincomeprogramID (int) minimum
             if (this.FkiFranchisereferalincomeprogramID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchisereferalincomeprogramID, must be a value greater than or equal to 0.", new [] { "FkiFranchisereferalincomeprogramID" });
+                yield return new ValidationResult("Invalid value for FkiFranchisereferalincomeprogramID, must be a value greater than or equal to 0.", new [] { "FkiFranchisereferalincomeprogramID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             // FkiFranchiseofficeID (int) minimum
             if (this.FkiFranchiseofficeID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
             }
 
             yield break;

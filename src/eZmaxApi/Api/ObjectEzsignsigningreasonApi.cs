@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason</param>
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsigningreasonEditObjectV1Response</returns>
-        EzsignsigningreasonEditObjectV1Response EzsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignsigningreason
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason</param>
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsigningreasonEditObjectV1Response</returns>
-        ApiResponse<EzsignsigningreasonEditObjectV1Response> EzsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezsignsigningreasons and IDs
         /// </summary>
@@ -169,7 +169,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsigningreasonCreateObjectV1Response> EzsignsigningreasonCreateObjectV1Async(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsigningreasonCreateObjectV1Response> EzsignsigningreasonCreateObjectV1Async(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create a new Ezsignsigningreason
@@ -182,7 +182,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonCreateObjectV1Response>> EzsignsigningreasonCreateObjectV1WithHttpInfoAsync(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonCreateObjectV1Response>> EzsignsigningreasonCreateObjectV1WithHttpInfoAsync(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsignsigningreason
         /// </summary>
@@ -194,8 +194,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsigningreasonEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsigningreasonEditObjectV1Response> EzsignsigningreasonEditObjectV1Async(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsignsigningreasonEditObjectV1Async(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignsigningreason
@@ -208,8 +208,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsigningreasonEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonEditObjectV1Response>> EzsignsigningreasonEditObjectV1WithHttpInfoAsync(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignsigningreasonEditObjectV1WithHttpInfoAsync(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsignsigningreasons and IDs
         /// </summary>
@@ -224,7 +224,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<EzsignsigningreasonGetAutocompleteV2Response> EzsignsigningreasonGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsigningreasonGetAutocompleteV2Response> EzsignsigningreasonGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignsigningreasons and IDs
@@ -240,7 +240,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetAutocompleteV2Response>> EzsignsigningreasonGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetAutocompleteV2Response>> EzsignsigningreasonGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Ezsignsigningreason list
         /// </summary>
@@ -256,7 +256,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetListV1Response</returns>
-        System.Threading.Tasks.Task<EzsignsigningreasonGetListV1Response> EzsignsigningreasonGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsigningreasonGetListV1Response> EzsignsigningreasonGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve Ezsignsigningreason list
@@ -273,7 +273,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetListV1Response>> EzsignsigningreasonGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetListV1Response>> EzsignsigningreasonGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignsigningreason
         /// </summary>
@@ -285,7 +285,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<EzsignsigningreasonGetObjectV2Response> EzsignsigningreasonGetObjectV2Async(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsignsigningreasonGetObjectV2Response> EzsignsigningreasonGetObjectV2Async(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retrieve an existing Ezsignsigningreason
@@ -298,7 +298,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetObjectV2Response>> EzsignsigningreasonGetObjectV2WithHttpInfoAsync(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsignsigningreasonGetObjectV2Response>> EzsignsigningreasonGetObjectV2WithHttpInfoAsync(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -503,7 +503,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsigningreasonCreateObjectV1Response> EzsignsigningreasonCreateObjectV1Async(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsigningreasonCreateObjectV1Response> EzsignsigningreasonCreateObjectV1Async(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsigningreasonCreateObjectV1Response> localVarResponse = await EzsignsigningreasonCreateObjectV1WithHttpInfoAsync(ezsignsigningreasonCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -517,7 +517,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonCreateObjectV1Response>> EzsignsigningreasonCreateObjectV1WithHttpInfoAsync(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonCreateObjectV1Response>> EzsignsigningreasonCreateObjectV1WithHttpInfoAsync(EzsignsigningreasonCreateObjectV1Request ezsignsigningreasonCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsigningreasonCreateObjectV1Request' is set
             if (ezsignsigningreasonCreateObjectV1Request == null)
@@ -582,10 +582,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason</param>
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsignsigningreasonEditObjectV1Response</returns>
-        public EzsignsigningreasonEditObjectV1Response EzsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsignsigningreasonEditObjectV1(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsignsigningreasonEditObjectV1Response> localVarResponse = EzsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -596,8 +596,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason</param>
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsignsigningreasonEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsignsigningreasonEditObjectV1Response> EzsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignsigningreasonEditObjectV1WithHttpInfo(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignsigningreasonEditObjectV1Request' is set
             if (ezsignsigningreasonEditObjectV1Request == null)
@@ -641,7 +641,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<EzsignsigningreasonEditObjectV1Response>("/1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignsigningreasonEditObjectV1", localVarResponse);
@@ -662,10 +662,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsignsigningreasonEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsigningreasonEditObjectV1Response> EzsignsigningreasonEditObjectV1Async(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsignsigningreasonEditObjectV1Async(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsignsigningreasonEditObjectV1Response> localVarResponse = await EzsignsigningreasonEditObjectV1WithHttpInfoAsync(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignsigningreasonEditObjectV1WithHttpInfoAsync(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +677,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignsigningreasonEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsignsigningreasonEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonEditObjectV1Response>> EzsignsigningreasonEditObjectV1WithHttpInfoAsync(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignsigningreasonEditObjectV1WithHttpInfoAsync(int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignsigningreasonEditObjectV1Request' is set
             if (ezsignsigningreasonEditObjectV1Request == null)
@@ -723,7 +723,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignsigningreasonEditObjectV1Response>("/1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -841,7 +841,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsigningreasonGetAutocompleteV2Response> EzsignsigningreasonGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsigningreasonGetAutocompleteV2Response> EzsignsigningreasonGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetAutocompleteV2Response> localVarResponse = await EzsignsigningreasonGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -858,7 +858,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetAutocompleteV2Response>> EzsignsigningreasonGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetAutocompleteV2Response>> EzsignsigningreasonGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -1036,7 +1036,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsigningreasonGetListV1Response> EzsignsigningreasonGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsigningreasonGetListV1Response> EzsignsigningreasonGetListV1Async(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetListV1Response> localVarResponse = await EzsignsigningreasonGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1054,7 +1054,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetListV1Response>> EzsignsigningreasonGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetListV1Response>> EzsignsigningreasonGetListV1WithHttpInfoAsync(string? eOrderBy = default(string?), int? iRowMax = default(int?), int? iRowOffset = default(int?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), string? sFilter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -1202,7 +1202,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsignsigningreasonGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<EzsignsigningreasonGetObjectV2Response> EzsignsigningreasonGetObjectV2Async(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsignsigningreasonGetObjectV2Response> EzsignsigningreasonGetObjectV2Async(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetObjectV2Response> localVarResponse = await EzsignsigningreasonGetObjectV2WithHttpInfoAsync(pkiEzsignsigningreasonID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1216,7 +1216,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsignsigningreasonGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetObjectV2Response>> EzsignsigningreasonGetObjectV2WithHttpInfoAsync(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignsigningreasonGetObjectV2Response>> EzsignsigningreasonGetObjectV2WithHttpInfoAsync(int pkiEzsignsigningreasonID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();

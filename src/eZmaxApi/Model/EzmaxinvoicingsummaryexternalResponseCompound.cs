@@ -40,35 +40,35 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryexternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
-        /// <param name="">The unique ID of the Ezmaxinvoicing.</param>
-        /// <param name="">The unique ID of the Billingentityexternal (required).</param>
-        /// <param name="">The description of the Billingentityexternal (required).</param>
-        /// <param name="">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
-        /// <param name=""> (required).</param>
-        public EzmaxinvoicingsummaryexternalResponseCompound(int  = default(int), int  = default(int), int  = default(int), string  = default(string), string  = default(string), List<EzmaxinvoicingsummaryexternaldetailResponseCompound>  = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
+        /// <param name="pkiEzmaxinvoicingsummaryexternalID">The unique ID of the Ezmaxinvoicingsummaryexternal.</param>
+        /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
+        /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
+        /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
+        /// <param name="sEzmaxinvoicingsummaryexternalDescription">The description of the Ezmaxinvoicingsummaryexternal (required).</param>
+        /// <param name="aObjEzmaxinvoicingsummaryexternaldetail">aObjEzmaxinvoicingsummaryexternaldetail (required).</param>
+        public EzmaxinvoicingsummaryexternalResponseCompound(int pkiEzmaxinvoicingsummaryexternalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string sEzmaxinvoicingsummaryexternalDescription = default(string), List<EzmaxinvoicingsummaryexternaldetailResponseCompound> aObjEzmaxinvoicingsummaryexternaldetail = default(List<EzmaxinvoicingsummaryexternaldetailResponseCompound>))
         {
-            this.FkiBillingentityexternalID = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
+            // to ensure "sBillingentityexternalDescription" is required (not null)
+            if (sBillingentityexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.SBillingentityexternalDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
+            // to ensure "sEzmaxinvoicingsummaryexternalDescription" is required (not null)
+            if (sEzmaxinvoicingsummaryexternalDescription == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException("sEzmaxinvoicingsummaryexternalDescription is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.SEzmaxinvoicingsummaryexternalDescription = ;
-            // to ensure "" is required (not null)
-            if ( == null)
+            this.SEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
+            // to ensure "aObjEzmaxinvoicingsummaryexternaldetail" is required (not null)
+            if (aObjEzmaxinvoicingsummaryexternaldetail == null)
             {
-                throw new ArgumentNullException(" is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
+                throw new ArgumentNullException("aObjEzmaxinvoicingsummaryexternaldetail is a required property for EzmaxinvoicingsummaryexternalResponseCompound and cannot be null");
             }
-            this.AObjEzmaxinvoicingsummaryexternaldetail = ;
-            this.PkiEzmaxinvoicingsummaryexternalID = ;
-            this.FkiEzmaxinvoicingID = ;
+            this.AObjEzmaxinvoicingsummaryexternaldetail = aObjEzmaxinvoicingsummaryexternaldetail;
+            this.PkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
+            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
         }
 
         /// <summary>
@@ -149,30 +149,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicingsummaryexternalID (int) minimum
             if (this.PkiEzmaxinvoicingsummaryexternalID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternalID" });
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternalID" });
             }
 
             // FkiEzmaxinvoicingID (int) minimum
             if (this.FkiEzmaxinvoicingID < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
             }
 
             // FkiBillingentityexternalID (int) minimum
             if (this.FkiBillingentityexternalID < (int)1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
             }
 
             // SEzmaxinvoicingsummaryexternalDescription (string) maxLength
             if (this.SEzmaxinvoicingsummaryexternalDescription != null && this.SEzmaxinvoicingsummaryexternalDescription.Length > 70)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryexternalDescription, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryexternalDescription" });
+                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryexternalDescription, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryexternalDescription" });
             }
 
             yield break;
