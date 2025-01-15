@@ -79,6 +79,17 @@ namespace eZmaxApi.Test.Api
         }
 
         /// <summary>
+        /// Test ActivesessionGetCurrentV2
+        /// </summary>
+        [Fact]
+        public void ActivesessionGetCurrentV2Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ActivesessionGetCurrentV2();
+            //Assert.IsType<ActivesessionGetCurrentV2Response>(response);
+        }
+
+        /// <summary>
         /// Test ActivesessionGetListV1
         /// </summary>
         [Fact]

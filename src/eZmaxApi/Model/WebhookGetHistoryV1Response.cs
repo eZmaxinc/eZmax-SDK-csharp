@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory (required).</param>
-        public WebhookGetHistoryV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), Object mPayload = default(Object))
+        /// <param name="mPayload">mPayload (required).</param>
+        public WebhookGetHistoryV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), WebhookGetHistoryV1ResponseMPayload mPayload = default(WebhookGetHistoryV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,11 +73,10 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public Object MPayload { get; set; }
+        public WebhookGetHistoryV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

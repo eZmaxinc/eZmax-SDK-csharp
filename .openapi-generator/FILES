@@ -8,6 +8,8 @@ docs/ActivesessionGenerateFederationTokenV1Response.md
 docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionGetCurrentV2Response.md
+docs/ActivesessionGetCurrentV2ResponseMPayload.md
 docs/ActivesessionGetListV1Response.md
 docs/ActivesessionGetListV1ResponseMPayload.md
 docs/ActivesessionListElement.md
@@ -1863,6 +1865,8 @@ src/eZmaxApi.Test/Model/ActivesessionGenerateFederationTokenV1ResponseMPayloadTe
 src/eZmaxApi.Test/Model/ActivesessionGenerateFederationTokenV1ResponseTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetCurrentV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetCurrentV1ResponseTests.cs
+src/eZmaxApi.Test/Model/ActivesessionGetCurrentV2ResponseMPayloadTests.cs
+src/eZmaxApi.Test/Model/ActivesessionGetCurrentV2ResponseTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetListV1ResponseMPayloadTests.cs
 src/eZmaxApi.Test/Model/ActivesessionGetListV1ResponseTests.cs
 src/eZmaxApi.Test/Model/ActivesessionListElementTests.cs
@@ -3626,6 +3630,8 @@ src/eZmaxApi/Model/ActivesessionGenerateFederationTokenV1Response.cs
 src/eZmaxApi/Model/ActivesessionGenerateFederationTokenV1ResponseMPayload.cs
 src/eZmaxApi/Model/ActivesessionGetCurrentV1Response.cs
 src/eZmaxApi/Model/ActivesessionGetCurrentV1ResponseMPayload.cs
+src/eZmaxApi/Model/ActivesessionGetCurrentV2Response.cs
+src/eZmaxApi/Model/ActivesessionGetCurrentV2ResponseMPayload.cs
 src/eZmaxApi/Model/ActivesessionGetListV1Response.cs
 src/eZmaxApi/Model/ActivesessionGetListV1ResponseMPayload.cs
 src/eZmaxApi/Model/ActivesessionListElement.cs
