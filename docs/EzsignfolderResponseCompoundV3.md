@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | 
 **FkiEzsignfoldertypeID** | **int** | The unique ID of the Ezsignfoldertype. | [optional] 
-**ObjEzsignfoldertype** | **Object** | A Custom Ezsignfoldertype Object | [optional] 
+**ObjEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  | [optional] 
 **FkiTimezoneID** | **int** | The unique ID of the Timezone | [optional] 
 **EEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  | 
 **EEzsignfolderDocumentdependency** | **FieldEEzsignfolderDocumentdependency** |  | [optional] 

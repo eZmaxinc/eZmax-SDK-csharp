@@ -61,7 +61,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
-        /// <param name="objEzsignfoldertype">A Custom Ezsignfoldertype Object.</param>
+        /// <param name="objEzsignfoldertype">objEzsignfoldertype.</param>
         /// <param name="fkiTimezoneID">The unique ID of the Timezone.</param>
         /// <param name="eEzsignfolderCompletion">eEzsignfolderCompletion (required).</param>
         /// <param name="sEzsignfoldertypeNameX">sEzsignfoldertypeNameX.</param>
@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), Object objEzsignfoldertype = default(Object), int fkiTimezoneID = default(int), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency?), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
+        public EzsignfolderResponse(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeResponse objEzsignfoldertype = default(CustomEzsignfoldertypeResponse), int fkiTimezoneID = default(int), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), FieldEEzsignfolderSendreminderfrequency? eEzsignfolderSendreminderfrequency = default(FieldEEzsignfolderSendreminderfrequency?), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.EEzsignfolderCompletion = eEzsignfolderCompletion;
@@ -137,11 +137,10 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldertypeID { get; set; }
 
         /// <summary>
-        /// A Custom Ezsignfoldertype Object
+        /// Gets or Sets ObjEzsignfoldertype
         /// </summary>
-        /// <value>A Custom Ezsignfoldertype Object</value>
         [DataMember(Name = "objEzsignfoldertype", EmitDefaultValue = false)]
-        public Object ObjEzsignfoldertype { get; set; }
+        public CustomEzsignfoldertypeResponse ObjEzsignfoldertype { get; set; }
 
         /// <summary>
         /// The unique ID of the Timezone

@@ -87,8 +87,8 @@ namespace eZmaxApi.Model
         /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
-        /// <param name="objBranding">A Custom Branding Object.</param>
-        public SystemconfigurationResponse(int pkiSystemconfigurationID = default(int), int fkiSystemconfigurationtypeID = default(int), int fkiBrandingID = default(int), string sSystemconfigurationtypeDescriptionX = default(string), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationHascreditcardmerchant = default(bool), bool bSystemconfigurationIsdisposalactive = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string), Object objBranding = default(Object))
+        /// <param name="objBranding">objBranding.</param>
+        public SystemconfigurationResponse(int pkiSystemconfigurationID = default(int), int fkiSystemconfigurationtypeID = default(int), int fkiBrandingID = default(int), string sSystemconfigurationtypeDescriptionX = default(string), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationHascreditcardmerchant = default(bool), bool bSystemconfigurationIsdisposalactive = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string), CustomBrandingResponse objBranding = default(CustomBrandingResponse))
         {
             this.PkiSystemconfigurationID = pkiSystemconfigurationID;
             this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
@@ -201,11 +201,10 @@ namespace eZmaxApi.Model
         public string DtSystemconfigurationReadonlyexpirationend { get; set; }
 
         /// <summary>
-        /// A Custom Branding Object
+        /// Gets or Sets ObjBranding
         /// </summary>
-        /// <value>A Custom Branding Object</value>
         [DataMember(Name = "objBranding", EmitDefaultValue = false)]
-        public Object ObjBranding { get; set; }
+        public CustomBrandingResponse ObjBranding { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -46,8 +46,8 @@ namespace eZmaxApi.Model
         /// <param name="dtDiscussionLastread">The date the Discussion was last read.</param>
         /// <param name="iDiscussionmessageCount">The count of Attachment. (required).</param>
         /// <param name="iDiscussionmessageCountunread">The count of Attachment. (required).</param>
-        /// <param name="objDiscussionconfiguration">A Custom Discussionconfiguration Object.</param>
-        public DiscussionResponse(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), Object objDiscussionconfiguration = default(Object))
+        /// <param name="objDiscussionconfiguration">objDiscussionconfiguration.</param>
+        public DiscussionResponse(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), CustomDiscussionconfigurationResponse objDiscussionconfiguration = default(CustomDiscussionconfigurationResponse))
         {
             this.PkiDiscussionID = pkiDiscussionID;
             // to ensure "sDiscussionDescription" is required (not null)
@@ -112,11 +112,10 @@ namespace eZmaxApi.Model
         public int IDiscussionmessageCountunread { get; set; }
 
         /// <summary>
-        /// A Custom Discussionconfiguration Object
+        /// Gets or Sets ObjDiscussionconfiguration
         /// </summary>
-        /// <value>A Custom Discussionconfiguration Object</value>
         [DataMember(Name = "objDiscussionconfiguration", EmitDefaultValue = false)]
-        public Object ObjDiscussionconfiguration { get; set; }
+        public CustomDiscussionconfigurationResponse ObjDiscussionconfiguration { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
