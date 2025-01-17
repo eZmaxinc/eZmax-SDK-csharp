@@ -54,59 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" AuthenticationexternalResponseCompound
             //Assert.IsType<AuthenticationexternalResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiAuthenticationexternalID'
-        /// </summary>
-        [Fact]
-        public void PkiAuthenticationexternalIDTest()
-        {
-            // TODO unit test for the property 'PkiAuthenticationexternalID'
-        }
-
-        /// <summary>
-        /// Test the property 'SAuthenticationexternalDescription'
-        /// </summary>
-        [Fact]
-        public void SAuthenticationexternalDescriptionTest()
-        {
-            // TODO unit test for the property 'SAuthenticationexternalDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'EAuthenticationexternalType'
-        /// </summary>
-        [Fact]
-        public void EAuthenticationexternalTypeTest()
-        {
-            // TODO unit test for the property 'EAuthenticationexternalType'
-        }
-
-        /// <summary>
-        /// Test the property 'BAuthenticationexternalConnected'
-        /// </summary>
-        [Fact]
-        public void BAuthenticationexternalConnectedTest()
-        {
-            // TODO unit test for the property 'BAuthenticationexternalConnected'
-        }
-
-        /// <summary>
-        /// Test the property 'SAuthenticationexternalAuthorizationurl'
-        /// </summary>
-        [Fact]
-        public void SAuthenticationexternalAuthorizationurlTest()
-        {
-            // TODO unit test for the property 'SAuthenticationexternalAuthorizationurl'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjAudit'
-        /// </summary>
-        [Fact]
-        public void ObjAuditTest()
-        {
-            // TODO unit test for the property 'ObjAudit'
-        }
     }
 }

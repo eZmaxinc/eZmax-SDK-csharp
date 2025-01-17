@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract(Name = "Webhook-Ezsign-EzsignsignerAcceptclause")]
-    public partial class WebhookEzsignEzsignsignerAcceptclause : IValidatableObject
+    public partial class WebhookEzsignEzsignsignerAcceptclause : CommonWebhook, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
@@ -40,24 +40,12 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignEzsignsignerAcceptclause" /> class.
         /// </summary>
-        /// <param name="objWebhook">objWebhook (required).</param>
-        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         /// <param name="objEzsignfolder">objEzsignfolder.</param>
         /// <param name="objEzsignfoldersignerassociation">objEzsignfoldersignerassociation (required).</param>
-        public WebhookEzsignEzsignsignerAcceptclause(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound))
+        /// <param name="objWebhook">objWebhook (required).</param>
+        /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
+        public WebhookEzsignEzsignsignerAcceptclause(EzsignfolderResponse objEzsignfolder = default(EzsignfolderResponse), EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation = default(EzsignfoldersignerassociationResponseCompound), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>)) : base()
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
-            {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookEzsignEzsignsignerAcceptclause and cannot be null");
-            }
-            this.ObjWebhook = objWebhook;
-            // to ensure "aObjAttempt" is required (not null)
-            if (aObjAttempt == null)
-            {
-                throw new ArgumentNullException("aObjAttempt is a required property for WebhookEzsignEzsignsignerAcceptclause and cannot be null");
-            }
-            this.AObjAttempt = aObjAttempt;
             // to ensure "objEzsignfoldersignerassociation" is required (not null)
             if (objEzsignfoldersignerassociation == null)
             {
@@ -66,19 +54,6 @@ namespace eZmaxApi.Model
             this.ObjEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
             this.ObjEzsignfolder = objEzsignfolder;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjWebhook
-        /// </summary>
-        [DataMember(Name = "objWebhook", IsRequired = true, EmitDefaultValue = true)]
-        public CustomWebhookResponse ObjWebhook { get; set; }
-
-        /// <summary>
-        /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
-        /// </summary>
-        /// <value>An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.</value>
-        [DataMember(Name = "a_objAttempt", IsRequired = true, EmitDefaultValue = true)]
-        public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjEzsignfolder
@@ -100,8 +75,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookEzsignEzsignsignerAcceptclause {\n");
-            sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
-            sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjEzsignfolder: ").Append(ObjEzsignfolder).Append("\n");
             sb.Append("  ObjEzsignfoldersignerassociation: ").Append(ObjEzsignfoldersignerassociation).Append("\n");
             sb.Append("}\n");
@@ -112,7 +86,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -124,6 +98,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

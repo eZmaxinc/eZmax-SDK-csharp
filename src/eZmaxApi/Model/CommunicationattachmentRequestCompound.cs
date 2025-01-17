@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Communicationattachment Object and children
     /// </summary>
     [DataContract(Name = "communicationattachment-RequestCompound")]
-    public partial class CommunicationattachmentRequestCompound : IValidatableObject
+    public partial class CommunicationattachmentRequestCompound : CommunicationattachmentRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationattachmentRequestCompound" /> class.
@@ -39,45 +39,9 @@ namespace eZmaxApi.Model
         /// <param name="fkiAttachmentID">The unique ID of the Attachment..</param>
         /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
         /// <param name="fkiSalarypreparationID">The unique ID of the Salarypreparation..</param>
-        public CommunicationattachmentRequestCompound(int pkiCommunicationattachmentID = default(int), int fkiAttachmentID = default(int), int fkiInvoiceID = default(int), int fkiSalarypreparationID = default(int))
+        public CommunicationattachmentRequestCompound(int pkiCommunicationattachmentID = default(int), int fkiAttachmentID = default(int), int fkiInvoiceID = default(int), int fkiSalarypreparationID = default(int)) : base()
         {
-            this.PkiCommunicationattachmentID = pkiCommunicationattachmentID;
-            this.FkiAttachmentID = fkiAttachmentID;
-            this.FkiInvoiceID = fkiInvoiceID;
-            this.FkiSalarypreparationID = fkiSalarypreparationID;
         }
-
-        /// <summary>
-        /// The unique ID of the Communicationattachment
-        /// </summary>
-        /// <value>The unique ID of the Communicationattachment</value>
-        /* <example>203</example>*/
-        [DataMember(Name = "pkiCommunicationattachmentID", EmitDefaultValue = false)]
-        public int PkiCommunicationattachmentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Attachment.
-        /// </summary>
-        /// <value>The unique ID of the Attachment.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiAttachmentID", EmitDefaultValue = false)]
-        public int FkiAttachmentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Invoice.
-        /// </summary>
-        /// <value>The unique ID of the Invoice.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiInvoiceID", EmitDefaultValue = false)]
-        public int FkiInvoiceID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Salarypreparation.
-        /// </summary>
-        /// <value>The unique ID of the Salarypreparation.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiSalarypreparationID", EmitDefaultValue = false)]
-        public int FkiSalarypreparationID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,10 +51,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommunicationattachmentRequestCompound {\n");
-            sb.Append("  PkiCommunicationattachmentID: ").Append(PkiCommunicationattachmentID).Append("\n");
-            sb.Append("  FkiAttachmentID: ").Append(FkiAttachmentID).Append("\n");
-            sb.Append("  FkiInvoiceID: ").Append(FkiInvoiceID).Append("\n");
-            sb.Append("  FkiSalarypreparationID: ").Append(FkiSalarypreparationID).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,7 +60,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -111,24 +72,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // FkiAttachmentID (int) minimum
-            if (this.FkiAttachmentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiInvoiceID (int) minimum
-            if (this.FkiInvoiceID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
+                yield return x;
             }
-
-            // FkiSalarypreparationID (int) minimum
-            if (this.FkiSalarypreparationID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiSalarypreparationID, must be a value greater than or equal to 0.", new [] { "FkiSalarypreparationID" });
-            }
-
             yield break;
         }
     }

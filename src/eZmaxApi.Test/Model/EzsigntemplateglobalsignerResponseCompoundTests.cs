@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigntemplateglobalsignerResponseCompound
             //Assert.IsType<EzsigntemplateglobalsignerResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiEzsigntemplateglobalsignerID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsigntemplateglobalsignerIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsigntemplateglobalsignerID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsigntemplateglobalID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsigntemplateglobalIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsigntemplateglobalID'
-        }
-
-        /// <summary>
-        /// Test the property 'SEzsigntemplateglobalsignerDescription'
-        /// </summary>
-        [Fact]
-        public void SEzsigntemplateglobalsignerDescriptionTest()
-        {
-            // TODO unit test for the property 'SEzsigntemplateglobalsignerDescription'
-        }
     }
 }

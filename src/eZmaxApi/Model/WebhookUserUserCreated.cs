@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract(Name = "Webhook-User-UserCreated")]
-    public partial class WebhookUserUserCreated : IValidatableObject
+    public partial class WebhookUserUserCreated : CommonWebhook, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserUserCreated" /> class.
@@ -40,23 +40,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookUserUserCreated" /> class.
         /// </summary>
+        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
-        public WebhookUserUserCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserResponse objUser = default(UserResponse))
+        public WebhookUserUserCreated(UserResponse objUser = default(UserResponse), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>)) : base()
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
-            {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookUserUserCreated and cannot be null");
-            }
-            this.ObjWebhook = objWebhook;
-            // to ensure "aObjAttempt" is required (not null)
-            if (aObjAttempt == null)
-            {
-                throw new ArgumentNullException("aObjAttempt is a required property for WebhookUserUserCreated and cannot be null");
-            }
-            this.AObjAttempt = aObjAttempt;
             // to ensure "objUser" is required (not null)
             if (objUser == null)
             {
@@ -64,19 +52,6 @@ namespace eZmaxApi.Model
             }
             this.ObjUser = objUser;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjWebhook
-        /// </summary>
-        [DataMember(Name = "objWebhook", IsRequired = true, EmitDefaultValue = true)]
-        public CustomWebhookResponse ObjWebhook { get; set; }
-
-        /// <summary>
-        /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
-        /// </summary>
-        /// <value>An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.</value>
-        [DataMember(Name = "a_objAttempt", IsRequired = true, EmitDefaultValue = true)]
-        public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
         /// A User Object and children to create a complete structure
@@ -93,8 +68,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookUserUserCreated {\n");
-            sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
-            sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjUser: ").Append(ObjUser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,7 +78,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -116,6 +90,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

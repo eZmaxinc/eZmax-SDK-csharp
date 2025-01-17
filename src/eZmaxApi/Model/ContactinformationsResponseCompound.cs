@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Contactinformations Object
     /// </summary>
     [DataContract(Name = "contactinformations-ResponseCompound")]
-    public partial class ContactinformationsResponseCompound : IValidatableObject
+    public partial class ContactinformationsResponseCompound : ContactinformationsResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EContactinformationsType
-        /// </summary>
-        [DataMember(Name = "eContactinformationsType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEContactinformationsType EContactinformationsType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsResponseCompound" /> class.
         /// </summary>
@@ -46,6 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsResponseCompound" /> class.
         /// </summary>
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
         /// <param name="pkiContactinformationsID">The unique ID of the Contactinformations (required).</param>
         /// <param name="fkiAddressIDDefault">The unique ID of the Address.</param>
         /// <param name="fkiPhoneIDDefault">The unique ID of the Phone..</param>
@@ -57,14 +55,8 @@ namespace eZmaxApi.Model
         /// <param name="objPhoneDefault">objPhoneDefault.</param>
         /// <param name="objEmailDefault">An Email Object and children to create a complete structure.</param>
         /// <param name="objWebsiteDefault">A Website Object and children to create a complete structure.</param>
-        /// <param name="aObjAddress">aObjAddress (required).</param>
-        /// <param name="aObjPhone">aObjPhone (required).</param>
-        /// <param name="aObjEmail">aObjEmail (required).</param>
-        /// <param name="aObjWebsite">aObjWebsite (required).</param>
-        public ContactinformationsResponseCompound(int pkiContactinformationsID = default(int), int fkiAddressIDDefault = default(int), int fkiPhoneIDDefault = default(int), int fkiEmailIDDefault = default(int), int fkiWebsiteIDDefault = default(int), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), string sContactinformationsUrl = default(string), AddressResponse objAddressDefault = default(AddressResponse), PhoneResponseCompound objPhoneDefault = default(PhoneResponseCompound), EmailResponse objEmailDefault = default(EmailResponse), WebsiteResponse objWebsiteDefault = default(WebsiteResponse), List<AddressResponseCompound> aObjAddress = default(List<AddressResponseCompound>), List<PhoneResponseCompound> aObjPhone = default(List<PhoneResponseCompound>), List<EmailResponseCompound> aObjEmail = default(List<EmailResponseCompound>), List<WebsiteResponseCompound> aObjWebsite = default(List<WebsiteResponseCompound>))
+        public ContactinformationsResponseCompound(List<AddressResponseCompound> aObjAddress = default(List<AddressResponseCompound>), List<PhoneResponseCompound> aObjPhone = default(List<PhoneResponseCompound>), List<EmailResponseCompound> aObjEmail = default(List<EmailResponseCompound>), List<WebsiteResponseCompound> aObjWebsite = default(List<WebsiteResponseCompound>), int pkiContactinformationsID = default(int), int fkiAddressIDDefault = default(int), int fkiPhoneIDDefault = default(int), int fkiEmailIDDefault = default(int), int fkiWebsiteIDDefault = default(int), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), string sContactinformationsUrl = default(string), AddressResponse objAddressDefault = default(AddressResponse), PhoneResponseCompound objPhoneDefault = default(PhoneResponseCompound), EmailResponse objEmailDefault = default(EmailResponse), WebsiteResponse objWebsiteDefault = default(WebsiteResponse)) : base()
         {
-            this.PkiContactinformationsID = pkiContactinformationsID;
-            this.EContactinformationsType = eContactinformationsType;
             // to ensure "aObjAddress" is required (not null)
             if (aObjAddress == null)
             {
@@ -89,91 +81,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjWebsite is a required property for ContactinformationsResponseCompound and cannot be null");
             }
             this.AObjWebsite = aObjWebsite;
-            this.FkiAddressIDDefault = fkiAddressIDDefault;
-            this.FkiPhoneIDDefault = fkiPhoneIDDefault;
-            this.FkiEmailIDDefault = fkiEmailIDDefault;
-            this.FkiWebsiteIDDefault = fkiWebsiteIDDefault;
-            this.SContactinformationsUrl = sContactinformationsUrl;
-            this.ObjAddressDefault = objAddressDefault;
-            this.ObjPhoneDefault = objPhoneDefault;
-            this.ObjEmailDefault = objEmailDefault;
-            this.ObjWebsiteDefault = objWebsiteDefault;
         }
-
-        /// <summary>
-        /// The unique ID of the Contactinformations
-        /// </summary>
-        /// <value>The unique ID of the Contactinformations</value>
-        /* <example>55</example>*/
-        [DataMember(Name = "pkiContactinformationsID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiContactinformationsID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Address
-        /// </summary>
-        /// <value>The unique ID of the Address</value>
-        /* <example>142</example>*/
-        [DataMember(Name = "fkiAddressIDDefault", EmitDefaultValue = false)]
-        public int FkiAddressIDDefault { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Phone.
-        /// </summary>
-        /// <value>The unique ID of the Phone.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiPhoneIDDefault", EmitDefaultValue = false)]
-        public int FkiPhoneIDDefault { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Email
-        /// </summary>
-        /// <value>The unique ID of the Email</value>
-        /* <example>22</example>*/
-        [DataMember(Name = "fkiEmailIDDefault", EmitDefaultValue = false)]
-        public int FkiEmailIDDefault { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Website Default
-        /// </summary>
-        /// <value>The unique ID of the Website Default</value>
-        /* <example>145</example>*/
-        [DataMember(Name = "fkiWebsiteIDDefault", EmitDefaultValue = false)]
-        public int FkiWebsiteIDDefault { get; set; }
-
-        /// <summary>
-        /// The url of the Contactinformations
-        /// </summary>
-        /// <value>The url of the Contactinformations</value>
-        /* <example>https://www.example.com</example>*/
-        [DataMember(Name = "sContactinformationsUrl", EmitDefaultValue = false)]
-        public string SContactinformationsUrl { get; set; }
-
-        /// <summary>
-        /// An Address Object and children to create a complete structure
-        /// </summary>
-        /// <value>An Address Object and children to create a complete structure</value>
-        [DataMember(Name = "objAddressDefault", EmitDefaultValue = false)]
-        public AddressResponse ObjAddressDefault { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjPhoneDefault
-        /// </summary>
-        [DataMember(Name = "objPhoneDefault", EmitDefaultValue = false)]
-        public PhoneResponseCompound ObjPhoneDefault { get; set; }
-
-        /// <summary>
-        /// An Email Object and children to create a complete structure
-        /// </summary>
-        /// <value>An Email Object and children to create a complete structure</value>
-        [DataMember(Name = "objEmailDefault", EmitDefaultValue = false)]
-        public EmailResponse ObjEmailDefault { get; set; }
-
-        /// <summary>
-        /// A Website Object and children to create a complete structure
-        /// </summary>
-        /// <value>A Website Object and children to create a complete structure</value>
-        [DataMember(Name = "objWebsiteDefault", EmitDefaultValue = false)]
-        public WebsiteResponse ObjWebsiteDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjAddress
@@ -207,17 +115,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ContactinformationsResponseCompound {\n");
-            sb.Append("  PkiContactinformationsID: ").Append(PkiContactinformationsID).Append("\n");
-            sb.Append("  FkiAddressIDDefault: ").Append(FkiAddressIDDefault).Append("\n");
-            sb.Append("  FkiPhoneIDDefault: ").Append(FkiPhoneIDDefault).Append("\n");
-            sb.Append("  FkiEmailIDDefault: ").Append(FkiEmailIDDefault).Append("\n");
-            sb.Append("  FkiWebsiteIDDefault: ").Append(FkiWebsiteIDDefault).Append("\n");
-            sb.Append("  EContactinformationsType: ").Append(EContactinformationsType).Append("\n");
-            sb.Append("  SContactinformationsUrl: ").Append(SContactinformationsUrl).Append("\n");
-            sb.Append("  ObjAddressDefault: ").Append(ObjAddressDefault).Append("\n");
-            sb.Append("  ObjPhoneDefault: ").Append(ObjPhoneDefault).Append("\n");
-            sb.Append("  ObjEmailDefault: ").Append(ObjEmailDefault).Append("\n");
-            sb.Append("  ObjWebsiteDefault: ").Append(ObjWebsiteDefault).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjAddress: ").Append(AObjAddress).Append("\n");
             sb.Append("  AObjPhone: ").Append(AObjPhone).Append("\n");
             sb.Append("  AObjEmail: ").Append(AObjEmail).Append("\n");
@@ -230,7 +128,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -242,63 +140,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiContactinformationsID (int) maximum
-            if (this.PkiContactinformationsID > (int)16777215)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "PkiContactinformationsID" });
+                yield return x;
             }
-
-            // PkiContactinformationsID (int) minimum
-            if (this.PkiContactinformationsID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "PkiContactinformationsID" });
-            }
-
-            // FkiAddressIDDefault (int) minimum
-            if (this.FkiAddressIDDefault < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiAddressIDDefault, must be a value greater than or equal to 0.", new [] { "FkiAddressIDDefault" });
-            }
-
-            // FkiPhoneIDDefault (int) minimum
-            if (this.FkiPhoneIDDefault < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiPhoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiPhoneIDDefault" });
-            }
-
-            // FkiEmailIDDefault (int) maximum
-            if (this.FkiEmailIDDefault > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiEmailIDDefault" });
-            }
-
-            // FkiEmailIDDefault (int) minimum
-            if (this.FkiEmailIDDefault < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value greater than or equal to 1.", new [] { "FkiEmailIDDefault" });
-            }
-
-            // FkiWebsiteIDDefault (int) maximum
-            if (this.FkiWebsiteIDDefault > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiWebsiteIDDefault" });
-            }
-
-            // FkiWebsiteIDDefault (int) minimum
-            if (this.FkiWebsiteIDDefault < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value greater than or equal to 0.", new [] { "FkiWebsiteIDDefault" });
-            }
-
-            if (this.SContactinformationsUrl != null) {
-                // SContactinformationsUrl (string) pattern
-                Regex regexSContactinformationsUrl = new Regex(@"^.{0,255}$", RegexOptions.CultureInvariant);
-                if (!regexSContactinformationsUrl.Match(this.SContactinformationsUrl).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SContactinformationsUrl, must match a pattern of " + regexSContactinformationsUrl, new [] { "SContactinformationsUrl" });
-                }
-            }
-
             yield break;
         }
     }

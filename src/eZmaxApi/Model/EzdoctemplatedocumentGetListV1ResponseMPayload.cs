@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezdoctemplatedocument/getList
     /// </summary>
     [DataContract(Name = "ezdoctemplatedocument-getList-v1-Response-mPayload")]
-    public partial class EzdoctemplatedocumentGetListV1ResponseMPayload : IValidatableObject
+    public partial class EzdoctemplatedocumentGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentGetListV1ResponseMPayload" /> class.
@@ -40,13 +40,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentGetListV1ResponseMPayload" /> class.
         /// </summary>
+        /// <param name="aObjEzdoctemplatedocument">aObjEzdoctemplatedocument (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        /// <param name="aObjEzdoctemplatedocument">aObjEzdoctemplatedocument (required).</param>
-        public EzdoctemplatedocumentGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<EzdoctemplatedocumentListElement> aObjEzdoctemplatedocument = default(List<EzdoctemplatedocumentListElement>))
+        public EzdoctemplatedocumentGetListV1ResponseMPayload(List<EzdoctemplatedocumentListElement> aObjEzdoctemplatedocument = default(List<EzdoctemplatedocumentListElement>), int iRowReturned = default(int), int iRowFiltered = default(int)) : base()
         {
-            this.IRowReturned = iRowReturned;
-            this.IRowFiltered = iRowFiltered;
             // to ensure "aObjEzdoctemplatedocument" is required (not null)
             if (aObjEzdoctemplatedocument == null)
             {
@@ -54,22 +52,6 @@ namespace eZmaxApi.Model
             }
             this.AObjEzdoctemplatedocument = aObjEzdoctemplatedocument;
         }
-
-        /// <summary>
-        /// The number of rows returned
-        /// </summary>
-        /// <value>The number of rows returned</value>
-        /* <example>100</example>*/
-        [DataMember(Name = "iRowReturned", IsRequired = true, EmitDefaultValue = true)]
-        public int IRowReturned { get; set; }
-
-        /// <summary>
-        /// The number of rows matching your filters (if any) or the total number of rows
-        /// </summary>
-        /// <value>The number of rows matching your filters (if any) or the total number of rows</value>
-        /* <example>533</example>*/
-        [DataMember(Name = "iRowFiltered", IsRequired = true, EmitDefaultValue = true)]
-        public int IRowFiltered { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzdoctemplatedocument
@@ -85,8 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzdoctemplatedocumentGetListV1ResponseMPayload {\n");
-            sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
-            sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjEzdoctemplatedocument: ").Append(AObjEzdoctemplatedocument).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -96,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -108,6 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

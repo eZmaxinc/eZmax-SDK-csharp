@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksenddocumentmapping Object
     /// </summary>
     [DataContract(Name = "ezsignbulksenddocumentmapping-ResponseCompound")]
-    public partial class EzsignbulksenddocumentmappingResponseCompound : IValidatableObject
+    public partial class EzsignbulksenddocumentmappingResponseCompound : EzsignbulksenddocumentmappingResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
@@ -40,63 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksenddocumentmappingResponseCompound" /> class.
         /// </summary>
+        /// <param name="objEzsigntemplate">objEzsigntemplate.</param>
+        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage.</param>
         /// <param name="pkiEzsignbulksenddocumentmappingID">The unique ID of the Ezsignbulksenddocumentmapping. (required).</param>
         /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
         /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage.</param>
         /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
         /// <param name="iEzsignbulksenddocumentmappingOrder">The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. (required).</param>
-        /// <param name="objEzsigntemplate">objEzsigntemplate.</param>
-        /// <param name="objEzsigntemplatepackage">objEzsigntemplatepackage.</param>
-        public EzsignbulksenddocumentmappingResponseCompound(int pkiEzsignbulksenddocumentmappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsignbulksenddocumentmappingOrder = default(int), EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound objEzsigntemplatepackage = default(EzsigntemplatepackageResponseCompound))
+        public EzsignbulksenddocumentmappingResponseCompound(EzsigntemplateResponseCompound objEzsigntemplate = default(EzsigntemplateResponseCompound), EzsigntemplatepackageResponseCompound objEzsigntemplatepackage = default(EzsigntemplatepackageResponseCompound), int pkiEzsignbulksenddocumentmappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int), int iEzsignbulksenddocumentmappingOrder = default(int)) : base()
         {
-            this.PkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
-            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
-            this.IEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
             this.ObjEzsigntemplate = objEzsigntemplate;
             this.ObjEzsigntemplatepackage = objEzsigntemplatepackage;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsignbulksenddocumentmapping.
-        /// </summary>
-        /// <value>The unique ID of the Ezsignbulksenddocumentmapping.</value>
-        /* <example>48</example>*/
-        [DataMember(Name = "pkiEzsignbulksenddocumentmappingID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsignbulksenddocumentmappingID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignbulksend
-        /// </summary>
-        /// <value>The unique ID of the Ezsignbulksend</value>
-        /* <example>8</example>*/
-        [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsignbulksendID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatepackage
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /* <example>99</example>*/
-        [DataMember(Name = "fkiEzsigntemplatepackageID", EmitDefaultValue = false)]
-        public int FkiEzsigntemplatepackageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplate
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
-        /* <example>36</example>*/
-        [DataMember(Name = "fkiEzsigntemplateID", EmitDefaultValue = false)]
-        public int FkiEzsigntemplateID { get; set; }
-
-        /// <summary>
-        /// The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
-        /// </summary>
-        /// <value>The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsignbulksenddocumentmappingOrder", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignbulksenddocumentmappingOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjEzsigntemplate
@@ -118,11 +73,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignbulksenddocumentmappingResponseCompound {\n");
-            sb.Append("  PkiEzsignbulksenddocumentmappingID: ").Append(PkiEzsignbulksenddocumentmappingID).Append("\n");
-            sb.Append("  FkiEzsignbulksendID: ").Append(FkiEzsignbulksendID).Append("\n");
-            sb.Append("  FkiEzsigntemplatepackageID: ").Append(FkiEzsigntemplatepackageID).Append("\n");
-            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
-            sb.Append("  IEzsignbulksenddocumentmappingOrder: ").Append(IEzsignbulksenddocumentmappingOrder).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjEzsigntemplate: ").Append(ObjEzsigntemplate).Append("\n");
             sb.Append("  ObjEzsigntemplatepackage: ").Append(ObjEzsigntemplatepackage).Append("\n");
             sb.Append("}\n");
@@ -133,7 +84,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -145,36 +96,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsignbulksenddocumentmappingID (int) minimum
-            if (this.PkiEzsignbulksenddocumentmappingID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsignbulksenddocumentmappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksenddocumentmappingID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiEzsignbulksendID (int) minimum
-            if (this.FkiEzsignbulksendID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return x;
             }
-
-            // FkiEzsigntemplatepackageID (int) minimum
-            if (this.FkiEzsigntemplatepackageID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
-            }
-
-            // FkiEzsigntemplateID (int) minimum
-            if (this.FkiEzsigntemplateID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
-            }
-
-            // IEzsignbulksenddocumentmappingOrder (int) minimum
-            if (this.IEzsignbulksenddocumentmappingOrder < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignbulksenddocumentmappingOrder, must be a value greater than or equal to 0.", new [] { "IEzsignbulksenddocumentmappingOrder" });
-            }
-
             yield break;
         }
     }

@@ -56,60 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiEzsignfoldersignerassociationID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsignfoldersignerassociationIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsignfoldersignerassociationID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Fact]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsignsignergroupID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsignsignergroupIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignsignergroupID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsignfolderID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsignfolderIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignfolderID'
-        }
-
-        /// <summary>
-        /// Test the property 'BEzsignfoldersignerassociationReceivecopy'
-        /// </summary>
-        [Fact]
-        public void BEzsignfoldersignerassociationReceivecopyTest()
-        {
-            // TODO unit test for the property 'BEzsignfoldersignerassociationReceivecopy'
-        }
-
-        /// <summary>
-        /// Test the property 'TEzsignfoldersignerassociationMessage'
-        /// </summary>
-        [Fact]
-        public void TEzsignfoldersignerassociationMessageTest()
-        {
-            // TODO unit test for the property 'TEzsignfoldersignerassociationMessage'
-        }
-
-        /// <summary>
         /// Test the property 'ObjEzsignsigner'
         /// </summary>
         [Fact]

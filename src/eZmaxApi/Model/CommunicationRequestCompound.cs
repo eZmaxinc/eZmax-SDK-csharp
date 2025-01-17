@@ -30,47 +30,8 @@ namespace eZmaxApi.Model
     /// Request for POST /1/object/communication
     /// </summary>
     [DataContract(Name = "communication-RequestCompound")]
-    public partial class CommunicationRequestCompound : IValidatableObject
+    public partial class CommunicationRequestCompound : CommunicationRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets ECommunicationImportance
-        /// </summary>
-        [DataMember(Name = "eCommunicationImportance", EmitDefaultValue = false)]
-        public FieldECommunicationImportance? ECommunicationImportance { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ECommunicationType
-        /// </summary>
-        [DataMember(Name = "eCommunicationType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldECommunicationType ECommunicationType { get; set; }
-        /// <summary>
-        /// How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-        /// </summary>
-        /// <value>How the attachment should be included in the email.   Only used if eCommunicationType is **Email**</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum ECommunicationAttachmenttypeEnum
-        {
-            /// <summary>
-            /// Enum Attachment for value: Attachment
-            /// </summary>
-            [EnumMember(Value = "Attachment")]
-            Attachment = 1,
-
-            /// <summary>
-            /// Enum Url for value: Url
-            /// </summary>
-            [EnumMember(Value = "Url")]
-            Url = 2
-        }
-
-
-        /// <summary>
-        /// How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-        /// </summary>
-        /// <value>How the attachment should be included in the email.   Only used if eCommunicationType is **Email**</value>
-        [DataMember(Name = "eCommunicationAttachmenttype", EmitDefaultValue = false)]
-        public ECommunicationAttachmenttypeEnum? ECommunicationAttachmenttype { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationRequestCompound" /> class.
         /// </summary>
@@ -79,6 +40,10 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationRequestCompound" /> class.
         /// </summary>
+        /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
+        /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
+        /// <param name="aObjCommunicationreference">aObjCommunicationreference (required).</param>
+        /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
         /// <param name="pkiCommunicationID">The unique ID of the Communication..</param>
         /// <param name="eCommunicationImportance">eCommunicationImportance.</param>
         /// <param name="eCommunicationType">eCommunicationType (required).</param>
@@ -89,20 +54,8 @@ namespace eZmaxApi.Model
         /// <param name="eCommunicationAttachmenttype">How the attachment should be included in the email.   Only used if eCommunicationType is **Email**.</param>
         /// <param name="iCommunicationAttachmentlinkexpiration">The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**.</param>
         /// <param name="bCommunicationReadreceipt">Whether we ask for a read receipt or not..</param>
-        /// <param name="aObjCommunicationattachment">aObjCommunicationattachment (required).</param>
-        /// <param name="aObjCommunicationrecipient">aObjCommunicationrecipient (required).</param>
-        /// <param name="aObjCommunicationreference">aObjCommunicationreference (required).</param>
-        /// <param name="aObjCommunicationexternalrecipient">aObjCommunicationexternalrecipient (required).</param>
-        public CommunicationRequestCompound(int pkiCommunicationID = default(int), FieldECommunicationImportance? eCommunicationImportance = default(FieldECommunicationImportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), CustomCommunicationsenderRequest objCommunicationsender = default(CustomCommunicationsenderRequest), string sCommunicationSubject = default(string), string tCommunicationBody = default(string), bool bCommunicationPrivate = default(bool), ECommunicationAttachmenttypeEnum? eCommunicationAttachmenttype = default(ECommunicationAttachmenttypeEnum?), int iCommunicationAttachmentlinkexpiration = default(int), bool bCommunicationReadreceipt = default(bool), List<CustomCommunicationattachmentRequest> aObjCommunicationattachment = default(List<CustomCommunicationattachmentRequest>), List<CommunicationrecipientRequestCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientRequestCompound>), List<CommunicationreferenceRequestCompound> aObjCommunicationreference = default(List<CommunicationreferenceRequestCompound>), List<CommunicationexternalrecipientRequestCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientRequestCompound>))
+        public CommunicationRequestCompound(List<CustomCommunicationattachmentRequest> aObjCommunicationattachment = default(List<CustomCommunicationattachmentRequest>), List<CommunicationrecipientRequestCompound> aObjCommunicationrecipient = default(List<CommunicationrecipientRequestCompound>), List<CommunicationreferenceRequestCompound> aObjCommunicationreference = default(List<CommunicationreferenceRequestCompound>), List<CommunicationexternalrecipientRequestCompound> aObjCommunicationexternalrecipient = default(List<CommunicationexternalrecipientRequestCompound>), int pkiCommunicationID = default(int), FieldECommunicationImportance? eCommunicationImportance = default(FieldECommunicationImportance?), FieldECommunicationType eCommunicationType = default(FieldECommunicationType), CustomCommunicationsenderRequest objCommunicationsender = default(CustomCommunicationsenderRequest), string sCommunicationSubject = default(string), string tCommunicationBody = default(string), bool bCommunicationPrivate = default(bool), ECommunicationAttachmenttypeEnum? eCommunicationAttachmenttype = default(ECommunicationAttachmenttypeEnum?), int iCommunicationAttachmentlinkexpiration = default(int), bool bCommunicationReadreceipt = default(bool)) : base()
         {
-            this.ECommunicationType = eCommunicationType;
-            // to ensure "tCommunicationBody" is required (not null)
-            if (tCommunicationBody == null)
-            {
-                throw new ArgumentNullException("tCommunicationBody is a required property for CommunicationRequestCompound and cannot be null");
-            }
-            this.TCommunicationBody = tCommunicationBody;
-            this.BCommunicationPrivate = bCommunicationPrivate;
             // to ensure "aObjCommunicationattachment" is required (not null)
             if (aObjCommunicationattachment == null)
             {
@@ -127,65 +80,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjCommunicationexternalrecipient is a required property for CommunicationRequestCompound and cannot be null");
             }
             this.AObjCommunicationexternalrecipient = aObjCommunicationexternalrecipient;
-            this.PkiCommunicationID = pkiCommunicationID;
-            this.ECommunicationImportance = eCommunicationImportance;
-            this.ObjCommunicationsender = objCommunicationsender;
-            this.SCommunicationSubject = sCommunicationSubject;
-            this.ECommunicationAttachmenttype = eCommunicationAttachmenttype;
-            this.ICommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
-            this.BCommunicationReadreceipt = bCommunicationReadreceipt;
         }
-
-        /// <summary>
-        /// The unique ID of the Communication.
-        /// </summary>
-        /// <value>The unique ID of the Communication.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "pkiCommunicationID", EmitDefaultValue = false)]
-        public int PkiCommunicationID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjCommunicationsender
-        /// </summary>
-        [DataMember(Name = "objCommunicationsender", EmitDefaultValue = false)]
-        public CustomCommunicationsenderRequest ObjCommunicationsender { get; set; }
-
-        /// <summary>
-        /// The subject of the Communication
-        /// </summary>
-        /// <value>The subject of the Communication</value>
-        /* <example>This is an example of subject</example>*/
-        [DataMember(Name = "sCommunicationSubject", EmitDefaultValue = false)]
-        public string SCommunicationSubject { get; set; }
-
-        /// <summary>
-        /// The Body of the Communication
-        /// </summary>
-        /// <value>The Body of the Communication</value>
-        [DataMember(Name = "tCommunicationBody", IsRequired = true, EmitDefaultValue = true)]
-        public string TCommunicationBody { get; set; }
-
-        /// <summary>
-        /// Whether the Communication is private or not
-        /// </summary>
-        /// <value>Whether the Communication is private or not</value>
-        /* <example>false</example>*/
-        [DataMember(Name = "bCommunicationPrivate", IsRequired = true, EmitDefaultValue = true)]
-        public bool BCommunicationPrivate { get; set; }
-
-        /// <summary>
-        /// The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**
-        /// </summary>
-        /// <value>The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**</value>
-        [DataMember(Name = "iCommunicationAttachmentlinkexpiration", EmitDefaultValue = false)]
-        public int ICommunicationAttachmentlinkexpiration { get; set; }
-
-        /// <summary>
-        /// Whether we ask for a read receipt or not.
-        /// </summary>
-        /// <value>Whether we ask for a read receipt or not.</value>
-        [DataMember(Name = "bCommunicationReadreceipt", EmitDefaultValue = true)]
-        public bool BCommunicationReadreceipt { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjCommunicationattachment
@@ -219,16 +114,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommunicationRequestCompound {\n");
-            sb.Append("  PkiCommunicationID: ").Append(PkiCommunicationID).Append("\n");
-            sb.Append("  ECommunicationImportance: ").Append(ECommunicationImportance).Append("\n");
-            sb.Append("  ECommunicationType: ").Append(ECommunicationType).Append("\n");
-            sb.Append("  ObjCommunicationsender: ").Append(ObjCommunicationsender).Append("\n");
-            sb.Append("  SCommunicationSubject: ").Append(SCommunicationSubject).Append("\n");
-            sb.Append("  TCommunicationBody: ").Append(TCommunicationBody).Append("\n");
-            sb.Append("  BCommunicationPrivate: ").Append(BCommunicationPrivate).Append("\n");
-            sb.Append("  ECommunicationAttachmenttype: ").Append(ECommunicationAttachmenttype).Append("\n");
-            sb.Append("  ICommunicationAttachmentlinkexpiration: ").Append(ICommunicationAttachmentlinkexpiration).Append("\n");
-            sb.Append("  BCommunicationReadreceipt: ").Append(BCommunicationReadreceipt).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjCommunicationattachment: ").Append(AObjCommunicationattachment).Append("\n");
             sb.Append("  AObjCommunicationrecipient: ").Append(AObjCommunicationrecipient).Append("\n");
             sb.Append("  AObjCommunicationreference: ").Append(AObjCommunicationreference).Append("\n");
@@ -241,7 +127,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -253,33 +139,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiCommunicationID (int) minimum
-            if (this.PkiCommunicationID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiCommunicationID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationID" });
+                yield return x;
             }
-
-            if (this.SCommunicationSubject != null) {
-                // SCommunicationSubject (string) pattern
-                Regex regexSCommunicationSubject = new Regex(@"^.{0,200}$", RegexOptions.CultureInvariant);
-                if (!regexSCommunicationSubject.Match(this.SCommunicationSubject).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCommunicationSubject, must match a pattern of " + regexSCommunicationSubject, new [] { "SCommunicationSubject" });
-                }
-            }
-
-            // ICommunicationAttachmentlinkexpiration (int) maximum
-            if (this.ICommunicationAttachmentlinkexpiration > (int)30)
-            {
-                yield return new ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value less than or equal to 30.", new [] { "ICommunicationAttachmentlinkexpiration" });
-            }
-
-            // ICommunicationAttachmentlinkexpiration (int) minimum
-            if (this.ICommunicationAttachmentlinkexpiration < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value greater than or equal to 1.", new [] { "ICommunicationAttachmentlinkexpiration" });
-            }
-
             yield break;
         }
     }

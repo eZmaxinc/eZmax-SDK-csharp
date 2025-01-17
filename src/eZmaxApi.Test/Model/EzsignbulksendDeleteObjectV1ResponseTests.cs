@@ -54,23 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsignbulksendDeleteObjectV1Response
             //Assert.IsType<EzsignbulksendDeleteObjectV1Response>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'ObjDebugPayload'
-        /// </summary>
-        [Fact]
-        public void ObjDebugPayloadTest()
-        {
-            // TODO unit test for the property 'ObjDebugPayload'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjDebug'
-        /// </summary>
-        [Fact]
-        public void ObjDebugTest()
-        {
-            // TODO unit test for the property 'ObjDebug'
-        }
     }
 }

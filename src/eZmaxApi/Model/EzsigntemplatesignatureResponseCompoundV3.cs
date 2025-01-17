@@ -30,62 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatesignature Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatesignature-ResponseCompoundV3")]
-    public partial class EzsigntemplatesignatureResponseCompoundV3 : IValidatableObject
+    public partial class EzsigntemplatesignatureResponseCompoundV3 : EzsigntemplatesignatureResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignaturePositioning
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignaturePositioning", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignaturePositioning? EEzsigntemplatesignaturePositioning { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureType
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzsigntemplatesignatureType EEzsigntemplatesignatureType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureConsultationtrigger
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureConsultationtrigger", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignatureConsultationtrigger? EEzsigntemplatesignatureConsultationtrigger { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureTooltipposition
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureTooltipposition", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignatureTooltipposition? EEzsigntemplatesignatureTooltipposition { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureFont
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureFont", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignatureFont? EEzsigntemplatesignatureFont { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureAttachmentnamesource
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureAttachmentnamesource", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignatureAttachmentnamesource? EEzsigntemplatesignatureAttachmentnamesource { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureTextvalidation
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureTextvalidation", EmitDefaultValue = false)]
-        public EnumTextvalidation? EEzsigntemplatesignatureTextvalidation { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignatureDependencyrequirement
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignatureDependencyrequirement", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignatureDependencyrequirement? EEzsigntemplatesignatureDependencyrequirement { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignaturePositioningoccurence
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignaturePositioningoccurence", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignaturePositioningoccurence? EEzsigntemplatesignaturePositioningoccurence { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureResponseCompoundV3" /> class.
         /// </summary>
@@ -94,6 +40,9 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureResponseCompoundV3" /> class.
         /// </summary>
+        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
+        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
+        /// <param name="aObjEzsigntemplateelementdependency">aObjEzsigntemplateelementdependency.</param>
         /// <param name="pkiEzsigntemplatesignatureID">The unique ID of the Ezsigntemplatesignature (required).</param>
         /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
         /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
@@ -126,228 +75,12 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplatesignaturePositioningoffsetx">The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**.</param>
         /// <param name="iEzsigntemplatesignaturePositioningoffsety">The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**.</param>
         /// <param name="eEzsigntemplatesignaturePositioningoccurence">eEzsigntemplatesignaturePositioningoccurence.</param>
-        /// <param name="bEzsigntemplatesignatureCustomdate">Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**).</param>
-        /// <param name="aObjEzsigntemplatesignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsigntemplatesignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
-        /// <param name="aObjEzsigntemplateelementdependency">aObjEzsigntemplateelementdependency.</param>
-        public EzsigntemplatesignatureResponseCompoundV3(int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), bool bEzsigntemplatesignatureHandwritten = default(bool), bool bEzsigntemplatesignatureReason = default(bool), FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning = default(FieldEEzsigntemplatesignaturePositioning?), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), FieldEEzsigntemplatesignatureConsultationtrigger? eEzsigntemplatesignatureConsultationtrigger = default(FieldEEzsigntemplatesignatureConsultationtrigger?), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), int iEzsigntemplatesignatureValidationstep = default(int), string sEzsigntemplatesignatureAttachmentdescription = default(string), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), bool bEzsigntemplatesignatureRequired = default(bool), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureDefaultvalue = default(string), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?), string sEzsigntemplatesignatureTextvalidationcustommessage = default(string), FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default(FieldEEzsigntemplatesignatureDependencyrequirement?), string sEzsigntemplatesignaturePositioningpattern = default(string), int iEzsigntemplatesignaturePositioningoffsetx = default(int), int iEzsigntemplatesignaturePositioningoffsety = default(int), FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence = default(FieldEEzsigntemplatesignaturePositioningoccurence?), bool bEzsigntemplatesignatureCustomdate = default(bool), List<EzsigntemplatesignaturecustomdateResponseCompoundV2> aObjEzsigntemplatesignaturecustomdate = default(List<EzsigntemplatesignaturecustomdateResponseCompoundV2>), List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency = default(List<EzsigntemplateelementdependencyResponseCompound>))
+        public EzsigntemplatesignatureResponseCompoundV3(bool bEzsigntemplatesignatureCustomdate = default(bool), List<EzsigntemplatesignaturecustomdateResponseCompoundV2> aObjEzsigntemplatesignaturecustomdate = default(List<EzsigntemplatesignaturecustomdateResponseCompoundV2>), List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency = default(List<EzsigntemplateelementdependencyResponseCompound>), int pkiEzsigntemplatesignatureID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplatesignerIDValidation = default(int), bool bEzsigntemplatesignatureHandwritten = default(bool), bool bEzsigntemplatesignatureReason = default(bool), FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning = default(FieldEEzsigntemplatesignaturePositioning?), int iEzsigntemplatedocumentpagePagenumber = default(int), int iEzsigntemplatesignatureX = default(int), int iEzsigntemplatesignatureY = default(int), int iEzsigntemplatesignatureWidth = default(int), int iEzsigntemplatesignatureHeight = default(int), int iEzsigntemplatesignatureStep = default(int), FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default(FieldEEzsigntemplatesignatureType), FieldEEzsigntemplatesignatureConsultationtrigger? eEzsigntemplatesignatureConsultationtrigger = default(FieldEEzsigntemplatesignatureConsultationtrigger?), string tEzsigntemplatesignatureTooltip = default(string), FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default(FieldEEzsigntemplatesignatureTooltipposition?), FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default(FieldEEzsigntemplatesignatureFont?), int iEzsigntemplatesignatureValidationstep = default(int), string sEzsigntemplatesignatureAttachmentdescription = default(string), FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default(FieldEEzsigntemplatesignatureAttachmentnamesource?), bool bEzsigntemplatesignatureRequired = default(bool), int iEzsigntemplatesignatureMaxlength = default(int), string sEzsigntemplatesignatureDefaultvalue = default(string), string sEzsigntemplatesignatureRegexp = default(string), EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default(EnumTextvalidation?), string sEzsigntemplatesignatureTextvalidationcustommessage = default(string), FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default(FieldEEzsigntemplatesignatureDependencyrequirement?), string sEzsigntemplatesignaturePositioningpattern = default(string), int iEzsigntemplatesignaturePositioningoffsetx = default(int), int iEzsigntemplatesignaturePositioningoffsety = default(int), FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence = default(FieldEEzsigntemplatesignaturePositioningoccurence?)) : base()
         {
-            this.PkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID;
-            this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
-            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
-            this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
-            this.IEzsigntemplatesignatureStep = iEzsigntemplatesignatureStep;
-            this.EEzsigntemplatesignatureType = eEzsigntemplatesignatureType;
-            this.FkiEzsigntemplatesignerIDValidation = fkiEzsigntemplatesignerIDValidation;
-            this.BEzsigntemplatesignatureHandwritten = bEzsigntemplatesignatureHandwritten;
-            this.BEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
-            this.EEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
-            this.IEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
-            this.IEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
-            this.IEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
-            this.IEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
-            this.EEzsigntemplatesignatureConsultationtrigger = eEzsigntemplatesignatureConsultationtrigger;
-            this.TEzsigntemplatesignatureTooltip = tEzsigntemplatesignatureTooltip;
-            this.EEzsigntemplatesignatureTooltipposition = eEzsigntemplatesignatureTooltipposition;
-            this.EEzsigntemplatesignatureFont = eEzsigntemplatesignatureFont;
-            this.IEzsigntemplatesignatureValidationstep = iEzsigntemplatesignatureValidationstep;
-            this.SEzsigntemplatesignatureAttachmentdescription = sEzsigntemplatesignatureAttachmentdescription;
-            this.EEzsigntemplatesignatureAttachmentnamesource = eEzsigntemplatesignatureAttachmentnamesource;
-            this.BEzsigntemplatesignatureRequired = bEzsigntemplatesignatureRequired;
-            this.IEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
-            this.SEzsigntemplatesignatureDefaultvalue = sEzsigntemplatesignatureDefaultvalue;
-            this.SEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
-            this.EEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
-            this.SEzsigntemplatesignatureTextvalidationcustommessage = sEzsigntemplatesignatureTextvalidationcustommessage;
-            this.EEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
-            this.SEzsigntemplatesignaturePositioningpattern = sEzsigntemplatesignaturePositioningpattern;
-            this.IEzsigntemplatesignaturePositioningoffsetx = iEzsigntemplatesignaturePositioningoffsetx;
-            this.IEzsigntemplatesignaturePositioningoffsety = iEzsigntemplatesignaturePositioningoffsety;
-            this.EEzsigntemplatesignaturePositioningoccurence = eEzsigntemplatesignaturePositioningoccurence;
             this.BEzsigntemplatesignatureCustomdate = bEzsigntemplatesignatureCustomdate;
             this.AObjEzsigntemplatesignaturecustomdate = aObjEzsigntemplatesignaturecustomdate;
             this.AObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatesignature
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatesignature</value>
-        /* <example>99</example>*/
-        [DataMember(Name = "pkiEzsigntemplatesignatureID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsigntemplatesignatureID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatedocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatedocument</value>
-        /* <example>133</example>*/
-        [DataMember(Name = "fkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplatedocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatesigner
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /* <example>9</example>*/
-        [DataMember(Name = "fkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplatesignerID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatesigner
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /* <example>9</example>*/
-        [DataMember(Name = "fkiEzsigntemplatesignerIDValidation", EmitDefaultValue = false)]
-        public int FkiEzsigntemplatesignerIDValidation { get; set; }
-
-        /// <summary>
-        /// Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature.
-        /// </summary>
-        /// <value>Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature.</value>
-        [DataMember(Name = "bEzsigntemplatesignatureHandwritten", EmitDefaultValue = true)]
-        public bool BEzsigntemplatesignatureHandwritten { get; set; }
-
-        /// <summary>
-        /// Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature.
-        /// </summary>
-        /// <value>Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature.</value>
-        [DataMember(Name = "bEzsigntemplatesignatureReason", EmitDefaultValue = true)]
-        public bool BEzsigntemplatesignatureReason { get; set; }
-
-        /// <summary>
-        /// The page number in the Ezsigntemplatedocument
-        /// </summary>
-        /// <value>The page number in the Ezsigntemplatedocument</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsigntemplatedocumentpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigntemplatedocumentpagePagenumber { get; set; }
-
-        /// <summary>
-        /// The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
-        /// </summary>
-        /// <value>The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-        /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureX", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureX { get; set; }
-
-        /// <summary>
-        /// The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
-        /// </summary>
-        /// <value>The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-        /* <example>300</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureY", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureY { get; set; }
-
-        /// <summary>
-        /// The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth.
-        /// </summary>
-        /// <value>The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth.</value>
-        /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureWidth", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureWidth { get; set; }
-
-        /// <summary>
-        /// The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight.
-        /// </summary>
-        /// <value>The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight.</value>
-        /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureHeight", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureHeight { get; set; }
-
-        /// <summary>
-        /// The step when the Ezsigntemplatesigner will be invited to sign
-        /// </summary>
-        /// <value>The step when the Ezsigntemplatesigner will be invited to sign</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureStep", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigntemplatesignatureStep { get; set; }
-
-        /// <summary>
-        /// A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature
-        /// </summary>
-        /// <value>A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature</value>
-        /* <example>Please sign here if you agree to the terms</example>*/
-        [DataMember(Name = "tEzsigntemplatesignatureTooltip", EmitDefaultValue = false)]
-        public string TEzsigntemplatesignatureTooltip { get; set; }
-
-        /// <summary>
-        /// The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
-        /// </summary>
-        /// <value>The step when the Ezsigntemplatesigner will be invited to validate the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureValidationstep", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureValidationstep { get; set; }
-
-        /// <summary>
-        /// The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
-        /// </summary>
-        /// <value>The description attached to the attachment name added in Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments</value>
-        /* <example>Attachment</example>*/
-        [DataMember(Name = "sEzsigntemplatesignatureAttachmentdescription", EmitDefaultValue = false)]
-        public string SEzsigntemplatesignatureAttachmentdescription { get; set; }
-
-        /// <summary>
-        /// Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType &#x3D; Attachments.
-        /// </summary>
-        /// <value>Whether the Ezsigntemplatesignature is required or not. This field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType &#x3D; Attachments.</value>
-        [DataMember(Name = "bEzsigntemplatesignatureRequired", EmitDefaultValue = true)]
-        public bool BEzsigntemplatesignatureRequired { get; set; }
-
-        /// <summary>
-        /// The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
-        /// </summary>
-        /// <value>The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**</value>
-        /* <example>75</example>*/
-        [DataMember(Name = "iEzsigntemplatesignatureMaxlength", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignatureMaxlength { get; set; }
-
-        /// <summary>
-        /// The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
-        /// </summary>
-        /// <value>The default value for the Ezsigntemplatesignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |</value>
-        /* <example>Foo</example>*/
-        [DataMember(Name = "sEzsigntemplatesignatureDefaultvalue", EmitDefaultValue = false)]
-        public string SEzsigntemplatesignatureDefaultvalue { get; set; }
-
-        /// <summary>
-        /// A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
-        /// </summary>
-        /// <value>A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**</value>
-        /* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
-        [DataMember(Name = "sEzsigntemplatesignatureRegexp", EmitDefaultValue = false)]
-        public string SEzsigntemplatesignatureRegexp { get; set; }
-
-        /// <summary>
-        /// Description of validation rule. Show by signatory.
-        /// </summary>
-        /// <value>Description of validation rule. Show by signatory.</value>
-        /* <example>Phone number</example>*/
-        [DataMember(Name = "sEzsigntemplatesignatureTextvalidationcustommessage", EmitDefaultValue = false)]
-        public string SEzsigntemplatesignatureTextvalidationcustommessage { get; set; }
-
-        /// <summary>
-        /// The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
-        /// </summary>
-        /// <value>The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
-        /* <example>Signature</example>*/
-        [DataMember(Name = "sEzsigntemplatesignaturePositioningpattern", EmitDefaultValue = false)]
-        public string SEzsigntemplatesignaturePositioningpattern { get; set; }
-
-        /// <summary>
-        /// The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
-        /// </summary>
-        /// <value>The offset X  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
-        /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignaturePositioningoffsetx", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignaturePositioningoffsetx { get; set; }
-
-        /// <summary>
-        /// The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
-        /// </summary>
-        /// <value>The offset Y  This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**</value>
-        /* <example>200</example>*/
-        [DataMember(Name = "iEzsigntemplatesignaturePositioningoffsety", EmitDefaultValue = false)]
-        public int IEzsigntemplatesignaturePositioningoffsety { get; set; }
 
         /// <summary>
         /// Whether the Ezsigntemplatesignature has a custom date format or not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
@@ -377,38 +110,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatesignatureResponseCompoundV3 {\n");
-            sb.Append("  PkiEzsigntemplatesignatureID: ").Append(PkiEzsigntemplatesignatureID).Append("\n");
-            sb.Append("  FkiEzsigntemplatedocumentID: ").Append(FkiEzsigntemplatedocumentID).Append("\n");
-            sb.Append("  FkiEzsigntemplatesignerID: ").Append(FkiEzsigntemplatesignerID).Append("\n");
-            sb.Append("  FkiEzsigntemplatesignerIDValidation: ").Append(FkiEzsigntemplatesignerIDValidation).Append("\n");
-            sb.Append("  BEzsigntemplatesignatureHandwritten: ").Append(BEzsigntemplatesignatureHandwritten).Append("\n");
-            sb.Append("  BEzsigntemplatesignatureReason: ").Append(BEzsigntemplatesignatureReason).Append("\n");
-            sb.Append("  EEzsigntemplatesignaturePositioning: ").Append(EEzsigntemplatesignaturePositioning).Append("\n");
-            sb.Append("  IEzsigntemplatedocumentpagePagenumber: ").Append(IEzsigntemplatedocumentpagePagenumber).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureX: ").Append(IEzsigntemplatesignatureX).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureY: ").Append(IEzsigntemplatesignatureY).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureWidth: ").Append(IEzsigntemplatesignatureWidth).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureHeight: ").Append(IEzsigntemplatesignatureHeight).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureStep: ").Append(IEzsigntemplatesignatureStep).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureType: ").Append(EEzsigntemplatesignatureType).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureConsultationtrigger: ").Append(EEzsigntemplatesignatureConsultationtrigger).Append("\n");
-            sb.Append("  TEzsigntemplatesignatureTooltip: ").Append(TEzsigntemplatesignatureTooltip).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureTooltipposition: ").Append(EEzsigntemplatesignatureTooltipposition).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureFont: ").Append(EEzsigntemplatesignatureFont).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureValidationstep: ").Append(IEzsigntemplatesignatureValidationstep).Append("\n");
-            sb.Append("  SEzsigntemplatesignatureAttachmentdescription: ").Append(SEzsigntemplatesignatureAttachmentdescription).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureAttachmentnamesource: ").Append(EEzsigntemplatesignatureAttachmentnamesource).Append("\n");
-            sb.Append("  BEzsigntemplatesignatureRequired: ").Append(BEzsigntemplatesignatureRequired).Append("\n");
-            sb.Append("  IEzsigntemplatesignatureMaxlength: ").Append(IEzsigntemplatesignatureMaxlength).Append("\n");
-            sb.Append("  SEzsigntemplatesignatureDefaultvalue: ").Append(SEzsigntemplatesignatureDefaultvalue).Append("\n");
-            sb.Append("  SEzsigntemplatesignatureRegexp: ").Append(SEzsigntemplatesignatureRegexp).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureTextvalidation: ").Append(EEzsigntemplatesignatureTextvalidation).Append("\n");
-            sb.Append("  SEzsigntemplatesignatureTextvalidationcustommessage: ").Append(SEzsigntemplatesignatureTextvalidationcustommessage).Append("\n");
-            sb.Append("  EEzsigntemplatesignatureDependencyrequirement: ").Append(EEzsigntemplatesignatureDependencyrequirement).Append("\n");
-            sb.Append("  SEzsigntemplatesignaturePositioningpattern: ").Append(SEzsigntemplatesignaturePositioningpattern).Append("\n");
-            sb.Append("  IEzsigntemplatesignaturePositioningoffsetx: ").Append(IEzsigntemplatesignaturePositioningoffsetx).Append("\n");
-            sb.Append("  IEzsigntemplatesignaturePositioningoffsety: ").Append(IEzsigntemplatesignaturePositioningoffsety).Append("\n");
-            sb.Append("  EEzsigntemplatesignaturePositioningoccurence: ").Append(EEzsigntemplatesignaturePositioningoccurence).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  BEzsigntemplatesignatureCustomdate: ").Append(BEzsigntemplatesignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsigntemplatesignaturecustomdate: ").Append(AObjEzsigntemplatesignaturecustomdate).Append("\n");
             sb.Append("  AObjEzsigntemplateelementdependency: ").Append(AObjEzsigntemplateelementdependency).Append("\n");
@@ -420,7 +122,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -432,108 +134,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigntemplatesignatureID (int) minimum
-            if (this.PkiEzsigntemplatesignatureID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignatureID" });
+                yield return x;
             }
-
-            // FkiEzsigntemplatedocumentID (int) minimum
-            if (this.FkiEzsigntemplatedocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
-            }
-
-            // FkiEzsigntemplatesignerID (int) minimum
-            if (this.FkiEzsigntemplatesignerID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
-            }
-
-            // FkiEzsigntemplatesignerIDValidation (int) minimum
-            if (this.FkiEzsigntemplatesignerIDValidation < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerIDValidation" });
-            }
-
-            // IEzsigntemplatedocumentpagePagenumber (int) minimum
-            if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
-            }
-
-            // IEzsigntemplatesignatureX (int) minimum
-            if (this.IEzsigntemplatesignatureX < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureX" });
-            }
-
-            // IEzsigntemplatesignatureY (int) minimum
-            if (this.IEzsigntemplatesignatureY < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureY" });
-            }
-
-            // IEzsigntemplatesignatureWidth (int) minimum
-            if (this.IEzsigntemplatesignatureWidth < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureWidth" });
-            }
-
-            // IEzsigntemplatesignatureHeight (int) minimum
-            if (this.IEzsigntemplatesignatureHeight < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureHeight" });
-            }
-
-            // IEzsigntemplatesignatureStep (int) minimum
-            if (this.IEzsigntemplatesignatureStep < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureStep, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatesignatureStep" });
-            }
-
-            // IEzsigntemplatesignatureMaxlength (int) maximum
-            if (this.IEzsigntemplatesignatureMaxlength > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatesignatureMaxlength" });
-            }
-
-            // IEzsigntemplatesignatureMaxlength (int) minimum
-            if (this.IEzsigntemplatesignatureMaxlength < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureMaxlength" });
-            }
-
-            if (this.SEzsigntemplatesignatureRegexp != null) {
-                // SEzsigntemplatesignatureRegexp (string) pattern
-                Regex regexSEzsigntemplatesignatureRegexp = new Regex(@"^\^.*\$$|^$", RegexOptions.CultureInvariant);
-                if (!regexSEzsigntemplatesignatureRegexp.Match(this.SEzsigntemplatesignatureRegexp).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignatureRegexp, must match a pattern of " + regexSEzsigntemplatesignatureRegexp, new [] { "SEzsigntemplatesignatureRegexp" });
-                }
-            }
-
-            // SEzsigntemplatesignatureTextvalidationcustommessage (string) maxLength
-            if (this.SEzsigntemplatesignatureTextvalidationcustommessage != null && this.SEzsigntemplatesignatureTextvalidationcustommessage.Length > 50)
-            {
-                yield return new ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
-            }
-
-            // SEzsigntemplatesignatureTextvalidationcustommessage (string) minLength
-            if (this.SEzsigntemplatesignatureTextvalidationcustommessage != null && this.SEzsigntemplatesignatureTextvalidationcustommessage.Length < 0)
-            {
-                yield return new ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
-            }
-
-            if (this.SEzsigntemplatesignaturePositioningpattern != null) {
-                // SEzsigntemplatesignaturePositioningpattern (string) pattern
-                Regex regexSEzsigntemplatesignaturePositioningpattern = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
-                if (!regexSEzsigntemplatesignaturePositioningpattern.Match(this.SEzsigntemplatesignaturePositioningpattern).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignaturePositioningpattern, must match a pattern of " + regexSEzsigntemplatesignaturePositioningpattern, new [] { "SEzsigntemplatesignaturePositioningpattern" });
-                }
-            }
-
             yield break;
         }
     }

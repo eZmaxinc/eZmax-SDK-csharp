@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount
     /// </summary>
     [DataContract(Name = "electronicfundstransfer-getCommunicationCount-v1-Response")]
-    public partial class ElectronicfundstransferGetCommunicationCountV1Response : IValidatableObject
+    public partial class ElectronicfundstransferGetCommunicationCountV1Response : CommonResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ElectronicfundstransferGetCommunicationCountV1Response" /> class.
@@ -40,37 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ElectronicfundstransferGetCommunicationCountV1Response" /> class.
         /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public ElectronicfundstransferGetCommunicationCountV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), ElectronicfundstransferGetCommunicationCountV1ResponseMPayload mPayload = default(ElectronicfundstransferGetCommunicationCountV1ResponseMPayload))
+        public ElectronicfundstransferGetCommunicationCountV1Response(ElectronicfundstransferGetCommunicationCountV1ResponseMPayload mPayload = default(ElectronicfundstransferGetCommunicationCountV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
-            {
-                throw new ArgumentNullException("objDebugPayload is a required property for ElectronicfundstransferGetCommunicationCountV1Response and cannot be null");
-            }
-            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for ElectronicfundstransferGetCommunicationCountV1Response and cannot be null");
             }
             this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjDebugPayload
-        /// </summary>
-        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Gets or Sets MPayload
@@ -86,8 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ElectronicfundstransferGetCommunicationCountV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -109,6 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

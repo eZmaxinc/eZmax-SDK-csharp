@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Paymentterm Object and children
     /// </summary>
     [DataContract(Name = "paymentterm-RequestCompound")]
-    public partial class PaymenttermRequestCompound : IValidatableObject
+    public partial class PaymenttermRequestCompound : PaymenttermRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EPaymenttermType
-        /// </summary>
-        [DataMember(Name = "ePaymenttermType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEPaymenttermType EPaymenttermType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PaymenttermRequestCompound" /> class.
         /// </summary>
@@ -52,63 +46,9 @@ namespace eZmaxApi.Model
         /// <param name="iPaymenttermDay">The day of the Paymentterm (required).</param>
         /// <param name="objPaymenttermDescription">objPaymenttermDescription (required).</param>
         /// <param name="bPaymenttermIsactive">Whether the Paymentterm is active or not (required).</param>
-        public PaymenttermRequestCompound(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool))
+        public PaymenttermRequestCompound(int pkiPaymenttermID = default(int), string sPaymenttermCode = default(string), FieldEPaymenttermType ePaymenttermType = default(FieldEPaymenttermType), int iPaymenttermDay = default(int), MultilingualPaymenttermDescription objPaymenttermDescription = default(MultilingualPaymenttermDescription), bool bPaymenttermIsactive = default(bool)) : base()
         {
-            // to ensure "sPaymenttermCode" is required (not null)
-            if (sPaymenttermCode == null)
-            {
-                throw new ArgumentNullException("sPaymenttermCode is a required property for PaymenttermRequestCompound and cannot be null");
-            }
-            this.SPaymenttermCode = sPaymenttermCode;
-            this.EPaymenttermType = ePaymenttermType;
-            this.IPaymenttermDay = iPaymenttermDay;
-            // to ensure "objPaymenttermDescription" is required (not null)
-            if (objPaymenttermDescription == null)
-            {
-                throw new ArgumentNullException("objPaymenttermDescription is a required property for PaymenttermRequestCompound and cannot be null");
-            }
-            this.ObjPaymenttermDescription = objPaymenttermDescription;
-            this.BPaymenttermIsactive = bPaymenttermIsactive;
-            this.PkiPaymenttermID = pkiPaymenttermID;
         }
-
-        /// <summary>
-        /// The unique ID of the Paymentterm
-        /// </summary>
-        /// <value>The unique ID of the Paymentterm</value>
-        /* <example>46</example>*/
-        [DataMember(Name = "pkiPaymenttermID", EmitDefaultValue = false)]
-        public int PkiPaymenttermID { get; set; }
-
-        /// <summary>
-        /// The code of the Paymentterm
-        /// </summary>
-        /// <value>The code of the Paymentterm</value>
-        /* <example>0030</example>*/
-        [DataMember(Name = "sPaymenttermCode", IsRequired = true, EmitDefaultValue = true)]
-        public string SPaymenttermCode { get; set; }
-
-        /// <summary>
-        /// The day of the Paymentterm
-        /// </summary>
-        /// <value>The day of the Paymentterm</value>
-        /* <example>30</example>*/
-        [DataMember(Name = "iPaymenttermDay", IsRequired = true, EmitDefaultValue = true)]
-        public int IPaymenttermDay { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjPaymenttermDescription
-        /// </summary>
-        [DataMember(Name = "objPaymenttermDescription", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualPaymenttermDescription ObjPaymenttermDescription { get; set; }
-
-        /// <summary>
-        /// Whether the Paymentterm is active or not
-        /// </summary>
-        /// <value>Whether the Paymentterm is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bPaymenttermIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BPaymenttermIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -118,12 +58,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PaymenttermRequestCompound {\n");
-            sb.Append("  PkiPaymenttermID: ").Append(PkiPaymenttermID).Append("\n");
-            sb.Append("  SPaymenttermCode: ").Append(SPaymenttermCode).Append("\n");
-            sb.Append("  EPaymenttermType: ").Append(EPaymenttermType).Append("\n");
-            sb.Append("  IPaymenttermDay: ").Append(IPaymenttermDay).Append("\n");
-            sb.Append("  ObjPaymenttermDescription: ").Append(ObjPaymenttermDescription).Append("\n");
-            sb.Append("  BPaymenttermIsactive: ").Append(BPaymenttermIsactive).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,7 +67,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -144,27 +79,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            if (this.SPaymenttermCode != null) {
-                // SPaymenttermCode (string) pattern
-                Regex regexSPaymenttermCode = new Regex(@"^[A-Z0-9]{1,4}$", RegexOptions.CultureInvariant);
-                if (!regexSPaymenttermCode.Match(this.SPaymenttermCode).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPaymenttermCode, must match a pattern of " + regexSPaymenttermCode, new [] { "SPaymenttermCode" });
-                }
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // IPaymenttermDay (int) maximum
-            if (this.IPaymenttermDay > (int)255)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for IPaymenttermDay, must be a value less than or equal to 255.", new [] { "IPaymenttermDay" });
+                yield return x;
             }
-
-            // IPaymenttermDay (int) minimum
-            if (this.IPaymenttermDay < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IPaymenttermDay, must be a value greater than or equal to 0.", new [] { "IPaymenttermDay" });
-            }
-
             yield break;
         }
     }

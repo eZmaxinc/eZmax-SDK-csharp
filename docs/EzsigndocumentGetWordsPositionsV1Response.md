@@ -5,8 +5,6 @@ Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositio
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
-**ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
 **MPayload** | [**List&lt;CustomWordPositionWordResponse&gt;**](CustomWordPositionWordResponse.md) | Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

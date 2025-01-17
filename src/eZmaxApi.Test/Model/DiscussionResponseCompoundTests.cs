@@ -56,69 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiDiscussionID'
-        /// </summary>
-        [Fact]
-        public void PkiDiscussionIDTest()
-        {
-            // TODO unit test for the property 'PkiDiscussionID'
-        }
-
-        /// <summary>
-        /// Test the property 'SDiscussionDescription'
-        /// </summary>
-        [Fact]
-        public void SDiscussionDescriptionTest()
-        {
-            // TODO unit test for the property 'SDiscussionDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'BDiscussionClosed'
-        /// </summary>
-        [Fact]
-        public void BDiscussionClosedTest()
-        {
-            // TODO unit test for the property 'BDiscussionClosed'
-        }
-
-        /// <summary>
-        /// Test the property 'DtDiscussionLastread'
-        /// </summary>
-        [Fact]
-        public void DtDiscussionLastreadTest()
-        {
-            // TODO unit test for the property 'DtDiscussionLastread'
-        }
-
-        /// <summary>
-        /// Test the property 'IDiscussionmessageCount'
-        /// </summary>
-        [Fact]
-        public void IDiscussionmessageCountTest()
-        {
-            // TODO unit test for the property 'IDiscussionmessageCount'
-        }
-
-        /// <summary>
-        /// Test the property 'IDiscussionmessageCountunread'
-        /// </summary>
-        [Fact]
-        public void IDiscussionmessageCountunreadTest()
-        {
-            // TODO unit test for the property 'IDiscussionmessageCountunread'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjDiscussionconfiguration'
-        /// </summary>
-        [Fact]
-        public void ObjDiscussionconfigurationTest()
-        {
-            // TODO unit test for the property 'ObjDiscussionconfiguration'
-        }
-
-        /// <summary>
         /// Test the property 'AObjDiscussionmembership'
         /// </summary>
         [Fact]

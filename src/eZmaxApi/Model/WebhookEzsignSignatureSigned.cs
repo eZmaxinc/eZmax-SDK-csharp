@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is the base Webhook object
     /// </summary>
     [DataContract(Name = "Webhook-Ezsign-SignatureSigned")]
-    public partial class WebhookEzsignSignatureSigned : IValidatableObject
+    public partial class WebhookEzsignSignatureSigned : CommonWebhook, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignSignatureSigned" /> class.
@@ -40,23 +40,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookEzsignSignatureSigned" /> class.
         /// </summary>
+        /// <param name="objEzsignsignature">objEzsignsignature (required).</param>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objEzsignsignature">objEzsignsignature (required).</param>
-        public WebhookEzsignSignatureSigned(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), EzsignsignatureResponse objEzsignsignature = default(EzsignsignatureResponse))
+        public WebhookEzsignSignatureSigned(EzsignsignatureResponse objEzsignsignature = default(EzsignsignatureResponse), CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>)) : base()
         {
-            // to ensure "objWebhook" is required (not null)
-            if (objWebhook == null)
-            {
-                throw new ArgumentNullException("objWebhook is a required property for WebhookEzsignSignatureSigned and cannot be null");
-            }
-            this.ObjWebhook = objWebhook;
-            // to ensure "aObjAttempt" is required (not null)
-            if (aObjAttempt == null)
-            {
-                throw new ArgumentNullException("aObjAttempt is a required property for WebhookEzsignSignatureSigned and cannot be null");
-            }
-            this.AObjAttempt = aObjAttempt;
             // to ensure "objEzsignsignature" is required (not null)
             if (objEzsignsignature == null)
             {
@@ -64,19 +52,6 @@ namespace eZmaxApi.Model
             }
             this.ObjEzsignsignature = objEzsignsignature;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjWebhook
-        /// </summary>
-        [DataMember(Name = "objWebhook", IsRequired = true, EmitDefaultValue = true)]
-        public CustomWebhookResponse ObjWebhook { get; set; }
-
-        /// <summary>
-        /// An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
-        /// </summary>
-        /// <value>An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.</value>
-        [DataMember(Name = "a_objAttempt", IsRequired = true, EmitDefaultValue = true)]
-        public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjEzsignsignature
@@ -92,8 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookEzsignSignatureSigned {\n");
-            sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
-            sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjEzsignsignature: ").Append(ObjEzsignsignature).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -103,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -115,6 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

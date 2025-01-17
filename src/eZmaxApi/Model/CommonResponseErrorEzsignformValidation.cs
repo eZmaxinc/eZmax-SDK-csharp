@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// Generic Error Message
     /// </summary>
     [DataContract(Name = "Common-Response-Error-EzsignformValidation")]
-    public partial class CommonResponseErrorEzsignformValidation : IValidatableObject
+    public partial class CommonResponseErrorEzsignformValidation : CommonResponseError, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EErrorCode
-        /// </summary>
-        [DataMember(Name = "eErrorCode", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEErrorCode EErrorCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorEzsignformValidation" /> class.
         /// </summary>
@@ -46,42 +40,19 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorEzsignformValidation" /> class.
         /// </summary>
+        /// <param name="aObjEzsignformfielderror">aObjEzsignformfielderror (required).</param>
         /// <param name="sErrorMessage">The message giving details about the error (required).</param>
         /// <param name="eErrorCode">eErrorCode (required).</param>
         /// <param name="aSErrorMessagedetail">More error message detail.</param>
-        /// <param name="aObjEzsignformfielderror">aObjEzsignformfielderror (required).</param>
-        public CommonResponseErrorEzsignformValidation(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>), List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = default(List<CustomEzsignformfielderrorResponse>))
+        public CommonResponseErrorEzsignformValidation(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = default(List<CustomEzsignformfielderrorResponse>), string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>)) : base()
         {
-            // to ensure "sErrorMessage" is required (not null)
-            if (sErrorMessage == null)
-            {
-                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
-            }
-            this.SErrorMessage = sErrorMessage;
-            this.EErrorCode = eErrorCode;
             // to ensure "aObjEzsignformfielderror" is required (not null)
             if (aObjEzsignformfielderror == null)
             {
                 throw new ArgumentNullException("aObjEzsignformfielderror is a required property for CommonResponseErrorEzsignformValidation and cannot be null");
             }
             this.AObjEzsignformfielderror = aObjEzsignformfielderror;
-            this.ASErrorMessagedetail = aSErrorMessagedetail;
         }
-
-        /// <summary>
-        /// The message giving details about the error
-        /// </summary>
-        /// <value>The message giving details about the error</value>
-        /* <example>Invalid Signature Headers</example>*/
-        [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
-        public string SErrorMessage { get; set; }
-
-        /// <summary>
-        /// More error message detail
-        /// </summary>
-        /// <value>More error message detail</value>
-        [DataMember(Name = "a_sErrorMessagedetail", EmitDefaultValue = false)]
-        public List<string> ASErrorMessagedetail { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzsignformfielderror
@@ -97,9 +68,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommonResponseErrorEzsignformValidation {\n");
-            sb.Append("  SErrorMessage: ").Append(SErrorMessage).Append("\n");
-            sb.Append("  EErrorCode: ").Append(EErrorCode).Append("\n");
-            sb.Append("  ASErrorMessagedetail: ").Append(ASErrorMessagedetail).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjEzsignformfielderror: ").Append(AObjEzsignformfielderror).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -109,7 +78,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -121,15 +90,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            if (this.SErrorMessage != null) {
-                // SErrorMessage (string) pattern
-                Regex regexSErrorMessage = new Regex(@"^.{0,500}$", RegexOptions.CultureInvariant);
-                if (!regexSErrorMessage.Match(this.SErrorMessage).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SErrorMessage, must match a pattern of " + regexSErrorMessage, new [] { "SErrorMessage" });
-                }
-            }
+            return this.BaseValidate(validationContext);
+        }
 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

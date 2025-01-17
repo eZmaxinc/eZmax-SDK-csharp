@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatedocument Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-ResponseCompound")]
-    public partial class EzsigntemplatedocumentResponseCompound : IValidatableObject
+    public partial class EzsigntemplatedocumentResponseCompound : EzsigntemplatedocumentResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentResponseCompound" /> class.
@@ -47,77 +47,9 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplatedocumentSignaturetotal">The number of total signatures in the Ezsigntemplate. (required).</param>
         /// <param name="iEzsigntemplatedocumentFormfieldtotal">The number of total form fields in the Ezsigntemplate. (required).</param>
         /// <param name="bEzsigntemplatedocumentHassignedsignatures">If the Ezsigntemplatedocument contains signed signatures (From internal or external sources) (required).</param>
-        public EzsigntemplatedocumentResponseCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), int iEzsigntemplatedocumentFormfieldtotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool))
+        public EzsigntemplatedocumentResponseCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), string sEzsigntemplatedocumentName = default(string), int iEzsigntemplatedocumentPagetotal = default(int), int iEzsigntemplatedocumentSignaturetotal = default(int), int iEzsigntemplatedocumentFormfieldtotal = default(int), bool bEzsigntemplatedocumentHassignedsignatures = default(bool)) : base()
         {
-            this.PkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            // to ensure "sEzsigntemplatedocumentName" is required (not null)
-            if (sEzsigntemplatedocumentName == null)
-            {
-                throw new ArgumentNullException("sEzsigntemplatedocumentName is a required property for EzsigntemplatedocumentResponseCompound and cannot be null");
-            }
-            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
-            this.IEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
-            this.IEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
-            this.IEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
-            this.BEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatedocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatedocument</value>
-        /* <example>133</example>*/
-        [DataMember(Name = "pkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsigntemplatedocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplate
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
-        /* <example>36</example>*/
-        [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplateID { get; set; }
-
-        /// <summary>
-        /// The name of the Ezsigntemplatedocument.
-        /// </summary>
-        /// <value>The name of the Ezsigntemplatedocument.</value>
-        /* <example>Standard Contract</example>*/
-        [DataMember(Name = "sEzsigntemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsigntemplatedocumentName { get; set; }
-
-        /// <summary>
-        /// The number of pages in the Ezsigntemplatedocument.
-        /// </summary>
-        /// <value>The number of pages in the Ezsigntemplatedocument.</value>
-        /* <example>5</example>*/
-        [DataMember(Name = "iEzsigntemplatedocumentPagetotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigntemplatedocumentPagetotal { get; set; }
-
-        /// <summary>
-        /// The number of total signatures in the Ezsigntemplate.
-        /// </summary>
-        /// <value>The number of total signatures in the Ezsigntemplate.</value>
-        /* <example>8</example>*/
-        [DataMember(Name = "iEzsigntemplatedocumentSignaturetotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigntemplatedocumentSignaturetotal { get; set; }
-
-        /// <summary>
-        /// The number of total form fields in the Ezsigntemplate.
-        /// </summary>
-        /// <value>The number of total form fields in the Ezsigntemplate.</value>
-        /* <example>8</example>*/
-        [DataMember(Name = "iEzsigntemplatedocumentFormfieldtotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigntemplatedocumentFormfieldtotal { get; set; }
-
-        /// <summary>
-        /// If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
-        /// </summary>
-        /// <value>If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzsigntemplatedocumentHassignedsignatures", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzsigntemplatedocumentHassignedsignatures { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -127,13 +59,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatedocumentResponseCompound {\n");
-            sb.Append("  PkiEzsigntemplatedocumentID: ").Append(PkiEzsigntemplatedocumentID).Append("\n");
-            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
-            sb.Append("  SEzsigntemplatedocumentName: ").Append(SEzsigntemplatedocumentName).Append("\n");
-            sb.Append("  IEzsigntemplatedocumentPagetotal: ").Append(IEzsigntemplatedocumentPagetotal).Append("\n");
-            sb.Append("  IEzsigntemplatedocumentSignaturetotal: ").Append(IEzsigntemplatedocumentSignaturetotal).Append("\n");
-            sb.Append("  IEzsigntemplatedocumentFormfieldtotal: ").Append(IEzsigntemplatedocumentFormfieldtotal).Append("\n");
-            sb.Append("  BEzsigntemplatedocumentHassignedsignatures: ").Append(BEzsigntemplatedocumentHassignedsignatures).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -142,7 +68,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -154,24 +80,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigntemplatedocumentID (int) minimum
-            if (this.PkiEzsigntemplatedocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiEzsigntemplateID (int) minimum
-            if (this.FkiEzsigntemplateID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return x;
             }
-
-            // IEzsigntemplatedocumentPagetotal (int) minimum
-            if (this.IEzsigntemplatedocumentPagetotal < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentPagetotal" });
-            }
-
             yield break;
         }
     }

@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicinguser Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicinguser-ResponseCompound")]
-    public partial class EzmaxinvoicinguserResponseCompound : IValidatableObject
+    public partial class EzmaxinvoicinguserResponseCompound : EzmaxinvoicinguserResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzmaxinvoicinguserVariationezsign
-        /// </summary>
-        [DataMember(Name = "eEzmaxinvoicinguserVariationezsign", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzmaxinvoicinguserVariationezsign EEzmaxinvoicinguserVariationezsign { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
         /// </summary>
@@ -46,6 +40,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicinguserResponseCompound" /> class.
         /// </summary>
+        /// <param name="objContactName">objContactName (required).</param>
         /// <param name="pkiEzmaxinvoicinguserID">The unique ID of the Ezmaxinvoicinguser.</param>
         /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
@@ -55,94 +50,15 @@ namespace eZmaxApi.Model
         /// <param name="bEzmaxinvoicinguserEzsignaccount">Whether there is an eZsign account (required).</param>
         /// <param name="bEzmaxinvoicinguserBillableezsign">Whether it is billable for eZsign (required).</param>
         /// <param name="eEzmaxinvoicinguserVariationezsign">eEzmaxinvoicinguserVariationezsign (required).</param>
-        /// <param name="objContactName">objContactName (required).</param>
-        public EzmaxinvoicinguserResponseCompound(int pkiEzmaxinvoicinguserID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiUserID = default(int), int iEzmaxinvoicinguserEzsigndocument = default(int), bool bEzmaxinvoicinguserEzsignaccount = default(bool), bool bEzmaxinvoicinguserBillableezsign = default(bool), FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign = default(FieldEEzmaxinvoicinguserVariationezsign), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
+        public EzmaxinvoicinguserResponseCompound(CustomContactNameResponse objContactName = default(CustomContactNameResponse), int pkiEzmaxinvoicinguserID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiUserID = default(int), int iEzmaxinvoicinguserEzsigndocument = default(int), bool bEzmaxinvoicinguserEzsignaccount = default(bool), bool bEzmaxinvoicinguserBillableezsign = default(bool), FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign = default(FieldEEzmaxinvoicinguserVariationezsign)) : base()
         {
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
-            {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
-            }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.FkiUserID = fkiUserID;
-            this.IEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
-            this.BEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
-            this.BEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
-            this.EEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
             // to ensure "objContactName" is required (not null)
             if (objContactName == null)
             {
                 throw new ArgumentNullException("objContactName is a required property for EzmaxinvoicinguserResponseCompound and cannot be null");
             }
             this.ObjContactName = objContactName;
-            this.PkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
-            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezmaxinvoicinguser
-        /// </summary>
-        /// <value>The unique ID of the Ezmaxinvoicinguser</value>
-        /* <example>202</example>*/
-        [DataMember(Name = "pkiEzmaxinvoicinguserID", EmitDefaultValue = false)]
-        public int PkiEzmaxinvoicinguserID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezmaxinvoicing
-        /// </summary>
-        /// <value>The unique ID of the Ezmaxinvoicing</value>
-        /* <example>28</example>*/
-        [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
-        public int FkiEzmaxinvoicingID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Billingentityinternal.
-        /// </summary>
-        /// <value>The unique ID of the Billingentityinternal.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiBillingentityinternalID { get; set; }
-
-        /// <summary>
-        /// The description of the Billingentityinternal in the language of the requester
-        /// </summary>
-        /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        /* <example>Default</example>*/
-        [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
-        public string SBillingentityinternalDescriptionX { get; set; }
-
-        /// <summary>
-        /// The unique ID of the User
-        /// </summary>
-        /// <value>The unique ID of the User</value>
-        /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiUserID { get; set; }
-
-        /// <summary>
-        /// The number of ezsign documents
-        /// </summary>
-        /// <value>The number of ezsign documents</value>
-        /* <example>243</example>*/
-        [DataMember(Name = "iEzmaxinvoicinguserEzsigndocument", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzmaxinvoicinguserEzsigndocument { get; set; }
-
-        /// <summary>
-        /// Whether there is an eZsign account
-        /// </summary>
-        /// <value>Whether there is an eZsign account</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzmaxinvoicinguserEzsignaccount", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzmaxinvoicinguserEzsignaccount { get; set; }
-
-        /// <summary>
-        /// Whether it is billable for eZsign
-        /// </summary>
-        /// <value>Whether it is billable for eZsign</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzmaxinvoicinguserBillableezsign", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzmaxinvoicinguserBillableezsign { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjContactName
@@ -158,15 +74,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicinguserResponseCompound {\n");
-            sb.Append("  PkiEzmaxinvoicinguserID: ").Append(PkiEzmaxinvoicinguserID).Append("\n");
-            sb.Append("  FkiEzmaxinvoicingID: ").Append(FkiEzmaxinvoicingID).Append("\n");
-            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
-            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
-            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  IEzmaxinvoicinguserEzsigndocument: ").Append(IEzmaxinvoicinguserEzsigndocument).Append("\n");
-            sb.Append("  BEzmaxinvoicinguserEzsignaccount: ").Append(BEzmaxinvoicinguserEzsignaccount).Append("\n");
-            sb.Append("  BEzmaxinvoicinguserBillableezsign: ").Append(BEzmaxinvoicinguserBillableezsign).Append("\n");
-            sb.Append("  EEzmaxinvoicinguserVariationezsign: ").Append(EEzmaxinvoicinguserVariationezsign).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -176,7 +84,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -188,36 +96,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzmaxinvoicinguserID (int) minimum
-            if (this.PkiEzmaxinvoicinguserID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicinguserID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicinguserID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiEzmaxinvoicingID (int) minimum
-            if (this.FkiEzmaxinvoicingID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+                yield return x;
             }
-
-            // FkiBillingentityinternalID (int) minimum
-            if (this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-            // FkiUserID (int) minimum
-            if (this.FkiUserID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-            // IEzmaxinvoicinguserEzsigndocument (int) minimum
-            if (this.IEzmaxinvoicinguserEzsigndocument < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzmaxinvoicinguserEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicinguserEzsigndocument" });
-            }
-
             yield break;
         }
     }

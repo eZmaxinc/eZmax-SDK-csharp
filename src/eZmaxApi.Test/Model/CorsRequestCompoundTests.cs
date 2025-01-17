@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" CorsRequestCompound
             //Assert.IsType<CorsRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiCorsID'
-        /// </summary>
-        [Fact]
-        public void PkiCorsIDTest()
-        {
-            // TODO unit test for the property 'PkiCorsID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiApikeyID'
-        /// </summary>
-        [Fact]
-        public void FkiApikeyIDTest()
-        {
-            // TODO unit test for the property 'FkiApikeyID'
-        }
-
-        /// <summary>
-        /// Test the property 'SCorsEntryurl'
-        /// </summary>
-        [Fact]
-        public void SCorsEntryurlTest()
-        {
-            // TODO unit test for the property 'SCorsEntryurl'
-        }
     }
 }

@@ -56,51 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiEzsignbulksenddocumentmappingID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsignbulksenddocumentmappingIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsignbulksenddocumentmappingID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsignbulksendID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsignbulksendIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignbulksendID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsigntemplatepackageID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsigntemplatepackageIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsigntemplatepackageID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsigntemplateID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsigntemplateIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsigntemplateID'
-        }
-
-        /// <summary>
-        /// Test the property 'IEzsignbulksenddocumentmappingOrder'
-        /// </summary>
-        [Fact]
-        public void IEzsignbulksenddocumentmappingOrderTest()
-        {
-            // TODO unit test for the property 'IEzsignbulksenddocumentmappingOrder'
-        }
-
-        /// <summary>
         /// Test the property 'ObjEzsigntemplate'
         /// </summary>
         [Fact]

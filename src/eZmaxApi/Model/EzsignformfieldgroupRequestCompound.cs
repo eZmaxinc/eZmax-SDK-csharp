@@ -30,33 +30,8 @@ namespace eZmaxApi.Model
     /// An Ezsignformfieldgroup Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignformfieldgroup-RequestCompound")]
-    public partial class EzsignformfieldgroupRequestCompound : IValidatableObject
+    public partial class EzsignformfieldgroupRequestCompound : EzsignformfieldgroupRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupType
-        /// </summary>
-        [DataMember(Name = "eEzsignformfieldgroupType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzsignformfieldgroupType EEzsignformfieldgroupType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupSignerrequirement
-        /// </summary>
-        [DataMember(Name = "eEzsignformfieldgroupSignerrequirement", EmitDefaultValue = false)]
-        [Obsolete]
-        public FieldEEzsignformfieldgroupSignerrequirement? EEzsignformfieldgroupSignerrequirement { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupTooltipposition
-        /// </summary>
-        [DataMember(Name = "eEzsignformfieldgroupTooltipposition", EmitDefaultValue = false)]
-        public FieldEEzsignformfieldgroupTooltipposition? EEzsignformfieldgroupTooltipposition { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsignformfieldgroupTextvalidation
-        /// </summary>
-        [DataMember(Name = "eEzsignformfieldgroupTextvalidation", EmitDefaultValue = false)]
-        public EnumTextvalidation? EEzsignformfieldgroupTextvalidation { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupRequestCompound" /> class.
         /// </summary>
@@ -65,6 +40,9 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupRequestCompound" /> class.
         /// </summary>
+        /// <param name="aObjEzsignformfieldgroupsigner">aObjEzsignformfieldgroupsigner (required).</param>
+        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
+        /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
         /// <param name="pkiEzsignformfieldgroupID">The unique ID of the Ezsignformfieldgroup.</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="eEzsignformfieldgroupType">eEzsignformfieldgroupType (required).</param>
@@ -82,23 +60,8 @@ namespace eZmaxApi.Model
         /// <param name="tEzsignformfieldgroupTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup.</param>
         /// <param name="eEzsignformfieldgroupTooltipposition">eEzsignformfieldgroupTooltipposition.</param>
         /// <param name="eEzsignformfieldgroupTextvalidation">eEzsignformfieldgroupTextvalidation.</param>
-        /// <param name="aObjEzsignformfieldgroupsigner">aObjEzsignformfieldgroupsigner (required).</param>
-        /// <param name="aObjDropdownElement">aObjDropdownElement.</param>
-        /// <param name="aObjEzsignformfield">aObjEzsignformfield (required).</param>
-        public EzsignformfieldgroupRequestCompound(int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement? eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement?), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string sEzsignformfieldgroupTextvalidationcustommessage = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition?), EnumTextvalidation? eEzsignformfieldgroupTextvalidation = default(EnumTextvalidation?), List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner = default(List<EzsignformfieldgroupsignerRequestCompound>), List<CustomDropdownElementRequestCompound> aObjDropdownElement = default(List<CustomDropdownElementRequestCompound>), List<EzsignformfieldRequestCompound> aObjEzsignformfield = default(List<EzsignformfieldRequestCompound>))
+        public EzsignformfieldgroupRequestCompound(List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner = default(List<EzsignformfieldgroupsignerRequestCompound>), List<CustomDropdownElementRequestCompound> aObjDropdownElement = default(List<CustomDropdownElementRequestCompound>), List<EzsignformfieldRequestCompound> aObjEzsignformfield = default(List<EzsignformfieldRequestCompound>), int pkiEzsignformfieldgroupID = default(int), int fkiEzsigndocumentID = default(int), FieldEEzsignformfieldgroupType eEzsignformfieldgroupType = default(FieldEEzsignformfieldgroupType), FieldEEzsignformfieldgroupSignerrequirement? eEzsignformfieldgroupSignerrequirement = default(FieldEEzsignformfieldgroupSignerrequirement?), string sEzsignformfieldgroupLabel = default(string), int iEzsignformfieldgroupStep = default(int), string sEzsignformfieldgroupDefaultvalue = default(string), int iEzsignformfieldgroupFilledmin = default(int), int iEzsignformfieldgroupFilledmax = default(int), bool bEzsignformfieldgroupReadonly = default(bool), int iEzsignformfieldgroupMaxlength = default(int), bool bEzsignformfieldgroupEncrypted = default(bool), string sEzsignformfieldgroupRegexp = default(string), string sEzsignformfieldgroupTextvalidationcustommessage = default(string), string tEzsignformfieldgroupTooltip = default(string), FieldEEzsignformfieldgroupTooltipposition? eEzsignformfieldgroupTooltipposition = default(FieldEEzsignformfieldgroupTooltipposition?), EnumTextvalidation? eEzsignformfieldgroupTextvalidation = default(EnumTextvalidation?)) : base()
         {
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.EEzsignformfieldgroupType = eEzsignformfieldgroupType;
-            // to ensure "sEzsignformfieldgroupLabel" is required (not null)
-            if (sEzsignformfieldgroupLabel == null)
-            {
-                throw new ArgumentNullException("sEzsignformfieldgroupLabel is a required property for EzsignformfieldgroupRequestCompound and cannot be null");
-            }
-            this.SEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
-            this.IEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
-            this.IEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
-            this.IEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
-            this.BEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
             // to ensure "aObjEzsignformfieldgroupsigner" is required (not null)
             if (aObjEzsignformfieldgroupsigner == null)
             {
@@ -111,120 +74,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjEzsignformfield is a required property for EzsignformfieldgroupRequestCompound and cannot be null");
             }
             this.AObjEzsignformfield = aObjEzsignformfield;
-            this.PkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
-            this.EEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
-            this.SEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
-            this.IEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
-            this.BEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
-            this.SEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
-            this.SEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
-            this.TEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
-            this.EEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
-            this.EEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
             this.AObjDropdownElement = aObjDropdownElement;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsignformfieldgroup
-        /// </summary>
-        /// <value>The unique ID of the Ezsignformfieldgroup</value>
-        /* <example>26</example>*/
-        [DataMember(Name = "pkiEzsignformfieldgroupID", EmitDefaultValue = false)]
-        public int PkiEzsignformfieldgroupID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigndocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        /* <example>97</example>*/
-        [DataMember(Name = "fkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigndocumentID { get; set; }
-
-        /// <summary>
-        /// The Label for the Ezsignformfieldgroup
-        /// </summary>
-        /// <value>The Label for the Ezsignformfieldgroup</value>
-        /* <example>Allergies</example>*/
-        [DataMember(Name = "sEzsignformfieldgroupLabel", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsignformfieldgroupLabel { get; set; }
-
-        /// <summary>
-        /// The step when the Ezsignsigner will be invited to fill the form fields
-        /// </summary>
-        /// <value>The step when the Ezsignsigner will be invited to fill the form fields</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsignformfieldgroupStep", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignformfieldgroupStep { get; set; }
-
-        /// <summary>
-        /// The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
-        /// </summary>
-        /// <value>The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | - -- -- -- -- -- -- -- -- -- -- -- -- | - -- -- -- -- -- - | - -- -- -- -- -- - | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |</value>
-        /* <example>Foo</example>*/
-        [DataMember(Name = "sEzsignformfieldgroupDefaultvalue", EmitDefaultValue = false)]
-        public string SEzsignformfieldgroupDefaultvalue { get; set; }
-
-        /// <summary>
-        /// The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
-        /// </summary>
-        /// <value>The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsignformfieldgroupFilledmin", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignformfieldgroupFilledmin { get; set; }
-
-        /// <summary>
-        /// The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
-        /// </summary>
-        /// <value>The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "iEzsignformfieldgroupFilledmax", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignformfieldgroupFilledmax { get; set; }
-
-        /// <summary>
-        /// Whether the Ezsignformfieldgroup is read only or not.
-        /// </summary>
-        /// <value>Whether the Ezsignformfieldgroup is read only or not.</value>
-        [DataMember(Name = "bEzsignformfieldgroupReadonly", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzsignformfieldgroupReadonly { get; set; }
-
-        /// <summary>
-        /// The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-        /// </summary>
-        /// <value>The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
-        /* <example>75</example>*/
-        [DataMember(Name = "iEzsignformfieldgroupMaxlength", EmitDefaultValue = false)]
-        public int IEzsignformfieldgroupMaxlength { get; set; }
-
-        /// <summary>
-        /// Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-        /// </summary>
-        /// <value>Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
-        [DataMember(Name = "bEzsignformfieldgroupEncrypted", EmitDefaultValue = true)]
-        public bool BEzsignformfieldgroupEncrypted { get; set; }
-
-        /// <summary>
-        /// A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-        /// </summary>
-        /// <value>A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**</value>
-        /* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
-        [DataMember(Name = "sEzsignformfieldgroupRegexp", EmitDefaultValue = false)]
-        public string SEzsignformfieldgroupRegexp { get; set; }
-
-        /// <summary>
-        /// Description of validation rule. Show by signatory.
-        /// </summary>
-        /// <value>Description of validation rule. Show by signatory.</value>
-        /* <example>Phone number</example>*/
-        [DataMember(Name = "sEzsignformfieldgroupTextvalidationcustommessage", EmitDefaultValue = false)]
-        public string SEzsignformfieldgroupTextvalidationcustommessage { get; set; }
-
-        /// <summary>
-        /// A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
-        /// </summary>
-        /// <value>A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup</value>
-        /* <example>Please enter a valid email address</example>*/
-        [DataMember(Name = "tEzsignformfieldgroupTooltip", EmitDefaultValue = false)]
-        public string TEzsignformfieldgroupTooltip { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzsignformfieldgroupsigner
@@ -252,23 +103,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignformfieldgroupRequestCompound {\n");
-            sb.Append("  PkiEzsignformfieldgroupID: ").Append(PkiEzsignformfieldgroupID).Append("\n");
-            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
-            sb.Append("  EEzsignformfieldgroupType: ").Append(EEzsignformfieldgroupType).Append("\n");
-            sb.Append("  EEzsignformfieldgroupSignerrequirement: ").Append(EEzsignformfieldgroupSignerrequirement).Append("\n");
-            sb.Append("  SEzsignformfieldgroupLabel: ").Append(SEzsignformfieldgroupLabel).Append("\n");
-            sb.Append("  IEzsignformfieldgroupStep: ").Append(IEzsignformfieldgroupStep).Append("\n");
-            sb.Append("  SEzsignformfieldgroupDefaultvalue: ").Append(SEzsignformfieldgroupDefaultvalue).Append("\n");
-            sb.Append("  IEzsignformfieldgroupFilledmin: ").Append(IEzsignformfieldgroupFilledmin).Append("\n");
-            sb.Append("  IEzsignformfieldgroupFilledmax: ").Append(IEzsignformfieldgroupFilledmax).Append("\n");
-            sb.Append("  BEzsignformfieldgroupReadonly: ").Append(BEzsignformfieldgroupReadonly).Append("\n");
-            sb.Append("  IEzsignformfieldgroupMaxlength: ").Append(IEzsignformfieldgroupMaxlength).Append("\n");
-            sb.Append("  BEzsignformfieldgroupEncrypted: ").Append(BEzsignformfieldgroupEncrypted).Append("\n");
-            sb.Append("  SEzsignformfieldgroupRegexp: ").Append(SEzsignformfieldgroupRegexp).Append("\n");
-            sb.Append("  SEzsignformfieldgroupTextvalidationcustommessage: ").Append(SEzsignformfieldgroupTextvalidationcustommessage).Append("\n");
-            sb.Append("  TEzsignformfieldgroupTooltip: ").Append(TEzsignformfieldgroupTooltip).Append("\n");
-            sb.Append("  EEzsignformfieldgroupTooltipposition: ").Append(EEzsignformfieldgroupTooltipposition).Append("\n");
-            sb.Append("  EEzsignformfieldgroupTextvalidation: ").Append(EEzsignformfieldgroupTextvalidation).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjEzsignformfieldgroupsigner: ").Append(AObjEzsignformfieldgroupsigner).Append("\n");
             sb.Append("  AObjDropdownElement: ").Append(AObjDropdownElement).Append("\n");
             sb.Append("  AObjEzsignformfield: ").Append(AObjEzsignformfield).Append("\n");
@@ -280,7 +115,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -292,81 +127,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsignformfieldgroupID (int) minimum
-            if (this.PkiEzsignformfieldgroupID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignformfieldgroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldgroupID" });
+                yield return x;
             }
-
-            // FkiEzsigndocumentID (int) minimum
-            if (this.FkiEzsigndocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
-            }
-
-            // SEzsignformfieldgroupLabel (string) maxLength
-            if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length > 50)
-            {
-                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be less than 50.", new [] { "SEzsignformfieldgroupLabel" });
-            }
-
-            // SEzsignformfieldgroupLabel (string) minLength
-            if (this.SEzsignformfieldgroupLabel != null && this.SEzsignformfieldgroupLabel.Length < 1)
-            {
-                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupLabel, length must be greater than 1.", new [] { "SEzsignformfieldgroupLabel" });
-            }
-
-            // IEzsignformfieldgroupStep (int) minimum
-            if (this.IEzsignformfieldgroupStep < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldgroupStep, must be a value greater than or equal to 1.", new [] { "IEzsignformfieldgroupStep" });
-            }
-
-            // IEzsignformfieldgroupFilledmin (int) minimum
-            if (this.IEzsignformfieldgroupFilledmin < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldgroupFilledmin, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldgroupFilledmin" });
-            }
-
-            // IEzsignformfieldgroupFilledmax (int) minimum
-            if (this.IEzsignformfieldgroupFilledmax < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldgroupFilledmax, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldgroupFilledmax" });
-            }
-
-            // IEzsignformfieldgroupMaxlength (int) maximum
-            if (this.IEzsignformfieldgroupMaxlength > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldgroupMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsignformfieldgroupMaxlength" });
-            }
-
-            // IEzsignformfieldgroupMaxlength (int) minimum
-            if (this.IEzsignformfieldgroupMaxlength < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldgroupMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldgroupMaxlength" });
-            }
-
-            if (this.SEzsignformfieldgroupRegexp != null) {
-                // SEzsignformfieldgroupRegexp (string) pattern
-                Regex regexSEzsignformfieldgroupRegexp = new Regex(@"^\^.*\$$|^$", RegexOptions.CultureInvariant);
-                if (!regexSEzsignformfieldgroupRegexp.Match(this.SEzsignformfieldgroupRegexp).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignformfieldgroupRegexp, must match a pattern of " + regexSEzsignformfieldgroupRegexp, new [] { "SEzsignformfieldgroupRegexp" });
-                }
-            }
-
-            // SEzsignformfieldgroupTextvalidationcustommessage (string) maxLength
-            if (this.SEzsignformfieldgroupTextvalidationcustommessage != null && this.SEzsignformfieldgroupTextvalidationcustommessage.Length > 50)
-            {
-                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsignformfieldgroupTextvalidationcustommessage" });
-            }
-
-            // SEzsignformfieldgroupTextvalidationcustommessage (string) minLength
-            if (this.SEzsignformfieldgroupTextvalidationcustommessage != null && this.SEzsignformfieldgroupTextvalidationcustommessage.Length < 0)
-            {
-                yield return new ValidationResult("Invalid value for SEzsignformfieldgroupTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsignformfieldgroupTextvalidationcustommessage" });
-            }
-
             yield break;
         }
     }

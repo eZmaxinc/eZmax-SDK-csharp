@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternal Object
     /// </summary>
     [DataContract(Name = "billingentityinternal-ResponseCompound")]
-    public partial class BillingentityinternalResponseCompound : IValidatableObject
+    public partial class BillingentityinternalResponseCompound : BillingentityinternalResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
@@ -40,18 +40,11 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalResponseCompound" /> class.
         /// </summary>
+        /// <param name="aObjBillingentityinternalproduct">aObjBillingentityinternalproduct (required).</param>
         /// <param name="pkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
         /// <param name="objBillingentityinternalDescription">objBillingentityinternalDescription (required).</param>
-        /// <param name="aObjBillingentityinternalproduct">aObjBillingentityinternalproduct (required).</param>
-        public BillingentityinternalResponseCompound(int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription), List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct = default(List<BillingentityinternalproductResponseCompound>))
+        public BillingentityinternalResponseCompound(List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct = default(List<BillingentityinternalproductResponseCompound>), int pkiBillingentityinternalID = default(int), MultilingualBillingentityinternalDescription objBillingentityinternalDescription = default(MultilingualBillingentityinternalDescription)) : base()
         {
-            this.PkiBillingentityinternalID = pkiBillingentityinternalID;
-            // to ensure "objBillingentityinternalDescription" is required (not null)
-            if (objBillingentityinternalDescription == null)
-            {
-                throw new ArgumentNullException("objBillingentityinternalDescription is a required property for BillingentityinternalResponseCompound and cannot be null");
-            }
-            this.ObjBillingentityinternalDescription = objBillingentityinternalDescription;
             // to ensure "aObjBillingentityinternalproduct" is required (not null)
             if (aObjBillingentityinternalproduct == null)
             {
@@ -59,20 +52,6 @@ namespace eZmaxApi.Model
             }
             this.AObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
         }
-
-        /// <summary>
-        /// The unique ID of the Billingentityinternal.
-        /// </summary>
-        /// <value>The unique ID of the Billingentityinternal.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "pkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiBillingentityinternalID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjBillingentityinternalDescription
-        /// </summary>
-        [DataMember(Name = "objBillingentityinternalDescription", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualBillingentityinternalDescription ObjBillingentityinternalDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjBillingentityinternalproduct
@@ -88,8 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class BillingentityinternalResponseCompound {\n");
-            sb.Append("  PkiBillingentityinternalID: ").Append(PkiBillingentityinternalID).Append("\n");
-            sb.Append("  ObjBillingentityinternalDescription: ").Append(ObjBillingentityinternalDescription).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjBillingentityinternalproduct: ").Append(AObjBillingentityinternalproduct).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -99,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -111,12 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiBillingentityinternalID (int) minimum
-            if (this.PkiBillingentityinternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

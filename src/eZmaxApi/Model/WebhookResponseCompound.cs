@@ -30,26 +30,8 @@ namespace eZmaxApi.Model
     /// A Webhook Object
     /// </summary>
     [DataContract(Name = "webhook-ResponseCompound")]
-    public partial class WebhookResponseCompound : IValidatableObject
+    public partial class WebhookResponseCompound : WebhookResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EWebhookModule
-        /// </summary>
-        [DataMember(Name = "eWebhookModule", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEWebhookModule EWebhookModule { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EWebhookEzsignevent
-        /// </summary>
-        [DataMember(Name = "eWebhookEzsignevent", EmitDefaultValue = false)]
-        public FieldEWebhookEzsignevent? EWebhookEzsignevent { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EWebhookManagementevent
-        /// </summary>
-        [DataMember(Name = "eWebhookManagementevent", EmitDefaultValue = false)]
-        public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookResponseCompound" /> class.
         /// </summary>
@@ -58,6 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookResponseCompound" /> class.
         /// </summary>
+        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
+        /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
         /// <param name="pkiWebhookID">The unique ID of the Webhook (required).</param>
         /// <param name="fkiAuthenticationexternalID">The unique ID of the Authenticationexternal.</param>
         /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
@@ -75,158 +59,11 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal.</param>
         /// <param name="objAudit">objAudit (required).</param>
-        /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
-        /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
-        public WebhookResponseCompound(int pkiWebhookID = default(int), int fkiAuthenticationexternalID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), string sAuthenticationexternalDescription = default(string), CommonAudit objAudit = default(CommonAudit), string sWebhookEvent = default(string), List<WebhookheaderResponseCompound> aObjWebhookheader = default(List<WebhookheaderResponseCompound>))
+        public WebhookResponseCompound(string sWebhookEvent = default(string), List<WebhookheaderResponseCompound> aObjWebhookheader = default(List<WebhookheaderResponseCompound>), int pkiWebhookID = default(int), int fkiAuthenticationexternalID = default(int), string sWebhookDescription = default(string), int fkiEzsignfoldertypeID = default(int), string sEzsignfoldertypeNameX = default(string), FieldEWebhookModule eWebhookModule = default(FieldEWebhookModule), FieldEWebhookEzsignevent? eWebhookEzsignevent = default(FieldEWebhookEzsignevent?), FieldEWebhookManagementevent? eWebhookManagementevent = default(FieldEWebhookManagementevent?), string sWebhookUrl = default(string), string sWebhookEmailfailed = default(string), string sWebhookApikey = default(string), string sWebhookSecret = default(string), bool bWebhookIsactive = default(bool), bool bWebhookIssigned = default(bool), bool bWebhookSkipsslvalidation = default(bool), string sAuthenticationexternalDescription = default(string), CommonAudit objAudit = default(CommonAudit)) : base()
         {
-            this.PkiWebhookID = pkiWebhookID;
-            // to ensure "sWebhookDescription" is required (not null)
-            if (sWebhookDescription == null)
-            {
-                throw new ArgumentNullException("sWebhookDescription is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.SWebhookDescription = sWebhookDescription;
-            this.EWebhookModule = eWebhookModule;
-            // to ensure "sWebhookUrl" is required (not null)
-            if (sWebhookUrl == null)
-            {
-                throw new ArgumentNullException("sWebhookUrl is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.SWebhookUrl = sWebhookUrl;
-            // to ensure "sWebhookEmailfailed" is required (not null)
-            if (sWebhookEmailfailed == null)
-            {
-                throw new ArgumentNullException("sWebhookEmailfailed is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.SWebhookEmailfailed = sWebhookEmailfailed;
-            this.BWebhookIsactive = bWebhookIsactive;
-            this.BWebhookIssigned = bWebhookIssigned;
-            this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
-            {
-                throw new ArgumentNullException("objAudit is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.ObjAudit = objAudit;
-            this.FkiAuthenticationexternalID = fkiAuthenticationexternalID;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-            this.EWebhookEzsignevent = eWebhookEzsignevent;
-            this.EWebhookManagementevent = eWebhookManagementevent;
-            this.SWebhookApikey = sWebhookApikey;
-            this.SWebhookSecret = sWebhookSecret;
-            this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
             this.SWebhookEvent = sWebhookEvent;
             this.AObjWebhookheader = aObjWebhookheader;
         }
-
-        /// <summary>
-        /// The unique ID of the Webhook
-        /// </summary>
-        /// <value>The unique ID of the Webhook</value>
-        /* <example>77</example>*/
-        [DataMember(Name = "pkiWebhookID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiWebhookID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Authenticationexternal
-        /// </summary>
-        /// <value>The unique ID of the Authenticationexternal</value>
-        /* <example>56</example>*/
-        [DataMember(Name = "fkiAuthenticationexternalID", EmitDefaultValue = false)]
-        public int FkiAuthenticationexternalID { get; set; }
-
-        /// <summary>
-        /// The description of the Webhook
-        /// </summary>
-        /// <value>The description of the Webhook</value>
-        /* <example>Import into our system</example>*/
-        [DataMember(Name = "sWebhookDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SWebhookDescription { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignfoldertype.
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfoldertype.</value>
-        /* <example>5</example>*/
-        [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
-        public int FkiEzsignfoldertypeID { get; set; }
-
-        /// <summary>
-        /// The name of the Ezsignfoldertype in the language of the requester
-        /// </summary>
-        /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-        /* <example>Default</example>*/
-        [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
-        public string SEzsignfoldertypeNameX { get; set; }
-
-        /// <summary>
-        /// The URL of the Webhook callback
-        /// </summary>
-        /// <value>The URL of the Webhook callback</value>
-        /* <example>https://www.example.com</example>*/
-        [DataMember(Name = "sWebhookUrl", IsRequired = true, EmitDefaultValue = true)]
-        public string SWebhookUrl { get; set; }
-
-        /// <summary>
-        /// The email that will receive the Webhook in case all attempts fail
-        /// </summary>
-        /// <value>The email that will receive the Webhook in case all attempts fail</value>
-        /* <example>email@example.com</example>*/
-        [DataMember(Name = "sWebhookEmailfailed", IsRequired = true, EmitDefaultValue = true)]
-        public string SWebhookEmailfailed { get; set; }
-
-        /// <summary>
-        /// The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
-        /// </summary>
-        /// <value>The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.</value>
-        [DataMember(Name = "sWebhookApikey", EmitDefaultValue = false)]
-        public string SWebhookApikey { get; set; }
-
-        /// <summary>
-        /// The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
-        /// </summary>
-        /// <value>The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.</value>
-        [DataMember(Name = "sWebhookSecret", EmitDefaultValue = false)]
-        public string SWebhookSecret { get; set; }
-
-        /// <summary>
-        /// Whether the Webhook is active or not
-        /// </summary>
-        /// <value>Whether the Webhook is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bWebhookIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BWebhookIsactive { get; set; }
-
-        /// <summary>
-        /// Whether the requests will be signed or not
-        /// </summary>
-        /// <value>Whether the requests will be signed or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bWebhookIssigned", IsRequired = true, EmitDefaultValue = true)]
-        public bool BWebhookIssigned { get; set; }
-
-        /// <summary>
-        /// Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
-        /// </summary>
-        /// <value>Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use</value>
-        /* <example>false</example>*/
-        [DataMember(Name = "bWebhookSkipsslvalidation", IsRequired = true, EmitDefaultValue = true)]
-        public bool BWebhookSkipsslvalidation { get; set; }
-
-        /// <summary>
-        /// The description of the Authenticationexternal
-        /// </summary>
-        /// <value>The description of the Authenticationexternal</value>
-        /* <example>Authentification</example>*/
-        [DataMember(Name = "sAuthenticationexternalDescription", EmitDefaultValue = false)]
-        public string SAuthenticationexternalDescription { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjAudit
-        /// </summary>
-        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
-        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// The concatenated string to describe the Webhook event
@@ -250,23 +87,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookResponseCompound {\n");
-            sb.Append("  PkiWebhookID: ").Append(PkiWebhookID).Append("\n");
-            sb.Append("  FkiAuthenticationexternalID: ").Append(FkiAuthenticationexternalID).Append("\n");
-            sb.Append("  SWebhookDescription: ").Append(SWebhookDescription).Append("\n");
-            sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
-            sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
-            sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
-            sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
-            sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
-            sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
-            sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
-            sb.Append("  SWebhookApikey: ").Append(SWebhookApikey).Append("\n");
-            sb.Append("  SWebhookSecret: ").Append(SWebhookSecret).Append("\n");
-            sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
-            sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
-            sb.Append("  BWebhookSkipsslvalidation: ").Append(BWebhookSkipsslvalidation).Append("\n");
-            sb.Append("  SAuthenticationexternalDescription: ").Append(SAuthenticationexternalDescription).Append("\n");
-            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  SWebhookEvent: ").Append(SWebhookEvent).Append("\n");
             sb.Append("  AObjWebhookheader: ").Append(AObjWebhookheader).Append("\n");
             sb.Append("}\n");
@@ -277,7 +98,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -289,48 +110,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // FkiAuthenticationexternalID (int) maximum
-            if (this.FkiAuthenticationexternalID > (int)255)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "FkiAuthenticationexternalID" });
+                yield return x;
             }
-
-            // FkiAuthenticationexternalID (int) minimum
-            if (this.FkiAuthenticationexternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "FkiAuthenticationexternalID" });
-            }
-
-            // FkiEzsignfoldertypeID (int) maximum
-            if (this.FkiEzsignfoldertypeID > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
-            }
-
-            // FkiEzsignfoldertypeID (int) minimum
-            if (this.FkiEzsignfoldertypeID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
-            }
-
-            if (this.SWebhookUrl != null) {
-                // SWebhookUrl (string) pattern
-                Regex regexSWebhookUrl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
-                if (!regexSWebhookUrl.Match(this.SWebhookUrl).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebhookUrl, must match a pattern of " + regexSWebhookUrl, new [] { "SWebhookUrl" });
-                }
-            }
-
-            if (this.SAuthenticationexternalDescription != null) {
-                // SAuthenticationexternalDescription (string) pattern
-                Regex regexSAuthenticationexternalDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSAuthenticationexternalDescription.Match(this.SAuthenticationexternalDescription).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAuthenticationexternalDescription, must match a pattern of " + regexSAuthenticationexternalDescription, new [] { "SAuthenticationexternalDescription" });
-                }
-            }
-
             yield break;
         }
     }

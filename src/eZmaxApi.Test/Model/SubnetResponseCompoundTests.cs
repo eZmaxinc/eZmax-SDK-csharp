@@ -54,59 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" SubnetResponseCompound
             //Assert.IsType<SubnetResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiSubnetID'
-        /// </summary>
-        [Fact]
-        public void PkiSubnetIDTest()
-        {
-            // TODO unit test for the property 'PkiSubnetID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Fact]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiApikeyID'
-        /// </summary>
-        [Fact]
-        public void FkiApikeyIDTest()
-        {
-            // TODO unit test for the property 'FkiApikeyID'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjSubnetDescription'
-        /// </summary>
-        [Fact]
-        public void ObjSubnetDescriptionTest()
-        {
-            // TODO unit test for the property 'ObjSubnetDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'ISubnetNetwork'
-        /// </summary>
-        [Fact]
-        public void ISubnetNetworkTest()
-        {
-            // TODO unit test for the property 'ISubnetNetwork'
-        }
-
-        /// <summary>
-        /// Test the property 'ISubnetMask'
-        /// </summary>
-        [Fact]
-        public void ISubnetMaskTest()
-        {
-            // TODO unit test for the property 'ISubnetMask'
-        }
     }
 }

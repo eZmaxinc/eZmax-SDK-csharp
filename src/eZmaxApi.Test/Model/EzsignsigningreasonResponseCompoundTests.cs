@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsignsigningreasonResponseCompound
             //Assert.IsType<EzsignsigningreasonResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiEzsignsigningreasonID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsignsigningreasonIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsignsigningreasonID'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjEzsignsigningreasonDescription'
-        /// </summary>
-        [Fact]
-        public void ObjEzsignsigningreasonDescriptionTest()
-        {
-            // TODO unit test for the property 'ObjEzsignsigningreasonDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'BEzsignsigningreasonIsactive'
-        /// </summary>
-        [Fact]
-        public void BEzsignsigningreasonIsactiveTest()
-        {
-            // TODO unit test for the property 'BEzsignsigningreasonIsactive'
-        }
     }
 }

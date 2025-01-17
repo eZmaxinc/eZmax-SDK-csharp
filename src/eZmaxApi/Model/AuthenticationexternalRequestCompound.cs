@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Authenticationexternal Object and children
     /// </summary>
     [DataContract(Name = "authenticationexternal-RequestCompound")]
-    public partial class AuthenticationexternalRequestCompound : IValidatableObject
+    public partial class AuthenticationexternalRequestCompound : AuthenticationexternalRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EAuthenticationexternalType
-        /// </summary>
-        [DataMember(Name = "eAuthenticationexternalType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEAuthenticationexternalType EAuthenticationexternalType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalRequestCompound" /> class.
         /// </summary>
@@ -49,33 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal.</param>
         /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal (required).</param>
         /// <param name="eAuthenticationexternalType">eAuthenticationexternalType (required).</param>
-        public AuthenticationexternalRequestCompound(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), FieldEAuthenticationexternalType eAuthenticationexternalType = default(FieldEAuthenticationexternalType))
+        public AuthenticationexternalRequestCompound(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), FieldEAuthenticationexternalType eAuthenticationexternalType = default(FieldEAuthenticationexternalType)) : base()
         {
-            // to ensure "sAuthenticationexternalDescription" is required (not null)
-            if (sAuthenticationexternalDescription == null)
-            {
-                throw new ArgumentNullException("sAuthenticationexternalDescription is a required property for AuthenticationexternalRequestCompound and cannot be null");
-            }
-            this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
-            this.EAuthenticationexternalType = eAuthenticationexternalType;
-            this.PkiAuthenticationexternalID = pkiAuthenticationexternalID;
         }
-
-        /// <summary>
-        /// The unique ID of the Authenticationexternal
-        /// </summary>
-        /// <value>The unique ID of the Authenticationexternal</value>
-        /* <example>56</example>*/
-        [DataMember(Name = "pkiAuthenticationexternalID", EmitDefaultValue = false)]
-        public int PkiAuthenticationexternalID { get; set; }
-
-        /// <summary>
-        /// The description of the Authenticationexternal
-        /// </summary>
-        /// <value>The description of the Authenticationexternal</value>
-        /* <example>Authentification</example>*/
-        [DataMember(Name = "sAuthenticationexternalDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SAuthenticationexternalDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -85,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AuthenticationexternalRequestCompound {\n");
-            sb.Append("  PkiAuthenticationexternalID: ").Append(PkiAuthenticationexternalID).Append("\n");
-            sb.Append("  SAuthenticationexternalDescription: ").Append(SAuthenticationexternalDescription).Append("\n");
-            sb.Append("  EAuthenticationexternalType: ").Append(EAuthenticationexternalType).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -108,27 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiAuthenticationexternalID (int) maximum
-            if (this.PkiAuthenticationexternalID > (int)255)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
+                yield return x;
             }
-
-            // PkiAuthenticationexternalID (int) minimum
-            if (this.PkiAuthenticationexternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
-            }
-
-            if (this.SAuthenticationexternalDescription != null) {
-                // SAuthenticationexternalDescription (string) pattern
-                Regex regexSAuthenticationexternalDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSAuthenticationexternalDescription.Match(this.SAuthenticationexternalDescription).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAuthenticationexternalDescription, must match a pattern of " + regexSAuthenticationexternalDescription, new [] { "SAuthenticationexternalDescription" });
-                }
-            }
-
             yield break;
         }
     }

@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatesigner Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatesigner-ResponseCompound")]
-    public partial class EzsigntemplatesignerResponseCompound : IValidatableObject
+    public partial class EzsigntemplatesignerResponseCompound : EzsigntemplatesignerResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzsigntemplatesignerMapping
-        /// </summary>
-        [DataMember(Name = "eEzsigntemplatesignerMapping", EmitDefaultValue = false)]
-        public FieldEEzsigntemplatesignerMapping? EEzsigntemplatesignerMapping { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignerResponseCompound" /> class.
         /// </summary>
@@ -56,95 +50,9 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplatesignerDescription">The description of the Ezsigntemplatesigner (required).</param>
         /// <param name="sUserName">The description of the User in the language of the requester.</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
-        public EzsigntemplatesignerResponseCompound(int pkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplateID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiEzdoctemplatedocumentID = default(int), bool bEzsigntemplatesignerReceivecopy = default(bool), FieldEEzsigntemplatesignerMapping? eEzsigntemplatesignerMapping = default(FieldEEzsigntemplatesignerMapping?), string sEzsigntemplatesignerDescription = default(string), string sUserName = default(string), string sUsergroupNameX = default(string))
+        public EzsigntemplatesignerResponseCompound(int pkiEzsigntemplatesignerID = default(int), int fkiEzsigntemplateID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int), int fkiEzdoctemplatedocumentID = default(int), bool bEzsigntemplatesignerReceivecopy = default(bool), FieldEEzsigntemplatesignerMapping? eEzsigntemplatesignerMapping = default(FieldEEzsigntemplatesignerMapping?), string sEzsigntemplatesignerDescription = default(string), string sUserName = default(string), string sUsergroupNameX = default(string)) : base()
         {
-            this.PkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            // to ensure "sEzsigntemplatesignerDescription" is required (not null)
-            if (sEzsigntemplatesignerDescription == null)
-            {
-                throw new ArgumentNullException("sEzsigntemplatesignerDescription is a required property for EzsigntemplatesignerResponseCompound and cannot be null");
-            }
-            this.SEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
-            this.FkiUserID = fkiUserID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
-            this.BEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
-            this.EEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
-            this.SUserName = sUserName;
-            this.SUsergroupNameX = sUsergroupNameX;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatesigner
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /* <example>9</example>*/
-        [DataMember(Name = "pkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsigntemplatesignerID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplate
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
-        /* <example>36</example>*/
-        [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplateID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the User
-        /// </summary>
-        /// <value>The unique ID of the User</value>
-        /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
-        public int FkiUserID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Usergroup
-        /// </summary>
-        /// <value>The unique ID of the Usergroup</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
-        public int FkiUsergroupID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezdoctemplatedocument
-        /// </summary>
-        /// <value>The unique ID of the Ezdoctemplatedocument</value>
-        /* <example>95</example>*/
-        [DataMember(Name = "fkiEzdoctemplatedocumentID", EmitDefaultValue = false)]
-        public int FkiEzdoctemplatedocumentID { get; set; }
-
-        /// <summary>
-        /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
-        /// </summary>
-        /// <value>If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.</value>
-        [DataMember(Name = "bEzsigntemplatesignerReceivecopy", EmitDefaultValue = true)]
-        public bool BEzsigntemplatesignerReceivecopy { get; set; }
-
-        /// <summary>
-        /// The description of the Ezsigntemplatesigner
-        /// </summary>
-        /// <value>The description of the Ezsigntemplatesigner</value>
-        /* <example>Customer</example>*/
-        [DataMember(Name = "sEzsigntemplatesignerDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsigntemplatesignerDescription { get; set; }
-
-        /// <summary>
-        /// The description of the User in the language of the requester
-        /// </summary>
-        /// <value>The description of the User in the language of the requester</value>
-        /* <example>Default</example>*/
-        [DataMember(Name = "sUserName", EmitDefaultValue = false)]
-        public string SUserName { get; set; }
-
-        /// <summary>
-        /// The Name of the Usergroup in the language of the requester
-        /// </summary>
-        /// <value>The Name of the Usergroup in the language of the requester</value>
-        /* <example>Administration</example>*/
-        [DataMember(Name = "sUsergroupNameX", EmitDefaultValue = false)]
-        public string SUsergroupNameX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -154,16 +62,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatesignerResponseCompound {\n");
-            sb.Append("  PkiEzsigntemplatesignerID: ").Append(PkiEzsigntemplatesignerID).Append("\n");
-            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
-            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
-            sb.Append("  FkiEzdoctemplatedocumentID: ").Append(FkiEzdoctemplatedocumentID).Append("\n");
-            sb.Append("  BEzsigntemplatesignerReceivecopy: ").Append(BEzsigntemplatesignerReceivecopy).Append("\n");
-            sb.Append("  EEzsigntemplatesignerMapping: ").Append(EEzsigntemplatesignerMapping).Append("\n");
-            sb.Append("  SEzsigntemplatesignerDescription: ").Append(SEzsigntemplatesignerDescription).Append("\n");
-            sb.Append("  SUserName: ").Append(SUserName).Append("\n");
-            sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,7 +71,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -184,66 +83,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigntemplatesignerID (int) minimum
-            if (this.PkiEzsigntemplatesignerID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignerID" });
+                yield return x;
             }
-
-            // FkiEzsigntemplateID (int) minimum
-            if (this.FkiEzsigntemplateID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
-            }
-
-            // FkiUserID (int) minimum
-            if (this.FkiUserID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-            // FkiUsergroupID (int) maximum
-            if (this.FkiUsergroupID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUsergroupID (int) minimum
-            if (this.FkiUsergroupID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiEzdoctemplatedocumentID (int) maximum
-            if (this.FkiEzdoctemplatedocumentID > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "FkiEzdoctemplatedocumentID" });
-            }
-
-            // FkiEzdoctemplatedocumentID (int) minimum
-            if (this.FkiEzdoctemplatedocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatedocumentID" });
-            }
-
-            if (this.SEzsigntemplatesignerDescription != null) {
-                // SEzsigntemplatesignerDescription (string) pattern
-                Regex regexSEzsigntemplatesignerDescription = new Regex(@"^.{1,50}$", RegexOptions.CultureInvariant);
-                if (!regexSEzsigntemplatesignerDescription.Match(this.SEzsigntemplatesignerDescription).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignerDescription, must match a pattern of " + regexSEzsigntemplatesignerDescription, new [] { "SEzsigntemplatesignerDescription" });
-                }
-            }
-
-            if (this.SUsergroupNameX != null) {
-                // SUsergroupNameX (string) pattern
-                Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
-                }
-            }
-
             yield break;
         }
     }

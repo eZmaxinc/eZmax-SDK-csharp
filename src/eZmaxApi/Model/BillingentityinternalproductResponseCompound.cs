@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternalproduct Object
     /// </summary>
     [DataContract(Name = "billingentityinternalproduct-ResponseCompound")]
-    public partial class BillingentityinternalproductResponseCompound : IValidatableObject
+    public partial class BillingentityinternalproductResponseCompound : BillingentityinternalproductResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductResponseCompound" /> class.
@@ -47,87 +47,9 @@ namespace eZmaxApi.Model
         /// <param name="sEzmaxproductDescriptionX">The description of the Ezmaxproduct in the language of the requester (required).</param>
         /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
         /// <param name="sBillingentityexternalDescription">The description of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductResponseCompound(int pkiBillingentityinternalproductID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string))
+        public BillingentityinternalproductResponseCompound(int pkiBillingentityinternalproductID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string)) : base()
         {
-            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
-            if (sBillingentityinternalDescriptionX == null)
-            {
-                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for BillingentityinternalproductResponseCompound and cannot be null");
-            }
-            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-            this.FkiEzmaxproductID = fkiEzmaxproductID;
-            // to ensure "sEzmaxproductDescriptionX" is required (not null)
-            if (sEzmaxproductDescriptionX == null)
-            {
-                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for BillingentityinternalproductResponseCompound and cannot be null");
-            }
-            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
-            // to ensure "sBillingentityexternalDescription" is required (not null)
-            if (sBillingentityexternalDescription == null)
-            {
-                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for BillingentityinternalproductResponseCompound and cannot be null");
-            }
-            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
         }
-
-        /// <summary>
-        /// The unique ID of the Billingentityinternalproduct
-        /// </summary>
-        /// <value>The unique ID of the Billingentityinternalproduct</value>
-        /* <example>254</example>*/
-        [DataMember(Name = "pkiBillingentityinternalproductID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiBillingentityinternalproductID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Billingentityinternal.
-        /// </summary>
-        /// <value>The unique ID of the Billingentityinternal.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiBillingentityinternalID { get; set; }
-
-        /// <summary>
-        /// The description of the Billingentityinternal in the language of the requester
-        /// </summary>
-        /// <value>The description of the Billingentityinternal in the language of the requester</value>
-        /* <example>Default</example>*/
-        [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
-        public string SBillingentityinternalDescriptionX { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezmaxproduct
-        /// </summary>
-        /// <value>The unique ID of the Ezmaxproduct</value>
-        /* <example>172</example>*/
-        [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzmaxproductID { get; set; }
-
-        /// <summary>
-        /// The description of the Ezmaxproduct in the language of the requester
-        /// </summary>
-        /// <value>The description of the Ezmaxproduct in the language of the requester</value>
-        /* <example>eZmax (License)</example>*/
-        [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzmaxproductDescriptionX { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Billingentityexternal
-        /// </summary>
-        /// <value>The unique ID of the Billingentityexternal</value>
-        /* <example>83</example>*/
-        [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiBillingentityexternalID { get; set; }
-
-        /// <summary>
-        /// The description of the Billingentityexternal
-        /// </summary>
-        /// <value>The description of the Billingentityexternal</value>
-        /* <example>ACME Inc</example>*/
-        [DataMember(Name = "sBillingentityexternalDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SBillingentityexternalDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -137,13 +59,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class BillingentityinternalproductResponseCompound {\n");
-            sb.Append("  PkiBillingentityinternalproductID: ").Append(PkiBillingentityinternalproductID).Append("\n");
-            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
-            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
-            sb.Append("  FkiEzmaxproductID: ").Append(FkiEzmaxproductID).Append("\n");
-            sb.Append("  SEzmaxproductDescriptionX: ").Append(SEzmaxproductDescriptionX).Append("\n");
-            sb.Append("  FkiBillingentityexternalID: ").Append(FkiBillingentityexternalID).Append("\n");
-            sb.Append("  SBillingentityexternalDescription: ").Append(SBillingentityexternalDescription).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,7 +68,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -164,36 +80,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiBillingentityinternalproductID (int) maximum
-            if (this.PkiBillingentityinternalproductID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // PkiBillingentityinternalproductID (int) minimum
-            if (this.PkiBillingentityinternalproductID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
+                yield return x;
             }
-
-            // FkiBillingentityinternalID (int) minimum
-            if (this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-            // FkiEzmaxproductID (int) minimum
-            if (this.FkiEzmaxproductID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
-            }
-
-            // FkiBillingentityexternalID (int) minimum
-            if (this.FkiBillingentityexternalID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
-            }
-
             yield break;
         }
     }

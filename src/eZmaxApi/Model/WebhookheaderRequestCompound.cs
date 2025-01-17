@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Webhookheader Object
     /// </summary>
     [DataContract(Name = "webhookheader-RequestCompound")]
-    public partial class WebhookheaderRequestCompound : IValidatableObject
+    public partial class WebhookheaderRequestCompound : WebhookheaderRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookheaderRequestCompound" /> class.
@@ -43,46 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiWebhookheaderID">The unique ID of the Webhookheader.</param>
         /// <param name="sWebhookheaderName">The Name of the Webhookheader (required).</param>
         /// <param name="sWebhookheaderValue">The Value of the Webhookheader (required).</param>
-        public WebhookheaderRequestCompound(int pkiWebhookheaderID = default(int), string sWebhookheaderName = default(string), string sWebhookheaderValue = default(string))
+        public WebhookheaderRequestCompound(int pkiWebhookheaderID = default(int), string sWebhookheaderName = default(string), string sWebhookheaderValue = default(string)) : base()
         {
-            // to ensure "sWebhookheaderName" is required (not null)
-            if (sWebhookheaderName == null)
-            {
-                throw new ArgumentNullException("sWebhookheaderName is a required property for WebhookheaderRequestCompound and cannot be null");
-            }
-            this.SWebhookheaderName = sWebhookheaderName;
-            // to ensure "sWebhookheaderValue" is required (not null)
-            if (sWebhookheaderValue == null)
-            {
-                throw new ArgumentNullException("sWebhookheaderValue is a required property for WebhookheaderRequestCompound and cannot be null");
-            }
-            this.SWebhookheaderValue = sWebhookheaderValue;
-            this.PkiWebhookheaderID = pkiWebhookheaderID;
         }
-
-        /// <summary>
-        /// The unique ID of the Webhookheader
-        /// </summary>
-        /// <value>The unique ID of the Webhookheader</value>
-        /* <example>77</example>*/
-        [DataMember(Name = "pkiWebhookheaderID", EmitDefaultValue = false)]
-        public int PkiWebhookheaderID { get; set; }
-
-        /// <summary>
-        /// The Name of the Webhookheader
-        /// </summary>
-        /// <value>The Name of the Webhookheader</value>
-        /* <example>Authorization</example>*/
-        [DataMember(Name = "sWebhookheaderName", IsRequired = true, EmitDefaultValue = true)]
-        public string SWebhookheaderName { get; set; }
-
-        /// <summary>
-        /// The Value of the Webhookheader
-        /// </summary>
-        /// <value>The Value of the Webhookheader</value>
-        /* <example>d75fca0e12b6c671e7f6d4df0cf59e4e</example>*/
-        [DataMember(Name = "sWebhookheaderValue", IsRequired = true, EmitDefaultValue = true)]
-        public string SWebhookheaderValue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -92,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WebhookheaderRequestCompound {\n");
-            sb.Append("  PkiWebhookheaderID: ").Append(PkiWebhookheaderID).Append("\n");
-            sb.Append("  SWebhookheaderName: ").Append(SWebhookheaderName).Append("\n");
-            sb.Append("  SWebhookheaderValue: ").Append(SWebhookheaderValue).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -115,24 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            if (this.SWebhookheaderName != null) {
-                // SWebhookheaderName (string) pattern
-                Regex regexSWebhookheaderName = new Regex(@"^(?!(?:e|E)(?:z|Z)(?:m|M)(?:a|A)(?:x|X))(?!(?:h|H)(?:o|O)(?:s|S)(?:t|T)$|(?:u|U)(?:s|S)(?:e|E)(?:r|R)-(?:a|A)(?:g|G)(?:e|E)(?:n|N)(?:t|T)$)(?!\s)[^\s].*$", RegexOptions.CultureInvariant);
-                if (!regexSWebhookheaderName.Match(this.SWebhookheaderName).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebhookheaderName, must match a pattern of " + regexSWebhookheaderName, new [] { "SWebhookheaderName" });
-                }
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            if (this.SWebhookheaderValue != null) {
-                // SWebhookheaderValue (string) pattern
-                Regex regexSWebhookheaderValue = new Regex(@"^.{1,255}$", RegexOptions.CultureInvariant);
-                if (!regexSWebhookheaderValue.Match(this.SWebhookheaderValue).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SWebhookheaderValue, must match a pattern of " + regexSWebhookheaderValue, new [] { "SWebhookheaderValue" });
-                }
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
             }
-
             yield break;
         }
     }

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsigningreason Object
     /// </summary>
     [DataContract(Name = "ezsignsigningreason-ResponseCompound")]
-    public partial class EzsignsigningreasonResponseCompound : IValidatableObject
+    public partial class EzsignsigningreasonResponseCompound : EzsignsigningreasonResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsigningreasonResponseCompound" /> class.
@@ -43,39 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason (required).</param>
         /// <param name="objEzsignsigningreasonDescription">objEzsignsigningreasonDescription (required).</param>
         /// <param name="bEzsignsigningreasonIsactive">Whether the ezsignsigningreason is active or not (required).</param>
-        public EzsignsigningreasonResponseCompound(int pkiEzsignsigningreasonID = default(int), MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription = default(MultilingualEzsignsigningreasonDescription), bool bEzsignsigningreasonIsactive = default(bool))
+        public EzsignsigningreasonResponseCompound(int pkiEzsignsigningreasonID = default(int), MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription = default(MultilingualEzsignsigningreasonDescription), bool bEzsignsigningreasonIsactive = default(bool)) : base()
         {
-            this.PkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
-            // to ensure "objEzsignsigningreasonDescription" is required (not null)
-            if (objEzsignsigningreasonDescription == null)
-            {
-                throw new ArgumentNullException("objEzsignsigningreasonDescription is a required property for EzsignsigningreasonResponseCompound and cannot be null");
-            }
-            this.ObjEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
-            this.BEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsignsigningreason
-        /// </summary>
-        /// <value>The unique ID of the Ezsignsigningreason</value>
-        /* <example>194</example>*/
-        [DataMember(Name = "pkiEzsignsigningreasonID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsignsigningreasonID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjEzsignsigningreasonDescription
-        /// </summary>
-        [DataMember(Name = "objEzsignsigningreasonDescription", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualEzsignsigningreasonDescription ObjEzsignsigningreasonDescription { get; set; }
-
-        /// <summary>
-        /// Whether the ezsignsigningreason is active or not
-        /// </summary>
-        /// <value>Whether the ezsignsigningreason is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzsignsigningreasonIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzsignsigningreasonIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -85,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignsigningreasonResponseCompound {\n");
-            sb.Append("  PkiEzsignsigningreasonID: ").Append(PkiEzsignsigningreasonID).Append("\n");
-            sb.Append("  ObjEzsignsigningreasonDescription: ").Append(ObjEzsignsigningreasonDescription).Append("\n");
-            sb.Append("  BEzsignsigningreasonIsactive: ").Append(BEzsignsigningreasonIsactive).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -108,18 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsignsigningreasonID (int) maximum
-            if (this.PkiEzsignsigningreasonID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value less than or equal to 255.", new [] { "PkiEzsignsigningreasonID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // PkiEzsignsigningreasonID (int) minimum
-            if (this.PkiEzsignsigningreasonID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignsigningreasonID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsigningreasonID" });
+                yield return x;
             }
-
             yield break;
         }
     }

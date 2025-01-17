@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Discussion Object
     /// </summary>
     [DataContract(Name = "discussion-ResponseCompound")]
-    public partial class DiscussionResponseCompound : IValidatableObject
+    public partial class DiscussionResponseCompound : DiscussionResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionResponseCompound" /> class.
@@ -40,6 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionResponseCompound" /> class.
         /// </summary>
+        /// <param name="aObjDiscussionmembership">aObjDiscussionmembership (required).</param>
+        /// <param name="aObjDiscussionmessage">aObjDiscussionmessage (required).</param>
         /// <param name="pkiDiscussionID">The unique ID of the Discussion (required).</param>
         /// <param name="sDiscussionDescription">The description of the Discussion (required).</param>
         /// <param name="bDiscussionClosed">Whether if it&#39;s an closed (required).</param>
@@ -47,20 +49,8 @@ namespace eZmaxApi.Model
         /// <param name="iDiscussionmessageCount">The count of Attachment. (required).</param>
         /// <param name="iDiscussionmessageCountunread">The count of Attachment. (required).</param>
         /// <param name="objDiscussionconfiguration">objDiscussionconfiguration.</param>
-        /// <param name="aObjDiscussionmembership">aObjDiscussionmembership (required).</param>
-        /// <param name="aObjDiscussionmessage">aObjDiscussionmessage (required).</param>
-        public DiscussionResponseCompound(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), CustomDiscussionconfigurationResponse objDiscussionconfiguration = default(CustomDiscussionconfigurationResponse), List<DiscussionmembershipResponseCompound> aObjDiscussionmembership = default(List<DiscussionmembershipResponseCompound>), List<DiscussionmessageResponseCompound> aObjDiscussionmessage = default(List<DiscussionmessageResponseCompound>))
+        public DiscussionResponseCompound(List<DiscussionmembershipResponseCompound> aObjDiscussionmembership = default(List<DiscussionmembershipResponseCompound>), List<DiscussionmessageResponseCompound> aObjDiscussionmessage = default(List<DiscussionmessageResponseCompound>), int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool), string dtDiscussionLastread = default(string), int iDiscussionmessageCount = default(int), int iDiscussionmessageCountunread = default(int), CustomDiscussionconfigurationResponse objDiscussionconfiguration = default(CustomDiscussionconfigurationResponse)) : base()
         {
-            this.PkiDiscussionID = pkiDiscussionID;
-            // to ensure "sDiscussionDescription" is required (not null)
-            if (sDiscussionDescription == null)
-            {
-                throw new ArgumentNullException("sDiscussionDescription is a required property for DiscussionResponseCompound and cannot be null");
-            }
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.BDiscussionClosed = bDiscussionClosed;
-            this.IDiscussionmessageCount = iDiscussionmessageCount;
-            this.IDiscussionmessageCountunread = iDiscussionmessageCountunread;
             // to ensure "aObjDiscussionmembership" is required (not null)
             if (aObjDiscussionmembership == null)
             {
@@ -73,63 +63,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjDiscussionmessage is a required property for DiscussionResponseCompound and cannot be null");
             }
             this.AObjDiscussionmessage = aObjDiscussionmessage;
-            this.DtDiscussionLastread = dtDiscussionLastread;
-            this.ObjDiscussionconfiguration = objDiscussionconfiguration;
         }
-
-        /// <summary>
-        /// The unique ID of the Discussion
-        /// </summary>
-        /// <value>The unique ID of the Discussion</value>
-        /* <example>125</example>*/
-        [DataMember(Name = "pkiDiscussionID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiDiscussionID { get; set; }
-
-        /// <summary>
-        /// The description of the Discussion
-        /// </summary>
-        /// <value>The description of the Discussion</value>
-        /* <example>John Doe</example>*/
-        [DataMember(Name = "sDiscussionDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SDiscussionDescription { get; set; }
-
-        /// <summary>
-        /// Whether if it&#39;s an closed
-        /// </summary>
-        /// <value>Whether if it&#39;s an closed</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bDiscussionClosed", IsRequired = true, EmitDefaultValue = true)]
-        public bool BDiscussionClosed { get; set; }
-
-        /// <summary>
-        /// The date the Discussion was last read
-        /// </summary>
-        /// <value>The date the Discussion was last read</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtDiscussionLastread", EmitDefaultValue = false)]
-        public string DtDiscussionLastread { get; set; }
-
-        /// <summary>
-        /// The count of Attachment.
-        /// </summary>
-        /// <value>The count of Attachment.</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iDiscussionmessageCount", IsRequired = true, EmitDefaultValue = true)]
-        public int IDiscussionmessageCount { get; set; }
-
-        /// <summary>
-        /// The count of Attachment.
-        /// </summary>
-        /// <value>The count of Attachment.</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iDiscussionmessageCountunread", IsRequired = true, EmitDefaultValue = true)]
-        public int IDiscussionmessageCountunread { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDiscussionconfiguration
-        /// </summary>
-        [DataMember(Name = "objDiscussionconfiguration", EmitDefaultValue = false)]
-        public CustomDiscussionconfigurationResponse ObjDiscussionconfiguration { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjDiscussionmembership
@@ -151,13 +85,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DiscussionResponseCompound {\n");
-            sb.Append("  PkiDiscussionID: ").Append(PkiDiscussionID).Append("\n");
-            sb.Append("  SDiscussionDescription: ").Append(SDiscussionDescription).Append("\n");
-            sb.Append("  BDiscussionClosed: ").Append(BDiscussionClosed).Append("\n");
-            sb.Append("  DtDiscussionLastread: ").Append(DtDiscussionLastread).Append("\n");
-            sb.Append("  IDiscussionmessageCount: ").Append(IDiscussionmessageCount).Append("\n");
-            sb.Append("  IDiscussionmessageCountunread: ").Append(IDiscussionmessageCountunread).Append("\n");
-            sb.Append("  ObjDiscussionconfiguration: ").Append(ObjDiscussionconfiguration).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjDiscussionmembership: ").Append(AObjDiscussionmembership).Append("\n");
             sb.Append("  AObjDiscussionmessage: ").Append(AObjDiscussionmessage).Append("\n");
             sb.Append("}\n");
@@ -168,7 +96,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -180,27 +108,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiDiscussionID (int) maximum
-            if (this.PkiDiscussionID > (int)16777215)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionID" });
+                yield return x;
             }
-
-            // PkiDiscussionID (int) minimum
-            if (this.PkiDiscussionID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiDiscussionID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionID" });
-            }
-
-            if (this.SDiscussionDescription != null) {
-                // SDiscussionDescription (string) pattern
-                Regex regexSDiscussionDescription = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
-                if (!regexSDiscussionDescription.Match(this.SDiscussionDescription).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SDiscussionDescription, must match a pattern of " + regexSDiscussionDescription, new [] { "SDiscussionDescription" });
-                }
-            }
-
             yield break;
         }
     }

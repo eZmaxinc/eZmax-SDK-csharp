@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Module Object
     /// </summary>
     [DataContract(Name = "module-ResponseCompound")]
-    public partial class ModuleResponseCompound : IValidatableObject
+    public partial class ModuleResponseCompound : ModuleResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
@@ -40,81 +40,17 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModuleResponseCompound" /> class.
         /// </summary>
+        /// <param name="aObjModulesection">aObjModulesection.</param>
         /// <param name="pkiModuleID">The unique ID of the Module (required).</param>
         /// <param name="fkiModulegroupID">The unique ID of the Modulegroup (required).</param>
         /// <param name="eModuleInternalname">The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all. (required).</param>
         /// <param name="sModuleNameX">The Name of the Module in the language of the requester (required).</param>
         /// <param name="bModuleRegistered">Whether the Module is registered or not (required).</param>
         /// <param name="bModuleRegisteredapi">Whether the Module is registered or not for api use (required).</param>
-        /// <param name="aObjModulesection">aObjModulesection.</param>
-        public ModuleResponseCompound(int pkiModuleID = default(int), int fkiModulegroupID = default(int), string eModuleInternalname = default(string), string sModuleNameX = default(string), bool bModuleRegistered = default(bool), bool bModuleRegisteredapi = default(bool), List<ModulesectionResponseCompound> aObjModulesection = default(List<ModulesectionResponseCompound>))
+        public ModuleResponseCompound(List<ModulesectionResponseCompound> aObjModulesection = default(List<ModulesectionResponseCompound>), int pkiModuleID = default(int), int fkiModulegroupID = default(int), string eModuleInternalname = default(string), string sModuleNameX = default(string), bool bModuleRegistered = default(bool), bool bModuleRegisteredapi = default(bool)) : base()
         {
-            this.PkiModuleID = pkiModuleID;
-            this.FkiModulegroupID = fkiModulegroupID;
-            // to ensure "eModuleInternalname" is required (not null)
-            if (eModuleInternalname == null)
-            {
-                throw new ArgumentNullException("eModuleInternalname is a required property for ModuleResponseCompound and cannot be null");
-            }
-            this.EModuleInternalname = eModuleInternalname;
-            // to ensure "sModuleNameX" is required (not null)
-            if (sModuleNameX == null)
-            {
-                throw new ArgumentNullException("sModuleNameX is a required property for ModuleResponseCompound and cannot be null");
-            }
-            this.SModuleNameX = sModuleNameX;
-            this.BModuleRegistered = bModuleRegistered;
-            this.BModuleRegisteredapi = bModuleRegisteredapi;
             this.AObjModulesection = aObjModulesection;
         }
-
-        /// <summary>
-        /// The unique ID of the Module
-        /// </summary>
-        /// <value>The unique ID of the Module</value>
-        /* <example>40</example>*/
-        [DataMember(Name = "pkiModuleID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiModuleID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Modulegroup
-        /// </summary>
-        /// <value>The unique ID of the Modulegroup</value>
-        /* <example>46</example>*/
-        [DataMember(Name = "fkiModulegroupID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiModulegroupID { get; set; }
-
-        /// <summary>
-        /// The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.
-        /// </summary>
-        /// <value>The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.</value>
-        /* <example>Purchases</example>*/
-        [DataMember(Name = "eModuleInternalname", IsRequired = true, EmitDefaultValue = true)]
-        public string EModuleInternalname { get; set; }
-
-        /// <summary>
-        /// The Name of the Module in the language of the requester
-        /// </summary>
-        /// <value>The Name of the Module in the language of the requester</value>
-        /* <example>Purchase</example>*/
-        [DataMember(Name = "sModuleNameX", IsRequired = true, EmitDefaultValue = true)]
-        public string SModuleNameX { get; set; }
-
-        /// <summary>
-        /// Whether the Module is registered or not
-        /// </summary>
-        /// <value>Whether the Module is registered or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bModuleRegistered", IsRequired = true, EmitDefaultValue = true)]
-        public bool BModuleRegistered { get; set; }
-
-        /// <summary>
-        /// Whether the Module is registered or not for api use
-        /// </summary>
-        /// <value>Whether the Module is registered or not for api use</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bModuleRegisteredapi", IsRequired = true, EmitDefaultValue = true)]
-        public bool BModuleRegisteredapi { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjModulesection
@@ -130,12 +66,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ModuleResponseCompound {\n");
-            sb.Append("  PkiModuleID: ").Append(PkiModuleID).Append("\n");
-            sb.Append("  FkiModulegroupID: ").Append(FkiModulegroupID).Append("\n");
-            sb.Append("  EModuleInternalname: ").Append(EModuleInternalname).Append("\n");
-            sb.Append("  SModuleNameX: ").Append(SModuleNameX).Append("\n");
-            sb.Append("  BModuleRegistered: ").Append(BModuleRegistered).Append("\n");
-            sb.Append("  BModuleRegisteredapi: ").Append(BModuleRegisteredapi).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjModulesection: ").Append(AObjModulesection).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -145,7 +76,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -157,24 +88,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiModuleID (int) minimum
-            if (this.PkiModuleID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiModuleID, must be a value greater than or equal to 0.", new [] { "PkiModuleID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiModulegroupID (int) maximum
-            if (this.FkiModulegroupID > (int)255)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiModulegroupID, must be a value less than or equal to 255.", new [] { "FkiModulegroupID" });
+                yield return x;
             }
-
-            // FkiModulegroupID (int) minimum
-            if (this.FkiModulegroupID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiModulegroupID, must be a value greater than or equal to 1.", new [] { "FkiModulegroupID" });
-            }
-
             yield break;
         }
     }

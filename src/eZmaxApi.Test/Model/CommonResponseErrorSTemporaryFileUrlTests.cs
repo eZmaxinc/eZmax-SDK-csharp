@@ -56,33 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SErrorMessage'
-        /// </summary>
-        [Fact]
-        public void SErrorMessageTest()
-        {
-            // TODO unit test for the property 'SErrorMessage'
-        }
-
-        /// <summary>
-        /// Test the property 'EErrorCode'
-        /// </summary>
-        [Fact]
-        public void EErrorCodeTest()
-        {
-            // TODO unit test for the property 'EErrorCode'
-        }
-
-        /// <summary>
-        /// Test the property 'ASErrorMessagedetail'
-        /// </summary>
-        [Fact]
-        public void ASErrorMessagedetailTest()
-        {
-            // TODO unit test for the property 'ASErrorMessagedetail'
-        }
-
-        /// <summary>
         /// Test the property 'STemporaryFileUrl'
         /// </summary>
         [Fact]

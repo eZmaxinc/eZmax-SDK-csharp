@@ -30,26 +30,8 @@ namespace eZmaxApi.Model
     /// A User Object and children
     /// </summary>
     [DataContract(Name = "user-RequestCompound")]
-    public partial class UserRequestCompound : IValidatableObject
+    public partial class UserRequestCompound : UserRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EUserType
-        /// </summary>
-        [DataMember(Name = "eUserType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEUserType EUserType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EUserLogintype
-        /// </summary>
-        [DataMember(Name = "eUserLogintype", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEUserLogintype EUserLogintype { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EUserEzsignaccess
-        /// </summary>
-        [DataMember(Name = "eUserEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRequestCompound" /> class.
         /// </summary>
@@ -86,254 +68,9 @@ namespace eZmaxApi.Model
         /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password.</param>
-        public UserRequestCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequest objEmail = default(EmailRequest), int fkiBillingentityinternalID = default(int), PhoneRequest objPhoneHome = default(PhoneRequest), PhoneRequest objPhoneSMS = default(PhoneRequest), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
+        public UserRequestCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequest objEmail = default(EmailRequest), int fkiBillingentityinternalID = default(int), PhoneRequest objPhoneHome = default(PhoneRequest), PhoneRequest objPhoneSMS = default(PhoneRequest), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool)) : base()
         {
-            this.FkiCompanyIDDefault = fkiCompanyIDDefault;
-            this.FkiDepartmentIDDefault = fkiDepartmentIDDefault;
-            this.FkiTimezoneID = fkiTimezoneID;
-            this.FkiLanguageID = fkiLanguageID;
-            // to ensure "objEmail" is required (not null)
-            if (objEmail == null)
-            {
-                throw new ArgumentNullException("objEmail is a required property for UserRequestCompound and cannot be null");
-            }
-            this.ObjEmail = objEmail;
-            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
-            this.EUserType = eUserType;
-            this.EUserLogintype = eUserLogintype;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
-            {
-                throw new ArgumentNullException("sUserFirstname is a required property for UserRequestCompound and cannot be null");
-            }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
-            {
-                throw new ArgumentNullException("sUserLastname is a required property for UserRequestCompound and cannot be null");
-            }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sUserLoginname" is required (not null)
-            if (sUserLoginname == null)
-            {
-                throw new ArgumentNullException("sUserLoginname is a required property for UserRequestCompound and cannot be null");
-            }
-            this.SUserLoginname = sUserLoginname;
-            this.EUserEzsignaccess = eUserEzsignaccess;
-            this.BUserIsactive = bUserIsactive;
-            this.PkiUserID = pkiUserID;
-            this.FkiAgentID = fkiAgentID;
-            this.FkiBrokerID = fkiBrokerID;
-            this.FkiAssistantID = fkiAssistantID;
-            this.FkiEmployeeID = fkiEmployeeID;
-            this.ObjPhoneHome = objPhoneHome;
-            this.ObjPhoneSMS = objPhoneSMS;
-            this.FkiSecretquestionID = fkiSecretquestionID;
-            this.SUserSecretresponse = sUserSecretresponse;
-            this.FkiModuleIDForm = fkiModuleIDForm;
-            this.SUserJobtitle = sUserJobtitle;
-            this.BUserValidatebyadministration = bUserValidatebyadministration;
-            this.BUserValidatebydirector = bUserValidatebydirector;
-            this.BUserAttachmentautoverified = bUserAttachmentautoverified;
-            this.BUserChangepassword = bUserChangepassword;
         }
-
-        /// <summary>
-        /// The unique ID of the User
-        /// </summary>
-        /// <value>The unique ID of the User</value>
-        /* <example>70</example>*/
-        [DataMember(Name = "pkiUserID", EmitDefaultValue = false)]
-        public int PkiUserID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Agent.
-        /// </summary>
-        /// <value>The unique ID of the Agent.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
-        public int FkiAgentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Broker.
-        /// </summary>
-        /// <value>The unique ID of the Broker.</value>
-        /* <example>26</example>*/
-        [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
-        public int FkiBrokerID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Assistant.
-        /// </summary>
-        /// <value>The unique ID of the Assistant.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiAssistantID", EmitDefaultValue = false)]
-        public int FkiAssistantID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Employee.
-        /// </summary>
-        /// <value>The unique ID of the Employee.</value>
-        /* <example>31</example>*/
-        [DataMember(Name = "fkiEmployeeID", EmitDefaultValue = false)]
-        public int FkiEmployeeID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Company
-        /// </summary>
-        /// <value>The unique ID of the Company</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiCompanyIDDefault", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiCompanyIDDefault { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Department
-        /// </summary>
-        /// <value>The unique ID of the Department</value>
-        /* <example>21</example>*/
-        [DataMember(Name = "fkiDepartmentIDDefault", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiDepartmentIDDefault { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Timezone
-        /// </summary>
-        /// <value>The unique ID of the Timezone</value>
-        /* <example>247</example>*/
-        [DataMember(Name = "fkiTimezoneID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiTimezoneID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        /// </summary>
-        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiLanguageID { get; set; }
-
-        /// <summary>
-        /// An Email Object and children to create a complete structure
-        /// </summary>
-        /// <value>An Email Object and children to create a complete structure</value>
-        [DataMember(Name = "objEmail", IsRequired = true, EmitDefaultValue = true)]
-        public EmailRequest ObjEmail { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Billingentityinternal.
-        /// </summary>
-        /// <value>The unique ID of the Billingentityinternal.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiBillingentityinternalID { get; set; }
-
-        /// <summary>
-        /// A Phone Object and children to create a complete structure
-        /// </summary>
-        /// <value>A Phone Object and children to create a complete structure</value>
-        [DataMember(Name = "objPhoneHome", EmitDefaultValue = false)]
-        public PhoneRequest ObjPhoneHome { get; set; }
-
-        /// <summary>
-        /// A Phone Object and children to create a complete structure
-        /// </summary>
-        /// <value>A Phone Object and children to create a complete structure</value>
-        [DataMember(Name = "objPhoneSMS", EmitDefaultValue = false)]
-        public PhoneRequest ObjPhoneSMS { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
-        /// </summary>
-        /// <value>The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|</value>
-        /* <example>7</example>*/
-        [DataMember(Name = "fkiSecretquestionID", EmitDefaultValue = false)]
-        public int FkiSecretquestionID { get; set; }
-
-        /// <summary>
-        /// The answer to the Secretquestion
-        /// </summary>
-        /// <value>The answer to the Secretquestion</value>
-        /* <example>Montreal General Hospital</example>*/
-        [DataMember(Name = "sUserSecretresponse", EmitDefaultValue = false)]
-        public string SUserSecretresponse { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Module
-        /// </summary>
-        /// <value>The unique ID of the Module</value>
-        /* <example>40</example>*/
-        [DataMember(Name = "fkiModuleIDForm", EmitDefaultValue = false)]
-        public int FkiModuleIDForm { get; set; }
-
-        /// <summary>
-        /// The first name of the user
-        /// </summary>
-        /// <value>The first name of the user</value>
-        /* <example>John</example>*/
-        [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserFirstname { get; set; }
-
-        /// <summary>
-        /// The last name of the user
-        /// </summary>
-        /// <value>The last name of the user</value>
-        /* <example>Doe</example>*/
-        [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserLastname { get; set; }
-
-        /// <summary>
-        /// The login name of the User.
-        /// </summary>
-        /// <value>The login name of the User.</value>
-        /* <example>JohnDoe</example>*/
-        [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserLoginname { get; set; }
-
-        /// <summary>
-        /// The job title of the user
-        /// </summary>
-        /// <value>The job title of the user</value>
-        /* <example>Sales Representative</example>*/
-        [DataMember(Name = "sUserJobtitle", EmitDefaultValue = false)]
-        public string SUserJobtitle { get; set; }
-
-        /// <summary>
-        /// Whether the User is active or not
-        /// </summary>
-        /// <value>Whether the User is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bUserIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BUserIsactive { get; set; }
-
-        /// <summary>
-        /// Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
-        /// </summary>
-        /// <value>Whether if the transactions in which the User is implicated must be validated by administrative personnel or not</value>
-        /* <example>false</example>*/
-        [DataMember(Name = "bUserValidatebyadministration", EmitDefaultValue = true)]
-        public bool BUserValidatebyadministration { get; set; }
-
-        /// <summary>
-        /// Whether if the transactions in which the User is implicated must be validated by a director or not
-        /// </summary>
-        /// <value>Whether if the transactions in which the User is implicated must be validated by a director or not</value>
-        /* <example>false</example>*/
-        [DataMember(Name = "bUserValidatebydirector", EmitDefaultValue = true)]
-        public bool BUserValidatebydirector { get; set; }
-
-        /// <summary>
-        /// Whether if Attachments uploaded by the User must be validated or not
-        /// </summary>
-        /// <value>Whether if Attachments uploaded by the User must be validated or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bUserAttachmentautoverified", EmitDefaultValue = true)]
-        public bool BUserAttachmentautoverified { get; set; }
-
-        /// <summary>
-        /// Whether if the User is forced to change its password
-        /// </summary>
-        /// <value>Whether if the User is forced to change its password</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bUserChangepassword", EmitDefaultValue = true)]
-        public bool BUserChangepassword { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -343,34 +80,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UserRequestCompound {\n");
-            sb.Append("  PkiUserID: ").Append(PkiUserID).Append("\n");
-            sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
-            sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
-            sb.Append("  FkiAssistantID: ").Append(FkiAssistantID).Append("\n");
-            sb.Append("  FkiEmployeeID: ").Append(FkiEmployeeID).Append("\n");
-            sb.Append("  FkiCompanyIDDefault: ").Append(FkiCompanyIDDefault).Append("\n");
-            sb.Append("  FkiDepartmentIDDefault: ").Append(FkiDepartmentIDDefault).Append("\n");
-            sb.Append("  FkiTimezoneID: ").Append(FkiTimezoneID).Append("\n");
-            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
-            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
-            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
-            sb.Append("  ObjPhoneHome: ").Append(ObjPhoneHome).Append("\n");
-            sb.Append("  ObjPhoneSMS: ").Append(ObjPhoneSMS).Append("\n");
-            sb.Append("  FkiSecretquestionID: ").Append(FkiSecretquestionID).Append("\n");
-            sb.Append("  SUserSecretresponse: ").Append(SUserSecretresponse).Append("\n");
-            sb.Append("  FkiModuleIDForm: ").Append(FkiModuleIDForm).Append("\n");
-            sb.Append("  EUserType: ").Append(EUserType).Append("\n");
-            sb.Append("  EUserLogintype: ").Append(EUserLogintype).Append("\n");
-            sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
-            sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
-            sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
-            sb.Append("  SUserJobtitle: ").Append(SUserJobtitle).Append("\n");
-            sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
-            sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
-            sb.Append("  BUserValidatebyadministration: ").Append(BUserValidatebyadministration).Append("\n");
-            sb.Append("  BUserValidatebydirector: ").Append(BUserValidatebydirector).Append("\n");
-            sb.Append("  BUserAttachmentautoverified: ").Append(BUserAttachmentautoverified).Append("\n");
-            sb.Append("  BUserChangepassword: ").Append(BUserChangepassword).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,7 +89,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -391,108 +101,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiUserID (int) minimum
-            if (this.PkiUserID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return x;
             }
-
-            // FkiAgentID (int) minimum
-            if (this.FkiAgentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
-            }
-
-            // FkiBrokerID (int) minimum
-            if (this.FkiBrokerID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
-            }
-
-            // FkiAssistantID (int) minimum
-            if (this.FkiAssistantID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiAssistantID, must be a value greater than or equal to 0.", new [] { "FkiAssistantID" });
-            }
-
-            // FkiEmployeeID (int) minimum
-            if (this.FkiEmployeeID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
-            }
-
-            // FkiCompanyIDDefault (int) maximum
-            if (this.FkiCompanyIDDefault > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value less than or equal to 255.", new [] { "FkiCompanyIDDefault" });
-            }
-
-            // FkiCompanyIDDefault (int) minimum
-            if (this.FkiCompanyIDDefault < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiCompanyIDDefault, must be a value greater than or equal to 1.", new [] { "FkiCompanyIDDefault" });
-            }
-
-            // FkiDepartmentIDDefault (int) minimum
-            if (this.FkiDepartmentIDDefault < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiDepartmentIDDefault, must be a value greater than or equal to 0.", new [] { "FkiDepartmentIDDefault" });
-            }
-
-            // FkiTimezoneID (int) minimum
-            if (this.FkiTimezoneID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
-            }
-
-            // FkiLanguageID (int) maximum
-            if (this.FkiLanguageID > (int)2)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if (this.FkiLanguageID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiBillingentityinternalID (int) minimum
-            if (this.FkiBillingentityinternalID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
-            }
-
-            // FkiSecretquestionID (int) minimum
-            if (this.FkiSecretquestionID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiSecretquestionID, must be a value greater than or equal to 0.", new [] { "FkiSecretquestionID" });
-            }
-
-            // FkiModuleIDForm (int) minimum
-            if (this.FkiModuleIDForm < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiModuleIDForm, must be a value greater than or equal to 0.", new [] { "FkiModuleIDForm" });
-            }
-
-            if (this.SUserLoginname != null) {
-                // SUserLoginname (string) pattern
-                Regex regexSUserLoginname = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-                if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
-                }
-            }
-
-            if (this.SUserJobtitle != null) {
-                // SUserJobtitle (string) pattern
-                Regex regexSUserJobtitle = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSUserJobtitle.Match(this.SUserJobtitle).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserJobtitle, must match a pattern of " + regexSUserJobtitle, new [] { "SUserJobtitle" });
-                }
-            }
-
             yield break;
         }
     }

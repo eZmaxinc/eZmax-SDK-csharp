@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" UsergroupRequestCompound
             //Assert.IsType<UsergroupRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiUsergroupID'
-        /// </summary>
-        [Fact]
-        public void PkiUsergroupIDTest()
-        {
-            // TODO unit test for the property 'PkiUsergroupID'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjEmail'
-        /// </summary>
-        [Fact]
-        public void ObjEmailTest()
-        {
-            // TODO unit test for the property 'ObjEmail'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjUsergroupName'
-        /// </summary>
-        [Fact]
-        public void ObjUsergroupNameTest()
-        {
-            // TODO unit test for the property 'ObjUsergroupName'
-        }
     }
 }

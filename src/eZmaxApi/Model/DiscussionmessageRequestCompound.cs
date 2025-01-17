@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Discussionmessage Object and children
     /// </summary>
     [DataContract(Name = "discussionmessage-RequestCompound")]
-    public partial class DiscussionmessageRequestCompound : IValidatableObject
+    public partial class DiscussionmessageRequestCompound : DiscussionmessageRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionmessageRequestCompound" /> class.
@@ -44,50 +44,9 @@ namespace eZmaxApi.Model
         /// <param name="fkiDiscussionID">The unique ID of the Discussion (required).</param>
         /// <param name="fkiDiscussionmembershipIDActionrequired">The unique ID of the Discussionmembership.</param>
         /// <param name="tDiscussionmessageContent">The content of the Discussionmessage (required).</param>
-        public DiscussionmessageRequestCompound(int pkiDiscussionmessageID = default(int), int fkiDiscussionID = default(int), int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string))
+        public DiscussionmessageRequestCompound(int pkiDiscussionmessageID = default(int), int fkiDiscussionID = default(int), int fkiDiscussionmembershipIDActionrequired = default(int), string tDiscussionmessageContent = default(string)) : base()
         {
-            this.FkiDiscussionID = fkiDiscussionID;
-            // to ensure "tDiscussionmessageContent" is required (not null)
-            if (tDiscussionmessageContent == null)
-            {
-                throw new ArgumentNullException("tDiscussionmessageContent is a required property for DiscussionmessageRequestCompound and cannot be null");
-            }
-            this.TDiscussionmessageContent = tDiscussionmessageContent;
-            this.PkiDiscussionmessageID = pkiDiscussionmessageID;
-            this.FkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
         }
-
-        /// <summary>
-        /// The unique ID of the Discussionmessage
-        /// </summary>
-        /// <value>The unique ID of the Discussionmessage</value>
-        /* <example>123</example>*/
-        [DataMember(Name = "pkiDiscussionmessageID", EmitDefaultValue = false)]
-        public int PkiDiscussionmessageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Discussion
-        /// </summary>
-        /// <value>The unique ID of the Discussion</value>
-        /* <example>125</example>*/
-        [DataMember(Name = "fkiDiscussionID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiDiscussionID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Discussionmembership
-        /// </summary>
-        /// <value>The unique ID of the Discussionmembership</value>
-        /* <example>165</example>*/
-        [DataMember(Name = "fkiDiscussionmembershipIDActionrequired", EmitDefaultValue = false)]
-        public int FkiDiscussionmembershipIDActionrequired { get; set; }
-
-        /// <summary>
-        /// The content of the Discussionmessage
-        /// </summary>
-        /// <value>The content of the Discussionmessage</value>
-        /* <example>Hello, this is an example of content in a message</example>*/
-        [DataMember(Name = "tDiscussionmessageContent", IsRequired = true, EmitDefaultValue = true)]
-        public string TDiscussionmessageContent { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,10 +56,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DiscussionmessageRequestCompound {\n");
-            sb.Append("  PkiDiscussionmessageID: ").Append(PkiDiscussionmessageID).Append("\n");
-            sb.Append("  FkiDiscussionID: ").Append(FkiDiscussionID).Append("\n");
-            sb.Append("  FkiDiscussionmembershipIDActionrequired: ").Append(FkiDiscussionmembershipIDActionrequired).Append("\n");
-            sb.Append("  TDiscussionmessageContent: ").Append(TDiscussionmessageContent).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,7 +65,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -121,51 +77,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiDiscussionmessageID (int) maximum
-            if (this.PkiDiscussionmessageID > (int)16777215)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionmessageID" });
+                yield return x;
             }
-
-            // PkiDiscussionmessageID (int) minimum
-            if (this.PkiDiscussionmessageID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiDiscussionmessageID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionmessageID" });
-            }
-
-            // FkiDiscussionID (int) maximum
-            if (this.FkiDiscussionID > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
-            }
-
-            // FkiDiscussionID (int) minimum
-            if (this.FkiDiscussionID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
-            }
-
-            // FkiDiscussionmembershipIDActionrequired (int) maximum
-            if (this.FkiDiscussionmembershipIDActionrequired > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
-            }
-
-            // FkiDiscussionmembershipIDActionrequired (int) minimum
-            if (this.FkiDiscussionmembershipIDActionrequired < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
-            }
-
-            if (this.TDiscussionmessageContent != null) {
-                // TDiscussionmessageContent (string) pattern
-                Regex regexTDiscussionmessageContent = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
-                if (!regexTDiscussionmessageContent.Match(this.TDiscussionmessageContent).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TDiscussionmessageContent, must match a pattern of " + regexTDiscussionmessageContent, new [] { "TDiscussionmessageContent" });
-                }
-            }
-
             yield break;
         }
     }

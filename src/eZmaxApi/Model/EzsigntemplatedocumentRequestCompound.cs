@@ -30,137 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatedocument Object and children
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-RequestCompound")]
-    public partial class EzsigntemplatedocumentRequestCompound : IValidatableObject
+    public partial class EzsigntemplatedocumentRequestCompound : EzsigntemplatedocumentRequest, IValidatableObject
     {
-        /// <summary>
-        /// Indicates where to look for the document binary content.
-        /// </summary>
-        /// <value>Indicates where to look for the document binary content.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigntemplatedocumentSourceEnum
-        {
-            /// <summary>
-            /// Enum Base64 for value: Base64
-            /// </summary>
-            [EnumMember(Value = "Base64")]
-            Base64 = 1,
-
-            /// <summary>
-            /// Enum Url for value: Url
-            /// </summary>
-            [EnumMember(Value = "Url")]
-            Url = 2,
-
-            /// <summary>
-            /// Enum Ezsigndocument for value: Ezsigndocument
-            /// </summary>
-            [EnumMember(Value = "Ezsigndocument")]
-            Ezsigndocument = 3
-        }
-
-
-        /// <summary>
-        /// Indicates where to look for the document binary content.
-        /// </summary>
-        /// <value>Indicates where to look for the document binary content.</value>
-        [DataMember(Name = "eEzsigntemplatedocumentSource", IsRequired = true, EmitDefaultValue = true)]
-        public EEzsigntemplatedocumentSourceEnum EEzsigntemplatedocumentSource { get; set; }
-        /// <summary>
-        /// Indicates the format of the template.
-        /// </summary>
-        /// <value>Indicates the format of the template.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigntemplatedocumentFormatEnum
-        {
-            /// <summary>
-            /// Enum Pdf for value: Pdf
-            /// </summary>
-            [EnumMember(Value = "Pdf")]
-            Pdf = 1,
-
-            /// <summary>
-            /// Enum Doc for value: Doc
-            /// </summary>
-            [EnumMember(Value = "Doc")]
-            Doc = 2,
-
-            /// <summary>
-            /// Enum Docx for value: Docx
-            /// </summary>
-            [EnumMember(Value = "Docx")]
-            Docx = 3,
-
-            /// <summary>
-            /// Enum Xls for value: Xls
-            /// </summary>
-            [EnumMember(Value = "Xls")]
-            Xls = 4,
-
-            /// <summary>
-            /// Enum Xlsx for value: Xlsx
-            /// </summary>
-            [EnumMember(Value = "Xlsx")]
-            Xlsx = 5,
-
-            /// <summary>
-            /// Enum Ppt for value: Ppt
-            /// </summary>
-            [EnumMember(Value = "Ppt")]
-            Ppt = 6,
-
-            /// <summary>
-            /// Enum Pptx for value: Pptx
-            /// </summary>
-            [EnumMember(Value = "Pptx")]
-            Pptx = 7
-        }
-
-
-        /// <summary>
-        /// Indicates the format of the template.
-        /// </summary>
-        /// <value>Indicates the format of the template.</value>
-        [DataMember(Name = "eEzsigntemplatedocumentFormat", EmitDefaultValue = false)]
-        public EEzsigntemplatedocumentFormatEnum? EEzsigntemplatedocumentFormat { get; set; }
-        /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
-        /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum EEzsigntemplatedocumentFormEnum
-        {
-            /// <summary>
-            /// Enum Keep for value: Keep
-            /// </summary>
-            [EnumMember(Value = "Keep")]
-            Keep = 1,
-
-            /// <summary>
-            /// Enum Convert for value: Convert
-            /// </summary>
-            [EnumMember(Value = "Convert")]
-            Convert = 2,
-
-            /// <summary>
-            /// Enum Discard for value: Discard
-            /// </summary>
-            [EnumMember(Value = "Discard")]
-            Discard = 3,
-
-            /// <summary>
-            /// Enum Flatten for value: Flatten
-            /// </summary>
-            [EnumMember(Value = "Flatten")]
-            Flatten = 4
-        }
-
-
-        /// <summary>
-        /// If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
-        /// </summary>
-        /// <value>If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.</value>
-        [DataMember(Name = "eEzsigntemplatedocumentForm", EmitDefaultValue = false)]
-        public EEzsigntemplatedocumentFormEnum? EEzsigntemplatedocumentForm { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentRequestCompound" /> class.
         /// </summary>
@@ -181,98 +52,9 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigntemplatedocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature..</param>
         /// <param name="eEzsigntemplatedocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document..</param>
         /// <param name="sEzsigntemplatedocumentPassword">If the source template is password protected, the password to open/modify it. (default to &quot;&quot;).</param>
-        public EzsigntemplatedocumentRequestCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), string sEzsigntemplatedocumentName = default(string), EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource = default(EEzsigntemplatedocumentSourceEnum), EEzsigntemplatedocumentFormatEnum? eEzsigntemplatedocumentFormat = default(EEzsigntemplatedocumentFormatEnum?), byte[] sEzsigntemplatedocumentBase64 = default(byte[]), string sEzsigntemplatedocumentUrl = default(string), bool bEzsigntemplatedocumentForcerepair = default(bool), EEzsigntemplatedocumentFormEnum? eEzsigntemplatedocumentForm = default(EEzsigntemplatedocumentFormEnum?), string sEzsigntemplatedocumentPassword = @"")
+        public EzsigntemplatedocumentRequestCompound(int pkiEzsigntemplatedocumentID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsigndocumentID = default(int), int fkiEzsigntemplatesignerID = default(int), string sEzsigntemplatedocumentName = default(string), EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource = default(EEzsigntemplatedocumentSourceEnum), EEzsigntemplatedocumentFormatEnum? eEzsigntemplatedocumentFormat = default(EEzsigntemplatedocumentFormatEnum?), byte[] sEzsigntemplatedocumentBase64 = default(byte[]), string sEzsigntemplatedocumentUrl = default(string), bool bEzsigntemplatedocumentForcerepair = default(bool), EEzsigntemplatedocumentFormEnum? eEzsigntemplatedocumentForm = default(EEzsigntemplatedocumentFormEnum?), string sEzsigntemplatedocumentPassword = @"") : base()
         {
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            // to ensure "sEzsigntemplatedocumentName" is required (not null)
-            if (sEzsigntemplatedocumentName == null)
-            {
-                throw new ArgumentNullException("sEzsigntemplatedocumentName is a required property for EzsigntemplatedocumentRequestCompound and cannot be null");
-            }
-            this.SEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
-            this.EEzsigntemplatedocumentSource = eEzsigntemplatedocumentSource;
-            this.PkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
-            this.EEzsigntemplatedocumentFormat = eEzsigntemplatedocumentFormat;
-            this.SEzsigntemplatedocumentBase64 = sEzsigntemplatedocumentBase64;
-            this.SEzsigntemplatedocumentUrl = sEzsigntemplatedocumentUrl;
-            this.BEzsigntemplatedocumentForcerepair = bEzsigntemplatedocumentForcerepair;
-            this.EEzsigntemplatedocumentForm = eEzsigntemplatedocumentForm;
-            // use default value if no "sEzsigntemplatedocumentPassword" provided
-            this.SEzsigntemplatedocumentPassword = sEzsigntemplatedocumentPassword ?? @"";
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatedocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatedocument</value>
-        /* <example>133</example>*/
-        [DataMember(Name = "pkiEzsigntemplatedocumentID", EmitDefaultValue = false)]
-        public int PkiEzsigntemplatedocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplate
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
-        /* <example>36</example>*/
-        [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplateID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigndocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        /* <example>97</example>*/
-        [DataMember(Name = "fkiEzsigndocumentID", EmitDefaultValue = false)]
-        public int FkiEzsigndocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatesigner
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatesigner</value>
-        /* <example>9</example>*/
-        [DataMember(Name = "fkiEzsigntemplatesignerID", EmitDefaultValue = false)]
-        public int FkiEzsigntemplatesignerID { get; set; }
-
-        /// <summary>
-        /// The name of the Ezsigntemplatedocument.
-        /// </summary>
-        /// <value>The name of the Ezsigntemplatedocument.</value>
-        /* <example>Standard Contract</example>*/
-        [DataMember(Name = "sEzsigntemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsigntemplatedocumentName { get; set; }
-
-        /// <summary>
-        /// The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
-        /// </summary>
-        /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.</value>
-        /* <example>eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BkZkFzQmFzZTY0L3ZhbHVlIn0&#x3D;</example>*/
-        [DataMember(Name = "sEzsigntemplatedocumentBase64", EmitDefaultValue = false)]
-        public byte[] SEzsigntemplatedocumentBase64 { get; set; }
-
-        /// <summary>
-        /// The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.
-        /// </summary>
-        /// <value>The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.</value>
-        /* <example>http://www.example.com/template.pdf</example>*/
-        [DataMember(Name = "sEzsigntemplatedocumentUrl", EmitDefaultValue = false)]
-        public string SEzsigntemplatedocumentUrl { get; set; }
-
-        /// <summary>
-        /// Try to repair the document or flatten it if it cannot be used for electronic signature.
-        /// </summary>
-        /// <value>Try to repair the document or flatten it if it cannot be used for electronic signature.</value>
-        [DataMember(Name = "bEzsigntemplatedocumentForcerepair", EmitDefaultValue = true)]
-        public bool BEzsigntemplatedocumentForcerepair { get; set; }
-
-        /// <summary>
-        /// If the source template is password protected, the password to open/modify it.
-        /// </summary>
-        /// <value>If the source template is password protected, the password to open/modify it.</value>
-        /* <example>SecretPassword123</example>*/
-        [DataMember(Name = "sEzsigntemplatedocumentPassword", EmitDefaultValue = false)]
-        public string SEzsigntemplatedocumentPassword { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -282,18 +64,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatedocumentRequestCompound {\n");
-            sb.Append("  PkiEzsigntemplatedocumentID: ").Append(PkiEzsigntemplatedocumentID).Append("\n");
-            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
-            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
-            sb.Append("  FkiEzsigntemplatesignerID: ").Append(FkiEzsigntemplatesignerID).Append("\n");
-            sb.Append("  SEzsigntemplatedocumentName: ").Append(SEzsigntemplatedocumentName).Append("\n");
-            sb.Append("  EEzsigntemplatedocumentSource: ").Append(EEzsigntemplatedocumentSource).Append("\n");
-            sb.Append("  EEzsigntemplatedocumentFormat: ").Append(EEzsigntemplatedocumentFormat).Append("\n");
-            sb.Append("  SEzsigntemplatedocumentBase64: ").Append(SEzsigntemplatedocumentBase64).Append("\n");
-            sb.Append("  SEzsigntemplatedocumentUrl: ").Append(SEzsigntemplatedocumentUrl).Append("\n");
-            sb.Append("  BEzsigntemplatedocumentForcerepair: ").Append(BEzsigntemplatedocumentForcerepair).Append("\n");
-            sb.Append("  EEzsigntemplatedocumentForm: ").Append(EEzsigntemplatedocumentForm).Append("\n");
-            sb.Append("  SEzsigntemplatedocumentPassword: ").Append(SEzsigntemplatedocumentPassword).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -302,7 +73,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -314,30 +85,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigntemplatedocumentID (int) minimum
-            if (this.PkiEzsigntemplatedocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiEzsigntemplateID (int) minimum
-            if (this.FkiEzsigntemplateID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return x;
             }
-
-            // FkiEzsigndocumentID (int) minimum
-            if (this.FkiEzsigndocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
-            }
-
-            // FkiEzsigntemplatesignerID (int) minimum
-            if (this.FkiEzsigntemplatesignerID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
-            }
-
             yield break;
         }
     }

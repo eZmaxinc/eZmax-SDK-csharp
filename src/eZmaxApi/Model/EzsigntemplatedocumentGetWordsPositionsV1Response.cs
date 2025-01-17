@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocument-getWordsPositions-v1-Response")]
-    public partial class EzsigntemplatedocumentGetWordsPositionsV1Response : IValidatableObject
+    public partial class EzsigntemplatedocumentGetWordsPositionsV1Response : CommonResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentGetWordsPositionsV1Response" /> class.
@@ -40,37 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentGetWordsPositionsV1Response" /> class.
         /// </summary>
+        /// <param name="mPayload">Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions (required).</param>
-        public EzsigntemplatedocumentGetWordsPositionsV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>))
+        public EzsigntemplatedocumentGetWordsPositionsV1Response(List<CustomWordPositionWordResponse> mPayload = default(List<CustomWordPositionWordResponse>), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
-            {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsigntemplatedocumentGetWordsPositionsV1Response and cannot be null");
-            }
-            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for EzsigntemplatedocumentGetWordsPositionsV1Response and cannot be null");
             }
             this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjDebugPayload
-        /// </summary>
-        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Payload for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
@@ -87,8 +68,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatedocumentGetWordsPositionsV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -98,7 +78,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -110,6 +90,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

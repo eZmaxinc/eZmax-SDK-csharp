@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Discussion Object and children
     /// </summary>
     [DataContract(Name = "discussion-RequestCompound")]
-    public partial class DiscussionRequestCompound : IValidatableObject
+    public partial class DiscussionRequestCompound : DiscussionRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionRequestCompound" /> class.
@@ -43,41 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiDiscussionID">The unique ID of the Discussion.</param>
         /// <param name="sDiscussionDescription">The description of the Discussion (required).</param>
         /// <param name="bDiscussionClosed">Whether if it&#39;s an closed.</param>
-        public DiscussionRequestCompound(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool))
+        public DiscussionRequestCompound(int pkiDiscussionID = default(int), string sDiscussionDescription = default(string), bool bDiscussionClosed = default(bool)) : base()
         {
-            // to ensure "sDiscussionDescription" is required (not null)
-            if (sDiscussionDescription == null)
-            {
-                throw new ArgumentNullException("sDiscussionDescription is a required property for DiscussionRequestCompound and cannot be null");
-            }
-            this.SDiscussionDescription = sDiscussionDescription;
-            this.PkiDiscussionID = pkiDiscussionID;
-            this.BDiscussionClosed = bDiscussionClosed;
         }
-
-        /// <summary>
-        /// The unique ID of the Discussion
-        /// </summary>
-        /// <value>The unique ID of the Discussion</value>
-        /* <example>125</example>*/
-        [DataMember(Name = "pkiDiscussionID", EmitDefaultValue = false)]
-        public int PkiDiscussionID { get; set; }
-
-        /// <summary>
-        /// The description of the Discussion
-        /// </summary>
-        /// <value>The description of the Discussion</value>
-        /* <example>John Doe</example>*/
-        [DataMember(Name = "sDiscussionDescription", IsRequired = true, EmitDefaultValue = true)]
-        public string SDiscussionDescription { get; set; }
-
-        /// <summary>
-        /// Whether if it&#39;s an closed
-        /// </summary>
-        /// <value>Whether if it&#39;s an closed</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bDiscussionClosed", EmitDefaultValue = true)]
-        public bool BDiscussionClosed { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DiscussionRequestCompound {\n");
-            sb.Append("  PkiDiscussionID: ").Append(PkiDiscussionID).Append("\n");
-            sb.Append("  SDiscussionDescription: ").Append(SDiscussionDescription).Append("\n");
-            sb.Append("  BDiscussionClosed: ").Append(BDiscussionClosed).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -110,27 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiDiscussionID (int) maximum
-            if (this.PkiDiscussionID > (int)16777215)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "PkiDiscussionID" });
+                yield return x;
             }
-
-            // PkiDiscussionID (int) minimum
-            if (this.PkiDiscussionID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiDiscussionID, must be a value greater than or equal to 0.", new [] { "PkiDiscussionID" });
-            }
-
-            if (this.SDiscussionDescription != null) {
-                // SDiscussionDescription (string) pattern
-                Regex regexSDiscussionDescription = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
-                if (!regexSDiscussionDescription.Match(this.SDiscussionDescription).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SDiscussionDescription, must match a pattern of " + regexSDiscussionDescription, new [] { "SDiscussionDescription" });
-                }
-            }
-
             yield break;
         }
     }

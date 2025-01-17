@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatepackagemembership Object and children
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackagemembership-RequestCompound")]
-    public partial class EzsigntemplatepackagemembershipRequestCompound : IValidatableObject
+    public partial class EzsigntemplatepackagemembershipRequestCompound : EzsigntemplatepackagemembershipRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagemembershipRequestCompound" /> class.
@@ -43,36 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsigntemplatepackagemembershipID">The unique ID of the Ezsigntemplatepackagemembership.</param>
         /// <param name="fkiEzsigntemplatepackageID">The unique ID of the Ezsigntemplatepackage (required).</param>
         /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
-        public EzsigntemplatepackagemembershipRequestCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int))
+        public EzsigntemplatepackagemembershipRequestCompound(int pkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackageID = default(int), int fkiEzsigntemplateID = default(int)) : base()
         {
-            this.FkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-            this.FkiEzsigntemplateID = fkiEzsigntemplateID;
-            this.PkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatepackagemembership
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatepackagemembership</value>
-        /* <example>194</example>*/
-        [DataMember(Name = "pkiEzsigntemplatepackagemembershipID", EmitDefaultValue = false)]
-        public int PkiEzsigntemplatepackagemembershipID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplatepackage
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatepackage</value>
-        /* <example>99</example>*/
-        [DataMember(Name = "fkiEzsigntemplatepackageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplatepackageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigntemplate
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplate</value>
-        /* <example>36</example>*/
-        [DataMember(Name = "fkiEzsigntemplateID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplateID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -82,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatepackagemembershipRequestCompound {\n");
-            sb.Append("  PkiEzsigntemplatepackagemembershipID: ").Append(PkiEzsigntemplatepackagemembershipID).Append("\n");
-            sb.Append("  FkiEzsigntemplatepackageID: ").Append(FkiEzsigntemplatepackageID).Append("\n");
-            sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -105,24 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigntemplatepackagemembershipID (int) minimum
-            if (this.PkiEzsigntemplatepackagemembershipID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagemembershipID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // FkiEzsigntemplatepackageID (int) minimum
-            if (this.FkiEzsigntemplatepackageID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+                yield return x;
             }
-
-            // FkiEzsigntemplateID (int) minimum
-            if (this.FkiEzsigntemplateID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
-            }
-
             yield break;
         }
     }

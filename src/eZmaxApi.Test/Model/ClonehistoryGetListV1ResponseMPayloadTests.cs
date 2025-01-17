@@ -56,24 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'IRowReturned'
-        /// </summary>
-        [Fact]
-        public void IRowReturnedTest()
-        {
-            // TODO unit test for the property 'IRowReturned'
-        }
-
-        /// <summary>
-        /// Test the property 'IRowFiltered'
-        /// </summary>
-        [Fact]
-        public void IRowFilteredTest()
-        {
-            // TODO unit test for the property 'IRowFiltered'
-        }
-
-        /// <summary>
         /// Test the property 'AObjClonehistory'
         /// </summary>
         [Fact]

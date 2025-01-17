@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// Generic Error Message
     /// </summary>
     [DataContract(Name = "Common-Response-Error-CreditcardValidation")]
-    public partial class CommonResponseErrorCreditcardValidation : IValidatableObject
+    public partial class CommonResponseErrorCreditcardValidation : CommonResponseError, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EErrorCode
-        /// </summary>
-        [DataMember(Name = "eErrorCode", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEErrorCode EErrorCode { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorCreditcardValidation" /> class.
         /// </summary>
@@ -46,37 +40,14 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseErrorCreditcardValidation" /> class.
         /// </summary>
+        /// <param name="objCreditcardtransactionresponse">objCreditcardtransactionresponse.</param>
         /// <param name="sErrorMessage">The message giving details about the error (required).</param>
         /// <param name="eErrorCode">eErrorCode (required).</param>
         /// <param name="aSErrorMessagedetail">More error message detail.</param>
-        /// <param name="objCreditcardtransactionresponse">objCreditcardtransactionresponse.</param>
-        public CommonResponseErrorCreditcardValidation(string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>), CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse = default(CustomCreditcardtransactionresponseResponse))
+        public CommonResponseErrorCreditcardValidation(CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse = default(CustomCreditcardtransactionresponseResponse), string sErrorMessage = default(string), FieldEErrorCode eErrorCode = default(FieldEErrorCode), List<string> aSErrorMessagedetail = default(List<string>)) : base()
         {
-            // to ensure "sErrorMessage" is required (not null)
-            if (sErrorMessage == null)
-            {
-                throw new ArgumentNullException("sErrorMessage is a required property for CommonResponseErrorCreditcardValidation and cannot be null");
-            }
-            this.SErrorMessage = sErrorMessage;
-            this.EErrorCode = eErrorCode;
-            this.ASErrorMessagedetail = aSErrorMessagedetail;
             this.ObjCreditcardtransactionresponse = objCreditcardtransactionresponse;
         }
-
-        /// <summary>
-        /// The message giving details about the error
-        /// </summary>
-        /// <value>The message giving details about the error</value>
-        /* <example>Invalid Signature Headers</example>*/
-        [DataMember(Name = "sErrorMessage", IsRequired = true, EmitDefaultValue = true)]
-        public string SErrorMessage { get; set; }
-
-        /// <summary>
-        /// More error message detail
-        /// </summary>
-        /// <value>More error message detail</value>
-        [DataMember(Name = "a_sErrorMessagedetail", EmitDefaultValue = false)]
-        public List<string> ASErrorMessagedetail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjCreditcardtransactionresponse
@@ -92,9 +63,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommonResponseErrorCreditcardValidation {\n");
-            sb.Append("  SErrorMessage: ").Append(SErrorMessage).Append("\n");
-            sb.Append("  EErrorCode: ").Append(EErrorCode).Append("\n");
-            sb.Append("  ASErrorMessagedetail: ").Append(ASErrorMessagedetail).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjCreditcardtransactionresponse: ").Append(ObjCreditcardtransactionresponse).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,7 +73,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -116,15 +85,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            if (this.SErrorMessage != null) {
-                // SErrorMessage (string) pattern
-                Regex regexSErrorMessage = new Regex(@"^.{0,500}$", RegexOptions.CultureInvariant);
-                if (!regexSErrorMessage.Match(this.SErrorMessage).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SErrorMessage, must match a pattern of " + regexSErrorMessage, new [] { "SErrorMessage" });
-                }
-            }
+            return this.BaseValidate(validationContext);
+        }
 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

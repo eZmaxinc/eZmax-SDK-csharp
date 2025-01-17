@@ -56,51 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiPhoneID'
-        /// </summary>
-        [Fact]
-        public void PkiPhoneIDTest()
-        {
-            // TODO unit test for the property 'PkiPhoneID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiPhonetypeID'
-        /// </summary>
-        [Fact]
-        public void FkiPhonetypeIDTest()
-        {
-            // TODO unit test for the property 'FkiPhonetypeID'
-        }
-
-        /// <summary>
-        /// Test the property 'EPhoneType'
-        /// </summary>
-        [Fact]
-        public void EPhoneTypeTest()
-        {
-            // TODO unit test for the property 'EPhoneType'
-        }
-
-        /// <summary>
-        /// Test the property 'SPhoneE164'
-        /// </summary>
-        [Fact]
-        public void SPhoneE164Test()
-        {
-            // TODO unit test for the property 'SPhoneE164'
-        }
-
-        /// <summary>
-        /// Test the property 'SPhoneExtension'
-        /// </summary>
-        [Fact]
-        public void SPhoneExtensionTest()
-        {
-            // TODO unit test for the property 'SPhoneExtension'
-        }
-
-        /// <summary>
         /// Test the property 'BPhoneInternational'
         /// </summary>
         [Fact]

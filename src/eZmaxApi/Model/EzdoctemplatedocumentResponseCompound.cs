@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezdoctemplatedocument Object
     /// </summary>
     [DataContract(Name = "ezdoctemplatedocument-ResponseCompound")]
-    public partial class EzdoctemplatedocumentResponseCompound : IValidatableObject
+    public partial class EzdoctemplatedocumentResponseCompound : EzdoctemplatedocumentResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzdoctemplatedocumentPrivacylevel
-        /// </summary>
-        [DataMember(Name = "eEzdoctemplatedocumentPrivacylevel", EmitDefaultValue = false)]
-        public FieldEEzdoctemplatedocumentPrivacylevel? EEzdoctemplatedocumentPrivacylevel { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentResponseCompound" /> class.
         /// </summary>
@@ -58,122 +52,9 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
         /// <param name="sEzdoctemplatefieldtypecategoryDescriptionX">The description of the Ezdoctemplatefieldtypecategory in the language of the requester (required).</param>
         /// <param name="sEzdoctemplatetypeDescriptionX">The description of the Ezdoctemplatetype in the language of the requester (required).</param>
-        public EzdoctemplatedocumentResponseCompound(int pkiEzdoctemplatedocumentID = default(int), int fkiLanguageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzdoctemplatetypeID = default(int), int fkiEzdoctemplatefieldtypecategoryID = default(int), FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool bEzdoctemplatedocumentIsactive = default(bool), MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default(MultilingualEzdoctemplatedocumentName), string sEzdoctemplatedocumentNameX = default(string), string sEzsignfoldertypeNameX = default(string), string sEzdoctemplatefieldtypecategoryDescriptionX = default(string), string sEzdoctemplatetypeDescriptionX = default(string))
+        public EzdoctemplatedocumentResponseCompound(int pkiEzdoctemplatedocumentID = default(int), int fkiLanguageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzdoctemplatetypeID = default(int), int fkiEzdoctemplatefieldtypecategoryID = default(int), FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool bEzdoctemplatedocumentIsactive = default(bool), MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default(MultilingualEzdoctemplatedocumentName), string sEzdoctemplatedocumentNameX = default(string), string sEzsignfoldertypeNameX = default(string), string sEzdoctemplatefieldtypecategoryDescriptionX = default(string), string sEzdoctemplatetypeDescriptionX = default(string)) : base()
         {
-            this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
-            this.FkiLanguageID = fkiLanguageID;
-            this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
-            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
-            this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
-            // to ensure "objEzdoctemplatedocumentName" is required (not null)
-            if (objEzdoctemplatedocumentName == null)
-            {
-                throw new ArgumentNullException("objEzdoctemplatedocumentName is a required property for EzdoctemplatedocumentResponseCompound and cannot be null");
-            }
-            this.ObjEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
-            // to ensure "sEzdoctemplatefieldtypecategoryDescriptionX" is required (not null)
-            if (sEzdoctemplatefieldtypecategoryDescriptionX == null)
-            {
-                throw new ArgumentNullException("sEzdoctemplatefieldtypecategoryDescriptionX is a required property for EzdoctemplatedocumentResponseCompound and cannot be null");
-            }
-            this.SEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
-            // to ensure "sEzdoctemplatetypeDescriptionX" is required (not null)
-            if (sEzdoctemplatetypeDescriptionX == null)
-            {
-                throw new ArgumentNullException("sEzdoctemplatetypeDescriptionX is a required property for EzdoctemplatedocumentResponseCompound and cannot be null");
-            }
-            this.SEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
-            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-            this.EEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
-            this.SEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
-            this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezdoctemplatedocument
-        /// </summary>
-        /// <value>The unique ID of the Ezdoctemplatedocument</value>
-        /* <example>95</example>*/
-        [DataMember(Name = "pkiEzdoctemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzdoctemplatedocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        /// </summary>
-        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiLanguageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignfoldertype.
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfoldertype.</value>
-        /* <example>5</example>*/
-        [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
-        public int FkiEzsignfoldertypeID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezdoctemplatetype
-        /// </summary>
-        /// <value>The unique ID of the Ezdoctemplatetype</value>
-        /* <example>7</example>*/
-        [DataMember(Name = "fkiEzdoctemplatetypeID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzdoctemplatetypeID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezdoctemplatefieldtypecategory
-        /// </summary>
-        /// <value>The unique ID of the Ezdoctemplatefieldtypecategory</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzdoctemplatefieldtypecategoryID { get; set; }
-
-        /// <summary>
-        /// Whether the ezdoctemplatedocument is active or not
-        /// </summary>
-        /// <value>Whether the ezdoctemplatedocument is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzdoctemplatedocumentIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BEzdoctemplatedocumentIsactive { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjEzdoctemplatedocumentName
-        /// </summary>
-        [DataMember(Name = "objEzdoctemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualEzdoctemplatedocumentName ObjEzdoctemplatedocumentName { get; set; }
-
-        /// <summary>
-        /// The name of the Ezdoctemplatedocument in the language of the requester
-        /// </summary>
-        /// <value>The name of the Ezdoctemplatedocument in the language of the requester</value>
-        /* <example>Standard Contract</example>*/
-        [DataMember(Name = "sEzdoctemplatedocumentNameX", EmitDefaultValue = false)]
-        public string SEzdoctemplatedocumentNameX { get; set; }
-
-        /// <summary>
-        /// The name of the Ezsignfoldertype in the language of the requester
-        /// </summary>
-        /// <value>The name of the Ezsignfoldertype in the language of the requester</value>
-        /* <example>Default</example>*/
-        [DataMember(Name = "sEzsignfoldertypeNameX", EmitDefaultValue = false)]
-        public string SEzsignfoldertypeNameX { get; set; }
-
-        /// <summary>
-        /// The description of the Ezdoctemplatefieldtypecategory in the language of the requester
-        /// </summary>
-        /// <value>The description of the Ezdoctemplatefieldtypecategory in the language of the requester</value>
-        /* <example>Sale</example>*/
-        [DataMember(Name = "sEzdoctemplatefieldtypecategoryDescriptionX", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzdoctemplatefieldtypecategoryDescriptionX { get; set; }
-
-        /// <summary>
-        /// The description of the Ezdoctemplatetype in the language of the requester
-        /// </summary>
-        /// <value>The description of the Ezdoctemplatetype in the language of the requester</value>
-        /* <example>Real Estate</example>*/
-        [DataMember(Name = "sEzdoctemplatetypeDescriptionX", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzdoctemplatetypeDescriptionX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -183,18 +64,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzdoctemplatedocumentResponseCompound {\n");
-            sb.Append("  PkiEzdoctemplatedocumentID: ").Append(PkiEzdoctemplatedocumentID).Append("\n");
-            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
-            sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
-            sb.Append("  FkiEzdoctemplatetypeID: ").Append(FkiEzdoctemplatetypeID).Append("\n");
-            sb.Append("  FkiEzdoctemplatefieldtypecategoryID: ").Append(FkiEzdoctemplatefieldtypecategoryID).Append("\n");
-            sb.Append("  EEzdoctemplatedocumentPrivacylevel: ").Append(EEzdoctemplatedocumentPrivacylevel).Append("\n");
-            sb.Append("  BEzdoctemplatedocumentIsactive: ").Append(BEzdoctemplatedocumentIsactive).Append("\n");
-            sb.Append("  ObjEzdoctemplatedocumentName: ").Append(ObjEzdoctemplatedocumentName).Append("\n");
-            sb.Append("  SEzdoctemplatedocumentNameX: ").Append(SEzdoctemplatedocumentNameX).Append("\n");
-            sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
-            sb.Append("  SEzdoctemplatefieldtypecategoryDescriptionX: ").Append(SEzdoctemplatefieldtypecategoryDescriptionX).Append("\n");
-            sb.Append("  SEzdoctemplatetypeDescriptionX: ").Append(SEzdoctemplatetypeDescriptionX).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,7 +73,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -215,93 +85,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzdoctemplatedocumentID (int) maximum
-            if (this.PkiEzdoctemplatedocumentID > (int)65535)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
+                yield return x;
             }
-
-            // PkiEzdoctemplatedocumentID (int) minimum
-            if (this.PkiEzdoctemplatedocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
-            }
-
-            // FkiLanguageID (int) maximum
-            if (this.FkiLanguageID > (int)2)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if (this.FkiLanguageID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiEzsignfoldertypeID (int) maximum
-            if (this.FkiEzsignfoldertypeID > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
-            }
-
-            // FkiEzsignfoldertypeID (int) minimum
-            if (this.FkiEzsignfoldertypeID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
-            }
-
-            // FkiEzdoctemplatetypeID (int) maximum
-            if (this.FkiEzdoctemplatetypeID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
-            }
-
-            // FkiEzdoctemplatetypeID (int) minimum
-            if (this.FkiEzdoctemplatetypeID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
-            }
-
-            // FkiEzdoctemplatefieldtypecategoryID (int) maximum
-            if (this.FkiEzdoctemplatefieldtypecategoryID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
-            }
-
-            // FkiEzdoctemplatefieldtypecategoryID (int) minimum
-            if (this.FkiEzdoctemplatefieldtypecategoryID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
-            }
-
-            if (this.SEzdoctemplatedocumentNameX != null) {
-                // SEzdoctemplatedocumentNameX (string) pattern
-                Regex regexSEzdoctemplatedocumentNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSEzdoctemplatedocumentNameX.Match(this.SEzdoctemplatedocumentNameX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatedocumentNameX, must match a pattern of " + regexSEzdoctemplatedocumentNameX, new [] { "SEzdoctemplatedocumentNameX" });
-                }
-            }
-
-            if (this.SEzdoctemplatefieldtypecategoryDescriptionX != null) {
-                // SEzdoctemplatefieldtypecategoryDescriptionX (string) pattern
-                Regex regexSEzdoctemplatefieldtypecategoryDescriptionX = new Regex(@"^.{0,55}$", RegexOptions.CultureInvariant);
-                if (!regexSEzdoctemplatefieldtypecategoryDescriptionX.Match(this.SEzdoctemplatefieldtypecategoryDescriptionX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatefieldtypecategoryDescriptionX, must match a pattern of " + regexSEzdoctemplatefieldtypecategoryDescriptionX, new [] { "SEzdoctemplatefieldtypecategoryDescriptionX" });
-                }
-            }
-
-            if (this.SEzdoctemplatetypeDescriptionX != null) {
-                // SEzdoctemplatetypeDescriptionX (string) pattern
-                Regex regexSEzdoctemplatetypeDescriptionX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSEzdoctemplatetypeDescriptionX.Match(this.SEzdoctemplatetypeDescriptionX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzdoctemplatetypeDescriptionX, must match a pattern of " + regexSEzdoctemplatetypeDescriptionX, new [] { "SEzdoctemplatetypeDescriptionX" });
-                }
-            }
-
             yield break;
         }
     }

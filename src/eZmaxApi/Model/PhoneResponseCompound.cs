@@ -30,15 +30,8 @@ namespace eZmaxApi.Model
     /// A Phone Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "phone-ResponseCompound")]
-    public partial class PhoneResponseCompound : IValidatableObject
+    public partial class PhoneResponseCompound : PhoneResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EPhoneType
-        /// </summary>
-        [DataMember(Name = "ePhoneType", EmitDefaultValue = false)]
-        [Obsolete]
-        public FieldEPhoneType? EPhoneType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneResponseCompound" /> class.
         /// </summary>
@@ -47,53 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneResponseCompound" /> class.
         /// </summary>
+        /// <param name="bPhoneInternational">Indicate the phone number is an international phone number..</param>
         /// <param name="pkiPhoneID">The unique ID of the Phone. (required).</param>
         /// <param name="fkiPhonetypeID">The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free| (required).</param>
         /// <param name="ePhoneType">ePhoneType.</param>
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
         /// <param name="sPhoneExtension">The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers.</param>
-        /// <param name="bPhoneInternational">Indicate the phone number is an international phone number..</param>
-        public PhoneResponseCompound(int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string), bool bPhoneInternational = default(bool))
+        public PhoneResponseCompound(bool bPhoneInternational = default(bool), int pkiPhoneID = default(int), int fkiPhonetypeID = default(int), FieldEPhoneType? ePhoneType = default(FieldEPhoneType?), string sPhoneE164 = default(string), string sPhoneExtension = default(string)) : base()
         {
-            this.PkiPhoneID = pkiPhoneID;
-            this.FkiPhonetypeID = fkiPhonetypeID;
-            this.EPhoneType = ePhoneType;
-            this.SPhoneE164 = sPhoneE164;
-            this.SPhoneExtension = sPhoneExtension;
             this.BPhoneInternational = bPhoneInternational;
         }
-
-        /// <summary>
-        /// The unique ID of the Phone.
-        /// </summary>
-        /// <value>The unique ID of the Phone.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "pkiPhoneID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiPhoneID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
-        /// </summary>
-        /// <value>The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiPhonetypeID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiPhonetypeID { get; set; }
-
-        /// <summary>
-        /// A phone number in E.164 Format
-        /// </summary>
-        /// <value>A phone number in E.164 Format</value>
-        /* <example>+15149901516</example>*/
-        [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
-        public string SPhoneE164 { get; set; }
-
-        /// <summary>
-        /// The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
-        /// </summary>
-        /// <value>The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers</value>
-        /* <example>123</example>*/
-        [DataMember(Name = "sPhoneExtension", EmitDefaultValue = false)]
-        public string SPhoneExtension { get; set; }
 
         /// <summary>
         /// Indicate the phone number is an international phone number.
@@ -111,11 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class PhoneResponseCompound {\n");
-            sb.Append("  PkiPhoneID: ").Append(PkiPhoneID).Append("\n");
-            sb.Append("  FkiPhonetypeID: ").Append(FkiPhonetypeID).Append("\n");
-            sb.Append("  EPhoneType: ").Append(EPhoneType).Append("\n");
-            sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
-            sb.Append("  SPhoneExtension: ").Append(SPhoneExtension).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  BPhoneInternational: ").Append(BPhoneInternational).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -125,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -137,27 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiPhoneID (int) minimum
-            if (this.PkiPhoneID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
+                yield return x;
             }
-
-            // FkiPhonetypeID (int) minimum
-            if (this.FkiPhonetypeID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
-            }
-
-            if (this.SPhoneE164 != null) {
-                // SPhoneE164 (string) pattern
-                Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
-                if (!regexSPhoneE164.Match(this.SPhoneE164).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
-                }
-            }
-
             yield break;
         }
     }

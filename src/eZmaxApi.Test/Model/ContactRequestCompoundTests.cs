@@ -56,60 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'FkiContacttitleID'
-        /// </summary>
-        [Fact]
-        public void FkiContacttitleIDTest()
-        {
-            // TODO unit test for the property 'FkiContacttitleID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiLanguageID'
-        /// </summary>
-        [Fact]
-        public void FkiLanguageIDTest()
-        {
-            // TODO unit test for the property 'FkiLanguageID'
-        }
-
-        /// <summary>
-        /// Test the property 'SContactFirstname'
-        /// </summary>
-        [Fact]
-        public void SContactFirstnameTest()
-        {
-            // TODO unit test for the property 'SContactFirstname'
-        }
-
-        /// <summary>
-        /// Test the property 'SContactLastname'
-        /// </summary>
-        [Fact]
-        public void SContactLastnameTest()
-        {
-            // TODO unit test for the property 'SContactLastname'
-        }
-
-        /// <summary>
-        /// Test the property 'SContactCompany'
-        /// </summary>
-        [Fact]
-        public void SContactCompanyTest()
-        {
-            // TODO unit test for the property 'SContactCompany'
-        }
-
-        /// <summary>
-        /// Test the property 'DtContactBirthdate'
-        /// </summary>
-        [Fact]
-        public void DtContactBirthdateTest()
-        {
-            // TODO unit test for the property 'DtContactBirthdate'
-        }
-
-        /// <summary>
         /// Test the property 'ObjContactinformations'
         /// </summary>
         [Fact]

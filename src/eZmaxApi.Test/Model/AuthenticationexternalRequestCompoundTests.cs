@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" AuthenticationexternalRequestCompound
             //Assert.IsType<AuthenticationexternalRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiAuthenticationexternalID'
-        /// </summary>
-        [Fact]
-        public void PkiAuthenticationexternalIDTest()
-        {
-            // TODO unit test for the property 'PkiAuthenticationexternalID'
-        }
-
-        /// <summary>
-        /// Test the property 'SAuthenticationexternalDescription'
-        /// </summary>
-        [Fact]
-        public void SAuthenticationexternalDescriptionTest()
-        {
-            // TODO unit test for the property 'SAuthenticationexternalDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'EAuthenticationexternalType'
-        /// </summary>
-        [Fact]
-        public void EAuthenticationexternalTypeTest()
-        {
-            // TODO unit test for the property 'EAuthenticationexternalType'
-        }
     }
 }

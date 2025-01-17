@@ -56,51 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiNotificationsubsectionID'
-        /// </summary>
-        [Fact]
-        public void PkiNotificationsubsectionIDTest()
-        {
-            // TODO unit test for the property 'PkiNotificationsubsectionID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiNotificationsectionID'
-        /// </summary>
-        [Fact]
-        public void FkiNotificationsectionIDTest()
-        {
-            // TODO unit test for the property 'FkiNotificationsectionID'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjNotificationsubsectionName'
-        /// </summary>
-        [Fact]
-        public void ObjNotificationsubsectionNameTest()
-        {
-            // TODO unit test for the property 'ObjNotificationsubsectionName'
-        }
-
-        /// <summary>
-        /// Test the property 'SNotificationsectionNameX'
-        /// </summary>
-        [Fact]
-        public void SNotificationsectionNameXTest()
-        {
-            // TODO unit test for the property 'SNotificationsectionNameX'
-        }
-
-        /// <summary>
-        /// Test the property 'SNotificationsubsectionNameX'
-        /// </summary>
-        [Fact]
-        public void SNotificationsubsectionNameXTest()
-        {
-            // TODO unit test for the property 'SNotificationsubsectionNameX'
-        }
-
-        /// <summary>
         /// Test the property 'AObjNotificationtest'
         /// </summary>
         [Fact]

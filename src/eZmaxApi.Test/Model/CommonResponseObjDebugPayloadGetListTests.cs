@@ -56,51 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'IVersionMin'
-        /// </summary>
-        [Fact]
-        public void IVersionMinTest()
-        {
-            // TODO unit test for the property 'IVersionMin'
-        }
-
-        /// <summary>
-        /// Test the property 'IVersionMax'
-        /// </summary>
-        [Fact]
-        public void IVersionMaxTest()
-        {
-            // TODO unit test for the property 'IVersionMax'
-        }
-
-        /// <summary>
-        /// Test the property 'ARequiredPermission'
-        /// </summary>
-        [Fact]
-        public void ARequiredPermissionTest()
-        {
-            // TODO unit test for the property 'ARequiredPermission'
-        }
-
-        /// <summary>
-        /// Test the property 'BVersionDeprecated'
-        /// </summary>
-        [Fact]
-        public void BVersionDeprecatedTest()
-        {
-            // TODO unit test for the property 'BVersionDeprecated'
-        }
-
-        /// <summary>
-        /// Test the property 'DtResponseDate'
-        /// </summary>
-        [Fact]
-        public void DtResponseDateTest()
-        {
-            // TODO unit test for the property 'DtResponseDate'
-        }
-
-        /// <summary>
         /// Test the property 'AFilter'
         /// </summary>
         [Fact]

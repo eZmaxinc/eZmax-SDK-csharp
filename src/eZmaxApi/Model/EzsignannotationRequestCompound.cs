@@ -30,26 +30,8 @@ namespace eZmaxApi.Model
     /// A Ezsignannotation Object and children
     /// </summary>
     [DataContract(Name = "ezsignannotation-RequestCompound")]
-    public partial class EzsignannotationRequestCompound : IValidatableObject
+    public partial class EzsignannotationRequestCompound : EzsignannotationRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzsignannotationHorizontalalignment
-        /// </summary>
-        [DataMember(Name = "eEzsignannotationHorizontalalignment", EmitDefaultValue = false)]
-        public EnumHorizontalalignment? EEzsignannotationHorizontalalignment { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsignannotationVerticalalignment
-        /// </summary>
-        [DataMember(Name = "eEzsignannotationVerticalalignment", EmitDefaultValue = false)]
-        public EnumVerticalalignment? EEzsignannotationVerticalalignment { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsignannotationType
-        /// </summary>
-        [DataMember(Name = "eEzsignannotationType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzsignannotationType EEzsignannotationType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignannotationRequestCompound" /> class.
         /// </summary>
@@ -58,6 +40,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignannotationRequestCompound" /> class.
         /// </summary>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
         /// <param name="pkiEzsignannotationID">The unique ID of the Ezsignannotation.</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="eEzsignannotationHorizontalalignment">eEzsignannotationHorizontalalignment.</param>
@@ -69,86 +52,10 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignannotationHeight">The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**.</param>
         /// <param name="sEzsignannotationText">The Text of the Ezsignannotation.</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
-        /// <param name="objTextstylestatic">objTextstylestatic.</param>
-        public EzsignannotationRequestCompound(int pkiEzsignannotationID = default(int), int fkiEzsigndocumentID = default(int), EnumHorizontalalignment? eEzsignannotationHorizontalalignment = default(EnumHorizontalalignment?), EnumVerticalalignment? eEzsignannotationVerticalalignment = default(EnumVerticalalignment?), FieldEEzsignannotationType eEzsignannotationType = default(FieldEEzsignannotationType), int iEzsignannotationX = default(int), int iEzsignannotationY = default(int), int iEzsignannotationWidth = default(int), int iEzsignannotationHeight = default(int), string sEzsignannotationText = default(string), int iEzsignpagePagenumber = default(int), TextstylestaticRequestCompound objTextstylestatic = default(TextstylestaticRequestCompound))
+        public EzsignannotationRequestCompound(TextstylestaticRequestCompound objTextstylestatic = default(TextstylestaticRequestCompound), int pkiEzsignannotationID = default(int), int fkiEzsigndocumentID = default(int), EnumHorizontalalignment? eEzsignannotationHorizontalalignment = default(EnumHorizontalalignment?), EnumVerticalalignment? eEzsignannotationVerticalalignment = default(EnumVerticalalignment?), FieldEEzsignannotationType eEzsignannotationType = default(FieldEEzsignannotationType), int iEzsignannotationX = default(int), int iEzsignannotationY = default(int), int iEzsignannotationWidth = default(int), int iEzsignannotationHeight = default(int), string sEzsignannotationText = default(string), int iEzsignpagePagenumber = default(int)) : base()
         {
-            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
-            this.EEzsignannotationType = eEzsignannotationType;
-            this.IEzsignannotationX = iEzsignannotationX;
-            this.IEzsignannotationY = iEzsignannotationY;
-            this.IEzsignpagePagenumber = iEzsignpagePagenumber;
-            this.PkiEzsignannotationID = pkiEzsignannotationID;
-            this.EEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
-            this.EEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
-            this.IEzsignannotationWidth = iEzsignannotationWidth;
-            this.IEzsignannotationHeight = iEzsignannotationHeight;
-            this.SEzsignannotationText = sEzsignannotationText;
             this.ObjTextstylestatic = objTextstylestatic;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsignannotation
-        /// </summary>
-        /// <value>The unique ID of the Ezsignannotation</value>
-        /* <example>113</example>*/
-        [DataMember(Name = "pkiEzsignannotationID", EmitDefaultValue = false)]
-        public int PkiEzsignannotationID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsigndocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        /* <example>97</example>*/
-        [DataMember(Name = "fkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigndocumentID { get; set; }
-
-        /// <summary>
-        /// The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
-        /// </summary>
-        /// <value>The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.</value>
-        /* <example>50</example>*/
-        [DataMember(Name = "iEzsignannotationX", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignannotationX { get; set; }
-
-        /// <summary>
-        /// The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
-        /// </summary>
-        /// <value>The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.</value>
-        /* <example>50</example>*/
-        [DataMember(Name = "iEzsignannotationY", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignannotationY { get; set; }
-
-        /// <summary>
-        /// The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.
-        /// </summary>
-        /// <value>The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.</value>
-        /* <example>75</example>*/
-        [DataMember(Name = "iEzsignannotationWidth", EmitDefaultValue = false)]
-        public int IEzsignannotationWidth { get; set; }
-
-        /// <summary>
-        /// The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**
-        /// </summary>
-        /// <value>The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**</value>
-        /* <example>25</example>*/
-        [DataMember(Name = "iEzsignannotationHeight", EmitDefaultValue = false)]
-        public int IEzsignannotationHeight { get; set; }
-
-        /// <summary>
-        /// The Text of the Ezsignannotation
-        /// </summary>
-        /// <value>The Text of the Ezsignannotation</value>
-        /* <example>Sample</example>*/
-        [DataMember(Name = "sEzsignannotationText", EmitDefaultValue = false)]
-        public string SEzsignannotationText { get; set; }
-
-        /// <summary>
-        /// The page number in the Ezsigndocument
-        /// </summary>
-        /// <value>The page number in the Ezsigndocument</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsignpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsignpagePagenumber { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjTextstylestatic
@@ -164,17 +71,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignannotationRequestCompound {\n");
-            sb.Append("  PkiEzsignannotationID: ").Append(PkiEzsignannotationID).Append("\n");
-            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
-            sb.Append("  EEzsignannotationHorizontalalignment: ").Append(EEzsignannotationHorizontalalignment).Append("\n");
-            sb.Append("  EEzsignannotationVerticalalignment: ").Append(EEzsignannotationVerticalalignment).Append("\n");
-            sb.Append("  EEzsignannotationType: ").Append(EEzsignannotationType).Append("\n");
-            sb.Append("  IEzsignannotationX: ").Append(IEzsignannotationX).Append("\n");
-            sb.Append("  IEzsignannotationY: ").Append(IEzsignannotationY).Append("\n");
-            sb.Append("  IEzsignannotationWidth: ").Append(IEzsignannotationWidth).Append("\n");
-            sb.Append("  IEzsignannotationHeight: ").Append(IEzsignannotationHeight).Append("\n");
-            sb.Append("  SEzsignannotationText: ").Append(SEzsignannotationText).Append("\n");
-            sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  ObjTextstylestatic: ").Append(ObjTextstylestatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,7 +81,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -196,42 +93,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // FkiEzsigndocumentID (int) minimum
-            if (this.FkiEzsigndocumentID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // IEzsignannotationX (int) minimum
-            if (this.IEzsignannotationX < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for IEzsignannotationX, must be a value greater than or equal to 0.", new [] { "IEzsignannotationX" });
+                yield return x;
             }
-
-            // IEzsignannotationY (int) minimum
-            if (this.IEzsignannotationY < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignannotationY, must be a value greater than or equal to 0.", new [] { "IEzsignannotationY" });
-            }
-
-            // IEzsignannotationWidth (int) minimum
-            if (this.IEzsignannotationWidth < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsignannotationWidth" });
-            }
-
-            // IEzsignannotationHeight (int) minimum
-            if (this.IEzsignannotationHeight < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsignannotationHeight" });
-            }
-
-            // IEzsignpagePagenumber (int) minimum
-            if (this.IEzsignpagePagenumber < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
-            }
-
             yield break;
         }
     }

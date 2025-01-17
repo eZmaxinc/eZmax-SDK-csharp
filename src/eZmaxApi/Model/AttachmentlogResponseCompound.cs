@@ -30,14 +30,8 @@ namespace eZmaxApi.Model
     /// A Attachmentlog Object
     /// </summary>
     [DataContract(Name = "attachmentlog-ResponseCompound")]
-    public partial class AttachmentlogResponseCompound : IValidatableObject
+    public partial class AttachmentlogResponseCompound : AttachmentlogResponse, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EAttachmentlogType
-        /// </summary>
-        [DataMember(Name = "eAttachmentlogType", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEAttachmentlogType EAttachmentlogType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentlogResponseCompound" /> class.
         /// </summary>
@@ -51,51 +45,9 @@ namespace eZmaxApi.Model
         /// <param name="dtAttachmentlogDatetime">The created date (required).</param>
         /// <param name="eAttachmentlogType">eAttachmentlogType (required).</param>
         /// <param name="sAttachmentlogDetail">The additionnal detail.</param>
-        public AttachmentlogResponseCompound(int fkiAttachmentID = default(int), int fkiUserID = default(int), string dtAttachmentlogDatetime = default(string), FieldEAttachmentlogType eAttachmentlogType = default(FieldEAttachmentlogType), string sAttachmentlogDetail = default(string))
+        public AttachmentlogResponseCompound(int fkiAttachmentID = default(int), int fkiUserID = default(int), string dtAttachmentlogDatetime = default(string), FieldEAttachmentlogType eAttachmentlogType = default(FieldEAttachmentlogType), string sAttachmentlogDetail = default(string)) : base()
         {
-            this.FkiAttachmentID = fkiAttachmentID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "dtAttachmentlogDatetime" is required (not null)
-            if (dtAttachmentlogDatetime == null)
-            {
-                throw new ArgumentNullException("dtAttachmentlogDatetime is a required property for AttachmentlogResponseCompound and cannot be null");
-            }
-            this.DtAttachmentlogDatetime = dtAttachmentlogDatetime;
-            this.EAttachmentlogType = eAttachmentlogType;
-            this.SAttachmentlogDetail = sAttachmentlogDetail;
         }
-
-        /// <summary>
-        /// The unique ID of the Attachment.
-        /// </summary>
-        /// <value>The unique ID of the Attachment.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "fkiAttachmentID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiAttachmentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the User
-        /// </summary>
-        /// <value>The unique ID of the User</value>
-        /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiUserID { get; set; }
-
-        /// <summary>
-        /// The created date
-        /// </summary>
-        /// <value>The created date</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtAttachmentlogDatetime", IsRequired = true, EmitDefaultValue = true)]
-        public string DtAttachmentlogDatetime { get; set; }
-
-        /// <summary>
-        /// The additionnal detail
-        /// </summary>
-        /// <value>The additionnal detail</value>
-        /* <example>System</example>*/
-        [DataMember(Name = "sAttachmentlogDetail", EmitDefaultValue = false)]
-        public string SAttachmentlogDetail { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -105,11 +57,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AttachmentlogResponseCompound {\n");
-            sb.Append("  FkiAttachmentID: ").Append(FkiAttachmentID).Append("\n");
-            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  DtAttachmentlogDatetime: ").Append(DtAttachmentlogDatetime).Append("\n");
-            sb.Append("  EAttachmentlogType: ").Append(EAttachmentlogType).Append("\n");
-            sb.Append("  SAttachmentlogDetail: ").Append(SAttachmentlogDetail).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,7 +66,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -130,36 +78,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // FkiAttachmentID (int) minimum
-            if (this.FkiAttachmentID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
+                yield return x;
             }
-
-            // FkiUserID (int) minimum
-            if (this.FkiUserID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-            if (this.DtAttachmentlogDatetime != null) {
-                // DtAttachmentlogDatetime (string) pattern
-                Regex regexDtAttachmentlogDatetime = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$", RegexOptions.CultureInvariant);
-                if (!regexDtAttachmentlogDatetime.Match(this.DtAttachmentlogDatetime).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAttachmentlogDatetime, must match a pattern of " + regexDtAttachmentlogDatetime, new [] { "DtAttachmentlogDatetime" });
-                }
-            }
-
-            if (this.SAttachmentlogDetail != null) {
-                // SAttachmentlogDetail (string) pattern
-                Regex regexSAttachmentlogDetail = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
-                if (!regexSAttachmentlogDetail.Match(this.SAttachmentlogDetail).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentlogDetail, must match a pattern of " + regexSAttachmentlogDetail, new [] { "SAttachmentlogDetail" });
-                }
-            }
-
             yield break;
         }
     }

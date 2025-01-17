@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroup Object and children
     /// </summary>
     [DataContract(Name = "usergroup-RequestCompound")]
-    public partial class UsergroupRequestCompound : IValidatableObject
+    public partial class UsergroupRequestCompound : UsergroupRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupRequestCompound" /> class.
@@ -43,37 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiUsergroupID">The unique ID of the Usergroup.</param>
         /// <param name="objEmail">objEmail.</param>
         /// <param name="objUsergroupName">objUsergroupName (required).</param>
-        public UsergroupRequestCompound(int pkiUsergroupID = default(int), EmailRequest objEmail = default(EmailRequest), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName))
+        public UsergroupRequestCompound(int pkiUsergroupID = default(int), EmailRequest objEmail = default(EmailRequest), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName)) : base()
         {
-            // to ensure "objUsergroupName" is required (not null)
-            if (objUsergroupName == null)
-            {
-                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupRequestCompound and cannot be null");
-            }
-            this.ObjUsergroupName = objUsergroupName;
-            this.PkiUsergroupID = pkiUsergroupID;
-            this.ObjEmail = objEmail;
         }
-
-        /// <summary>
-        /// The unique ID of the Usergroup
-        /// </summary>
-        /// <value>The unique ID of the Usergroup</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "pkiUsergroupID", EmitDefaultValue = false)]
-        public int PkiUsergroupID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjEmail
-        /// </summary>
-        [DataMember(Name = "objEmail", EmitDefaultValue = false)]
-        public EmailRequest ObjEmail { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjUsergroupName
-        /// </summary>
-        [DataMember(Name = "objUsergroupName", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualUsergroupName ObjUsergroupName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupRequestCompound {\n");
-            sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
-            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
-            sb.Append("  ObjUsergroupName: ").Append(ObjUsergroupName).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -106,18 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiUsergroupID (int) maximum
-            if (this.PkiUsergroupID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // PkiUsergroupID (int) minimum
-            if (this.PkiUsergroupID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+                yield return x;
             }
-
             yield break;
         }
     }

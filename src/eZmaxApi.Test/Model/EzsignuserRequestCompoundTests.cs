@@ -54,32 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsignuserRequestCompound
             //Assert.IsType<EzsignuserRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiEzsignuserID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsignuserIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsignuserID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiContactID'
-        /// </summary>
-        [Fact]
-        public void FkiContactIDTest()
-        {
-            // TODO unit test for the property 'FkiContactID'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjContact'
-        /// </summary>
-        [Fact]
-        public void ObjContactTest()
-        {
-            // TODO unit test for the property 'ObjContact'
-        }
     }
 }

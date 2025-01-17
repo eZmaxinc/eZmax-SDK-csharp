@@ -30,20 +30,8 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
     /// </summary>
     [DataContract(Name = "ezsigndocument-getObject-v1-Response-mPayload")]
-    public partial class EzsigndocumentGetObjectV1ResponseMPayload : IValidatableObject
+    public partial class EzsigndocumentGetObjectV1ResponseMPayload : EzsigndocumentResponseCompound, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EEzsigndocumentStep
-        /// </summary>
-        [DataMember(Name = "eEzsigndocumentStep", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEEzsigndocumentStep EEzsigndocumentStep { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EEzsigndocumentSteptype
-        /// </summary>
-        [DataMember(Name = "eEzsigndocumentSteptype", IsRequired = true, EmitDefaultValue = true)]
-        public ComputedEEzsigndocumentSteptype EEzsigndocumentSteptype { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentGetObjectV1ResponseMPayload" /> class.
         /// </summary>
@@ -83,281 +71,9 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigndocumentStepsignatureCurrent">The current step in the signature phase (required).</param>
         /// <param name="aObjEzsignfoldersignerassociationstatus">aObjEzsignfoldersignerassociationstatus (required).</param>
         /// <param name="aObjEzsigndocumentdependency">aObjEzsigndocumentdependency.</param>
-        public EzsigndocumentGetObjectV1ResponseMPayload(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), int iEzsigndocumentFormfieldtotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int), int iEzsigndocumentEzsigndiscussiontotal = default(int), ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype = default(ComputedEEzsigndocumentSteptype), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>), List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency = default(List<EzsigndocumentdependencyResponse>))
+        public EzsigndocumentGetObjectV1ResponseMPayload(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsignfoldersignerassociationIDDeclinedtosign = default(int), string dtEzsigndocumentDuedate = default(string), string dtEzsignformCompleted = default(string), int fkiLanguageID = default(int), string sEzsigndocumentName = default(string), FieldEEzsigndocumentStep eEzsigndocumentStep = default(FieldEEzsigndocumentStep), string dtEzsigndocumentFirstsend = default(string), string dtEzsigndocumentLastsend = default(string), int iEzsigndocumentOrder = default(int), int iEzsigndocumentPagetotal = default(int), int iEzsigndocumentSignaturesigned = default(int), int iEzsigndocumentSignaturetotal = default(int), int iEzsigndocumentFormfieldtotal = default(int), string sEzsigndocumentMD5initial = default(string), string tEzsigndocumentDeclinedtosignreason = default(string), string sEzsigndocumentMD5signed = default(string), bool bEzsigndocumentEzsignform = default(bool), bool bEzsigndocumentHassignedsignatures = default(bool), CommonAudit objAudit = default(CommonAudit), string sEzsigndocumentExternalid = default(string), int iEzsigndocumentEzsignsignatureattachmenttotal = default(int), int iEzsigndocumentEzsigndiscussiontotal = default(int), ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype = default(ComputedEEzsigndocumentSteptype), int iEzsigndocumentStepformtotal = default(int), int iEzsigndocumentStepformcurrent = default(int), int iEzsigndocumentStepsignaturetotal = default(int), int iEzsigndocumentStepsignatureCurrent = default(int), List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = default(List<CustomEzsignfoldersignerassociationstatusResponse>), List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency = default(List<EzsigndocumentdependencyResponse>)) : base()
         {
-            this.PkiEzsigndocumentID = pkiEzsigndocumentID;
-            this.FkiEzsignfolderID = fkiEzsignfolderID;
-            // to ensure "dtEzsigndocumentDuedate" is required (not null)
-            if (dtEzsigndocumentDuedate == null)
-            {
-                throw new ArgumentNullException("dtEzsigndocumentDuedate is a required property for EzsigndocumentGetObjectV1ResponseMPayload and cannot be null");
-            }
-            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-            // to ensure "sEzsigndocumentName" is required (not null)
-            if (sEzsigndocumentName == null)
-            {
-                throw new ArgumentNullException("sEzsigndocumentName is a required property for EzsigndocumentGetObjectV1ResponseMPayload and cannot be null");
-            }
-            this.SEzsigndocumentName = sEzsigndocumentName;
-            this.EEzsigndocumentStep = eEzsigndocumentStep;
-            this.IEzsigndocumentOrder = iEzsigndocumentOrder;
-            this.IEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
-            this.IEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
-            this.IEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
-            this.IEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
-            this.IEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
-            this.IEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
-            this.EEzsigndocumentSteptype = eEzsigndocumentSteptype;
-            this.IEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
-            this.IEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
-            this.IEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
-            this.IEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
-            // to ensure "aObjEzsignfoldersignerassociationstatus" is required (not null)
-            if (aObjEzsignfoldersignerassociationstatus == null)
-            {
-                throw new ArgumentNullException("aObjEzsignfoldersignerassociationstatus is a required property for EzsigndocumentGetObjectV1ResponseMPayload and cannot be null");
-            }
-            this.AObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
-            this.FkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
-            this.DtEzsignformCompleted = dtEzsignformCompleted;
-            this.FkiLanguageID = fkiLanguageID;
-            this.DtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
-            this.DtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
-            this.SEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
-            this.TEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
-            this.SEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
-            this.BEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
-            this.BEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
-            this.ObjAudit = objAudit;
-            this.SEzsigndocumentExternalid = sEzsigndocumentExternalid;
-            this.AObjEzsigndocumentdependency = aObjEzsigndocumentdependency;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigndocument
-        /// </summary>
-        /// <value>The unique ID of the Ezsigndocument</value>
-        /* <example>97</example>*/
-        [DataMember(Name = "pkiEzsigndocumentID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsigndocumentID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignfolder
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfolder</value>
-        /* <example>33</example>*/
-        [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsignfolderID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignfoldersignerassociation
-        /// </summary>
-        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
-        /* <example>20</example>*/
-        [DataMember(Name = "fkiEzsignfoldersignerassociationIDDeclinedtosign", EmitDefaultValue = false)]
-        public int FkiEzsignfoldersignerassociationIDDeclinedtosign { get; set; }
-
-        /// <summary>
-        /// The maximum date and time at which the Ezsigndocument can be signed.
-        /// </summary>
-        /// <value>The maximum date and time at which the Ezsigndocument can be signed.</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
-        public string DtEzsigndocumentDuedate { get; set; }
-
-        /// <summary>
-        /// The date and time at which the Ezsignform has been completed.
-        /// </summary>
-        /// <value>The date and time at which the Ezsignform has been completed.</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtEzsignformCompleted", EmitDefaultValue = false)]
-        public string DtEzsignformCompleted { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-        /// </summary>
-        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "fkiLanguageID", EmitDefaultValue = false)]
-        public int FkiLanguageID { get; set; }
-
-        /// <summary>
-        /// The name of the document that will be presented to Ezsignfoldersignerassociations
-        /// </summary>
-        /// <value>The name of the document that will be presented to Ezsignfoldersignerassociations</value>
-        /* <example>Contract #123</example>*/
-        [DataMember(Name = "sEzsigndocumentName", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsigndocumentName { get; set; }
-
-        /// <summary>
-        /// The date and time when the Ezsigndocument was first sent.
-        /// </summary>
-        /// <value>The date and time when the Ezsigndocument was first sent.</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtEzsigndocumentFirstsend", EmitDefaultValue = false)]
-        public string DtEzsigndocumentFirstsend { get; set; }
-
-        /// <summary>
-        /// The date and time when the Ezsigndocument was sent the last time.
-        /// </summary>
-        /// <value>The date and time when the Ezsigndocument was sent the last time.</value>
-        /* <example>2020-12-31 23:59:59</example>*/
-        [DataMember(Name = "dtEzsigndocumentLastsend", EmitDefaultValue = false)]
-        public string DtEzsigndocumentLastsend { get; set; }
-
-        /// <summary>
-        /// The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
-        /// </summary>
-        /// <value>The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsigndocumentOrder", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentOrder { get; set; }
-
-        /// <summary>
-        /// The number of pages in the Ezsigndocument.
-        /// </summary>
-        /// <value>The number of pages in the Ezsigndocument.</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iEzsigndocumentPagetotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentPagetotal { get; set; }
-
-        /// <summary>
-        /// The number of signatures that were signed in the document.
-        /// </summary>
-        /// <value>The number of signatures that were signed in the document.</value>
-        /* <example>3</example>*/
-        [DataMember(Name = "iEzsigndocumentSignaturesigned", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentSignaturesigned { get; set; }
-
-        /// <summary>
-        /// The number of total signatures that were requested in the Ezsigndocument.
-        /// </summary>
-        /// <value>The number of total signatures that were requested in the Ezsigndocument.</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iEzsigndocumentSignaturetotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentSignaturetotal { get; set; }
-
-        /// <summary>
-        /// The number of total Ezsignformfield that were requested in the Ezsigndocument.
-        /// </summary>
-        /// <value>The number of total Ezsignformfield that were requested in the Ezsigndocument.</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iEzsigndocumentFormfieldtotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentFormfieldtotal { get; set; }
-
-        /// <summary>
-        /// MD5 Hash of the initial PDF Document before signatures were applied to it.
-        /// </summary>
-        /// <value>MD5 Hash of the initial PDF Document before signatures were applied to it.</value>
-        /* <example>012345678901234567890123456789AB</example>*/
-        [DataMember(Name = "sEzsigndocumentMD5initial", EmitDefaultValue = false)]
-        public string SEzsigndocumentMD5initial { get; set; }
-
-        /// <summary>
-        /// A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
-        /// </summary>
-        /// <value>A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign</value>
-        /* <example>The conditions in the contract are different than those discuted</example>*/
-        [DataMember(Name = "tEzsigndocumentDeclinedtosignreason", EmitDefaultValue = false)]
-        public string TEzsigndocumentDeclinedtosignreason { get; set; }
-
-        /// <summary>
-        /// MD5 Hash of the final PDF Document after all signatures were applied to it.
-        /// </summary>
-        /// <value>MD5 Hash of the final PDF Document after all signatures were applied to it.</value>
-        /* <example>012345678901234567890123456789AB</example>*/
-        [DataMember(Name = "sEzsigndocumentMD5signed", EmitDefaultValue = false)]
-        public string SEzsigndocumentMD5signed { get; set; }
-
-        /// <summary>
-        /// If the Ezsigndocument contains an Ezsignform or not
-        /// </summary>
-        /// <value>If the Ezsigndocument contains an Ezsignform or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzsigndocumentEzsignform", EmitDefaultValue = true)]
-        public bool BEzsigndocumentEzsignform { get; set; }
-
-        /// <summary>
-        /// If the Ezsigndocument contains signed signatures (From internal or external sources)
-        /// </summary>
-        /// <value>If the Ezsigndocument contains signed signatures (From internal or external sources)</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bEzsigndocumentHassignedsignatures", EmitDefaultValue = true)]
-        public bool BEzsigndocumentHassignedsignatures { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjAudit
-        /// </summary>
-        [DataMember(Name = "objAudit", EmitDefaultValue = false)]
-        public CommonAudit ObjAudit { get; set; }
-
-        /// <summary>
-        /// This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
-        /// </summary>
-        /// <value>This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. </value>
-        /* <example>{&quot;ID&quot;: 1234, &quot;TAGS&quot;: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]}</example>*/
-        [DataMember(Name = "sEzsigndocumentExternalid", EmitDefaultValue = false)]
-        public string SEzsigndocumentExternalid { get; set; }
-
-        /// <summary>
-        /// The number of Ezsigndocumentattachment total
-        /// </summary>
-        /// <value>The number of Ezsigndocumentattachment total</value>
-        /* <example>3</example>*/
-        [DataMember(Name = "iEzsigndocumentEzsignsignatureattachmenttotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentEzsignsignatureattachmenttotal { get; set; }
-
-        /// <summary>
-        /// The total number of Ezsigndiscussions
-        /// </summary>
-        /// <value>The total number of Ezsigndiscussions</value>
-        /* <example>14</example>*/
-        [DataMember(Name = "iEzsigndocumentEzsigndiscussiontotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentEzsigndiscussiontotal { get; set; }
-
-        /// <summary>
-        /// The total number of steps in the form filling phase
-        /// </summary>
-        /// <value>The total number of steps in the form filling phase</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "iEzsigndocumentStepformtotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentStepformtotal { get; set; }
-
-        /// <summary>
-        /// The current step in the form filling phase
-        /// </summary>
-        /// <value>The current step in the form filling phase</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "iEzsigndocumentStepformcurrent", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentStepformcurrent { get; set; }
-
-        /// <summary>
-        /// The total number of steps in the signature filling phase
-        /// </summary>
-        /// <value>The total number of steps in the signature filling phase</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "iEzsigndocumentStepsignaturetotal", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentStepsignaturetotal { get; set; }
-
-        /// <summary>
-        /// The current step in the signature phase
-        /// </summary>
-        /// <value>The current step in the signature phase</value>
-        /* <example>0</example>*/
-        [DataMember(Name = "iEzsigndocumentStepsignatureCurrent", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndocumentStepsignatureCurrent { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjEzsignfoldersignerassociationstatus
-        /// </summary>
-        [DataMember(Name = "a_objEzsignfoldersignerassociationstatus", IsRequired = true, EmitDefaultValue = true)]
-        public List<CustomEzsignfoldersignerassociationstatusResponse> AObjEzsignfoldersignerassociationstatus { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AObjEzsigndocumentdependency
-        /// </summary>
-        [DataMember(Name = "a_objEzsigndocumentdependency", EmitDefaultValue = false)]
-        public List<EzsigndocumentdependencyResponse> AObjEzsigndocumentdependency { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -367,37 +83,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigndocumentGetObjectV1ResponseMPayload {\n");
-            sb.Append("  PkiEzsigndocumentID: ").Append(PkiEzsigndocumentID).Append("\n");
-            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
-            sb.Append("  FkiEzsignfoldersignerassociationIDDeclinedtosign: ").Append(FkiEzsignfoldersignerassociationIDDeclinedtosign).Append("\n");
-            sb.Append("  DtEzsigndocumentDuedate: ").Append(DtEzsigndocumentDuedate).Append("\n");
-            sb.Append("  DtEzsignformCompleted: ").Append(DtEzsignformCompleted).Append("\n");
-            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
-            sb.Append("  SEzsigndocumentName: ").Append(SEzsigndocumentName).Append("\n");
-            sb.Append("  EEzsigndocumentStep: ").Append(EEzsigndocumentStep).Append("\n");
-            sb.Append("  DtEzsigndocumentFirstsend: ").Append(DtEzsigndocumentFirstsend).Append("\n");
-            sb.Append("  DtEzsigndocumentLastsend: ").Append(DtEzsigndocumentLastsend).Append("\n");
-            sb.Append("  IEzsigndocumentOrder: ").Append(IEzsigndocumentOrder).Append("\n");
-            sb.Append("  IEzsigndocumentPagetotal: ").Append(IEzsigndocumentPagetotal).Append("\n");
-            sb.Append("  IEzsigndocumentSignaturesigned: ").Append(IEzsigndocumentSignaturesigned).Append("\n");
-            sb.Append("  IEzsigndocumentSignaturetotal: ").Append(IEzsigndocumentSignaturetotal).Append("\n");
-            sb.Append("  IEzsigndocumentFormfieldtotal: ").Append(IEzsigndocumentFormfieldtotal).Append("\n");
-            sb.Append("  SEzsigndocumentMD5initial: ").Append(SEzsigndocumentMD5initial).Append("\n");
-            sb.Append("  TEzsigndocumentDeclinedtosignreason: ").Append(TEzsigndocumentDeclinedtosignreason).Append("\n");
-            sb.Append("  SEzsigndocumentMD5signed: ").Append(SEzsigndocumentMD5signed).Append("\n");
-            sb.Append("  BEzsigndocumentEzsignform: ").Append(BEzsigndocumentEzsignform).Append("\n");
-            sb.Append("  BEzsigndocumentHassignedsignatures: ").Append(BEzsigndocumentHassignedsignatures).Append("\n");
-            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
-            sb.Append("  SEzsigndocumentExternalid: ").Append(SEzsigndocumentExternalid).Append("\n");
-            sb.Append("  IEzsigndocumentEzsignsignatureattachmenttotal: ").Append(IEzsigndocumentEzsignsignatureattachmenttotal).Append("\n");
-            sb.Append("  IEzsigndocumentEzsigndiscussiontotal: ").Append(IEzsigndocumentEzsigndiscussiontotal).Append("\n");
-            sb.Append("  EEzsigndocumentSteptype: ").Append(EEzsigndocumentSteptype).Append("\n");
-            sb.Append("  IEzsigndocumentStepformtotal: ").Append(IEzsigndocumentStepformtotal).Append("\n");
-            sb.Append("  IEzsigndocumentStepformcurrent: ").Append(IEzsigndocumentStepformcurrent).Append("\n");
-            sb.Append("  IEzsigndocumentStepsignaturetotal: ").Append(IEzsigndocumentStepsignaturetotal).Append("\n");
-            sb.Append("  IEzsigndocumentStepsignatureCurrent: ").Append(IEzsigndocumentStepsignatureCurrent).Append("\n");
-            sb.Append("  AObjEzsignfoldersignerassociationstatus: ").Append(AObjEzsignfoldersignerassociationstatus).Append("\n");
-            sb.Append("  AObjEzsigndocumentdependency: ").Append(AObjEzsigndocumentdependency).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -406,7 +92,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -418,81 +104,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigndocumentID (int) minimum
-            if (this.PkiEzsigndocumentID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
+                yield return x;
             }
-
-            // FkiEzsignfolderID (int) minimum
-            if (this.FkiEzsignfolderID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
-            }
-
-            // FkiEzsignfoldersignerassociationIDDeclinedtosign (int) minimum
-            if (this.FkiEzsignfoldersignerassociationIDDeclinedtosign < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDDeclinedtosign, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDDeclinedtosign" });
-            }
-
-            // FkiLanguageID (int) maximum
-            if (this.FkiLanguageID > (int)2)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
-            }
-
-            // FkiLanguageID (int) minimum
-            if (this.FkiLanguageID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
-            }
-
-            // IEzsigndocumentOrder (int) minimum
-            if (this.IEzsigndocumentOrder < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentOrder, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentOrder" });
-            }
-
-            // IEzsigndocumentPagetotal (int) minimum
-            if (this.IEzsigndocumentPagetotal < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentPagetotal" });
-            }
-
-            // IEzsigndocumentSignaturesigned (int) minimum
-            if (this.IEzsigndocumentSignaturesigned < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentSignaturesigned, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturesigned" });
-            }
-
-            // IEzsigndocumentSignaturetotal (int) minimum
-            if (this.IEzsigndocumentSignaturetotal < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
-            }
-
-            // IEzsigndocumentFormfieldtotal (int) minimum
-            if (this.IEzsigndocumentFormfieldtotal < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentFormfieldtotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentFormfieldtotal" });
-            }
-
-            if (this.SEzsigndocumentExternalid != null) {
-                // SEzsigndocumentExternalid (string) pattern
-                Regex regexSEzsigndocumentExternalid = new Regex(@"^.{0,128}$", RegexOptions.CultureInvariant);
-                if (!regexSEzsigndocumentExternalid.Match(this.SEzsigndocumentExternalid).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigndocumentExternalid, must match a pattern of " + regexSEzsigndocumentExternalid, new [] { "SEzsigndocumentExternalid" });
-                }
-            }
-
-            // IEzsigndocumentEzsignsignatureattachmenttotal (int) minimum
-            if (this.IEzsigndocumentEzsignsignatureattachmenttotal < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentEzsignsignatureattachmenttotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentEzsignsignatureattachmenttotal" });
-            }
-
             yield break;
         }
     }

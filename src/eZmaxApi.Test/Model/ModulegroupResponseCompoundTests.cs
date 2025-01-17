@@ -56,24 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'PkiModulegroupID'
-        /// </summary>
-        [Fact]
-        public void PkiModulegroupIDTest()
-        {
-            // TODO unit test for the property 'PkiModulegroupID'
-        }
-
-        /// <summary>
-        /// Test the property 'SModulegroupNameX'
-        /// </summary>
-        [Fact]
-        public void SModulegroupNameXTest()
-        {
-            // TODO unit test for the property 'SModulegroupNameX'
-        }
-
-        /// <summary>
         /// Test the property 'AObjModule'
         /// </summary>
         [Fact]

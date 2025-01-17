@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for POST /1/object/usergroupmembership
     /// </summary>
     [DataContract(Name = "usergroupmembership-createObject-v1-Response")]
-    public partial class UsergroupmembershipCreateObjectV1Response : IValidatableObject
+    public partial class UsergroupmembershipCreateObjectV1Response : CommonResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Response" /> class.
@@ -40,37 +40,18 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupmembershipCreateObjectV1Response" /> class.
         /// </summary>
+        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public UsergroupmembershipCreateObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), UsergroupmembershipCreateObjectV1ResponseMPayload mPayload = default(UsergroupmembershipCreateObjectV1ResponseMPayload))
+        public UsergroupmembershipCreateObjectV1Response(UsergroupmembershipCreateObjectV1ResponseMPayload mPayload = default(UsergroupmembershipCreateObjectV1ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
-            {
-                throw new ArgumentNullException("objDebugPayload is a required property for UsergroupmembershipCreateObjectV1Response and cannot be null");
-            }
-            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for UsergroupmembershipCreateObjectV1Response and cannot be null");
             }
             this.MPayload = mPayload;
-            this.ObjDebug = objDebug;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjDebugPayload
-        /// </summary>
-        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Gets or Sets MPayload
@@ -86,8 +67,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupmembershipCreateObjectV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,7 +77,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -109,6 +89,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

@@ -30,20 +30,8 @@ namespace eZmaxApi.Model
     /// A Branding Object and children
     /// </summary>
     [DataContract(Name = "branding-RequestCompoundV2")]
-    public partial class BrandingRequestCompoundV2 : IValidatableObject
+    public partial class BrandingRequestCompoundV2 : BrandingRequestV2, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EBrandingLogo
-        /// </summary>
-        [DataMember(Name = "eBrandingLogo", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEBrandingLogo EBrandingLogo { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EBrandingAlignlogo
-        /// </summary>
-        [DataMember(Name = "eBrandingAlignlogo", EmitDefaultValue = false)]
-        public FieldEBrandingAlignlogo? EBrandingAlignlogo { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingRequestCompoundV2" /> class.
         /// </summary>
@@ -61,77 +49,9 @@ namespace eZmaxApi.Model
         /// <param name="sBrandingName">The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty.</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="bBrandingIsactive">Whether the Branding is active or not (required).</param>
-        public BrandingRequestCompoundV2(int pkiBrandingID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), FieldEBrandingAlignlogo? eBrandingAlignlogo = default(FieldEBrandingAlignlogo?), byte[] sBrandingBase64 = default(byte[]), int iBrandingColor = default(int), string sBrandingName = default(string), string sEmailAddress = default(string), bool bBrandingIsactive = default(bool))
+        public BrandingRequestCompoundV2(int pkiBrandingID = default(int), MultilingualBrandingDescription objBrandingDescription = default(MultilingualBrandingDescription), FieldEBrandingLogo eBrandingLogo = default(FieldEBrandingLogo), FieldEBrandingAlignlogo? eBrandingAlignlogo = default(FieldEBrandingAlignlogo?), byte[] sBrandingBase64 = default(byte[]), int iBrandingColor = default(int), string sBrandingName = default(string), string sEmailAddress = default(string), bool bBrandingIsactive = default(bool)) : base()
         {
-            // to ensure "objBrandingDescription" is required (not null)
-            if (objBrandingDescription == null)
-            {
-                throw new ArgumentNullException("objBrandingDescription is a required property for BrandingRequestCompoundV2 and cannot be null");
-            }
-            this.ObjBrandingDescription = objBrandingDescription;
-            this.EBrandingLogo = eBrandingLogo;
-            this.IBrandingColor = iBrandingColor;
-            this.BBrandingIsactive = bBrandingIsactive;
-            this.PkiBrandingID = pkiBrandingID;
-            this.EBrandingAlignlogo = eBrandingAlignlogo;
-            this.SBrandingBase64 = sBrandingBase64;
-            this.SBrandingName = sBrandingName;
-            this.SEmailAddress = sEmailAddress;
         }
-
-        /// <summary>
-        /// The unique ID of the Branding
-        /// </summary>
-        /// <value>The unique ID of the Branding</value>
-        /* <example>78</example>*/
-        [DataMember(Name = "pkiBrandingID", EmitDefaultValue = false)]
-        public int PkiBrandingID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjBrandingDescription
-        /// </summary>
-        [DataMember(Name = "objBrandingDescription", IsRequired = true, EmitDefaultValue = true)]
-        public MultilingualBrandingDescription ObjBrandingDescription { get; set; }
-
-        /// <summary>
-        /// The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.
-        /// </summary>
-        /// <value>The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.</value>
-        /* <example>eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BuZ0FzQmFzZTY0L3ZhbHVlIn0&#x3D;</example>*/
-        [DataMember(Name = "sBrandingBase64", EmitDefaultValue = false)]
-        public byte[] SBrandingBase64 { get; set; }
-
-        /// <summary>
-        /// The primary color. This is a RGB color converted into integer
-        /// </summary>
-        /// <value>The primary color. This is a RGB color converted into integer</value>
-        /* <example>15658734</example>*/
-        [DataMember(Name = "iBrandingColor", IsRequired = true, EmitDefaultValue = true)]
-        public int IBrandingColor { get; set; }
-
-        /// <summary>
-        /// The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
-        /// </summary>
-        /// <value>The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty</value>
-        /* <example>eZmax (Corp)</example>*/
-        [DataMember(Name = "sBrandingName", EmitDefaultValue = false)]
-        public string SBrandingName { get; set; }
-
-        /// <summary>
-        /// The email address.
-        /// </summary>
-        /// <value>The email address.</value>
-        /* <example>email@example.com</example>*/
-        [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
-        public string SEmailAddress { get; set; }
-
-        /// <summary>
-        /// Whether the Branding is active or not
-        /// </summary>
-        /// <value>Whether the Branding is active or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bBrandingIsactive", IsRequired = true, EmitDefaultValue = true)]
-        public bool BBrandingIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -141,15 +61,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class BrandingRequestCompoundV2 {\n");
-            sb.Append("  PkiBrandingID: ").Append(PkiBrandingID).Append("\n");
-            sb.Append("  ObjBrandingDescription: ").Append(ObjBrandingDescription).Append("\n");
-            sb.Append("  EBrandingLogo: ").Append(EBrandingLogo).Append("\n");
-            sb.Append("  EBrandingAlignlogo: ").Append(EBrandingAlignlogo).Append("\n");
-            sb.Append("  SBrandingBase64: ").Append(SBrandingBase64).Append("\n");
-            sb.Append("  IBrandingColor: ").Append(IBrandingColor).Append("\n");
-            sb.Append("  SBrandingName: ").Append(SBrandingName).Append("\n");
-            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
-            sb.Append("  BBrandingIsactive: ").Append(BBrandingIsactive).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,7 +70,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -170,42 +82,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiBrandingID (int) minimum
-            if (this.PkiBrandingID < (int)0)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiBrandingID, must be a value greater than or equal to 0.", new [] { "PkiBrandingID" });
+                yield return x;
             }
-
-            // IBrandingColor (int) maximum
-            if (this.IBrandingColor > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
-            }
-
-            // IBrandingColor (int) minimum
-            if (this.IBrandingColor < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
-            }
-
-            if (this.SBrandingName != null) {
-                // SBrandingName (string) pattern
-                Regex regexSBrandingName = new Regex(@"^.{0,55}$", RegexOptions.CultureInvariant);
-                if (!regexSBrandingName.Match(this.SBrandingName).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SBrandingName, must match a pattern of " + regexSBrandingName, new [] { "SBrandingName" });
-                }
-            }
-
-            if (this.SEmailAddress != null) {
-                // SEmailAddress (string) pattern
-                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
-                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
-                }
-            }
-
             yield break;
         }
     }

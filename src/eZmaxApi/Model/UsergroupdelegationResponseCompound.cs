@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroupdelegation Object
     /// </summary>
     [DataContract(Name = "usergroupdelegation-ResponseCompound")]
-    public partial class UsergroupdelegationResponseCompound : IValidatableObject
+    public partial class UsergroupdelegationResponseCompound : UsergroupdelegationResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupdelegationResponseCompound" /> class.
@@ -48,101 +48,9 @@ namespace eZmaxApi.Model
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupdelegationResponseCompound(int pkiUsergroupdelegationID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string))
+        public UsergroupdelegationResponseCompound(int pkiUsergroupdelegationID = default(int), int fkiUsergroupID = default(int), int fkiUserID = default(int), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sEmailAddress = default(string), string sUsergroupNameX = default(string)) : base()
         {
-            this.PkiUsergroupdelegationID = pkiUsergroupdelegationID;
-            this.FkiUsergroupID = fkiUsergroupID;
-            this.FkiUserID = fkiUserID;
-            // to ensure "sUserFirstname" is required (not null)
-            if (sUserFirstname == null)
-            {
-                throw new ArgumentNullException("sUserFirstname is a required property for UsergroupdelegationResponseCompound and cannot be null");
-            }
-            this.SUserFirstname = sUserFirstname;
-            // to ensure "sUserLastname" is required (not null)
-            if (sUserLastname == null)
-            {
-                throw new ArgumentNullException("sUserLastname is a required property for UsergroupdelegationResponseCompound and cannot be null");
-            }
-            this.SUserLastname = sUserLastname;
-            // to ensure "sUserLoginname" is required (not null)
-            if (sUserLoginname == null)
-            {
-                throw new ArgumentNullException("sUserLoginname is a required property for UsergroupdelegationResponseCompound and cannot be null");
-            }
-            this.SUserLoginname = sUserLoginname;
-            // to ensure "sUsergroupNameX" is required (not null)
-            if (sUsergroupNameX == null)
-            {
-                throw new ArgumentNullException("sUsergroupNameX is a required property for UsergroupdelegationResponseCompound and cannot be null");
-            }
-            this.SUsergroupNameX = sUsergroupNameX;
-            this.SEmailAddress = sEmailAddress;
         }
-
-        /// <summary>
-        /// The unique ID of the Usergroupdelegation
-        /// </summary>
-        /// <value>The unique ID of the Usergroupdelegation</value>
-        /* <example>141</example>*/
-        [DataMember(Name = "pkiUsergroupdelegationID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiUsergroupdelegationID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Usergroup
-        /// </summary>
-        /// <value>The unique ID of the Usergroup</value>
-        /* <example>2</example>*/
-        [DataMember(Name = "fkiUsergroupID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiUsergroupID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the User
-        /// </summary>
-        /// <value>The unique ID of the User</value>
-        /* <example>70</example>*/
-        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiUserID { get; set; }
-
-        /// <summary>
-        /// The first name of the user
-        /// </summary>
-        /// <value>The first name of the user</value>
-        /* <example>John</example>*/
-        [DataMember(Name = "sUserFirstname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserFirstname { get; set; }
-
-        /// <summary>
-        /// The last name of the user
-        /// </summary>
-        /// <value>The last name of the user</value>
-        /* <example>Doe</example>*/
-        [DataMember(Name = "sUserLastname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserLastname { get; set; }
-
-        /// <summary>
-        /// The login name of the User.
-        /// </summary>
-        /// <value>The login name of the User.</value>
-        /* <example>JohnDoe</example>*/
-        [DataMember(Name = "sUserLoginname", IsRequired = true, EmitDefaultValue = true)]
-        public string SUserLoginname { get; set; }
-
-        /// <summary>
-        /// The email address.
-        /// </summary>
-        /// <value>The email address.</value>
-        /* <example>email@example.com</example>*/
-        [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
-        public string SEmailAddress { get; set; }
-
-        /// <summary>
-        /// The Name of the Usergroup in the language of the requester
-        /// </summary>
-        /// <value>The Name of the Usergroup in the language of the requester</value>
-        /* <example>Administration</example>*/
-        [DataMember(Name = "sUsergroupNameX", IsRequired = true, EmitDefaultValue = true)]
-        public string SUsergroupNameX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -152,14 +60,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupdelegationResponseCompound {\n");
-            sb.Append("  PkiUsergroupdelegationID: ").Append(PkiUsergroupdelegationID).Append("\n");
-            sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
-            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
-            sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
-            sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
-            sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
-            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
-            sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,7 +69,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -180,63 +81,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiUsergroupdelegationID (int) maximum
-            if (this.PkiUsergroupdelegationID > (int)65535)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupdelegationID" });
+                yield return x;
             }
-
-            // PkiUsergroupdelegationID (int) minimum
-            if (this.PkiUsergroupdelegationID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiUsergroupdelegationID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupdelegationID" });
-            }
-
-            // FkiUsergroupID (int) maximum
-            if (this.FkiUsergroupID > (int)255)
-            {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUsergroupID (int) minimum
-            if (this.FkiUsergroupID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
-            }
-
-            // FkiUserID (int) minimum
-            if (this.FkiUserID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
-            }
-
-            if (this.SUserLoginname != null) {
-                // SUserLoginname (string) pattern
-                Regex regexSUserLoginname = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
-                if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
-                }
-            }
-
-            if (this.SEmailAddress != null) {
-                // SEmailAddress (string) pattern
-                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
-                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
-                }
-            }
-
-            if (this.SUsergroupNameX != null) {
-                // SUsergroupNameX (string) pattern
-                Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
-                if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
-                }
-            }
-
             yield break;
         }
     }

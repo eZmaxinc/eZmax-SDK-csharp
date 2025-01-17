@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignuser Object and children
     /// </summary>
     [DataContract(Name = "ezsignuser-RequestCompound")]
-    public partial class EzsignuserRequestCompound : IValidatableObject
+    public partial class EzsignuserRequestCompound : EzsignuserRequest, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignuserRequestCompound" /> class.
@@ -43,39 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignuserID">The unique ID of the Ezsignuser.</param>
         /// <param name="fkiContactID">The unique ID of the Contact (required).</param>
         /// <param name="objContact">objContact (required).</param>
-        public EzsignuserRequestCompound(int pkiEzsignuserID = default(int), int fkiContactID = default(int), ContactRequestCompoundV2 objContact = default(ContactRequestCompoundV2))
+        public EzsignuserRequestCompound(int pkiEzsignuserID = default(int), int fkiContactID = default(int), ContactRequestCompoundV2 objContact = default(ContactRequestCompoundV2)) : base()
         {
-            this.FkiContactID = fkiContactID;
-            // to ensure "objContact" is required (not null)
-            if (objContact == null)
-            {
-                throw new ArgumentNullException("objContact is a required property for EzsignuserRequestCompound and cannot be null");
-            }
-            this.ObjContact = objContact;
-            this.PkiEzsignuserID = pkiEzsignuserID;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsignuser
-        /// </summary>
-        /// <value>The unique ID of the Ezsignuser</value>
-        /* <example>94</example>*/
-        [DataMember(Name = "pkiEzsignuserID", EmitDefaultValue = false)]
-        public int PkiEzsignuserID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Contact
-        /// </summary>
-        /// <value>The unique ID of the Contact</value>
-        /* <example>21</example>*/
-        [DataMember(Name = "fkiContactID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiContactID { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjContact
-        /// </summary>
-        [DataMember(Name = "objContact", IsRequired = true, EmitDefaultValue = true)]
-        public ContactRequestCompoundV2 ObjContact { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -85,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignuserRequestCompound {\n");
-            sb.Append("  PkiEzsignuserID: ").Append(PkiEzsignuserID).Append("\n");
-            sb.Append("  FkiContactID: ").Append(FkiContactID).Append("\n");
-            sb.Append("  ObjContact: ").Append(ObjContact).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -108,24 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsignuserID (int) maximum
-            if (this.PkiEzsignuserID > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value less than or equal to 65535.", new [] { "PkiEzsignuserID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // PkiEzsignuserID (int) minimum
-            if (this.PkiEzsignuserID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value greater than or equal to 0.", new [] { "PkiEzsignuserID" });
+                yield return x;
             }
-
-            // FkiContactID (int) minimum
-            if (this.FkiContactID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
-            }
-
             yield break;
         }
     }

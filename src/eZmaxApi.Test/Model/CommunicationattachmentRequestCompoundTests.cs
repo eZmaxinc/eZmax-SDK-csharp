@@ -54,41 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" CommunicationattachmentRequestCompound
             //Assert.IsType<CommunicationattachmentRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiCommunicationattachmentID'
-        /// </summary>
-        [Fact]
-        public void PkiCommunicationattachmentIDTest()
-        {
-            // TODO unit test for the property 'PkiCommunicationattachmentID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiAttachmentID'
-        /// </summary>
-        [Fact]
-        public void FkiAttachmentIDTest()
-        {
-            // TODO unit test for the property 'FkiAttachmentID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiInvoiceID'
-        /// </summary>
-        [Fact]
-        public void FkiInvoiceIDTest()
-        {
-            // TODO unit test for the property 'FkiInvoiceID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiSalarypreparationID'
-        /// </summary>
-        [Fact]
-        public void FkiSalarypreparationIDTest()
-        {
-            // TODO unit test for the property 'FkiSalarypreparationID'
-        }
     }
 }

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Cors Object
     /// </summary>
     [DataContract(Name = "cors-ResponseCompound")]
-    public partial class CorsResponseCompound : IValidatableObject
+    public partial class CorsResponseCompound : CorsResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CorsResponseCompound" /> class.
@@ -43,41 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiCorsID">The unique ID of the Cors (required).</param>
         /// <param name="fkiApikeyID">The unique ID of the Apikey (required).</param>
         /// <param name="sCorsEntryurl">The entryurl of the Cors (required).</param>
-        public CorsResponseCompound(int pkiCorsID = default(int), int fkiApikeyID = default(int), string sCorsEntryurl = default(string))
+        public CorsResponseCompound(int pkiCorsID = default(int), int fkiApikeyID = default(int), string sCorsEntryurl = default(string)) : base()
         {
-            this.PkiCorsID = pkiCorsID;
-            this.FkiApikeyID = fkiApikeyID;
-            // to ensure "sCorsEntryurl" is required (not null)
-            if (sCorsEntryurl == null)
-            {
-                throw new ArgumentNullException("sCorsEntryurl is a required property for CorsResponseCompound and cannot be null");
-            }
-            this.SCorsEntryurl = sCorsEntryurl;
         }
-
-        /// <summary>
-        /// The unique ID of the Cors
-        /// </summary>
-        /// <value>The unique ID of the Cors</value>
-        /* <example>228</example>*/
-        [DataMember(Name = "pkiCorsID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiCorsID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Apikey
-        /// </summary>
-        /// <value>The unique ID of the Apikey</value>
-        /* <example>99</example>*/
-        [DataMember(Name = "fkiApikeyID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiApikeyID { get; set; }
-
-        /// <summary>
-        /// The entryurl of the Cors
-        /// </summary>
-        /// <value>The entryurl of the Cors</value>
-        /* <example>Https://www.example.com</example>*/
-        [DataMember(Name = "sCorsEntryurl", IsRequired = true, EmitDefaultValue = true)]
-        public string SCorsEntryurl { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,9 +55,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CorsResponseCompound {\n");
-            sb.Append("  PkiCorsID: ").Append(PkiCorsID).Append("\n");
-            sb.Append("  FkiApikeyID: ").Append(FkiApikeyID).Append("\n");
-            sb.Append("  SCorsEntryurl: ").Append(SCorsEntryurl).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,7 +64,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -110,33 +76,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiCorsID (int) maximum
-            if (this.PkiCorsID > (int)65535)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value less than or equal to 65535.", new [] { "PkiCorsID" });
+                yield return x;
             }
-
-            // PkiCorsID (int) minimum
-            if (this.PkiCorsID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value greater than or equal to 0.", new [] { "PkiCorsID" });
-            }
-
-            // FkiApikeyID (int) minimum
-            if (this.FkiApikeyID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
-            }
-
-            if (this.SCorsEntryurl != null) {
-                // SCorsEntryurl (string) pattern
-                Regex regexSCorsEntryurl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
-                if (!regexSCorsEntryurl.Match(this.SCorsEntryurl).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCorsEntryurl, must match a pattern of " + regexSCorsEntryurl, new [] { "SCorsEntryurl" });
-                }
-            }
-
             yield break;
         }
     }

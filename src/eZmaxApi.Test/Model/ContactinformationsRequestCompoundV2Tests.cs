@@ -56,51 +56,6 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'EContactinformationsType'
-        /// </summary>
-        [Fact]
-        public void EContactinformationsTypeTest()
-        {
-            // TODO unit test for the property 'EContactinformationsType'
-        }
-
-        /// <summary>
-        /// Test the property 'IAddressDefault'
-        /// </summary>
-        [Fact]
-        public void IAddressDefaultTest()
-        {
-            // TODO unit test for the property 'IAddressDefault'
-        }
-
-        /// <summary>
-        /// Test the property 'IPhoneDefault'
-        /// </summary>
-        [Fact]
-        public void IPhoneDefaultTest()
-        {
-            // TODO unit test for the property 'IPhoneDefault'
-        }
-
-        /// <summary>
-        /// Test the property 'IEmailDefault'
-        /// </summary>
-        [Fact]
-        public void IEmailDefaultTest()
-        {
-            // TODO unit test for the property 'IEmailDefault'
-        }
-
-        /// <summary>
-        /// Test the property 'IWebsiteDefault'
-        /// </summary>
-        [Fact]
-        public void IWebsiteDefaultTest()
-        {
-            // TODO unit test for the property 'IWebsiteDefault'
-        }
-
-        /// <summary>
         /// Test the property 'AObjAddress'
         /// </summary>
         [Fact]

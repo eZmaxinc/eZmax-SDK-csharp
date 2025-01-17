@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
     /// </summary>
     [DataContract(Name = "ezsignformfieldgroup-deleteObject-v1-Response")]
-    public partial class EzsignformfieldgroupDeleteObjectV1Response : IValidatableObject
+    public partial class EzsignformfieldgroupDeleteObjectV1Response : CommonResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignformfieldgroupDeleteObjectV1Response" /> class.
@@ -42,28 +42,9 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsignformfieldgroupDeleteObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug))
+        public EzsignformfieldgroupDeleteObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
         {
-            // to ensure "objDebugPayload" is required (not null)
-            if (objDebugPayload == null)
-            {
-                throw new ArgumentNullException("objDebugPayload is a required property for EzsignformfieldgroupDeleteObjectV1Response and cannot be null");
-            }
-            this.ObjDebugPayload = objDebugPayload;
-            this.ObjDebug = objDebug;
         }
-
-        /// <summary>
-        /// Gets or Sets ObjDebugPayload
-        /// </summary>
-        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
-        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDebug
-        /// </summary>
-        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
-        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,8 +54,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignformfieldgroupDeleteObjectV1Response {\n");
-            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
-            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,7 +63,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -95,6 +75,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
+            {
+                yield return x;
+            }
             yield break;
         }
     }

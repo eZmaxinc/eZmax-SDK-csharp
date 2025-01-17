@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigndiscussion Object
     /// </summary>
     [DataContract(Name = "ezsigndiscussion-ResponseCompound")]
-    public partial class EzsigndiscussionResponseCompound : IValidatableObject
+    public partial class EzsigndiscussionResponseCompound : EzsigndiscussionResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndiscussionResponseCompound" /> class.
@@ -47,75 +47,9 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigndiscussionY">The y of the Ezsigndiscussion (required).</param>
         /// <param name="iEzsigndiscussionPagenumber">The page number in the Ezsigndocument for the Ezsigndiscussion (required).</param>
         /// <param name="objDiscussion">objDiscussion (required).</param>
-        public EzsigndiscussionResponseCompound(int pkiEzsigndiscussionID = default(int), int fkiEzsignpageID = default(int), int fkiDiscussionID = default(int), int iEzsigndiscussionX = default(int), int iEzsigndiscussionY = default(int), int iEzsigndiscussionPagenumber = default(int), DiscussionResponseCompound objDiscussion = default(DiscussionResponseCompound))
+        public EzsigndiscussionResponseCompound(int pkiEzsigndiscussionID = default(int), int fkiEzsignpageID = default(int), int fkiDiscussionID = default(int), int iEzsigndiscussionX = default(int), int iEzsigndiscussionY = default(int), int iEzsigndiscussionPagenumber = default(int), DiscussionResponseCompound objDiscussion = default(DiscussionResponseCompound)) : base()
         {
-            this.PkiEzsigndiscussionID = pkiEzsigndiscussionID;
-            this.FkiEzsignpageID = fkiEzsignpageID;
-            this.FkiDiscussionID = fkiDiscussionID;
-            this.IEzsigndiscussionX = iEzsigndiscussionX;
-            this.IEzsigndiscussionY = iEzsigndiscussionY;
-            this.IEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
-            // to ensure "objDiscussion" is required (not null)
-            if (objDiscussion == null)
-            {
-                throw new ArgumentNullException("objDiscussion is a required property for EzsigndiscussionResponseCompound and cannot be null");
-            }
-            this.ObjDiscussion = objDiscussion;
         }
-
-        /// <summary>
-        /// The unique ID of the Ezsigndiscussion
-        /// </summary>
-        /// <value>The unique ID of the Ezsigndiscussion</value>
-        /* <example>194</example>*/
-        [DataMember(Name = "pkiEzsigndiscussionID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiEzsigndiscussionID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Ezsignpage
-        /// </summary>
-        /// <value>The unique ID of the Ezsignpage</value>
-        /* <example>64</example>*/
-        [DataMember(Name = "fkiEzsignpageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsignpageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Discussion
-        /// </summary>
-        /// <value>The unique ID of the Discussion</value>
-        /* <example>125</example>*/
-        [DataMember(Name = "fkiDiscussionID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiDiscussionID { get; set; }
-
-        /// <summary>
-        /// The x of the Ezsigndiscussion
-        /// </summary>
-        /// <value>The x of the Ezsigndiscussion</value>
-        /* <example>57208</example>*/
-        [DataMember(Name = "iEzsigndiscussionX", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndiscussionX { get; set; }
-
-        /// <summary>
-        /// The y of the Ezsigndiscussion
-        /// </summary>
-        /// <value>The y of the Ezsigndiscussion</value>
-        /* <example>57652</example>*/
-        [DataMember(Name = "iEzsigndiscussionY", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndiscussionY { get; set; }
-
-        /// <summary>
-        /// The page number in the Ezsigndocument for the Ezsigndiscussion
-        /// </summary>
-        /// <value>The page number in the Ezsigndocument for the Ezsigndiscussion</value>
-        /* <example>4</example>*/
-        [DataMember(Name = "iEzsigndiscussionPagenumber", IsRequired = true, EmitDefaultValue = true)]
-        public int IEzsigndiscussionPagenumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ObjDiscussion
-        /// </summary>
-        [DataMember(Name = "objDiscussion", IsRequired = true, EmitDefaultValue = true)]
-        public DiscussionResponseCompound ObjDiscussion { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,13 +59,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigndiscussionResponseCompound {\n");
-            sb.Append("  PkiEzsigndiscussionID: ").Append(PkiEzsigndiscussionID).Append("\n");
-            sb.Append("  FkiEzsignpageID: ").Append(FkiEzsignpageID).Append("\n");
-            sb.Append("  FkiDiscussionID: ").Append(FkiDiscussionID).Append("\n");
-            sb.Append("  IEzsigndiscussionX: ").Append(IEzsigndiscussionX).Append("\n");
-            sb.Append("  IEzsigndiscussionY: ").Append(IEzsigndiscussionY).Append("\n");
-            sb.Append("  IEzsigndiscussionPagenumber: ").Append(IEzsigndiscussionPagenumber).Append("\n");
-            sb.Append("  ObjDiscussion: ").Append(ObjDiscussion).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,7 +68,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -152,60 +80,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiEzsigndiscussionID (int) maximum
-            if (this.PkiEzsigndiscussionID > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigndiscussionID" });
-            }
+            return this.BaseValidate(validationContext);
+        }
 
-            // PkiEzsigndiscussionID (int) minimum
-            if (this.PkiEzsigndiscussionID < (int)0)
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigndiscussionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndiscussionID" });
+                yield return x;
             }
-
-            // FkiEzsignpageID (int) minimum
-            if (this.FkiEzsignpageID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsignpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsignpageID" });
-            }
-
-            // FkiDiscussionID (int) maximum
-            if (this.FkiDiscussionID > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
-            }
-
-            // FkiDiscussionID (int) minimum
-            if (this.FkiDiscussionID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
-            }
-
-            // IEzsigndiscussionX (int) maximum
-            if (this.IEzsigndiscussionX > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndiscussionX, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionX" });
-            }
-
-            // IEzsigndiscussionX (int) minimum
-            if (this.IEzsigndiscussionX < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndiscussionX, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionX" });
-            }
-
-            // IEzsigndiscussionY (int) maximum
-            if (this.IEzsigndiscussionY > (int)65535)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndiscussionY, must be a value less than or equal to 65535.", new [] { "IEzsigndiscussionY" });
-            }
-
-            // IEzsigndiscussionY (int) minimum
-            if (this.IEzsigndiscussionY < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for IEzsigndiscussionY, must be a value greater than or equal to 0.", new [] { "IEzsigndiscussionY" });
-            }
-
             yield break;
         }
     }

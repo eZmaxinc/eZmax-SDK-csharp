@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Modulegroup Object
     /// </summary>
     [DataContract(Name = "modulegroup-ResponseCompound")]
-    public partial class ModulegroupResponseCompound : IValidatableObject
+    public partial class ModulegroupResponseCompound : ModulegroupResponse, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
@@ -40,36 +40,13 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulegroupResponseCompound" /> class.
         /// </summary>
+        /// <param name="aObjModule">aObjModule.</param>
         /// <param name="pkiModulegroupID">The unique ID of the Modulegroup (required).</param>
         /// <param name="sModulegroupNameX">The name of the Modulegroup in the language of the requester (required).</param>
-        /// <param name="aObjModule">aObjModule.</param>
-        public ModulegroupResponseCompound(int pkiModulegroupID = default(int), string sModulegroupNameX = default(string), List<ModuleResponseCompound> aObjModule = default(List<ModuleResponseCompound>))
+        public ModulegroupResponseCompound(List<ModuleResponseCompound> aObjModule = default(List<ModuleResponseCompound>), int pkiModulegroupID = default(int), string sModulegroupNameX = default(string)) : base()
         {
-            this.PkiModulegroupID = pkiModulegroupID;
-            // to ensure "sModulegroupNameX" is required (not null)
-            if (sModulegroupNameX == null)
-            {
-                throw new ArgumentNullException("sModulegroupNameX is a required property for ModulegroupResponseCompound and cannot be null");
-            }
-            this.SModulegroupNameX = sModulegroupNameX;
             this.AObjModule = aObjModule;
         }
-
-        /// <summary>
-        /// The unique ID of the Modulegroup
-        /// </summary>
-        /// <value>The unique ID of the Modulegroup</value>
-        /* <example>46</example>*/
-        [DataMember(Name = "pkiModulegroupID", IsRequired = true, EmitDefaultValue = true)]
-        public int PkiModulegroupID { get; set; }
-
-        /// <summary>
-        /// The name of the Modulegroup in the language of the requester
-        /// </summary>
-        /// <value>The name of the Modulegroup in the language of the requester</value>
-        /* <example>Management</example>*/
-        [DataMember(Name = "sModulegroupNameX", IsRequired = true, EmitDefaultValue = true)]
-        public string SModulegroupNameX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjModule
@@ -85,8 +62,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ModulegroupResponseCompound {\n");
-            sb.Append("  PkiModulegroupID: ").Append(PkiModulegroupID).Append("\n");
-            sb.Append("  SModulegroupNameX: ").Append(SModulegroupNameX).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  AObjModule: ").Append(AObjModule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -96,7 +72,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -108,27 +84,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiModulegroupID (int) maximum
-            if (this.PkiModulegroupID > (int)255)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiModulegroupID, must be a value less than or equal to 255.", new [] { "PkiModulegroupID" });
+                yield return x;
             }
-
-            // PkiModulegroupID (int) minimum
-            if (this.PkiModulegroupID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for PkiModulegroupID, must be a value greater than or equal to 1.", new [] { "PkiModulegroupID" });
-            }
-
-            if (this.SModulegroupNameX != null) {
-                // SModulegroupNameX (string) pattern
-                Regex regexSModulegroupNameX = new Regex(@"^.{0,25}$", RegexOptions.CultureInvariant);
-                if (!regexSModulegroupNameX.Match(this.SModulegroupNameX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SModulegroupNameX, must match a pattern of " + regexSModulegroupNameX, new [] { "SModulegroupNameX" });
-                }
-            }
-
             yield break;
         }
     }

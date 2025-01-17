@@ -54,59 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" PaymenttermRequestCompound
             //Assert.IsType<PaymenttermRequestCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiPaymenttermID'
-        /// </summary>
-        [Fact]
-        public void PkiPaymenttermIDTest()
-        {
-            // TODO unit test for the property 'PkiPaymenttermID'
-        }
-
-        /// <summary>
-        /// Test the property 'SPaymenttermCode'
-        /// </summary>
-        [Fact]
-        public void SPaymenttermCodeTest()
-        {
-            // TODO unit test for the property 'SPaymenttermCode'
-        }
-
-        /// <summary>
-        /// Test the property 'EPaymenttermType'
-        /// </summary>
-        [Fact]
-        public void EPaymenttermTypeTest()
-        {
-            // TODO unit test for the property 'EPaymenttermType'
-        }
-
-        /// <summary>
-        /// Test the property 'IPaymenttermDay'
-        /// </summary>
-        [Fact]
-        public void IPaymenttermDayTest()
-        {
-            // TODO unit test for the property 'IPaymenttermDay'
-        }
-
-        /// <summary>
-        /// Test the property 'ObjPaymenttermDescription'
-        /// </summary>
-        [Fact]
-        public void ObjPaymenttermDescriptionTest()
-        {
-            // TODO unit test for the property 'ObjPaymenttermDescription'
-        }
-
-        /// <summary>
-        /// Test the property 'BPaymenttermIsactive'
-        /// </summary>
-        [Fact]
-        public void BPaymenttermIsactiveTest()
-        {
-            // TODO unit test for the property 'BPaymenttermIsactive'
-        }
     }
 }

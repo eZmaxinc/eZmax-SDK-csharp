@@ -54,50 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" AttachmentlogResponseCompound
             //Assert.IsType<AttachmentlogResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'FkiAttachmentID'
-        /// </summary>
-        [Fact]
-        public void FkiAttachmentIDTest()
-        {
-            // TODO unit test for the property 'FkiAttachmentID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Fact]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
-        }
-
-        /// <summary>
-        /// Test the property 'DtAttachmentlogDatetime'
-        /// </summary>
-        [Fact]
-        public void DtAttachmentlogDatetimeTest()
-        {
-            // TODO unit test for the property 'DtAttachmentlogDatetime'
-        }
-
-        /// <summary>
-        /// Test the property 'EAttachmentlogType'
-        /// </summary>
-        [Fact]
-        public void EAttachmentlogTypeTest()
-        {
-            // TODO unit test for the property 'EAttachmentlogType'
-        }
-
-        /// <summary>
-        /// Test the property 'SAttachmentlogDetail'
-        /// </summary>
-        [Fact]
-        public void SAttachmentlogDetailTest()
-        {
-            // TODO unit test for the property 'SAttachmentlogDetail'
-        }
     }
 }

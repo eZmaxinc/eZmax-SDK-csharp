@@ -54,50 +54,5 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsignsignergroupmembershipResponseCompound
             //Assert.IsType<EzsignsignergroupmembershipResponseCompound>(instance);
         }
-
-        /// <summary>
-        /// Test the property 'PkiEzsignsignergroupmembershipID'
-        /// </summary>
-        [Fact]
-        public void PkiEzsignsignergroupmembershipIDTest()
-        {
-            // TODO unit test for the property 'PkiEzsignsignergroupmembershipID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsignsignergroupID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsignsignergroupIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignsignergroupID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiEzsignsignerID'
-        /// </summary>
-        [Fact]
-        public void FkiEzsignsignerIDTest()
-        {
-            // TODO unit test for the property 'FkiEzsignsignerID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiUserID'
-        /// </summary>
-        [Fact]
-        public void FkiUserIDTest()
-        {
-            // TODO unit test for the property 'FkiUserID'
-        }
-
-        /// <summary>
-        /// Test the property 'FkiUsergroupID'
-        /// </summary>
-        [Fact]
-        public void FkiUsergroupIDTest()
-        {
-            // TODO unit test for the property 'FkiUsergroupID'
-        }
     }
 }

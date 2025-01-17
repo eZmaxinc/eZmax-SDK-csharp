@@ -30,39 +30,8 @@ namespace eZmaxApi.Model
     /// A Systemconfiguration Object and children
     /// </summary>
     [DataContract(Name = "systemconfiguration-RequestCompound")]
-    public partial class SystemconfigurationRequestCompound : IValidatableObject
+    public partial class SystemconfigurationRequestCompound : SystemconfigurationRequest, IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationNewexternaluseraction
-        /// </summary>
-        [DataMember(Name = "eSystemconfigurationNewexternaluseraction", IsRequired = true, EmitDefaultValue = true)]
-        public FieldESystemconfigurationNewexternaluseraction ESystemconfigurationNewexternaluseraction { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationLanguage1
-        /// </summary>
-        [DataMember(Name = "eSystemconfigurationLanguage1", IsRequired = true, EmitDefaultValue = true)]
-        public FieldESystemconfigurationLanguage1 ESystemconfigurationLanguage1 { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationLanguage2
-        /// </summary>
-        [DataMember(Name = "eSystemconfigurationLanguage2", IsRequired = true, EmitDefaultValue = true)]
-        public FieldESystemconfigurationLanguage2 ESystemconfigurationLanguage2 { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationEzsign
-        /// </summary>
-        [DataMember(Name = "eSystemconfigurationEzsign", EmitDefaultValue = false)]
-        [Obsolete]
-        public FieldESystemconfigurationEzsign? ESystemconfigurationEzsign { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ESystemconfigurationEzsignofficeplan
-        /// </summary>
-        [DataMember(Name = "eSystemconfigurationEzsignofficeplan", EmitDefaultValue = false)]
-        public FieldESystemconfigurationEzsignofficeplan? ESystemconfigurationEzsignofficeplan { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemconfigurationRequestCompound" /> class.
         /// </summary>
@@ -83,77 +52,9 @@ namespace eZmaxApi.Model
         /// <param name="bSystemconfigurationSspr">Whether if we allow SSPR (required).</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
-        public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), int fkiBrandingID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string))
+        public SystemconfigurationRequestCompound(int pkiSystemconfigurationID = default(int), int fkiBrandingID = default(int), FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default(FieldESystemconfigurationNewexternaluseraction), FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default(FieldESystemconfigurationLanguage1), FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default(FieldESystemconfigurationLanguage2), FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default(FieldESystemconfigurationEzsign?), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), bool bSystemconfigurationEzsignpersonnal = default(bool), bool bSystemconfigurationSspr = default(bool), string dtSystemconfigurationReadonlyexpirationstart = default(string), string dtSystemconfigurationReadonlyexpirationend = default(string)) : base()
         {
-            this.ESystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
-            this.ESystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
-            this.ESystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
-            this.BSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
-            this.BSystemconfigurationSspr = bSystemconfigurationSspr;
-            this.PkiSystemconfigurationID = pkiSystemconfigurationID;
-            this.FkiBrandingID = fkiBrandingID;
-            this.ESystemconfigurationEzsign = eSystemconfigurationEzsign;
-            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
-            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
-            this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
-            this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
         }
-
-        /// <summary>
-        /// The unique ID of the Systemconfiguration
-        /// </summary>
-        /// <value>The unique ID of the Systemconfiguration</value>
-        /* <example>1</example>*/
-        [DataMember(Name = "pkiSystemconfigurationID", EmitDefaultValue = false)]
-        public int PkiSystemconfigurationID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Branding
-        /// </summary>
-        /// <value>The unique ID of the Branding</value>
-        /* <example>78</example>*/
-        [DataMember(Name = "fkiBrandingID", EmitDefaultValue = false)]
-        public int FkiBrandingID { get; set; }
-
-        /// <summary>
-        /// Whether if Ezsign is paid by the company or not
-        /// </summary>
-        /// <value>Whether if Ezsign is paid by the company or not</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bSystemconfigurationEzsignpaidbyoffice", EmitDefaultValue = true)]
-        public bool BSystemconfigurationEzsignpaidbyoffice { get; set; }
-
-        /// <summary>
-        /// Whether if we allow the creation of personal files in eZsign
-        /// </summary>
-        /// <value>Whether if we allow the creation of personal files in eZsign</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bSystemconfigurationEzsignpersonnal", IsRequired = true, EmitDefaultValue = true)]
-        public bool BSystemconfigurationEzsignpersonnal { get; set; }
-
-        /// <summary>
-        /// Whether if we allow SSPR
-        /// </summary>
-        /// <value>Whether if we allow SSPR</value>
-        /* <example>true</example>*/
-        [DataMember(Name = "bSystemconfigurationSspr", IsRequired = true, EmitDefaultValue = true)]
-        public bool BSystemconfigurationSspr { get; set; }
-
-        /// <summary>
-        /// The start date where the system will be in read only
-        /// </summary>
-        /// <value>The start date where the system will be in read only</value>
-        /* <example>2020-12-31</example>*/
-        [DataMember(Name = "dtSystemconfigurationReadonlyexpirationstart", EmitDefaultValue = false)]
-        public string DtSystemconfigurationReadonlyexpirationstart { get; set; }
-
-        /// <summary>
-        /// The end date where the system will be in read only
-        /// </summary>
-        /// <value>The end date where the system will be in read only</value>
-        /* <example>2021-12-31</example>*/
-        [DataMember(Name = "dtSystemconfigurationReadonlyexpirationend", EmitDefaultValue = false)]
-        public string DtSystemconfigurationReadonlyexpirationend { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -163,18 +64,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class SystemconfigurationRequestCompound {\n");
-            sb.Append("  PkiSystemconfigurationID: ").Append(PkiSystemconfigurationID).Append("\n");
-            sb.Append("  FkiBrandingID: ").Append(FkiBrandingID).Append("\n");
-            sb.Append("  ESystemconfigurationNewexternaluseraction: ").Append(ESystemconfigurationNewexternaluseraction).Append("\n");
-            sb.Append("  ESystemconfigurationLanguage1: ").Append(ESystemconfigurationLanguage1).Append("\n");
-            sb.Append("  ESystemconfigurationLanguage2: ").Append(ESystemconfigurationLanguage2).Append("\n");
-            sb.Append("  ESystemconfigurationEzsign: ").Append(ESystemconfigurationEzsign).Append("\n");
-            sb.Append("  ESystemconfigurationEzsignofficeplan: ").Append(ESystemconfigurationEzsignofficeplan).Append("\n");
-            sb.Append("  BSystemconfigurationEzsignpaidbyoffice: ").Append(BSystemconfigurationEzsignpaidbyoffice).Append("\n");
-            sb.Append("  BSystemconfigurationEzsignpersonnal: ").Append(BSystemconfigurationEzsignpersonnal).Append("\n");
-            sb.Append("  BSystemconfigurationSspr: ").Append(BSystemconfigurationSspr).Append("\n");
-            sb.Append("  DtSystemconfigurationReadonlyexpirationstart: ").Append(DtSystemconfigurationReadonlyexpirationstart).Append("\n");
-            sb.Append("  DtSystemconfigurationReadonlyexpirationend: ").Append(DtSystemconfigurationReadonlyexpirationend).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,7 +73,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public virtual string ToJson()
+        public override string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -195,42 +85,20 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // PkiSystemconfigurationID (int) maximum
-            if (this.PkiSystemconfigurationID > (int)1)
+            return this.BaseValidate(validationContext);
+        }
+
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
+        {
+            foreach (var x in BaseValidate(validationContext))
             {
-                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+                yield return x;
             }
-
-            // PkiSystemconfigurationID (int) minimum
-            if (this.PkiSystemconfigurationID < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
-            }
-
-            // FkiBrandingID (int) minimum
-            if (this.FkiBrandingID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
-            }
-
-            if (this.DtSystemconfigurationReadonlyexpirationstart != null) {
-                // DtSystemconfigurationReadonlyexpirationstart (string) pattern
-                Regex regexDtSystemconfigurationReadonlyexpirationstart = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
-                if (!regexDtSystemconfigurationReadonlyexpirationstart.Match(this.DtSystemconfigurationReadonlyexpirationstart).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSystemconfigurationReadonlyexpirationstart, must match a pattern of " + regexDtSystemconfigurationReadonlyexpirationstart, new [] { "DtSystemconfigurationReadonlyexpirationstart" });
-                }
-            }
-
-            if (this.DtSystemconfigurationReadonlyexpirationend != null) {
-                // DtSystemconfigurationReadonlyexpirationend (string) pattern
-                Regex regexDtSystemconfigurationReadonlyexpirationend = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
-                if (!regexDtSystemconfigurationReadonlyexpirationend.Match(this.DtSystemconfigurationReadonlyexpirationend).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSystemconfigurationReadonlyexpirationend, must match a pattern of " + regexDtSystemconfigurationReadonlyexpirationend, new [] { "DtSystemconfigurationReadonlyexpirationend" });
-                }
-            }
-
             yield break;
         }
     }
