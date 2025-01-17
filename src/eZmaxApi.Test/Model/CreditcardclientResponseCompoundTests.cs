@@ -54,5 +54,68 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" CreditcardclientResponseCompound
             //Assert.IsType<CreditcardclientResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiCreditcardclientID'
+        /// </summary>
+        [Fact]
+        public void PkiCreditcardclientIDTest()
+        {
+            // TODO unit test for the property 'PkiCreditcardclientID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiCreditcarddetailID'
+        /// </summary>
+        [Fact]
+        public void FkiCreditcarddetailIDTest()
+        {
+            // TODO unit test for the property 'FkiCreditcarddetailID'
+        }
+
+        /// <summary>
+        /// Test the property 'BCreditcardclientrelationIsdefault'
+        /// </summary>
+        [Fact]
+        public void BCreditcardclientrelationIsdefaultTest()
+        {
+            // TODO unit test for the property 'BCreditcardclientrelationIsdefault'
+        }
+
+        /// <summary>
+        /// Test the property 'SCreditcardclientDescription'
+        /// </summary>
+        [Fact]
+        public void SCreditcardclientDescriptionTest()
+        {
+            // TODO unit test for the property 'SCreditcardclientDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'BCreditcardclientAllowedcompanypayment'
+        /// </summary>
+        [Fact]
+        public void BCreditcardclientAllowedcompanypaymentTest()
+        {
+            // TODO unit test for the property 'BCreditcardclientAllowedcompanypayment'
+        }
+
+        /// <summary>
+        /// Test the property 'BCreditcardclientAllowedtranquillit'
+        /// </summary>
+        [Fact]
+        public void BCreditcardclientAllowedtranquillitTest()
+        {
+            // TODO unit test for the property 'BCreditcardclientAllowedtranquillit'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjCreditcarddetail'
+        /// </summary>
+        [Fact]
+        public void ObjCreditcarddetailTest()
+        {
+            // TODO unit test for the property 'ObjCreditcarddetail'
+        }
     }
 }

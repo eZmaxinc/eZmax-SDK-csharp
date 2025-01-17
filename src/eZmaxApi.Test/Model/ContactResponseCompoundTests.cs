@@ -54,5 +54,122 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" ContactResponseCompound
             //Assert.IsType<ContactResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiContactID'
+        /// </summary>
+        [Fact]
+        public void PkiContactIDTest()
+        {
+            // TODO unit test for the property 'PkiContactID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiLanguageID'
+        /// </summary>
+        [Fact]
+        public void FkiLanguageIDTest()
+        {
+            // TODO unit test for the property 'FkiLanguageID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiContacttitleID'
+        /// </summary>
+        [Fact]
+        public void FkiContacttitleIDTest()
+        {
+            // TODO unit test for the property 'FkiContacttitleID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiContactinformationsID'
+        /// </summary>
+        [Fact]
+        public void FkiContactinformationsIDTest()
+        {
+            // TODO unit test for the property 'FkiContactinformationsID'
+        }
+
+        /// <summary>
+        /// Test the property 'DtContactBirthdate'
+        /// </summary>
+        [Fact]
+        public void DtContactBirthdateTest()
+        {
+            // TODO unit test for the property 'DtContactBirthdate'
+        }
+
+        /// <summary>
+        /// Test the property 'EContactType'
+        /// </summary>
+        [Fact]
+        public void EContactTypeTest()
+        {
+            // TODO unit test for the property 'EContactType'
+        }
+
+        /// <summary>
+        /// Test the property 'SContactFirstname'
+        /// </summary>
+        [Fact]
+        public void SContactFirstnameTest()
+        {
+            // TODO unit test for the property 'SContactFirstname'
+        }
+
+        /// <summary>
+        /// Test the property 'SContactLastname'
+        /// </summary>
+        [Fact]
+        public void SContactLastnameTest()
+        {
+            // TODO unit test for the property 'SContactLastname'
+        }
+
+        /// <summary>
+        /// Test the property 'SContactCompany'
+        /// </summary>
+        [Fact]
+        public void SContactCompanyTest()
+        {
+            // TODO unit test for the property 'SContactCompany'
+        }
+
+        /// <summary>
+        /// Test the property 'SContactOccupation'
+        /// </summary>
+        [Fact]
+        public void SContactOccupationTest()
+        {
+            // TODO unit test for the property 'SContactOccupation'
+        }
+
+        /// <summary>
+        /// Test the property 'TContactNote'
+        /// </summary>
+        [Fact]
+        public void TContactNoteTest()
+        {
+            // TODO unit test for the property 'TContactNote'
+        }
+
+        /// <summary>
+        /// Test the property 'BContactIsactive'
+        /// </summary>
+        [Fact]
+        public void BContactIsactiveTest()
+        {
+            // TODO unit test for the property 'BContactIsactive'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjContactinformations'
+        /// </summary>
+        [Fact]
+        public void ObjContactinformationsTest()
+        {
+            // TODO unit test for the property 'ObjContactinformations'
+        }
     }
 }

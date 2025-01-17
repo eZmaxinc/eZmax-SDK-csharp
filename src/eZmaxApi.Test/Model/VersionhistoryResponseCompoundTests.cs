@@ -54,5 +54,104 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" VersionhistoryResponseCompound
             //Assert.IsType<VersionhistoryResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiVersionhistoryID'
+        /// </summary>
+        [Fact]
+        public void PkiVersionhistoryIDTest()
+        {
+            // TODO unit test for the property 'PkiVersionhistoryID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiModuleID'
+        /// </summary>
+        [Fact]
+        public void FkiModuleIDTest()
+        {
+            // TODO unit test for the property 'FkiModuleID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiModulesectionID'
+        /// </summary>
+        [Fact]
+        public void FkiModulesectionIDTest()
+        {
+            // TODO unit test for the property 'FkiModulesectionID'
+        }
+
+        /// <summary>
+        /// Test the property 'SModuleNameX'
+        /// </summary>
+        [Fact]
+        public void SModuleNameXTest()
+        {
+            // TODO unit test for the property 'SModuleNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'SModulesectionNameX'
+        /// </summary>
+        [Fact]
+        public void SModulesectionNameXTest()
+        {
+            // TODO unit test for the property 'SModulesectionNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'EVersionhistoryUsertype'
+        /// </summary>
+        [Fact]
+        public void EVersionhistoryUsertypeTest()
+        {
+            // TODO unit test for the property 'EVersionhistoryUsertype'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjVersionhistoryDetail'
+        /// </summary>
+        [Fact]
+        public void ObjVersionhistoryDetailTest()
+        {
+            // TODO unit test for the property 'ObjVersionhistoryDetail'
+        }
+
+        /// <summary>
+        /// Test the property 'DtVersionhistoryDate'
+        /// </summary>
+        [Fact]
+        public void DtVersionhistoryDateTest()
+        {
+            // TODO unit test for the property 'DtVersionhistoryDate'
+        }
+
+        /// <summary>
+        /// Test the property 'DtVersionhistoryDateend'
+        /// </summary>
+        [Fact]
+        public void DtVersionhistoryDateendTest()
+        {
+            // TODO unit test for the property 'DtVersionhistoryDateend'
+        }
+
+        /// <summary>
+        /// Test the property 'EVersionhistoryType'
+        /// </summary>
+        [Fact]
+        public void EVersionhistoryTypeTest()
+        {
+            // TODO unit test for the property 'EVersionhistoryType'
+        }
+
+        /// <summary>
+        /// Test the property 'BVersionhistoryDraft'
+        /// </summary>
+        [Fact]
+        public void BVersionhistoryDraftTest()
+        {
+            // TODO unit test for the property 'BVersionhistoryDraft'
+        }
     }
 }

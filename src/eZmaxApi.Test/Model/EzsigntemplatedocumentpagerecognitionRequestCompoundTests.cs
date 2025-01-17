@@ -54,5 +54,95 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigntemplatedocumentpagerecognitionRequestCompound
             //Assert.IsType<EzsigntemplatedocumentpagerecognitionRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsigntemplatedocumentpagerecognitionID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigntemplatedocumentpagerecognitionIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigntemplatedocumentpagerecognitionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatedocumentpageID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatedocumentpageIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatedocumentpageID'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatedocumentpagerecognitionOperator'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatedocumentpagerecognitionOperatorTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatedocumentpagerecognitionOperator'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatedocumentpagerecognitionSection'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatedocumentpagerecognitionSectionTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatedocumentpagerecognitionSection'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatedocumentpagerecognitionSimilarpercentage'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatedocumentpagerecognitionSimilarpercentageTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatedocumentpagerecognitionSimilarpercentage'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatedocumentpagerecognitionX'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatedocumentpagerecognitionXTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatedocumentpagerecognitionX'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatedocumentpagerecognitionY'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatedocumentpagerecognitionYTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatedocumentpagerecognitionY'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatedocumentpagerecognitionWidth'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatedocumentpagerecognitionWidthTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatedocumentpagerecognitionWidth'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatedocumentpagerecognitionHeight'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatedocumentpagerecognitionHeightTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatedocumentpagerecognitionHeight'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzsigntemplatedocumentpagerecognitionText'
+        /// </summary>
+        [Fact]
+        public void TEzsigntemplatedocumentpagerecognitionTextTest()
+        {
+            // TODO unit test for the property 'TEzsigntemplatedocumentpagerecognitionText'
+        }
     }
 }

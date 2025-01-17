@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignbulksendtransmission Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignbulksendtransmission-ResponseCompound")]
-    public partial class EzsignbulksendtransmissionResponseCompound : EzsignbulksendtransmissionResponse, IValidatableObject
+    public partial class EzsignbulksendtransmissionResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
@@ -40,14 +40,29 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendtransmissionResponseCompound" /> class.
         /// </summary>
-        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
         /// <param name="pkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission (required).</param>
         /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
         /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission (required).</param>
         /// <param name="iEzsignbulksendtransmissionErrors">The number of errors during the Ezsignbulksendtransmission (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignbulksendtransmissionResponseCompound(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = default(List<CustomEzsignfoldertransmissionResponse>), int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit)) : base()
+        /// <param name="aObjEzsignfoldertransmission">aObjEzsignfoldertransmission (required).</param>
+        public EzsignbulksendtransmissionResponseCompound(int pkiEzsignbulksendtransmissionID = default(int), int fkiEzsignbulksendID = default(int), string sEzsignbulksendtransmissionDescription = default(string), int iEzsignbulksendtransmissionErrors = default(int), CommonAudit objAudit = default(CommonAudit), List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = default(List<CustomEzsignfoldertransmissionResponse>))
         {
+            this.PkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            // to ensure "sEzsignbulksendtransmissionDescription" is required (not null)
+            if (sEzsignbulksendtransmissionDescription == null)
+            {
+                throw new ArgumentNullException("sEzsignbulksendtransmissionDescription is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
+            }
+            this.SEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+            this.IEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for EzsignbulksendtransmissionResponseCompound and cannot be null");
+            }
+            this.ObjAudit = objAudit;
             // to ensure "aObjEzsignfoldertransmission" is required (not null)
             if (aObjEzsignfoldertransmission == null)
             {
@@ -55,6 +70,44 @@ namespace eZmaxApi.Model
             }
             this.AObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksendtransmission
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksendtransmission</value>
+        /* <example>21</example>*/
+        [DataMember(Name = "pkiEzsignbulksendtransmissionID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsignbulksendtransmissionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksend
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksend</value>
+        /* <example>8</example>*/
+        [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignbulksendID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignbulksendtransmission
+        /// </summary>
+        /// <value>The description of the Ezsignbulksendtransmission</value>
+        /* <example>Test eZsign Bulk Send Transmission #1</example>*/
+        [DataMember(Name = "sEzsignbulksendtransmissionDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzsignbulksendtransmissionDescription { get; set; }
+
+        /// <summary>
+        /// The number of errors during the Ezsignbulksendtransmission
+        /// </summary>
+        /// <value>The number of errors during the Ezsignbulksendtransmission</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iEzsignbulksendtransmissionErrors", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsignbulksendtransmissionErrors { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzsignfoldertransmission
@@ -70,7 +123,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignbulksendtransmissionResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignbulksendtransmissionID: ").Append(PkiEzsignbulksendtransmissionID).Append("\n");
+            sb.Append("  FkiEzsignbulksendID: ").Append(FkiEzsignbulksendID).Append("\n");
+            sb.Append("  SEzsignbulksendtransmissionDescription: ").Append(SEzsignbulksendtransmissionDescription).Append("\n");
+            sb.Append("  IEzsignbulksendtransmissionErrors: ").Append(IEzsignbulksendtransmissionErrors).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  AObjEzsignfoldertransmission: ").Append(AObjEzsignfoldertransmission).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -80,7 +137,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -92,20 +149,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignbulksendtransmissionID (int) minimum
+            if (this.PkiEzsignbulksendtransmissionID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendtransmissionID" });
             }
+
+            // FkiEzsignbulksendID (int) minimum
+            if (this.FkiEzsignbulksendID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+            }
+
+            // IEzsignbulksendtransmissionErrors (int) minimum
+            if (this.IEzsignbulksendtransmissionErrors < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsignbulksendtransmissionErrors, must be a value greater than or equal to 0.", new [] { "IEzsignbulksendtransmissionErrors" });
+            }
+
             yield break;
         }
     }

@@ -56,6 +56,60 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzmaxinvoicingsummaryinternalID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicingsummaryinternalIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicingsummaryinternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjEzmaxinvoicingsummaryinternalDescription'
+        /// </summary>
+        [Fact]
+        public void ObjEzmaxinvoicingsummaryinternalDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjEzmaxinvoicingsummaryinternalDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzmaxinvoicingsummaryinternalDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SEzmaxinvoicingsummaryinternalDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzmaxinvoicingsummaryinternalDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBillingentityinternalID'
+        /// </summary>
+        [Fact]
+        public void FkiBillingentityinternalIDTest()
+        {
+            // TODO unit test for the property 'FkiBillingentityinternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'SBillingentityinternalDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SBillingentityinternalDescriptionXTest()
+        {
+            // TODO unit test for the property 'SBillingentityinternalDescriptionX'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzmaxinvoicingsummaryinternaldetail'
         /// </summary>
         [Fact]

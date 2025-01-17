@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Modulesection Object
     /// </summary>
     [DataContract(Name = "modulesection-ResponseCompound")]
-    public partial class ModulesectionResponseCompound : ModulesectionResponse, IValidatableObject
+    public partial class ModulesectionResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
@@ -40,15 +40,61 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ModulesectionResponseCompound" /> class.
         /// </summary>
-        /// <param name="aObjPermission">aObjPermission.</param>
         /// <param name="pkiModulesectionID">The unique ID of the Modulesection (required).</param>
         /// <param name="fkiModuleID">The unique ID of the Module (required).</param>
         /// <param name="sModulesectionInternalname">The Internal name of the Module section. (required).</param>
         /// <param name="sModulesectionNameX">The Name of the Modulesection in the language of the requester (required).</param>
-        public ModulesectionResponseCompound(List<PermissionResponseCompound> aObjPermission = default(List<PermissionResponseCompound>), int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string)) : base()
+        /// <param name="aObjPermission">aObjPermission.</param>
+        public ModulesectionResponseCompound(int pkiModulesectionID = default(int), int fkiModuleID = default(int), string sModulesectionInternalname = default(string), string sModulesectionNameX = default(string), List<PermissionResponseCompound> aObjPermission = default(List<PermissionResponseCompound>))
         {
+            this.PkiModulesectionID = pkiModulesectionID;
+            this.FkiModuleID = fkiModuleID;
+            // to ensure "sModulesectionInternalname" is required (not null)
+            if (sModulesectionInternalname == null)
+            {
+                throw new ArgumentNullException("sModulesectionInternalname is a required property for ModulesectionResponseCompound and cannot be null");
+            }
+            this.SModulesectionInternalname = sModulesectionInternalname;
+            // to ensure "sModulesectionNameX" is required (not null)
+            if (sModulesectionNameX == null)
+            {
+                throw new ArgumentNullException("sModulesectionNameX is a required property for ModulesectionResponseCompound and cannot be null");
+            }
+            this.SModulesectionNameX = sModulesectionNameX;
             this.AObjPermission = aObjPermission;
         }
+
+        /// <summary>
+        /// The unique ID of the Modulesection
+        /// </summary>
+        /// <value>The unique ID of the Modulesection</value>
+        /* <example>53</example>*/
+        [DataMember(Name = "pkiModulesectionID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiModulesectionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Module
+        /// </summary>
+        /// <value>The unique ID of the Module</value>
+        /* <example>40</example>*/
+        [DataMember(Name = "fkiModuleID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiModuleID { get; set; }
+
+        /// <summary>
+        /// The Internal name of the Module section.
+        /// </summary>
+        /// <value>The Internal name of the Module section.</value>
+        /* <example>Access</example>*/
+        [DataMember(Name = "sModulesectionInternalname", IsRequired = true, EmitDefaultValue = true)]
+        public string SModulesectionInternalname { get; set; }
+
+        /// <summary>
+        /// The Name of the Modulesection in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Modulesection in the language of the requester</value>
+        /* <example>Access</example>*/
+        [DataMember(Name = "sModulesectionNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SModulesectionNameX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjPermission
@@ -64,7 +110,10 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ModulesectionResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiModulesectionID: ").Append(PkiModulesectionID).Append("\n");
+            sb.Append("  FkiModuleID: ").Append(FkiModuleID).Append("\n");
+            sb.Append("  SModulesectionInternalname: ").Append(SModulesectionInternalname).Append("\n");
+            sb.Append("  SModulesectionNameX: ").Append(SModulesectionNameX).Append("\n");
             sb.Append("  AObjPermission: ").Append(AObjPermission).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -74,7 +123,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -86,20 +135,18 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiModulesectionID (int) minimum
+            if (this.PkiModulesectionID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiModulesectionID, must be a value greater than or equal to 0.", new [] { "PkiModulesectionID" });
             }
+
+            // FkiModuleID (int) minimum
+            if (this.FkiModuleID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+            }
+
             yield break;
         }
     }

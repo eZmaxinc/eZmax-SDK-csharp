@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksendsignermapping Object
     /// </summary>
     [DataContract(Name = "ezsignbulksendsignermapping-ResponseCompound")]
-    public partial class EzsignbulksendsignermappingResponseCompound : EzsignbulksendsignermappingResponse, IValidatableObject
+    public partial class EzsignbulksendsignermappingResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendsignermappingResponseCompound" /> class.
@@ -44,9 +44,50 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend (required).</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="sEzsignbulksendsignermappingDescription">The description of the Ezsignbulksendsignermapping (required).</param>
-        public EzsignbulksendsignermappingResponseCompound(int pkiEzsignbulksendsignermappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiUserID = default(int), string sEzsignbulksendsignermappingDescription = default(string)) : base()
+        public EzsignbulksendsignermappingResponseCompound(int pkiEzsignbulksendsignermappingID = default(int), int fkiEzsignbulksendID = default(int), int fkiUserID = default(int), string sEzsignbulksendsignermappingDescription = default(string))
         {
+            this.PkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            // to ensure "sEzsignbulksendsignermappingDescription" is required (not null)
+            if (sEzsignbulksendsignermappingDescription == null)
+            {
+                throw new ArgumentNullException("sEzsignbulksendsignermappingDescription is a required property for EzsignbulksendsignermappingResponseCompound and cannot be null");
+            }
+            this.SEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
+            this.FkiUserID = fkiUserID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksendsignermapping
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksendsignermapping</value>
+        /* <example>57</example>*/
+        [DataMember(Name = "pkiEzsignbulksendsignermappingID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsignbulksendsignermappingID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksend
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksend</value>
+        /* <example>8</example>*/
+        [DataMember(Name = "fkiEzsignbulksendID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignbulksendID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignbulksendsignermapping
+        /// </summary>
+        /// <value>The description of the Ezsignbulksendsignermapping</value>
+        /* <example>Supervisor</example>*/
+        [DataMember(Name = "sEzsignbulksendsignermappingDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzsignbulksendsignermappingDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,7 +97,10 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignbulksendsignermappingResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignbulksendsignermappingID: ").Append(PkiEzsignbulksendsignermappingID).Append("\n");
+            sb.Append("  FkiEzsignbulksendID: ").Append(FkiEzsignbulksendID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  SEzsignbulksendsignermappingDescription: ").Append(SEzsignbulksendsignermappingDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +109,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -77,20 +121,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignbulksendsignermappingID (int) minimum
+            if (this.PkiEzsignbulksendsignermappingID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendsignermappingID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendsignermappingID" });
             }
+
+            // FkiEzsignbulksendID (int) minimum
+            if (this.FkiEzsignbulksendID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+            }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
             yield break;
         }
     }

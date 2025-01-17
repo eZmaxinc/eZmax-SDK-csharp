@@ -5,7 +5,10 @@ Generic Error Message
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignformfielderror** | **List&lt;CustomEzsignformfielderrorResponse&gt;** |  | 
+**SErrorMessage** | **string** | The message giving details about the error | 
+**EErrorCode** | **FieldEErrorCode** |  | 
+**ASErrorMessagedetail** | **List&lt;string&gt;** | More error message detail | [optional] 
+**AObjEzsignformfielderror** | [**List&lt;CustomEzsignformfielderrorResponse&gt;**](CustomEzsignformfielderrorResponse.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

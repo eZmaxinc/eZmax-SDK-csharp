@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatedocumentpagerecognitiondeleteobjectv1"></a>
 # **EzsigntemplatedocumentpagerecognitionDeleteObjectV1**
-> CommonResponse EzsigntemplatedocumentpagerecognitionDeleteObjectV1 (int pkiEzsigntemplatedocumentpagerecognitionID)
+> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response EzsigntemplatedocumentpagerecognitionDeleteObjectV1 (int pkiEzsigntemplatedocumentpagerecognitionID)
 
 Delete an existing Ezsigntemplatedocumentpagerecognition
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplatedocumentpagerecognition
-                CommonResponse result = apiInstance.EzsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
+                EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response result = apiInstance.EzsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplatedocumentpagerecognition
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
+    ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> response = apiInstance.EzsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response**](EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatedocumentpagerecognitioneditobjectv1"></a>
 # **EzsigntemplatedocumentpagerecognitionEditObjectV1**
-> CommonResponse EzsigntemplatedocumentpagerecognitionEditObjectV1 (int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
+> EzsigntemplatedocumentpagerecognitionEditObjectV1Response EzsigntemplatedocumentpagerecognitionEditObjectV1 (int pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
 
 Edit an existing Ezsigntemplatedocumentpagerecognition
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplatedocumentpagerecognition
-                CommonResponse result = apiInstance.EzsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+                EzsigntemplatedocumentpagerecognitionEditObjectV1Response result = apiInstance.EzsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplatedocumentpagerecognition
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+    ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> response = apiInstance.EzsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionEditObjectV1Response**](EzsigntemplatedocumentpagerecognitionEditObjectV1Response.md)
 
 ### Authorization
 

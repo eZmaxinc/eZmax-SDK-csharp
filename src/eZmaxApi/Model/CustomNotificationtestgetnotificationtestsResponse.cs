@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Notificationtest Object in the context of getNotificationtests
     /// </summary>
     [DataContract(Name = "Custom-Notificationtestgetnotificationtests-Response")]
-    public partial class CustomNotificationtestgetnotificationtestsResponse : NotificationtestResponse, IValidatableObject
+    public partial class CustomNotificationtestgetnotificationtestsResponse : IValidatableObject
     {
 
         /// <summary>
@@ -46,18 +46,76 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomNotificationtestgetnotificationtestsResponse" /> class.
         /// </summary>
-        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
-        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
         /// <param name="pkiNotificationtestID">The unique ID of the Notificationtest (required).</param>
         /// <param name="objNotificationtestName">objNotificationtestName (required).</param>
         /// <param name="fkiNotificationsubsectionID">The unique ID of the Notificationsubsection (required).</param>
         /// <param name="sNotificationtestFunction">The function name of the Notificationtest (required).</param>
         /// <param name="sNotificationtestNameX">The name of the Notificationtest in the language of the requester (required).</param>
-        public CustomNotificationtestgetnotificationtestsResponse(FieldENotificationpreferenceStatus eNotificationpreferenceStatus = default(FieldENotificationpreferenceStatus), int iNotificationtest = default(int), int pkiNotificationtestID = default(int), MultilingualNotificationtestName objNotificationtestName = default(MultilingualNotificationtestName), int fkiNotificationsubsectionID = default(int), string sNotificationtestFunction = default(string), string sNotificationtestNameX = default(string)) : base()
+        /// <param name="eNotificationpreferenceStatus">eNotificationpreferenceStatus (required).</param>
+        /// <param name="iNotificationtest">The number of elements returned by the Notificationtest (required).</param>
+        public CustomNotificationtestgetnotificationtestsResponse(int pkiNotificationtestID = default(int), MultilingualNotificationtestName objNotificationtestName = default(MultilingualNotificationtestName), int fkiNotificationsubsectionID = default(int), string sNotificationtestFunction = default(string), string sNotificationtestNameX = default(string), FieldENotificationpreferenceStatus eNotificationpreferenceStatus = default(FieldENotificationpreferenceStatus), int iNotificationtest = default(int))
         {
+            this.PkiNotificationtestID = pkiNotificationtestID;
+            // to ensure "objNotificationtestName" is required (not null)
+            if (objNotificationtestName == null)
+            {
+                throw new ArgumentNullException("objNotificationtestName is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+            }
+            this.ObjNotificationtestName = objNotificationtestName;
+            this.FkiNotificationsubsectionID = fkiNotificationsubsectionID;
+            // to ensure "sNotificationtestFunction" is required (not null)
+            if (sNotificationtestFunction == null)
+            {
+                throw new ArgumentNullException("sNotificationtestFunction is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+            }
+            this.SNotificationtestFunction = sNotificationtestFunction;
+            // to ensure "sNotificationtestNameX" is required (not null)
+            if (sNotificationtestNameX == null)
+            {
+                throw new ArgumentNullException("sNotificationtestNameX is a required property for CustomNotificationtestgetnotificationtestsResponse and cannot be null");
+            }
+            this.SNotificationtestNameX = sNotificationtestNameX;
             this.ENotificationpreferenceStatus = eNotificationpreferenceStatus;
             this.INotificationtest = iNotificationtest;
         }
+
+        /// <summary>
+        /// The unique ID of the Notificationtest
+        /// </summary>
+        /// <value>The unique ID of the Notificationtest</value>
+        /* <example>14</example>*/
+        [DataMember(Name = "pkiNotificationtestID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiNotificationtestID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjNotificationtestName
+        /// </summary>
+        [DataMember(Name = "objNotificationtestName", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualNotificationtestName ObjNotificationtestName { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Notificationsubsection
+        /// </summary>
+        /// <value>The unique ID of the Notificationsubsection</value>
+        /* <example>3</example>*/
+        [DataMember(Name = "fkiNotificationsubsectionID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiNotificationsubsectionID { get; set; }
+
+        /// <summary>
+        /// The function name of the Notificationtest
+        /// </summary>
+        /// <value>The function name of the Notificationtest</value>
+        /* <example>Default</example>*/
+        [DataMember(Name = "sNotificationtestFunction", IsRequired = true, EmitDefaultValue = true)]
+        public string SNotificationtestFunction { get; set; }
+
+        /// <summary>
+        /// The name of the Notificationtest in the language of the requester
+        /// </summary>
+        /// <value>The name of the Notificationtest in the language of the requester</value>
+        /* <example>Default</example>*/
+        [DataMember(Name = "sNotificationtestNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SNotificationtestNameX { get; set; }
 
         /// <summary>
         /// The number of elements returned by the Notificationtest
@@ -75,7 +133,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomNotificationtestgetnotificationtestsResponse {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiNotificationtestID: ").Append(PkiNotificationtestID).Append("\n");
+            sb.Append("  ObjNotificationtestName: ").Append(ObjNotificationtestName).Append("\n");
+            sb.Append("  FkiNotificationsubsectionID: ").Append(FkiNotificationsubsectionID).Append("\n");
+            sb.Append("  SNotificationtestFunction: ").Append(SNotificationtestFunction).Append("\n");
+            sb.Append("  SNotificationtestNameX: ").Append(SNotificationtestNameX).Append("\n");
             sb.Append("  ENotificationpreferenceStatus: ").Append(ENotificationpreferenceStatus).Append("\n");
             sb.Append("  INotificationtest: ").Append(INotificationtest).Append("\n");
             sb.Append("}\n");
@@ -86,7 +148,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -98,20 +160,18 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiNotificationtestID (int) minimum
+            if (this.PkiNotificationtestID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiNotificationtestID, must be a value greater than or equal to 0.", new [] { "PkiNotificationtestID" });
             }
+
+            // FkiNotificationsubsectionID (int) minimum
+            if (this.FkiNotificationsubsectionID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsubsectionID" });
+            }
+
             yield break;
         }
     }

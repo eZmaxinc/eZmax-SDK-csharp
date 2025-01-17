@@ -54,5 +54,95 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzmaxinvoicingsummaryexternaldetailResponseCompound
             //Assert.IsType<EzmaxinvoicingsummaryexternaldetailResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzmaxinvoicingsummaryexternaldetailID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicingsummaryexternaldetailIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicingsummaryexternaldetailID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingsummaryexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingsummaryexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingsummaryexternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxproductID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxproductIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxproductID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzmaxproductDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SEzmaxproductDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzmaxproductDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryexternaldetailCountreal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryexternaldetailCountrealTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryexternaldetailCountreal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryexternaldetailSubtotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryexternaldetailSubtotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryexternaldetailSubtotal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryexternaldetailRebate'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryexternaldetailRebateTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryexternaldetailRebate'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryexternaldetailTotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryexternaldetailTotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryexternaldetailTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzmaxinvoicingsummaryexternaldetailAdjustment'
+        /// </summary>
+        [Fact]
+        public void BEzmaxinvoicingsummaryexternaldetailAdjustmentTest()
+        {
+            // TODO unit test for the property 'BEzmaxinvoicingsummaryexternaldetailAdjustment'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzmaxproductHelpX'
+        /// </summary>
+        [Fact]
+        public void TEzmaxproductHelpXTest()
+        {
+            // TODO unit test for the property 'TEzmaxproductHelpX'
+        }
     }
 }

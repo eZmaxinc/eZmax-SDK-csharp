@@ -54,5 +54,77 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" UsergroupdelegationResponseCompound
             //Assert.IsType<UsergroupdelegationResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiUsergroupdelegationID'
+        /// </summary>
+        [Fact]
+        public void PkiUsergroupdelegationIDTest()
+        {
+            // TODO unit test for the property 'PkiUsergroupdelegationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'SUserFirstname'
+        /// </summary>
+        [Fact]
+        public void SUserFirstnameTest()
+        {
+            // TODO unit test for the property 'SUserFirstname'
+        }
+
+        /// <summary>
+        /// Test the property 'SUserLastname'
+        /// </summary>
+        [Fact]
+        public void SUserLastnameTest()
+        {
+            // TODO unit test for the property 'SUserLastname'
+        }
+
+        /// <summary>
+        /// Test the property 'SUserLoginname'
+        /// </summary>
+        [Fact]
+        public void SUserLoginnameTest()
+        {
+            // TODO unit test for the property 'SUserLoginname'
+        }
+
+        /// <summary>
+        /// Test the property 'SEmailAddress'
+        /// </summary>
+        [Fact]
+        public void SEmailAddressTest()
+        {
+            // TODO unit test for the property 'SEmailAddress'
+        }
+
+        /// <summary>
+        /// Test the property 'SUsergroupNameX'
+        /// </summary>
+        [Fact]
+        public void SUsergroupNameXTest()
+        {
+            // TODO unit test for the property 'SUsergroupNameX'
+        }
     }
 }

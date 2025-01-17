@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Subnet Object
     /// </summary>
     [DataContract(Name = "subnet-ResponseCompound")]
-    public partial class SubnetResponseCompound : SubnetResponse, IValidatableObject
+    public partial class SubnetResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubnetResponseCompound" /> class.
@@ -46,9 +46,66 @@ namespace eZmaxApi.Model
         /// <param name="objSubnetDescription">objSubnetDescription (required).</param>
         /// <param name="iSubnetNetwork">The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064 (required).</param>
         /// <param name="iSubnetMask">The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040 (required).</param>
-        public SubnetResponseCompound(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), long iSubnetNetwork = default(long), long iSubnetMask = default(long)) : base()
+        public SubnetResponseCompound(int pkiSubnetID = default(int), int fkiUserID = default(int), int fkiApikeyID = default(int), MultilingualSubnetDescription objSubnetDescription = default(MultilingualSubnetDescription), long iSubnetNetwork = default(long), long iSubnetMask = default(long))
         {
+            this.PkiSubnetID = pkiSubnetID;
+            // to ensure "objSubnetDescription" is required (not null)
+            if (objSubnetDescription == null)
+            {
+                throw new ArgumentNullException("objSubnetDescription is a required property for SubnetResponseCompound and cannot be null");
+            }
+            this.ObjSubnetDescription = objSubnetDescription;
+            this.ISubnetNetwork = iSubnetNetwork;
+            this.ISubnetMask = iSubnetMask;
+            this.FkiUserID = fkiUserID;
+            this.FkiApikeyID = fkiApikeyID;
         }
+
+        /// <summary>
+        /// The unique ID of the Subnet
+        /// </summary>
+        /// <value>The unique ID of the Subnet</value>
+        /* <example>3</example>*/
+        [DataMember(Name = "pkiSubnetID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiSubnetID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Apikey
+        /// </summary>
+        /// <value>The unique ID of the Apikey</value>
+        /* <example>99</example>*/
+        [DataMember(Name = "fkiApikeyID", EmitDefaultValue = false)]
+        public int FkiApikeyID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjSubnetDescription
+        /// </summary>
+        [DataMember(Name = "objSubnetDescription", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualSubnetDescription ObjSubnetDescription { get; set; }
+
+        /// <summary>
+        /// The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064
+        /// </summary>
+        /// <value>The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064</value>
+        /* <example>134744064</example>*/
+        [DataMember(Name = "iSubnetNetwork", IsRequired = true, EmitDefaultValue = true)]
+        public long ISubnetNetwork { get; set; }
+
+        /// <summary>
+        /// The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
+        /// </summary>
+        /// <value>The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040</value>
+        /* <example>4294967040</example>*/
+        [DataMember(Name = "iSubnetMask", IsRequired = true, EmitDefaultValue = true)]
+        public long ISubnetMask { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -58,7 +115,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class SubnetResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiSubnetID: ").Append(PkiSubnetID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiApikeyID: ").Append(FkiApikeyID).Append("\n");
+            sb.Append("  ObjSubnetDescription: ").Append(ObjSubnetDescription).Append("\n");
+            sb.Append("  ISubnetNetwork: ").Append(ISubnetNetwork).Append("\n");
+            sb.Append("  ISubnetMask: ").Append(ISubnetMask).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -67,7 +129,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -79,20 +141,54 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiSubnetID (int) maximum
+            if (this.PkiSubnetID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiSubnetID, must be a value less than or equal to 65535.", new [] { "PkiSubnetID" });
             }
+
+            // PkiSubnetID (int) minimum
+            if (this.PkiSubnetID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiSubnetID, must be a value greater than or equal to 0.", new [] { "PkiSubnetID" });
+            }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiApikeyID (int) minimum
+            if (this.FkiApikeyID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+            }
+
+            // ISubnetNetwork (long) maximum
+            if (this.ISubnetNetwork > (long)4294967295)
+            {
+                yield return new ValidationResult("Invalid value for ISubnetNetwork, must be a value less than or equal to 4294967295.", new [] { "ISubnetNetwork" });
+            }
+
+            // ISubnetNetwork (long) minimum
+            if (this.ISubnetNetwork < (long)0)
+            {
+                yield return new ValidationResult("Invalid value for ISubnetNetwork, must be a value greater than or equal to 0.", new [] { "ISubnetNetwork" });
+            }
+
+            // ISubnetMask (long) maximum
+            if (this.ISubnetMask > (long)4294967295)
+            {
+                yield return new ValidationResult("Invalid value for ISubnetMask, must be a value less than or equal to 4294967295.", new [] { "ISubnetMask" });
+            }
+
+            // ISubnetMask (long) minimum
+            if (this.ISubnetMask < (long)0)
+            {
+                yield return new ValidationResult("Invalid value for ISubnetMask, must be a value greater than or equal to 0.", new [] { "ISubnetMask" });
+            }
+
             yield break;
         }
     }

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Textstylestatic Object
     /// </summary>
     [DataContract(Name = "textstylestatic-ResponseCompound")]
-    public partial class TextstylestaticResponseCompound : TextstylestaticResponse, IValidatableObject
+    public partial class TextstylestaticResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TextstylestaticResponseCompound" /> class.
@@ -49,9 +49,95 @@ namespace eZmaxApi.Model
         /// <param name="bTextstylestaticStrikethrough">Whether the Textstylestatic is Strikethrough or not (required).</param>
         /// <param name="iTextstylestaticFontcolor">The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795 (required).</param>
         /// <param name="iTextstylestaticSize">The Size for the Font of the Textstylestatic (required).</param>
-        public TextstylestaticResponseCompound(int pkiTextstylestaticID = default(int), int fkiFontID = default(int), string sFontName = default(string), bool bTextstylestaticBold = default(bool), bool bTextstylestaticUnderline = default(bool), bool bTextstylestaticItalic = default(bool), bool bTextstylestaticStrikethrough = default(bool), int iTextstylestaticFontcolor = default(int), int iTextstylestaticSize = default(int)) : base()
+        public TextstylestaticResponseCompound(int pkiTextstylestaticID = default(int), int fkiFontID = default(int), string sFontName = default(string), bool bTextstylestaticBold = default(bool), bool bTextstylestaticUnderline = default(bool), bool bTextstylestaticItalic = default(bool), bool bTextstylestaticStrikethrough = default(bool), int iTextstylestaticFontcolor = default(int), int iTextstylestaticSize = default(int))
         {
+            this.FkiFontID = fkiFontID;
+            // to ensure "sFontName" is required (not null)
+            if (sFontName == null)
+            {
+                throw new ArgumentNullException("sFontName is a required property for TextstylestaticResponseCompound and cannot be null");
+            }
+            this.SFontName = sFontName;
+            this.BTextstylestaticBold = bTextstylestaticBold;
+            this.BTextstylestaticUnderline = bTextstylestaticUnderline;
+            this.BTextstylestaticItalic = bTextstylestaticItalic;
+            this.BTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
+            this.ITextstylestaticFontcolor = iTextstylestaticFontcolor;
+            this.ITextstylestaticSize = iTextstylestaticSize;
+            this.PkiTextstylestaticID = pkiTextstylestaticID;
         }
+
+        /// <summary>
+        /// The unique ID of the Textstylestatic
+        /// </summary>
+        /// <value>The unique ID of the Textstylestatic</value>
+        /* <example>216</example>*/
+        [DataMember(Name = "pkiTextstylestaticID", EmitDefaultValue = false)]
+        public int PkiTextstylestaticID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiFontID { get; set; }
+
+        /// <summary>
+        /// The name of the Font
+        /// </summary>
+        /// <value>The name of the Font</value>
+        /* <example>Arial</example>*/
+        [DataMember(Name = "sFontName", IsRequired = true, EmitDefaultValue = true)]
+        public string SFontName { get; set; }
+
+        /// <summary>
+        /// Whether the Textstylestatic is Bold or not
+        /// </summary>
+        /// <value>Whether the Textstylestatic is Bold or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bTextstylestaticBold", IsRequired = true, EmitDefaultValue = true)]
+        public bool BTextstylestaticBold { get; set; }
+
+        /// <summary>
+        /// Whether the Textstylestatic is Underline or not
+        /// </summary>
+        /// <value>Whether the Textstylestatic is Underline or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bTextstylestaticUnderline", IsRequired = true, EmitDefaultValue = true)]
+        public bool BTextstylestaticUnderline { get; set; }
+
+        /// <summary>
+        /// Whether the Textstylestatic is Italic or not
+        /// </summary>
+        /// <value>Whether the Textstylestatic is Italic or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bTextstylestaticItalic", IsRequired = true, EmitDefaultValue = true)]
+        public bool BTextstylestaticItalic { get; set; }
+
+        /// <summary>
+        /// Whether the Textstylestatic is Strikethrough or not
+        /// </summary>
+        /// <value>Whether the Textstylestatic is Strikethrough or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bTextstylestaticStrikethrough", IsRequired = true, EmitDefaultValue = true)]
+        public bool BTextstylestaticStrikethrough { get; set; }
+
+        /// <summary>
+        /// The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795
+        /// </summary>
+        /// <value>The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795</value>
+        /* <example>3752795</example>*/
+        [DataMember(Name = "iTextstylestaticFontcolor", IsRequired = true, EmitDefaultValue = true)]
+        public int ITextstylestaticFontcolor { get; set; }
+
+        /// <summary>
+        /// The Size for the Font of the Textstylestatic
+        /// </summary>
+        /// <value>The Size for the Font of the Textstylestatic</value>
+        /* <example>12</example>*/
+        [DataMember(Name = "iTextstylestaticSize", IsRequired = true, EmitDefaultValue = true)]
+        public int ITextstylestaticSize { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,7 +147,15 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class TextstylestaticResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiTextstylestaticID: ").Append(PkiTextstylestaticID).Append("\n");
+            sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
+            sb.Append("  SFontName: ").Append(SFontName).Append("\n");
+            sb.Append("  BTextstylestaticBold: ").Append(BTextstylestaticBold).Append("\n");
+            sb.Append("  BTextstylestaticUnderline: ").Append(BTextstylestaticUnderline).Append("\n");
+            sb.Append("  BTextstylestaticItalic: ").Append(BTextstylestaticItalic).Append("\n");
+            sb.Append("  BTextstylestaticStrikethrough: ").Append(BTextstylestaticStrikethrough).Append("\n");
+            sb.Append("  ITextstylestaticFontcolor: ").Append(ITextstylestaticFontcolor).Append("\n");
+            sb.Append("  ITextstylestaticSize: ").Append(ITextstylestaticSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -70,7 +164,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -82,20 +176,51 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiTextstylestaticID (int) minimum
+            if (this.PkiTextstylestaticID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiTextstylestaticID, must be a value greater than or equal to 0.", new [] { "PkiTextstylestaticID" });
             }
+
+            // FkiFontID (int) minimum
+            if (this.FkiFontID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+            }
+
+            if (this.SFontName != null) {
+                // SFontName (string) pattern
+                Regex regexSFontName = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSFontName.Match(this.SFontName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SFontName, must match a pattern of " + regexSFontName, new [] { "SFontName" });
+                }
+            }
+
+            // ITextstylestaticFontcolor (int) maximum
+            if (this.ITextstylestaticFontcolor > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value less than or equal to 16777215.", new [] { "ITextstylestaticFontcolor" });
+            }
+
+            // ITextstylestaticFontcolor (int) minimum
+            if (this.ITextstylestaticFontcolor < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value greater than or equal to 0.", new [] { "ITextstylestaticFontcolor" });
+            }
+
+            // ITextstylestaticSize (int) maximum
+            if (this.ITextstylestaticSize > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value less than or equal to 255.", new [] { "ITextstylestaticSize" });
+            }
+
+            // ITextstylestaticSize (int) minimum
+            if (this.ITextstylestaticSize < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value greater than or equal to 1.", new [] { "ITextstylestaticSize" });
+            }
+
             yield break;
         }
     }

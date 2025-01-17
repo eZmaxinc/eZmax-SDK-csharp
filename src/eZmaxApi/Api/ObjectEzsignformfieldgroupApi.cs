@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID, int operationIndex = 0);
+        /// <returns>EzsignformfieldgroupDeleteObjectV1Response</returns>
+        EzsignformfieldgroupDeleteObjectV1Response EzsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsignformfieldgroup
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsignformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignformfieldgroupDeleteObjectV1Response</returns>
+        ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> EzsignformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Ezsignformfieldgroup
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsignformfieldgroupEditObjectV1Response</returns>
+        EzsignformfieldgroupEditObjectV1Response EzsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignformfieldgroup
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsignformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignformfieldgroupEditObjectV1Response</returns>
+        ApiResponse<EzsignformfieldgroupEditObjectV1Response> EzsignformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsignformfieldgroup
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsignformfieldgroupDeleteObjectV1Async(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsignformfieldgroupDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignformfieldgroupDeleteObjectV1Response> EzsignformfieldgroupDeleteObjectV1Async(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsignformfieldgroup
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignformfieldgroupDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignformfieldgroupDeleteObjectV1Response>> EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsignformfieldgroup
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsignformfieldgroupEditObjectV1Async(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsignformfieldgroupEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignformfieldgroupEditObjectV1Response> EzsignformfieldgroupEditObjectV1Async(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignformfieldgroup
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignformfieldgroupEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignformfieldgroupEditObjectV1Response>> EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignformfieldgroup
         /// </summary>
@@ -505,10 +505,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID, int operationIndex = 0)
+        /// <returns>EzsignformfieldgroupDeleteObjectV1Response</returns>
+        public EzsignformfieldgroupDeleteObjectV1Response EzsignformfieldgroupDeleteObjectV1(int pkiEzsignformfieldgroupID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
+            eZmaxApi.Client.ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> localVarResponse = EzsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
             return localVarResponse.Data;
         }
 
@@ -518,8 +518,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignformfieldgroupDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> EzsignformfieldgroupDeleteObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -555,7 +555,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<EzsignformfieldgroupDeleteObjectV1Response>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignformfieldgroupDeleteObjectV1", localVarResponse);
@@ -575,10 +575,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsignformfieldgroupDeleteObjectV1Async(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsignformfieldgroupDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignformfieldgroupDeleteObjectV1Response> EzsignformfieldgroupDeleteObjectV1Async(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(pkiEzsignformfieldgroupID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> localVarResponse = await EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(pkiEzsignformfieldgroupID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -589,8 +589,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignformfieldgroupDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignformfieldgroupDeleteObjectV1Response>> EzsignformfieldgroupDeleteObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -627,7 +627,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsignformfieldgroupDeleteObjectV1Response>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +648,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsignformfieldgroupEditObjectV1Response</returns>
+        public EzsignformfieldgroupEditObjectV1Response EzsignformfieldgroupEditObjectV1(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsignformfieldgroupEditObjectV1Response> localVarResponse = EzsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +662,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignformfieldgroupID"></param>
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignformfieldgroupEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignformfieldgroupEditObjectV1Response> EzsignformfieldgroupEditObjectV1WithHttpInfo(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignformfieldgroupEditObjectV1Request' is set
             if (ezsignformfieldgroupEditObjectV1Request == null)
@@ -707,7 +707,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<EzsignformfieldgroupEditObjectV1Response>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignformfieldgroupEditObjectV1", localVarResponse);
@@ -728,10 +728,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsignformfieldgroupEditObjectV1Async(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsignformfieldgroupEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignformfieldgroupEditObjectV1Response> EzsignformfieldgroupEditObjectV1Async(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignformfieldgroupEditObjectV1Response> localVarResponse = await EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +743,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignformfieldgroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignformfieldgroupEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignformfieldgroupEditObjectV1Response>> EzsignformfieldgroupEditObjectV1WithHttpInfoAsync(int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignformfieldgroupEditObjectV1Request' is set
             if (ezsignformfieldgroupEditObjectV1Request == null)
@@ -789,7 +789,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignformfieldgroupEditObjectV1Response>("/1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

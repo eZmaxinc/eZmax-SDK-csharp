@@ -5,7 +5,9 @@ Response for GET /1/object/ezmaxinvoicing/getProvisional
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MPayload** | [**EzmaxinvoicingResponseCompound**](EzmaxinvoicingResponseCompound.md) | Payload for GET /1/object/ezmaxinvoicing/getProvisional | 
+**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**MPayload** | [**EzmaxinvoicingGetProvisionalV1ResponseMPayload**](EzmaxinvoicingGetProvisionalV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

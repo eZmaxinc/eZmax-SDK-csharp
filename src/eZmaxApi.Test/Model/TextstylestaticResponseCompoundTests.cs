@@ -54,5 +54,86 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" TextstylestaticResponseCompound
             //Assert.IsType<TextstylestaticResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiTextstylestaticID'
+        /// </summary>
+        [Fact]
+        public void PkiTextstylestaticIDTest()
+        {
+            // TODO unit test for the property 'PkiTextstylestaticID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFontID'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDTest()
+        {
+            // TODO unit test for the property 'FkiFontID'
+        }
+
+        /// <summary>
+        /// Test the property 'SFontName'
+        /// </summary>
+        [Fact]
+        public void SFontNameTest()
+        {
+            // TODO unit test for the property 'SFontName'
+        }
+
+        /// <summary>
+        /// Test the property 'BTextstylestaticBold'
+        /// </summary>
+        [Fact]
+        public void BTextstylestaticBoldTest()
+        {
+            // TODO unit test for the property 'BTextstylestaticBold'
+        }
+
+        /// <summary>
+        /// Test the property 'BTextstylestaticUnderline'
+        /// </summary>
+        [Fact]
+        public void BTextstylestaticUnderlineTest()
+        {
+            // TODO unit test for the property 'BTextstylestaticUnderline'
+        }
+
+        /// <summary>
+        /// Test the property 'BTextstylestaticItalic'
+        /// </summary>
+        [Fact]
+        public void BTextstylestaticItalicTest()
+        {
+            // TODO unit test for the property 'BTextstylestaticItalic'
+        }
+
+        /// <summary>
+        /// Test the property 'BTextstylestaticStrikethrough'
+        /// </summary>
+        [Fact]
+        public void BTextstylestaticStrikethroughTest()
+        {
+            // TODO unit test for the property 'BTextstylestaticStrikethrough'
+        }
+
+        /// <summary>
+        /// Test the property 'ITextstylestaticFontcolor'
+        /// </summary>
+        [Fact]
+        public void ITextstylestaticFontcolorTest()
+        {
+            // TODO unit test for the property 'ITextstylestaticFontcolor'
+        }
+
+        /// <summary>
+        /// Test the property 'ITextstylestaticSize'
+        /// </summary>
+        [Fact]
+        public void ITextstylestaticSizeTest()
+        {
+            // TODO unit test for the property 'ITextstylestaticSize'
+        }
     }
 }

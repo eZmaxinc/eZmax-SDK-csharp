@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldertypeeditobjectv3"></a>
 # **EzsignfoldertypeEditObjectV3**
-> CommonResponse EzsignfoldertypeEditObjectV3 (int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request)
+> EzsignfoldertypeEditObjectV3Response EzsignfoldertypeEditObjectV3 (int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request)
 
 Edit an existing Ezsignfoldertype
 
@@ -141,7 +141,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignfoldertype
-                CommonResponse result = apiInstance.EzsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
+                EzsignfoldertypeEditObjectV3Response result = apiInstance.EzsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignfoldertype
-    ApiResponse<CommonResponse> response = apiInstance.EzsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
+    ApiResponse<EzsignfoldertypeEditObjectV3Response> response = apiInstance.EzsignfoldertypeEditObjectV3WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
 
 ### Authorization
 

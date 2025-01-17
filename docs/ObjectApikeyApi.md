@@ -113,7 +113,7 @@ catch (ApiException e)
 
 <a id="apikeyeditobjectv1"></a>
 # **ApikeyEditObjectV1**
-> CommonResponse ApikeyEditObjectV1 (int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request)
+> ApikeyEditObjectV1Response ApikeyEditObjectV1 (int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request)
 
 Edit an existing Apikey
 
@@ -145,7 +145,7 @@ namespace Example
             try
             {
                 // Edit an existing Apikey
-                CommonResponse result = apiInstance.ApikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
+                ApikeyEditObjectV1Response result = apiInstance.ApikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -166,7 +166,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Apikey
-    ApiResponse<CommonResponse> response = apiInstance.ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
+    ApiResponse<ApikeyEditObjectV1Response> response = apiInstance.ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -188,7 +188,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**ApikeyEditObjectV1Response**](ApikeyEditObjectV1Response.md)
 
 ### Authorization
 

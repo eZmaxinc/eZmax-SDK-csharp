@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-getObject-v1-Response")]
-    public partial class EzsignfoldersignerassociationGetObjectV1Response : CommonResponse, IValidatableObject
+    public partial class EzsignfoldersignerassociationGetObjectV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetObjectV1Response" /> class.
@@ -40,25 +40,43 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetObjectV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsignfoldersignerassociationGetObjectV1Response(EzsignfoldersignerassociationResponseCompound mPayload = default(EzsignfoldersignerassociationResponseCompound), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignfoldersignerassociationGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload = default(EzsignfoldersignerassociationGetObjectV1ResponseMPayload))
         {
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
+            {
+                throw new ArgumentNullException("objDebugPayload is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
+            }
+            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for EzsignfoldersignerassociationGetObjectV1Response and cannot be null");
             }
             this.MPayload = mPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
-        /// Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+        /// Gets or Sets ObjDebugPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}</value>
+        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
+        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebug
+        /// </summary>
+        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
+        public CommonResponseObjDebug ObjDebug { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzsignfoldersignerassociationResponseCompound MPayload { get; set; }
+        public EzsignfoldersignerassociationGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,7 +86,8 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignfoldersignerassociationGetObjectV1Response {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
+            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -78,7 +97,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -90,20 +109,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             yield break;
         }
     }

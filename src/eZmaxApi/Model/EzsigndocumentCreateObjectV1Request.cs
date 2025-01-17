@@ -36,8 +36,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigndocumentCreateObjectV1Request" /> class.
         /// </summary>
         /// <param name="objEzsigndocument">objEzsigndocument.</param>
-        /// <param name="objEzsigndocumentCompound">An Ezsigndocument Object and children to create a complete structure.</param>
-        public EzsigndocumentCreateObjectV1Request(EzsigndocumentRequest objEzsigndocument = default(EzsigndocumentRequest), EzsigndocumentRequest objEzsigndocumentCompound = default(EzsigndocumentRequest))
+        /// <param name="objEzsigndocumentCompound">objEzsigndocumentCompound.</param>
+        public EzsigndocumentCreateObjectV1Request(EzsigndocumentRequest objEzsigndocument = default(EzsigndocumentRequest), EzsigndocumentRequestCompound objEzsigndocumentCompound = default(EzsigndocumentRequestCompound))
         {
             this.ObjEzsigndocument = objEzsigndocument;
             this.ObjEzsigndocumentCompound = objEzsigndocumentCompound;
@@ -50,11 +50,10 @@ namespace eZmaxApi.Model
         public EzsigndocumentRequest ObjEzsigndocument { get; set; }
 
         /// <summary>
-        /// An Ezsigndocument Object and children to create a complete structure
+        /// Gets or Sets ObjEzsigndocumentCompound
         /// </summary>
-        /// <value>An Ezsigndocument Object and children to create a complete structure</value>
         [DataMember(Name = "objEzsigndocumentCompound", EmitDefaultValue = false)]
-        public EzsigndocumentRequest ObjEzsigndocumentCompound { get; set; }
+        public EzsigndocumentRequestCompound ObjEzsigndocumentCompound { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatepackagesignermembership Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatepackagesignermembership-ResponseCompound")]
-    public partial class EzsigntemplatepackagesignermembershipResponseCompound : EzsigntemplatepackagesignermembershipResponse, IValidatableObject
+    public partial class EzsigntemplatepackagesignermembershipResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatepackagesignermembershipResponseCompound" /> class.
@@ -45,9 +45,54 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsigntemplatepackagesignerID">The unique ID of the Ezsigntemplatepackagesigner (required).</param>
         /// <param name="fkiEzsigntemplatesignerID">The unique ID of the Ezsigntemplatesigner (required).</param>
         /// <param name="iEzsigntemplatepackagesignermembershipCopy">The Copy number in case of multiple copies..</param>
-        public EzsigntemplatepackagesignermembershipResponseCompound(int pkiEzsigntemplatepackagesignermembershipID = default(int), int fkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatesignerID = default(int), int iEzsigntemplatepackagesignermembershipCopy = default(int)) : base()
+        public EzsigntemplatepackagesignermembershipResponseCompound(int pkiEzsigntemplatepackagesignermembershipID = default(int), int fkiEzsigntemplatepackagemembershipID = default(int), int fkiEzsigntemplatepackagesignerID = default(int), int fkiEzsigntemplatesignerID = default(int), int iEzsigntemplatepackagesignermembershipCopy = default(int))
         {
+            this.PkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
+            this.FkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
+            this.FkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
+            this.FkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+            this.IEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatepackagesignermembership
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatepackagesignermembership</value>
+        /* <example>237</example>*/
+        [DataMember(Name = "pkiEzsigntemplatepackagesignermembershipID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsigntemplatepackagesignermembershipID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatepackagemembership
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatepackagemembership</value>
+        /* <example>194</example>*/
+        [DataMember(Name = "fkiEzsigntemplatepackagemembershipID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsigntemplatepackagemembershipID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatepackagesigner
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatepackagesigner</value>
+        /* <example>174</example>*/
+        [DataMember(Name = "fkiEzsigntemplatepackagesignerID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsigntemplatepackagesignerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatesigner
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatesigner</value>
+        /* <example>9</example>*/
+        [DataMember(Name = "fkiEzsigntemplatesignerID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsigntemplatesignerID { get; set; }
+
+        /// <summary>
+        /// The Copy number in case of multiple copies.
+        /// </summary>
+        /// <value>The Copy number in case of multiple copies.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iEzsigntemplatepackagesignermembershipCopy", EmitDefaultValue = false)]
+        public int IEzsigntemplatepackagesignermembershipCopy { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,7 +102,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatepackagesignermembershipResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsigntemplatepackagesignermembershipID: ").Append(PkiEzsigntemplatepackagesignermembershipID).Append("\n");
+            sb.Append("  FkiEzsigntemplatepackagemembershipID: ").Append(FkiEzsigntemplatepackagemembershipID).Append("\n");
+            sb.Append("  FkiEzsigntemplatepackagesignerID: ").Append(FkiEzsigntemplatepackagesignerID).Append("\n");
+            sb.Append("  FkiEzsigntemplatesignerID: ").Append(FkiEzsigntemplatesignerID).Append("\n");
+            sb.Append("  IEzsigntemplatepackagesignermembershipCopy: ").Append(IEzsigntemplatepackagesignermembershipCopy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -66,7 +115,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -78,20 +127,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsigntemplatepackagesignermembershipID (int) minimum
+            if (this.PkiEzsigntemplatepackagesignermembershipID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepackagesignermembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagesignermembershipID" });
             }
+
+            // FkiEzsigntemplatepackagemembershipID (int) minimum
+            if (this.FkiEzsigntemplatepackagemembershipID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagemembershipID" });
+            }
+
+            // FkiEzsigntemplatepackagesignerID (int) minimum
+            if (this.FkiEzsigntemplatepackagesignerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackagesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagesignerID" });
+            }
+
+            // FkiEzsigntemplatesignerID (int) minimum
+            if (this.FkiEzsigntemplatesignerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+            }
+
+            // IEzsigntemplatepackagesignermembershipCopy (int) minimum
+            if (this.IEzsigntemplatepackagesignermembershipCopy < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatepackagesignermembershipCopy, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagesignermembershipCopy" });
+            }
+
             yield break;
         }
     }

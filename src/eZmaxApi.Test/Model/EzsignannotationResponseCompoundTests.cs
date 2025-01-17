@@ -56,6 +56,105 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzsignannotationID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsignannotationIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignannotationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignannotationHorizontalalignment'
+        /// </summary>
+        [Fact]
+        public void EEzsignannotationHorizontalalignmentTest()
+        {
+            // TODO unit test for the property 'EEzsignannotationHorizontalalignment'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignannotationVerticalalignment'
+        /// </summary>
+        [Fact]
+        public void EEzsignannotationVerticalalignmentTest()
+        {
+            // TODO unit test for the property 'EEzsignannotationVerticalalignment'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignannotationType'
+        /// </summary>
+        [Fact]
+        public void EEzsignannotationTypeTest()
+        {
+            // TODO unit test for the property 'EEzsignannotationType'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignannotationX'
+        /// </summary>
+        [Fact]
+        public void IEzsignannotationXTest()
+        {
+            // TODO unit test for the property 'IEzsignannotationX'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignannotationY'
+        /// </summary>
+        [Fact]
+        public void IEzsignannotationYTest()
+        {
+            // TODO unit test for the property 'IEzsignannotationY'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignannotationWidth'
+        /// </summary>
+        [Fact]
+        public void IEzsignannotationWidthTest()
+        {
+            // TODO unit test for the property 'IEzsignannotationWidth'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignannotationHeight'
+        /// </summary>
+        [Fact]
+        public void IEzsignannotationHeightTest()
+        {
+            // TODO unit test for the property 'IEzsignannotationHeight'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignannotationText'
+        /// </summary>
+        [Fact]
+        public void SEzsignannotationTextTest()
+        {
+            // TODO unit test for the property 'SEzsignannotationText'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignpagePagenumber'
+        /// </summary>
+        [Fact]
+        public void IEzsignpagePagenumberTest()
+        {
+            // TODO unit test for the property 'IEzsignpagePagenumber'
+        }
+
+        /// <summary>
         /// Test the property 'ObjTextstylestatic'
         /// </summary>
         [Fact]

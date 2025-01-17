@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Signature Object
     /// </summary>
     [DataContract(Name = "signature-ResponseCompoundV3")]
-    public partial class SignatureResponseCompoundV3 : SignatureResponseV3, IValidatableObject
+    public partial class SignatureResponseCompoundV3 : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets ESignaturePreference
+        /// </summary>
+        [DataMember(Name = "eSignaturePreference", IsRequired = true, EmitDefaultValue = true)]
+        public FieldESignaturePreference ESignaturePreference { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureResponseCompoundV3" /> class.
         /// </summary>
@@ -45,9 +51,46 @@ namespace eZmaxApi.Model
         /// <param name="eSignaturePreference">eSignaturePreference (required).</param>
         /// <param name="bSignatureSvg">Whether the signature has a SVG or not (required).</param>
         /// <param name="bSignatureSvginitials">Whether the initials has a SVG or not (required).</param>
-        public SignatureResponseCompoundV3(int pkiSignatureID = default(int), int fkiFontID = default(int), FieldESignaturePreference eSignaturePreference = default(FieldESignaturePreference), bool bSignatureSvg = default(bool), bool bSignatureSvginitials = default(bool)) : base()
+        public SignatureResponseCompoundV3(int pkiSignatureID = default(int), int fkiFontID = default(int), FieldESignaturePreference eSignaturePreference = default(FieldESignaturePreference), bool bSignatureSvg = default(bool), bool bSignatureSvginitials = default(bool))
         {
+            this.PkiSignatureID = pkiSignatureID;
+            this.FkiFontID = fkiFontID;
+            this.ESignaturePreference = eSignaturePreference;
+            this.BSignatureSvg = bSignatureSvg;
+            this.BSignatureSvginitials = bSignatureSvginitials;
         }
+
+        /// <summary>
+        /// The unique ID of the Signature
+        /// </summary>
+        /// <value>The unique ID of the Signature</value>
+        /* <example>12</example>*/
+        [DataMember(Name = "pkiSignatureID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiSignatureID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Font
+        /// </summary>
+        /// <value>The unique ID of the Font</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiFontID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiFontID { get; set; }
+
+        /// <summary>
+        /// Whether the signature has a SVG or not
+        /// </summary>
+        /// <value>Whether the signature has a SVG or not</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bSignatureSvg", IsRequired = true, EmitDefaultValue = true)]
+        public bool BSignatureSvg { get; set; }
+
+        /// <summary>
+        /// Whether the initials has a SVG or not
+        /// </summary>
+        /// <value>Whether the initials has a SVG or not</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bSignatureSvginitials", IsRequired = true, EmitDefaultValue = true)]
+        public bool BSignatureSvginitials { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,7 +100,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class SignatureResponseCompoundV3 {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiSignatureID: ").Append(PkiSignatureID).Append("\n");
+            sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
+            sb.Append("  ESignaturePreference: ").Append(ESignaturePreference).Append("\n");
+            sb.Append("  BSignatureSvg: ").Append(BSignatureSvg).Append("\n");
+            sb.Append("  BSignatureSvginitials: ").Append(BSignatureSvginitials).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -66,7 +113,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -78,20 +125,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiSignatureID (int) maximum
+            if (this.PkiSignatureID > (int)16777215)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiSignatureID, must be a value less than or equal to 16777215.", new [] { "PkiSignatureID" });
             }
+
+            // PkiSignatureID (int) minimum
+            if (this.PkiSignatureID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiSignatureID, must be a value greater than or equal to 0.", new [] { "PkiSignatureID" });
+            }
+
+            // FkiFontID (int) minimum
+            if (this.FkiFontID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+            }
+
             yield break;
         }
     }

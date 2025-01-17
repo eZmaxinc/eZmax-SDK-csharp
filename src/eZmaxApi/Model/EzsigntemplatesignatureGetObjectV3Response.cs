@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
     /// </summary>
     [DataContract(Name = "ezsigntemplatesignature-getObject-v3-Response")]
-    public partial class EzsigntemplatesignatureGetObjectV3Response : CommonResponse, IValidatableObject
+    public partial class EzsigntemplatesignatureGetObjectV3Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureGetObjectV3Response" /> class.
@@ -40,18 +40,37 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatesignatureGetObjectV3Response" /> class.
         /// </summary>
-        /// <param name="mPayload">mPayload (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzsigntemplatesignatureGetObjectV3Response(EzsigntemplatesignatureGetObjectV3ResponseMPayload mPayload = default(EzsigntemplatesignatureGetObjectV3ResponseMPayload), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsigntemplatesignatureGetObjectV3Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsigntemplatesignatureGetObjectV3ResponseMPayload mPayload = default(EzsigntemplatesignatureGetObjectV3ResponseMPayload))
         {
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
+            {
+                throw new ArgumentNullException("objDebugPayload is a required property for EzsigntemplatesignatureGetObjectV3Response and cannot be null");
+            }
+            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for EzsigntemplatesignatureGetObjectV3Response and cannot be null");
             }
             this.MPayload = mPayload;
+            this.ObjDebug = objDebug;
         }
+
+        /// <summary>
+        /// Gets or Sets ObjDebugPayload
+        /// </summary>
+        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
+        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebug
+        /// </summary>
+        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
+        public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
         /// Gets or Sets MPayload
@@ -67,7 +86,8 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatesignatureGetObjectV3Response {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
+            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -77,7 +97,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -89,20 +109,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             yield break;
         }
     }

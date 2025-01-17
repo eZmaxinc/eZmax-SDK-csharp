@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroupexternal Object
     /// </summary>
     [DataContract(Name = "usergroupexternal-ResponseCompound")]
-    public partial class UsergroupexternalResponseCompound : UsergroupexternalResponse, IValidatableObject
+    public partial class UsergroupexternalResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupexternalResponseCompound" /> class.
@@ -43,9 +43,46 @@ namespace eZmaxApi.Model
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal (required).</param>
         /// <param name="sUsergroupexternalName">The name of the Usergroupexternal (required).</param>
         /// <param name="sUsergroupexternalID">The id of the Usergroupexternal (required).</param>
-        public UsergroupexternalResponseCompound(int pkiUsergroupexternalID = default(int), string sUsergroupexternalName = default(string), string sUsergroupexternalID = default(string)) : base()
+        public UsergroupexternalResponseCompound(int pkiUsergroupexternalID = default(int), string sUsergroupexternalName = default(string), string sUsergroupexternalID = default(string))
         {
+            this.PkiUsergroupexternalID = pkiUsergroupexternalID;
+            // to ensure "sUsergroupexternalName" is required (not null)
+            if (sUsergroupexternalName == null)
+            {
+                throw new ArgumentNullException("sUsergroupexternalName is a required property for UsergroupexternalResponseCompound and cannot be null");
+            }
+            this.SUsergroupexternalName = sUsergroupexternalName;
+            // to ensure "sUsergroupexternalID" is required (not null)
+            if (sUsergroupexternalID == null)
+            {
+                throw new ArgumentNullException("sUsergroupexternalID is a required property for UsergroupexternalResponseCompound and cannot be null");
+            }
+            this.SUsergroupexternalID = sUsergroupexternalID;
         }
+
+        /// <summary>
+        /// The unique ID of the Usergroupexternal
+        /// </summary>
+        /// <value>The unique ID of the Usergroupexternal</value>
+        /* <example>16</example>*/
+        [DataMember(Name = "pkiUsergroupexternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiUsergroupexternalID { get; set; }
+
+        /// <summary>
+        /// The name of the Usergroupexternal
+        /// </summary>
+        /// <value>The name of the Usergroupexternal</value>
+        /* <example>Administrators</example>*/
+        [DataMember(Name = "sUsergroupexternalName", IsRequired = true, EmitDefaultValue = true)]
+        public string SUsergroupexternalName { get; set; }
+
+        /// <summary>
+        /// The id of the Usergroupexternal
+        /// </summary>
+        /// <value>The id of the Usergroupexternal</value>
+        /* <example>5140-1542</example>*/
+        [DataMember(Name = "sUsergroupexternalID", IsRequired = true, EmitDefaultValue = true)]
+        public string SUsergroupexternalID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +92,9 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupexternalResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiUsergroupexternalID: ").Append(PkiUsergroupexternalID).Append("\n");
+            sb.Append("  SUsergroupexternalName: ").Append(SUsergroupexternalName).Append("\n");
+            sb.Append("  SUsergroupexternalID: ").Append(SUsergroupexternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,7 +103,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -76,20 +115,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiUsergroupexternalID (int) maximum
+            if (this.PkiUsergroupexternalID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value less than or equal to 255.", new [] { "PkiUsergroupexternalID" });
             }
+
+            // PkiUsergroupexternalID (int) minimum
+            if (this.PkiUsergroupexternalID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiUsergroupexternalID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupexternalID" });
+            }
+
+            if (this.SUsergroupexternalName != null) {
+                // SUsergroupexternalName (string) pattern
+                Regex regexSUsergroupexternalName = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupexternalName.Match(this.SUsergroupexternalName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupexternalName, must match a pattern of " + regexSUsergroupexternalName, new [] { "SUsergroupexternalName" });
+                }
+            }
+
+            if (this.SUsergroupexternalID != null) {
+                // SUsergroupexternalID (string) pattern
+                Regex regexSUsergroupexternalID = new Regex(@"^.{0,64}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupexternalID.Match(this.SUsergroupexternalID).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupexternalID, must match a pattern of " + regexSUsergroupexternalID, new [] { "SUsergroupexternalID" });
+                }
+            }
+
             yield break;
         }
     }

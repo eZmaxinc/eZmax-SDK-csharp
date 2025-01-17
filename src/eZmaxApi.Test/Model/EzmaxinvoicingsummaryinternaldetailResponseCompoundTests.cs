@@ -54,5 +54,113 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzmaxinvoicingsummaryinternaldetailResponseCompound
             //Assert.IsType<EzmaxinvoicingsummaryinternaldetailResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzmaxinvoicingsummaryinternaldetailID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicingsummaryinternaldetailIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicingsummaryinternaldetailID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingsummaryinternalID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingsummaryinternalIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingsummaryinternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxproductID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxproductIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxproductID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzmaxproductDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SEzmaxproductDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzmaxproductDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBillingentityexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiBillingentityexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiBillingentityexternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'SBillingentityexternalDescription'
+        /// </summary>
+        [Fact]
+        public void SBillingentityexternalDescriptionTest()
+        {
+            // TODO unit test for the property 'SBillingentityexternalDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryinternaldetailCountreal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryinternaldetailCountrealTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryinternaldetailCountreal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryinternaldetailSubtotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryinternaldetailSubtotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryinternaldetailSubtotal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryinternaldetailRebate'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryinternaldetailRebateTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryinternaldetailRebate'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryinternaldetailTotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryinternaldetailTotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryinternaldetailTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzmaxinvoicingsummaryinternaldetailAdjustment'
+        /// </summary>
+        [Fact]
+        public void BEzmaxinvoicingsummaryinternaldetailAdjustmentTest()
+        {
+            // TODO unit test for the property 'BEzmaxinvoicingsummaryinternaldetailAdjustment'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzmaxproductHelpX'
+        /// </summary>
+        [Fact]
+        public void TEzmaxproductHelpXTest()
+        {
+            // TODO unit test for the property 'TEzmaxproductHelpX'
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignuser Object
     /// </summary>
     [DataContract(Name = "ezsignuser-ResponseCompound")]
-    public partial class EzsignuserResponseCompound : EzsignuserResponse, IValidatableObject
+    public partial class EzsignuserResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignuserResponseCompound" /> class.
@@ -44,9 +44,51 @@ namespace eZmaxApi.Model
         /// <param name="fkiContactID">The unique ID of the Contact (required).</param>
         /// <param name="objContact">objContact (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public EzsignuserResponseCompound(int pkiEzsignuserID = default(int), int fkiContactID = default(int), ContactResponseCompound objContact = default(ContactResponseCompound), CommonAudit objAudit = default(CommonAudit)) : base()
+        public EzsignuserResponseCompound(int pkiEzsignuserID = default(int), int fkiContactID = default(int), ContactResponseCompound objContact = default(ContactResponseCompound), CommonAudit objAudit = default(CommonAudit))
         {
+            this.PkiEzsignuserID = pkiEzsignuserID;
+            this.FkiContactID = fkiContactID;
+            // to ensure "objContact" is required (not null)
+            if (objContact == null)
+            {
+                throw new ArgumentNullException("objContact is a required property for EzsignuserResponseCompound and cannot be null");
+            }
+            this.ObjContact = objContact;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for EzsignuserResponseCompound and cannot be null");
+            }
+            this.ObjAudit = objAudit;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignuser
+        /// </summary>
+        /// <value>The unique ID of the Ezsignuser</value>
+        /* <example>94</example>*/
+        [DataMember(Name = "pkiEzsignuserID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsignuserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Contact
+        /// </summary>
+        /// <value>The unique ID of the Contact</value>
+        /* <example>21</example>*/
+        [DataMember(Name = "fkiContactID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiContactID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjContact
+        /// </summary>
+        [DataMember(Name = "objContact", IsRequired = true, EmitDefaultValue = true)]
+        public ContactResponseCompound ObjContact { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,7 +98,10 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignuserResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignuserID: ").Append(PkiEzsignuserID).Append("\n");
+            sb.Append("  FkiContactID: ").Append(FkiContactID).Append("\n");
+            sb.Append("  ObjContact: ").Append(ObjContact).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +110,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -77,20 +122,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignuserID (int) maximum
+            if (this.PkiEzsignuserID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value less than or equal to 65535.", new [] { "PkiEzsignuserID" });
             }
+
+            // PkiEzsignuserID (int) minimum
+            if (this.PkiEzsignuserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiEzsignuserID, must be a value greater than or equal to 0.", new [] { "PkiEzsignuserID" });
+            }
+
+            // FkiContactID (int) minimum
+            if (this.FkiContactID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiContactID, must be a value greater than or equal to 0.", new [] { "FkiContactID" });
+            }
+
             yield break;
         }
     }

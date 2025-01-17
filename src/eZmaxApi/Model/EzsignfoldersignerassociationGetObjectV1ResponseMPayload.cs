@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-getObject-v1-Response-mPayload")]
-    public partial class EzsignfoldersignerassociationGetObjectV1ResponseMPayload : EzsignfoldersignerassociationResponseCompound, IValidatableObject
+    public partial class EzsignfoldersignerassociationGetObjectV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationGetObjectV1ResponseMPayload" /> class.
@@ -49,9 +49,95 @@ namespace eZmaxApi.Model
         /// <param name="objEzsignsignergroup">objEzsignsignergroup.</param>
         /// <param name="objUser">objUser.</param>
         /// <param name="objEzsignsigner">objEzsignsigner.</param>
-        public EzsignfoldersignerassociationGetObjectV1ResponseMPayload(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), bool bEzsignfoldersignerassociationAllowsigninginperson = default(bool), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound)) : base()
+        public EzsignfoldersignerassociationGetObjectV1ResponseMPayload(int pkiEzsignfoldersignerassociationID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationDelayedsend = default(bool), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), bool bEzsignfoldersignerassociationAllowsigninginperson = default(bool), EzsignsignergroupResponseCompound objEzsignsignergroup = default(EzsignsignergroupResponseCompound), EzsignfoldersignerassociationResponseCompoundUser objUser = default(EzsignfoldersignerassociationResponseCompoundUser), EzsignsignerResponseCompound objEzsignsigner = default(EzsignsignerResponseCompound))
         {
+            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            this.BEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
+            this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
+            // to ensure "tEzsignfoldersignerassociationMessage" is required (not null)
+            if (tEzsignfoldersignerassociationMessage == null)
+            {
+                throw new ArgumentNullException("tEzsignfoldersignerassociationMessage is a required property for EzsignfoldersignerassociationGetObjectV1ResponseMPayload and cannot be null");
+            }
+            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+            this.BEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+            this.ObjEzsignsignergroup = objEzsignsignergroup;
+            this.ObjUser = objUser;
+            this.ObjEzsignsigner = objEzsignsigner;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldersignerassociation
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
+        /* <example>20</example>*/
+        [DataMember(Name = "pkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsignfoldersignerassociationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        /* <example>33</example>*/
+        [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// If this flag is true the signatory is part of a delayed send.
+        /// </summary>
+        /// <value>If this flag is true the signatory is part of a delayed send.</value>
+        [DataMember(Name = "bEzsignfoldersignerassociationDelayedsend", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignfoldersignerassociationDelayedsend { get; set; }
+
+        /// <summary>
+        /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
+        /// </summary>
+        /// <value>If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.</value>
+        [DataMember(Name = "bEzsignfoldersignerassociationReceivecopy", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignfoldersignerassociationReceivecopy { get; set; }
+
+        /// <summary>
+        /// A custom text message that will be added to the email sent.
+        /// </summary>
+        /// <value>A custom text message that will be added to the email sent.</value>
+        /* <example>Hi John,
+
+This is the document I need you to review.
+
+Could you sign it before Monday please.
+
+Best Regards.
+
+Mary</example>*/
+        [DataMember(Name = "tEzsignfoldersignerassociationMessage", IsRequired = true, EmitDefaultValue = true)]
+        public string TEzsignfoldersignerassociationMessage { get; set; }
+
+        /// <summary>
+        /// If the Ezsignfoldersignerassociation is allowed to sign in person or not
+        /// </summary>
+        /// <value>If the Ezsignfoldersignerassociation is allowed to sign in person or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignfoldersignerassociationAllowsigninginperson", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignfoldersignerassociationAllowsigninginperson { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzsignsignergroup
+        /// </summary>
+        [DataMember(Name = "objEzsignsignergroup", EmitDefaultValue = false)]
+        public EzsignsignergroupResponseCompound ObjEzsignsignergroup { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUser
+        /// </summary>
+        [DataMember(Name = "objUser", EmitDefaultValue = false)]
+        public EzsignfoldersignerassociationResponseCompoundUser ObjUser { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzsignsigner
+        /// </summary>
+        [DataMember(Name = "objEzsignsigner", EmitDefaultValue = false)]
+        public EzsignsignerResponseCompound ObjEzsignsigner { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,7 +147,15 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignfoldersignerassociationID: ").Append(PkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  BEzsignfoldersignerassociationDelayedsend: ").Append(BEzsignfoldersignerassociationDelayedsend).Append("\n");
+            sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
+            sb.Append("  TEzsignfoldersignerassociationMessage: ").Append(TEzsignfoldersignerassociationMessage).Append("\n");
+            sb.Append("  BEzsignfoldersignerassociationAllowsigninginperson: ").Append(BEzsignfoldersignerassociationAllowsigninginperson).Append("\n");
+            sb.Append("  ObjEzsignsignergroup: ").Append(ObjEzsignsignergroup).Append("\n");
+            sb.Append("  ObjUser: ").Append(ObjUser).Append("\n");
+            sb.Append("  ObjEzsignsigner: ").Append(ObjEzsignsigner).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -70,7 +164,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -82,20 +176,18 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignfoldersignerassociationID (int) minimum
+            if (this.PkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
             }
+
+            // FkiEzsignfolderID (int) minimum
+            if (this.FkiEzsignfolderID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
             yield break;
         }
     }

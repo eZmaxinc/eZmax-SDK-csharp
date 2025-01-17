@@ -56,6 +56,60 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiDomainID'
+        /// </summary>
+        [Fact]
+        public void PkiDomainIDTest()
+        {
+            // TODO unit test for the property 'PkiDomainID'
+        }
+
+        /// <summary>
+        /// Test the property 'SDomainName'
+        /// </summary>
+        [Fact]
+        public void SDomainNameTest()
+        {
+            // TODO unit test for the property 'SDomainName'
+        }
+
+        /// <summary>
+        /// Test the property 'BDomainValiddkim'
+        /// </summary>
+        [Fact]
+        public void BDomainValiddkimTest()
+        {
+            // TODO unit test for the property 'BDomainValiddkim'
+        }
+
+        /// <summary>
+        /// Test the property 'BDomainValidmailfrom'
+        /// </summary>
+        [Fact]
+        public void BDomainValidmailfromTest()
+        {
+            // TODO unit test for the property 'BDomainValidmailfrom'
+        }
+
+        /// <summary>
+        /// Test the property 'BDomainValidcustomer'
+        /// </summary>
+        [Fact]
+        public void BDomainValidcustomerTest()
+        {
+            // TODO unit test for the property 'BDomainValidcustomer'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Fact]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
+
+        /// <summary>
         /// Test the property 'AObjDnsrecord'
         /// </summary>
         [Fact]

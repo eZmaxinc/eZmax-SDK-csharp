@@ -30,8 +30,32 @@ namespace eZmaxApi.Model
     /// A Custom Attachment Object
     /// </summary>
     [DataContract(Name = "Custom-Attachment-Response")]
-    public partial class CustomAttachmentResponse : AttachmentResponse, IValidatableObject
+    public partial class CustomAttachmentResponse : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EAttachmentDocumenttype
+        /// </summary>
+        [DataMember(Name = "eAttachmentDocumenttype", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAttachmentDocumenttype EAttachmentDocumenttype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EAttachmentPrivacy
+        /// </summary>
+        [DataMember(Name = "eAttachmentPrivacy", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAttachmentPrivacy EAttachmentPrivacy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EAttachmentType
+        /// </summary>
+        [DataMember(Name = "eAttachmentType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAttachmentType EAttachmentType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EAttachmentVerified
+        /// </summary>
+        [DataMember(Name = "eAttachmentVerified", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAttachmentVerified EAttachmentVerified { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentResponse" /> class.
         /// </summary>
@@ -40,10 +64,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomAttachmentResponse" /> class.
         /// </summary>
-        /// <param name="objAttachmentProof">objAttachmentProof.</param>
-        /// <param name="objAttachmentProofdocument">objAttachmentProofdocument.</param>
-        /// <param name="aObjAttachmentAttachment">aObjAttachmentAttachment.</param>
-        /// <param name="aObjAttachmentVersion">aObjAttachmentVersion.</param>
         /// <param name="pkiAttachmentID">The unique ID of the Attachment. (required).</param>
         /// <param name="fkiComputerID">The unique ID of the Computer.</param>
         /// <param name="fkiAdjustmentID">The unique ID of the Adjustment.</param>
@@ -105,13 +125,542 @@ namespace eZmaxApi.Model
         /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
         /// <param name="fkiUserIDOwner">The unique ID of the User.</param>
         /// <param name="objAudit">objAudit.</param>
-        public CustomAttachmentResponse(AttachmentResponseCompound objAttachmentProof = default(AttachmentResponseCompound), AttachmentResponseCompound objAttachmentProofdocument = default(AttachmentResponseCompound), List<AttachmentResponseCompound> aObjAttachmentAttachment = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound> aObjAttachmentVersion = default(List<AttachmentResponseCompound>), int pkiAttachmentID = default(int), int fkiComputerID = default(int), int fkiAdjustmentID = default(int), int fkiAgentID = default(int), int fkiBankaccountID = default(int), int fkiBrokerID = default(int), int fkiCommissionadvanceID = default(int), int fkiCommunicationID = default(int), int fkiCustomerID = default(int), int fkiCustomertemplateID = default(int), int fkiDepositID = default(int), int fkiDeposittransitchequeID = default(int), int fkiElectronicfundstransferID = default(int), int fkiEmployeeID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomadvanceserverID = default(int), int fkiEzcomcompanyID = default(int), int fkiEzsigndocumentID = default(int), int fkiGhacqcontractID = default(int), int fkiInscriptionID = default(int), int fkiInscriptiontempID = default(int), int fkiInscriptionnotauthenticatedID = default(int), int fkiInvoiceID = default(int), int fkiBuyercontractID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchiseagenceID = default(int), int fkiFranchiseofficeID = default(int), int fkiFranchisefranchiseID = default(int), int fkiFranchisecomplaintID = default(int), int fkiLeadID = default(int), int fkiMarketingprogramID = default(int), int fkiMarketingfollowID = default(int), int fkiNotaryID = default(int), int fkiOfficetaxreportID = default(int), int fkiOtherincomeID = default(int), int fkiPaymentpreparationID = default(int), int fkiPurchaseID = default(int), int fkiSalaryID = default(int), int fkiSupplierID = default(int), int fkiTranqcontractID = default(int), int fkiTemplateID = default(int), int fkiInscriptionchecklistID = default(int), int fkiFolderID = default(int), int fkiRejectedoffertopurchaseID = default(int), int fkiDisclosureID = default(int), int fkiReconciliationID = default(int), int fkiEzsigndocumentIDReference = default(int), FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), string sAttachmentName = default(string), FieldEAttachmentPrivacy eAttachmentPrivacy = default(FieldEAttachmentPrivacy), int fkiUserIDSpecific = default(int), FieldEAttachmentType eAttachmentType = default(FieldEAttachmentType), int iAttachmentSize = default(int), int iAttachmentEDMmoduleflag = default(int), string sAttachmentMD5 = default(string), bool bAttachmentDeleted = default(bool), bool bAttachmentValid = default(bool), FieldEAttachmentVerified eAttachmentVerified = default(FieldEAttachmentVerified), string tAttachmentRejectioncomment = default(string), int fkiUserIDOwner = default(int), CommonAudit objAudit = default(CommonAudit)) : base()
+        /// <param name="objAttachmentProof">objAttachmentProof.</param>
+        /// <param name="objAttachmentProofdocument">objAttachmentProofdocument.</param>
+        /// <param name="aObjAttachmentAttachment">aObjAttachmentAttachment.</param>
+        /// <param name="aObjAttachmentVersion">aObjAttachmentVersion.</param>
+        public CustomAttachmentResponse(int pkiAttachmentID = default(int), int fkiComputerID = default(int), int fkiAdjustmentID = default(int), int fkiAgentID = default(int), int fkiBankaccountID = default(int), int fkiBrokerID = default(int), int fkiCommissionadvanceID = default(int), int fkiCommunicationID = default(int), int fkiCustomerID = default(int), int fkiCustomertemplateID = default(int), int fkiDepositID = default(int), int fkiDeposittransitchequeID = default(int), int fkiElectronicfundstransferID = default(int), int fkiEmployeeID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomadvanceserverID = default(int), int fkiEzcomcompanyID = default(int), int fkiEzsigndocumentID = default(int), int fkiGhacqcontractID = default(int), int fkiInscriptionID = default(int), int fkiInscriptiontempID = default(int), int fkiInscriptionnotauthenticatedID = default(int), int fkiInvoiceID = default(int), int fkiBuyercontractID = default(int), int fkiFranchisebrokerID = default(int), int fkiFranchiseagenceID = default(int), int fkiFranchiseofficeID = default(int), int fkiFranchisefranchiseID = default(int), int fkiFranchisecomplaintID = default(int), int fkiLeadID = default(int), int fkiMarketingprogramID = default(int), int fkiMarketingfollowID = default(int), int fkiNotaryID = default(int), int fkiOfficetaxreportID = default(int), int fkiOtherincomeID = default(int), int fkiPaymentpreparationID = default(int), int fkiPurchaseID = default(int), int fkiSalaryID = default(int), int fkiSupplierID = default(int), int fkiTranqcontractID = default(int), int fkiTemplateID = default(int), int fkiInscriptionchecklistID = default(int), int fkiFolderID = default(int), int fkiRejectedoffertopurchaseID = default(int), int fkiDisclosureID = default(int), int fkiReconciliationID = default(int), int fkiEzsigndocumentIDReference = default(int), FieldEAttachmentDocumenttype eAttachmentDocumenttype = default(FieldEAttachmentDocumenttype), string sAttachmentName = default(string), FieldEAttachmentPrivacy eAttachmentPrivacy = default(FieldEAttachmentPrivacy), int fkiUserIDSpecific = default(int), FieldEAttachmentType eAttachmentType = default(FieldEAttachmentType), int iAttachmentSize = default(int), int iAttachmentEDMmoduleflag = default(int), string sAttachmentMD5 = default(string), bool bAttachmentDeleted = default(bool), bool bAttachmentValid = default(bool), FieldEAttachmentVerified eAttachmentVerified = default(FieldEAttachmentVerified), string tAttachmentRejectioncomment = default(string), int fkiUserIDOwner = default(int), CommonAudit objAudit = default(CommonAudit), AttachmentResponseCompound objAttachmentProof = default(AttachmentResponseCompound), AttachmentResponseCompound objAttachmentProofdocument = default(AttachmentResponseCompound), List<AttachmentResponseCompound> aObjAttachmentAttachment = default(List<AttachmentResponseCompound>), List<AttachmentResponseCompound> aObjAttachmentVersion = default(List<AttachmentResponseCompound>))
         {
+            this.PkiAttachmentID = pkiAttachmentID;
+            this.EAttachmentDocumenttype = eAttachmentDocumenttype;
+            // to ensure "sAttachmentName" is required (not null)
+            if (sAttachmentName == null)
+            {
+                throw new ArgumentNullException("sAttachmentName is a required property for CustomAttachmentResponse and cannot be null");
+            }
+            this.SAttachmentName = sAttachmentName;
+            this.EAttachmentPrivacy = eAttachmentPrivacy;
+            this.EAttachmentType = eAttachmentType;
+            this.IAttachmentSize = iAttachmentSize;
+            // to ensure "sAttachmentMD5" is required (not null)
+            if (sAttachmentMD5 == null)
+            {
+                throw new ArgumentNullException("sAttachmentMD5 is a required property for CustomAttachmentResponse and cannot be null");
+            }
+            this.SAttachmentMD5 = sAttachmentMD5;
+            this.BAttachmentDeleted = bAttachmentDeleted;
+            this.BAttachmentValid = bAttachmentValid;
+            this.EAttachmentVerified = eAttachmentVerified;
+            this.FkiComputerID = fkiComputerID;
+            this.FkiAdjustmentID = fkiAdjustmentID;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBankaccountID = fkiBankaccountID;
+            this.FkiBrokerID = fkiBrokerID;
+            this.FkiCommissionadvanceID = fkiCommissionadvanceID;
+            this.FkiCommunicationID = fkiCommunicationID;
+            this.FkiCustomerID = fkiCustomerID;
+            this.FkiCustomertemplateID = fkiCustomertemplateID;
+            this.FkiDepositID = fkiDepositID;
+            this.FkiDeposittransitchequeID = fkiDeposittransitchequeID;
+            this.FkiElectronicfundstransferID = fkiElectronicfundstransferID;
+            this.FkiEmployeeID = fkiEmployeeID;
+            this.FkiExternalbrokerID = fkiExternalbrokerID;
+            this.FkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
+            this.FkiEzcomcompanyID = fkiEzcomcompanyID;
+            this.FkiEzsigndocumentID = fkiEzsigndocumentID;
+            this.FkiGhacqcontractID = fkiGhacqcontractID;
+            this.FkiInscriptionID = fkiInscriptionID;
+            this.FkiInscriptiontempID = fkiInscriptiontempID;
+            this.FkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+            this.FkiInvoiceID = fkiInvoiceID;
+            this.FkiBuyercontractID = fkiBuyercontractID;
+            this.FkiFranchisebrokerID = fkiFranchisebrokerID;
+            this.FkiFranchiseagenceID = fkiFranchiseagenceID;
+            this.FkiFranchiseofficeID = fkiFranchiseofficeID;
+            this.FkiFranchisefranchiseID = fkiFranchisefranchiseID;
+            this.FkiFranchisecomplaintID = fkiFranchisecomplaintID;
+            this.FkiLeadID = fkiLeadID;
+            this.FkiMarketingprogramID = fkiMarketingprogramID;
+            this.FkiMarketingfollowID = fkiMarketingfollowID;
+            this.FkiNotaryID = fkiNotaryID;
+            this.FkiOfficetaxreportID = fkiOfficetaxreportID;
+            this.FkiOtherincomeID = fkiOtherincomeID;
+            this.FkiPaymentpreparationID = fkiPaymentpreparationID;
+            this.FkiPurchaseID = fkiPurchaseID;
+            this.FkiSalaryID = fkiSalaryID;
+            this.FkiSupplierID = fkiSupplierID;
+            this.FkiTranqcontractID = fkiTranqcontractID;
+            this.FkiTemplateID = fkiTemplateID;
+            this.FkiInscriptionchecklistID = fkiInscriptionchecklistID;
+            this.FkiFolderID = fkiFolderID;
+            this.FkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
+            this.FkiDisclosureID = fkiDisclosureID;
+            this.FkiReconciliationID = fkiReconciliationID;
+            this.FkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
+            this.FkiUserIDSpecific = fkiUserIDSpecific;
+            this.IAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
+            this.TAttachmentRejectioncomment = tAttachmentRejectioncomment;
+            this.FkiUserIDOwner = fkiUserIDOwner;
+            this.ObjAudit = objAudit;
             this.ObjAttachmentProof = objAttachmentProof;
             this.ObjAttachmentProofdocument = objAttachmentProofdocument;
             this.AObjAttachmentAttachment = aObjAttachmentAttachment;
             this.AObjAttachmentVersion = aObjAttachmentVersion;
         }
+
+        /// <summary>
+        /// The unique ID of the Attachment.
+        /// </summary>
+        /// <value>The unique ID of the Attachment.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "pkiAttachmentID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiAttachmentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Computer
+        /// </summary>
+        /// <value>The unique ID of the Computer</value>
+        /* <example>249</example>*/
+        [DataMember(Name = "fkiComputerID", EmitDefaultValue = false)]
+        public int FkiComputerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Adjustment
+        /// </summary>
+        /// <value>The unique ID of the Adjustment</value>
+        /* <example>202</example>*/
+        [DataMember(Name = "fkiAdjustmentID", EmitDefaultValue = false)]
+        public int FkiAdjustmentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Agent.
+        /// </summary>
+        /// <value>The unique ID of the Agent.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
+        public int FkiAgentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Bankaccount
+        /// </summary>
+        /// <value>The unique ID of the Bankaccount</value>
+        /* <example>46</example>*/
+        [DataMember(Name = "fkiBankaccountID", EmitDefaultValue = false)]
+        public int FkiBankaccountID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Broker.
+        /// </summary>
+        /// <value>The unique ID of the Broker.</value>
+        /* <example>26</example>*/
+        [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
+        public int FkiBrokerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Commissionadvance
+        /// </summary>
+        /// <value>The unique ID of the Commissionadvance</value>
+        /* <example>115</example>*/
+        [DataMember(Name = "fkiCommissionadvanceID", EmitDefaultValue = false)]
+        public int FkiCommissionadvanceID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Communication.
+        /// </summary>
+        /// <value>The unique ID of the Communication.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiCommunicationID", EmitDefaultValue = false)]
+        public int FkiCommunicationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Customer.
+        /// </summary>
+        /// <value>The unique ID of the Customer.</value>
+        /* <example>18</example>*/
+        [DataMember(Name = "fkiCustomerID", EmitDefaultValue = false)]
+        public int FkiCustomerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Customertemplate
+        /// </summary>
+        /// <value>The unique ID of the Customertemplate</value>
+        /* <example>152</example>*/
+        [DataMember(Name = "fkiCustomertemplateID", EmitDefaultValue = false)]
+        public int FkiCustomertemplateID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Deposit
+        /// </summary>
+        /// <value>The unique ID of the Deposit</value>
+        /* <example>54</example>*/
+        [DataMember(Name = "fkiDepositID", EmitDefaultValue = false)]
+        public int FkiDepositID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Deposittransitcheque
+        /// </summary>
+        /// <value>The unique ID of the Deposittransitcheque</value>
+        /* <example>251</example>*/
+        [DataMember(Name = "fkiDeposittransitchequeID", EmitDefaultValue = false)]
+        public int FkiDeposittransitchequeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Electronicfundstransfer
+        /// </summary>
+        /// <value>The unique ID of the Electronicfundstransfer</value>
+        /* <example>1262</example>*/
+        [DataMember(Name = "fkiElectronicfundstransferID", EmitDefaultValue = false)]
+        public int FkiElectronicfundstransferID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Employee.
+        /// </summary>
+        /// <value>The unique ID of the Employee.</value>
+        /* <example>31</example>*/
+        [DataMember(Name = "fkiEmployeeID", EmitDefaultValue = false)]
+        public int FkiEmployeeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Externalbroker.
+        /// </summary>
+        /// <value>The unique ID of the Externalbroker.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiExternalbrokerID", EmitDefaultValue = false)]
+        public int FkiExternalbrokerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezcomadvanceserver
+        /// </summary>
+        /// <value>The unique ID of the Ezcomadvanceserver</value>
+        /* <example>238</example>*/
+        [DataMember(Name = "fkiEzcomadvanceserverID", EmitDefaultValue = false)]
+        public int FkiEzcomadvanceserverID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezcomcompany
+        /// </summary>
+        /// <value>The unique ID of the Ezcomcompany</value>
+        /* <example>170</example>*/
+        [DataMember(Name = "fkiEzcomcompanyID", EmitDefaultValue = false)]
+        public int FkiEzcomcompanyID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigndocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsigndocument</value>
+        /* <example>97</example>*/
+        [DataMember(Name = "fkiEzsigndocumentID", EmitDefaultValue = false)]
+        public int FkiEzsigndocumentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ghacqcontract
+        /// </summary>
+        /// <value>The unique ID of the Ghacqcontract</value>
+        /* <example>217</example>*/
+        [DataMember(Name = "fkiGhacqcontractID", EmitDefaultValue = false)]
+        public int FkiGhacqcontractID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscription.
+        /// </summary>
+        /// <value>The unique ID of the Inscription.</value>
+        /* <example>17</example>*/
+        [DataMember(Name = "fkiInscriptionID", EmitDefaultValue = false)]
+        public int FkiInscriptionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptiontemp
+        /// </summary>
+        /// <value>The unique ID of the Inscriptiontemp</value>
+        /* <example>2445</example>*/
+        [DataMember(Name = "fkiInscriptiontempID", EmitDefaultValue = false)]
+        public int FkiInscriptiontempID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptionnotauthenticated.
+        /// </summary>
+        /// <value>The unique ID of the Inscriptionnotauthenticated.</value>
+        /* <example>24</example>*/
+        [DataMember(Name = "fkiInscriptionnotauthenticatedID", EmitDefaultValue = false)]
+        public int FkiInscriptionnotauthenticatedID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Invoice.
+        /// </summary>
+        /// <value>The unique ID of the Invoice.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiInvoiceID", EmitDefaultValue = false)]
+        public int FkiInvoiceID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Buyercontract
+        /// </summary>
+        /// <value>The unique ID of the Buyercontract</value>
+        /* <example>38</example>*/
+        [DataMember(Name = "fkiBuyercontractID", EmitDefaultValue = false)]
+        public int FkiBuyercontractID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Franchisebroker
+        /// </summary>
+        /// <value>The unique ID of the Franchisebroker</value>
+        /* <example>61</example>*/
+        [DataMember(Name = "fkiFranchisebrokerID", EmitDefaultValue = false)]
+        public int FkiFranchisebrokerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Franchiseagence
+        /// </summary>
+        /// <value>The unique ID of the Franchiseagence</value>
+        /* <example>117</example>*/
+        [DataMember(Name = "fkiFranchiseagenceID", EmitDefaultValue = false)]
+        public int FkiFranchiseagenceID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Franchisereoffice
+        /// </summary>
+        /// <value>The unique ID of the Franchisereoffice</value>
+        /* <example>50</example>*/
+        [DataMember(Name = "fkiFranchiseofficeID", EmitDefaultValue = false)]
+        public int FkiFranchiseofficeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Franchisefranchise
+        /// </summary>
+        /// <value>The unique ID of the Franchisefranchise</value>
+        /* <example>156</example>*/
+        [DataMember(Name = "fkiFranchisefranchiseID", EmitDefaultValue = false)]
+        public int FkiFranchisefranchiseID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Franchisecomplaint
+        /// </summary>
+        /// <value>The unique ID of the Franchisecomplaint</value>
+        /* <example>24</example>*/
+        [DataMember(Name = "fkiFranchisecomplaintID", EmitDefaultValue = false)]
+        public int FkiFranchisecomplaintID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Lead
+        /// </summary>
+        /// <value>The unique ID of the Lead</value>
+        /* <example>117</example>*/
+        [DataMember(Name = "fkiLeadID", EmitDefaultValue = false)]
+        public int FkiLeadID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Marketingprogram
+        /// </summary>
+        /// <value>The unique ID of the Marketingprogram</value>
+        /* <example>178</example>*/
+        [DataMember(Name = "fkiMarketingprogramID", EmitDefaultValue = false)]
+        public int FkiMarketingprogramID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Marketingfollow
+        /// </summary>
+        /// <value>The unique ID of the Marketingfollow</value>
+        /* <example>45</example>*/
+        [DataMember(Name = "fkiMarketingfollowID", EmitDefaultValue = false)]
+        public int FkiMarketingfollowID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Notary.
+        /// </summary>
+        /// <value>The unique ID of the Notary.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiNotaryID", EmitDefaultValue = false)]
+        public int FkiNotaryID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Officetaxreport
+        /// </summary>
+        /// <value>The unique ID of the Officetaxreport</value>
+        /* <example>200</example>*/
+        [DataMember(Name = "fkiOfficetaxreportID", EmitDefaultValue = false)]
+        public int FkiOfficetaxreportID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Otherincome
+        /// </summary>
+        /// <value>The unique ID of the Otherincome</value>
+        /* <example>142</example>*/
+        [DataMember(Name = "fkiOtherincomeID", EmitDefaultValue = false)]
+        public int FkiOtherincomeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Paymentpreparation
+        /// </summary>
+        /// <value>The unique ID of the Paymentpreparation</value>
+        /* <example>124</example>*/
+        [DataMember(Name = "fkiPaymentpreparationID", EmitDefaultValue = false)]
+        public int FkiPaymentpreparationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Purchase
+        /// </summary>
+        /// <value>The unique ID of the Purchase</value>
+        /* <example>155</example>*/
+        [DataMember(Name = "fkiPurchaseID", EmitDefaultValue = false)]
+        public int FkiPurchaseID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Salary
+        /// </summary>
+        /// <value>The unique ID of the Salary</value>
+        /* <example>73</example>*/
+        [DataMember(Name = "fkiSalaryID", EmitDefaultValue = false)]
+        public int FkiSalaryID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Supplier.
+        /// </summary>
+        /// <value>The unique ID of the Supplier.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiSupplierID", EmitDefaultValue = false)]
+        public int FkiSupplierID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Tranqcontract
+        /// </summary>
+        /// <value>The unique ID of the Tranqcontract</value>
+        /* <example>39</example>*/
+        [DataMember(Name = "fkiTranqcontractID", EmitDefaultValue = false)]
+        public int FkiTranqcontractID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Template
+        /// </summary>
+        /// <value>The unique ID of the Template</value>
+        /* <example>232</example>*/
+        [DataMember(Name = "fkiTemplateID", EmitDefaultValue = false)]
+        public int FkiTemplateID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptionchecklist
+        /// </summary>
+        /// <value>The unique ID of the Inscriptionchecklist</value>
+        /* <example>191</example>*/
+        [DataMember(Name = "fkiInscriptionchecklistID", EmitDefaultValue = false)]
+        public int FkiInscriptionchecklistID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Folder
+        /// </summary>
+        /// <value>The unique ID of the Folder</value>
+        /* <example>81</example>*/
+        [DataMember(Name = "fkiFolderID", EmitDefaultValue = false)]
+        public int FkiFolderID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Rejectedoffertopurchase
+        /// </summary>
+        /// <value>The unique ID of the Rejectedoffertopurchase</value>
+        /* <example>532</example>*/
+        [DataMember(Name = "fkiRejectedoffertopurchaseID", EmitDefaultValue = false)]
+        public int FkiRejectedoffertopurchaseID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Disclosure
+        /// </summary>
+        /// <value>The unique ID of the Disclosure</value>
+        /* <example>51</example>*/
+        [DataMember(Name = "fkiDisclosureID", EmitDefaultValue = false)]
+        public int FkiDisclosureID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Reconciliation
+        /// </summary>
+        /// <value>The unique ID of the Reconciliation</value>
+        /* <example>140</example>*/
+        [DataMember(Name = "fkiReconciliationID", EmitDefaultValue = false)]
+        public int FkiReconciliationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigndocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsigndocument</value>
+        /* <example>97</example>*/
+        [DataMember(Name = "fkiEzsigndocumentIDReference", EmitDefaultValue = false)]
+        public int FkiEzsigndocumentIDReference { get; set; }
+
+        /// <summary>
+        /// The name of the Attachment
+        /// </summary>
+        /// <value>The name of the Attachment</value>
+        /* <example>Document.pdf</example>*/
+        [DataMember(Name = "sAttachmentName", IsRequired = true, EmitDefaultValue = true)]
+        public string SAttachmentName { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserIDSpecific", EmitDefaultValue = false)]
+        public int FkiUserIDSpecific { get; set; }
+
+        /// <summary>
+        /// The size of the Attachment
+        /// </summary>
+        /// <value>The size of the Attachment</value>
+        /* <example>277465200</example>*/
+        [DataMember(Name = "iAttachmentSize", IsRequired = true, EmitDefaultValue = true)]
+        public long IAttachmentSize { get; set; }
+
+        /// <summary>
+        /// The edmmoduleflag of the Attachment
+        /// </summary>
+        /// <value>The edmmoduleflag of the Attachment</value>
+        /* <example>65</example>*/
+        [DataMember(Name = "iAttachmentEDMmoduleflag", EmitDefaultValue = false)]
+        public int IAttachmentEDMmoduleflag { get; set; }
+
+        /// <summary>
+        /// The md5 of the Attachment
+        /// </summary>
+        /// <value>The md5 of the Attachment</value>
+        /* <example>2cb29026e8a93c930e71598579400db6</example>*/
+        [DataMember(Name = "sAttachmentMD5", IsRequired = true, EmitDefaultValue = true)]
+        public string SAttachmentMD5 { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s deleted
+        /// </summary>
+        /// <value>Whether if it&#39;s deleted</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bAttachmentDeleted", IsRequired = true, EmitDefaultValue = true)]
+        public bool BAttachmentDeleted { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s valid
+        /// </summary>
+        /// <value>Whether if it&#39;s valid</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bAttachmentValid", IsRequired = true, EmitDefaultValue = true)]
+        public bool BAttachmentValid { get; set; }
+
+        /// <summary>
+        /// The rejectioncomment of the Attachment
+        /// </summary>
+        /// <value>The rejectioncomment of the Attachment</value>
+        /* <example>Unreadable</example>*/
+        [DataMember(Name = "tAttachmentRejectioncomment", EmitDefaultValue = false)]
+        public string TAttachmentRejectioncomment { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserIDOwner", EmitDefaultValue = false)]
+        public int FkiUserIDOwner { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", EmitDefaultValue = false)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjAttachmentProof
@@ -145,7 +694,67 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CustomAttachmentResponse {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiAttachmentID: ").Append(PkiAttachmentID).Append("\n");
+            sb.Append("  FkiComputerID: ").Append(FkiComputerID).Append("\n");
+            sb.Append("  FkiAdjustmentID: ").Append(FkiAdjustmentID).Append("\n");
+            sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
+            sb.Append("  FkiBankaccountID: ").Append(FkiBankaccountID).Append("\n");
+            sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
+            sb.Append("  FkiCommissionadvanceID: ").Append(FkiCommissionadvanceID).Append("\n");
+            sb.Append("  FkiCommunicationID: ").Append(FkiCommunicationID).Append("\n");
+            sb.Append("  FkiCustomerID: ").Append(FkiCustomerID).Append("\n");
+            sb.Append("  FkiCustomertemplateID: ").Append(FkiCustomertemplateID).Append("\n");
+            sb.Append("  FkiDepositID: ").Append(FkiDepositID).Append("\n");
+            sb.Append("  FkiDeposittransitchequeID: ").Append(FkiDeposittransitchequeID).Append("\n");
+            sb.Append("  FkiElectronicfundstransferID: ").Append(FkiElectronicfundstransferID).Append("\n");
+            sb.Append("  FkiEmployeeID: ").Append(FkiEmployeeID).Append("\n");
+            sb.Append("  FkiExternalbrokerID: ").Append(FkiExternalbrokerID).Append("\n");
+            sb.Append("  FkiEzcomadvanceserverID: ").Append(FkiEzcomadvanceserverID).Append("\n");
+            sb.Append("  FkiEzcomcompanyID: ").Append(FkiEzcomcompanyID).Append("\n");
+            sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
+            sb.Append("  FkiGhacqcontractID: ").Append(FkiGhacqcontractID).Append("\n");
+            sb.Append("  FkiInscriptionID: ").Append(FkiInscriptionID).Append("\n");
+            sb.Append("  FkiInscriptiontempID: ").Append(FkiInscriptiontempID).Append("\n");
+            sb.Append("  FkiInscriptionnotauthenticatedID: ").Append(FkiInscriptionnotauthenticatedID).Append("\n");
+            sb.Append("  FkiInvoiceID: ").Append(FkiInvoiceID).Append("\n");
+            sb.Append("  FkiBuyercontractID: ").Append(FkiBuyercontractID).Append("\n");
+            sb.Append("  FkiFranchisebrokerID: ").Append(FkiFranchisebrokerID).Append("\n");
+            sb.Append("  FkiFranchiseagenceID: ").Append(FkiFranchiseagenceID).Append("\n");
+            sb.Append("  FkiFranchiseofficeID: ").Append(FkiFranchiseofficeID).Append("\n");
+            sb.Append("  FkiFranchisefranchiseID: ").Append(FkiFranchisefranchiseID).Append("\n");
+            sb.Append("  FkiFranchisecomplaintID: ").Append(FkiFranchisecomplaintID).Append("\n");
+            sb.Append("  FkiLeadID: ").Append(FkiLeadID).Append("\n");
+            sb.Append("  FkiMarketingprogramID: ").Append(FkiMarketingprogramID).Append("\n");
+            sb.Append("  FkiMarketingfollowID: ").Append(FkiMarketingfollowID).Append("\n");
+            sb.Append("  FkiNotaryID: ").Append(FkiNotaryID).Append("\n");
+            sb.Append("  FkiOfficetaxreportID: ").Append(FkiOfficetaxreportID).Append("\n");
+            sb.Append("  FkiOtherincomeID: ").Append(FkiOtherincomeID).Append("\n");
+            sb.Append("  FkiPaymentpreparationID: ").Append(FkiPaymentpreparationID).Append("\n");
+            sb.Append("  FkiPurchaseID: ").Append(FkiPurchaseID).Append("\n");
+            sb.Append("  FkiSalaryID: ").Append(FkiSalaryID).Append("\n");
+            sb.Append("  FkiSupplierID: ").Append(FkiSupplierID).Append("\n");
+            sb.Append("  FkiTranqcontractID: ").Append(FkiTranqcontractID).Append("\n");
+            sb.Append("  FkiTemplateID: ").Append(FkiTemplateID).Append("\n");
+            sb.Append("  FkiInscriptionchecklistID: ").Append(FkiInscriptionchecklistID).Append("\n");
+            sb.Append("  FkiFolderID: ").Append(FkiFolderID).Append("\n");
+            sb.Append("  FkiRejectedoffertopurchaseID: ").Append(FkiRejectedoffertopurchaseID).Append("\n");
+            sb.Append("  FkiDisclosureID: ").Append(FkiDisclosureID).Append("\n");
+            sb.Append("  FkiReconciliationID: ").Append(FkiReconciliationID).Append("\n");
+            sb.Append("  FkiEzsigndocumentIDReference: ").Append(FkiEzsigndocumentIDReference).Append("\n");
+            sb.Append("  EAttachmentDocumenttype: ").Append(EAttachmentDocumenttype).Append("\n");
+            sb.Append("  SAttachmentName: ").Append(SAttachmentName).Append("\n");
+            sb.Append("  EAttachmentPrivacy: ").Append(EAttachmentPrivacy).Append("\n");
+            sb.Append("  FkiUserIDSpecific: ").Append(FkiUserIDSpecific).Append("\n");
+            sb.Append("  EAttachmentType: ").Append(EAttachmentType).Append("\n");
+            sb.Append("  IAttachmentSize: ").Append(IAttachmentSize).Append("\n");
+            sb.Append("  IAttachmentEDMmoduleflag: ").Append(IAttachmentEDMmoduleflag).Append("\n");
+            sb.Append("  SAttachmentMD5: ").Append(SAttachmentMD5).Append("\n");
+            sb.Append("  BAttachmentDeleted: ").Append(BAttachmentDeleted).Append("\n");
+            sb.Append("  BAttachmentValid: ").Append(BAttachmentValid).Append("\n");
+            sb.Append("  EAttachmentVerified: ").Append(EAttachmentVerified).Append("\n");
+            sb.Append("  TAttachmentRejectioncomment: ").Append(TAttachmentRejectioncomment).Append("\n");
+            sb.Append("  FkiUserIDOwner: ").Append(FkiUserIDOwner).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  ObjAttachmentProof: ").Append(ObjAttachmentProof).Append("\n");
             sb.Append("  ObjAttachmentProofdocument: ").Append(ObjAttachmentProofdocument).Append("\n");
             sb.Append("  AObjAttachmentAttachment: ").Append(AObjAttachmentAttachment).Append("\n");
@@ -158,7 +767,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -170,20 +779,525 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiAttachmentID (int) minimum
+            if (this.PkiAttachmentID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiAttachmentID, must be a value greater than or equal to 0.", new [] { "PkiAttachmentID" });
             }
+
+            // FkiComputerID (int) maximum
+            if (this.FkiComputerID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
+            }
+
+            // FkiComputerID (int) minimum
+            if (this.FkiComputerID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
+            }
+
+            // FkiAdjustmentID (int) maximum
+            if (this.FkiAdjustmentID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiAdjustmentID, must be a value less than or equal to 65535.", new [] { "FkiAdjustmentID" });
+            }
+
+            // FkiAdjustmentID (int) minimum
+            if (this.FkiAdjustmentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiAdjustmentID, must be a value greater than or equal to 0.", new [] { "FkiAdjustmentID" });
+            }
+
+            // FkiAgentID (int) minimum
+            if (this.FkiAgentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+            }
+
+            // FkiBankaccountID (int) maximum
+            if (this.FkiBankaccountID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
+            }
+
+            // FkiBankaccountID (int) minimum
+            if (this.FkiBankaccountID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
+            }
+
+            // FkiBrokerID (int) minimum
+            if (this.FkiBrokerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+            }
+
+            // FkiCommissionadvanceID (int) maximum
+            if (this.FkiCommissionadvanceID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value less than or equal to 65535.", new [] { "FkiCommissionadvanceID" });
+            }
+
+            // FkiCommissionadvanceID (int) minimum
+            if (this.FkiCommissionadvanceID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCommissionadvanceID, must be a value greater than or equal to 0.", new [] { "FkiCommissionadvanceID" });
+            }
+
+            // FkiCommunicationID (int) minimum
+            if (this.FkiCommunicationID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCommunicationID, must be a value greater than or equal to 0.", new [] { "FkiCommunicationID" });
+            }
+
+            // FkiCustomerID (int) minimum
+            if (this.FkiCustomerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
+            }
+
+            // FkiCustomertemplateID (int) maximum
+            if (this.FkiCustomertemplateID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiCustomertemplateID, must be a value less than or equal to 65535.", new [] { "FkiCustomertemplateID" });
+            }
+
+            // FkiCustomertemplateID (int) minimum
+            if (this.FkiCustomertemplateID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCustomertemplateID, must be a value greater than or equal to 0.", new [] { "FkiCustomertemplateID" });
+            }
+
+            // FkiDepositID (int) maximum
+            if (this.FkiDepositID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value less than or equal to 16777215.", new [] { "FkiDepositID" });
+            }
+
+            // FkiDepositID (int) minimum
+            if (this.FkiDepositID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value greater than or equal to 0.", new [] { "FkiDepositID" });
+            }
+
+            // FkiDeposittransitchequeID (int) maximum
+            if (this.FkiDeposittransitchequeID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value less than or equal to 65535.", new [] { "FkiDeposittransitchequeID" });
+            }
+
+            // FkiDeposittransitchequeID (int) minimum
+            if (this.FkiDeposittransitchequeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiDeposittransitchequeID, must be a value greater than or equal to 0.", new [] { "FkiDeposittransitchequeID" });
+            }
+
+            // FkiElectronicfundstransferID (int) maximum
+            if (this.FkiElectronicfundstransferID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value less than or equal to 65535.", new [] { "FkiElectronicfundstransferID" });
+            }
+
+            // FkiElectronicfundstransferID (int) minimum
+            if (this.FkiElectronicfundstransferID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiElectronicfundstransferID, must be a value greater than or equal to 1.", new [] { "FkiElectronicfundstransferID" });
+            }
+
+            // FkiEmployeeID (int) minimum
+            if (this.FkiEmployeeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+            }
+
+            // FkiExternalbrokerID (int) minimum
+            if (this.FkiExternalbrokerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiExternalbrokerID, must be a value greater than or equal to 0.", new [] { "FkiExternalbrokerID" });
+            }
+
+            // FkiEzcomadvanceserverID (int) maximum
+            if (this.FkiEzcomadvanceserverID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value less than or equal to 16777215.", new [] { "FkiEzcomadvanceserverID" });
+            }
+
+            // FkiEzcomadvanceserverID (int) minimum
+            if (this.FkiEzcomadvanceserverID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzcomadvanceserverID, must be a value greater than or equal to 0.", new [] { "FkiEzcomadvanceserverID" });
+            }
+
+            // FkiEzcomcompanyID (int) maximum
+            if (this.FkiEzcomcompanyID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value less than or equal to 65535.", new [] { "FkiEzcomcompanyID" });
+            }
+
+            // FkiEzcomcompanyID (int) minimum
+            if (this.FkiEzcomcompanyID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzcomcompanyID, must be a value greater than or equal to 0.", new [] { "FkiEzcomcompanyID" });
+            }
+
+            // FkiEzsigndocumentID (int) minimum
+            if (this.FkiEzsigndocumentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+            }
+
+            // FkiGhacqcontractID (int) maximum
+            if (this.FkiGhacqcontractID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiGhacqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiGhacqcontractID" });
+            }
+
+            // FkiGhacqcontractID (int) minimum
+            if (this.FkiGhacqcontractID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiGhacqcontractID, must be a value greater than or equal to 0.", new [] { "FkiGhacqcontractID" });
+            }
+
+            // FkiInscriptionID (int) minimum
+            if (this.FkiInscriptionID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
+            }
+
+            // FkiInscriptiontempID (int) maximum
+            if (this.FkiInscriptiontempID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptiontempID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptiontempID" });
+            }
+
+            // FkiInscriptiontempID (int) minimum
+            if (this.FkiInscriptiontempID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptiontempID, must be a value greater than or equal to 1.", new [] { "FkiInscriptiontempID" });
+            }
+
+            // FkiInscriptionnotauthenticatedID (int) minimum
+            if (this.FkiInscriptionnotauthenticatedID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
+            }
+
+            // FkiInvoiceID (int) minimum
+            if (this.FkiInvoiceID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInvoiceID, must be a value greater than or equal to 0.", new [] { "FkiInvoiceID" });
+            }
+
+            // FkiBuyercontractID (int) maximum
+            if (this.FkiBuyercontractID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
+            }
+
+            // FkiBuyercontractID (int) minimum
+            if (this.FkiBuyercontractID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
+            }
+
+            // FkiFranchisebrokerID (int) minimum
+            if (this.FkiFranchisebrokerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchisebrokerID, must be a value greater than or equal to 0.", new [] { "FkiFranchisebrokerID" });
+            }
+
+            // FkiFranchiseagenceID (int) maximum
+            if (this.FkiFranchiseagenceID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
+            }
+
+            // FkiFranchiseagenceID (int) minimum
+            if (this.FkiFranchiseagenceID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
+            }
+
+            // FkiFranchiseofficeID (int) minimum
+            if (this.FkiFranchiseofficeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+            }
+
+            // FkiFranchisefranchiseID (int) maximum
+            if (this.FkiFranchisefranchiseID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value less than or equal to 65535.", new [] { "FkiFranchisefranchiseID" });
+            }
+
+            // FkiFranchisefranchiseID (int) minimum
+            if (this.FkiFranchisefranchiseID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchisefranchiseID, must be a value greater than or equal to 0.", new [] { "FkiFranchisefranchiseID" });
+            }
+
+            // FkiFranchisecomplaintID (int) maximum
+            if (this.FkiFranchisecomplaintID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value less than or equal to 65535.", new [] { "FkiFranchisecomplaintID" });
+            }
+
+            // FkiFranchisecomplaintID (int) minimum
+            if (this.FkiFranchisecomplaintID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFranchisecomplaintID, must be a value greater than or equal to 0.", new [] { "FkiFranchisecomplaintID" });
+            }
+
+            // FkiLeadID (int) maximum
+            if (this.FkiLeadID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiLeadID, must be a value less than or equal to 65535.", new [] { "FkiLeadID" });
+            }
+
+            // FkiLeadID (int) minimum
+            if (this.FkiLeadID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiLeadID, must be a value greater than or equal to 0.", new [] { "FkiLeadID" });
+            }
+
+            // FkiMarketingprogramID (int) maximum
+            if (this.FkiMarketingprogramID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiMarketingprogramID, must be a value less than or equal to 255.", new [] { "FkiMarketingprogramID" });
+            }
+
+            // FkiMarketingprogramID (int) minimum
+            if (this.FkiMarketingprogramID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiMarketingprogramID, must be a value greater than or equal to 0.", new [] { "FkiMarketingprogramID" });
+            }
+
+            // FkiMarketingfollowID (int) maximum
+            if (this.FkiMarketingfollowID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiMarketingfollowID, must be a value less than or equal to 65535.", new [] { "FkiMarketingfollowID" });
+            }
+
+            // FkiMarketingfollowID (int) minimum
+            if (this.FkiMarketingfollowID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiMarketingfollowID, must be a value greater than or equal to 0.", new [] { "FkiMarketingfollowID" });
+            }
+
+            // FkiNotaryID (int) minimum
+            if (this.FkiNotaryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiNotaryID, must be a value greater than or equal to 0.", new [] { "FkiNotaryID" });
+            }
+
+            // FkiOfficetaxreportID (int) maximum
+            if (this.FkiOfficetaxreportID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value less than or equal to 65535.", new [] { "FkiOfficetaxreportID" });
+            }
+
+            // FkiOfficetaxreportID (int) minimum
+            if (this.FkiOfficetaxreportID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiOfficetaxreportID, must be a value greater than or equal to 0.", new [] { "FkiOfficetaxreportID" });
+            }
+
+            // FkiOtherincomeID (int) maximum
+            if (this.FkiOtherincomeID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiOtherincomeID, must be a value less than or equal to 65535.", new [] { "FkiOtherincomeID" });
+            }
+
+            // FkiOtherincomeID (int) minimum
+            if (this.FkiOtherincomeID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiOtherincomeID, must be a value greater than or equal to 1.", new [] { "FkiOtherincomeID" });
+            }
+
+            // FkiPaymentpreparationID (int) maximum
+            if (this.FkiPaymentpreparationID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value less than or equal to 16777215.", new [] { "FkiPaymentpreparationID" });
+            }
+
+            // FkiPaymentpreparationID (int) minimum
+            if (this.FkiPaymentpreparationID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiPaymentpreparationID, must be a value greater than or equal to 0.", new [] { "FkiPaymentpreparationID" });
+            }
+
+            // FkiSalaryID (int) maximum
+            if (this.FkiSalaryID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiSalaryID, must be a value less than or equal to 16777215.", new [] { "FkiSalaryID" });
+            }
+
+            // FkiSalaryID (int) minimum
+            if (this.FkiSalaryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiSalaryID, must be a value greater than or equal to 0.", new [] { "FkiSalaryID" });
+            }
+
+            // FkiSupplierID (int) minimum
+            if (this.FkiSupplierID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiSupplierID, must be a value greater than or equal to 0.", new [] { "FkiSupplierID" });
+            }
+
+            // FkiTranqcontractID (int) maximum
+            if (this.FkiTranqcontractID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiTranqcontractID, must be a value less than or equal to 16777215.", new [] { "FkiTranqcontractID" });
+            }
+
+            // FkiTranqcontractID (int) minimum
+            if (this.FkiTranqcontractID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiTranqcontractID, must be a value greater than or equal to 0.", new [] { "FkiTranqcontractID" });
+            }
+
+            // FkiTemplateID (int) maximum
+            if (this.FkiTemplateID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiTemplateID, must be a value less than or equal to 65535.", new [] { "FkiTemplateID" });
+            }
+
+            // FkiTemplateID (int) minimum
+            if (this.FkiTemplateID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiTemplateID, must be a value greater than or equal to 0.", new [] { "FkiTemplateID" });
+            }
+
+            // FkiInscriptionchecklistID (int) maximum
+            if (this.FkiInscriptionchecklistID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
+            }
+
+            // FkiInscriptionchecklistID (int) minimum
+            if (this.FkiInscriptionchecklistID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
+            }
+
+            // FkiFolderID (int) maximum
+            if (this.FkiFolderID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiFolderID, must be a value less than or equal to 65535.", new [] { "FkiFolderID" });
+            }
+
+            // FkiFolderID (int) minimum
+            if (this.FkiFolderID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiFolderID, must be a value greater than or equal to 0.", new [] { "FkiFolderID" });
+            }
+
+            // FkiRejectedoffertopurchaseID (int) maximum
+            if (this.FkiRejectedoffertopurchaseID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value less than or equal to 65535.", new [] { "FkiRejectedoffertopurchaseID" });
+            }
+
+            // FkiRejectedoffertopurchaseID (int) minimum
+            if (this.FkiRejectedoffertopurchaseID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiRejectedoffertopurchaseID, must be a value greater than or equal to 1.", new [] { "FkiRejectedoffertopurchaseID" });
+            }
+
+            // FkiDisclosureID (int) maximum
+            if (this.FkiDisclosureID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiDisclosureID, must be a value less than or equal to 65535.", new [] { "FkiDisclosureID" });
+            }
+
+            // FkiDisclosureID (int) minimum
+            if (this.FkiDisclosureID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiDisclosureID, must be a value greater than or equal to 0.", new [] { "FkiDisclosureID" });
+            }
+
+            // FkiReconciliationID (int) maximum
+            if (this.FkiReconciliationID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value less than or equal to 65535.", new [] { "FkiReconciliationID" });
+            }
+
+            // FkiReconciliationID (int) minimum
+            if (this.FkiReconciliationID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value greater than or equal to 0.", new [] { "FkiReconciliationID" });
+            }
+
+            // FkiEzsigndocumentIDReference (int) minimum
+            if (this.FkiEzsigndocumentIDReference < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigndocumentIDReference, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentIDReference" });
+            }
+
+            if (this.SAttachmentName != null) {
+                // SAttachmentName (string) pattern
+                Regex regexSAttachmentName = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                if (!regexSAttachmentName.Match(this.SAttachmentName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentName, must match a pattern of " + regexSAttachmentName, new [] { "SAttachmentName" });
+                }
+            }
+
+            // FkiUserIDSpecific (int) minimum
+            if (this.FkiUserIDSpecific < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
+            }
+
+            // IAttachmentSize (long) maximum
+            if (this.IAttachmentSize > (long)4294967295)
+            {
+                yield return new ValidationResult("Invalid value for IAttachmentSize, must be a value less than or equal to 4294967295.", new [] { "IAttachmentSize" });
+            }
+
+            // IAttachmentSize (long) minimum
+            if (this.IAttachmentSize < (long)0)
+            {
+                yield return new ValidationResult("Invalid value for IAttachmentSize, must be a value greater than or equal to 0.", new [] { "IAttachmentSize" });
+            }
+
+            // IAttachmentEDMmoduleflag (int) maximum
+            if (this.IAttachmentEDMmoduleflag > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value less than or equal to 255.", new [] { "IAttachmentEDMmoduleflag" });
+            }
+
+            // IAttachmentEDMmoduleflag (int) minimum
+            if (this.IAttachmentEDMmoduleflag < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IAttachmentEDMmoduleflag, must be a value greater than or equal to 0.", new [] { "IAttachmentEDMmoduleflag" });
+            }
+
+            if (this.SAttachmentMD5 != null) {
+                // SAttachmentMD5 (string) pattern
+                Regex regexSAttachmentMD5 = new Regex(@"^.{0,32}$", RegexOptions.CultureInvariant);
+                if (!regexSAttachmentMD5.Match(this.SAttachmentMD5).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentMD5, must match a pattern of " + regexSAttachmentMD5, new [] { "SAttachmentMD5" });
+                }
+            }
+
+            if (this.TAttachmentRejectioncomment != null) {
+                // TAttachmentRejectioncomment (string) pattern
+                Regex regexTAttachmentRejectioncomment = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexTAttachmentRejectioncomment.Match(this.TAttachmentRejectioncomment).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TAttachmentRejectioncomment, must match a pattern of " + regexTAttachmentRejectioncomment, new [] { "TAttachmentRejectioncomment" });
+                }
+            }
+
+            // FkiUserIDOwner (int) minimum
+            if (this.FkiUserIDOwner < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserIDOwner, must be a value greater than or equal to 0.", new [] { "FkiUserIDOwner" });
+            }
+
             yield break;
         }
     }

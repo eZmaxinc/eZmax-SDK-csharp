@@ -54,5 +54,50 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" VariableexpenseResponseCompound
             //Assert.IsType<VariableexpenseResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiVariableexpenseID'
+        /// </summary>
+        [Fact]
+        public void PkiVariableexpenseIDTest()
+        {
+            // TODO unit test for the property 'PkiVariableexpenseID'
+        }
+
+        /// <summary>
+        /// Test the property 'SVariableexpenseCode'
+        /// </summary>
+        [Fact]
+        public void SVariableexpenseCodeTest()
+        {
+            // TODO unit test for the property 'SVariableexpenseCode'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjVariableexpenseDescription'
+        /// </summary>
+        [Fact]
+        public void ObjVariableexpenseDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjVariableexpenseDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'EVariableexpenseTaxable'
+        /// </summary>
+        [Fact]
+        public void EVariableexpenseTaxableTest()
+        {
+            // TODO unit test for the property 'EVariableexpenseTaxable'
+        }
+
+        /// <summary>
+        /// Test the property 'BVariableexpenseIsactive'
+        /// </summary>
+        [Fact]
+        public void BVariableexpenseIsactiveTest()
+        {
+            // TODO unit test for the property 'BVariableexpenseIsactive'
+        }
     }
 }

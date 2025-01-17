@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Creditcardclient Object
     /// </summary>
     [DataContract(Name = "creditcardclient-ResponseCompound")]
-    public partial class CreditcardclientResponseCompound : CreditcardclientResponse, IValidatableObject
+    public partial class CreditcardclientResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditcardclientResponseCompound" /> class.
@@ -47,9 +47,80 @@ namespace eZmaxApi.Model
         /// <param name="bCreditcardclientAllowedcompanypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
         /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
         /// <param name="objCreditcarddetail">objCreditcarddetail (required).</param>
-        public CreditcardclientResponseCompound(int pkiCreditcardclientID = default(int), int fkiCreditcarddetailID = default(int), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientAllowedcompanypayment = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), CreditcarddetailResponseCompound objCreditcarddetail = default(CreditcarddetailResponseCompound)) : base()
+        public CreditcardclientResponseCompound(int pkiCreditcardclientID = default(int), int fkiCreditcarddetailID = default(int), bool bCreditcardclientrelationIsdefault = default(bool), string sCreditcardclientDescription = default(string), bool bCreditcardclientAllowedcompanypayment = default(bool), bool bCreditcardclientAllowedtranquillit = default(bool), CreditcarddetailResponseCompound objCreditcarddetail = default(CreditcarddetailResponseCompound))
         {
+            this.PkiCreditcardclientID = pkiCreditcardclientID;
+            this.FkiCreditcarddetailID = fkiCreditcarddetailID;
+            this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+            // to ensure "sCreditcardclientDescription" is required (not null)
+            if (sCreditcardclientDescription == null)
+            {
+                throw new ArgumentNullException("sCreditcardclientDescription is a required property for CreditcardclientResponseCompound and cannot be null");
+            }
+            this.SCreditcardclientDescription = sCreditcardclientDescription;
+            this.BCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
+            this.BCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
+            // to ensure "objCreditcarddetail" is required (not null)
+            if (objCreditcarddetail == null)
+            {
+                throw new ArgumentNullException("objCreditcarddetail is a required property for CreditcardclientResponseCompound and cannot be null");
+            }
+            this.ObjCreditcarddetail = objCreditcarddetail;
         }
+
+        /// <summary>
+        /// The unique ID of the Creditcardclient
+        /// </summary>
+        /// <value>The unique ID of the Creditcardclient</value>
+        /* <example>114</example>*/
+        [DataMember(Name = "pkiCreditcardclientID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiCreditcardclientID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Creditcarddetail
+        /// </summary>
+        /// <value>The unique ID of the Creditcarddetail</value>
+        /* <example>53</example>*/
+        [DataMember(Name = "fkiCreditcarddetailID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiCreditcarddetailID { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s the creditcardclient is the default one
+        /// </summary>
+        /// <value>Whether if it&#39;s the creditcardclient is the default one</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bCreditcardclientrelationIsdefault", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientrelationIsdefault { get; set; }
+
+        /// <summary>
+        /// The description of the Creditcardclient
+        /// </summary>
+        /// <value>The description of the Creditcardclient</value>
+        /* <example>Visa</example>*/
+        [DataMember(Name = "sCreditcardclientDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SCreditcardclientDescription { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s an allowedagencypayment
+        /// </summary>
+        /// <value>Whether if it&#39;s an allowedagencypayment</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bCreditcardclientAllowedcompanypayment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedcompanypayment { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s an allowedtranquillit
+        /// </summary>
+        /// <value>Whether if it&#39;s an allowedtranquillit</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bCreditcardclientAllowedtranquillit", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientAllowedtranquillit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjCreditcarddetail
+        /// </summary>
+        [DataMember(Name = "objCreditcarddetail", IsRequired = true, EmitDefaultValue = true)]
+        public CreditcarddetailResponseCompound ObjCreditcarddetail { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,7 +130,13 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CreditcardclientResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiCreditcardclientID: ").Append(PkiCreditcardclientID).Append("\n");
+            sb.Append("  FkiCreditcarddetailID: ").Append(FkiCreditcarddetailID).Append("\n");
+            sb.Append("  BCreditcardclientrelationIsdefault: ").Append(BCreditcardclientrelationIsdefault).Append("\n");
+            sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
+            sb.Append("  BCreditcardclientAllowedcompanypayment: ").Append(BCreditcardclientAllowedcompanypayment).Append("\n");
+            sb.Append("  BCreditcardclientAllowedtranquillit: ").Append(BCreditcardclientAllowedtranquillit).Append("\n");
+            sb.Append("  ObjCreditcarddetail: ").Append(ObjCreditcarddetail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -68,7 +145,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -80,20 +157,39 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiCreditcardclientID (int) maximum
+            if (this.PkiCreditcardclientID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
             }
+
+            // PkiCreditcardclientID (int) minimum
+            if (this.PkiCreditcardclientID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
+            }
+
+            // FkiCreditcarddetailID (int) maximum
+            if (this.FkiCreditcarddetailID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value less than or equal to 65535.", new [] { "FkiCreditcarddetailID" });
+            }
+
+            // FkiCreditcarddetailID (int) minimum
+            if (this.FkiCreditcarddetailID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value greater than or equal to 0.", new [] { "FkiCreditcarddetailID" });
+            }
+
+            if (this.SCreditcardclientDescription != null) {
+                // SCreditcardclientDescription (string) pattern
+                Regex regexSCreditcardclientDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSCreditcardclientDescription.Match(this.SCreditcardclientDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCreditcardclientDescription, must match a pattern of " + regexSCreditcardclientDescription, new [] { "SCreditcardclientDescription" });
+                }
+            }
+
             yield break;
         }
     }

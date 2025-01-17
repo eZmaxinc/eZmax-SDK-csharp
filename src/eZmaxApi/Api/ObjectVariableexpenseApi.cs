@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiVariableexpenseID"></param>
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse VariableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0);
+        /// <returns>VariableexpenseEditObjectV1Response</returns>
+        VariableexpenseEditObjectV1Response VariableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Variableexpense
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiVariableexpenseID"></param>
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> VariableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of VariableexpenseEditObjectV1Response</returns>
+        ApiResponse<VariableexpenseEditObjectV1Response> VariableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Variableexpenses and IDs
         /// </summary>
@@ -197,8 +197,8 @@ namespace eZmaxApi.Api
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> VariableexpenseEditObjectV1Async(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of VariableexpenseEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<VariableexpenseEditObjectV1Response> VariableexpenseEditObjectV1Async(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Variableexpense
@@ -211,8 +211,8 @@ namespace eZmaxApi.Api
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> VariableexpenseEditObjectV1WithHttpInfoAsync(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (VariableexpenseEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VariableexpenseEditObjectV1Response>> VariableexpenseEditObjectV1WithHttpInfoAsync(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Variableexpenses and IDs
         /// </summary>
@@ -585,10 +585,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiVariableexpenseID"></param>
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse VariableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0)
+        /// <returns>VariableexpenseEditObjectV1Response</returns>
+        public VariableexpenseEditObjectV1Response VariableexpenseEditObjectV1(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = VariableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<VariableexpenseEditObjectV1Response> localVarResponse = VariableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -599,8 +599,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiVariableexpenseID"></param>
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> VariableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of VariableexpenseEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<VariableexpenseEditObjectV1Response> VariableexpenseEditObjectV1WithHttpInfo(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'variableexpenseEditObjectV1Request' is set
             if (variableexpenseEditObjectV1Request == null)
@@ -644,7 +644,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/variableexpense/{pkiVariableexpenseID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<VariableexpenseEditObjectV1Response>("/1/object/variableexpense/{pkiVariableexpenseID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("VariableexpenseEditObjectV1", localVarResponse);
@@ -665,10 +665,10 @@ namespace eZmaxApi.Api
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> VariableexpenseEditObjectV1Async(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of VariableexpenseEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<VariableexpenseEditObjectV1Response> VariableexpenseEditObjectV1Async(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await VariableexpenseEditObjectV1WithHttpInfoAsync(pkiVariableexpenseID, variableexpenseEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<VariableexpenseEditObjectV1Response> localVarResponse = await VariableexpenseEditObjectV1WithHttpInfoAsync(pkiVariableexpenseID, variableexpenseEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -680,8 +680,8 @@ namespace eZmaxApi.Api
         /// <param name="variableexpenseEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> VariableexpenseEditObjectV1WithHttpInfoAsync(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (VariableexpenseEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<VariableexpenseEditObjectV1Response>> VariableexpenseEditObjectV1WithHttpInfoAsync(int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'variableexpenseEditObjectV1Request' is set
             if (variableexpenseEditObjectV1Request == null)
@@ -726,7 +726,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/variableexpense/{pkiVariableexpenseID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<VariableexpenseEditObjectV1Response>("/1/object/variableexpense/{pkiVariableexpenseID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

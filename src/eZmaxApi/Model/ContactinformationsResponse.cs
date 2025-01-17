@@ -53,11 +53,11 @@ namespace eZmaxApi.Model
         /// <param name="fkiWebsiteIDDefault">The unique ID of the Website Default.</param>
         /// <param name="eContactinformationsType">eContactinformationsType (required).</param>
         /// <param name="sContactinformationsUrl">The url of the Contactinformations.</param>
-        /// <param name="objAddressDefault">An Address Object and children to create a complete structure.</param>
+        /// <param name="objAddressDefault">objAddressDefault.</param>
         /// <param name="objPhoneDefault">objPhoneDefault.</param>
-        /// <param name="objEmailDefault">An Email Object and children to create a complete structure.</param>
-        /// <param name="objWebsiteDefault">A Website Object and children to create a complete structure.</param>
-        public ContactinformationsResponse(int pkiContactinformationsID = default(int), int fkiAddressIDDefault = default(int), int fkiPhoneIDDefault = default(int), int fkiEmailIDDefault = default(int), int fkiWebsiteIDDefault = default(int), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), string sContactinformationsUrl = default(string), AddressResponse objAddressDefault = default(AddressResponse), PhoneResponseCompound objPhoneDefault = default(PhoneResponseCompound), EmailResponse objEmailDefault = default(EmailResponse), WebsiteResponse objWebsiteDefault = default(WebsiteResponse))
+        /// <param name="objEmailDefault">objEmailDefault.</param>
+        /// <param name="objWebsiteDefault">objWebsiteDefault.</param>
+        public ContactinformationsResponse(int pkiContactinformationsID = default(int), int fkiAddressIDDefault = default(int), int fkiPhoneIDDefault = default(int), int fkiEmailIDDefault = default(int), int fkiWebsiteIDDefault = default(int), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), string sContactinformationsUrl = default(string), AddressResponseCompound objAddressDefault = default(AddressResponseCompound), PhoneResponseCompound objPhoneDefault = default(PhoneResponseCompound), EmailResponseCompound objEmailDefault = default(EmailResponseCompound), WebsiteResponseCompound objWebsiteDefault = default(WebsiteResponseCompound))
         {
             this.PkiContactinformationsID = pkiContactinformationsID;
             this.EContactinformationsType = eContactinformationsType;
@@ -121,11 +121,10 @@ namespace eZmaxApi.Model
         public string SContactinformationsUrl { get; set; }
 
         /// <summary>
-        /// An Address Object and children to create a complete structure
+        /// Gets or Sets ObjAddressDefault
         /// </summary>
-        /// <value>An Address Object and children to create a complete structure</value>
         [DataMember(Name = "objAddressDefault", EmitDefaultValue = false)]
-        public AddressResponse ObjAddressDefault { get; set; }
+        public AddressResponseCompound ObjAddressDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneDefault
@@ -134,18 +133,16 @@ namespace eZmaxApi.Model
         public PhoneResponseCompound ObjPhoneDefault { get; set; }
 
         /// <summary>
-        /// An Email Object and children to create a complete structure
+        /// Gets or Sets ObjEmailDefault
         /// </summary>
-        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmailDefault", EmitDefaultValue = false)]
-        public EmailResponse ObjEmailDefault { get; set; }
+        public EmailResponseCompound ObjEmailDefault { get; set; }
 
         /// <summary>
-        /// A Website Object and children to create a complete structure
+        /// Gets or Sets ObjWebsiteDefault
         /// </summary>
-        /// <value>A Website Object and children to create a complete structure</value>
         [DataMember(Name = "objWebsiteDefault", EmitDefaultValue = false)]
-        public WebsiteResponse ObjWebsiteDefault { get; set; }
+        public WebsiteResponseCompound ObjWebsiteDefault { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

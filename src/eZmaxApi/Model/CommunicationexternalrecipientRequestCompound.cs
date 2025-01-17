@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Communicationexternalrecipient Object and children
     /// </summary>
     [DataContract(Name = "communicationexternalrecipient-RequestCompound")]
-    public partial class CommunicationexternalrecipientRequestCompound : CommunicationexternalrecipientRequest, IValidatableObject
+    public partial class CommunicationexternalrecipientRequestCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets ECommunicationexternalrecipientType
+        /// </summary>
+        [DataMember(Name = "eCommunicationexternalrecipientType", EmitDefaultValue = false)]
+        public FieldECommunicationexternalrecipientType? ECommunicationexternalrecipientType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommunicationexternalrecipientRequestCompound" /> class.
         /// </summary>
@@ -40,9 +46,46 @@ namespace eZmaxApi.Model
         /// <param name="sPhoneE164">A phone number in E.164 Format.</param>
         /// <param name="eCommunicationexternalrecipientType">eCommunicationexternalrecipientType.</param>
         /// <param name="sCommunicationexternalrecipientName">The name of the Communicationexternalrecipient.</param>
-        public CommunicationexternalrecipientRequestCompound(int pkiCommunicationexternalrecipientID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), FieldECommunicationexternalrecipientType? eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType?), string sCommunicationexternalrecipientName = default(string)) : base()
+        public CommunicationexternalrecipientRequestCompound(int pkiCommunicationexternalrecipientID = default(int), string sEmailAddress = default(string), string sPhoneE164 = default(string), FieldECommunicationexternalrecipientType? eCommunicationexternalrecipientType = default(FieldECommunicationexternalrecipientType?), string sCommunicationexternalrecipientName = default(string))
         {
+            this.PkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
+            this.SEmailAddress = sEmailAddress;
+            this.SPhoneE164 = sPhoneE164;
+            this.ECommunicationexternalrecipientType = eCommunicationexternalrecipientType;
+            this.SCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
         }
+
+        /// <summary>
+        /// The unique ID of the Communicationexternalrecipient
+        /// </summary>
+        /// <value>The unique ID of the Communicationexternalrecipient</value>
+        /* <example>9</example>*/
+        [DataMember(Name = "pkiCommunicationexternalrecipientID", EmitDefaultValue = false)]
+        public int PkiCommunicationexternalrecipientID { get; set; }
+
+        /// <summary>
+        /// The email address.
+        /// </summary>
+        /// <value>The email address.</value>
+        /* <example>email@example.com</example>*/
+        [DataMember(Name = "sEmailAddress", EmitDefaultValue = false)]
+        public string SEmailAddress { get; set; }
+
+        /// <summary>
+        /// A phone number in E.164 Format
+        /// </summary>
+        /// <value>A phone number in E.164 Format</value>
+        /* <example>+15149901516</example>*/
+        [DataMember(Name = "sPhoneE164", EmitDefaultValue = false)]
+        public string SPhoneE164 { get; set; }
+
+        /// <summary>
+        /// The name of the Communicationexternalrecipient
+        /// </summary>
+        /// <value>The name of the Communicationexternalrecipient</value>
+        /* <example>John Doe</example>*/
+        [DataMember(Name = "sCommunicationexternalrecipientName", EmitDefaultValue = false)]
+        public string SCommunicationexternalrecipientName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +95,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommunicationexternalrecipientRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiCommunicationexternalrecipientID: ").Append(PkiCommunicationexternalrecipientID).Append("\n");
+            sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
+            sb.Append("  SPhoneE164: ").Append(SPhoneE164).Append("\n");
+            sb.Append("  ECommunicationexternalrecipientType: ").Append(ECommunicationexternalrecipientType).Append("\n");
+            sb.Append("  SCommunicationexternalrecipientName: ").Append(SCommunicationexternalrecipientName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -61,7 +108,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -73,20 +120,33 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
+            if (this.SEmailAddress != null) {
+                // SEmailAddress (string) pattern
+                Regex regexSEmailAddress = new Regex(@"^[\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$", RegexOptions.CultureInvariant);
+                if (!regexSEmailAddress.Match(this.SEmailAddress).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEmailAddress, must match a pattern of " + regexSEmailAddress, new [] { "SEmailAddress" });
+                }
             }
+
+            if (this.SPhoneE164 != null) {
+                // SPhoneE164 (string) pattern
+                Regex regexSPhoneE164 = new Regex(@"^\+[1-9]\d{1,14}$", RegexOptions.CultureInvariant);
+                if (!regexSPhoneE164.Match(this.SPhoneE164).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SPhoneE164, must match a pattern of " + regexSPhoneE164, new [] { "SPhoneE164" });
+                }
+            }
+
+            if (this.SCommunicationexternalrecipientName != null) {
+                // SCommunicationexternalrecipientName (string) pattern
+                Regex regexSCommunicationexternalrecipientName = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSCommunicationexternalrecipientName.Match(this.SCommunicationexternalrecipientName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCommunicationexternalrecipientName, must match a pattern of " + regexSCommunicationexternalrecipientName, new [] { "SCommunicationexternalrecipientName" });
+                }
+            }
+
             yield break;
         }
     }

@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiCorsID = null;
             //var response = instance.CorsDeleteObjectV1(pkiCorsID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<CorsDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiCorsID = null;
             //CorsEditObjectV1Request corsEditObjectV1Request = null;
             //var response = instance.CorsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<CorsEditObjectV1Response>(response);
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Usergroup Object
     /// </summary>
     [DataContract(Name = "usergroup-ResponseCompound")]
-    public partial class UsergroupResponseCompound : UsergroupResponse, IValidatableObject
+    public partial class UsergroupResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UsergroupResponseCompound" /> class.
@@ -44,9 +44,46 @@ namespace eZmaxApi.Model
         /// <param name="objUsergroupName">objUsergroupName (required).</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester.</param>
         /// <param name="objEmail">objEmail.</param>
-        public UsergroupResponseCompound(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName), string sUsergroupNameX = default(string), EmailRequest objEmail = default(EmailRequest)) : base()
+        public UsergroupResponseCompound(int pkiUsergroupID = default(int), MultilingualUsergroupName objUsergroupName = default(MultilingualUsergroupName), string sUsergroupNameX = default(string), EmailRequest objEmail = default(EmailRequest))
         {
+            this.PkiUsergroupID = pkiUsergroupID;
+            // to ensure "objUsergroupName" is required (not null)
+            if (objUsergroupName == null)
+            {
+                throw new ArgumentNullException("objUsergroupName is a required property for UsergroupResponseCompound and cannot be null");
+            }
+            this.ObjUsergroupName = objUsergroupName;
+            this.SUsergroupNameX = sUsergroupNameX;
+            this.ObjEmail = objEmail;
         }
+
+        /// <summary>
+        /// The unique ID of the Usergroup
+        /// </summary>
+        /// <value>The unique ID of the Usergroup</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "pkiUsergroupID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiUsergroupID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUsergroupName
+        /// </summary>
+        [DataMember(Name = "objUsergroupName", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualUsergroupName ObjUsergroupName { get; set; }
+
+        /// <summary>
+        /// The Name of the Usergroup in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Usergroup in the language of the requester</value>
+        /* <example>Administration</example>*/
+        [DataMember(Name = "sUsergroupNameX", EmitDefaultValue = false)]
+        public string SUsergroupNameX { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEmail
+        /// </summary>
+        [DataMember(Name = "objEmail", EmitDefaultValue = false)]
+        public EmailRequest ObjEmail { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,7 +93,10 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UsergroupResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
+            sb.Append("  ObjUsergroupName: ").Append(ObjUsergroupName).Append("\n");
+            sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  ObjEmail: ").Append(ObjEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -65,7 +105,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -77,20 +117,27 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiUsergroupID (int) maximum
+            if (this.PkiUsergroupID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
             }
+
+            // PkiUsergroupID (int) minimum
+            if (this.PkiUsergroupID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+            }
+
+            if (this.SUsergroupNameX != null) {
+                // SUsergroupNameX (string) pattern
+                Regex regexSUsergroupNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSUsergroupNameX.Match(this.SUsergroupNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUsergroupNameX, must match a pattern of " + regexSUsergroupNameX, new [] { "SUsergroupNameX" });
+                }
+            }
+
             yield break;
         }
     }

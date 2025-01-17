@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse DiscussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID, int operationIndex = 0);
+        /// <returns>DiscussionmembershipDeleteObjectV1Response</returns>
+        DiscussionmembershipDeleteObjectV1Response DiscussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Discussionmembership
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> DiscussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID, int operationIndex = 0);
+        /// <returns>ApiResponse of DiscussionmembershipDeleteObjectV1Response</returns>
+        ApiResponse<DiscussionmembershipDeleteObjectV1Response> DiscussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -114,8 +114,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> DiscussionmembershipDeleteObjectV1Async(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of DiscussionmembershipDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<DiscussionmembershipDeleteObjectV1Response> DiscussionmembershipDeleteObjectV1Async(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Discussionmembership
@@ -127,8 +127,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DiscussionmembershipDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscussionmembershipDeleteObjectV1Response>> DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -411,10 +411,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse DiscussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID, int operationIndex = 0)
+        /// <returns>DiscussionmembershipDeleteObjectV1Response</returns>
+        public DiscussionmembershipDeleteObjectV1Response DiscussionmembershipDeleteObjectV1(int pkiDiscussionmembershipID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DiscussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
+            eZmaxApi.Client.ApiResponse<DiscussionmembershipDeleteObjectV1Response> localVarResponse = DiscussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
             return localVarResponse.Data;
         }
 
@@ -424,8 +424,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> DiscussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID, int operationIndex = 0)
+        /// <returns>ApiResponse of DiscussionmembershipDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DiscussionmembershipDeleteObjectV1Response> DiscussionmembershipDeleteObjectV1WithHttpInfo(int pkiDiscussionmembershipID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -461,7 +461,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/discussionmembership/{pkiDiscussionmembershipID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<DiscussionmembershipDeleteObjectV1Response>("/1/object/discussionmembership/{pkiDiscussionmembershipID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DiscussionmembershipDeleteObjectV1", localVarResponse);
@@ -481,10 +481,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> DiscussionmembershipDeleteObjectV1Async(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of DiscussionmembershipDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<DiscussionmembershipDeleteObjectV1Response> DiscussionmembershipDeleteObjectV1Async(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(pkiDiscussionmembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DiscussionmembershipDeleteObjectV1Response> localVarResponse = await DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(pkiDiscussionmembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -495,8 +495,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionmembershipID">The unique ID of the Discussionmembership</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DiscussionmembershipDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DiscussionmembershipDeleteObjectV1Response>> DiscussionmembershipDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionmembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -533,7 +533,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/discussionmembership/{pkiDiscussionmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DiscussionmembershipDeleteObjectV1Response>("/1/object/discussionmembership/{pkiDiscussionmembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

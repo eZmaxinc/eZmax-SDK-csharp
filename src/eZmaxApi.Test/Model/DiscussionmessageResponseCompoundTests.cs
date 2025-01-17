@@ -54,5 +54,86 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" DiscussionmessageResponseCompound
             //Assert.IsType<DiscussionmessageResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiDiscussionmessageID'
+        /// </summary>
+        [Fact]
+        public void PkiDiscussionmessageIDTest()
+        {
+            // TODO unit test for the property 'PkiDiscussionmessageID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDiscussionID'
+        /// </summary>
+        [Fact]
+        public void FkiDiscussionIDTest()
+        {
+            // TODO unit test for the property 'FkiDiscussionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDiscussionmembershipID'
+        /// </summary>
+        [Fact]
+        public void FkiDiscussionmembershipIDTest()
+        {
+            // TODO unit test for the property 'FkiDiscussionmembershipID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDiscussionmembershipIDActionrequired'
+        /// </summary>
+        [Fact]
+        public void FkiDiscussionmembershipIDActionrequiredTest()
+        {
+            // TODO unit test for the property 'FkiDiscussionmembershipIDActionrequired'
+        }
+
+        /// <summary>
+        /// Test the property 'EDiscussionmessageStatus'
+        /// </summary>
+        [Fact]
+        public void EDiscussionmessageStatusTest()
+        {
+            // TODO unit test for the property 'EDiscussionmessageStatus'
+        }
+
+        /// <summary>
+        /// Test the property 'TDiscussionmessageContent'
+        /// </summary>
+        [Fact]
+        public void TDiscussionmessageContentTest()
+        {
+            // TODO unit test for the property 'TDiscussionmessageContent'
+        }
+
+        /// <summary>
+        /// Test the property 'SDiscussionmessageCreatorname'
+        /// </summary>
+        [Fact]
+        public void SDiscussionmessageCreatornameTest()
+        {
+            // TODO unit test for the property 'SDiscussionmessageCreatorname'
+        }
+
+        /// <summary>
+        /// Test the property 'SDiscussionmessageActionrequiredname'
+        /// </summary>
+        [Fact]
+        public void SDiscussionmessageActionrequirednameTest()
+        {
+            // TODO unit test for the property 'SDiscussionmessageActionrequiredname'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Fact]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
     }
 }

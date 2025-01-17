@@ -54,5 +54,59 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigndiscussionRequestCompound
             //Assert.IsType<EzsigndiscussionRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsigndiscussionID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigndiscussionIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigndiscussionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigndiscussionPagenumber'
+        /// </summary>
+        [Fact]
+        public void IEzsigndiscussionPagenumberTest()
+        {
+            // TODO unit test for the property 'IEzsigndiscussionPagenumber'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigndiscussionX'
+        /// </summary>
+        [Fact]
+        public void IEzsigndiscussionXTest()
+        {
+            // TODO unit test for the property 'IEzsigndiscussionX'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigndiscussionY'
+        /// </summary>
+        [Fact]
+        public void IEzsigndiscussionYTest()
+        {
+            // TODO unit test for the property 'IEzsigndiscussionY'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjDiscussion'
+        /// </summary>
+        [Fact]
+        public void ObjDiscussionTest()
+        {
+            // TODO unit test for the property 'ObjDiscussion'
+        }
     }
 }

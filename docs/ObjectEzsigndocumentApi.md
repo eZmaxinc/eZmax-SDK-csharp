@@ -41,7 +41,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsigndocumentapplyezsigntemplatev1"></a>
 # **EzsigndocumentApplyEzsigntemplateV1**
-> CommonResponse EzsigndocumentApplyEzsigntemplateV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request)
+> EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request)
 
 Apply an Ezsigntemplate to the Ezsigndocument.
 
@@ -75,7 +75,7 @@ namespace Example
             try
             {
                 // Apply an Ezsigntemplate to the Ezsigndocument.
-                CommonResponse result = apiInstance.EzsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+                EzsigndocumentApplyEzsigntemplateV1Response result = apiInstance.EzsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -96,7 +96,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Apply an Ezsigntemplate to the Ezsigndocument.
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+    ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> response = apiInstance.EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -118,7 +118,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentApplyEzsigntemplateV1Response**](EzsigndocumentApplyEzsigntemplateV1Response.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentdeclinetosignv1"></a>
 # **EzsigndocumentDeclineToSignV1**
-> CommonResponse EzsigndocumentDeclineToSignV1 (int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request)
+> EzsigndocumentDeclineToSignV1Response EzsigndocumentDeclineToSignV1 (int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request)
 
 Decline to sign
 
@@ -767,7 +767,7 @@ namespace Example
             try
             {
                 // Decline to sign
-                CommonResponse result = apiInstance.EzsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+                EzsigndocumentDeclineToSignV1Response result = apiInstance.EzsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -788,7 +788,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Decline to sign
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+    ApiResponse<EzsigndocumentDeclineToSignV1Response> response = apiInstance.EzsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -810,7 +810,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentDeclineToSignV1Response**](EzsigndocumentDeclineToSignV1Response.md)
 
 ### Authorization
 
@@ -833,7 +833,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentdeleteobjectv1"></a>
 # **EzsigndocumentDeleteObjectV1**
-> CommonResponse EzsigndocumentDeleteObjectV1 (int pkiEzsigndocumentID)
+> EzsigndocumentDeleteObjectV1Response EzsigndocumentDeleteObjectV1 (int pkiEzsigndocumentID)
 
 Delete an existing Ezsigndocument
 
@@ -864,7 +864,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigndocument
-                CommonResponse result = apiInstance.EzsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+                EzsigndocumentDeleteObjectV1Response result = apiInstance.EzsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -885,7 +885,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigndocument
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
+    ApiResponse<EzsigndocumentDeleteObjectV1Response> response = apiInstance.EzsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -906,7 +906,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentDeleteObjectV1Response**](EzsigndocumentDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -1327,7 +1327,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentendprematurelyv1"></a>
 # **EzsigndocumentEndPrematurelyV1**
-> CommonResponse EzsigndocumentEndPrematurelyV1 (int pkiEzsigndocumentID, Object body)
+> EzsigndocumentEndPrematurelyV1Response EzsigndocumentEndPrematurelyV1 (int pkiEzsigndocumentID, Object body)
 
 End prematurely
 
@@ -1361,7 +1361,7 @@ namespace Example
             try
             {
                 // End prematurely
-                CommonResponse result = apiInstance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
+                EzsigndocumentEndPrematurelyV1Response result = apiInstance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1382,7 +1382,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // End prematurely
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
+    ApiResponse<EzsigndocumentEndPrematurelyV1Response> response = apiInstance.EzsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1404,7 +1404,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentEndPrematurelyV1Response**](EzsigndocumentEndPrematurelyV1Response.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentflattenv1"></a>
 # **EzsigndocumentFlattenV1**
-> CommonResponse EzsigndocumentFlattenV1 (int pkiEzsigndocumentID, Object body)
+> EzsigndocumentFlattenV1Response EzsigndocumentFlattenV1 (int pkiEzsigndocumentID, Object body)
 
 Flatten
 
@@ -1561,7 +1561,7 @@ namespace Example
             try
             {
                 // Flatten
-                CommonResponse result = apiInstance.EzsigndocumentFlattenV1(pkiEzsigndocumentID, body);
+                EzsigndocumentFlattenV1Response result = apiInstance.EzsigndocumentFlattenV1(pkiEzsigndocumentID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1582,7 +1582,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Flatten
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
+    ApiResponse<EzsigndocumentFlattenV1Response> response = apiInstance.EzsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1604,7 +1604,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentFlattenV1Response**](EzsigndocumentFlattenV1Response.md)
 
 ### Authorization
 
@@ -3078,7 +3078,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentpatchobjectv1"></a>
 # **EzsigndocumentPatchObjectV1**
-> CommonResponse EzsigndocumentPatchObjectV1 (int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request)
+> EzsigndocumentPatchObjectV1Response EzsigndocumentPatchObjectV1 (int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request)
 
 Patch an existing Ezsigndocument
 
@@ -3110,7 +3110,7 @@ namespace Example
             try
             {
                 // Patch an existing Ezsigndocument
-                CommonResponse result = apiInstance.EzsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+                EzsigndocumentPatchObjectV1Response result = apiInstance.EzsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3131,7 +3131,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Patch an existing Ezsigndocument
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+    ApiResponse<EzsigndocumentPatchObjectV1Response> response = apiInstance.EzsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3153,7 +3153,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
 
 ### Authorization
 
@@ -3176,7 +3176,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentsubmitezsignformv1"></a>
 # **EzsigndocumentSubmitEzsignformV1**
-> CommonResponse EzsigndocumentSubmitEzsignformV1 (int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request)
+> EzsigndocumentSubmitEzsignformV1Response EzsigndocumentSubmitEzsignformV1 (int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request)
 
 Submit the Ezsignform
 
@@ -3208,7 +3208,7 @@ namespace Example
             try
             {
                 // Submit the Ezsignform
-                CommonResponse result = apiInstance.EzsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+                EzsigndocumentSubmitEzsignformV1Response result = apiInstance.EzsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3229,7 +3229,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Submit the Ezsignform
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+    ApiResponse<EzsigndocumentSubmitEzsignformV1Response> response = apiInstance.EzsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3251,7 +3251,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentSubmitEzsignformV1Response**](EzsigndocumentSubmitEzsignformV1Response.md)
 
 ### Authorization
 
@@ -3274,7 +3274,7 @@ catch (ApiException e)
 
 <a id="ezsigndocumentunsendv1"></a>
 # **EzsigndocumentUnsendV1**
-> CommonResponse EzsigndocumentUnsendV1 (int pkiEzsigndocumentID, Object body)
+> EzsigndocumentUnsendV1Response EzsigndocumentUnsendV1 (int pkiEzsigndocumentID, Object body)
 
 Unsend the Ezsigndocument
 
@@ -3308,7 +3308,7 @@ namespace Example
             try
             {
                 // Unsend the Ezsigndocument
-                CommonResponse result = apiInstance.EzsigndocumentUnsendV1(pkiEzsigndocumentID, body);
+                EzsigndocumentUnsendV1Response result = apiInstance.EzsigndocumentUnsendV1(pkiEzsigndocumentID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3329,7 +3329,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Unsend the Ezsigndocument
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
+    ApiResponse<EzsigndocumentUnsendV1Response> response = apiInstance.EzsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3351,7 +3351,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndocumentUnsendV1Response**](EzsigndocumentUnsendV1Response.md)
 
 ### Authorization
 

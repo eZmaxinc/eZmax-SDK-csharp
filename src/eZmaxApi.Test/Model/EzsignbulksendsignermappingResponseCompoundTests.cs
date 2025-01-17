@@ -54,5 +54,41 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsignbulksendsignermappingResponseCompound
             //Assert.IsType<EzsignbulksendsignermappingResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsignbulksendsignermappingID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsignbulksendsignermappingIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignbulksendsignermappingID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignbulksendID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignbulksendIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignbulksendID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignbulksendsignermappingDescription'
+        /// </summary>
+        [Fact]
+        public void SEzsignbulksendsignermappingDescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsignbulksendsignermappingDescription'
+        }
     }
 }

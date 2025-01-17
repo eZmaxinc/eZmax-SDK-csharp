@@ -5,7 +5,9 @@ Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MPayload** | [**EzsigndocumentResponseCompound**](EzsigndocumentResponseCompound.md) | Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID} | 
+**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**MPayload** | [**EzsigndocumentGetObjectV1ResponseMPayload**](EzsigndocumentGetObjectV1ResponseMPayload.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

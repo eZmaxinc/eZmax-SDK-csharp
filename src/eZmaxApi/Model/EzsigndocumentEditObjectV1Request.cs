@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigndocumentEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objEzsigndocument">An Ezsigndocument Object and children to create a complete structure (required).</param>
-        public EzsigndocumentEditObjectV1Request(EzsigndocumentRequest objEzsigndocument = default(EzsigndocumentRequest))
+        /// <param name="objEzsigndocument">objEzsigndocument (required).</param>
+        public EzsigndocumentEditObjectV1Request(EzsigndocumentRequestCompound objEzsigndocument = default(EzsigndocumentRequestCompound))
         {
             // to ensure "objEzsigndocument" is required (not null)
             if (objEzsigndocument == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// An Ezsigndocument Object and children to create a complete structure
+        /// Gets or Sets ObjEzsigndocument
         /// </summary>
-        /// <value>An Ezsigndocument Object and children to create a complete structure</value>
         [DataMember(Name = "objEzsigndocument", IsRequired = true, EmitDefaultValue = true)]
-        public EzsigndocumentRequest ObjEzsigndocument { get; set; }
+        public EzsigndocumentRequestCompound ObjEzsigndocument { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

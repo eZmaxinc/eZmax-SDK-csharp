@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// This is a debug object containing debugging information on the actual function
     /// </summary>
     [DataContract(Name = "Common-Response-objDebugPayload_getList")]
-    public partial class CommonResponseObjDebugPayloadGetList : CommonResponseObjDebugPayload, IValidatableObject
+    public partial class CommonResponseObjDebugPayloadGetList : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
@@ -40,17 +40,32 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonResponseObjDebugPayloadGetList" /> class.
         /// </summary>
-        /// <param name="aFilter">aFilter (required).</param>
-        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
-        /// <param name="iRowMax">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
-        /// <param name="iRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
         /// <param name="iVersionMin">The minimum version of the function that can be called (required).</param>
         /// <param name="iVersionMax">The maximum version of the function that can be called (required).</param>
         /// <param name="aRequiredPermission">An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them. (required).</param>
         /// <param name="bVersionDeprecated">Wheter the current route is deprecated or not (required).</param>
         /// <param name="dtResponseDate">Represent a Date Time. The timezone is the one configured in the User&#39;s profile. (required).</param>
-        public CommonResponseObjDebugPayloadGetList(CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0, int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), string dtResponseDate = default(string)) : base()
+        /// <param name="aFilter">aFilter (required).</param>
+        /// <param name="aOrderBy">List of available values for *eOrderBy* (required).</param>
+        /// <param name="iRowMax">The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned. (required).</param>
+        /// <param name="iRowOffset">The starting element from where to start retrieving the results. For example if you started at iRowOffset&#x3D;0 and asked for iRowMax&#x3D;100, to get the next 100 results, you could specify iRowOffset&#x3D;100&amp;iRowMax&#x3D;100, (required) (default to 0).</param>
+        public CommonResponseObjDebugPayloadGetList(int iVersionMin = default(int), int iVersionMax = default(int), List<int> aRequiredPermission = default(List<int>), bool bVersionDeprecated = default(bool), string dtResponseDate = default(string), CommonResponseFilter aFilter = default(CommonResponseFilter), Dictionary<string, string> aOrderBy = default(Dictionary<string, string>), int iRowMax = default(int), int iRowOffset = 0)
         {
+            this.IVersionMin = iVersionMin;
+            this.IVersionMax = iVersionMax;
+            // to ensure "aRequiredPermission" is required (not null)
+            if (aRequiredPermission == null)
+            {
+                throw new ArgumentNullException("aRequiredPermission is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+            }
+            this.ARequiredPermission = aRequiredPermission;
+            this.BVersionDeprecated = bVersionDeprecated;
+            // to ensure "dtResponseDate" is required (not null)
+            if (dtResponseDate == null)
+            {
+                throw new ArgumentNullException("dtResponseDate is a required property for CommonResponseObjDebugPayloadGetList and cannot be null");
+            }
+            this.DtResponseDate = dtResponseDate;
             // to ensure "aFilter" is required (not null)
             if (aFilter == null)
             {
@@ -66,6 +81,45 @@ namespace eZmaxApi.Model
             this.IRowMax = iRowMax;
             this.IRowOffset = iRowOffset;
         }
+
+        /// <summary>
+        /// The minimum version of the function that can be called
+        /// </summary>
+        /// <value>The minimum version of the function that can be called</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iVersionMin", IsRequired = true, EmitDefaultValue = true)]
+        public int IVersionMin { get; set; }
+
+        /// <summary>
+        /// The maximum version of the function that can be called
+        /// </summary>
+        /// <value>The maximum version of the function that can be called</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "iVersionMax", IsRequired = true, EmitDefaultValue = true)]
+        public int IVersionMax { get; set; }
+
+        /// <summary>
+        /// An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.
+        /// </summary>
+        /// <value>An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.</value>
+        [DataMember(Name = "a_RequiredPermission", IsRequired = true, EmitDefaultValue = true)]
+        public List<int> ARequiredPermission { get; set; }
+
+        /// <summary>
+        /// Wheter the current route is deprecated or not
+        /// </summary>
+        /// <value>Wheter the current route is deprecated or not</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bVersionDeprecated", IsRequired = true, EmitDefaultValue = true)]
+        public bool BVersionDeprecated { get; set; }
+
+        /// <summary>
+        /// Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+        /// </summary>
+        /// <value>Represent a Date Time. The timezone is the one configured in the User&#39;s profile.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtResponseDate", IsRequired = true, EmitDefaultValue = true)]
+        public string DtResponseDate { get; set; }
 
         /// <summary>
         /// Gets or Sets AFilter
@@ -104,7 +158,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommonResponseObjDebugPayloadGetList {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  IVersionMin: ").Append(IVersionMin).Append("\n");
+            sb.Append("  IVersionMax: ").Append(IVersionMax).Append("\n");
+            sb.Append("  ARequiredPermission: ").Append(ARequiredPermission).Append("\n");
+            sb.Append("  BVersionDeprecated: ").Append(BVersionDeprecated).Append("\n");
+            sb.Append("  DtResponseDate: ").Append(DtResponseDate).Append("\n");
             sb.Append("  AFilter: ").Append(AFilter).Append("\n");
             sb.Append("  AOrderBy: ").Append(AOrderBy).Append("\n");
             sb.Append("  IRowMax: ").Append(IRowMax).Append("\n");
@@ -117,7 +175,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -129,20 +187,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             // IRowMax (int) maximum
             if (this.IRowMax > (int)10000)
             {

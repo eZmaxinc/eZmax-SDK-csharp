@@ -54,5 +54,32 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" BillingentityinternalproductRequestCompound
             //Assert.IsType<BillingentityinternalproductRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiBillingentityinternalproductID'
+        /// </summary>
+        [Fact]
+        public void PkiBillingentityinternalproductIDTest()
+        {
+            // TODO unit test for the property 'PkiBillingentityinternalproductID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxproductID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxproductIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxproductID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBillingentityexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiBillingentityexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiBillingentityexternalID'
+        }
     }
 }

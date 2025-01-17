@@ -54,5 +54,41 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" UsergroupmembershipRequestCompound
             //Assert.IsType<UsergroupmembershipRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiUsergroupmembershipID'
+        /// </summary>
+        [Fact]
+        public void PkiUsergroupmembershipIDTest()
+        {
+            // TODO unit test for the property 'PkiUsergroupmembershipID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupexternalID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupexternalIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupexternalID'
+        }
     }
 }

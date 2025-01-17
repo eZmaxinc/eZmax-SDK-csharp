@@ -56,6 +56,159 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzsigntemplateformfieldgroupID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigntemplateformfieldgroupIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigntemplateformfieldgroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatedocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldgroupType'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldgroupTypeTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldgroupType'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldgroupSignerrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldgroupSignerrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldgroupSignerrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplateformfieldgroupLabel'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateformfieldgroupLabelTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateformfieldgroupLabel'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldgroupStep'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldgroupStepTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldgroupStep'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplateformfieldgroupDefaultvalue'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateformfieldgroupDefaultvalueTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateformfieldgroupDefaultvalue'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldgroupFilledmin'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldgroupFilledminTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldgroupFilledmin'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldgroupFilledmax'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldgroupFilledmaxTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldgroupFilledmax'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplateformfieldgroupReadonly'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplateformfieldgroupReadonlyTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplateformfieldgroupReadonly'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplateformfieldgroupMaxlength'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplateformfieldgroupMaxlengthTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplateformfieldgroupMaxlength'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplateformfieldgroupEncrypted'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplateformfieldgroupEncryptedTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplateformfieldgroupEncrypted'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplateformfieldgroupRegexp'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateformfieldgroupRegexpTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateformfieldgroupRegexp'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplateformfieldgroupTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplateformfieldgroupTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplateformfieldgroupTextvalidationcustommessage'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldgroupTextvalidation'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldgroupTextvalidationTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldgroupTextvalidation'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzsigntemplateformfieldgroupTooltip'
+        /// </summary>
+        [Fact]
+        public void TEzsigntemplateformfieldgroupTooltipTest()
+        {
+            // TODO unit test for the property 'TEzsigntemplateformfieldgroupTooltip'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplateformfieldgroupTooltipposition'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplateformfieldgroupTooltippositionTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplateformfieldgroupTooltipposition'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzsigntemplateformfieldgroupsigner'
         /// </summary>
         [Fact]

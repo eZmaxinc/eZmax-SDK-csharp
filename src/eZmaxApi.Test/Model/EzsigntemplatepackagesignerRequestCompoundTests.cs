@@ -54,5 +54,77 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigntemplatepackagesignerRequestCompound
             //Assert.IsType<EzsigntemplatepackagesignerRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsigntemplatepackagesignerID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigntemplatepackagesignerIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigntemplatepackagesignerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatepackageID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatepackageIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatepackageID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzdoctemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzdoctemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzdoctemplatedocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatepackagesignerReceivecopy'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatepackagesignerReceivecopyTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatepackagesignerReceivecopy'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatepackagesignerMapping'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatepackagesignerMappingTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatepackagesignerMapping'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatepackagesignerDescription'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatepackagesignerDescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatepackagesignerDescription'
+        }
     }
 }

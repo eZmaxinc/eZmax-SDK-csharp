@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryinternaldetail Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingsummaryinternaldetail-ResponseCompound")]
-    public partial class EzmaxinvoicingsummaryinternaldetailResponseCompound : EzmaxinvoicingsummaryinternaldetailResponse, IValidatableObject
+    public partial class EzmaxinvoicingsummaryinternaldetailResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternaldetailResponseCompound" /> class.
@@ -52,9 +52,152 @@ namespace eZmaxApi.Model
         /// <param name="dEzmaxinvoicingsummaryinternaldetailTotal">The total invoiced for the product (required).</param>
         /// <param name="bEzmaxinvoicingsummaryinternaldetailAdjustment">Whether if it&#39;s an adjustment (required).</param>
         /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
-        public EzmaxinvoicingsummaryinternaldetailResponseCompound(int pkiEzmaxinvoicingsummaryinternaldetailID = default(int), int fkiEzmaxinvoicingsummaryinternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string dEzmaxinvoicingsummaryinternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryinternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryinternaldetailRebate = default(string), string dEzmaxinvoicingsummaryinternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryinternaldetailAdjustment = default(bool), string tEzmaxproductHelpX = default(string)) : base()
+        public EzmaxinvoicingsummaryinternaldetailResponseCompound(int pkiEzmaxinvoicingsummaryinternaldetailID = default(int), int fkiEzmaxinvoicingsummaryinternalID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), int fkiBillingentityexternalID = default(int), string sBillingentityexternalDescription = default(string), string dEzmaxinvoicingsummaryinternaldetailCountreal = default(string), string dEzmaxinvoicingsummaryinternaldetailSubtotal = default(string), string dEzmaxinvoicingsummaryinternaldetailRebate = default(string), string dEzmaxinvoicingsummaryinternaldetailTotal = default(string), bool bEzmaxinvoicingsummaryinternaldetailAdjustment = default(bool), string tEzmaxproductHelpX = default(string))
         {
+            this.FkiEzmaxproductID = fkiEzmaxproductID;
+            // to ensure "sEzmaxproductDescriptionX" is required (not null)
+            if (sEzmaxproductDescriptionX == null)
+            {
+                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
+            // to ensure "sBillingentityexternalDescription" is required (not null)
+            if (sBillingentityexternalDescription == null)
+            {
+                throw new ArgumentNullException("sBillingentityexternalDescription is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.SBillingentityexternalDescription = sBillingentityexternalDescription;
+            // to ensure "dEzmaxinvoicingsummaryinternaldetailCountreal" is required (not null)
+            if (dEzmaxinvoicingsummaryinternaldetailCountreal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryinternaldetailCountreal is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryinternaldetailCountreal = dEzmaxinvoicingsummaryinternaldetailCountreal;
+            // to ensure "dEzmaxinvoicingsummaryinternaldetailSubtotal" is required (not null)
+            if (dEzmaxinvoicingsummaryinternaldetailSubtotal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryinternaldetailSubtotal is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryinternaldetailSubtotal = dEzmaxinvoicingsummaryinternaldetailSubtotal;
+            // to ensure "dEzmaxinvoicingsummaryinternaldetailRebate" is required (not null)
+            if (dEzmaxinvoicingsummaryinternaldetailRebate == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryinternaldetailRebate is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryinternaldetailRebate = dEzmaxinvoicingsummaryinternaldetailRebate;
+            // to ensure "dEzmaxinvoicingsummaryinternaldetailTotal" is required (not null)
+            if (dEzmaxinvoicingsummaryinternaldetailTotal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryinternaldetailTotal is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryinternaldetailTotal = dEzmaxinvoicingsummaryinternaldetailTotal;
+            this.BEzmaxinvoicingsummaryinternaldetailAdjustment = bEzmaxinvoicingsummaryinternaldetailAdjustment;
+            // to ensure "tEzmaxproductHelpX" is required (not null)
+            if (tEzmaxproductHelpX == null)
+            {
+                throw new ArgumentNullException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryinternaldetailResponseCompound and cannot be null");
+            }
+            this.TEzmaxproductHelpX = tEzmaxproductHelpX;
+            this.PkiEzmaxinvoicingsummaryinternaldetailID = pkiEzmaxinvoicingsummaryinternaldetailID;
+            this.FkiEzmaxinvoicingsummaryinternalID = fkiEzmaxinvoicingsummaryinternalID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicingsummaryinternaldetail
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicingsummaryinternaldetail</value>
+        /* <example>73</example>*/
+        [DataMember(Name = "pkiEzmaxinvoicingsummaryinternaldetailID", EmitDefaultValue = false)]
+        public int PkiEzmaxinvoicingsummaryinternaldetailID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicingsummaryinternal
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicingsummaryinternal</value>
+        /* <example>57</example>*/
+        [DataMember(Name = "fkiEzmaxinvoicingsummaryinternalID", EmitDefaultValue = false)]
+        public int FkiEzmaxinvoicingsummaryinternalID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxproduct
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxproduct</value>
+        /* <example>172</example>*/
+        [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzmaxproductID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The description of the Ezmaxproduct in the language of the requester</value>
+        /* <example>eZmax (License)</example>*/
+        [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzmaxproductDescriptionX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityexternal
+        /// </summary>
+        /// <value>The unique ID of the Billingentityexternal</value>
+        /* <example>83</example>*/
+        [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiBillingentityexternalID { get; set; }
+
+        /// <summary>
+        /// The description of the Billingentityexternal
+        /// </summary>
+        /// <value>The description of the Billingentityexternal</value>
+        /* <example>ACME Inc</example>*/
+        [DataMember(Name = "sBillingentityexternalDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SBillingentityexternalDescription { get; set; }
+
+        /// <summary>
+        /// The count item invoiced for the product
+        /// </summary>
+        /// <value>The count item invoiced for the product</value>
+        /* <example>350.32</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryinternaldetailCountreal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryinternaldetailCountreal { get; set; }
+
+        /// <summary>
+        /// The subtotal invoiced for the product
+        /// </summary>
+        /// <value>The subtotal invoiced for the product</value>
+        /* <example>625.41</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryinternaldetailSubtotal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryinternaldetailSubtotal { get; set; }
+
+        /// <summary>
+        /// The rebate for the product
+        /// </summary>
+        /// <value>The rebate for the product</value>
+        /* <example>560.81</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryinternaldetailRebate", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryinternaldetailRebate { get; set; }
+
+        /// <summary>
+        /// The total invoiced for the product
+        /// </summary>
+        /// <value>The total invoiced for the product</value>
+        /* <example>510.77</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryinternaldetailTotal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryinternaldetailTotal { get; set; }
+
+        /// <summary>
+        /// Whether if it&#39;s an adjustment
+        /// </summary>
+        /// <value>Whether if it&#39;s an adjustment</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzmaxinvoicingsummaryinternaldetailAdjustment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzmaxinvoicingsummaryinternaldetailAdjustment { get; set; }
+
+        /// <summary>
+        /// The help message of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
+        /* <example>This is an exemple of help message</example>*/
+        [DataMember(Name = "tEzmaxproductHelpX", IsRequired = true, EmitDefaultValue = true)]
+        public string TEzmaxproductHelpX { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,7 +207,18 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicingsummaryinternaldetailResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzmaxinvoicingsummaryinternaldetailID: ").Append(PkiEzmaxinvoicingsummaryinternaldetailID).Append("\n");
+            sb.Append("  FkiEzmaxinvoicingsummaryinternalID: ").Append(FkiEzmaxinvoicingsummaryinternalID).Append("\n");
+            sb.Append("  FkiEzmaxproductID: ").Append(FkiEzmaxproductID).Append("\n");
+            sb.Append("  SEzmaxproductDescriptionX: ").Append(SEzmaxproductDescriptionX).Append("\n");
+            sb.Append("  FkiBillingentityexternalID: ").Append(FkiBillingentityexternalID).Append("\n");
+            sb.Append("  SBillingentityexternalDescription: ").Append(SBillingentityexternalDescription).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryinternaldetailCountreal: ").Append(DEzmaxinvoicingsummaryinternaldetailCountreal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryinternaldetailSubtotal: ").Append(DEzmaxinvoicingsummaryinternaldetailSubtotal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryinternaldetailRebate: ").Append(DEzmaxinvoicingsummaryinternaldetailRebate).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryinternaldetailTotal: ").Append(DEzmaxinvoicingsummaryinternaldetailTotal).Append("\n");
+            sb.Append("  BEzmaxinvoicingsummaryinternaldetailAdjustment: ").Append(BEzmaxinvoicingsummaryinternaldetailAdjustment).Append("\n");
+            sb.Append("  TEzmaxproductHelpX: ").Append(TEzmaxproductHelpX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,7 +227,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -85,20 +239,66 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzmaxinvoicingsummaryinternaldetailID (int) minimum
+            if (this.PkiEzmaxinvoicingsummaryinternaldetailID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryinternaldetailID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryinternaldetailID" });
             }
+
+            // FkiEzmaxinvoicingsummaryinternalID (int) minimum
+            if (this.FkiEzmaxinvoicingsummaryinternalID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryinternalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryinternalID" });
+            }
+
+            // FkiEzmaxproductID (int) minimum
+            if (this.FkiEzmaxproductID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+            }
+
+            // FkiBillingentityexternalID (int) minimum
+            if (this.FkiBillingentityexternalID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+            }
+
+            if (this.DEzmaxinvoicingsummaryinternaldetailCountreal != null) {
+                // DEzmaxinvoicingsummaryinternaldetailCountreal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryinternaldetailCountreal = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryinternaldetailCountreal.Match(this.DEzmaxinvoicingsummaryinternaldetailCountreal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailCountreal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailCountreal, new [] { "DEzmaxinvoicingsummaryinternaldetailCountreal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryinternaldetailSubtotal != null) {
+                // DEzmaxinvoicingsummaryinternaldetailSubtotal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryinternaldetailSubtotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryinternaldetailSubtotal.Match(this.DEzmaxinvoicingsummaryinternaldetailSubtotal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailSubtotal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailSubtotal, new [] { "DEzmaxinvoicingsummaryinternaldetailSubtotal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryinternaldetailRebate != null) {
+                // DEzmaxinvoicingsummaryinternaldetailRebate (string) pattern
+                Regex regexDEzmaxinvoicingsummaryinternaldetailRebate = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryinternaldetailRebate.Match(this.DEzmaxinvoicingsummaryinternaldetailRebate).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailRebate, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailRebate, new [] { "DEzmaxinvoicingsummaryinternaldetailRebate" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryinternaldetailTotal != null) {
+                // DEzmaxinvoicingsummaryinternaldetailTotal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryinternaldetailTotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryinternaldetailTotal.Match(this.DEzmaxinvoicingsummaryinternaldetailTotal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryinternaldetailTotal, must match a pattern of " + regexDEzmaxinvoicingsummaryinternaldetailTotal, new [] { "DEzmaxinvoicingsummaryinternaldetailTotal" });
+                }
+            }
+
             yield break;
         }
     }

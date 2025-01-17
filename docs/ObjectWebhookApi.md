@@ -112,7 +112,7 @@ catch (ApiException e)
 
 <a id="webhookdeleteobjectv1"></a>
 # **WebhookDeleteObjectV1**
-> CommonResponse WebhookDeleteObjectV1 (int pkiWebhookID)
+> WebhookDeleteObjectV1Response WebhookDeleteObjectV1 (int pkiWebhookID)
 
 Delete an existing Webhook
 
@@ -143,7 +143,7 @@ namespace Example
             try
             {
                 // Delete an existing Webhook
-                CommonResponse result = apiInstance.WebhookDeleteObjectV1(pkiWebhookID);
+                WebhookDeleteObjectV1Response result = apiInstance.WebhookDeleteObjectV1(pkiWebhookID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -164,7 +164,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Webhook
-    ApiResponse<CommonResponse> response = apiInstance.WebhookDeleteObjectV1WithHttpInfo(pkiWebhookID);
+    ApiResponse<WebhookDeleteObjectV1Response> response = apiInstance.WebhookDeleteObjectV1WithHttpInfo(pkiWebhookID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -185,7 +185,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**WebhookDeleteObjectV1Response**](WebhookDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="webhookeditobjectv1"></a>
 # **WebhookEditObjectV1**
-> CommonResponse WebhookEditObjectV1 (int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request)
+> WebhookEditObjectV1Response WebhookEditObjectV1 (int pkiWebhookID, WebhookEditObjectV1Request webhookEditObjectV1Request)
 
 Edit an existing Webhook
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // Edit an existing Webhook
-                CommonResponse result = apiInstance.WebhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
+                WebhookEditObjectV1Response result = apiInstance.WebhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -260,7 +260,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Webhook
-    ApiResponse<CommonResponse> response = apiInstance.WebhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request);
+    ApiResponse<WebhookEditObjectV1Response> response = apiInstance.WebhookEditObjectV1WithHttpInfo(pkiWebhookID, webhookEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**WebhookEditObjectV1Response**](WebhookEditObjectV1Response.md)
 
 ### Authorization
 
@@ -699,7 +699,7 @@ catch (ApiException e)
 
 <a id="webhooksendwebhookv1"></a>
 # **WebhookSendWebhookV1**
-> CommonResponse WebhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request)
+> WebhookSendWebhookV1Response WebhookSendWebhookV1 (WebhookSendWebhookV1Request webhookSendWebhookV1Request)
 
 Emit a Webhook event
 
@@ -730,7 +730,7 @@ namespace Example
             try
             {
                 // Emit a Webhook event
-                CommonResponse result = apiInstance.WebhookSendWebhookV1(webhookSendWebhookV1Request);
+                WebhookSendWebhookV1Response result = apiInstance.WebhookSendWebhookV1(webhookSendWebhookV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -751,7 +751,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Emit a Webhook event
-    ApiResponse<CommonResponse> response = apiInstance.WebhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
+    ApiResponse<WebhookSendWebhookV1Response> response = apiInstance.WebhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -772,7 +772,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**WebhookSendWebhookV1Response**](WebhookSendWebhookV1Response.md)
 
 ### Authorization
 
@@ -794,7 +794,7 @@ catch (ApiException e)
 
 <a id="webhooktestv1"></a>
 # **WebhookTestV1**
-> CommonResponse WebhookTestV1 (int pkiWebhookID, Object body)
+> WebhookTestV1Response WebhookTestV1 (int pkiWebhookID, Object body)
 
 Test the Webhook by calling the Url
 
@@ -826,7 +826,7 @@ namespace Example
             try
             {
                 // Test the Webhook by calling the Url
-                CommonResponse result = apiInstance.WebhookTestV1(pkiWebhookID, body);
+                WebhookTestV1Response result = apiInstance.WebhookTestV1(pkiWebhookID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -847,7 +847,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Test the Webhook by calling the Url
-    ApiResponse<CommonResponse> response = apiInstance.WebhookTestV1WithHttpInfo(pkiWebhookID, body);
+    ApiResponse<WebhookTestV1Response> response = apiInstance.WebhookTestV1WithHttpInfo(pkiWebhookID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -869,7 +869,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**WebhookTestV1Response**](WebhookTestV1Response.md)
 
 ### Authorization
 

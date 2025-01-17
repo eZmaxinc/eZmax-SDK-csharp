@@ -6,7 +6,7 @@ Request for POST /1/object/ezsignfolder
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjEzsignfolder** | [**EzsignfolderRequest**](EzsignfolderRequest.md) |  | [optional] 
-**ObjEzsignfolderCompound** | [**EzsignfolderRequest**](EzsignfolderRequest.md) | An Ezsignfolder Object and children to create a complete structure | [optional] 
+**ObjEzsignfolderCompound** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

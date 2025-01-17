@@ -54,5 +54,113 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigntemplatedocumentRequestCompound
             //Assert.IsType<EzsigntemplatedocumentRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsigntemplatedocumentID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigntemplatedocumentIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigntemplatedocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplateID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplateIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplateID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatesignerID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatesignerIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatesignerID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatedocumentName'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatedocumentNameTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatedocumentName'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatedocumentSource'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatedocumentSourceTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatedocumentSource'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatedocumentFormat'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatedocumentFormatTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatedocumentFormat'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatedocumentBase64'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatedocumentBase64Test()
+        {
+            // TODO unit test for the property 'SEzsigntemplatedocumentBase64'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatedocumentUrl'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatedocumentUrlTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatedocumentUrl'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsigntemplatedocumentForcerepair'
+        /// </summary>
+        [Fact]
+        public void BEzsigntemplatedocumentForcerepairTest()
+        {
+            // TODO unit test for the property 'BEzsigntemplatedocumentForcerepair'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsigntemplatedocumentForm'
+        /// </summary>
+        [Fact]
+        public void EEzsigntemplatedocumentFormTest()
+        {
+            // TODO unit test for the property 'EEzsigntemplatedocumentForm'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsigntemplatedocumentPassword'
+        /// </summary>
+        [Fact]
+        public void SEzsigntemplatedocumentPasswordTest()
+        {
+            // TODO unit test for the property 'SEzsigntemplatedocumentPassword'
+        }
     }
 }

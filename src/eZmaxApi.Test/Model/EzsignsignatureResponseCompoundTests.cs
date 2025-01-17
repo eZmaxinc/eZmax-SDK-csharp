@@ -56,6 +56,339 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzsignsignatureID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsignsignatureIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignsignatureID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignfoldersignerassociationID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignfoldersignerassociationIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignfoldersignerassociationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignsigningreasonID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignsigningreasonIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignsigningreasonID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFontID'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDTest()
+        {
+            // TODO unit test for the property 'FkiFontID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsigningreasonDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SEzsignsigningreasonDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzsignsigningreasonDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignpagePagenumber'
+        /// </summary>
+        [Fact]
+        public void IEzsignpagePagenumberTest()
+        {
+            // TODO unit test for the property 'IEzsignpagePagenumber'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureX'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureXTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureX'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureY'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureYTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureY'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureHeight'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureHeightTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureHeight'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureWidth'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureWidthTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureWidth'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureStep'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureStepTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureStep'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureStepadjusted'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureStepadjustedTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureStepadjusted'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureType'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureTypeTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureType'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzsignsignatureTooltip'
+        /// </summary>
+        [Fact]
+        public void TEzsignsignatureTooltipTest()
+        {
+            // TODO unit test for the property 'TEzsignsignatureTooltip'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureTooltipposition'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureTooltippositionTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureTooltipposition'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureFont'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureFontTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureFont'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureValidationstep'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureValidationstepTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureValidationstep'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureAttachmentdescription'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureAttachmentdescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureAttachmentdescription'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureAttachmentnamesource'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureAttachmentnamesourceTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureAttachmentnamesource'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureConsultationtrigger'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureConsultationtriggerTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureConsultationtrigger'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureHandwritten'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureHandwrittenTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureHandwritten'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureReason'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureReasonTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureReason'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzsignsignatureRequired'
+        /// </summary>
+        [Fact]
+        public void BEzsignsignatureRequiredTest()
+        {
+            // TODO unit test for the property 'BEzsignsignatureRequired'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignfoldersignerassociationIDValidation'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignfoldersignerassociationIDValidationTest()
+        {
+            // TODO unit test for the property 'FkiEzsignfoldersignerassociationIDValidation'
+        }
+
+        /// <summary>
+        /// Test the property 'DtEzsignsignatureDate'
+        /// </summary>
+        [Fact]
+        public void DtEzsignsignatureDateTest()
+        {
+            // TODO unit test for the property 'DtEzsignsignatureDate'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureattachmentCount'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureattachmentCountTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureattachmentCount'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureDescription'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureDescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignsignatureMaxlength'
+        /// </summary>
+        [Fact]
+        public void IEzsignsignatureMaxlengthTest()
+        {
+            // TODO unit test for the property 'IEzsignsignatureMaxlength'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureTextvalidation'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureTextvalidationTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureTextvalidation'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureTextvalidationcustommessage'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureTextvalidationcustommessageTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureTextvalidationcustommessage'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignatureDependencyrequirement'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignatureDependencyrequirementTest()
+        {
+            // TODO unit test for the property 'EEzsignsignatureDependencyrequirement'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureDefaultvalue'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureDefaultvalueTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureDefaultvalue'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignatureRegexp'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignatureRegexpTest()
+        {
+            // TODO unit test for the property 'SEzsignsignatureRegexp'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjContactName'
+        /// </summary>
+        [Fact]
+        public void ObjContactNameTest()
+        {
+            // TODO unit test for the property 'ObjContactName'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjContactNameDelegation'
+        /// </summary>
+        [Fact]
+        public void ObjContactNameDelegationTest()
+        {
+            // TODO unit test for the property 'ObjContactNameDelegation'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjSignature'
+        /// </summary>
+        [Fact]
+        public void ObjSignatureTest()
+        {
+            // TODO unit test for the property 'ObjSignature'
+        }
+
+        /// <summary>
         /// Test the property 'DtEzsignsignatureDateInFolderTimezone'
         /// </summary>
         [Fact]

@@ -56,6 +56,555 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiAttachmentID'
+        /// </summary>
+        [Fact]
+        public void PkiAttachmentIDTest()
+        {
+            // TODO unit test for the property 'PkiAttachmentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiComputerID'
+        /// </summary>
+        [Fact]
+        public void FkiComputerIDTest()
+        {
+            // TODO unit test for the property 'FkiComputerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiAdjustmentID'
+        /// </summary>
+        [Fact]
+        public void FkiAdjustmentIDTest()
+        {
+            // TODO unit test for the property 'FkiAdjustmentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiAgentID'
+        /// </summary>
+        [Fact]
+        public void FkiAgentIDTest()
+        {
+            // TODO unit test for the property 'FkiAgentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBankaccountID'
+        /// </summary>
+        [Fact]
+        public void FkiBankaccountIDTest()
+        {
+            // TODO unit test for the property 'FkiBankaccountID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBrokerID'
+        /// </summary>
+        [Fact]
+        public void FkiBrokerIDTest()
+        {
+            // TODO unit test for the property 'FkiBrokerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiCommissionadvanceID'
+        /// </summary>
+        [Fact]
+        public void FkiCommissionadvanceIDTest()
+        {
+            // TODO unit test for the property 'FkiCommissionadvanceID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiCommunicationID'
+        /// </summary>
+        [Fact]
+        public void FkiCommunicationIDTest()
+        {
+            // TODO unit test for the property 'FkiCommunicationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiCustomerID'
+        /// </summary>
+        [Fact]
+        public void FkiCustomerIDTest()
+        {
+            // TODO unit test for the property 'FkiCustomerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiCustomertemplateID'
+        /// </summary>
+        [Fact]
+        public void FkiCustomertemplateIDTest()
+        {
+            // TODO unit test for the property 'FkiCustomertemplateID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDepositID'
+        /// </summary>
+        [Fact]
+        public void FkiDepositIDTest()
+        {
+            // TODO unit test for the property 'FkiDepositID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDeposittransitchequeID'
+        /// </summary>
+        [Fact]
+        public void FkiDeposittransitchequeIDTest()
+        {
+            // TODO unit test for the property 'FkiDeposittransitchequeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiElectronicfundstransferID'
+        /// </summary>
+        [Fact]
+        public void FkiElectronicfundstransferIDTest()
+        {
+            // TODO unit test for the property 'FkiElectronicfundstransferID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEmployeeID'
+        /// </summary>
+        [Fact]
+        public void FkiEmployeeIDTest()
+        {
+            // TODO unit test for the property 'FkiEmployeeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiExternalbrokerID'
+        /// </summary>
+        [Fact]
+        public void FkiExternalbrokerIDTest()
+        {
+            // TODO unit test for the property 'FkiExternalbrokerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzcomadvanceserverID'
+        /// </summary>
+        [Fact]
+        public void FkiEzcomadvanceserverIDTest()
+        {
+            // TODO unit test for the property 'FkiEzcomadvanceserverID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzcomcompanyID'
+        /// </summary>
+        [Fact]
+        public void FkiEzcomcompanyIDTest()
+        {
+            // TODO unit test for the property 'FkiEzcomcompanyID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiGhacqcontractID'
+        /// </summary>
+        [Fact]
+        public void FkiGhacqcontractIDTest()
+        {
+            // TODO unit test for the property 'FkiGhacqcontractID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiInscriptionID'
+        /// </summary>
+        [Fact]
+        public void FkiInscriptionIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiInscriptiontempID'
+        /// </summary>
+        [Fact]
+        public void FkiInscriptiontempIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptiontempID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiInscriptionnotauthenticatedID'
+        /// </summary>
+        [Fact]
+        public void FkiInscriptionnotauthenticatedIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptionnotauthenticatedID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiInvoiceID'
+        /// </summary>
+        [Fact]
+        public void FkiInvoiceIDTest()
+        {
+            // TODO unit test for the property 'FkiInvoiceID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBuyercontractID'
+        /// </summary>
+        [Fact]
+        public void FkiBuyercontractIDTest()
+        {
+            // TODO unit test for the property 'FkiBuyercontractID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchisebrokerID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchisebrokerIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchisebrokerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchiseagenceID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchiseagenceIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchiseagenceID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchiseofficeID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchiseofficeIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchiseofficeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchisefranchiseID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchisefranchiseIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchisefranchiseID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchisecomplaintID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchisecomplaintIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchisecomplaintID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiLeadID'
+        /// </summary>
+        [Fact]
+        public void FkiLeadIDTest()
+        {
+            // TODO unit test for the property 'FkiLeadID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiMarketingprogramID'
+        /// </summary>
+        [Fact]
+        public void FkiMarketingprogramIDTest()
+        {
+            // TODO unit test for the property 'FkiMarketingprogramID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiMarketingfollowID'
+        /// </summary>
+        [Fact]
+        public void FkiMarketingfollowIDTest()
+        {
+            // TODO unit test for the property 'FkiMarketingfollowID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiNotaryID'
+        /// </summary>
+        [Fact]
+        public void FkiNotaryIDTest()
+        {
+            // TODO unit test for the property 'FkiNotaryID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiOfficetaxreportID'
+        /// </summary>
+        [Fact]
+        public void FkiOfficetaxreportIDTest()
+        {
+            // TODO unit test for the property 'FkiOfficetaxreportID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiOtherincomeID'
+        /// </summary>
+        [Fact]
+        public void FkiOtherincomeIDTest()
+        {
+            // TODO unit test for the property 'FkiOtherincomeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiPaymentpreparationID'
+        /// </summary>
+        [Fact]
+        public void FkiPaymentpreparationIDTest()
+        {
+            // TODO unit test for the property 'FkiPaymentpreparationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiPurchaseID'
+        /// </summary>
+        [Fact]
+        public void FkiPurchaseIDTest()
+        {
+            // TODO unit test for the property 'FkiPurchaseID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiSalaryID'
+        /// </summary>
+        [Fact]
+        public void FkiSalaryIDTest()
+        {
+            // TODO unit test for the property 'FkiSalaryID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiSupplierID'
+        /// </summary>
+        [Fact]
+        public void FkiSupplierIDTest()
+        {
+            // TODO unit test for the property 'FkiSupplierID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiTranqcontractID'
+        /// </summary>
+        [Fact]
+        public void FkiTranqcontractIDTest()
+        {
+            // TODO unit test for the property 'FkiTranqcontractID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiTemplateID'
+        /// </summary>
+        [Fact]
+        public void FkiTemplateIDTest()
+        {
+            // TODO unit test for the property 'FkiTemplateID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiInscriptionchecklistID'
+        /// </summary>
+        [Fact]
+        public void FkiInscriptionchecklistIDTest()
+        {
+            // TODO unit test for the property 'FkiInscriptionchecklistID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFolderID'
+        /// </summary>
+        [Fact]
+        public void FkiFolderIDTest()
+        {
+            // TODO unit test for the property 'FkiFolderID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiRejectedoffertopurchaseID'
+        /// </summary>
+        [Fact]
+        public void FkiRejectedoffertopurchaseIDTest()
+        {
+            // TODO unit test for the property 'FkiRejectedoffertopurchaseID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDisclosureID'
+        /// </summary>
+        [Fact]
+        public void FkiDisclosureIDTest()
+        {
+            // TODO unit test for the property 'FkiDisclosureID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiReconciliationID'
+        /// </summary>
+        [Fact]
+        public void FkiReconciliationIDTest()
+        {
+            // TODO unit test for the property 'FkiReconciliationID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigndocumentIDReference'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigndocumentIDReferenceTest()
+        {
+            // TODO unit test for the property 'FkiEzsigndocumentIDReference'
+        }
+
+        /// <summary>
+        /// Test the property 'EAttachmentDocumenttype'
+        /// </summary>
+        [Fact]
+        public void EAttachmentDocumenttypeTest()
+        {
+            // TODO unit test for the property 'EAttachmentDocumenttype'
+        }
+
+        /// <summary>
+        /// Test the property 'SAttachmentName'
+        /// </summary>
+        [Fact]
+        public void SAttachmentNameTest()
+        {
+            // TODO unit test for the property 'SAttachmentName'
+        }
+
+        /// <summary>
+        /// Test the property 'EAttachmentPrivacy'
+        /// </summary>
+        [Fact]
+        public void EAttachmentPrivacyTest()
+        {
+            // TODO unit test for the property 'EAttachmentPrivacy'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserIDSpecific'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDSpecificTest()
+        {
+            // TODO unit test for the property 'FkiUserIDSpecific'
+        }
+
+        /// <summary>
+        /// Test the property 'EAttachmentType'
+        /// </summary>
+        [Fact]
+        public void EAttachmentTypeTest()
+        {
+            // TODO unit test for the property 'EAttachmentType'
+        }
+
+        /// <summary>
+        /// Test the property 'IAttachmentSize'
+        /// </summary>
+        [Fact]
+        public void IAttachmentSizeTest()
+        {
+            // TODO unit test for the property 'IAttachmentSize'
+        }
+
+        /// <summary>
+        /// Test the property 'IAttachmentEDMmoduleflag'
+        /// </summary>
+        [Fact]
+        public void IAttachmentEDMmoduleflagTest()
+        {
+            // TODO unit test for the property 'IAttachmentEDMmoduleflag'
+        }
+
+        /// <summary>
+        /// Test the property 'SAttachmentMD5'
+        /// </summary>
+        [Fact]
+        public void SAttachmentMD5Test()
+        {
+            // TODO unit test for the property 'SAttachmentMD5'
+        }
+
+        /// <summary>
+        /// Test the property 'BAttachmentDeleted'
+        /// </summary>
+        [Fact]
+        public void BAttachmentDeletedTest()
+        {
+            // TODO unit test for the property 'BAttachmentDeleted'
+        }
+
+        /// <summary>
+        /// Test the property 'BAttachmentValid'
+        /// </summary>
+        [Fact]
+        public void BAttachmentValidTest()
+        {
+            // TODO unit test for the property 'BAttachmentValid'
+        }
+
+        /// <summary>
+        /// Test the property 'EAttachmentVerified'
+        /// </summary>
+        [Fact]
+        public void EAttachmentVerifiedTest()
+        {
+            // TODO unit test for the property 'EAttachmentVerified'
+        }
+
+        /// <summary>
+        /// Test the property 'TAttachmentRejectioncomment'
+        /// </summary>
+        [Fact]
+        public void TAttachmentRejectioncommentTest()
+        {
+            // TODO unit test for the property 'TAttachmentRejectioncomment'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserIDOwner'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDOwnerTest()
+        {
+            // TODO unit test for the property 'FkiUserIDOwner'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Fact]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
+
+        /// <summary>
         /// Test the property 'ObjAttachmentProof'
         /// </summary>
         [Fact]

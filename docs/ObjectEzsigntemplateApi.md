@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatedeleteobjectv1"></a>
 # **EzsigntemplateDeleteObjectV1**
-> CommonResponse EzsigntemplateDeleteObjectV1 (int pkiEzsigntemplateID)
+> EzsigntemplateDeleteObjectV1Response EzsigntemplateDeleteObjectV1 (int pkiEzsigntemplateID)
 
 Delete an existing Ezsigntemplate
 
@@ -238,7 +238,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplate
-                CommonResponse result = apiInstance.EzsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
+                EzsigntemplateDeleteObjectV1Response result = apiInstance.EzsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -259,7 +259,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplate
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplateDeleteObjectV1WithHttpInfo(pkiEzsigntemplateID);
+    ApiResponse<EzsigntemplateDeleteObjectV1Response> response = apiInstance.EzsigntemplateDeleteObjectV1WithHttpInfo(pkiEzsigntemplateID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -280,7 +280,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateDeleteObjectV1Response**](EzsigntemplateDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplateeditobjectv3"></a>
 # **EzsigntemplateEditObjectV3**
-> CommonResponse EzsigntemplateEditObjectV3 (int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request)
+> EzsigntemplateEditObjectV3Response EzsigntemplateEditObjectV3 (int pkiEzsigntemplateID, EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -334,7 +334,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplate
-                CommonResponse result = apiInstance.EzsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
+                EzsigntemplateEditObjectV3Response result = apiInstance.EzsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -355,7 +355,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplate
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
+    ApiResponse<EzsigntemplateEditObjectV3Response> response = apiInstance.EzsigntemplateEditObjectV3WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -377,7 +377,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 

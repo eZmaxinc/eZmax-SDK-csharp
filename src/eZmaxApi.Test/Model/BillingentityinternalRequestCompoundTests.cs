@@ -56,6 +56,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiBillingentityinternalID'
+        /// </summary>
+        [Fact]
+        public void PkiBillingentityinternalIDTest()
+        {
+            // TODO unit test for the property 'PkiBillingentityinternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjBillingentityinternalDescription'
+        /// </summary>
+        [Fact]
+        public void ObjBillingentityinternalDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjBillingentityinternalDescription'
+        }
+
+        /// <summary>
         /// Test the property 'AObjBillingentityinternalproduct'
         /// </summary>
         [Fact]

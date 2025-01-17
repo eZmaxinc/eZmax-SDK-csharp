@@ -5,6 +5,11 @@ A Ezsignbulksenddocumentmapping Object
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**PkiEzsignbulksenddocumentmappingID** | **int** | The unique ID of the Ezsignbulksenddocumentmapping. | 
+**FkiEzsignbulksendID** | **int** | The unique ID of the Ezsignbulksend | 
+**FkiEzsigntemplatepackageID** | **int** | The unique ID of the Ezsigntemplatepackage | [optional] 
+**FkiEzsigntemplateID** | **int** | The unique ID of the Ezsigntemplate | [optional] 
+**IEzsignbulksenddocumentmappingOrder** | **int** | The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder. | 
 **ObjEzsigntemplate** | [**EzsigntemplateResponseCompound**](EzsigntemplateResponseCompound.md) |  | [optional] 
 **ObjEzsigntemplatepackage** | [**EzsigntemplatepackageResponseCompound**](EzsigntemplatepackageResponseCompound.md) |  | [optional] 
 

@@ -54,5 +54,284 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" ActivesessionGetCurrentV1ResponseMPayload
             //Assert.IsType<ActivesessionGetCurrentV1ResponseMPayload>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'EActivesessionUsertype'
+        /// </summary>
+        [Fact]
+        public void EActivesessionUsertypeTest()
+        {
+            // TODO unit test for the property 'EActivesessionUsertype'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionOrigin'
+        /// </summary>
+        [Fact]
+        public void EActivesessionOriginTest()
+        {
+            // TODO unit test for the property 'EActivesessionOrigin'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionWeekdaystart'
+        /// </summary>
+        [Fact]
+        public void EActivesessionWeekdaystartTest()
+        {
+            // TODO unit test for the property 'EActivesessionWeekdaystart'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiLanguageID'
+        /// </summary>
+        [Fact]
+        public void FkiLanguageIDTest()
+        {
+            // TODO unit test for the property 'FkiLanguageID'
+        }
+
+        /// <summary>
+        /// Test the property 'SCompanyNameX'
+        /// </summary>
+        [Fact]
+        public void SCompanyNameXTest()
+        {
+            // TODO unit test for the property 'SCompanyNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'SDepartmentNameX'
+        /// </summary>
+        [Fact]
+        public void SDepartmentNameXTest()
+        {
+            // TODO unit test for the property 'SDepartmentNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionDebug'
+        /// </summary>
+        [Fact]
+        public void BActivesessionDebugTest()
+        {
+            // TODO unit test for the property 'BActivesessionDebug'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionIssuperadmin'
+        /// </summary>
+        [Fact]
+        public void BActivesessionIssuperadminTest()
+        {
+            // TODO unit test for the property 'BActivesessionIssuperadmin'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionAttachment'
+        /// </summary>
+        [Fact]
+        public void BActivesessionAttachmentTest()
+        {
+            // TODO unit test for the property 'BActivesessionAttachment'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionCanafe'
+        /// </summary>
+        [Fact]
+        public void BActivesessionCanafeTest()
+        {
+            // TODO unit test for the property 'BActivesessionCanafe'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionFinancial'
+        /// </summary>
+        [Fact]
+        public void BActivesessionFinancialTest()
+        {
+            // TODO unit test for the property 'BActivesessionFinancial'
+        }
+
+        /// <summary>
+        /// Test the property 'BActivesessionRealestatecompleted'
+        /// </summary>
+        [Fact]
+        public void BActivesessionRealestatecompletedTest()
+        {
+            // TODO unit test for the property 'BActivesessionRealestatecompleted'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsign'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsign'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsignaccess'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignaccessTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsignaccess'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionEzsignprepaid'
+        /// </summary>
+        [Fact]
+        public void EActivesessionEzsignprepaidTest()
+        {
+            // TODO unit test for the property 'EActivesessionEzsignprepaid'
+        }
+
+        /// <summary>
+        /// Test the property 'EActivesessionRealestateinprogress'
+        /// </summary>
+        [Fact]
+        public void EActivesessionRealestateinprogressTest()
+        {
+            // TODO unit test for the property 'EActivesessionRealestateinprogress'
+        }
+
+        /// <summary>
+        /// Test the property 'PksCustomerCode'
+        /// </summary>
+        [Fact]
+        public void PksCustomerCodeTest()
+        {
+            // TODO unit test for the property 'PksCustomerCode'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiSystemconfigurationtypeID'
+        /// </summary>
+        [Fact]
+        public void FkiSystemconfigurationtypeIDTest()
+        {
+            // TODO unit test for the property 'FkiSystemconfigurationtypeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiSignatureID'
+        /// </summary>
+        [Fact]
+        public void FkiSignatureIDTest()
+        {
+            // TODO unit test for the property 'FkiSignatureID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignuserID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignuserIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignuserID'
+        }
+
+        /// <summary>
+        /// Test the property 'BSystemconfigurationEzsignpaidbyoffice'
+        /// </summary>
+        [Fact]
+        public void BSystemconfigurationEzsignpaidbyofficeTest()
+        {
+            // TODO unit test for the property 'BSystemconfigurationEzsignpaidbyoffice'
+        }
+
+        /// <summary>
+        /// Test the property 'ESystemconfigurationEzsignofficeplan'
+        /// </summary>
+        [Fact]
+        public void ESystemconfigurationEzsignofficeplanTest()
+        {
+            // TODO unit test for the property 'ESystemconfigurationEzsignofficeplan'
+        }
+
+        /// <summary>
+        /// Test the property 'EUserEzsignaccess'
+        /// </summary>
+        [Fact]
+        public void EUserEzsignaccessTest()
+        {
+            // TODO unit test for the property 'EUserEzsignaccess'
+        }
+
+        /// <summary>
+        /// Test the property 'EUserEzsignprepaid'
+        /// </summary>
+        [Fact]
+        public void EUserEzsignprepaidTest()
+        {
+            // TODO unit test for the property 'EUserEzsignprepaid'
+        }
+
+        /// <summary>
+        /// Test the property 'BUserEzsigntrial'
+        /// </summary>
+        [Fact]
+        public void BUserEzsigntrialTest()
+        {
+            // TODO unit test for the property 'BUserEzsigntrial'
+        }
+
+        /// <summary>
+        /// Test the property 'DtUserEzsignprepaidexpiration'
+        /// </summary>
+        [Fact]
+        public void DtUserEzsignprepaidexpirationTest()
+        {
+            // TODO unit test for the property 'DtUserEzsignprepaidexpiration'
+        }
+
+        /// <summary>
+        /// Test the property 'APkiPermissionID'
+        /// </summary>
+        [Fact]
+        public void APkiPermissionIDTest()
+        {
+            // TODO unit test for the property 'APkiPermissionID'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjUserReal'
+        /// </summary>
+        [Fact]
+        public void ObjUserRealTest()
+        {
+            // TODO unit test for the property 'ObjUserReal'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjUserCloned'
+        /// </summary>
+        [Fact]
+        public void ObjUserClonedTest()
+        {
+            // TODO unit test for the property 'ObjUserCloned'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjApikey'
+        /// </summary>
+        [Fact]
+        public void ObjApikeyTest()
+        {
+            // TODO unit test for the property 'ObjApikey'
+        }
+
+        /// <summary>
+        /// Test the property 'AEModuleInternalname'
+        /// </summary>
+        [Fact]
+        public void AEModuleInternalnameTest()
+        {
+            // TODO unit test for the property 'AEModuleInternalname'
+        }
     }
 }

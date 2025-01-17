@@ -54,5 +54,32 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" WebhookheaderRequestCompound
             //Assert.IsType<WebhookheaderRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiWebhookheaderID'
+        /// </summary>
+        [Fact]
+        public void PkiWebhookheaderIDTest()
+        {
+            // TODO unit test for the property 'PkiWebhookheaderID'
+        }
+
+        /// <summary>
+        /// Test the property 'SWebhookheaderName'
+        /// </summary>
+        [Fact]
+        public void SWebhookheaderNameTest()
+        {
+            // TODO unit test for the property 'SWebhookheaderName'
+        }
+
+        /// <summary>
+        /// Test the property 'SWebhookheaderValue'
+        /// </summary>
+        [Fact]
+        public void SWebhookheaderValueTest()
+        {
+            // TODO unit test for the property 'SWebhookheaderValue'
+        }
     }
 }

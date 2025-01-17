@@ -54,5 +54,113 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" SupplyResponseCompound
             //Assert.IsType<SupplyResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiSupplyID'
+        /// </summary>
+        [Fact]
+        public void PkiSupplyIDTest()
+        {
+            // TODO unit test for the property 'PkiSupplyID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiGlaccountID'
+        /// </summary>
+        [Fact]
+        public void FkiGlaccountIDTest()
+        {
+            // TODO unit test for the property 'FkiGlaccountID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiGlaccountcontainerID'
+        /// </summary>
+        [Fact]
+        public void FkiGlaccountcontainerIDTest()
+        {
+            // TODO unit test for the property 'FkiGlaccountcontainerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiVariableexpenseID'
+        /// </summary>
+        [Fact]
+        public void FkiVariableexpenseIDTest()
+        {
+            // TODO unit test for the property 'FkiVariableexpenseID'
+        }
+
+        /// <summary>
+        /// Test the property 'SSupplyCode'
+        /// </summary>
+        [Fact]
+        public void SSupplyCodeTest()
+        {
+            // TODO unit test for the property 'SSupplyCode'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjSupplyDescription'
+        /// </summary>
+        [Fact]
+        public void ObjSupplyDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjSupplyDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'DSupplyUnitprice'
+        /// </summary>
+        [Fact]
+        public void DSupplyUnitpriceTest()
+        {
+            // TODO unit test for the property 'DSupplyUnitprice'
+        }
+
+        /// <summary>
+        /// Test the property 'BSupplyIsactive'
+        /// </summary>
+        [Fact]
+        public void BSupplyIsactiveTest()
+        {
+            // TODO unit test for the property 'BSupplyIsactive'
+        }
+
+        /// <summary>
+        /// Test the property 'BSupplyVariableprice'
+        /// </summary>
+        [Fact]
+        public void BSupplyVariablepriceTest()
+        {
+            // TODO unit test for the property 'BSupplyVariableprice'
+        }
+
+        /// <summary>
+        /// Test the property 'SGlaccountDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SGlaccountDescriptionXTest()
+        {
+            // TODO unit test for the property 'SGlaccountDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'SGlaccountcontainerLongdescriptionX'
+        /// </summary>
+        [Fact]
+        public void SGlaccountcontainerLongdescriptionXTest()
+        {
+            // TODO unit test for the property 'SGlaccountcontainerLongdescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'SVariableexpenseDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SVariableexpenseDescriptionXTest()
+        {
+            // TODO unit test for the property 'SVariableexpenseDescriptionX'
+        }
     }
 }

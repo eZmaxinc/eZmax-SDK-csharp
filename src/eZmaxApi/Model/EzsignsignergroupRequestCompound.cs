@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsignergroup Object and children
     /// </summary>
     [DataContract(Name = "ezsignsignergroup-RequestCompound")]
-    public partial class EzsignsignergroupRequestCompound : EzsignsignergroupRequest, IValidatableObject
+    public partial class EzsignsignergroupRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupRequestCompound" /> class.
@@ -43,9 +43,39 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="objEzsignsignergroupDescription">objEzsignsignergroupDescription (required).</param>
-        public EzsignsignergroupRequestCompound(int pkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription)) : base()
+        public EzsignsignergroupRequestCompound(int pkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription = default(MultilingualEzsignsignergroupDescription))
         {
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            // to ensure "objEzsignsignergroupDescription" is required (not null)
+            if (objEzsignsignergroupDescription == null)
+            {
+                throw new ArgumentNullException("objEzsignsignergroupDescription is a required property for EzsignsignergroupRequestCompound and cannot be null");
+            }
+            this.ObjEzsignsignergroupDescription = objEzsignsignergroupDescription;
+            this.PkiEzsignsignergroupID = pkiEzsignsignergroupID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignergroup
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignergroup</value>
+        /* <example>27</example>*/
+        [DataMember(Name = "pkiEzsignsignergroupID", EmitDefaultValue = false)]
+        public int PkiEzsignsignergroupID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        /* <example>33</example>*/
+        [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzsignsignergroupDescription
+        /// </summary>
+        [DataMember(Name = "objEzsignsignergroupDescription", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualEzsignsignergroupDescription ObjEzsignsignergroupDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +85,9 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignsignergroupRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignsignergroupID: ").Append(PkiEzsignsignergroupID).Append("\n");
+            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  ObjEzsignsignergroupDescription: ").Append(ObjEzsignsignergroupDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,7 +96,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -76,20 +108,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignsignergroupID (int) maximum
+            if (this.PkiEzsignsignergroupID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "PkiEzsignsignergroupID" });
             }
+
+            // PkiEzsignsignergroupID (int) minimum
+            if (this.PkiEzsignsignergroupID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignergroupID" });
+            }
+
+            // FkiEzsignfolderID (int) minimum
+            if (this.FkiEzsignfolderID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
             yield break;
         }
     }

@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Billingentityinternalproduct Object and children
     /// </summary>
     [DataContract(Name = "billingentityinternalproduct-RequestCompound")]
-    public partial class BillingentityinternalproductRequestCompound : BillingentityinternalproductRequest, IValidatableObject
+    public partial class BillingentityinternalproductRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BillingentityinternalproductRequestCompound" /> class.
@@ -43,9 +43,36 @@ namespace eZmaxApi.Model
         /// <param name="pkiBillingentityinternalproductID">The unique ID of the Billingentityinternalproduct.</param>
         /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
         /// <param name="fkiBillingentityexternalID">The unique ID of the Billingentityexternal (required).</param>
-        public BillingentityinternalproductRequestCompound(int pkiBillingentityinternalproductID = default(int), int fkiEzmaxproductID = default(int), int fkiBillingentityexternalID = default(int)) : base()
+        public BillingentityinternalproductRequestCompound(int pkiBillingentityinternalproductID = default(int), int fkiEzmaxproductID = default(int), int fkiBillingentityexternalID = default(int))
         {
+            this.FkiEzmaxproductID = fkiEzmaxproductID;
+            this.FkiBillingentityexternalID = fkiBillingentityexternalID;
+            this.PkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
         }
+
+        /// <summary>
+        /// The unique ID of the Billingentityinternalproduct
+        /// </summary>
+        /// <value>The unique ID of the Billingentityinternalproduct</value>
+        /* <example>254</example>*/
+        [DataMember(Name = "pkiBillingentityinternalproductID", EmitDefaultValue = false)]
+        public int PkiBillingentityinternalproductID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxproduct
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxproduct</value>
+        /* <example>172</example>*/
+        [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzmaxproductID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityexternal
+        /// </summary>
+        /// <value>The unique ID of the Billingentityexternal</value>
+        /* <example>83</example>*/
+        [DataMember(Name = "fkiBillingentityexternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiBillingentityexternalID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -55,7 +82,9 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class BillingentityinternalproductRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiBillingentityinternalproductID: ").Append(PkiBillingentityinternalproductID).Append("\n");
+            sb.Append("  FkiEzmaxproductID: ").Append(FkiEzmaxproductID).Append("\n");
+            sb.Append("  FkiBillingentityexternalID: ").Append(FkiBillingentityexternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,7 +93,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -76,20 +105,30 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiBillingentityinternalproductID (int) maximum
+            if (this.PkiBillingentityinternalproductID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value less than or equal to 255.", new [] { "PkiBillingentityinternalproductID" });
             }
+
+            // PkiBillingentityinternalproductID (int) minimum
+            if (this.PkiBillingentityinternalproductID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiBillingentityinternalproductID, must be a value greater than or equal to 0.", new [] { "PkiBillingentityinternalproductID" });
+            }
+
+            // FkiEzmaxproductID (int) minimum
+            if (this.FkiEzmaxproductID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+            }
+
+            // FkiBillingentityexternalID (int) minimum
+            if (this.FkiBillingentityexternalID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+            }
+
             yield break;
         }
     }

@@ -54,5 +54,32 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" UsergroupexternalResponseCompound
             //Assert.IsType<UsergroupexternalResponseCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiUsergroupexternalID'
+        /// </summary>
+        [Fact]
+        public void PkiUsergroupexternalIDTest()
+        {
+            // TODO unit test for the property 'PkiUsergroupexternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'SUsergroupexternalName'
+        /// </summary>
+        [Fact]
+        public void SUsergroupexternalNameTest()
+        {
+            // TODO unit test for the property 'SUsergroupexternalName'
+        }
+
+        /// <summary>
+        /// Test the property 'SUsergroupexternalID'
+        /// </summary>
+        [Fact]
+        public void SUsergroupexternalIDTest()
+        {
+            // TODO unit test for the property 'SUsergroupexternalID'
+        }
     }
 }

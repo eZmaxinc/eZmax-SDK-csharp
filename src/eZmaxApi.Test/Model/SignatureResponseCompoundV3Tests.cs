@@ -54,5 +54,50 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" SignatureResponseCompoundV3
             //Assert.IsType<SignatureResponseCompoundV3>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiSignatureID'
+        /// </summary>
+        [Fact]
+        public void PkiSignatureIDTest()
+        {
+            // TODO unit test for the property 'PkiSignatureID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFontID'
+        /// </summary>
+        [Fact]
+        public void FkiFontIDTest()
+        {
+            // TODO unit test for the property 'FkiFontID'
+        }
+
+        /// <summary>
+        /// Test the property 'ESignaturePreference'
+        /// </summary>
+        [Fact]
+        public void ESignaturePreferenceTest()
+        {
+            // TODO unit test for the property 'ESignaturePreference'
+        }
+
+        /// <summary>
+        /// Test the property 'BSignatureSvg'
+        /// </summary>
+        [Fact]
+        public void BSignatureSvgTest()
+        {
+            // TODO unit test for the property 'BSignatureSvg'
+        }
+
+        /// <summary>
+        /// Test the property 'BSignatureSvginitials'
+        /// </summary>
+        [Fact]
+        public void BSignatureSvginitialsTest()
+        {
+            // TODO unit test for the property 'BSignatureSvginitials'
+        }
     }
 }

@@ -56,6 +56,24 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ObjWebhook'
+        /// </summary>
+        [Fact]
+        public void ObjWebhookTest()
+        {
+            // TODO unit test for the property 'ObjWebhook'
+        }
+
+        /// <summary>
+        /// Test the property 'AObjAttempt'
+        /// </summary>
+        [Fact]
+        public void AObjAttemptTest()
+        {
+            // TODO unit test for the property 'AObjAttempt'
+        }
+
+        /// <summary>
         /// Test the property 'ObjUserstaged'
         /// </summary>
         [Fact]

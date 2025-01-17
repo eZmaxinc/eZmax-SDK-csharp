@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Variableexpense Object
     /// </summary>
     [DataContract(Name = "variableexpense-ResponseCompound")]
-    public partial class VariableexpenseResponseCompound : VariableexpenseResponse, IValidatableObject
+    public partial class VariableexpenseResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EVariableexpenseTaxable
+        /// </summary>
+        [DataMember(Name = "eVariableexpenseTaxable", EmitDefaultValue = false)]
+        public FieldEVariableexpenseTaxable? EVariableexpenseTaxable { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableexpenseResponseCompound" /> class.
         /// </summary>
@@ -45,9 +51,49 @@ namespace eZmaxApi.Model
         /// <param name="objVariableexpenseDescription">objVariableexpenseDescription (required).</param>
         /// <param name="eVariableexpenseTaxable">eVariableexpenseTaxable.</param>
         /// <param name="bVariableexpenseIsactive">Whether the variableexpense is active or not.</param>
-        public VariableexpenseResponseCompound(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), MultilingualVariableexpenseDescription objVariableexpenseDescription = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable? eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable?), bool bVariableexpenseIsactive = default(bool)) : base()
+        public VariableexpenseResponseCompound(int pkiVariableexpenseID = default(int), string sVariableexpenseCode = default(string), MultilingualVariableexpenseDescription objVariableexpenseDescription = default(MultilingualVariableexpenseDescription), FieldEVariableexpenseTaxable? eVariableexpenseTaxable = default(FieldEVariableexpenseTaxable?), bool bVariableexpenseIsactive = default(bool))
         {
+            this.PkiVariableexpenseID = pkiVariableexpenseID;
+            // to ensure "objVariableexpenseDescription" is required (not null)
+            if (objVariableexpenseDescription == null)
+            {
+                throw new ArgumentNullException("objVariableexpenseDescription is a required property for VariableexpenseResponseCompound and cannot be null");
+            }
+            this.ObjVariableexpenseDescription = objVariableexpenseDescription;
+            this.SVariableexpenseCode = sVariableexpenseCode;
+            this.EVariableexpenseTaxable = eVariableexpenseTaxable;
+            this.BVariableexpenseIsactive = bVariableexpenseIsactive;
         }
+
+        /// <summary>
+        /// The unique ID of the Variableexpense
+        /// </summary>
+        /// <value>The unique ID of the Variableexpense</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "pkiVariableexpenseID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiVariableexpenseID { get; set; }
+
+        /// <summary>
+        /// The code of the Variableexpense
+        /// </summary>
+        /// <value>The code of the Variableexpense</value>
+        /* <example>EQBUR</example>*/
+        [DataMember(Name = "sVariableexpenseCode", EmitDefaultValue = false)]
+        public string SVariableexpenseCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjVariableexpenseDescription
+        /// </summary>
+        [DataMember(Name = "objVariableexpenseDescription", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualVariableexpenseDescription ObjVariableexpenseDescription { get; set; }
+
+        /// <summary>
+        /// Whether the variableexpense is active or not
+        /// </summary>
+        /// <value>Whether the variableexpense is active or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bVariableexpenseIsactive", EmitDefaultValue = true)]
+        public bool BVariableexpenseIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,7 +103,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class VariableexpenseResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiVariableexpenseID: ").Append(PkiVariableexpenseID).Append("\n");
+            sb.Append("  SVariableexpenseCode: ").Append(SVariableexpenseCode).Append("\n");
+            sb.Append("  ObjVariableexpenseDescription: ").Append(ObjVariableexpenseDescription).Append("\n");
+            sb.Append("  EVariableexpenseTaxable: ").Append(EVariableexpenseTaxable).Append("\n");
+            sb.Append("  BVariableexpenseIsactive: ").Append(BVariableexpenseIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -66,7 +116,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -78,20 +128,27 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiVariableexpenseID (int) maximum
+            if (this.PkiVariableexpenseID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
             }
+
+            // PkiVariableexpenseID (int) minimum
+            if (this.PkiVariableexpenseID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
+            }
+
+            if (this.SVariableexpenseCode != null) {
+                // SVariableexpenseCode (string) pattern
+                Regex regexSVariableexpenseCode = new Regex(@"^.{0,5}$", RegexOptions.CultureInvariant);
+                if (!regexSVariableexpenseCode.Match(this.SVariableexpenseCode).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SVariableexpenseCode, must match a pattern of " + regexSVariableexpenseCode, new [] { "SVariableexpenseCode" });
+                }
+            }
+
             yield break;
         }
     }

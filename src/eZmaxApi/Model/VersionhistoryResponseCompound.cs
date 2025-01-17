@@ -30,8 +30,20 @@ namespace eZmaxApi.Model
     /// A Versionhistory Object
     /// </summary>
     [DataContract(Name = "versionhistory-ResponseCompound")]
-    public partial class VersionhistoryResponseCompound : VersionhistoryResponse, IValidatableObject
+    public partial class VersionhistoryResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EVersionhistoryUsertype
+        /// </summary>
+        [DataMember(Name = "eVersionhistoryUsertype", EmitDefaultValue = false)]
+        public FieldEVersionhistoryUsertype? EVersionhistoryUsertype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EVersionhistoryType
+        /// </summary>
+        [DataMember(Name = "eVersionhistoryType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEVersionhistoryType EVersionhistoryType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="VersionhistoryResponseCompound" /> class.
         /// </summary>
@@ -51,9 +63,99 @@ namespace eZmaxApi.Model
         /// <param name="dtVersionhistoryDateend">The date  at which the Versionhistory will no longer be visible.</param>
         /// <param name="eVersionhistoryType">eVersionhistoryType (required).</param>
         /// <param name="bVersionhistoryDraft">Whether the Versionhistory is published or still a draft (required).</param>
-        public VersionhistoryResponseCompound(int pkiVersionhistoryID = default(int), int fkiModuleID = default(int), int fkiModulesectionID = default(int), string sModuleNameX = default(string), string sModulesectionNameX = default(string), FieldEVersionhistoryUsertype? eVersionhistoryUsertype = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail objVersionhistoryDetail = default(MultilingualVersionhistoryDetail), string dtVersionhistoryDate = default(string), string dtVersionhistoryDateend = default(string), FieldEVersionhistoryType eVersionhistoryType = default(FieldEVersionhistoryType), bool bVersionhistoryDraft = default(bool)) : base()
+        public VersionhistoryResponseCompound(int pkiVersionhistoryID = default(int), int fkiModuleID = default(int), int fkiModulesectionID = default(int), string sModuleNameX = default(string), string sModulesectionNameX = default(string), FieldEVersionhistoryUsertype? eVersionhistoryUsertype = default(FieldEVersionhistoryUsertype?), MultilingualVersionhistoryDetail objVersionhistoryDetail = default(MultilingualVersionhistoryDetail), string dtVersionhistoryDate = default(string), string dtVersionhistoryDateend = default(string), FieldEVersionhistoryType eVersionhistoryType = default(FieldEVersionhistoryType), bool bVersionhistoryDraft = default(bool))
         {
+            this.PkiVersionhistoryID = pkiVersionhistoryID;
+            // to ensure "objVersionhistoryDetail" is required (not null)
+            if (objVersionhistoryDetail == null)
+            {
+                throw new ArgumentNullException("objVersionhistoryDetail is a required property for VersionhistoryResponseCompound and cannot be null");
+            }
+            this.ObjVersionhistoryDetail = objVersionhistoryDetail;
+            // to ensure "dtVersionhistoryDate" is required (not null)
+            if (dtVersionhistoryDate == null)
+            {
+                throw new ArgumentNullException("dtVersionhistoryDate is a required property for VersionhistoryResponseCompound and cannot be null");
+            }
+            this.DtVersionhistoryDate = dtVersionhistoryDate;
+            this.EVersionhistoryType = eVersionhistoryType;
+            this.BVersionhistoryDraft = bVersionhistoryDraft;
+            this.FkiModuleID = fkiModuleID;
+            this.FkiModulesectionID = fkiModulesectionID;
+            this.SModuleNameX = sModuleNameX;
+            this.SModulesectionNameX = sModulesectionNameX;
+            this.EVersionhistoryUsertype = eVersionhistoryUsertype;
+            this.DtVersionhistoryDateend = dtVersionhistoryDateend;
         }
+
+        /// <summary>
+        /// The unique ID of the Versionhistory
+        /// </summary>
+        /// <value>The unique ID of the Versionhistory</value>
+        /* <example>42</example>*/
+        [DataMember(Name = "pkiVersionhistoryID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiVersionhistoryID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Module
+        /// </summary>
+        /// <value>The unique ID of the Module</value>
+        /* <example>40</example>*/
+        [DataMember(Name = "fkiModuleID", EmitDefaultValue = false)]
+        public int FkiModuleID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Modulesection
+        /// </summary>
+        /// <value>The unique ID of the Modulesection</value>
+        /* <example>53</example>*/
+        [DataMember(Name = "fkiModulesectionID", EmitDefaultValue = false)]
+        public int FkiModulesectionID { get; set; }
+
+        /// <summary>
+        /// The Name of the Module in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Module in the language of the requester</value>
+        /* <example>Purchase</example>*/
+        [DataMember(Name = "sModuleNameX", EmitDefaultValue = false)]
+        public string SModuleNameX { get; set; }
+
+        /// <summary>
+        /// The Name of the Modulesection in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Modulesection in the language of the requester</value>
+        /* <example>Access</example>*/
+        [DataMember(Name = "sModulesectionNameX", EmitDefaultValue = false)]
+        public string SModulesectionNameX { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjVersionhistoryDetail
+        /// </summary>
+        [DataMember(Name = "objVersionhistoryDetail", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualVersionhistoryDetail ObjVersionhistoryDetail { get; set; }
+
+        /// <summary>
+        /// The date  at which the Versionhistory was published or should be published
+        /// </summary>
+        /// <value>The date  at which the Versionhistory was published or should be published</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtVersionhistoryDate", IsRequired = true, EmitDefaultValue = true)]
+        public string DtVersionhistoryDate { get; set; }
+
+        /// <summary>
+        /// The date  at which the Versionhistory will no longer be visible
+        /// </summary>
+        /// <value>The date  at which the Versionhistory will no longer be visible</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtVersionhistoryDateend", EmitDefaultValue = false)]
+        public string DtVersionhistoryDateend { get; set; }
+
+        /// <summary>
+        /// Whether the Versionhistory is published or still a draft
+        /// </summary>
+        /// <value>Whether the Versionhistory is published or still a draft</value>
+        [DataMember(Name = "bVersionhistoryDraft", IsRequired = true, EmitDefaultValue = true)]
+        public bool BVersionhistoryDraft { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,7 +165,17 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class VersionhistoryResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiVersionhistoryID: ").Append(PkiVersionhistoryID).Append("\n");
+            sb.Append("  FkiModuleID: ").Append(FkiModuleID).Append("\n");
+            sb.Append("  FkiModulesectionID: ").Append(FkiModulesectionID).Append("\n");
+            sb.Append("  SModuleNameX: ").Append(SModuleNameX).Append("\n");
+            sb.Append("  SModulesectionNameX: ").Append(SModulesectionNameX).Append("\n");
+            sb.Append("  EVersionhistoryUsertype: ").Append(EVersionhistoryUsertype).Append("\n");
+            sb.Append("  ObjVersionhistoryDetail: ").Append(ObjVersionhistoryDetail).Append("\n");
+            sb.Append("  DtVersionhistoryDate: ").Append(DtVersionhistoryDate).Append("\n");
+            sb.Append("  DtVersionhistoryDateend: ").Append(DtVersionhistoryDateend).Append("\n");
+            sb.Append("  EVersionhistoryType: ").Append(EVersionhistoryType).Append("\n");
+            sb.Append("  BVersionhistoryDraft: ").Append(BVersionhistoryDraft).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,7 +184,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -84,20 +196,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiVersionhistoryID (int) minimum
+            if (this.PkiVersionhistoryID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiVersionhistoryID, must be a value greater than or equal to 0.", new [] { "PkiVersionhistoryID" });
             }
+
+            // FkiModuleID (int) minimum
+            if (this.FkiModuleID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiModuleID, must be a value greater than or equal to 0.", new [] { "FkiModuleID" });
+            }
+
+            // FkiModulesectionID (int) minimum
+            if (this.FkiModulesectionID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
+            }
+
             yield break;
         }
     }

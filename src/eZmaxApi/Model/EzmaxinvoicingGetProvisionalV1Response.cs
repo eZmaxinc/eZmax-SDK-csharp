@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Response for GET /1/object/ezmaxinvoicing/getProvisional
     /// </summary>
     [DataContract(Name = "ezmaxinvoicing-getProvisional-v1-Response")]
-    public partial class EzmaxinvoicingGetProvisionalV1Response : CommonResponse, IValidatableObject
+    public partial class EzmaxinvoicingGetProvisionalV1Response : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetProvisionalV1Response" /> class.
@@ -40,25 +40,43 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingGetProvisionalV1Response" /> class.
         /// </summary>
-        /// <param name="mPayload">Payload for GET /1/object/ezmaxinvoicing/getProvisional (required).</param>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        public EzmaxinvoicingGetProvisionalV1Response(EzmaxinvoicingResponseCompound mPayload = default(EzmaxinvoicingResponseCompound), CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug)) : base()
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzmaxinvoicingGetProvisionalV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload = default(EzmaxinvoicingGetProvisionalV1ResponseMPayload))
         {
+            // to ensure "objDebugPayload" is required (not null)
+            if (objDebugPayload == null)
+            {
+                throw new ArgumentNullException("objDebugPayload is a required property for EzmaxinvoicingGetProvisionalV1Response and cannot be null");
+            }
+            this.ObjDebugPayload = objDebugPayload;
             // to ensure "mPayload" is required (not null)
             if (mPayload == null)
             {
                 throw new ArgumentNullException("mPayload is a required property for EzmaxinvoicingGetProvisionalV1Response and cannot be null");
             }
             this.MPayload = mPayload;
+            this.ObjDebug = objDebug;
         }
 
         /// <summary>
-        /// Payload for GET /1/object/ezmaxinvoicing/getProvisional
+        /// Gets or Sets ObjDebugPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezmaxinvoicing/getProvisional</value>
+        [DataMember(Name = "objDebugPayload", IsRequired = true, EmitDefaultValue = true)]
+        public CommonResponseObjDebugPayload ObjDebugPayload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjDebug
+        /// </summary>
+        [DataMember(Name = "objDebug", EmitDefaultValue = false)]
+        public CommonResponseObjDebug ObjDebug { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MPayload
+        /// </summary>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzmaxinvoicingResponseCompound MPayload { get; set; }
+        public EzmaxinvoicingGetProvisionalV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,7 +86,8 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicingGetProvisionalV1Response {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  ObjDebugPayload: ").Append(ObjDebugPayload).Append("\n");
+            sb.Append("  ObjDebug: ").Append(ObjDebug).Append("\n");
             sb.Append("  MPayload: ").Append(MPayload).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -78,7 +97,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -90,20 +109,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             yield break;
         }
     }

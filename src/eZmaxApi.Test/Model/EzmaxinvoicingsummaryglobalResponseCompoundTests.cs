@@ -56,6 +56,177 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzmaxinvoicingsummaryglobalID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicingsummaryglobalIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicingsummaryglobalID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxproductID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxproductIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxproductID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzmaxproductDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SEzmaxproductDescriptionXTest()
+        {
+            // TODO unit test for the property 'SEzmaxproductDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'DtEzmaxinvoicingsummaryglobalStart'
+        /// </summary>
+        [Fact]
+        public void DtEzmaxinvoicingsummaryglobalStartTest()
+        {
+            // TODO unit test for the property 'DtEzmaxinvoicingsummaryglobalStart'
+        }
+
+        /// <summary>
+        /// Test the property 'DtEzmaxinvoicingsummaryglobalEnd'
+        /// </summary>
+        [Fact]
+        public void DtEzmaxinvoicingsummaryglobalEndTest()
+        {
+            // TODO unit test for the property 'DtEzmaxinvoicingsummaryglobalEnd'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzmaxinvoicingsummaryglobalDays'
+        /// </summary>
+        [Fact]
+        public void IEzmaxinvoicingsummaryglobalDaysTest()
+        {
+            // TODO unit test for the property 'IEzmaxinvoicingsummaryglobalDays'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalCountreal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalCountrealTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalCountreal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalCountbilled'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalCountbilledTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalCountbilled'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalSubtotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalSubtotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalSubtotal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalRebateamount'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalRebateamountTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalRebateamount'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalRebatepercent'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalRebatepercentTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalRebatepercent'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalRebatetotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalRebatetotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalRebatetotal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalTotal'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalTotalTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalTotal'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalRepresentative'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalRepresentativeTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalRepresentative'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalPartner'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalPartnerTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalPartner'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingsummaryglobalNet'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingsummaryglobalNetTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingsummaryglobalNet'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzmaxinvoicingsummaryglobalAdjustment'
+        /// </summary>
+        [Fact]
+        public void BEzmaxinvoicingsummaryglobalAdjustmentTest()
+        {
+            // TODO unit test for the property 'BEzmaxinvoicingsummaryglobalAdjustment'
+        }
+
+        /// <summary>
+        /// Test the property 'TEzmaxproductHelpX'
+        /// </summary>
+        [Fact]
+        public void TEzmaxproductHelpXTest()
+        {
+            // TODO unit test for the property 'TEzmaxproductHelpX'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzmaxinvoicingcommission'
         /// </summary>
         [Fact]

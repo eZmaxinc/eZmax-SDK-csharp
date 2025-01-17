@@ -56,6 +56,78 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzmaxinvoicingcommissionID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicingcommissionIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicingcommissionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingsummaryglobalID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingsummaryglobalIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingsummaryglobalID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxpartnerID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxpartnerIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxpartnerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxrepresentativeID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxrepresentativeIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxrepresentativeID'
+        }
+
+        /// <summary>
+        /// Test the property 'DtEzmaxinvoicingcommissionStart'
+        /// </summary>
+        [Fact]
+        public void DtEzmaxinvoicingcommissionStartTest()
+        {
+            // TODO unit test for the property 'DtEzmaxinvoicingcommissionStart'
+        }
+
+        /// <summary>
+        /// Test the property 'DtEzmaxinvoicingcommissionEnd'
+        /// </summary>
+        [Fact]
+        public void DtEzmaxinvoicingcommissionEndTest()
+        {
+            // TODO unit test for the property 'DtEzmaxinvoicingcommissionEnd'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzmaxinvoicingcommissionDays'
+        /// </summary>
+        [Fact]
+        public void IEzmaxinvoicingcommissionDaysTest()
+        {
+            // TODO unit test for the property 'IEzmaxinvoicingcommissionDays'
+        }
+
+        /// <summary>
+        /// Test the property 'DEzmaxinvoicingcommissionAmount'
+        /// </summary>
+        [Fact]
+        public void DEzmaxinvoicingcommissionAmountTest()
+        {
+            // TODO unit test for the property 'DEzmaxinvoicingcommissionAmount'
+        }
+
+        /// <summary>
         /// Test the property 'ObjContactName'
         /// </summary>
         [Fact]

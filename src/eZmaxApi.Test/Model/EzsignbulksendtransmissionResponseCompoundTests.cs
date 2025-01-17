@@ -56,6 +56,51 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzsignbulksendtransmissionID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsignbulksendtransmissionIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsignbulksendtransmissionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsignbulksendID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsignbulksendIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsignbulksendID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignbulksendtransmissionDescription'
+        /// </summary>
+        [Fact]
+        public void SEzsignbulksendtransmissionDescriptionTest()
+        {
+            // TODO unit test for the property 'SEzsignbulksendtransmissionDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsignbulksendtransmissionErrors'
+        /// </summary>
+        [Fact]
+        public void IEzsignbulksendtransmissionErrorsTest()
+        {
+            // TODO unit test for the property 'IEzsignbulksendtransmissionErrors'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjAudit'
+        /// </summary>
+        [Fact]
+        public void ObjAuditTest()
+        {
+            // TODO unit test for the property 'ObjAudit'
+        }
+
+        /// <summary>
         /// Test the property 'AObjEzsignfoldertransmission'
         /// </summary>
         [Fact]

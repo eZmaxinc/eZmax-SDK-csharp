@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Authenticationexternal Object
     /// </summary>
     [DataContract(Name = "authenticationexternal-ResponseCompound")]
-    public partial class AuthenticationexternalResponseCompound : AuthenticationexternalResponse, IValidatableObject
+    public partial class AuthenticationexternalResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EAuthenticationexternalType
+        /// </summary>
+        [DataMember(Name = "eAuthenticationexternalType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAuthenticationexternalType EAuthenticationexternalType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationexternalResponseCompound" /> class.
         /// </summary>
@@ -46,9 +52,63 @@ namespace eZmaxApi.Model
         /// <param name="bAuthenticationexternalConnected">Whether the Authenticationexternal has been connected or not.</param>
         /// <param name="sAuthenticationexternalAuthorizationurl">The url to authorize the Authenticationexternal.</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public AuthenticationexternalResponseCompound(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), FieldEAuthenticationexternalType eAuthenticationexternalType = default(FieldEAuthenticationexternalType), bool bAuthenticationexternalConnected = default(bool), string sAuthenticationexternalAuthorizationurl = default(string), CommonAudit objAudit = default(CommonAudit)) : base()
+        public AuthenticationexternalResponseCompound(int pkiAuthenticationexternalID = default(int), string sAuthenticationexternalDescription = default(string), FieldEAuthenticationexternalType eAuthenticationexternalType = default(FieldEAuthenticationexternalType), bool bAuthenticationexternalConnected = default(bool), string sAuthenticationexternalAuthorizationurl = default(string), CommonAudit objAudit = default(CommonAudit))
         {
+            this.PkiAuthenticationexternalID = pkiAuthenticationexternalID;
+            // to ensure "sAuthenticationexternalDescription" is required (not null)
+            if (sAuthenticationexternalDescription == null)
+            {
+                throw new ArgumentNullException("sAuthenticationexternalDescription is a required property for AuthenticationexternalResponseCompound and cannot be null");
+            }
+            this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
+            this.EAuthenticationexternalType = eAuthenticationexternalType;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for AuthenticationexternalResponseCompound and cannot be null");
+            }
+            this.ObjAudit = objAudit;
+            this.BAuthenticationexternalConnected = bAuthenticationexternalConnected;
+            this.SAuthenticationexternalAuthorizationurl = sAuthenticationexternalAuthorizationurl;
         }
+
+        /// <summary>
+        /// The unique ID of the Authenticationexternal
+        /// </summary>
+        /// <value>The unique ID of the Authenticationexternal</value>
+        /* <example>56</example>*/
+        [DataMember(Name = "pkiAuthenticationexternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiAuthenticationexternalID { get; set; }
+
+        /// <summary>
+        /// The description of the Authenticationexternal
+        /// </summary>
+        /// <value>The description of the Authenticationexternal</value>
+        /* <example>Authentification</example>*/
+        [DataMember(Name = "sAuthenticationexternalDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SAuthenticationexternalDescription { get; set; }
+
+        /// <summary>
+        /// Whether the Authenticationexternal has been connected or not
+        /// </summary>
+        /// <value>Whether the Authenticationexternal has been connected or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bAuthenticationexternalConnected", EmitDefaultValue = true)]
+        public bool BAuthenticationexternalConnected { get; set; }
+
+        /// <summary>
+        /// The url to authorize the Authenticationexternal
+        /// </summary>
+        /// <value>The url to authorize the Authenticationexternal</value>
+        /* <example>http://www.website.com/authorize.php</example>*/
+        [DataMember(Name = "sAuthenticationexternalAuthorizationurl", EmitDefaultValue = false)]
+        public string SAuthenticationexternalAuthorizationurl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -58,7 +118,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AuthenticationexternalResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiAuthenticationexternalID: ").Append(PkiAuthenticationexternalID).Append("\n");
+            sb.Append("  SAuthenticationexternalDescription: ").Append(SAuthenticationexternalDescription).Append("\n");
+            sb.Append("  EAuthenticationexternalType: ").Append(EAuthenticationexternalType).Append("\n");
+            sb.Append("  BAuthenticationexternalConnected: ").Append(BAuthenticationexternalConnected).Append("\n");
+            sb.Append("  SAuthenticationexternalAuthorizationurl: ").Append(SAuthenticationexternalAuthorizationurl).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -67,7 +132,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -79,20 +144,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiAuthenticationexternalID (int) maximum
+            if (this.PkiAuthenticationexternalID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
             }
+
+            // PkiAuthenticationexternalID (int) minimum
+            if (this.PkiAuthenticationexternalID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
+            }
+
+            if (this.SAuthenticationexternalDescription != null) {
+                // SAuthenticationexternalDescription (string) pattern
+                Regex regexSAuthenticationexternalDescription = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
+                if (!regexSAuthenticationexternalDescription.Match(this.SAuthenticationexternalDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAuthenticationexternalDescription, must match a pattern of " + regexSAuthenticationexternalDescription, new [] { "SAuthenticationexternalDescription" });
+                }
+            }
+
+            if (this.SAuthenticationexternalAuthorizationurl != null) {
+                // SAuthenticationexternalAuthorizationurl (string) pattern
+                Regex regexSAuthenticationexternalAuthorizationurl = new Regex(@"^(https|http):\/\/[^\s\/$.?#].[^\s]*$", RegexOptions.CultureInvariant);
+                if (!regexSAuthenticationexternalAuthorizationurl.Match(this.SAuthenticationexternalAuthorizationurl).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAuthenticationexternalAuthorizationurl, must match a pattern of " + regexSAuthenticationexternalAuthorizationurl, new [] { "SAuthenticationexternalAuthorizationurl" });
+                }
+            }
+
             yield break;
         }
     }

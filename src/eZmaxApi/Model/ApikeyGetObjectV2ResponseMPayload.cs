@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objApikey">An Apikey Object and children to create a complete structure (required).</param>
-        public ApikeyGetObjectV2ResponseMPayload(ApikeyResponse objApikey = default(ApikeyResponse))
+        /// <param name="objApikey">objApikey (required).</param>
+        public ApikeyGetObjectV2ResponseMPayload(ApikeyResponseCompound objApikey = default(ApikeyResponseCompound))
         {
             // to ensure "objApikey" is required (not null)
             if (objApikey == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// An Apikey Object and children to create a complete structure
+        /// Gets or Sets ObjApikey
         /// </summary>
-        /// <value>An Apikey Object and children to create a complete structure</value>
         [DataMember(Name = "objApikey", IsRequired = true, EmitDefaultValue = true)]
-        public ApikeyResponse ObjApikey { get; set; }
+        public ApikeyResponseCompound ObjApikey { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Contactinformations Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "contactinformations-RequestCompoundV2")]
-    public partial class ContactinformationsRequestCompoundV2 : ContactinformationsRequestV2, IValidatableObject
+    public partial class ContactinformationsRequestCompoundV2 : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EContactinformationsType
+        /// </summary>
+        [DataMember(Name = "eContactinformationsType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEContactinformationsType EContactinformationsType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundV2" /> class.
         /// </summary>
@@ -40,17 +46,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactinformationsRequestCompoundV2" /> class.
         /// </summary>
-        /// <param name="aObjAddress">aObjAddress (required).</param>
-        /// <param name="aObjPhone">aObjPhone (required).</param>
-        /// <param name="aObjEmail">aObjEmail (required).</param>
-        /// <param name="aObjWebsite">aObjWebsite (required).</param>
         /// <param name="eContactinformationsType">eContactinformationsType (required).</param>
         /// <param name="iAddressDefault">The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iPhoneDefault">The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iEmailDefault">The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
         /// <param name="iWebsiteDefault">The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty. (required).</param>
-        public ContactinformationsRequestCompoundV2(List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>), FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int)) : base()
+        /// <param name="aObjAddress">aObjAddress (required).</param>
+        /// <param name="aObjPhone">aObjPhone (required).</param>
+        /// <param name="aObjEmail">aObjEmail (required).</param>
+        /// <param name="aObjWebsite">aObjWebsite (required).</param>
+        public ContactinformationsRequestCompoundV2(FieldEContactinformationsType eContactinformationsType = default(FieldEContactinformationsType), int iAddressDefault = default(int), int iPhoneDefault = default(int), int iEmailDefault = default(int), int iWebsiteDefault = default(int), List<AddressRequestCompound> aObjAddress = default(List<AddressRequestCompound>), List<PhoneRequestCompound> aObjPhone = default(List<PhoneRequestCompound>), List<EmailRequestCompound> aObjEmail = default(List<EmailRequestCompound>), List<WebsiteRequestCompound> aObjWebsite = default(List<WebsiteRequestCompound>))
         {
+            this.EContactinformationsType = eContactinformationsType;
+            this.IAddressDefault = iAddressDefault;
+            this.IPhoneDefault = iPhoneDefault;
+            this.IEmailDefault = iEmailDefault;
+            this.IWebsiteDefault = iWebsiteDefault;
             // to ensure "aObjAddress" is required (not null)
             if (aObjAddress == null)
             {
@@ -76,6 +87,34 @@ namespace eZmaxApi.Model
             }
             this.AObjWebsite = aObjWebsite;
         }
+
+        /// <summary>
+        /// The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
+        /// </summary>
+        /// <value>The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.</value>
+        [DataMember(Name = "iAddressDefault", IsRequired = true, EmitDefaultValue = true)]
+        public int IAddressDefault { get; set; }
+
+        /// <summary>
+        /// The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.
+        /// </summary>
+        /// <value>The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.</value>
+        [DataMember(Name = "iPhoneDefault", IsRequired = true, EmitDefaultValue = true)]
+        public int IPhoneDefault { get; set; }
+
+        /// <summary>
+        /// The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.
+        /// </summary>
+        /// <value>The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.</value>
+        [DataMember(Name = "iEmailDefault", IsRequired = true, EmitDefaultValue = true)]
+        public int IEmailDefault { get; set; }
+
+        /// <summary>
+        /// The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
+        /// </summary>
+        /// <value>The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.</value>
+        [DataMember(Name = "iWebsiteDefault", IsRequired = true, EmitDefaultValue = true)]
+        public int IWebsiteDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjAddress
@@ -109,7 +148,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ContactinformationsRequestCompoundV2 {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  EContactinformationsType: ").Append(EContactinformationsType).Append("\n");
+            sb.Append("  IAddressDefault: ").Append(IAddressDefault).Append("\n");
+            sb.Append("  IPhoneDefault: ").Append(IPhoneDefault).Append("\n");
+            sb.Append("  IEmailDefault: ").Append(IEmailDefault).Append("\n");
+            sb.Append("  IWebsiteDefault: ").Append(IWebsiteDefault).Append("\n");
             sb.Append("  AObjAddress: ").Append(AObjAddress).Append("\n");
             sb.Append("  AObjPhone: ").Append(AObjPhone).Append("\n");
             sb.Append("  AObjEmail: ").Append(AObjEmail).Append("\n");
@@ -122,7 +165,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -134,20 +177,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             yield break;
         }
     }

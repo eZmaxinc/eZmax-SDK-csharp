@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiCreditcardclientID = null;
             //var response = instance.CreditcardclientDeleteObjectV1(pkiCreditcardclientID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<CreditcardclientDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiCreditcardclientID = null;
             //CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request = null;
             //var response = instance.CreditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<CreditcardclientEditObjectV1Response>(response);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace eZmaxApi.Test.Api
             //int pkiCreditcardclientID = null;
             //CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = null;
             //var response = instance.CreditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<CreditcardclientPatchObjectV1Response>(response);
         }
     }
 }

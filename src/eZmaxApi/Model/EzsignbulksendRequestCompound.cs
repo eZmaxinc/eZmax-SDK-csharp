@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignbulksend Object and children
     /// </summary>
     [DataContract(Name = "ezsignbulksend-RequestCompound")]
-    public partial class EzsignbulksendRequestCompound : EzsignbulksendRequest, IValidatableObject
+    public partial class EzsignbulksendRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignbulksendRequestCompound" /> class.
@@ -47,9 +47,81 @@ namespace eZmaxApi.Model
         /// <param name="tEzsignbulksendNote">Note about the Ezsignbulksend (required).</param>
         /// <param name="bEzsignbulksendNeedvalidation">Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation (required).</param>
         /// <param name="bEzsignbulksendIsactive">Whether the Ezsignbulksend is active or not (required).</param>
-        public EzsignbulksendRequestCompound(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool)) : base()
+        public EzsignbulksendRequestCompound(int pkiEzsignbulksendID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), string sEzsignbulksendDescription = default(string), string tEzsignbulksendNote = default(string), bool bEzsignbulksendNeedvalidation = default(bool), bool bEzsignbulksendIsactive = default(bool))
         {
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sEzsignbulksendDescription" is required (not null)
+            if (sEzsignbulksendDescription == null)
+            {
+                throw new ArgumentNullException("sEzsignbulksendDescription is a required property for EzsignbulksendRequestCompound and cannot be null");
+            }
+            this.SEzsignbulksendDescription = sEzsignbulksendDescription;
+            // to ensure "tEzsignbulksendNote" is required (not null)
+            if (tEzsignbulksendNote == null)
+            {
+                throw new ArgumentNullException("tEzsignbulksendNote is a required property for EzsignbulksendRequestCompound and cannot be null");
+            }
+            this.TEzsignbulksendNote = tEzsignbulksendNote;
+            this.BEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+            this.BEzsignbulksendIsactive = bEzsignbulksendIsactive;
+            this.PkiEzsignbulksendID = pkiEzsignbulksendID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksend
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksend</value>
+        /* <example>8</example>*/
+        [DataMember(Name = "pkiEzsignbulksendID", EmitDefaultValue = false)]
+        public int PkiEzsignbulksendID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldertype.
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldertype.</value>
+        /* <example>5</example>*/
+        [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        /// </summary>
+        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiLanguageID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignbulksend
+        /// </summary>
+        /// <value>The description of the Ezsignbulksend</value>
+        /* <example>Test eZsign Bulk Send</example>*/
+        [DataMember(Name = "sEzsignbulksendDescription", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzsignbulksendDescription { get; set; }
+
+        /// <summary>
+        /// Note about the Ezsignbulksend
+        /// </summary>
+        /// <value>Note about the Ezsignbulksend</value>
+        /* <example>This is a note</example>*/
+        [DataMember(Name = "tEzsignbulksendNote", IsRequired = true, EmitDefaultValue = true)]
+        public string TEzsignbulksendNote { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+        /// </summary>
+        /// <value>Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation</value>
+        [DataMember(Name = "bEzsignbulksendNeedvalidation", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignbulksendNeedvalidation { get; set; }
+
+        /// <summary>
+        /// Whether the Ezsignbulksend is active or not
+        /// </summary>
+        /// <value>Whether the Ezsignbulksend is active or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzsignbulksendIsactive", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzsignbulksendIsactive { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,7 +131,13 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignbulksendRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignbulksendID: ").Append(PkiEzsignbulksendID).Append("\n");
+            sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  SEzsignbulksendDescription: ").Append(SEzsignbulksendDescription).Append("\n");
+            sb.Append("  TEzsignbulksendNote: ").Append(TEzsignbulksendNote).Append("\n");
+            sb.Append("  BEzsignbulksendNeedvalidation: ").Append(BEzsignbulksendNeedvalidation).Append("\n");
+            sb.Append("  BEzsignbulksendIsactive: ").Append(BEzsignbulksendIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -68,7 +146,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -80,20 +158,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignbulksendID (int) minimum
+            if (this.PkiEzsignbulksendID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendID" });
             }
+
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) minimum
+            if (this.FkiEzsignfoldertypeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            // FkiLanguageID (int) maximum
+            if (this.FkiLanguageID > (int)2)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if (this.FkiLanguageID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
             yield break;
         }
     }

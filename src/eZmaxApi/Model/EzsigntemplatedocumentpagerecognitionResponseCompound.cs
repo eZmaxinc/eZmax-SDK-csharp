@@ -30,8 +30,20 @@ namespace eZmaxApi.Model
     /// A Ezsigntemplatedocumentpagerecognition Object
     /// </summary>
     [DataContract(Name = "ezsigntemplatedocumentpagerecognition-ResponseCompound")]
-    public partial class EzsigntemplatedocumentpagerecognitionResponseCompound : EzsigntemplatedocumentpagerecognitionResponse, IValidatableObject
+    public partial class EzsigntemplatedocumentpagerecognitionResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatedocumentpagerecognitionOperator
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatedocumentpagerecognitionOperator", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsigntemplatedocumentpagerecognitionOperator EEzsigntemplatedocumentpagerecognitionOperator { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplatedocumentpagerecognitionSection
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplatedocumentpagerecognitionSection", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsigntemplatedocumentpagerecognitionSection EEzsigntemplatedocumentpagerecognitionSection { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplatedocumentpagerecognitionResponseCompound" /> class.
         /// </summary>
@@ -50,9 +62,88 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplatedocumentpagerecognitionWidth">The width of the Ezsigntemplatedocumentpagerecognition.</param>
         /// <param name="iEzsigntemplatedocumentpagerecognitionHeight">The height of the Ezsigntemplatedocumentpagerecognition.</param>
         /// <param name="tEzsigntemplatedocumentpagerecognitionText">The text of the Ezsigntemplatedocumentpagerecognition (required).</param>
-        public EzsigntemplatedocumentpagerecognitionResponseCompound(int pkiEzsigntemplatedocumentpagerecognitionID = default(int), int fkiEzsigntemplatedocumentpageID = default(int), FieldEEzsigntemplatedocumentpagerecognitionOperator eEzsigntemplatedocumentpagerecognitionOperator = default(FieldEEzsigntemplatedocumentpagerecognitionOperator), FieldEEzsigntemplatedocumentpagerecognitionSection eEzsigntemplatedocumentpagerecognitionSection = default(FieldEEzsigntemplatedocumentpagerecognitionSection), int iEzsigntemplatedocumentpagerecognitionSimilarpercentage = default(int), int iEzsigntemplatedocumentpagerecognitionX = default(int), int iEzsigntemplatedocumentpagerecognitionY = default(int), int iEzsigntemplatedocumentpagerecognitionWidth = default(int), int iEzsigntemplatedocumentpagerecognitionHeight = default(int), string tEzsigntemplatedocumentpagerecognitionText = default(string)) : base()
+        public EzsigntemplatedocumentpagerecognitionResponseCompound(int pkiEzsigntemplatedocumentpagerecognitionID = default(int), int fkiEzsigntemplatedocumentpageID = default(int), FieldEEzsigntemplatedocumentpagerecognitionOperator eEzsigntemplatedocumentpagerecognitionOperator = default(FieldEEzsigntemplatedocumentpagerecognitionOperator), FieldEEzsigntemplatedocumentpagerecognitionSection eEzsigntemplatedocumentpagerecognitionSection = default(FieldEEzsigntemplatedocumentpagerecognitionSection), int iEzsigntemplatedocumentpagerecognitionSimilarpercentage = default(int), int iEzsigntemplatedocumentpagerecognitionX = default(int), int iEzsigntemplatedocumentpagerecognitionY = default(int), int iEzsigntemplatedocumentpagerecognitionWidth = default(int), int iEzsigntemplatedocumentpagerecognitionHeight = default(int), string tEzsigntemplatedocumentpagerecognitionText = default(string))
         {
+            this.PkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID;
+            this.FkiEzsigntemplatedocumentpageID = fkiEzsigntemplatedocumentpageID;
+            this.EEzsigntemplatedocumentpagerecognitionOperator = eEzsigntemplatedocumentpagerecognitionOperator;
+            this.EEzsigntemplatedocumentpagerecognitionSection = eEzsigntemplatedocumentpagerecognitionSection;
+            // to ensure "tEzsigntemplatedocumentpagerecognitionText" is required (not null)
+            if (tEzsigntemplatedocumentpagerecognitionText == null)
+            {
+                throw new ArgumentNullException("tEzsigntemplatedocumentpagerecognitionText is a required property for EzsigntemplatedocumentpagerecognitionResponseCompound and cannot be null");
+            }
+            this.TEzsigntemplatedocumentpagerecognitionText = tEzsigntemplatedocumentpagerecognitionText;
+            this.IEzsigntemplatedocumentpagerecognitionSimilarpercentage = iEzsigntemplatedocumentpagerecognitionSimilarpercentage;
+            this.IEzsigntemplatedocumentpagerecognitionX = iEzsigntemplatedocumentpagerecognitionX;
+            this.IEzsigntemplatedocumentpagerecognitionY = iEzsigntemplatedocumentpagerecognitionY;
+            this.IEzsigntemplatedocumentpagerecognitionWidth = iEzsigntemplatedocumentpagerecognitionWidth;
+            this.IEzsigntemplatedocumentpagerecognitionHeight = iEzsigntemplatedocumentpagerecognitionHeight;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>126</example>*/
+        [DataMember(Name = "pkiEzsigntemplatedocumentpagerecognitionID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsigntemplatedocumentpagerecognitionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatedocumentpage
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatedocumentpage</value>
+        /* <example>85</example>*/
+        [DataMember(Name = "fkiEzsigntemplatedocumentpageID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsigntemplatedocumentpageID { get; set; }
+
+        /// <summary>
+        /// The similarpercentage of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The similarpercentage of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>50</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionSimilarpercentage", EmitDefaultValue = false)]
+        public int IEzsigntemplatedocumentpagerecognitionSimilarpercentage { get; set; }
+
+        /// <summary>
+        /// The x of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The x of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>36325</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionX", EmitDefaultValue = false)]
+        public int IEzsigntemplatedocumentpagerecognitionX { get; set; }
+
+        /// <summary>
+        /// The y of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The y of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>407</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionY", EmitDefaultValue = false)]
+        public int IEzsigntemplatedocumentpagerecognitionY { get; set; }
+
+        /// <summary>
+        /// The width of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The width of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>29232</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionWidth", EmitDefaultValue = false)]
+        public int IEzsigntemplatedocumentpagerecognitionWidth { get; set; }
+
+        /// <summary>
+        /// The height of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The height of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>42651</example>*/
+        [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionHeight", EmitDefaultValue = false)]
+        public int IEzsigntemplatedocumentpagerecognitionHeight { get; set; }
+
+        /// <summary>
+        /// The text of the Ezsigntemplatedocumentpagerecognition
+        /// </summary>
+        /// <value>The text of the Ezsigntemplatedocumentpagerecognition</value>
+        /* <example>Contract</example>*/
+        [DataMember(Name = "tEzsigntemplatedocumentpagerecognitionText", IsRequired = true, EmitDefaultValue = true)]
+        public string TEzsigntemplatedocumentpagerecognitionText { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,7 +153,16 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplatedocumentpagerecognitionResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsigntemplatedocumentpagerecognitionID: ").Append(PkiEzsigntemplatedocumentpagerecognitionID).Append("\n");
+            sb.Append("  FkiEzsigntemplatedocumentpageID: ").Append(FkiEzsigntemplatedocumentpageID).Append("\n");
+            sb.Append("  EEzsigntemplatedocumentpagerecognitionOperator: ").Append(EEzsigntemplatedocumentpagerecognitionOperator).Append("\n");
+            sb.Append("  EEzsigntemplatedocumentpagerecognitionSection: ").Append(EEzsigntemplatedocumentpagerecognitionSection).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagerecognitionSimilarpercentage: ").Append(IEzsigntemplatedocumentpagerecognitionSimilarpercentage).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagerecognitionX: ").Append(IEzsigntemplatedocumentpagerecognitionX).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagerecognitionY: ").Append(IEzsigntemplatedocumentpagerecognitionY).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagerecognitionWidth: ").Append(IEzsigntemplatedocumentpagerecognitionWidth).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagerecognitionHeight: ").Append(IEzsigntemplatedocumentpagerecognitionHeight).Append("\n");
+            sb.Append("  TEzsigntemplatedocumentpagerecognitionText: ").Append(TEzsigntemplatedocumentpagerecognitionText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,7 +171,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -83,20 +183,93 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsigntemplatedocumentpagerecognitionID (int) maximum
+            if (this.PkiEzsigntemplatedocumentpagerecognitionID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
             }
+
+            // PkiEzsigntemplatedocumentpagerecognitionID (int) minimum
+            if (this.PkiEzsigntemplatedocumentpagerecognitionID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
+            }
+
+            // FkiEzsigntemplatedocumentpageID (int) minimum
+            if (this.FkiEzsigntemplatedocumentpageID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentpageID" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionSimilarpercentage (int) maximum
+            if (this.IEzsigntemplatedocumentpagerecognitionSimilarpercentage > (int)100)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value less than or equal to 100.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionSimilarpercentage (int) minimum
+            if (this.IEzsigntemplatedocumentpagerecognitionSimilarpercentage < (int)60)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value greater than or equal to 60.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionX (int) maximum
+            if (this.IEzsigntemplatedocumentpagerecognitionX > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionX (int) minimum
+            if (this.IEzsigntemplatedocumentpagerecognitionX < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionY (int) maximum
+            if (this.IEzsigntemplatedocumentpagerecognitionY > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionY (int) minimum
+            if (this.IEzsigntemplatedocumentpagerecognitionY < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionWidth (int) maximum
+            if (this.IEzsigntemplatedocumentpagerecognitionWidth > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionWidth (int) minimum
+            if (this.IEzsigntemplatedocumentpagerecognitionWidth < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionHeight (int) maximum
+            if (this.IEzsigntemplatedocumentpagerecognitionHeight > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
+            }
+
+            // IEzsigntemplatedocumentpagerecognitionHeight (int) minimum
+            if (this.IEzsigntemplatedocumentpagerecognitionHeight < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
+            }
+
+            if (this.TEzsigntemplatedocumentpagerecognitionText != null) {
+                // TEzsigntemplatedocumentpagerecognitionText (string) pattern
+                Regex regexTEzsigntemplatedocumentpagerecognitionText = new Regex(@"^[.\D\d]{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexTEzsigntemplatedocumentpagerecognitionText.Match(this.TEzsigntemplatedocumentpagerecognitionText).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TEzsigntemplatedocumentpagerecognitionText, must match a pattern of " + regexTEzsigntemplatedocumentpagerecognitionText, new [] { "TEzsigntemplatedocumentpagerecognitionText" });
+                }
+            }
+
             yield break;
         }
     }

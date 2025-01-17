@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// An Ezsignfoldersignerassociation Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "ezsignfoldersignerassociation-RequestCompound")]
-    public partial class EzsignfoldersignerassociationRequestCompound : EzsignfoldersignerassociationRequest, IValidatableObject
+    public partial class EzsignfoldersignerassociationRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
@@ -40,17 +40,78 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfoldersignerassociationRequestCompound" /> class.
         /// </summary>
-        /// <param name="objEzsignsigner">objEzsignsigner.</param>
         /// <param name="pkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiEzsignsignergroupID">The unique ID of the Ezsignsignergroup.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="bEzsignfoldersignerassociationReceivecopy">If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document..</param>
         /// <param name="tEzsignfoldersignerassociationMessage">A custom text message that will be added to the email sent..</param>
-        public EzsignfoldersignerassociationRequestCompound(EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound), int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string)) : base()
+        /// <param name="objEzsignsigner">objEzsignsigner.</param>
+        public EzsignfoldersignerassociationRequestCompound(int pkiEzsignfoldersignerassociationID = default(int), int fkiUserID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignfolderID = default(int), bool bEzsignfoldersignerassociationReceivecopy = default(bool), string tEzsignfoldersignerassociationMessage = default(string), EzsignsignerRequestCompound objEzsignsigner = default(EzsignsignerRequestCompound))
         {
+            this.FkiEzsignfolderID = fkiEzsignfolderID;
+            this.PkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+            this.FkiUserID = fkiUserID;
+            this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
+            this.BEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
+            this.TEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
             this.ObjEzsignsigner = objEzsignsigner;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldersignerassociation
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldersignerassociation</value>
+        /* <example>20</example>*/
+        [DataMember(Name = "pkiEzsignfoldersignerassociationID", EmitDefaultValue = false)]
+        public int PkiEzsignfoldersignerassociationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignergroup
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignergroup</value>
+        /* <example>27</example>*/
+        [DataMember(Name = "fkiEzsignsignergroupID", EmitDefaultValue = false)]
+        public int FkiEzsignsignergroupID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfolder
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfolder</value>
+        /* <example>33</example>*/
+        [DataMember(Name = "fkiEzsignfolderID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignfolderID { get; set; }
+
+        /// <summary>
+        /// If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
+        /// </summary>
+        /// <value>If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.</value>
+        [DataMember(Name = "bEzsignfoldersignerassociationReceivecopy", EmitDefaultValue = true)]
+        public bool BEzsignfoldersignerassociationReceivecopy { get; set; }
+
+        /// <summary>
+        /// A custom text message that will be added to the email sent.
+        /// </summary>
+        /// <value>A custom text message that will be added to the email sent.</value>
+        /* <example>Hi John,
+
+This is the document I need you to review.
+
+Could you sign it before Monday please.
+
+Best Regards.
+
+Mary</example>*/
+        [DataMember(Name = "tEzsignfoldersignerassociationMessage", EmitDefaultValue = false)]
+        public string TEzsignfoldersignerassociationMessage { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjEzsignsigner
@@ -66,7 +127,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignfoldersignerassociationRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignfoldersignerassociationID: ").Append(PkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiEzsignsignergroupID: ").Append(FkiEzsignsignergroupID).Append("\n");
+            sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
+            sb.Append("  BEzsignfoldersignerassociationReceivecopy: ").Append(BEzsignfoldersignerassociationReceivecopy).Append("\n");
+            sb.Append("  TEzsignfoldersignerassociationMessage: ").Append(TEzsignfoldersignerassociationMessage).Append("\n");
             sb.Append("  ObjEzsignsigner: ").Append(ObjEzsignsigner).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -76,7 +142,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -88,20 +154,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignfoldersignerassociationID (int) minimum
+            if (this.PkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
             }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiEzsignsignergroupID (int) maximum
+            if (this.FkiEzsignsignergroupID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "FkiEzsignsignergroupID" });
+            }
+
+            // FkiEzsignsignergroupID (int) minimum
+            if (this.FkiEzsignsignergroupID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignergroupID" });
+            }
+
+            // FkiEzsignfolderID (int) minimum
+            if (this.FkiEzsignfolderID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+            }
+
             yield break;
         }
     }

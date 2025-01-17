@@ -54,5 +54,23 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" DomainRequestCompound
             //Assert.IsType<DomainRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiDomainID'
+        /// </summary>
+        [Fact]
+        public void PkiDomainIDTest()
+        {
+            // TODO unit test for the property 'PkiDomainID'
+        }
+
+        /// <summary>
+        /// Test the property 'SDomainName'
+        /// </summary>
+        [Fact]
+        public void SDomainNameTest()
+        {
+            // TODO unit test for the property 'SDomainName'
+        }
     }
 }

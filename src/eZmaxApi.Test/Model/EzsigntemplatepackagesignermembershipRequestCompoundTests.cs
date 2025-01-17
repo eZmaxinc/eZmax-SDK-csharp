@@ -54,5 +54,50 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" EzsigntemplatepackagesignermembershipRequestCompound
             //Assert.IsType<EzsigntemplatepackagesignermembershipRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiEzsigntemplatepackagesignermembershipID'
+        /// </summary>
+        [Fact]
+        public void PkiEzsigntemplatepackagesignermembershipIDTest()
+        {
+            // TODO unit test for the property 'PkiEzsigntemplatepackagesignermembershipID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatepackagemembershipID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatepackagemembershipIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatepackagemembershipID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatepackagesignerID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatepackagesignerIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatepackagesignerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzsigntemplatesignerID'
+        /// </summary>
+        [Fact]
+        public void FkiEzsigntemplatesignerIDTest()
+        {
+            // TODO unit test for the property 'FkiEzsigntemplatesignerID'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzsigntemplatepackagesignermembershipCopy'
+        /// </summary>
+        [Fact]
+        public void IEzsigntemplatepackagesignermembershipCopyTest()
+        {
+            // TODO unit test for the property 'IEzsigntemplatepackagesignermembershipCopy'
+        }
     }
 }

@@ -56,6 +56,114 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiFranchisereferalincomeID'
+        /// </summary>
+        [Fact]
+        public void PkiFranchisereferalincomeIDTest()
+        {
+            // TODO unit test for the property 'PkiFranchisereferalincomeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchisebrokerID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchisebrokerIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchisebrokerID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchisereferalincomeprogramID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchisereferalincomeprogramIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchisereferalincomeprogramID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiPeriodID'
+        /// </summary>
+        [Fact]
+        public void FkiPeriodIDTest()
+        {
+            // TODO unit test for the property 'FkiPeriodID'
+        }
+
+        /// <summary>
+        /// Test the property 'DFranchisereferalincomeLoan'
+        /// </summary>
+        [Fact]
+        public void DFranchisereferalincomeLoanTest()
+        {
+            // TODO unit test for the property 'DFranchisereferalincomeLoan'
+        }
+
+        /// <summary>
+        /// Test the property 'DFranchisereferalincomeFranchiseamount'
+        /// </summary>
+        [Fact]
+        public void DFranchisereferalincomeFranchiseamountTest()
+        {
+            // TODO unit test for the property 'DFranchisereferalincomeFranchiseamount'
+        }
+
+        /// <summary>
+        /// Test the property 'DFranchisereferalincomeFranchisoramount'
+        /// </summary>
+        [Fact]
+        public void DFranchisereferalincomeFranchisoramountTest()
+        {
+            // TODO unit test for the property 'DFranchisereferalincomeFranchisoramount'
+        }
+
+        /// <summary>
+        /// Test the property 'DFranchisereferalincomeAgentamount'
+        /// </summary>
+        [Fact]
+        public void DFranchisereferalincomeAgentamountTest()
+        {
+            // TODO unit test for the property 'DFranchisereferalincomeAgentamount'
+        }
+
+        /// <summary>
+        /// Test the property 'DtFranchisereferalincomeDisbursed'
+        /// </summary>
+        [Fact]
+        public void DtFranchisereferalincomeDisbursedTest()
+        {
+            // TODO unit test for the property 'DtFranchisereferalincomeDisbursed'
+        }
+
+        /// <summary>
+        /// Test the property 'TFranchisereferalincomeComment'
+        /// </summary>
+        [Fact]
+        public void TFranchisereferalincomeCommentTest()
+        {
+            // TODO unit test for the property 'TFranchisereferalincomeComment'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiFranchiseofficeID'
+        /// </summary>
+        [Fact]
+        public void FkiFranchiseofficeIDTest()
+        {
+            // TODO unit test for the property 'FkiFranchiseofficeID'
+        }
+
+        /// <summary>
+        /// Test the property 'SFranchisereferalincomeRemoteid'
+        /// </summary>
+        [Fact]
+        public void SFranchisereferalincomeRemoteidTest()
+        {
+            // TODO unit test for the property 'SFranchisereferalincomeRemoteid'
+        }
+
+        /// <summary>
         /// Test the property 'ObjAddress'
         /// </summary>
         [Fact]

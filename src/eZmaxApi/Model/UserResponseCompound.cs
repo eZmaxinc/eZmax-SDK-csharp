@@ -77,7 +77,7 @@ namespace eZmaxApi.Model
         /// <param name="sTimezoneName">The description of the Timezone (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sLanguageNameX">The Name of the Language in the language of the requester (required).</param>
-        /// <param name="objEmail">An Email Object and children to create a complete structure (required).</param>
+        /// <param name="objEmail">objEmail (required).</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
         /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
         /// <param name="objPhoneHome">objPhoneHome.</param>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Model
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public UserResponseCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), string sCompanyNameX = default(string), int fkiDepartmentIDDefault = default(int), string sDepartmentNameX = default(string), int fkiTimezoneID = default(int), string sTimezoneName = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), EmailResponse objEmail = default(EmailResponse), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), PhoneResponseCompound objPhoneHome = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound), int fkiSecretquestionID = default(int), int fkiModuleIDForm = default(int), string sModuleNameX = default(string), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserLastlogondate = default(string), string dtUserPasswordchanged = default(string), string dtUserEzsignprepaidexpiration = default(string), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool), CommonAudit objAudit = default(CommonAudit))
+        public UserResponseCompound(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), string sCompanyNameX = default(string), int fkiDepartmentIDDefault = default(int), string sDepartmentNameX = default(string), int fkiTimezoneID = default(int), string sTimezoneName = default(string), int fkiLanguageID = default(int), string sLanguageNameX = default(string), EmailResponseCompound objEmail = default(EmailResponseCompound), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), PhoneResponseCompound objPhoneHome = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound), int fkiSecretquestionID = default(int), int fkiModuleIDForm = default(int), string sModuleNameX = default(string), FieldEUserOrigin eUserOrigin = default(FieldEUserOrigin), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), string dtUserLastlogondate = default(string), string dtUserPasswordchanged = default(string), string dtUserEzsignprepaidexpiration = default(string), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool), CommonAudit objAudit = default(CommonAudit))
         {
             this.PkiUserID = pkiUserID;
             this.FkiCompanyIDDefault = fkiCompanyIDDefault;
@@ -299,11 +299,10 @@ namespace eZmaxApi.Model
         public string SLanguageNameX { get; set; }
 
         /// <summary>
-        /// An Email Object and children to create a complete structure
+        /// Gets or Sets ObjEmail
         /// </summary>
-        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", IsRequired = true, EmitDefaultValue = true)]
-        public EmailResponse ObjEmail { get; set; }
+        public EmailResponseCompound ObjEmail { get; set; }
 
         /// <summary>
         /// The unique ID of the Billingentityinternal.

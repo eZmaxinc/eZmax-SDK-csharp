@@ -56,6 +56,51 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FkiUserlogintypeID'
+        /// </summary>
+        [Fact]
+        public void FkiUserlogintypeIDTest()
+        {
+            // TODO unit test for the property 'FkiUserlogintypeID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiTaxassignmentID'
+        /// </summary>
+        [Fact]
+        public void FkiTaxassignmentIDTest()
+        {
+            // TODO unit test for the property 'FkiTaxassignmentID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiSecretquestionID'
+        /// </summary>
+        [Fact]
+        public void FkiSecretquestionIDTest()
+        {
+            // TODO unit test for the property 'FkiSecretquestionID'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzsignsignerLogintype'
+        /// </summary>
+        [Fact]
+        public void EEzsignsignerLogintypeTest()
+        {
+            // TODO unit test for the property 'EEzsignsignerLogintype'
+        }
+
+        /// <summary>
+        /// Test the property 'SEzsignsignerSecretanswer'
+        /// </summary>
+        [Fact]
+        public void SEzsignsignerSecretanswerTest()
+        {
+            // TODO unit test for the property 'SEzsignsignerSecretanswer'
+        }
+
+        /// <summary>
         /// Test the property 'ObjContact'
         /// </summary>
         [Fact]

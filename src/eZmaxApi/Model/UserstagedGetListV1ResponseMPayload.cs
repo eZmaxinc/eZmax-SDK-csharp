@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/userstaged/getList
     /// </summary>
     [DataContract(Name = "userstaged-getList-v1-Response-mPayload")]
-    public partial class UserstagedGetListV1ResponseMPayload : CommonGetListV1ResponseMPayload, IValidatableObject
+    public partial class UserstagedGetListV1ResponseMPayload : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
@@ -40,11 +40,13 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetListV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aObjUserstaged">aObjUserstaged (required).</param>
         /// <param name="iRowReturned">The number of rows returned (required).</param>
         /// <param name="iRowFiltered">The number of rows matching your filters (if any) or the total number of rows (required).</param>
-        public UserstagedGetListV1ResponseMPayload(List<UserstagedListElement> aObjUserstaged = default(List<UserstagedListElement>), int iRowReturned = default(int), int iRowFiltered = default(int)) : base()
+        /// <param name="aObjUserstaged">aObjUserstaged (required).</param>
+        public UserstagedGetListV1ResponseMPayload(int iRowReturned = default(int), int iRowFiltered = default(int), List<UserstagedListElement> aObjUserstaged = default(List<UserstagedListElement>))
         {
+            this.IRowReturned = iRowReturned;
+            this.IRowFiltered = iRowFiltered;
             // to ensure "aObjUserstaged" is required (not null)
             if (aObjUserstaged == null)
             {
@@ -52,6 +54,22 @@ namespace eZmaxApi.Model
             }
             this.AObjUserstaged = aObjUserstaged;
         }
+
+        /// <summary>
+        /// The number of rows returned
+        /// </summary>
+        /// <value>The number of rows returned</value>
+        /* <example>100</example>*/
+        [DataMember(Name = "iRowReturned", IsRequired = true, EmitDefaultValue = true)]
+        public int IRowReturned { get; set; }
+
+        /// <summary>
+        /// The number of rows matching your filters (if any) or the total number of rows
+        /// </summary>
+        /// <value>The number of rows matching your filters (if any) or the total number of rows</value>
+        /* <example>533</example>*/
+        [DataMember(Name = "iRowFiltered", IsRequired = true, EmitDefaultValue = true)]
+        public int IRowFiltered { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjUserstaged
@@ -67,7 +85,8 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class UserstagedGetListV1ResponseMPayload {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  IRowReturned: ").Append(IRowReturned).Append("\n");
+            sb.Append("  IRowFiltered: ").Append(IRowFiltered).Append("\n");
             sb.Append("  AObjUserstaged: ").Append(AObjUserstaged).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -77,7 +96,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -89,20 +108,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
-            {
-                yield return x;
-            }
             yield break;
         }
     }

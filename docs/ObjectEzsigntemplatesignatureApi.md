@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatesignaturedeleteobjectv1"></a>
 # **EzsigntemplatesignatureDeleteObjectV1**
-> CommonResponse EzsigntemplatesignatureDeleteObjectV1 (int pkiEzsigntemplatesignatureID)
+> EzsigntemplatesignatureDeleteObjectV1Response EzsigntemplatesignatureDeleteObjectV1 (int pkiEzsigntemplatesignatureID)
 
 Delete an existing Ezsigntemplatesignature
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplatesignature
-                CommonResponse result = apiInstance.EzsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID);
+                EzsigntemplatesignatureDeleteObjectV1Response result = apiInstance.EzsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplatesignature
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID);
+    ApiResponse<EzsigntemplatesignatureDeleteObjectV1Response> response = apiInstance.EzsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatesignatureDeleteObjectV1Response**](EzsigntemplatesignatureDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatesignatureeditobjectv2"></a>
 # **EzsigntemplatesignatureEditObjectV2**
-> CommonResponse EzsigntemplatesignatureEditObjectV2 (int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request)
+> EzsigntemplatesignatureEditObjectV2Response EzsigntemplatesignatureEditObjectV2 (int pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request)
 
 Edit an existing Ezsigntemplatesignature
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplatesignature
-                CommonResponse result = apiInstance.EzsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
+                EzsigntemplatesignatureEditObjectV2Response result = apiInstance.EzsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplatesignature
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
+    ApiResponse<EzsigntemplatesignatureEditObjectV2Response> response = apiInstance.EzsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatesignatureEditObjectV2Response**](EzsigntemplatesignatureEditObjectV2Response.md)
 
 ### Authorization
 

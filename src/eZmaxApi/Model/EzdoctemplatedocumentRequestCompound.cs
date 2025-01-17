@@ -30,8 +30,14 @@ namespace eZmaxApi.Model
     /// A Ezdoctemplatedocument Object and children
     /// </summary>
     [DataContract(Name = "ezdoctemplatedocument-RequestCompound")]
-    public partial class EzdoctemplatedocumentRequestCompound : EzdoctemplatedocumentRequest, IValidatableObject
+    public partial class EzdoctemplatedocumentRequestCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzdoctemplatedocumentPrivacylevel
+        /// </summary>
+        [DataMember(Name = "eEzdoctemplatedocumentPrivacylevel", EmitDefaultValue = false)]
+        public FieldEEzdoctemplatedocumentPrivacylevel? EEzdoctemplatedocumentPrivacylevel { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzdoctemplatedocumentRequestCompound" /> class.
         /// </summary>
@@ -48,9 +54,76 @@ namespace eZmaxApi.Model
         /// <param name="eEzdoctemplatedocumentPrivacylevel">eEzdoctemplatedocumentPrivacylevel.</param>
         /// <param name="bEzdoctemplatedocumentIsactive">Whether the ezdoctemplatedocument is active or not (required).</param>
         /// <param name="objEzdoctemplatedocumentName">objEzdoctemplatedocumentName (required).</param>
-        public EzdoctemplatedocumentRequestCompound(int pkiEzdoctemplatedocumentID = default(int), int fkiLanguageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzdoctemplatetypeID = default(int), int fkiEzdoctemplatefieldtypecategoryID = default(int), FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool bEzdoctemplatedocumentIsactive = default(bool), MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default(MultilingualEzdoctemplatedocumentName)) : base()
+        public EzdoctemplatedocumentRequestCompound(int pkiEzdoctemplatedocumentID = default(int), int fkiLanguageID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiEzdoctemplatetypeID = default(int), int fkiEzdoctemplatefieldtypecategoryID = default(int), FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default(FieldEEzdoctemplatedocumentPrivacylevel?), bool bEzdoctemplatedocumentIsactive = default(bool), MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default(MultilingualEzdoctemplatedocumentName))
         {
+            this.FkiLanguageID = fkiLanguageID;
+            this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
+            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
+            this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
+            // to ensure "objEzdoctemplatedocumentName" is required (not null)
+            if (objEzdoctemplatedocumentName == null)
+            {
+                throw new ArgumentNullException("objEzdoctemplatedocumentName is a required property for EzdoctemplatedocumentRequestCompound and cannot be null");
+            }
+            this.ObjEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
+            this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
+            this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.EEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezdoctemplatedocument
+        /// </summary>
+        /// <value>The unique ID of the Ezdoctemplatedocument</value>
+        /* <example>95</example>*/
+        [DataMember(Name = "pkiEzdoctemplatedocumentID", EmitDefaultValue = false)]
+        public int PkiEzdoctemplatedocumentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        /// </summary>
+        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiLanguageID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignfoldertype.
+        /// </summary>
+        /// <value>The unique ID of the Ezsignfoldertype.</value>
+        /* <example>5</example>*/
+        [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
+        public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezdoctemplatetype
+        /// </summary>
+        /// <value>The unique ID of the Ezdoctemplatetype</value>
+        /* <example>7</example>*/
+        [DataMember(Name = "fkiEzdoctemplatetypeID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzdoctemplatetypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezdoctemplatefieldtypecategory
+        /// </summary>
+        /// <value>The unique ID of the Ezdoctemplatefieldtypecategory</value>
+        /* <example>4</example>*/
+        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzdoctemplatefieldtypecategoryID { get; set; }
+
+        /// <summary>
+        /// Whether the ezdoctemplatedocument is active or not
+        /// </summary>
+        /// <value>Whether the ezdoctemplatedocument is active or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzdoctemplatedocumentIsactive", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzdoctemplatedocumentIsactive { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzdoctemplatedocumentName
+        /// </summary>
+        [DataMember(Name = "objEzdoctemplatedocumentName", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualEzdoctemplatedocumentName ObjEzdoctemplatedocumentName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,7 +133,14 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzdoctemplatedocumentRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzdoctemplatedocumentID: ").Append(PkiEzdoctemplatedocumentID).Append("\n");
+            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiEzdoctemplatetypeID: ").Append(FkiEzdoctemplatetypeID).Append("\n");
+            sb.Append("  FkiEzdoctemplatefieldtypecategoryID: ").Append(FkiEzdoctemplatefieldtypecategoryID).Append("\n");
+            sb.Append("  EEzdoctemplatedocumentPrivacylevel: ").Append(EEzdoctemplatedocumentPrivacylevel).Append("\n");
+            sb.Append("  BEzdoctemplatedocumentIsactive: ").Append(BEzdoctemplatedocumentIsactive).Append("\n");
+            sb.Append("  ObjEzdoctemplatedocumentName: ").Append(ObjEzdoctemplatedocumentName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -69,7 +149,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -81,20 +161,66 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzdoctemplatedocumentID (int) maximum
+            if (this.PkiEzdoctemplatedocumentID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value less than or equal to 65535.", new [] { "PkiEzdoctemplatedocumentID" });
             }
+
+            // PkiEzdoctemplatedocumentID (int) minimum
+            if (this.PkiEzdoctemplatedocumentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiEzdoctemplatedocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzdoctemplatedocumentID" });
+            }
+
+            // FkiLanguageID (int) maximum
+            if (this.FkiLanguageID > (int)2)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if (this.FkiLanguageID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) maximum
+            if (this.FkiEzsignfoldertypeID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            // FkiEzsignfoldertypeID (int) minimum
+            if (this.FkiEzsignfoldertypeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            // FkiEzdoctemplatetypeID (int) maximum
+            if (this.FkiEzdoctemplatetypeID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatetypeID" });
+            }
+
+            // FkiEzdoctemplatetypeID (int) minimum
+            if (this.FkiEzdoctemplatetypeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatetypeID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatetypeID" });
+            }
+
+            // FkiEzdoctemplatefieldtypecategoryID (int) maximum
+            if (this.FkiEzdoctemplatefieldtypecategoryID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value less than or equal to 255.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
+            }
+
+            // FkiEzdoctemplatefieldtypecategoryID (int) minimum
+            if (this.FkiEzdoctemplatefieldtypecategoryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzdoctemplatefieldtypecategoryID, must be a value greater than or equal to 0.", new [] { "FkiEzdoctemplatefieldtypecategoryID" });
+            }
+
             yield break;
         }
     }

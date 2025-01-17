@@ -56,6 +56,87 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiEzmaxinvoicinguserID'
+        /// </summary>
+        [Fact]
+        public void PkiEzmaxinvoicinguserIDTest()
+        {
+            // TODO unit test for the property 'PkiEzmaxinvoicinguserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEzmaxinvoicingID'
+        /// </summary>
+        [Fact]
+        public void FkiEzmaxinvoicingIDTest()
+        {
+            // TODO unit test for the property 'FkiEzmaxinvoicingID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiBillingentityinternalID'
+        /// </summary>
+        [Fact]
+        public void FkiBillingentityinternalIDTest()
+        {
+            // TODO unit test for the property 'FkiBillingentityinternalID'
+        }
+
+        /// <summary>
+        /// Test the property 'SBillingentityinternalDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SBillingentityinternalDescriptionXTest()
+        {
+            // TODO unit test for the property 'SBillingentityinternalDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'IEzmaxinvoicinguserEzsigndocument'
+        /// </summary>
+        [Fact]
+        public void IEzmaxinvoicinguserEzsigndocumentTest()
+        {
+            // TODO unit test for the property 'IEzmaxinvoicinguserEzsigndocument'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzmaxinvoicinguserEzsignaccount'
+        /// </summary>
+        [Fact]
+        public void BEzmaxinvoicinguserEzsignaccountTest()
+        {
+            // TODO unit test for the property 'BEzmaxinvoicinguserEzsignaccount'
+        }
+
+        /// <summary>
+        /// Test the property 'BEzmaxinvoicinguserBillableezsign'
+        /// </summary>
+        [Fact]
+        public void BEzmaxinvoicinguserBillableezsignTest()
+        {
+            // TODO unit test for the property 'BEzmaxinvoicinguserBillableezsign'
+        }
+
+        /// <summary>
+        /// Test the property 'EEzmaxinvoicinguserVariationezsign'
+        /// </summary>
+        [Fact]
+        public void EEzmaxinvoicinguserVariationezsignTest()
+        {
+            // TODO unit test for the property 'EEzmaxinvoicinguserVariationezsign'
+        }
+
+        /// <summary>
         /// Test the property 'ObjContactName'
         /// </summary>
         [Fact]

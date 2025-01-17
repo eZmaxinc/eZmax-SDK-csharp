@@ -212,7 +212,7 @@ catch (ApiException e)
 
 <a id="ezsignbulksenddeleteobjectv1"></a>
 # **EzsignbulksendDeleteObjectV1**
-> CommonResponse EzsignbulksendDeleteObjectV1 (int pkiEzsignbulksendID)
+> EzsignbulksendDeleteObjectV1Response EzsignbulksendDeleteObjectV1 (int pkiEzsignbulksendID)
 
 Delete an existing Ezsignbulksend
 
@@ -243,7 +243,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignbulksend
-                CommonResponse result = apiInstance.EzsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
+                EzsignbulksendDeleteObjectV1Response result = apiInstance.EzsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -264,7 +264,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignbulksend
-    ApiResponse<CommonResponse> response = apiInstance.EzsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID);
+    ApiResponse<EzsignbulksendDeleteObjectV1Response> response = apiInstance.EzsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -285,7 +285,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendDeleteObjectV1Response**](EzsignbulksendDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ catch (ApiException e)
 
 <a id="ezsignbulksendeditobjectv1"></a>
 # **EzsignbulksendEditObjectV1**
-> CommonResponse EzsignbulksendEditObjectV1 (int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request)
+> EzsignbulksendEditObjectV1Response EzsignbulksendEditObjectV1 (int pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request)
 
 Edit an existing Ezsignbulksend
 
@@ -340,7 +340,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignbulksend
-                CommonResponse result = apiInstance.EzsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+                EzsignbulksendEditObjectV1Response result = apiInstance.EzsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -361,7 +361,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignbulksend
-    ApiResponse<CommonResponse> response = apiInstance.EzsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+    ApiResponse<EzsignbulksendEditObjectV1Response> response = apiInstance.EzsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -383,7 +383,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendEditObjectV1Response**](EzsignbulksendEditObjectV1Response.md)
 
 ### Authorization
 
@@ -994,7 +994,7 @@ catch (ApiException e)
 
 <a id="ezsignbulksendreorderv1"></a>
 # **EzsignbulksendReorderV1**
-> CommonResponse EzsignbulksendReorderV1 (int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request)
+> EzsignbulksendReorderV1Response EzsignbulksendReorderV1 (int pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request)
 
 Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
 
@@ -1026,7 +1026,7 @@ namespace Example
             try
             {
                 // Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
-                CommonResponse result = apiInstance.EzsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+                EzsignbulksendReorderV1Response result = apiInstance.EzsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1047,7 +1047,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
-    ApiResponse<CommonResponse> response = apiInstance.EzsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+    ApiResponse<EzsignbulksendReorderV1Response> response = apiInstance.EzsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1069,7 +1069,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendReorderV1Response**](EzsignbulksendReorderV1Response.md)
 
 ### Authorization
 

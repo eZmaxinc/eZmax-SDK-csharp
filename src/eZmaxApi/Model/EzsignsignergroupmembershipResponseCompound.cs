@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezsignsignergroupmembership Object
     /// </summary>
     [DataContract(Name = "ezsignsignergroupmembership-ResponseCompound")]
-    public partial class EzsignsignergroupmembershipResponseCompound : EzsignsignergroupmembershipResponse, IValidatableObject
+    public partial class EzsignsignergroupmembershipResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignsignergroupmembershipResponseCompound" /> class.
@@ -45,9 +45,54 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiUsergroupID">The unique ID of the Usergroup.</param>
-        public EzsignsignergroupmembershipResponseCompound(int pkiEzsignsignergroupmembershipID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignsignerID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int)) : base()
+        public EzsignsignergroupmembershipResponseCompound(int pkiEzsignsignergroupmembershipID = default(int), int fkiEzsignsignergroupID = default(int), int fkiEzsignsignerID = default(int), int fkiUserID = default(int), int fkiUsergroupID = default(int))
         {
+            this.PkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
+            this.FkiEzsignsignergroupID = fkiEzsignsignergroupID;
+            this.FkiEzsignsignerID = fkiEzsignsignerID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUsergroupID = fkiUsergroupID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignergroupmembership
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignergroupmembership</value>
+        /* <example>153</example>*/
+        [DataMember(Name = "pkiEzsignsignergroupmembershipID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiEzsignsignergroupmembershipID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsignergroup
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsignergroup</value>
+        /* <example>27</example>*/
+        [DataMember(Name = "fkiEzsignsignergroupID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsignsignergroupID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignsigner
+        /// </summary>
+        /// <value>The unique ID of the Ezsignsigner</value>
+        /* <example>89</example>*/
+        [DataMember(Name = "fkiEzsignsignerID", EmitDefaultValue = false)]
+        public int FkiEzsignsignerID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", EmitDefaultValue = false)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Usergroup
+        /// </summary>
+        /// <value>The unique ID of the Usergroup</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiUsergroupID", EmitDefaultValue = false)]
+        public int FkiUsergroupID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,7 +102,11 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsignsignergroupmembershipResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzsignsignergroupmembershipID: ").Append(PkiEzsignsignergroupmembershipID).Append("\n");
+            sb.Append("  FkiEzsignsignergroupID: ").Append(FkiEzsignsignergroupID).Append("\n");
+            sb.Append("  FkiEzsignsignerID: ").Append(FkiEzsignsignerID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiUsergroupID: ").Append(FkiUsergroupID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -66,7 +115,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -78,20 +127,54 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzsignsignergroupmembershipID (int) maximum
+            if (this.PkiEzsignsignergroupmembershipID > (int)16777215)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupmembershipID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignsignergroupmembershipID" });
             }
+
+            // PkiEzsignsignergroupmembershipID (int) minimum
+            if (this.PkiEzsignsignergroupmembershipID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiEzsignsignergroupmembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignergroupmembershipID" });
+            }
+
+            // FkiEzsignsignergroupID (int) maximum
+            if (this.FkiEzsignsignergroupID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value less than or equal to 65535.", new [] { "FkiEzsignsignergroupID" });
+            }
+
+            // FkiEzsignsignergroupID (int) minimum
+            if (this.FkiEzsignsignergroupID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignsignergroupID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignergroupID" });
+            }
+
+            // FkiEzsignsignerID (int) minimum
+            if (this.FkiEzsignsignerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignsignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignerID" });
+            }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiUsergroupID (int) maximum
+            if (this.FkiUsergroupID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+            }
+
+            // FkiUsergroupID (int) minimum
+            if (this.FkiUsergroupID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+            }
+
             yield break;
         }
     }

@@ -30,8 +30,20 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingagent Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingagent-ResponseCompound")]
-    public partial class EzmaxinvoicingagentResponseCompound : EzmaxinvoicingagentResponse, IValidatableObject
+    public partial class EzmaxinvoicingagentResponseCompound : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingagentVariationezmax
+        /// </summary>
+        [DataMember(Name = "eEzmaxinvoicingagentVariationezmax", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzmaxinvoicingagentVariationezmax EEzmaxinvoicingagentVariationezmax { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzmaxinvoicingagentVariationezsign
+        /// </summary>
+        [DataMember(Name = "eEzmaxinvoicingagentVariationezsign", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzmaxinvoicingagentVariationezsign EEzmaxinvoicingagentVariationezsign { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
         /// </summary>
@@ -40,7 +52,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingagentResponseCompound" /> class.
         /// </summary>
-        /// <param name="objContactName">objContactName (required).</param>
         /// <param name="pkiEzmaxinvoicingagentID">The unique ID of the Ezmaxinvoicingagent.</param>
         /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
@@ -61,15 +72,185 @@ namespace eZmaxApi.Model
         /// <param name="eEzmaxinvoicingagentVariationezmax">eEzmaxinvoicingagentVariationezmax (required).</param>
         /// <param name="bEzmaxinvoicingagentBillableezsign">Whether it is billable for eZsign (required).</param>
         /// <param name="eEzmaxinvoicingagentVariationezsign">eEzmaxinvoicingagentVariationezsign (required).</param>
-        public EzmaxinvoicingagentResponseCompound(CustomContactNameResponse objContactName = default(CustomContactNameResponse), int pkiEzmaxinvoicingagentID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiAgentID = default(int), int fkiBrokerID = default(int), int iEzmaxinvoicingagentSession = default(int), int iEzmaxinvoicingagentCloned = default(int), int iEzmaxinvoicingagentInvoice = default(int), int iEzmaxinvoicingagentInscription = default(int), int iEzmaxinvoicingagentInscriptionactive = default(int), int iEzmaxinvoicingagentSale = default(int), int iEzmaxinvoicingagentOtherincome = default(int), int iEzmaxinvoicingagentCommissioncalculation = default(int), int iEzmaxinvoicingagentEzsigndocument = default(int), bool bEzmaxinvoicingagentEzsignaccount = default(bool), bool bEzmaxinvoicingagentBillableezmax = default(bool), FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax = default(FieldEEzmaxinvoicingagentVariationezmax), bool bEzmaxinvoicingagentBillableezsign = default(bool), FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign = default(FieldEEzmaxinvoicingagentVariationezsign)) : base()
+        /// <param name="objContactName">objContactName (required).</param>
+        public EzmaxinvoicingagentResponseCompound(int pkiEzmaxinvoicingagentID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiAgentID = default(int), int fkiBrokerID = default(int), int iEzmaxinvoicingagentSession = default(int), int iEzmaxinvoicingagentCloned = default(int), int iEzmaxinvoicingagentInvoice = default(int), int iEzmaxinvoicingagentInscription = default(int), int iEzmaxinvoicingagentInscriptionactive = default(int), int iEzmaxinvoicingagentSale = default(int), int iEzmaxinvoicingagentOtherincome = default(int), int iEzmaxinvoicingagentCommissioncalculation = default(int), int iEzmaxinvoicingagentEzsigndocument = default(int), bool bEzmaxinvoicingagentEzsignaccount = default(bool), bool bEzmaxinvoicingagentBillableezmax = default(bool), FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax = default(FieldEEzmaxinvoicingagentVariationezmax), bool bEzmaxinvoicingagentBillableezsign = default(bool), FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign = default(FieldEEzmaxinvoicingagentVariationezsign), CustomContactNameResponse objContactName = default(CustomContactNameResponse))
         {
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
+            if (sBillingentityinternalDescriptionX == null)
+            {
+                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicingagentResponseCompound and cannot be null");
+            }
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+            this.IEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
+            this.IEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
+            this.IEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
+            this.IEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
+            this.IEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
+            this.IEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
+            this.IEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
+            this.IEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
+            this.IEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
+            this.BEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
+            this.BEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
+            this.EEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
+            this.BEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
+            this.EEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
             // to ensure "objContactName" is required (not null)
             if (objContactName == null)
             {
                 throw new ArgumentNullException("objContactName is a required property for EzmaxinvoicingagentResponseCompound and cannot be null");
             }
             this.ObjContactName = objContactName;
+            this.PkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
+            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicingagent
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicingagent</value>
+        /* <example>181</example>*/
+        [DataMember(Name = "pkiEzmaxinvoicingagentID", EmitDefaultValue = false)]
+        public int PkiEzmaxinvoicingagentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicing
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicing</value>
+        /* <example>28</example>*/
+        [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
+        public int FkiEzmaxinvoicingID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityinternal.
+        /// </summary>
+        /// <value>The unique ID of the Billingentityinternal.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiBillingentityinternalID { get; set; }
+
+        /// <summary>
+        /// The description of the Billingentityinternal in the language of the requester
+        /// </summary>
+        /// <value>The description of the Billingentityinternal in the language of the requester</value>
+        /* <example>Default</example>*/
+        [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        public string SBillingentityinternalDescriptionX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Agent.
+        /// </summary>
+        /// <value>The unique ID of the Agent.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
+        public int FkiAgentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Broker.
+        /// </summary>
+        /// <value>The unique ID of the Broker.</value>
+        /* <example>26</example>*/
+        [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
+        public int FkiBrokerID { get; set; }
+
+        /// <summary>
+        /// The number of sessions
+        /// </summary>
+        /// <value>The number of sessions</value>
+        /* <example>42</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentSession", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentSession { get; set; }
+
+        /// <summary>
+        /// The number of times this user was cloned
+        /// </summary>
+        /// <value>The number of times this user was cloned</value>
+        /* <example>157</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentCloned", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentCloned { get; set; }
+
+        /// <summary>
+        /// The number of invoices
+        /// </summary>
+        /// <value>The number of invoices</value>
+        /* <example>30</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentInvoice", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentInvoice { get; set; }
+
+        /// <summary>
+        /// The number of inscriptions
+        /// </summary>
+        /// <value>The number of inscriptions</value>
+        /* <example>113</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentInscription", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentInscription { get; set; }
+
+        /// <summary>
+        /// The number of active inscriptions
+        /// </summary>
+        /// <value>The number of active inscriptions</value>
+        /* <example>51</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentInscriptionactive", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentInscriptionactive { get; set; }
+
+        /// <summary>
+        /// The number of sales
+        /// </summary>
+        /// <value>The number of sales</value>
+        /* <example>213</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentSale", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentSale { get; set; }
+
+        /// <summary>
+        /// The number of otherincomes
+        /// </summary>
+        /// <value>The number of otherincomes</value>
+        /* <example>198</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentOtherincome", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentOtherincome { get; set; }
+
+        /// <summary>
+        /// The number of commission calculations
+        /// </summary>
+        /// <value>The number of commission calculations</value>
+        /* <example>107</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentCommissioncalculation", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentCommissioncalculation { get; set; }
+
+        /// <summary>
+        /// The number of ezsign documents
+        /// </summary>
+        /// <value>The number of ezsign documents</value>
+        /* <example>160</example>*/
+        [DataMember(Name = "iEzmaxinvoicingagentEzsigndocument", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingagentEzsigndocument { get; set; }
+
+        /// <summary>
+        /// Whether the agent has an eZsign account
+        /// </summary>
+        /// <value>Whether the agent has an eZsign account</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzmaxinvoicingagentEzsignaccount", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzmaxinvoicingagentEzsignaccount { get; set; }
+
+        /// <summary>
+        /// Whether it is billable for eZmax
+        /// </summary>
+        /// <value>Whether it is billable for eZmax</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzmaxinvoicingagentBillableezmax", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzmaxinvoicingagentBillableezmax { get; set; }
+
+        /// <summary>
+        /// Whether it is billable for eZsign
+        /// </summary>
+        /// <value>Whether it is billable for eZsign</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzmaxinvoicingagentBillableezsign", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzmaxinvoicingagentBillableezsign { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjContactName
@@ -85,7 +266,26 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicingagentResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzmaxinvoicingagentID: ").Append(PkiEzmaxinvoicingagentID).Append("\n");
+            sb.Append("  FkiEzmaxinvoicingID: ").Append(FkiEzmaxinvoicingID).Append("\n");
+            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
+            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
+            sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
+            sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentSession: ").Append(IEzmaxinvoicingagentSession).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentCloned: ").Append(IEzmaxinvoicingagentCloned).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentInvoice: ").Append(IEzmaxinvoicingagentInvoice).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentInscription: ").Append(IEzmaxinvoicingagentInscription).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentInscriptionactive: ").Append(IEzmaxinvoicingagentInscriptionactive).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentSale: ").Append(IEzmaxinvoicingagentSale).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentOtherincome: ").Append(IEzmaxinvoicingagentOtherincome).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentCommissioncalculation: ").Append(IEzmaxinvoicingagentCommissioncalculation).Append("\n");
+            sb.Append("  IEzmaxinvoicingagentEzsigndocument: ").Append(IEzmaxinvoicingagentEzsigndocument).Append("\n");
+            sb.Append("  BEzmaxinvoicingagentEzsignaccount: ").Append(BEzmaxinvoicingagentEzsignaccount).Append("\n");
+            sb.Append("  BEzmaxinvoicingagentBillableezmax: ").Append(BEzmaxinvoicingagentBillableezmax).Append("\n");
+            sb.Append("  EEzmaxinvoicingagentVariationezmax: ").Append(EEzmaxinvoicingagentVariationezmax).Append("\n");
+            sb.Append("  BEzmaxinvoicingagentBillableezsign: ").Append(BEzmaxinvoicingagentBillableezsign).Append("\n");
+            sb.Append("  EEzmaxinvoicingagentVariationezsign: ").Append(EEzmaxinvoicingagentVariationezsign).Append("\n");
             sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -95,7 +295,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -107,20 +307,90 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzmaxinvoicingagentID (int) minimum
+            if (this.PkiEzmaxinvoicingagentID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingagentID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingagentID" });
             }
+
+            // FkiEzmaxinvoicingID (int) minimum
+            if (this.FkiEzmaxinvoicingID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+            }
+
+            // FkiBillingentityinternalID (int) minimum
+            if (this.FkiBillingentityinternalID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+            }
+
+            // FkiAgentID (int) minimum
+            if (this.FkiAgentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+            }
+
+            // FkiBrokerID (int) minimum
+            if (this.FkiBrokerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+            }
+
+            // IEzmaxinvoicingagentSession (int) minimum
+            if (this.IEzmaxinvoicingagentSession < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentSession, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentSession" });
+            }
+
+            // IEzmaxinvoicingagentCloned (int) minimum
+            if (this.IEzmaxinvoicingagentCloned < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentCloned, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentCloned" });
+            }
+
+            // IEzmaxinvoicingagentInvoice (int) minimum
+            if (this.IEzmaxinvoicingagentInvoice < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentInvoice, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInvoice" });
+            }
+
+            // IEzmaxinvoicingagentInscription (int) minimum
+            if (this.IEzmaxinvoicingagentInscription < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentInscription, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInscription" });
+            }
+
+            // IEzmaxinvoicingagentInscriptionactive (int) minimum
+            if (this.IEzmaxinvoicingagentInscriptionactive < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentInscriptionactive, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentInscriptionactive" });
+            }
+
+            // IEzmaxinvoicingagentSale (int) minimum
+            if (this.IEzmaxinvoicingagentSale < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentSale, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentSale" });
+            }
+
+            // IEzmaxinvoicingagentOtherincome (int) minimum
+            if (this.IEzmaxinvoicingagentOtherincome < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentOtherincome, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentOtherincome" });
+            }
+
+            // IEzmaxinvoicingagentCommissioncalculation (int) minimum
+            if (this.IEzmaxinvoicingagentCommissioncalculation < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentCommissioncalculation, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentCommissioncalculation" });
+            }
+
+            // IEzmaxinvoicingagentEzsigndocument (int) minimum
+            if (this.IEzmaxinvoicingagentEzsigndocument < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingagentEzsigndocument, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingagentEzsigndocument" });
+            }
+
             yield break;
         }
     }

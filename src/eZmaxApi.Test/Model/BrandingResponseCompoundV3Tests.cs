@@ -56,6 +56,96 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiBrandingID'
+        /// </summary>
+        [Fact]
+        public void PkiBrandingIDTest()
+        {
+            // TODO unit test for the property 'PkiBrandingID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiEmailID'
+        /// </summary>
+        [Fact]
+        public void FkiEmailIDTest()
+        {
+            // TODO unit test for the property 'FkiEmailID'
+        }
+
+        /// <summary>
+        /// Test the property 'ObjBrandingDescription'
+        /// </summary>
+        [Fact]
+        public void ObjBrandingDescriptionTest()
+        {
+            // TODO unit test for the property 'ObjBrandingDescription'
+        }
+
+        /// <summary>
+        /// Test the property 'SBrandingDescriptionX'
+        /// </summary>
+        [Fact]
+        public void SBrandingDescriptionXTest()
+        {
+            // TODO unit test for the property 'SBrandingDescriptionX'
+        }
+
+        /// <summary>
+        /// Test the property 'SBrandingName'
+        /// </summary>
+        [Fact]
+        public void SBrandingNameTest()
+        {
+            // TODO unit test for the property 'SBrandingName'
+        }
+
+        /// <summary>
+        /// Test the property 'SEmailAddress'
+        /// </summary>
+        [Fact]
+        public void SEmailAddressTest()
+        {
+            // TODO unit test for the property 'SEmailAddress'
+        }
+
+        /// <summary>
+        /// Test the property 'EBrandingLogo'
+        /// </summary>
+        [Fact]
+        public void EBrandingLogoTest()
+        {
+            // TODO unit test for the property 'EBrandingLogo'
+        }
+
+        /// <summary>
+        /// Test the property 'EBrandingAlignlogo'
+        /// </summary>
+        [Fact]
+        public void EBrandingAlignlogoTest()
+        {
+            // TODO unit test for the property 'EBrandingAlignlogo'
+        }
+
+        /// <summary>
+        /// Test the property 'IBrandingColor'
+        /// </summary>
+        [Fact]
+        public void IBrandingColorTest()
+        {
+            // TODO unit test for the property 'IBrandingColor'
+        }
+
+        /// <summary>
+        /// Test the property 'BBrandingIsactive'
+        /// </summary>
+        [Fact]
+        public void BBrandingIsactiveTest()
+        {
+            // TODO unit test for the property 'BBrandingIsactive'
+        }
+
+        /// <summary>
         /// Test the property 'SBrandingLogourl'
         /// </summary>
         [Fact]

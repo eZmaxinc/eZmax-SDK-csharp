@@ -54,5 +54,59 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" DiscussionmembershipRequestCompound
             //Assert.IsType<DiscussionmembershipRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiDiscussionmembershipID'
+        /// </summary>
+        [Fact]
+        public void PkiDiscussionmembershipIDTest()
+        {
+            // TODO unit test for the property 'PkiDiscussionmembershipID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiDiscussionID'
+        /// </summary>
+        [Fact]
+        public void FkiDiscussionIDTest()
+        {
+            // TODO unit test for the property 'FkiDiscussionID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUserID'
+        /// </summary>
+        [Fact]
+        public void FkiUserIDTest()
+        {
+            // TODO unit test for the property 'FkiUserID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiUsergroupID'
+        /// </summary>
+        [Fact]
+        public void FkiUsergroupIDTest()
+        {
+            // TODO unit test for the property 'FkiUsergroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiModulesectionID'
+        /// </summary>
+        [Fact]
+        public void FkiModulesectionIDTest()
+        {
+            // TODO unit test for the property 'FkiModulesectionID'
+        }
+
+        /// <summary>
+        /// Test the property 'DtDiscussionmembershipJoined'
+        /// </summary>
+        [Fact]
+        public void DtDiscussionmembershipJoinedTest()
+        {
+            // TODO unit test for the property 'DtDiscussionmembershipJoined'
+        }
     }
 }

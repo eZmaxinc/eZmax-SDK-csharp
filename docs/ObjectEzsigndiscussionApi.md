@@ -106,7 +106,7 @@ catch (ApiException e)
 
 <a id="ezsigndiscussiondeleteobjectv1"></a>
 # **EzsigndiscussionDeleteObjectV1**
-> CommonResponse EzsigndiscussionDeleteObjectV1 (int pkiEzsigndiscussionID)
+> EzsigndiscussionDeleteObjectV1Response EzsigndiscussionDeleteObjectV1 (int pkiEzsigndiscussionID)
 
 Delete an existing Ezsigndiscussion
 
@@ -137,7 +137,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigndiscussion
-                CommonResponse result = apiInstance.EzsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
+                EzsigndiscussionDeleteObjectV1Response result = apiInstance.EzsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -158,7 +158,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigndiscussion
-    ApiResponse<CommonResponse> response = apiInstance.EzsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
+    ApiResponse<EzsigndiscussionDeleteObjectV1Response> response = apiInstance.EzsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -179,7 +179,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndiscussionDeleteObjectV1Response**](EzsigndiscussionDeleteObjectV1Response.md)
 
 ### Authorization
 

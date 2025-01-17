@@ -56,6 +56,60 @@ namespace eZmaxApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PkiModuleID'
+        /// </summary>
+        [Fact]
+        public void PkiModuleIDTest()
+        {
+            // TODO unit test for the property 'PkiModuleID'
+        }
+
+        /// <summary>
+        /// Test the property 'FkiModulegroupID'
+        /// </summary>
+        [Fact]
+        public void FkiModulegroupIDTest()
+        {
+            // TODO unit test for the property 'FkiModulegroupID'
+        }
+
+        /// <summary>
+        /// Test the property 'EModuleInternalname'
+        /// </summary>
+        [Fact]
+        public void EModuleInternalnameTest()
+        {
+            // TODO unit test for the property 'EModuleInternalname'
+        }
+
+        /// <summary>
+        /// Test the property 'SModuleNameX'
+        /// </summary>
+        [Fact]
+        public void SModuleNameXTest()
+        {
+            // TODO unit test for the property 'SModuleNameX'
+        }
+
+        /// <summary>
+        /// Test the property 'BModuleRegistered'
+        /// </summary>
+        [Fact]
+        public void BModuleRegisteredTest()
+        {
+            // TODO unit test for the property 'BModuleRegistered'
+        }
+
+        /// <summary>
+        /// Test the property 'BModuleRegisteredapi'
+        /// </summary>
+        [Fact]
+        public void BModuleRegisteredapiTest()
+        {
+            // TODO unit test for the property 'BModuleRegisteredapi'
+        }
+
+        /// <summary>
         /// Test the property 'AObjModulesection'
         /// </summary>
         [Fact]

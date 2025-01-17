@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Domain Object
     /// </summary>
     [DataContract(Name = "domain-ResponseCompound")]
-    public partial class DomainResponseCompound : DomainResponse, IValidatableObject
+    public partial class DomainResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResponseCompound" /> class.
@@ -40,15 +40,31 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResponseCompound" /> class.
         /// </summary>
-        /// <param name="aObjDnsrecord">aObjDnsrecord (required).</param>
         /// <param name="pkiDomainID">The unique ID of the Domain (required).</param>
         /// <param name="sDomainName">The name of the Domain (required).</param>
         /// <param name="bDomainValiddkim">Whether the DKIM is valid or not (required).</param>
         /// <param name="bDomainValidmailfrom">Whether the mail from is valid or not (required).</param>
         /// <param name="bDomainValidcustomer">Whether the customer has access to it or not (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public DomainResponseCompound(List<CustomDnsrecordResponse> aObjDnsrecord = default(List<CustomDnsrecordResponse>), int pkiDomainID = default(int), string sDomainName = default(string), bool bDomainValiddkim = default(bool), bool bDomainValidmailfrom = default(bool), bool bDomainValidcustomer = default(bool), CommonAudit objAudit = default(CommonAudit)) : base()
+        /// <param name="aObjDnsrecord">aObjDnsrecord (required).</param>
+        public DomainResponseCompound(int pkiDomainID = default(int), string sDomainName = default(string), bool bDomainValiddkim = default(bool), bool bDomainValidmailfrom = default(bool), bool bDomainValidcustomer = default(bool), CommonAudit objAudit = default(CommonAudit), List<CustomDnsrecordResponse> aObjDnsrecord = default(List<CustomDnsrecordResponse>))
         {
+            this.PkiDomainID = pkiDomainID;
+            // to ensure "sDomainName" is required (not null)
+            if (sDomainName == null)
+            {
+                throw new ArgumentNullException("sDomainName is a required property for DomainResponseCompound and cannot be null");
+            }
+            this.SDomainName = sDomainName;
+            this.BDomainValiddkim = bDomainValiddkim;
+            this.BDomainValidmailfrom = bDomainValidmailfrom;
+            this.BDomainValidcustomer = bDomainValidcustomer;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for DomainResponseCompound and cannot be null");
+            }
+            this.ObjAudit = objAudit;
             // to ensure "aObjDnsrecord" is required (not null)
             if (aObjDnsrecord == null)
             {
@@ -56,6 +72,49 @@ namespace eZmaxApi.Model
             }
             this.AObjDnsrecord = aObjDnsrecord;
         }
+
+        /// <summary>
+        /// The unique ID of the Domain
+        /// </summary>
+        /// <value>The unique ID of the Domain</value>
+        /* <example>96</example>*/
+        [DataMember(Name = "pkiDomainID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiDomainID { get; set; }
+
+        /// <summary>
+        /// The name of the Domain
+        /// </summary>
+        /// <value>The name of the Domain</value>
+        /* <example>ezsign.ca</example>*/
+        [DataMember(Name = "sDomainName", IsRequired = true, EmitDefaultValue = true)]
+        public string SDomainName { get; set; }
+
+        /// <summary>
+        /// Whether the DKIM is valid or not
+        /// </summary>
+        /// <value>Whether the DKIM is valid or not</value>
+        [DataMember(Name = "bDomainValiddkim", IsRequired = true, EmitDefaultValue = true)]
+        public bool BDomainValiddkim { get; set; }
+
+        /// <summary>
+        /// Whether the mail from is valid or not
+        /// </summary>
+        /// <value>Whether the mail from is valid or not</value>
+        [DataMember(Name = "bDomainValidmailfrom", IsRequired = true, EmitDefaultValue = true)]
+        public bool BDomainValidmailfrom { get; set; }
+
+        /// <summary>
+        /// Whether the customer has access to it or not
+        /// </summary>
+        /// <value>Whether the customer has access to it or not</value>
+        [DataMember(Name = "bDomainValidcustomer", IsRequired = true, EmitDefaultValue = true)]
+        public bool BDomainValidcustomer { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjDnsrecord
@@ -71,7 +130,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DomainResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiDomainID: ").Append(PkiDomainID).Append("\n");
+            sb.Append("  SDomainName: ").Append(SDomainName).Append("\n");
+            sb.Append("  BDomainValiddkim: ").Append(BDomainValiddkim).Append("\n");
+            sb.Append("  BDomainValidmailfrom: ").Append(BDomainValidmailfrom).Append("\n");
+            sb.Append("  BDomainValidcustomer: ").Append(BDomainValidcustomer).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  AObjDnsrecord: ").Append(AObjDnsrecord).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -81,7 +145,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -93,20 +157,27 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiDomainID (int) maximum
+            if (this.PkiDomainID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value less than or equal to 255.", new [] { "PkiDomainID" });
             }
+
+            // PkiDomainID (int) minimum
+            if (this.PkiDomainID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value greater than or equal to 0.", new [] { "PkiDomainID" });
+            }
+
+            if (this.SDomainName != null) {
+                // SDomainName (string) pattern
+                Regex regexSDomainName = new Regex(@"^(?=.{4,75}$)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,63}$", RegexOptions.CultureInvariant);
+                if (!regexSDomainName.Match(this.SDomainName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SDomainName, must match a pattern of " + regexSDomainName, new [] { "SDomainName" });
+                }
+            }
+
             yield break;
         }
     }

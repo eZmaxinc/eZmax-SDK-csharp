@@ -105,7 +105,7 @@ catch (ApiException e)
 
 <a id="discussionmembershipdeleteobjectv1"></a>
 # **DiscussionmembershipDeleteObjectV1**
-> CommonResponse DiscussionmembershipDeleteObjectV1 (int pkiDiscussionmembershipID)
+> DiscussionmembershipDeleteObjectV1Response DiscussionmembershipDeleteObjectV1 (int pkiDiscussionmembershipID)
 
 Delete an existing Discussionmembership
 
@@ -136,7 +136,7 @@ namespace Example
             try
             {
                 // Delete an existing Discussionmembership
-                CommonResponse result = apiInstance.DiscussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
+                DiscussionmembershipDeleteObjectV1Response result = apiInstance.DiscussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -157,7 +157,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Discussionmembership
-    ApiResponse<CommonResponse> response = apiInstance.DiscussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
+    ApiResponse<DiscussionmembershipDeleteObjectV1Response> response = apiInstance.DiscussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -178,7 +178,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmembershipDeleteObjectV1Response**](DiscussionmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

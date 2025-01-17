@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryglobal Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingsummaryglobal-ResponseCompound")]
-    public partial class EzmaxinvoicingsummaryglobalResponseCompound : EzmaxinvoicingsummaryglobalResponse, IValidatableObject
+    public partial class EzmaxinvoicingsummaryglobalResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
@@ -40,7 +40,6 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryglobalResponseCompound" /> class.
         /// </summary>
-        /// <param name="aObjEzmaxinvoicingcommission">aObjEzmaxinvoicingcommission.</param>
         /// <param name="pkiEzmaxinvoicingsummaryglobalID">The unique ID of the Ezmaxinvoicingsummaryglobal.</param>
         /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
         /// <param name="fkiEzmaxproductID">The unique ID of the Ezmaxproduct (required).</param>
@@ -60,10 +59,237 @@ namespace eZmaxApi.Model
         /// <param name="dEzmaxinvoicingsummaryglobalNet">The net amount of the Ezmaxinvoicingsummaryglobal.</param>
         /// <param name="bEzmaxinvoicingsummaryglobalAdjustment">Whether it is adjustment for the Ezmaxinvoicingsummaryglobal (required).</param>
         /// <param name="tEzmaxproductHelpX">The help message of the Ezmaxproduct in the language of the requester (required).</param>
-        public EzmaxinvoicingsummaryglobalResponseCompound(List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = default(List<EzmaxinvoicingcommissionResponseCompound>), int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool), string tEzmaxproductHelpX = default(string)) : base()
+        /// <param name="aObjEzmaxinvoicingcommission">aObjEzmaxinvoicingcommission.</param>
+        public EzmaxinvoicingsummaryglobalResponseCompound(int pkiEzmaxinvoicingsummaryglobalID = default(int), int fkiEzmaxinvoicingID = default(int), int fkiEzmaxproductID = default(int), string sEzmaxproductDescriptionX = default(string), string dtEzmaxinvoicingsummaryglobalStart = default(string), string dtEzmaxinvoicingsummaryglobalEnd = default(string), int iEzmaxinvoicingsummaryglobalDays = default(int), string dEzmaxinvoicingsummaryglobalCountreal = default(string), string dEzmaxinvoicingsummaryglobalCountbilled = default(string), string dEzmaxinvoicingsummaryglobalSubtotal = default(string), string dEzmaxinvoicingsummaryglobalRebateamount = default(string), string dEzmaxinvoicingsummaryglobalRebatepercent = default(string), string dEzmaxinvoicingsummaryglobalRebatetotal = default(string), string dEzmaxinvoicingsummaryglobalTotal = default(string), string dEzmaxinvoicingsummaryglobalRepresentative = default(string), string dEzmaxinvoicingsummaryglobalPartner = default(string), string dEzmaxinvoicingsummaryglobalNet = default(string), bool bEzmaxinvoicingsummaryglobalAdjustment = default(bool), string tEzmaxproductHelpX = default(string), List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = default(List<EzmaxinvoicingcommissionResponseCompound>))
         {
+            this.FkiEzmaxproductID = fkiEzmaxproductID;
+            // to ensure "sEzmaxproductDescriptionX" is required (not null)
+            if (sEzmaxproductDescriptionX == null)
+            {
+                throw new ArgumentNullException("sEzmaxproductDescriptionX is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.SEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+            // to ensure "dtEzmaxinvoicingsummaryglobalStart" is required (not null)
+            if (dtEzmaxinvoicingsummaryglobalStart == null)
+            {
+                throw new ArgumentNullException("dtEzmaxinvoicingsummaryglobalStart is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
+            // to ensure "dtEzmaxinvoicingsummaryglobalEnd" is required (not null)
+            if (dtEzmaxinvoicingsummaryglobalEnd == null)
+            {
+                throw new ArgumentNullException("dtEzmaxinvoicingsummaryglobalEnd is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
+            this.IEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
+            // to ensure "dEzmaxinvoicingsummaryglobalCountreal" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalCountreal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalCountreal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
+            // to ensure "dEzmaxinvoicingsummaryglobalCountbilled" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalCountbilled == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalCountbilled is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
+            // to ensure "dEzmaxinvoicingsummaryglobalSubtotal" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalSubtotal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalSubtotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
+            // to ensure "dEzmaxinvoicingsummaryglobalRebateamount" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalRebateamount == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebateamount is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
+            // to ensure "dEzmaxinvoicingsummaryglobalRebatepercent" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalRebatepercent == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebatepercent is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
+            // to ensure "dEzmaxinvoicingsummaryglobalRebatetotal" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalRebatetotal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalRebatetotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
+            // to ensure "dEzmaxinvoicingsummaryglobalTotal" is required (not null)
+            if (dEzmaxinvoicingsummaryglobalTotal == null)
+            {
+                throw new ArgumentNullException("dEzmaxinvoicingsummaryglobalTotal is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.DEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
+            this.BEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
+            // to ensure "tEzmaxproductHelpX" is required (not null)
+            if (tEzmaxproductHelpX == null)
+            {
+                throw new ArgumentNullException("tEzmaxproductHelpX is a required property for EzmaxinvoicingsummaryglobalResponseCompound and cannot be null");
+            }
+            this.TEzmaxproductHelpX = tEzmaxproductHelpX;
+            this.PkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
+            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+            this.DEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
+            this.DEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
+            this.DEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
             this.AObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>241</example>*/
+        [DataMember(Name = "pkiEzmaxinvoicingsummaryglobalID", EmitDefaultValue = false)]
+        public int PkiEzmaxinvoicingsummaryglobalID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicing
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicing</value>
+        /* <example>28</example>*/
+        [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
+        public int FkiEzmaxinvoicingID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxproduct
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxproduct</value>
+        /* <example>172</example>*/
+        [DataMember(Name = "fkiEzmaxproductID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzmaxproductID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The description of the Ezmaxproduct in the language of the requester</value>
+        /* <example>eZmax (License)</example>*/
+        [DataMember(Name = "sEzmaxproductDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzmaxproductDescriptionX { get; set; }
+
+        /// <summary>
+        /// The start date for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The start date for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtEzmaxinvoicingsummaryglobalStart", IsRequired = true, EmitDefaultValue = true)]
+        public string DtEzmaxinvoicingsummaryglobalStart { get; set; }
+
+        /// <summary>
+        /// The end date for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The end date for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtEzmaxinvoicingsummaryglobalEnd", IsRequired = true, EmitDefaultValue = true)]
+        public string DtEzmaxinvoicingsummaryglobalEnd { get; set; }
+
+        /// <summary>
+        /// The number of days for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The number of days for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>30</example>*/
+        [DataMember(Name = "iEzmaxinvoicingsummaryglobalDays", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzmaxinvoicingsummaryglobalDays { get; set; }
+
+        /// <summary>
+        /// The count item calculated
+        /// </summary>
+        /// <value>The count item calculated</value>
+        /* <example>649.08</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalCountreal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalCountreal { get; set; }
+
+        /// <summary>
+        /// The count item billed
+        /// </summary>
+        /// <value>The count item billed</value>
+        /* <example>581.56</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalCountbilled", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalCountbilled { get; set; }
+
+        /// <summary>
+        /// The Ezmaxinvoicingsummaryglobal subtotal
+        /// </summary>
+        /// <value>The Ezmaxinvoicingsummaryglobal subtotal</value>
+        /* <example>200.00</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalSubtotal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalSubtotal { get; set; }
+
+        /// <summary>
+        /// The rebate amount for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The rebate amount for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>0.00</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebateamount", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalRebateamount { get; set; }
+
+        /// <summary>
+        /// The rebate percentage of the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The rebate percentage of the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>0.00</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebatepercent", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalRebatepercent { get; set; }
+
+        /// <summary>
+        /// The rebate amount total for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The rebate amount total for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>2.00</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalRebatetotal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalRebatetotal { get; set; }
+
+        /// <summary>
+        /// The Ezmaxinvoicingsummaryglobal total
+        /// </summary>
+        /// <value>The Ezmaxinvoicingsummaryglobal total</value>
+        /* <example>198.00</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalTotal", IsRequired = true, EmitDefaultValue = true)]
+        public string DEzmaxinvoicingsummaryglobalTotal { get; set; }
+
+        /// <summary>
+        /// The amount of commission for the representative
+        /// </summary>
+        /// <value>The amount of commission for the representative</value>
+        /* <example>685.88</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalRepresentative", EmitDefaultValue = false)]
+        public string DEzmaxinvoicingsummaryglobalRepresentative { get; set; }
+
+        /// <summary>
+        /// The amount of commission for the partner
+        /// </summary>
+        /// <value>The amount of commission for the partner</value>
+        /* <example>266.49</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalPartner", EmitDefaultValue = false)]
+        public string DEzmaxinvoicingsummaryglobalPartner { get; set; }
+
+        /// <summary>
+        /// The net amount of the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>The net amount of the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>521.71</example>*/
+        [DataMember(Name = "dEzmaxinvoicingsummaryglobalNet", EmitDefaultValue = false)]
+        public string DEzmaxinvoicingsummaryglobalNet { get; set; }
+
+        /// <summary>
+        /// Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
+        /// </summary>
+        /// <value>Whether it is adjustment for the Ezmaxinvoicingsummaryglobal</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bEzmaxinvoicingsummaryglobalAdjustment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BEzmaxinvoicingsummaryglobalAdjustment { get; set; }
+
+        /// <summary>
+        /// The help message of the Ezmaxproduct in the language of the requester
+        /// </summary>
+        /// <value>The help message of the Ezmaxproduct in the language of the requester</value>
+        /* <example>This is an exemple of help message</example>*/
+        [DataMember(Name = "tEzmaxproductHelpX", IsRequired = true, EmitDefaultValue = true)]
+        public string TEzmaxproductHelpX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzmaxinvoicingcommission
@@ -79,7 +305,25 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicingsummaryglobalResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzmaxinvoicingsummaryglobalID: ").Append(PkiEzmaxinvoicingsummaryglobalID).Append("\n");
+            sb.Append("  FkiEzmaxinvoicingID: ").Append(FkiEzmaxinvoicingID).Append("\n");
+            sb.Append("  FkiEzmaxproductID: ").Append(FkiEzmaxproductID).Append("\n");
+            sb.Append("  SEzmaxproductDescriptionX: ").Append(SEzmaxproductDescriptionX).Append("\n");
+            sb.Append("  DtEzmaxinvoicingsummaryglobalStart: ").Append(DtEzmaxinvoicingsummaryglobalStart).Append("\n");
+            sb.Append("  DtEzmaxinvoicingsummaryglobalEnd: ").Append(DtEzmaxinvoicingsummaryglobalEnd).Append("\n");
+            sb.Append("  IEzmaxinvoicingsummaryglobalDays: ").Append(IEzmaxinvoicingsummaryglobalDays).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalCountreal: ").Append(DEzmaxinvoicingsummaryglobalCountreal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalCountbilled: ").Append(DEzmaxinvoicingsummaryglobalCountbilled).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalSubtotal: ").Append(DEzmaxinvoicingsummaryglobalSubtotal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalRebateamount: ").Append(DEzmaxinvoicingsummaryglobalRebateamount).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalRebatepercent: ").Append(DEzmaxinvoicingsummaryglobalRebatepercent).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalRebatetotal: ").Append(DEzmaxinvoicingsummaryglobalRebatetotal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalTotal: ").Append(DEzmaxinvoicingsummaryglobalTotal).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalRepresentative: ").Append(DEzmaxinvoicingsummaryglobalRepresentative).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalPartner: ").Append(DEzmaxinvoicingsummaryglobalPartner).Append("\n");
+            sb.Append("  DEzmaxinvoicingsummaryglobalNet: ").Append(DEzmaxinvoicingsummaryglobalNet).Append("\n");
+            sb.Append("  BEzmaxinvoicingsummaryglobalAdjustment: ").Append(BEzmaxinvoicingsummaryglobalAdjustment).Append("\n");
+            sb.Append("  TEzmaxproductHelpX: ").Append(TEzmaxproductHelpX).Append("\n");
             sb.Append("  AObjEzmaxinvoicingcommission: ").Append(AObjEzmaxinvoicingcommission).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -89,7 +333,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -101,20 +345,120 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzmaxinvoicingsummaryglobalID (int) minimum
+            if (this.PkiEzmaxinvoicingsummaryglobalID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryglobalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryglobalID" });
             }
+
+            // FkiEzmaxinvoicingID (int) minimum
+            if (this.FkiEzmaxinvoicingID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+            }
+
+            // FkiEzmaxproductID (int) minimum
+            if (this.FkiEzmaxproductID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+            }
+
+            // IEzmaxinvoicingsummaryglobalDays (int) minimum
+            if (this.IEzmaxinvoicingsummaryglobalDays < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for IEzmaxinvoicingsummaryglobalDays, must be a value greater than or equal to 1.", new [] { "IEzmaxinvoicingsummaryglobalDays" });
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalCountreal != null) {
+                // DEzmaxinvoicingsummaryglobalCountreal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalCountreal = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalCountreal.Match(this.DEzmaxinvoicingsummaryglobalCountreal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalCountreal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalCountreal, new [] { "DEzmaxinvoicingsummaryglobalCountreal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalCountbilled != null) {
+                // DEzmaxinvoicingsummaryglobalCountbilled (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalCountbilled = new Regex(@"^-{0,1}[\d]{1,6}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalCountbilled.Match(this.DEzmaxinvoicingsummaryglobalCountbilled).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalCountbilled, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalCountbilled, new [] { "DEzmaxinvoicingsummaryglobalCountbilled" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalSubtotal != null) {
+                // DEzmaxinvoicingsummaryglobalSubtotal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalSubtotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalSubtotal.Match(this.DEzmaxinvoicingsummaryglobalSubtotal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalSubtotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalSubtotal, new [] { "DEzmaxinvoicingsummaryglobalSubtotal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalRebateamount != null) {
+                // DEzmaxinvoicingsummaryglobalRebateamount (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalRebateamount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalRebateamount.Match(this.DEzmaxinvoicingsummaryglobalRebateamount).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebateamount, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebateamount, new [] { "DEzmaxinvoicingsummaryglobalRebateamount" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalRebatepercent != null) {
+                // DEzmaxinvoicingsummaryglobalRebatepercent (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalRebatepercent = new Regex(@"^-{0,1}[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalRebatepercent.Match(this.DEzmaxinvoicingsummaryglobalRebatepercent).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebatepercent, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebatepercent, new [] { "DEzmaxinvoicingsummaryglobalRebatepercent" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalRebatetotal != null) {
+                // DEzmaxinvoicingsummaryglobalRebatetotal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalRebatetotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalRebatetotal.Match(this.DEzmaxinvoicingsummaryglobalRebatetotal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRebatetotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRebatetotal, new [] { "DEzmaxinvoicingsummaryglobalRebatetotal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalTotal != null) {
+                // DEzmaxinvoicingsummaryglobalTotal (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalTotal = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalTotal.Match(this.DEzmaxinvoicingsummaryglobalTotal).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalTotal, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalTotal, new [] { "DEzmaxinvoicingsummaryglobalTotal" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalRepresentative != null) {
+                // DEzmaxinvoicingsummaryglobalRepresentative (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalRepresentative = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalRepresentative.Match(this.DEzmaxinvoicingsummaryglobalRepresentative).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalRepresentative, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalRepresentative, new [] { "DEzmaxinvoicingsummaryglobalRepresentative" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalPartner != null) {
+                // DEzmaxinvoicingsummaryglobalPartner (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalPartner = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalPartner.Match(this.DEzmaxinvoicingsummaryglobalPartner).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalPartner, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalPartner, new [] { "DEzmaxinvoicingsummaryglobalPartner" });
+                }
+            }
+
+            if (this.DEzmaxinvoicingsummaryglobalNet != null) {
+                // DEzmaxinvoicingsummaryglobalNet (string) pattern
+                Regex regexDEzmaxinvoicingsummaryglobalNet = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzmaxinvoicingsummaryglobalNet.Match(this.DEzmaxinvoicingsummaryglobalNet).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzmaxinvoicingsummaryglobalNet, must match a pattern of " + regexDEzmaxinvoicingsummaryglobalNet, new [] { "DEzmaxinvoicingsummaryglobalNet" });
+                }
+            }
+
             yield break;
         }
     }

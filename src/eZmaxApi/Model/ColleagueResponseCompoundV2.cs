@@ -30,8 +30,20 @@ namespace eZmaxApi.Model
     /// A Colleague Object
     /// </summary>
     [DataContract(Name = "colleague-ResponseCompoundV2")]
-    public partial class ColleagueResponseCompoundV2 : ColleagueResponseV2, IValidatableObject
+    public partial class ColleagueResponseCompoundV2 : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EColleagueEzsign
+        /// </summary>
+        [DataMember(Name = "eColleagueEzsign", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEColleagueEzsign EColleagueEzsign { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EColleagueRealestateinprogress
+        /// </summary>
+        [DataMember(Name = "eColleagueRealestateinprogress", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEColleagueRealestateinprogess EColleagueRealestateinprogress { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ColleagueResponseCompoundV2" /> class.
         /// </summary>
@@ -56,9 +68,143 @@ namespace eZmaxApi.Model
         /// <param name="eColleagueRealestateinprogress">eColleagueRealestateinprogress (required).</param>
         /// <param name="objUserName">objUserName (required).</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public ColleagueResponseCompoundV2(int pkiColleagueID = default(int), int fkiUserID = default(int), int fkiUserIDColleague = default(int), bool bColleagueEzsignemail = default(bool), bool bColleagueFinancial = default(bool), bool bColleagueUsecloneemail = default(bool), bool bColleagueAttachment = default(bool), bool bColleagueCanafe = default(bool), bool bColleaguePermission = default(bool), bool bColleagueRealestatecompleted = default(bool), string dtColleagueFrom = default(string), string dtColleagueTo = default(string), FieldEColleagueEzsign eColleagueEzsign = default(FieldEColleagueEzsign), FieldEColleagueRealestateinprogess eColleagueRealestateinprogress = default(FieldEColleagueRealestateinprogess), CustomUserNameResponse objUserName = default(CustomUserNameResponse), CommonAudit objAudit = default(CommonAudit)) : base()
+        public ColleagueResponseCompoundV2(int pkiColleagueID = default(int), int fkiUserID = default(int), int fkiUserIDColleague = default(int), bool bColleagueEzsignemail = default(bool), bool bColleagueFinancial = default(bool), bool bColleagueUsecloneemail = default(bool), bool bColleagueAttachment = default(bool), bool bColleagueCanafe = default(bool), bool bColleaguePermission = default(bool), bool bColleagueRealestatecompleted = default(bool), string dtColleagueFrom = default(string), string dtColleagueTo = default(string), FieldEColleagueEzsign eColleagueEzsign = default(FieldEColleagueEzsign), FieldEColleagueRealestateinprogess eColleagueRealestateinprogress = default(FieldEColleagueRealestateinprogess), CustomUserNameResponse objUserName = default(CustomUserNameResponse), CommonAudit objAudit = default(CommonAudit))
         {
+            this.PkiColleagueID = pkiColleagueID;
+            this.FkiUserID = fkiUserID;
+            this.FkiUserIDColleague = fkiUserIDColleague;
+            this.BColleagueEzsignemail = bColleagueEzsignemail;
+            this.BColleagueFinancial = bColleagueFinancial;
+            this.BColleagueUsecloneemail = bColleagueUsecloneemail;
+            this.BColleagueAttachment = bColleagueAttachment;
+            this.BColleagueCanafe = bColleagueCanafe;
+            this.BColleaguePermission = bColleaguePermission;
+            this.BColleagueRealestatecompleted = bColleagueRealestatecompleted;
+            this.EColleagueEzsign = eColleagueEzsign;
+            this.EColleagueRealestateinprogress = eColleagueRealestateinprogress;
+            // to ensure "objUserName" is required (not null)
+            if (objUserName == null)
+            {
+                throw new ArgumentNullException("objUserName is a required property for ColleagueResponseCompoundV2 and cannot be null");
+            }
+            this.ObjUserName = objUserName;
+            // to ensure "objAudit" is required (not null)
+            if (objAudit == null)
+            {
+                throw new ArgumentNullException("objAudit is a required property for ColleagueResponseCompoundV2 and cannot be null");
+            }
+            this.ObjAudit = objAudit;
+            this.DtColleagueFrom = dtColleagueFrom;
+            this.DtColleagueTo = dtColleagueTo;
         }
+
+        /// <summary>
+        /// The unique ID of the Colleague
+        /// </summary>
+        /// <value>The unique ID of the Colleague</value>
+        /* <example>60</example>*/
+        [DataMember(Name = "pkiColleagueID", IsRequired = true, EmitDefaultValue = true)]
+        public int PkiColleagueID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the User
+        /// </summary>
+        /// <value>The unique ID of the User</value>
+        /* <example>70</example>*/
+        [DataMember(Name = "fkiUserIDColleague", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiUserIDColleague { get; set; }
+
+        /// <summary>
+        /// Whether the email can be used by the cloning user in Ezsign
+        /// </summary>
+        /// <value>Whether the email can be used by the cloning user in Ezsign</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bColleagueEzsignemail", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueEzsignemail { get; set; }
+
+        /// <summary>
+        /// Whether the cloning user has access to the financial
+        /// </summary>
+        /// <value>Whether the cloning user has access to the financial</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleagueFinancial", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueFinancial { get; set; }
+
+        /// <summary>
+        /// Whether the cloning user has access to the cloned user email to send communications
+        /// </summary>
+        /// <value>Whether the cloning user has access to the cloned user email to send communications</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleagueUsecloneemail", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueUsecloneemail { get; set; }
+
+        /// <summary>
+        /// Whether the cloning user has access to the attachment
+        /// </summary>
+        /// <value>Whether the cloning user has access to the attachment</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleagueAttachment", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueAttachment { get; set; }
+
+        /// <summary>
+        /// Whether the cloning user has access to canafe
+        /// </summary>
+        /// <value>Whether the cloning user has access to canafe</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleagueCanafe", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueCanafe { get; set; }
+
+        /// <summary>
+        /// Whether the cloning user copies the permission of the cloned user
+        /// </summary>
+        /// <value>Whether the cloning user copies the permission of the cloned user</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleaguePermission", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleaguePermission { get; set; }
+
+        /// <summary>
+        /// Whether if the cloning user has access to the completed folders in real estate
+        /// </summary>
+        /// <value>Whether if the cloning user has access to the completed folders in real estate</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bColleagueRealestatecompleted", IsRequired = true, EmitDefaultValue = true)]
+        public bool BColleagueRealestatecompleted { get; set; }
+
+        /// <summary>
+        /// The from of the Colleague
+        /// </summary>
+        /// <value>The from of the Colleague</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtColleagueFrom", EmitDefaultValue = false)]
+        public string DtColleagueFrom { get; set; }
+
+        /// <summary>
+        /// The to of the Colleague
+        /// </summary>
+        /// <value>The to of the Colleague</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtColleagueTo", EmitDefaultValue = false)]
+        public string DtColleagueTo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUserName
+        /// </summary>
+        [DataMember(Name = "objUserName", IsRequired = true, EmitDefaultValue = true)]
+        public CustomUserNameResponse ObjUserName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjAudit
+        /// </summary>
+        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -68,7 +214,22 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ColleagueResponseCompoundV2 {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiColleagueID: ").Append(PkiColleagueID).Append("\n");
+            sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiUserIDColleague: ").Append(FkiUserIDColleague).Append("\n");
+            sb.Append("  BColleagueEzsignemail: ").Append(BColleagueEzsignemail).Append("\n");
+            sb.Append("  BColleagueFinancial: ").Append(BColleagueFinancial).Append("\n");
+            sb.Append("  BColleagueUsecloneemail: ").Append(BColleagueUsecloneemail).Append("\n");
+            sb.Append("  BColleagueAttachment: ").Append(BColleagueAttachment).Append("\n");
+            sb.Append("  BColleagueCanafe: ").Append(BColleagueCanafe).Append("\n");
+            sb.Append("  BColleaguePermission: ").Append(BColleaguePermission).Append("\n");
+            sb.Append("  BColleagueRealestatecompleted: ").Append(BColleagueRealestatecompleted).Append("\n");
+            sb.Append("  DtColleagueFrom: ").Append(DtColleagueFrom).Append("\n");
+            sb.Append("  DtColleagueTo: ").Append(DtColleagueTo).Append("\n");
+            sb.Append("  EColleagueEzsign: ").Append(EColleagueEzsign).Append("\n");
+            sb.Append("  EColleagueRealestateinprogress: ").Append(EColleagueRealestateinprogress).Append("\n");
+            sb.Append("  ObjUserName: ").Append(ObjUserName).Append("\n");
+            sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -77,7 +238,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -89,20 +250,48 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiColleagueID (int) maximum
+            if (this.PkiColleagueID > (int)65535)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiColleagueID, must be a value less than or equal to 65535.", new [] { "PkiColleagueID" });
             }
+
+            // PkiColleagueID (int) minimum
+            if (this.PkiColleagueID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiColleagueID, must be a value greater than or equal to 0.", new [] { "PkiColleagueID" });
+            }
+
+            // FkiUserID (int) minimum
+            if (this.FkiUserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiUserIDColleague (int) minimum
+            if (this.FkiUserIDColleague < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiUserIDColleague, must be a value greater than or equal to 0.", new [] { "FkiUserIDColleague" });
+            }
+
+            if (this.DtColleagueFrom != null) {
+                // DtColleagueFrom (string) pattern
+                Regex regexDtColleagueFrom = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtColleagueFrom.Match(this.DtColleagueFrom).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtColleagueFrom, must match a pattern of " + regexDtColleagueFrom, new [] { "DtColleagueFrom" });
+                }
+            }
+
+            if (this.DtColleagueTo != null) {
+                // DtColleagueTo (string) pattern
+                Regex regexDtColleagueTo = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtColleagueTo.Match(this.DtColleagueTo).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtColleagueTo, must match a pattern of " + regexDtColleagueTo, new [] { "DtColleagueTo" });
+                }
+            }
+
             yield break;
         }
     }

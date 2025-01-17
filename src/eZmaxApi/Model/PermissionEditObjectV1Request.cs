@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objPermission">A Permission Object and children to create a complete structure (required).</param>
-        public PermissionEditObjectV1Request(PermissionRequest objPermission = default(PermissionRequest))
+        /// <param name="objPermission">objPermission (required).</param>
+        public PermissionEditObjectV1Request(PermissionRequestCompound objPermission = default(PermissionRequestCompound))
         {
             // to ensure "objPermission" is required (not null)
             if (objPermission == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// A Permission Object and children to create a complete structure
+        /// Gets or Sets ObjPermission
         /// </summary>
-        /// <value>A Permission Object and children to create a complete structure</value>
         [DataMember(Name = "objPermission", IsRequired = true, EmitDefaultValue = true)]
-        public PermissionRequest ObjPermission { get; set; }
+        public PermissionRequestCompound ObjPermission { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

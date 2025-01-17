@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Ezmaxinvoicingsummaryinternal Object
     /// </summary>
     [DataContract(Name = "ezmaxinvoicingsummaryinternal-ResponseCompound")]
-    public partial class EzmaxinvoicingsummaryinternalResponseCompound : EzmaxinvoicingsummaryinternalResponse, IValidatableObject
+    public partial class EzmaxinvoicingsummaryinternalResponseCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
@@ -40,22 +40,89 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzmaxinvoicingsummaryinternalResponseCompound" /> class.
         /// </summary>
-        /// <param name="aObjEzmaxinvoicingsummaryinternaldetail">aObjEzmaxinvoicingsummaryinternaldetail (required).</param>
         /// <param name="pkiEzmaxinvoicingsummaryinternalID">The unique ID of the Ezmaxinvoicingsummaryinternal.</param>
         /// <param name="objEzmaxinvoicingsummaryinternalDescription">objEzmaxinvoicingsummaryinternalDescription (required).</param>
         /// <param name="sEzmaxinvoicingsummaryinternalDescriptionX">The Ezmaxinvoicingsummaryinternal description in the language of the requester (required).</param>
         /// <param name="fkiEzmaxinvoicingID">The unique ID of the Ezmaxinvoicing.</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
         /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
-        public EzmaxinvoicingsummaryinternalResponseCompound(List<EzmaxinvoicingsummaryinternaldetailResponseCompound> aObjEzmaxinvoicingsummaryinternaldetail = default(List<EzmaxinvoicingsummaryinternaldetailResponseCompound>), int pkiEzmaxinvoicingsummaryinternalID = default(int), MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription = default(MultilingualEzmaxinvoicingsummaryinternalDescription), string sEzmaxinvoicingsummaryinternalDescriptionX = default(string), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string)) : base()
+        /// <param name="aObjEzmaxinvoicingsummaryinternaldetail">aObjEzmaxinvoicingsummaryinternaldetail (required).</param>
+        public EzmaxinvoicingsummaryinternalResponseCompound(int pkiEzmaxinvoicingsummaryinternalID = default(int), MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription = default(MultilingualEzmaxinvoicingsummaryinternalDescription), string sEzmaxinvoicingsummaryinternalDescriptionX = default(string), int fkiEzmaxinvoicingID = default(int), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), List<EzmaxinvoicingsummaryinternaldetailResponseCompound> aObjEzmaxinvoicingsummaryinternaldetail = default(List<EzmaxinvoicingsummaryinternaldetailResponseCompound>))
         {
+            // to ensure "objEzmaxinvoicingsummaryinternalDescription" is required (not null)
+            if (objEzmaxinvoicingsummaryinternalDescription == null)
+            {
+                throw new ArgumentNullException("objEzmaxinvoicingsummaryinternalDescription is a required property for EzmaxinvoicingsummaryinternalResponseCompound and cannot be null");
+            }
+            this.ObjEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
+            // to ensure "sEzmaxinvoicingsummaryinternalDescriptionX" is required (not null)
+            if (sEzmaxinvoicingsummaryinternalDescriptionX == null)
+            {
+                throw new ArgumentNullException("sEzmaxinvoicingsummaryinternalDescriptionX is a required property for EzmaxinvoicingsummaryinternalResponseCompound and cannot be null");
+            }
+            this.SEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
+            this.FkiBillingentityinternalID = fkiBillingentityinternalID;
+            // to ensure "sBillingentityinternalDescriptionX" is required (not null)
+            if (sBillingentityinternalDescriptionX == null)
+            {
+                throw new ArgumentNullException("sBillingentityinternalDescriptionX is a required property for EzmaxinvoicingsummaryinternalResponseCompound and cannot be null");
+            }
+            this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
             // to ensure "aObjEzmaxinvoicingsummaryinternaldetail" is required (not null)
             if (aObjEzmaxinvoicingsummaryinternaldetail == null)
             {
                 throw new ArgumentNullException("aObjEzmaxinvoicingsummaryinternaldetail is a required property for EzmaxinvoicingsummaryinternalResponseCompound and cannot be null");
             }
             this.AObjEzmaxinvoicingsummaryinternaldetail = aObjEzmaxinvoicingsummaryinternaldetail;
+            this.PkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
+            this.FkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
         }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicingsummaryinternal
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicingsummaryinternal</value>
+        /* <example>57</example>*/
+        [DataMember(Name = "pkiEzmaxinvoicingsummaryinternalID", EmitDefaultValue = false)]
+        public int PkiEzmaxinvoicingsummaryinternalID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzmaxinvoicingsummaryinternalDescription
+        /// </summary>
+        [DataMember(Name = "objEzmaxinvoicingsummaryinternalDescription", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualEzmaxinvoicingsummaryinternalDescription ObjEzmaxinvoicingsummaryinternalDescription { get; set; }
+
+        /// <summary>
+        /// The Ezmaxinvoicingsummaryinternal description in the language of the requester
+        /// </summary>
+        /// <value>The Ezmaxinvoicingsummaryinternal description in the language of the requester</value>
+        /* <example>Défaut</example>*/
+        [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzmaxinvoicingsummaryinternalDescriptionX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxinvoicing
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxinvoicing</value>
+        /* <example>28</example>*/
+        [DataMember(Name = "fkiEzmaxinvoicingID", EmitDefaultValue = false)]
+        public int FkiEzmaxinvoicingID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Billingentityinternal.
+        /// </summary>
+        /// <value>The unique ID of the Billingentityinternal.</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "fkiBillingentityinternalID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiBillingentityinternalID { get; set; }
+
+        /// <summary>
+        /// The description of the Billingentityinternal in the language of the requester
+        /// </summary>
+        /// <value>The description of the Billingentityinternal in the language of the requester</value>
+        /* <example>Default</example>*/
+        [DataMember(Name = "sBillingentityinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        public string SBillingentityinternalDescriptionX { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzmaxinvoicingsummaryinternaldetail
@@ -71,7 +138,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzmaxinvoicingsummaryinternalResponseCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiEzmaxinvoicingsummaryinternalID: ").Append(PkiEzmaxinvoicingsummaryinternalID).Append("\n");
+            sb.Append("  ObjEzmaxinvoicingsummaryinternalDescription: ").Append(ObjEzmaxinvoicingsummaryinternalDescription).Append("\n");
+            sb.Append("  SEzmaxinvoicingsummaryinternalDescriptionX: ").Append(SEzmaxinvoicingsummaryinternalDescriptionX).Append("\n");
+            sb.Append("  FkiEzmaxinvoicingID: ").Append(FkiEzmaxinvoicingID).Append("\n");
+            sb.Append("  FkiBillingentityinternalID: ").Append(FkiBillingentityinternalID).Append("\n");
+            sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
             sb.Append("  AObjEzmaxinvoicingsummaryinternaldetail: ").Append(AObjEzmaxinvoicingsummaryinternaldetail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -81,7 +153,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -93,20 +165,30 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiEzmaxinvoicingsummaryinternalID (int) minimum
+            if (this.PkiEzmaxinvoicingsummaryinternalID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryinternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryinternalID" });
             }
+
+            // SEzmaxinvoicingsummaryinternalDescriptionX (string) maxLength
+            if (this.SEzmaxinvoicingsummaryinternalDescriptionX != null && this.SEzmaxinvoicingsummaryinternalDescriptionX.Length > 70)
+            {
+                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescriptionX, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescriptionX" });
+            }
+
+            // FkiEzmaxinvoicingID (int) minimum
+            if (this.FkiEzmaxinvoicingID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+            }
+
+            // FkiBillingentityinternalID (int) minimum
+            if (this.FkiBillingentityinternalID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+            }
+
             yield break;
         }
     }

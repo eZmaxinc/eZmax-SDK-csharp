@@ -54,5 +54,50 @@ namespace eZmaxApi.Test.Model
             // TODO uncomment below to test "IsType" CommunicationexternalrecipientRequestCompound
             //Assert.IsType<CommunicationexternalrecipientRequestCompound>(instance);
         }
+
+        /// <summary>
+        /// Test the property 'PkiCommunicationexternalrecipientID'
+        /// </summary>
+        [Fact]
+        public void PkiCommunicationexternalrecipientIDTest()
+        {
+            // TODO unit test for the property 'PkiCommunicationexternalrecipientID'
+        }
+
+        /// <summary>
+        /// Test the property 'SEmailAddress'
+        /// </summary>
+        [Fact]
+        public void SEmailAddressTest()
+        {
+            // TODO unit test for the property 'SEmailAddress'
+        }
+
+        /// <summary>
+        /// Test the property 'SPhoneE164'
+        /// </summary>
+        [Fact]
+        public void SPhoneE164Test()
+        {
+            // TODO unit test for the property 'SPhoneE164'
+        }
+
+        /// <summary>
+        /// Test the property 'ECommunicationexternalrecipientType'
+        /// </summary>
+        [Fact]
+        public void ECommunicationexternalrecipientTypeTest()
+        {
+            // TODO unit test for the property 'ECommunicationexternalrecipientType'
+        }
+
+        /// <summary>
+        /// Test the property 'SCommunicationexternalrecipientName'
+        /// </summary>
+        [Fact]
+        public void SCommunicationexternalrecipientNameTest()
+        {
+            // TODO unit test for the property 'SCommunicationexternalrecipientName'
+        }
     }
 }

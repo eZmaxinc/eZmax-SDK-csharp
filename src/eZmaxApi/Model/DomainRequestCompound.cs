@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Domain Object and children
     /// </summary>
     [DataContract(Name = "domain-RequestCompound")]
-    public partial class DomainRequestCompound : DomainRequest, IValidatableObject
+    public partial class DomainRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainRequestCompound" /> class.
@@ -42,9 +42,32 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiDomainID">The unique ID of the Domain.</param>
         /// <param name="sDomainName">The name of the Domain (required).</param>
-        public DomainRequestCompound(int pkiDomainID = default(int), string sDomainName = default(string)) : base()
+        public DomainRequestCompound(int pkiDomainID = default(int), string sDomainName = default(string))
         {
+            // to ensure "sDomainName" is required (not null)
+            if (sDomainName == null)
+            {
+                throw new ArgumentNullException("sDomainName is a required property for DomainRequestCompound and cannot be null");
+            }
+            this.SDomainName = sDomainName;
+            this.PkiDomainID = pkiDomainID;
         }
+
+        /// <summary>
+        /// The unique ID of the Domain
+        /// </summary>
+        /// <value>The unique ID of the Domain</value>
+        /* <example>96</example>*/
+        [DataMember(Name = "pkiDomainID", EmitDefaultValue = false)]
+        public int PkiDomainID { get; set; }
+
+        /// <summary>
+        /// The name of the Domain
+        /// </summary>
+        /// <value>The name of the Domain</value>
+        /* <example>ezsign.ca</example>*/
+        [DataMember(Name = "sDomainName", IsRequired = true, EmitDefaultValue = true)]
+        public string SDomainName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +77,8 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DomainRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  PkiDomainID: ").Append(PkiDomainID).Append("\n");
+            sb.Append("  SDomainName: ").Append(SDomainName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -63,7 +87,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -75,20 +99,27 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // PkiDomainID (int) maximum
+            if (this.PkiDomainID > (int)255)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value less than or equal to 255.", new [] { "PkiDomainID" });
             }
+
+            // PkiDomainID (int) minimum
+            if (this.PkiDomainID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for PkiDomainID, must be a value greater than or equal to 0.", new [] { "PkiDomainID" });
+            }
+
+            if (this.SDomainName != null) {
+                // SDomainName (string) pattern
+                Regex regexSDomainName = new Regex(@"^(?=.{4,75}$)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,63}$", RegexOptions.CultureInvariant);
+                if (!regexSDomainName.Match(this.SDomainName).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SDomainName, must match a pattern of " + regexSDomainName, new [] { "SDomainName" });
+                }
+            }
+
             yield break;
         }
     }

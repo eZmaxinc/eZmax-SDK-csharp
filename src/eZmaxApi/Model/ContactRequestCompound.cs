@@ -30,7 +30,7 @@ namespace eZmaxApi.Model
     /// A Contact Object and children to create a complete structure
     /// </summary>
     [DataContract(Name = "contact-RequestCompound")]
-    public partial class ContactRequestCompound : ContactRequest, IValidatableObject
+    public partial class ContactRequestCompound : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactRequestCompound" /> class.
@@ -40,22 +40,91 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactRequestCompound" /> class.
         /// </summary>
-        /// <param name="objContactinformations">objContactinformations (required).</param>
         /// <param name="fkiContacttitleID">The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)| (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="sContactFirstname">The First name of the contact (required).</param>
         /// <param name="sContactLastname">The Last name of the contact (required).</param>
         /// <param name="sContactCompany">The Company name of the contact (required).</param>
         /// <param name="dtContactBirthdate">The Birth Date of the contact.</param>
-        public ContactRequestCompound(ContactinformationsRequestCompound objContactinformations = default(ContactinformationsRequestCompound), int fkiContacttitleID = default(int), int fkiLanguageID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string dtContactBirthdate = default(string)) : base()
+        /// <param name="objContactinformations">objContactinformations (required).</param>
+        public ContactRequestCompound(int fkiContacttitleID = default(int), int fkiLanguageID = default(int), string sContactFirstname = default(string), string sContactLastname = default(string), string sContactCompany = default(string), string dtContactBirthdate = default(string), ContactinformationsRequestCompound objContactinformations = default(ContactinformationsRequestCompound))
         {
+            this.FkiContacttitleID = fkiContacttitleID;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sContactFirstname" is required (not null)
+            if (sContactFirstname == null)
+            {
+                throw new ArgumentNullException("sContactFirstname is a required property for ContactRequestCompound and cannot be null");
+            }
+            this.SContactFirstname = sContactFirstname;
+            // to ensure "sContactLastname" is required (not null)
+            if (sContactLastname == null)
+            {
+                throw new ArgumentNullException("sContactLastname is a required property for ContactRequestCompound and cannot be null");
+            }
+            this.SContactLastname = sContactLastname;
+            // to ensure "sContactCompany" is required (not null)
+            if (sContactCompany == null)
+            {
+                throw new ArgumentNullException("sContactCompany is a required property for ContactRequestCompound and cannot be null");
+            }
+            this.SContactCompany = sContactCompany;
             // to ensure "objContactinformations" is required (not null)
             if (objContactinformations == null)
             {
                 throw new ArgumentNullException("objContactinformations is a required property for ContactRequestCompound and cannot be null");
             }
             this.ObjContactinformations = objContactinformations;
+            this.DtContactBirthdate = dtContactBirthdate;
         }
+
+        /// <summary>
+        /// The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
+        /// </summary>
+        /// <value>The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiContacttitleID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiContacttitleID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        /// </summary>
+        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiLanguageID { get; set; }
+
+        /// <summary>
+        /// The First name of the contact
+        /// </summary>
+        /// <value>The First name of the contact</value>
+        /* <example>John</example>*/
+        [DataMember(Name = "sContactFirstname", IsRequired = true, EmitDefaultValue = true)]
+        public string SContactFirstname { get; set; }
+
+        /// <summary>
+        /// The Last name of the contact
+        /// </summary>
+        /// <value>The Last name of the contact</value>
+        /* <example>Doe</example>*/
+        [DataMember(Name = "sContactLastname", IsRequired = true, EmitDefaultValue = true)]
+        public string SContactLastname { get; set; }
+
+        /// <summary>
+        /// The Company name of the contact
+        /// </summary>
+        /// <value>The Company name of the contact</value>
+        /* <example>eZmax Solutions Inc.</example>*/
+        [DataMember(Name = "sContactCompany", IsRequired = true, EmitDefaultValue = true)]
+        public string SContactCompany { get; set; }
+
+        /// <summary>
+        /// The Birth Date of the contact
+        /// </summary>
+        /// <value>The Birth Date of the contact</value>
+        /* <example>1980-01-01</example>*/
+        [DataMember(Name = "dtContactBirthdate", EmitDefaultValue = false)]
+        public string DtContactBirthdate { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjContactinformations
@@ -71,7 +140,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ContactRequestCompound {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  FkiContacttitleID: ").Append(FkiContacttitleID).Append("\n");
+            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  SContactFirstname: ").Append(SContactFirstname).Append("\n");
+            sb.Append("  SContactLastname: ").Append(SContactLastname).Append("\n");
+            sb.Append("  SContactCompany: ").Append(SContactCompany).Append("\n");
+            sb.Append("  DtContactBirthdate: ").Append(DtContactBirthdate).Append("\n");
             sb.Append("  ObjContactinformations: ").Append(ObjContactinformations).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -81,7 +155,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -93,20 +167,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // FkiContacttitleID (int) minimum
+            if (this.FkiContacttitleID < (int)0)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for FkiContacttitleID, must be a value greater than or equal to 0.", new [] { "FkiContacttitleID" });
             }
+
+            // FkiLanguageID (int) maximum
+            if (this.FkiLanguageID > (int)2)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiLanguageID (int) minimum
+            if (this.FkiLanguageID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
             yield break;
         }
     }

@@ -5,7 +5,7 @@ Payload for GET /2/object/userstaged/{pkiUserstagedID}
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjUserstaged** | [**UserstagedResponse**](UserstagedResponse.md) | A Userstaged Object | 
+**ObjUserstaged** | [**UserstagedResponseCompound**](UserstagedResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

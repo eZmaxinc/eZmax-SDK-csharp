@@ -30,8 +30,68 @@ namespace eZmaxApi.Model
     /// Payload for GET /1/object/activesession/getCurrent
     /// </summary>
     [DataContract(Name = "activesession-getCurrent-v1-Response-mPayload")]
-    public partial class ActivesessionGetCurrentV1ResponseMPayload : ActivesessionResponseCompound, IValidatableObject
+    public partial class ActivesessionGetCurrentV1ResponseMPayload : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EActivesessionUsertype
+        /// </summary>
+        [DataMember(Name = "eActivesessionUsertype", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEActivesessionUsertype EActivesessionUsertype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionOrigin
+        /// </summary>
+        [DataMember(Name = "eActivesessionOrigin", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEActivesessionOrigin EActivesessionOrigin { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionWeekdaystart
+        /// </summary>
+        [DataMember(Name = "eActivesessionWeekdaystart", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEActivesessionWeekdaystart EActivesessionWeekdaystart { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsign
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsign", EmitDefaultValue = false)]
+        public FieldEActivesessionEzsign? EActivesessionEzsign { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsignaccess
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEActivesessionEzsignaccess EActivesessionEzsignaccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionEzsignprepaid
+        /// </summary>
+        [DataMember(Name = "eActivesessionEzsignprepaid", EmitDefaultValue = false)]
+        public FieldEActivesessionEzsignprepaid? EActivesessionEzsignprepaid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EActivesessionRealestateinprogress
+        /// </summary>
+        [DataMember(Name = "eActivesessionRealestateinprogress", EmitDefaultValue = false)]
+        public FieldEActivesessionRealestateinprogress? EActivesessionRealestateinprogress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ESystemconfigurationEzsignofficeplan
+        /// </summary>
+        [DataMember(Name = "eSystemconfigurationEzsignofficeplan", EmitDefaultValue = false)]
+        public FieldESystemconfigurationEzsignofficeplan? ESystemconfigurationEzsignofficeplan { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EUserEzsignaccess
+        /// </summary>
+        [DataMember(Name = "eUserEzsignaccess", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEUserEzsignaccess EUserEzsignaccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EUserEzsignprepaid
+        /// </summary>
+        [DataMember(Name = "eUserEzsignprepaid", EmitDefaultValue = false)]
+        public FieldEUserEzsignprepaid? EUserEzsignprepaid { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivesessionGetCurrentV1ResponseMPayload" /> class.
         /// </summary>
@@ -71,9 +131,230 @@ namespace eZmaxApi.Model
         /// <param name="objUserCloned">objUserCloned.</param>
         /// <param name="objApikey">objApikey.</param>
         /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), bool bActivesessionAttachment = default(bool), bool bActivesessionCanafe = default(bool), bool bActivesessionFinancial = default(bool), bool bActivesessionRealestatecompleted = default(bool), FieldEActivesessionEzsign? eActivesessionEzsign = default(FieldEActivesessionEzsign?), FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default(FieldEActivesessionEzsignaccess), FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default(FieldEActivesessionEzsignprepaid?), FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default(FieldEActivesessionRealestateinprogress?), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), int fkiEzsignuserID = default(int), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), FieldEUserEzsignprepaid? eUserEzsignprepaid = default(FieldEUserEzsignprepaid?), bool bUserEzsigntrial = default(bool), string dtUserEzsignprepaidexpiration = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>)) : base()
+        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default(FieldEActivesessionUsertype), FieldEActivesessionOrigin eActivesessionOrigin = default(FieldEActivesessionOrigin), FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default(FieldEActivesessionWeekdaystart), int fkiLanguageID = default(int), string sCompanyNameX = default(string), string sDepartmentNameX = default(string), bool bActivesessionDebug = default(bool), bool bActivesessionIssuperadmin = default(bool), bool bActivesessionAttachment = default(bool), bool bActivesessionCanafe = default(bool), bool bActivesessionFinancial = default(bool), bool bActivesessionRealestatecompleted = default(bool), FieldEActivesessionEzsign? eActivesessionEzsign = default(FieldEActivesessionEzsign?), FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default(FieldEActivesessionEzsignaccess), FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default(FieldEActivesessionEzsignprepaid?), FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default(FieldEActivesessionRealestateinprogress?), string pksCustomerCode = default(string), int fkiSystemconfigurationtypeID = default(int), int fkiSignatureID = default(int), int fkiEzsignuserID = default(int), bool bSystemconfigurationEzsignpaidbyoffice = default(bool), FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default(FieldESystemconfigurationEzsignofficeplan?), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), FieldEUserEzsignprepaid? eUserEzsignprepaid = default(FieldEUserEzsignprepaid?), bool bUserEzsigntrial = default(bool), string dtUserEzsignprepaidexpiration = default(string), List<int> aPkiPermissionID = default(List<int>), ActivesessionResponseCompoundUser objUserReal = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundUser objUserCloned = default(ActivesessionResponseCompoundUser), ActivesessionResponseCompoundApikey objApikey = default(ActivesessionResponseCompoundApikey), List<string> aEModuleInternalname = default(List<string>))
         {
+            this.EActivesessionUsertype = eActivesessionUsertype;
+            this.EActivesessionOrigin = eActivesessionOrigin;
+            this.EActivesessionWeekdaystart = eActivesessionWeekdaystart;
+            this.FkiLanguageID = fkiLanguageID;
+            // to ensure "sCompanyNameX" is required (not null)
+            if (sCompanyNameX == null)
+            {
+                throw new ArgumentNullException("sCompanyNameX is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.SCompanyNameX = sCompanyNameX;
+            // to ensure "sDepartmentNameX" is required (not null)
+            if (sDepartmentNameX == null)
+            {
+                throw new ArgumentNullException("sDepartmentNameX is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.SDepartmentNameX = sDepartmentNameX;
+            this.BActivesessionDebug = bActivesessionDebug;
+            this.BActivesessionIssuperadmin = bActivesessionIssuperadmin;
+            this.EActivesessionEzsignaccess = eActivesessionEzsignaccess;
+            // to ensure "pksCustomerCode" is required (not null)
+            if (pksCustomerCode == null)
+            {
+                throw new ArgumentNullException("pksCustomerCode is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.PksCustomerCode = pksCustomerCode;
+            this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+            this.EUserEzsignaccess = eUserEzsignaccess;
+            // to ensure "aPkiPermissionID" is required (not null)
+            if (aPkiPermissionID == null)
+            {
+                throw new ArgumentNullException("aPkiPermissionID is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.APkiPermissionID = aPkiPermissionID;
+            // to ensure "objUserReal" is required (not null)
+            if (objUserReal == null)
+            {
+                throw new ArgumentNullException("objUserReal is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.ObjUserReal = objUserReal;
+            // to ensure "aEModuleInternalname" is required (not null)
+            if (aEModuleInternalname == null)
+            {
+                throw new ArgumentNullException("aEModuleInternalname is a required property for ActivesessionGetCurrentV1ResponseMPayload and cannot be null");
+            }
+            this.AEModuleInternalname = aEModuleInternalname;
+            this.BActivesessionAttachment = bActivesessionAttachment;
+            this.BActivesessionCanafe = bActivesessionCanafe;
+            this.BActivesessionFinancial = bActivesessionFinancial;
+            this.BActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+            this.EActivesessionEzsign = eActivesessionEzsign;
+            this.EActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+            this.EActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+            this.FkiSignatureID = fkiSignatureID;
+            this.FkiEzsignuserID = fkiEzsignuserID;
+            this.BSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+            this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+            this.EUserEzsignprepaid = eUserEzsignprepaid;
+            this.BUserEzsigntrial = bUserEzsigntrial;
+            this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+            this.ObjUserCloned = objUserCloned;
+            this.ObjApikey = objApikey;
         }
+
+        /// <summary>
+        /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+        /// </summary>
+        /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
+        /* <example>2</example>*/
+        [DataMember(Name = "fkiLanguageID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiLanguageID { get; set; }
+
+        /// <summary>
+        /// The Name of the Company in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Company in the language of the requester</value>
+        /* <example>Acme inc.</example>*/
+        [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SCompanyNameX { get; set; }
+
+        /// <summary>
+        /// The Name of the Department in the language of the requester
+        /// </summary>
+        /// <value>The Name of the Department in the language of the requester</value>
+        /* <example>Head Office</example>*/
+        [DataMember(Name = "sDepartmentNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SDepartmentNameX { get; set; }
+
+        /// <summary>
+        /// Whether the active session is in debug or not
+        /// </summary>
+        /// <value>Whether the active session is in debug or not</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionDebug", IsRequired = true, EmitDefaultValue = true)]
+        public bool BActivesessionDebug { get; set; }
+
+        /// <summary>
+        /// Whether the active session is superadmin or not
+        /// </summary>
+        /// <value>Whether the active session is superadmin or not</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionIssuperadmin", IsRequired = true, EmitDefaultValue = true)]
+        public bool BActivesessionIssuperadmin { get; set; }
+
+        /// <summary>
+        /// Can access attachment when we clone a user
+        /// </summary>
+        /// <value>Can access attachment when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionAttachment", EmitDefaultValue = true)]
+        public bool BActivesessionAttachment { get; set; }
+
+        /// <summary>
+        /// Can access canafe when we clone a user
+        /// </summary>
+        /// <value>Can access canafe when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionCanafe", EmitDefaultValue = true)]
+        public bool BActivesessionCanafe { get; set; }
+
+        /// <summary>
+        /// Can access financial element when we clone a user
+        /// </summary>
+        /// <value>Can access financial element when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionFinancial", EmitDefaultValue = true)]
+        public bool BActivesessionFinancial { get; set; }
+
+        /// <summary>
+        /// Can access closed realestate folders when we clone a user
+        /// </summary>
+        /// <value>Can access closed realestate folders when we clone a user</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bActivesessionRealestatecompleted", EmitDefaultValue = true)]
+        public bool BActivesessionRealestatecompleted { get; set; }
+
+        /// <summary>
+        /// The customer code assigned to your account
+        /// </summary>
+        /// <value>The customer code assigned to your account</value>
+        /* <example>demo</example>*/
+        [DataMember(Name = "pksCustomerCode", IsRequired = true, EmitDefaultValue = true)]
+        public string PksCustomerCode { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Systemconfigurationtype
+        /// </summary>
+        /// <value>The unique ID of the Systemconfigurationtype</value>
+        /* <example>28</example>*/
+        [DataMember(Name = "fkiSystemconfigurationtypeID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiSystemconfigurationtypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Signature
+        /// </summary>
+        /// <value>The unique ID of the Signature</value>
+        /* <example>12</example>*/
+        [DataMember(Name = "fkiSignatureID", EmitDefaultValue = false)]
+        public int FkiSignatureID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignuser
+        /// </summary>
+        /// <value>The unique ID of the Ezsignuser</value>
+        /* <example>94</example>*/
+        [DataMember(Name = "fkiEzsignuserID", EmitDefaultValue = false)]
+        public int FkiEzsignuserID { get; set; }
+
+        /// <summary>
+        /// Whether if Ezsign is paid by the company or not
+        /// </summary>
+        /// <value>Whether if Ezsign is paid by the company or not</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bSystemconfigurationEzsignpaidbyoffice", EmitDefaultValue = true)]
+        public bool BSystemconfigurationEzsignpaidbyoffice { get; set; }
+
+        /// <summary>
+        /// Whether the User&#39;s eZsign subscription is a trial
+        /// </summary>
+        /// <value>Whether the User&#39;s eZsign subscription is a trial</value>
+        /* <example>false</example>*/
+        [DataMember(Name = "bUserEzsigntrial", EmitDefaultValue = true)]
+        public bool BUserEzsigntrial { get; set; }
+
+        /// <summary>
+        /// The eZsign prepaid expiration date
+        /// </summary>
+        /// <value>The eZsign prepaid expiration date</value>
+        /* <example>2020-12-31</example>*/
+        [DataMember(Name = "dtUserEzsignprepaidexpiration", EmitDefaultValue = false)]
+        public string DtUserEzsignprepaidexpiration { get; set; }
+
+        /// <summary>
+        /// An array of permissions granted to the user or api key
+        /// </summary>
+        /// <value>An array of permissions granted to the user or api key</value>
+        [DataMember(Name = "a_pkiPermissionID", IsRequired = true, EmitDefaultValue = true)]
+        public List<int> APkiPermissionID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUserReal
+        /// </summary>
+        [DataMember(Name = "objUserReal", IsRequired = true, EmitDefaultValue = true)]
+        public ActivesessionResponseCompoundUser ObjUserReal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjUserCloned
+        /// </summary>
+        [DataMember(Name = "objUserCloned", EmitDefaultValue = false)]
+        public ActivesessionResponseCompoundUser ObjUserCloned { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjApikey
+        /// </summary>
+        [DataMember(Name = "objApikey", EmitDefaultValue = false)]
+        public ActivesessionResponseCompoundApikey ObjApikey { get; set; }
+
+        /// <summary>
+        /// An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+        /// </summary>
+        /// <value>An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.</value>
+        [DataMember(Name = "a_eModuleInternalname", IsRequired = true, EmitDefaultValue = true)]
+        public List<string> AEModuleInternalname { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,7 +364,37 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
-            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
+            sb.Append("  EActivesessionUsertype: ").Append(EActivesessionUsertype).Append("\n");
+            sb.Append("  EActivesessionOrigin: ").Append(EActivesessionOrigin).Append("\n");
+            sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
+            sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
+            sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
+            sb.Append("  BActivesessionDebug: ").Append(BActivesessionDebug).Append("\n");
+            sb.Append("  BActivesessionIssuperadmin: ").Append(BActivesessionIssuperadmin).Append("\n");
+            sb.Append("  BActivesessionAttachment: ").Append(BActivesessionAttachment).Append("\n");
+            sb.Append("  BActivesessionCanafe: ").Append(BActivesessionCanafe).Append("\n");
+            sb.Append("  BActivesessionFinancial: ").Append(BActivesessionFinancial).Append("\n");
+            sb.Append("  BActivesessionRealestatecompleted: ").Append(BActivesessionRealestatecompleted).Append("\n");
+            sb.Append("  EActivesessionEzsign: ").Append(EActivesessionEzsign).Append("\n");
+            sb.Append("  EActivesessionEzsignaccess: ").Append(EActivesessionEzsignaccess).Append("\n");
+            sb.Append("  EActivesessionEzsignprepaid: ").Append(EActivesessionEzsignprepaid).Append("\n");
+            sb.Append("  EActivesessionRealestateinprogress: ").Append(EActivesessionRealestateinprogress).Append("\n");
+            sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
+            sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
+            sb.Append("  FkiSignatureID: ").Append(FkiSignatureID).Append("\n");
+            sb.Append("  FkiEzsignuserID: ").Append(FkiEzsignuserID).Append("\n");
+            sb.Append("  BSystemconfigurationEzsignpaidbyoffice: ").Append(BSystemconfigurationEzsignpaidbyoffice).Append("\n");
+            sb.Append("  ESystemconfigurationEzsignofficeplan: ").Append(ESystemconfigurationEzsignofficeplan).Append("\n");
+            sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
+            sb.Append("  EUserEzsignprepaid: ").Append(EUserEzsignprepaid).Append("\n");
+            sb.Append("  BUserEzsigntrial: ").Append(BUserEzsigntrial).Append("\n");
+            sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");
+            sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
+            sb.Append("  ObjUserReal: ").Append(ObjUserReal).Append("\n");
+            sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
+            sb.Append("  ObjApikey: ").Append(ObjApikey).Append("\n");
+            sb.Append("  AEModuleInternalname: ").Append(AEModuleInternalname).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,7 +403,7 @@ namespace eZmaxApi.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public virtual string ToJson()
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
@@ -104,20 +415,69 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            return this.BaseValidate(validationContext);
-        }
-
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        protected IEnumerable<ValidationResult> BaseValidate(ValidationContext validationContext)
-        {
-            foreach (var x in BaseValidate(validationContext))
+            // FkiLanguageID (int) maximum
+            if (this.FkiLanguageID > (int)2)
             {
-                yield return x;
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
+
+            // FkiLanguageID (int) minimum
+            if (this.FkiLanguageID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            // PksCustomerCode (string) maxLength
+            if (this.PksCustomerCode != null && this.PksCustomerCode.Length > 6)
+            {
+                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
+            }
+
+            // PksCustomerCode (string) minLength
+            if (this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
+            {
+                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
+            }
+
+            // FkiSystemconfigurationtypeID (int) minimum
+            if (this.FkiSystemconfigurationtypeID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+            }
+
+            // FkiSignatureID (int) maximum
+            if (this.FkiSignatureID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiSignatureID, must be a value less than or equal to 16777215.", new [] { "FkiSignatureID" });
+            }
+
+            // FkiSignatureID (int) minimum
+            if (this.FkiSignatureID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiSignatureID, must be a value greater than or equal to 0.", new [] { "FkiSignatureID" });
+            }
+
+            // FkiEzsignuserID (int) maximum
+            if (this.FkiEzsignuserID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignuserID, must be a value less than or equal to 65535.", new [] { "FkiEzsignuserID" });
+            }
+
+            // FkiEzsignuserID (int) minimum
+            if (this.FkiEzsignuserID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignuserID, must be a value greater than or equal to 0.", new [] { "FkiEzsignuserID" });
+            }
+
+            if (this.DtUserEzsignprepaidexpiration != null) {
+                // DtUserEzsignprepaidexpiration (string) pattern
+                Regex regexDtUserEzsignprepaidexpiration = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtUserEzsignprepaidexpiration.Match(this.DtUserEzsignprepaidexpiration).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtUserEzsignprepaidexpiration, must match a pattern of " + regexDtUserEzsignprepaidexpiration, new [] { "DtUserEzsignprepaidexpiration" });
+                }
+            }
+
             yield break;
         }
     }

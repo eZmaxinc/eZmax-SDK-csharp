@@ -209,7 +209,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepubliceditobjectv1"></a>
 # **EzsigntemplatepublicEditObjectV1**
-> CommonResponse EzsigntemplatepublicEditObjectV1 (int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request)
+> EzsigntemplatepublicEditObjectV1Response EzsigntemplatepublicEditObjectV1 (int pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepublic
 
@@ -241,7 +241,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplatepublic
-                CommonResponse result = apiInstance.EzsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+                EzsigntemplatepublicEditObjectV1Response result = apiInstance.EzsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -262,7 +262,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplatepublic
-    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+    ApiResponse<EzsigntemplatepublicEditObjectV1Response> response = apiInstance.EzsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -284,7 +284,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepublicEditObjectV1Response**](EzsigntemplatepublicEditObjectV1Response.md)
 
 ### Authorization
 
