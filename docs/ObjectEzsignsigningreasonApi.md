@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="ezsignsigningreasoneditobjectv1"></a>
 # **EzsignsigningreasonEditObjectV1**
-> EzsignsigningreasonEditObjectV1Response EzsignsigningreasonEditObjectV1 (int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request)
+> CommonResponse EzsignsigningreasonEditObjectV1 (int pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request)
 
 Edit an existing Ezsignsigningreason
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignsigningreason
-                EzsignsigningreasonEditObjectV1Response result = apiInstance.EzsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignsigningreason
-    ApiResponse<EzsignsigningreasonEditObjectV1Response> response = apiInstance.EzsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignsigningreasonEditObjectV1Response**](EzsignsigningreasonEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

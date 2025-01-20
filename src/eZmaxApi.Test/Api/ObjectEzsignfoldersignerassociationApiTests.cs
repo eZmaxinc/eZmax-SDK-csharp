@@ -101,7 +101,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignfoldersignerassociationID = null;
             //var response = instance.EzsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
-            //Assert.IsType<EzsignfoldersignerassociationDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldersignerassociationID = null;
             //EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request = null;
             //var response = instance.EzsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
-            //Assert.IsType<EzsignfoldersignerassociationEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldersignerassociationID = null;
             //Object body = null;
             //var response = instance.EzsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
-            //Assert.IsType<EzsignfoldersignerassociationForceDisconnectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldersignerassociationID = null;
             //EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request = null;
             //var response = instance.EzsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
-            //Assert.IsType<EzsignfoldersignerassociationPatchObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldersignerassociationID = null;
             //EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request = null;
             //var response = instance.EzsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
-            //Assert.IsType<EzsignfoldersignerassociationReassignV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

@@ -39,7 +39,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignfolderarchivev1"></a>
 # **EzsignfolderArchiveV1**
-> EzsignfolderArchiveV1Response EzsignfolderArchiveV1 (int pkiEzsignfolderID, Object body)
+> CommonResponse EzsignfolderArchiveV1 (int pkiEzsignfolderID, Object body)
 
 Archive the Ezsignfolder
 
@@ -71,7 +71,7 @@ namespace Example
             try
             {
                 // Archive the Ezsignfolder
-                EzsignfolderArchiveV1Response result = apiInstance.EzsignfolderArchiveV1(pkiEzsignfolderID, body);
+                CommonResponse result = apiInstance.EzsignfolderArchiveV1(pkiEzsignfolderID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -92,7 +92,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Archive the Ezsignfolder
-    ApiResponse<EzsignfolderArchiveV1Response> response = apiInstance.EzsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -114,7 +114,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderArchiveV1Response**](EzsignfolderArchiveV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderdeleteobjectv1"></a>
 # **EzsignfolderDeleteObjectV1**
-> EzsignfolderDeleteObjectV1Response EzsignfolderDeleteObjectV1 (int pkiEzsignfolderID)
+> CommonResponse EzsignfolderDeleteObjectV1 (int pkiEzsignfolderID)
 
 Delete an existing Ezsignfolder
 
@@ -555,7 +555,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignfolder
-                EzsignfolderDeleteObjectV1Response result = apiInstance.EzsignfolderDeleteObjectV1(pkiEzsignfolderID);
+                CommonResponse result = apiInstance.EzsignfolderDeleteObjectV1(pkiEzsignfolderID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -576,7 +576,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignfolder
-    ApiResponse<EzsignfolderDeleteObjectV1Response> response = apiInstance.EzsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -597,7 +597,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderDeleteObjectV1Response**](EzsignfolderDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -620,7 +620,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderdisposeezsignfoldersv1"></a>
 # **EzsignfolderDisposeEzsignfoldersV1**
-> EzsignfolderDisposeEzsignfoldersV1Response EzsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request)
+> CommonResponse EzsignfolderDisposeEzsignfoldersV1 (EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request)
 
 Dispose Ezsignfolders
 
@@ -651,7 +651,7 @@ namespace Example
             try
             {
                 // Dispose Ezsignfolders
-                EzsignfolderDisposeEzsignfoldersV1Response result = apiInstance.EzsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
+                CommonResponse result = apiInstance.EzsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -672,7 +672,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Dispose Ezsignfolders
-    ApiResponse<EzsignfolderDisposeEzsignfoldersV1Response> response = apiInstance.EzsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -693,7 +693,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderDisposeEzsignfoldersV1Response**](EzsignfolderDisposeEzsignfoldersV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -716,7 +716,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderdisposev1"></a>
 # **EzsignfolderDisposeV1**
-> EzsignfolderDisposeV1Response EzsignfolderDisposeV1 (int pkiEzsignfolderID, Object body)
+> CommonResponse EzsignfolderDisposeV1 (int pkiEzsignfolderID, Object body)
 
 Dispose the Ezsignfolder
 
@@ -748,7 +748,7 @@ namespace Example
             try
             {
                 // Dispose the Ezsignfolder
-                EzsignfolderDisposeV1Response result = apiInstance.EzsignfolderDisposeV1(pkiEzsignfolderID, body);
+                CommonResponse result = apiInstance.EzsignfolderDisposeV1(pkiEzsignfolderID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -769,7 +769,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Dispose the Ezsignfolder
-    ApiResponse<EzsignfolderDisposeV1Response> response = apiInstance.EzsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -791,7 +791,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderDisposeV1Response**](EzsignfolderDisposeV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldereditobjectv3"></a>
 # **EzsignfolderEditObjectV3**
-> EzsignfolderEditObjectV3Response EzsignfolderEditObjectV3 (int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request)
+> CommonResponse EzsignfolderEditObjectV3 (int pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request)
 
 Edit an existing Ezsignfolder
 
@@ -846,7 +846,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignfolder
-                EzsignfolderEditObjectV3Response result = apiInstance.EzsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+                CommonResponse result = apiInstance.EzsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -867,7 +867,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignfolder
-    ApiResponse<EzsignfolderEditObjectV3Response> response = apiInstance.EzsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -889,7 +889,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderEditObjectV3Response**](EzsignfolderEditObjectV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -912,7 +912,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderendprematurelyv1"></a>
 # **EzsignfolderEndPrematurelyV1**
-> EzsignfolderEndPrematurelyV1Response EzsignfolderEndPrematurelyV1 (int pkiEzsignfolderID, Object body)
+> CommonResponse EzsignfolderEndPrematurelyV1 (int pkiEzsignfolderID, Object body)
 
 End prematurely
 
@@ -946,7 +946,7 @@ namespace Example
             try
             {
                 // End prematurely
-                EzsignfolderEndPrematurelyV1Response result = apiInstance.EzsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
+                CommonResponse result = apiInstance.EzsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -967,7 +967,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // End prematurely
-    ApiResponse<EzsignfolderEndPrematurelyV1Response> response = apiInstance.EzsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -989,7 +989,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderEndPrematurelyV1Response**](EzsignfolderEndPrematurelyV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2653,7 +2653,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderreorderv1"></a>
 # **EzsignfolderReorderV1**
-> EzsignfolderReorderV1Response EzsignfolderReorderV1 (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request)
+> CommonResponse EzsignfolderReorderV1 (int pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -2685,7 +2685,7 @@ namespace Example
             try
             {
                 // Reorder Ezsigndocuments in the Ezsignfolder
-                EzsignfolderReorderV1Response result = apiInstance.EzsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+                CommonResponse result = apiInstance.EzsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2706,7 +2706,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Reorder Ezsigndocuments in the Ezsignfolder
-    ApiResponse<EzsignfolderReorderV1Response> response = apiInstance.EzsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2728,7 +2728,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderReorderV1Response**](EzsignfolderReorderV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2751,7 +2751,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderreorderv2"></a>
 # **EzsignfolderReorderV2**
-> EzsignfolderReorderV2Response EzsignfolderReorderV2 (int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request)
+> CommonResponse EzsignfolderReorderV2 (int pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -2783,7 +2783,7 @@ namespace Example
             try
             {
                 // Reorder Ezsigndocuments in the Ezsignfolder
-                EzsignfolderReorderV2Response result = apiInstance.EzsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+                CommonResponse result = apiInstance.EzsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2804,7 +2804,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Reorder Ezsigndocuments in the Ezsignfolder
-    ApiResponse<EzsignfolderReorderV2Response> response = apiInstance.EzsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2826,7 +2826,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderReorderV2Response**](EzsignfolderReorderV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2849,7 +2849,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersendv1"></a>
 # **EzsignfolderSendV1**
-> EzsignfolderSendV1Response EzsignfolderSendV1 (int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request)
+> CommonResponse EzsignfolderSendV1 (int pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -2881,7 +2881,7 @@ namespace Example
             try
             {
                 // Send the Ezsignfolder to the signatories for signature
-                EzsignfolderSendV1Response result = apiInstance.EzsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
+                CommonResponse result = apiInstance.EzsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2902,7 +2902,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Send the Ezsignfolder to the signatories for signature
-    ApiResponse<EzsignfolderSendV1Response> response = apiInstance.EzsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -2924,7 +2924,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderSendV1Response**](EzsignfolderSendV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2947,7 +2947,7 @@ catch (ApiException e)
 
 <a id="ezsignfoldersendv3"></a>
 # **EzsignfolderSendV3**
-> EzsignfolderSendV3Response EzsignfolderSendV3 (int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request)
+> CommonResponse EzsignfolderSendV3 (int pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -2979,7 +2979,7 @@ namespace Example
             try
             {
                 // Send the Ezsignfolder to the signatories for signature
-                EzsignfolderSendV3Response result = apiInstance.EzsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
+                CommonResponse result = apiInstance.EzsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3000,7 +3000,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Send the Ezsignfolder to the signatories for signature
-    ApiResponse<EzsignfolderSendV3Response> response = apiInstance.EzsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3022,7 +3022,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderSendV3Response**](EzsignfolderSendV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -3045,7 +3045,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderunsendv1"></a>
 # **EzsignfolderUnsendV1**
-> EzsignfolderUnsendV1Response EzsignfolderUnsendV1 (int pkiEzsignfolderID, Object body)
+> CommonResponse EzsignfolderUnsendV1 (int pkiEzsignfolderID, Object body)
 
 Unsend the Ezsignfolder
 
@@ -3079,7 +3079,7 @@ namespace Example
             try
             {
                 // Unsend the Ezsignfolder
-                EzsignfolderUnsendV1Response result = apiInstance.EzsignfolderUnsendV1(pkiEzsignfolderID, body);
+                CommonResponse result = apiInstance.EzsignfolderUnsendV1(pkiEzsignfolderID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3100,7 +3100,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Unsend the Ezsignfolder
-    ApiResponse<EzsignfolderUnsendV1Response> response = apiInstance.EzsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -3122,7 +3122,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignfolderUnsendV1Response**](EzsignfolderUnsendV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

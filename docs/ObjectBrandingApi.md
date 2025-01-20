@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="brandingeditobjectv2"></a>
 # **BrandingEditObjectV2**
-> BrandingEditObjectV2Response BrandingEditObjectV2 (int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request)
+> CommonResponse BrandingEditObjectV2 (int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Edit an existing Branding
-                BrandingEditObjectV2Response result = apiInstance.BrandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
+                CommonResponse result = apiInstance.BrandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Branding
-    ApiResponse<BrandingEditObjectV2Response> response = apiInstance.BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
+    ApiResponse<CommonResponse> response = apiInstance.BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

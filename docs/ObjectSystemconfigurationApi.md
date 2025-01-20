@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="systemconfigurationeditobjectv1"></a>
 # **SystemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response SystemconfigurationEditObjectV1 (int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request)
+> CommonResponse SystemconfigurationEditObjectV1 (int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request)
 
 Edit an existing Systemconfiguration
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Edit an existing Systemconfiguration
-                SystemconfigurationEditObjectV1Response result = apiInstance.SystemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+                CommonResponse result = apiInstance.SystemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Systemconfiguration
-    ApiResponse<SystemconfigurationEditObjectV1Response> response = apiInstance.SystemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.SystemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -84,7 +84,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepackagesignereditobjectv1"></a>
 # **EzsigntemplatepackagesignerEditObjectV1**
-> EzsigntemplatepackagesignerEditObjectV1Response EzsigntemplatepackagesignerEditObjectV1 (int pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request)
+> CommonResponse EzsigntemplatepackagesignerEditObjectV1 (int pkiEzsigntemplatepackagesignerID, EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackagesigner
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsigntemplatepackagesigner
-                EzsigntemplatepackagesignerEditObjectV1Response result = apiInstance.EzsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsigntemplatepackagesigner
-    ApiResponse<EzsigntemplatepackagesignerEditObjectV1Response> response = apiInstance.EzsigntemplatepackagesignerEditObjectV1WithHttpInfo(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatepackagesignerEditObjectV1WithHttpInfo(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplatepackagesignerEditObjectV1Response**](EzsigntemplatepackagesignerEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **FkiPhonelinesharedID** | **int** | The unique ID of the Phonelineshared | [optional] 
 **ECommunicationsenderObjecttype** | **string** |  | 
 **ObjContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  | 
-**ObjEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  | [optional] 
+**ObjEmail** | [**EmailResponse**](EmailResponse.md) | An Email Object and children to create a complete structure | [optional] 
 **ObjPhoneFax** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
 **ObjPhoneSMS** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 
 

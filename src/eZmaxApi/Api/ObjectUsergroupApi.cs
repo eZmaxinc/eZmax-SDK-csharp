@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupID"></param>
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupEditObjectV1Response</returns>
-        UsergroupEditObjectV1Response UsergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse UsergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Usergroup
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupID"></param>
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupEditObjectV1Response</returns>
-        ApiResponse<UsergroupEditObjectV1Response> UsergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> UsergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -329,8 +329,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<UsergroupEditObjectV1Response> UsergroupEditObjectV1Async(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> UsergroupEditObjectV1Async(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Usergroup
@@ -343,8 +343,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsergroupEditObjectV1Response>> UsergroupEditObjectV1WithHttpInfoAsync(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupEditObjectV1WithHttpInfoAsync(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -873,10 +873,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupID"></param>
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>UsergroupEditObjectV1Response</returns>
-        public UsergroupEditObjectV1Response UsergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse UsergroupEditObjectV1(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UsergroupEditObjectV1Response> localVarResponse = UsergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -887,8 +887,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupID"></param>
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of UsergroupEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<UsergroupEditObjectV1Response> UsergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupEditObjectV1WithHttpInfo(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'usergroupEditObjectV1Request' is set
             if (usergroupEditObjectV1Request == null)
@@ -932,7 +932,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<UsergroupEditObjectV1Response>("/1/object/usergroup/{pkiUsergroupID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/usergroup/{pkiUsergroupID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupEditObjectV1", localVarResponse);
@@ -953,10 +953,10 @@ namespace eZmaxApi.Api
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of UsergroupEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<UsergroupEditObjectV1Response> UsergroupEditObjectV1Async(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> UsergroupEditObjectV1Async(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<UsergroupEditObjectV1Response> localVarResponse = await UsergroupEditObjectV1WithHttpInfoAsync(pkiUsergroupID, usergroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupEditObjectV1WithHttpInfoAsync(pkiUsergroupID, usergroupEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -968,8 +968,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (UsergroupEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupEditObjectV1Response>> UsergroupEditObjectV1WithHttpInfoAsync(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupEditObjectV1WithHttpInfoAsync(int pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'usergroupEditObjectV1Request' is set
             if (usergroupEditObjectV1Request == null)
@@ -1014,7 +1014,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<UsergroupEditObjectV1Response>("/1/object/usergroup/{pkiUsergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/usergroup/{pkiUsergroupID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

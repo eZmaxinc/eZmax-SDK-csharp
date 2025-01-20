@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiUsergroupexternalID = null;
             //var response = instance.UsergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
-            //Assert.IsType<UsergroupexternalDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUsergroupexternalID = null;
             //UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request = null;
             //var response = instance.UsergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
-            //Assert.IsType<UsergroupexternalEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

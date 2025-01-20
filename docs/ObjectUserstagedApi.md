@@ -111,7 +111,7 @@ catch (ApiException e)
 
 <a id="userstageddeleteobjectv1"></a>
 # **UserstagedDeleteObjectV1**
-> UserstagedDeleteObjectV1Response UserstagedDeleteObjectV1 (int pkiUserstagedID)
+> CommonResponse UserstagedDeleteObjectV1 (int pkiUserstagedID)
 
 Delete an existing Userstaged
 
@@ -142,7 +142,7 @@ namespace Example
             try
             {
                 // Delete an existing Userstaged
-                UserstagedDeleteObjectV1Response result = apiInstance.UserstagedDeleteObjectV1(pkiUserstagedID);
+                CommonResponse result = apiInstance.UserstagedDeleteObjectV1(pkiUserstagedID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -163,7 +163,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Userstaged
-    ApiResponse<UserstagedDeleteObjectV1Response> response = apiInstance.UserstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID);
+    ApiResponse<CommonResponse> response = apiInstance.UserstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**UserstagedDeleteObjectV1Response**](UserstagedDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ catch (ApiException e)
 
 <a id="userstagedmapv1"></a>
 # **UserstagedMapV1**
-> UserstagedMapV1Response UserstagedMapV1 (int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request)
+> CommonResponse UserstagedMapV1 (int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
@@ -436,7 +436,7 @@ namespace Example
             try
             {
                 // Map the Userstaged to an existing user
-                UserstagedMapV1Response result = apiInstance.UserstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
+                CommonResponse result = apiInstance.UserstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -457,7 +457,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Map the Userstaged to an existing user
-    ApiResponse<UserstagedMapV1Response> response = apiInstance.UserstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.UserstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -479,7 +479,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**UserstagedMapV1Response**](UserstagedMapV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

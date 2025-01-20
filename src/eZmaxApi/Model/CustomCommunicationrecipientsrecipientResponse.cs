@@ -167,10 +167,10 @@ namespace eZmaxApi.Model
         /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
         /// <param name="eCommunicationrecipientsrecipientObjecttype">eCommunicationrecipientsrecipientObjecttype (required).</param>
         /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="objEmail">objEmail.</param>
+        /// <param name="objEmail">An Email Object and children to create a complete structure.</param>
         /// <param name="objPhoneFax">objPhoneFax.</param>
         /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        public CustomCommunicationrecipientsrecipientResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponseCompound objEmail = default(EmailResponseCompound), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
+        public CustomCommunicationrecipientsrecipientResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiContactID = default(int), int fkiCustomerID = default(int), int fkiEmployeeID = default(int), int fkiEzsignsignerID = default(int), int fkiFranchiseofficeID = default(int), int fkiUserID = default(int), int fkiAgentincorporationID = default(int), int fkiAssistantID = default(int), int fkiExternalbrokerID = default(int), int fkiEzcomagentID = default(int), int fkiNotaryID = default(int), int fkiRewardmemberID = default(int), int fkiSupplierID = default(int), ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype = default(ECommunicationrecipientsrecipientObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponse objEmail = default(EmailResponse), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
         {
             this.ECommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
             // to ensure "objContactName" is required (not null)
@@ -326,10 +326,11 @@ namespace eZmaxApi.Model
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmail
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", EmitDefaultValue = false)]
-        public EmailResponseCompound ObjEmail { get; set; }
+        public EmailResponse ObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneFax

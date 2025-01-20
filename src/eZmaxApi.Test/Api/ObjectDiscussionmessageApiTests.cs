@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiDiscussionmessageID = null;
             //var response = instance.DiscussionmessageDeleteObjectV1(pkiDiscussionmessageID);
-            //Assert.IsType<DiscussionmessageDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiDiscussionmessageID = null;
             //DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request = null;
             //var response = instance.DiscussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
-            //Assert.IsType<DiscussionmessagePatchObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

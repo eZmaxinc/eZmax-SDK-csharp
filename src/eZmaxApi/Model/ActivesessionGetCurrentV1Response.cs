@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">mPayload (required).</param>
-        public ActivesessionGetCurrentV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), ActivesessionGetCurrentV1ResponseMPayload mPayload = default(ActivesessionGetCurrentV1ResponseMPayload))
+        /// <param name="mPayload">Payload for GET /1/object/activesession/getCurrent (required).</param>
+        public ActivesessionGetCurrentV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), ActivesessionResponseCompound mPayload = default(ActivesessionResponseCompound))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,10 +73,11 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Gets or Sets MPayload
+        /// Payload for GET /1/object/activesession/getCurrent
         /// </summary>
+        /// <value>Payload for GET /1/object/activesession/getCurrent</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public ActivesessionGetCurrentV1ResponseMPayload MPayload { get; set; }
+        public ActivesessionResponseCompound MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

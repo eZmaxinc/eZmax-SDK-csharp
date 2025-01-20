@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiDomainID = null;
             //var response = instance.DomainDeleteObjectV1(pkiDomainID);
-            //Assert.IsType<DomainDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="domaindeleteobjectv1"></a>
 # **DomainDeleteObjectV1**
-> DomainDeleteObjectV1Response DomainDeleteObjectV1 (int pkiDomainID)
+> CommonResponse DomainDeleteObjectV1 (int pkiDomainID)
 
 Delete an existing Domain
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Domain
-                DomainDeleteObjectV1Response result = apiInstance.DomainDeleteObjectV1(pkiDomainID);
+                CommonResponse result = apiInstance.DomainDeleteObjectV1(pkiDomainID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Domain
-    ApiResponse<DomainDeleteObjectV1Response> response = apiInstance.DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
+    ApiResponse<CommonResponse> response = apiInstance.DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

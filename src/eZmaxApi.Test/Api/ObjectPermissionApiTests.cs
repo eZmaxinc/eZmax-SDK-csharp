@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiPermissionID = null;
             //var response = instance.PermissionDeleteObjectV1(pkiPermissionID);
-            //Assert.IsType<PermissionDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiPermissionID = null;
             //PermissionEditObjectV1Request permissionEditObjectV1Request = null;
             //var response = instance.PermissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
-            //Assert.IsType<PermissionEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

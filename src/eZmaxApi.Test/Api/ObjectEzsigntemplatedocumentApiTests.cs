@@ -142,7 +142,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplatedocumentID = null;
             //Object body = null;
             //var response = instance.EzsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
-            //Assert.IsType<EzsigntemplatedocumentFlattenV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplatedocumentID = null;
             //EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request = null;
             //var response = instance.EzsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request);
-            //Assert.IsType<EzsigntemplatedocumentPatchObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }
