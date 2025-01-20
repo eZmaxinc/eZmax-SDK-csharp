@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsignbulksenddocumentmappingdeleteobjectv1"></a>
 # **EzsignbulksenddocumentmappingDeleteObjectV1**
-> EzsignbulksenddocumentmappingDeleteObjectV1Response EzsignbulksenddocumentmappingDeleteObjectV1 (int pkiEzsignbulksenddocumentmappingID)
+> CommonResponse EzsignbulksenddocumentmappingDeleteObjectV1 (int pkiEzsignbulksenddocumentmappingID)
 
 Delete an existing Ezsignbulksenddocumentmapping
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignbulksenddocumentmapping
-                EzsignbulksenddocumentmappingDeleteObjectV1Response result = apiInstance.EzsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
+                CommonResponse result = apiInstance.EzsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignbulksenddocumentmapping
-    ApiResponse<EzsignbulksenddocumentmappingDeleteObjectV1Response> response = apiInstance.EzsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignbulksenddocumentmappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksenddocumentmappingID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignbulksenddocumentmappingDeleteObjectV1Response**](EzsignbulksenddocumentmappingDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

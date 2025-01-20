@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiPaymenttermID = null;
             //PaymenttermEditObjectV1Request paymenttermEditObjectV1Request = null;
             //var response = instance.PaymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
-            //Assert.IsType<PaymenttermEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

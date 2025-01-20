@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsignformfieldgroupdeleteobjectv1"></a>
 # **EzsignformfieldgroupDeleteObjectV1**
-> EzsignformfieldgroupDeleteObjectV1Response EzsignformfieldgroupDeleteObjectV1 (int pkiEzsignformfieldgroupID)
+> CommonResponse EzsignformfieldgroupDeleteObjectV1 (int pkiEzsignformfieldgroupID)
 
 Delete an existing Ezsignformfieldgroup
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignformfieldgroup
-                EzsignformfieldgroupDeleteObjectV1Response result = apiInstance.EzsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
+                CommonResponse result = apiInstance.EzsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignformfieldgroup
-    ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> response = apiInstance.EzsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignformfieldgroupDeleteObjectV1Response**](EzsignformfieldgroupDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ catch (ApiException e)
 
 <a id="ezsignformfieldgroupeditobjectv1"></a>
 # **EzsignformfieldgroupEditObjectV1**
-> EzsignformfieldgroupEditObjectV1Response EzsignformfieldgroupEditObjectV1 (int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request)
+> CommonResponse EzsignformfieldgroupEditObjectV1 (int pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request)
 
 Edit an existing Ezsignformfieldgroup
 
@@ -235,7 +235,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignformfieldgroup
-                EzsignformfieldgroupEditObjectV1Response result = apiInstance.EzsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -256,7 +256,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignformfieldgroup
-    ApiResponse<EzsignformfieldgroupEditObjectV1Response> response = apiInstance.EzsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -278,7 +278,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignformfieldgroupEditObjectV1Response**](EzsignformfieldgroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

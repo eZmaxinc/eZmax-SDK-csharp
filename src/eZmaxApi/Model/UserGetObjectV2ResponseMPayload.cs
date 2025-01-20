@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objUser">objUser (required).</param>
-        public UserGetObjectV2ResponseMPayload(UserResponseCompound objUser = default(UserResponseCompound))
+        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
+        public UserGetObjectV2ResponseMPayload(UserResponse objUser = default(UserResponse))
         {
             // to ensure "objUser" is required (not null)
             if (objUser == null)
@@ -52,10 +52,11 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets ObjUser
+        /// A User Object and children to create a complete structure
         /// </summary>
+        /// <value>A User Object and children to create a complete structure</value>
         [DataMember(Name = "objUser", IsRequired = true, EmitDefaultValue = true)]
-        public UserResponseCompound ObjUser { get; set; }
+        public UserResponse ObjUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

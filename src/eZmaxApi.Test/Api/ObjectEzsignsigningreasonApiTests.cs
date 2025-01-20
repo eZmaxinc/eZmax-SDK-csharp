@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignsigningreasonID = null;
             //EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request = null;
             //var response = instance.EzsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
-            //Assert.IsType<EzsignsigningreasonEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

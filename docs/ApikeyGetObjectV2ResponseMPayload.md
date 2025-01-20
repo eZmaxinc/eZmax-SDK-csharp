@@ -5,7 +5,7 @@ Payload for GET /2/object/apikey/{pkiApikeyID}
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjApikey** | [**ApikeyResponseCompound**](ApikeyResponseCompound.md) |  | 
+**ObjApikey** | [**ApikeyResponse**](ApikeyResponse.md) | An Apikey Object and children to create a complete structure | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@ Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjWebhooklog** | [**List&lt;CustomWebhooklogResponse&gt;**](CustomWebhooklogResponse.md) |  | 
+**AObjWebhooklog** | **List&lt;CustomWebhooklogResponse&gt;** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

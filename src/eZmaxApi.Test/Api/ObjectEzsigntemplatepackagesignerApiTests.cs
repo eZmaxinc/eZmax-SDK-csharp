@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplatepackagesignerID = null;
             //EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request = null;
             //var response = instance.EzsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
-            //Assert.IsType<EzsigntemplatepackagesignerEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

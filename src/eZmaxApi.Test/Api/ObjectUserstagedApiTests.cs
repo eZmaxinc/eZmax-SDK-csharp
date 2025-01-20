@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiUserstagedID = null;
             //var response = instance.UserstagedDeleteObjectV1(pkiUserstagedID);
-            //Assert.IsType<UserstagedDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUserstagedID = null;
             //UserstagedMapV1Request userstagedMapV1Request = null;
             //var response = instance.UserstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
-            //Assert.IsType<UserstagedMapV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

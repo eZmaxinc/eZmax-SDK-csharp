@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignbulksendsignermappingID = null;
             //var response = instance.EzsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID);
-            //Assert.IsType<EzsignbulksendsignermappingDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

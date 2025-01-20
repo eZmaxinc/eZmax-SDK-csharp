@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="ezsignsignergroupdeleteobjectv1"></a>
 # **EzsignsignergroupDeleteObjectV1**
-> EzsignsignergroupDeleteObjectV1Response EzsignsignergroupDeleteObjectV1 (int pkiEzsignsignergroupID)
+> CommonResponse EzsignsignergroupDeleteObjectV1 (int pkiEzsignsignergroupID)
 
 Delete an existing Ezsignsignergroup
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsignsignergroup
-                EzsignsignergroupDeleteObjectV1Response result = apiInstance.EzsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID);
+                CommonResponse result = apiInstance.EzsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsignsignergroup
-    ApiResponse<EzsignsignergroupDeleteObjectV1Response> response = apiInstance.EzsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -182,7 +182,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignsignergroupDeleteObjectV1Response**](EzsignsignergroupDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ catch (ApiException e)
 
 <a id="ezsignsignergroupeditobjectv1"></a>
 # **EzsignsignergroupEditObjectV1**
-> EzsignsignergroupEditObjectV1Response EzsignsignergroupEditObjectV1 (int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request)
+> CommonResponse EzsignsignergroupEditObjectV1 (int pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request)
 
 Edit an existing Ezsignsignergroup
 
@@ -336,7 +336,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignsignergroup
-                EzsignsignergroupEditObjectV1Response result = apiInstance.EzsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -357,7 +357,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignsignergroup
-    ApiResponse<EzsignsignergroupEditObjectV1Response> response = apiInstance.EzsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -379,7 +379,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignsignergroupEditObjectV1Response**](EzsignsignergroupEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="ezsigntemplatepackagemembershipdeleteobjectv1"></a>
 # **EzsigntemplatepackagemembershipDeleteObjectV1**
-> EzsigntemplatepackagemembershipDeleteObjectV1Response EzsigntemplatepackagemembershipDeleteObjectV1 (int pkiEzsigntemplatepackagemembershipID)
+> CommonResponse EzsigntemplatepackagemembershipDeleteObjectV1 (int pkiEzsigntemplatepackagemembershipID)
 
 Delete an existing Ezsigntemplatepackagemembership
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Ezsigntemplatepackagemembership
-                EzsigntemplatepackagemembershipDeleteObjectV1Response result = apiInstance.EzsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
+                CommonResponse result = apiInstance.EzsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Ezsigntemplatepackagemembership
-    ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> response = apiInstance.EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
+    ApiResponse<CommonResponse> response = apiInstance.EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsigntemplatepackagemembershipDeleteObjectV1Response**](EzsigntemplatepackagemembershipDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

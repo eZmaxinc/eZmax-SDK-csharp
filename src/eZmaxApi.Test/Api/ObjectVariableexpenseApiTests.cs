@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiVariableexpenseID = null;
             //VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = null;
             //var response = instance.VariableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
-            //Assert.IsType<VariableexpenseEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

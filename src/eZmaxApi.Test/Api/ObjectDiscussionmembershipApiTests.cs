@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiDiscussionmembershipID = null;
             //var response = instance.DiscussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
-            //Assert.IsType<DiscussionmembershipDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

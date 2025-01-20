@@ -207,7 +207,7 @@ void (empty response body)
 
 <a id="ezdoctemplatedocumenteditobjectv1"></a>
 # **EzdoctemplatedocumentEditObjectV1**
-> EzdoctemplatedocumentEditObjectV1Response EzdoctemplatedocumentEditObjectV1 (int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request)
+> CommonResponse EzdoctemplatedocumentEditObjectV1 (int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request)
 
 Edit an existing Ezdoctemplatedocument
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezdoctemplatedocument
-                EzdoctemplatedocumentEditObjectV1Response result = apiInstance.EzdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
+                CommonResponse result = apiInstance.EzdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -260,7 +260,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezdoctemplatedocument
-    ApiResponse<EzdoctemplatedocumentEditObjectV1Response> response = apiInstance.EzdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzdoctemplatedocumentEditObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzdoctemplatedocumentEditObjectV1Response**](EzdoctemplatedocumentEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -609,7 +609,7 @@ catch (ApiException e)
 
 <a id="ezdoctemplatedocumentpatchobjectv1"></a>
 # **EzdoctemplatedocumentPatchObjectV1**
-> EzdoctemplatedocumentPatchObjectV1Response EzdoctemplatedocumentPatchObjectV1 (int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request)
+> CommonResponse EzdoctemplatedocumentPatchObjectV1 (int pkiEzdoctemplatedocumentID, EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezdoctemplatedocument
 
@@ -641,7 +641,7 @@ namespace Example
             try
             {
                 // Patch an existing Ezdoctemplatedocument
-                EzdoctemplatedocumentPatchObjectV1Response result = apiInstance.EzdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
+                CommonResponse result = apiInstance.EzdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -662,7 +662,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Patch an existing Ezdoctemplatedocument
-    ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> response = apiInstance.EzdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzdoctemplatedocumentPatchObjectV1WithHttpInfo(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -684,7 +684,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzdoctemplatedocumentPatchObjectV1Response**](EzdoctemplatedocumentPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

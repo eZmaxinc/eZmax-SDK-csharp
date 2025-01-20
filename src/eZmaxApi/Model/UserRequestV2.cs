@@ -67,10 +67,10 @@ namespace eZmaxApi.Model
         /// <param name="fkiDepartmentIDDefault">The unique ID of the Department (required).</param>
         /// <param name="fkiTimezoneID">The unique ID of the Timezone (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
-        /// <param name="objEmail">objEmail (required).</param>
+        /// <param name="objEmail">An Email Object and children to create a complete structure (required).</param>
         /// <param name="fkiBillingentityinternalID">The unique ID of the Billingentityinternal. (required).</param>
-        /// <param name="objPhoneHome">objPhoneHome.</param>
-        /// <param name="objPhoneSMS">objPhoneSMS.</param>
+        /// <param name="objPhoneHome">A Phone Object and children to create a complete structure.</param>
+        /// <param name="objPhoneSMS">A Phone Object and children to create a complete structure.</param>
         /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|.</param>
         /// <param name="sUserSecretresponse">The answer to the Secretquestion.</param>
         /// <param name="fkiModuleIDForm">The unique ID of the Module.</param>
@@ -86,7 +86,7 @@ namespace eZmaxApi.Model
         /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password.</param>
-        public UserRequestV2(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequestCompound objEmail = default(EmailRequestCompound), int fkiBillingentityinternalID = default(int), PhoneRequestCompoundV2 objPhoneHome = default(PhoneRequestCompoundV2), PhoneRequestCompoundV2 objPhoneSMS = default(PhoneRequestCompoundV2), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
+        public UserRequestV2(int pkiUserID = default(int), int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiAssistantID = default(int), int fkiEmployeeID = default(int), int fkiCompanyIDDefault = default(int), int fkiDepartmentIDDefault = default(int), int fkiTimezoneID = default(int), int fkiLanguageID = default(int), EmailRequest objEmail = default(EmailRequest), int fkiBillingentityinternalID = default(int), PhoneRequestV2 objPhoneHome = default(PhoneRequestV2), PhoneRequestV2 objPhoneSMS = default(PhoneRequestV2), int fkiSecretquestionID = default(int), string sUserSecretresponse = default(string), int fkiModuleIDForm = default(int), FieldEUserType eUserType = default(FieldEUserType), FieldEUserLogintype eUserLogintype = default(FieldEUserLogintype), string sUserFirstname = default(string), string sUserLastname = default(string), string sUserLoginname = default(string), string sUserJobtitle = default(string), FieldEUserEzsignaccess eUserEzsignaccess = default(FieldEUserEzsignaccess), bool bUserIsactive = default(bool), bool bUserValidatebyadministration = default(bool), bool bUserValidatebydirector = default(bool), bool bUserAttachmentautoverified = default(bool), bool bUserChangepassword = default(bool))
         {
             this.FkiCompanyIDDefault = fkiCompanyIDDefault;
             this.FkiDepartmentIDDefault = fkiDepartmentIDDefault;
@@ -211,10 +211,11 @@ namespace eZmaxApi.Model
         public int FkiLanguageID { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjEmail
+        /// An Email Object and children to create a complete structure
         /// </summary>
+        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", IsRequired = true, EmitDefaultValue = true)]
-        public EmailRequestCompound ObjEmail { get; set; }
+        public EmailRequest ObjEmail { get; set; }
 
         /// <summary>
         /// The unique ID of the Billingentityinternal.
@@ -225,16 +226,18 @@ namespace eZmaxApi.Model
         public int FkiBillingentityinternalID { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjPhoneHome
+        /// A Phone Object and children to create a complete structure
         /// </summary>
+        /// <value>A Phone Object and children to create a complete structure</value>
         [DataMember(Name = "objPhoneHome", EmitDefaultValue = false)]
-        public PhoneRequestCompoundV2 ObjPhoneHome { get; set; }
+        public PhoneRequestV2 ObjPhoneHome { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjPhoneSMS
+        /// A Phone Object and children to create a complete structure
         /// </summary>
+        /// <value>A Phone Object and children to create a complete structure</value>
         [DataMember(Name = "objPhoneSMS", EmitDefaultValue = false)]
-        public PhoneRequestCompoundV2 ObjPhoneSMS { get; set; }
+        public PhoneRequestV2 ObjPhoneSMS { get; set; }
 
         /// <summary>
         /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|

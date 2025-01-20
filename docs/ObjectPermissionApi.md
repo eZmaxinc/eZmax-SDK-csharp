@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="permissiondeleteobjectv1"></a>
 # **PermissionDeleteObjectV1**
-> PermissionDeleteObjectV1Response PermissionDeleteObjectV1 (int pkiPermissionID)
+> CommonResponse PermissionDeleteObjectV1 (int pkiPermissionID)
 
 Delete an existing Permission
 
@@ -139,7 +139,7 @@ namespace Example
             try
             {
                 // Delete an existing Permission
-                PermissionDeleteObjectV1Response result = apiInstance.PermissionDeleteObjectV1(pkiPermissionID);
+                CommonResponse result = apiInstance.PermissionDeleteObjectV1(pkiPermissionID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -160,7 +160,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Permission
-    ApiResponse<PermissionDeleteObjectV1Response> response = apiInstance.PermissionDeleteObjectV1WithHttpInfo(pkiPermissionID);
+    ApiResponse<CommonResponse> response = apiInstance.PermissionDeleteObjectV1WithHttpInfo(pkiPermissionID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -181,7 +181,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PermissionDeleteObjectV1Response**](PermissionDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ catch (ApiException e)
 
 <a id="permissioneditobjectv1"></a>
 # **PermissionEditObjectV1**
-> PermissionEditObjectV1Response PermissionEditObjectV1 (int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request)
+> CommonResponse PermissionEditObjectV1 (int pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request)
 
 Edit an existing Permission
 
@@ -235,7 +235,7 @@ namespace Example
             try
             {
                 // Edit an existing Permission
-                PermissionEditObjectV1Response result = apiInstance.PermissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
+                CommonResponse result = apiInstance.PermissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -256,7 +256,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Permission
-    ApiResponse<PermissionEditObjectV1Response> response = apiInstance.PermissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.PermissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -278,7 +278,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**PermissionEditObjectV1Response**](PermissionEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objUser">objUser (required).</param>
-        public WebhookUserUserCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserResponseCompound objUser = default(UserResponseCompound))
+        /// <param name="objUser">A User Object and children to create a complete structure (required).</param>
+        public WebhookUserUserCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserResponse objUser = default(UserResponse))
         {
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
@@ -79,10 +79,11 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjUser
+        /// A User Object and children to create a complete structure
         /// </summary>
+        /// <value>A User Object and children to create a complete structure</value>
         [DataMember(Name = "objUser", IsRequired = true, EmitDefaultValue = true)]
-        public UserResponseCompound ObjUser { get; set; }
+        public UserResponse ObjUser { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

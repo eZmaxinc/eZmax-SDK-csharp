@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiUsergroupdelegationID = null;
             //var response = instance.UsergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
-            //Assert.IsType<UsergroupdelegationDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUsergroupdelegationID = null;
             //UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request = null;
             //var response = instance.UsergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
-            //Assert.IsType<UsergroupdelegationEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

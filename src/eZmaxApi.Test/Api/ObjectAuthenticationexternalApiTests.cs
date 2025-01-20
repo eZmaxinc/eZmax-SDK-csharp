@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiAuthenticationexternalID = null;
             //var response = instance.AuthenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
-            //Assert.IsType<AuthenticationexternalDeleteObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiAuthenticationexternalID = null;
             //AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request = null;
             //var response = instance.AuthenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
-            //Assert.IsType<AuthenticationexternalEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace eZmaxApi.Test.Api
             //int pkiAuthenticationexternalID = null;
             //Object body = null;
             //var response = instance.AuthenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
-            //Assert.IsType<AuthenticationexternalResetAuthorizationV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

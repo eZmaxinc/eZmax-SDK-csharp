@@ -106,7 +106,7 @@ catch (ApiException e)
 
 <a id="discussionmessagedeleteobjectv1"></a>
 # **DiscussionmessageDeleteObjectV1**
-> DiscussionmessageDeleteObjectV1Response DiscussionmessageDeleteObjectV1 (int pkiDiscussionmessageID)
+> CommonResponse DiscussionmessageDeleteObjectV1 (int pkiDiscussionmessageID)
 
 Delete an existing Discussionmessage
 
@@ -137,7 +137,7 @@ namespace Example
             try
             {
                 // Delete an existing Discussionmessage
-                DiscussionmessageDeleteObjectV1Response result = apiInstance.DiscussionmessageDeleteObjectV1(pkiDiscussionmessageID);
+                CommonResponse result = apiInstance.DiscussionmessageDeleteObjectV1(pkiDiscussionmessageID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -158,7 +158,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Discussionmessage
-    ApiResponse<DiscussionmessageDeleteObjectV1Response> response = apiInstance.DiscussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID);
+    ApiResponse<CommonResponse> response = apiInstance.DiscussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -179,7 +179,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DiscussionmessageDeleteObjectV1Response**](DiscussionmessageDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="discussionmessagepatchobjectv1"></a>
 # **DiscussionmessagePatchObjectV1**
-> DiscussionmessagePatchObjectV1Response DiscussionmessagePatchObjectV1 (int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request)
+> CommonResponse DiscussionmessagePatchObjectV1 (int pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request)
 
 Patch an existing Discussionmessage
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Patch an existing Discussionmessage
-                DiscussionmessagePatchObjectV1Response result = apiInstance.DiscussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
+                CommonResponse result = apiInstance.DiscussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Patch an existing Discussionmessage
-    ApiResponse<DiscussionmessagePatchObjectV1Response> response = apiInstance.DiscussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.DiscussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**DiscussionmessagePatchObjectV1Response**](DiscussionmessagePatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

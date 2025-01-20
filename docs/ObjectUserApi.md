@@ -315,7 +315,7 @@ catch (ApiException e)
 
 <a id="usereditobjectv1"></a>
 # **UserEditObjectV1**
-> UserEditObjectV1Response UserEditObjectV1 (int pkiUserID, UserEditObjectV1Request userEditObjectV1Request)
+> CommonResponse UserEditObjectV1 (int pkiUserID, UserEditObjectV1Request userEditObjectV1Request)
 
 Edit an existing User
 
@@ -347,7 +347,7 @@ namespace Example
             try
             {
                 // Edit an existing User
-                UserEditObjectV1Response result = apiInstance.UserEditObjectV1(pkiUserID, userEditObjectV1Request);
+                CommonResponse result = apiInstance.UserEditObjectV1(pkiUserID, userEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -368,7 +368,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing User
-    ApiResponse<UserEditObjectV1Response> response = apiInstance.UserEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.UserEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -390,7 +390,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**UserEditObjectV1Response**](UserEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1482,7 +1482,7 @@ catch (ApiException e)
 
 <a id="usersendpasswordresetv1"></a>
 # **UserSendPasswordResetV1**
-> UserSendPasswordResetV1Response UserSendPasswordResetV1 (int pkiUserID, Object body)
+> CommonResponse UserSendPasswordResetV1 (int pkiUserID, Object body)
 
 Send password reset
 
@@ -1516,7 +1516,7 @@ namespace Example
             try
             {
                 // Send password reset
-                UserSendPasswordResetV1Response result = apiInstance.UserSendPasswordResetV1(pkiUserID, body);
+                CommonResponse result = apiInstance.UserSendPasswordResetV1(pkiUserID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1537,7 +1537,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Send password reset
-    ApiResponse<UserSendPasswordResetV1Response> response = apiInstance.UserSendPasswordResetV1WithHttpInfo(pkiUserID, body);
+    ApiResponse<CommonResponse> response = apiInstance.UserSendPasswordResetV1WithHttpInfo(pkiUserID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -1559,7 +1559,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**UserSendPasswordResetV1Response**](UserSendPasswordResetV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

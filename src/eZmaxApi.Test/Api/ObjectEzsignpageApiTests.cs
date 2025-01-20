@@ -65,7 +65,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignpageID = null;
             //Object body = null;
             //var response = instance.EzsignpageConsultV1(pkiEzsignpageID, body);
-            //Assert.IsType<EzsignpageConsultV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
     }
 }

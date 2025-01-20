@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsignfolderEditObjectV3Request" /> class.
         /// </summary>
-        /// <param name="objEzsignfolder">objEzsignfolder (required).</param>
-        public EzsignfolderEditObjectV3Request(EzsignfolderRequestCompoundV3 objEzsignfolder = default(EzsignfolderRequestCompoundV3))
+        /// <param name="objEzsignfolder">An Ezsignfolder Object and children to create a complete structure (required).</param>
+        public EzsignfolderEditObjectV3Request(EzsignfolderRequestV3 objEzsignfolder = default(EzsignfolderRequestV3))
         {
             // to ensure "objEzsignfolder" is required (not null)
             if (objEzsignfolder == null)
@@ -52,10 +52,11 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets ObjEzsignfolder
+        /// An Ezsignfolder Object and children to create a complete structure
         /// </summary>
+        /// <value>An Ezsignfolder Object and children to create a complete structure</value>
         [DataMember(Name = "objEzsignfolder", IsRequired = true, EmitDefaultValue = true)]
-        public EzsignfolderRequestCompoundV3 ObjEzsignfolder { get; set; }
+        public EzsignfolderRequestV3 ObjEzsignfolder { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

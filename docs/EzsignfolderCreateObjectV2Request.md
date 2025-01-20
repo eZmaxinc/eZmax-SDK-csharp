@@ -5,7 +5,7 @@ Request for POST /2/object/ezsignfolder
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignfolder** | [**List&lt;EzsignfolderRequestCompound&gt;**](EzsignfolderRequestCompound.md) |  | 
+**AObjEzsignfolder** | [**List&lt;EzsignfolderRequestCompound&gt;**](EzsignfolderRequest.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

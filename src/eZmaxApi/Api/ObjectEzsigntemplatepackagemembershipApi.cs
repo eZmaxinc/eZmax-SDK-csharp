@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        EzsigntemplatepackagemembershipDeleteObjectV1Response EzsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse EzsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsigntemplatepackagemembership
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepackagemembership
         /// </summary>
@@ -134,8 +134,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<EzsigntemplatepackagemembershipDeleteObjectV1Response> EzsigntemplatepackagemembershipDeleteObjectV1Async(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> EzsigntemplatepackagemembershipDeleteObjectV1Async(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsigntemplatepackagemembership
@@ -147,8 +147,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatepackagemembershipDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response>> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigntemplatepackagemembership
         /// </summary>
@@ -456,10 +456,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        public EzsigntemplatepackagemembershipDeleteObjectV1Response EzsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse EzsigntemplatepackagemembershipDeleteObjectV1(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> localVarResponse = EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
             return localVarResponse.Data;
         }
 
@@ -469,8 +469,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -506,7 +506,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<EzsigntemplatepackagemembershipDeleteObjectV1Response>("/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatepackagemembershipDeleteObjectV1", localVarResponse);
@@ -526,10 +526,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of EzsigntemplatepackagemembershipDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<EzsigntemplatepackagemembershipDeleteObjectV1Response> EzsigntemplatepackagemembershipDeleteObjectV1Async(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> EzsigntemplatepackagemembershipDeleteObjectV1Async(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> localVarResponse = await EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatepackagemembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatepackagemembershipID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -540,8 +540,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigntemplatepackagemembershipID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (EzsigntemplatepackagemembershipDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response>> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigntemplatepackagemembershipDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepackagemembershipID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -578,7 +578,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsigntemplatepackagemembershipDeleteObjectV1Response>("/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

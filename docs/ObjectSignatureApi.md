@@ -110,7 +110,7 @@ catch (ApiException e)
 
 <a id="signaturedeleteobjectv1"></a>
 # **SignatureDeleteObjectV1**
-> SignatureDeleteObjectV1Response SignatureDeleteObjectV1 (int pkiSignatureID)
+> CommonResponse SignatureDeleteObjectV1 (int pkiSignatureID)
 
 Delete an existing Signature
 
@@ -141,7 +141,7 @@ namespace Example
             try
             {
                 // Delete an existing Signature
-                SignatureDeleteObjectV1Response result = apiInstance.SignatureDeleteObjectV1(pkiSignatureID);
+                CommonResponse result = apiInstance.SignatureDeleteObjectV1(pkiSignatureID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Signature
-    ApiResponse<SignatureDeleteObjectV1Response> response = apiInstance.SignatureDeleteObjectV1WithHttpInfo(pkiSignatureID);
+    ApiResponse<CommonResponse> response = apiInstance.SignatureDeleteObjectV1WithHttpInfo(pkiSignatureID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SignatureDeleteObjectV1Response**](SignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 <a id="signatureeditobjectv1"></a>
 # **SignatureEditObjectV1**
-> SignatureEditObjectV1Response SignatureEditObjectV1 (int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request)
+> CommonResponse SignatureEditObjectV1 (int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request)
 
 Edit an existing Signature
 
@@ -237,7 +237,7 @@ namespace Example
             try
             {
                 // Edit an existing Signature
-                SignatureEditObjectV1Response result = apiInstance.SignatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
+                CommonResponse result = apiInstance.SignatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Signature
-    ApiResponse<SignatureEditObjectV1Response> response = apiInstance.SignatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.SignatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -280,7 +280,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**SignatureEditObjectV1Response**](SignatureEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

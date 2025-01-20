@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplatepublicID = null;
             //EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request = null;
             //var response = instance.EzsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
-            //Assert.IsType<EzsigntemplatepublicEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

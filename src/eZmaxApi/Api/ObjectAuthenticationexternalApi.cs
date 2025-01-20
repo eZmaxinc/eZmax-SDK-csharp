@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalDeleteObjectV1Response</returns>
-        AuthenticationexternalDeleteObjectV1Response AuthenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse AuthenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Authenticationexternal
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalDeleteObjectV1Response</returns>
-        ApiResponse<AuthenticationexternalDeleteObjectV1Response> AuthenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> AuthenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Authenticationexternal
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalEditObjectV1Response</returns>
-        AuthenticationexternalEditObjectV1Response AuthenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse AuthenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Authenticationexternal
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalEditObjectV1Response</returns>
-        ApiResponse<AuthenticationexternalEditObjectV1Response> AuthenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> AuthenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Authenticationexternals and IDs
         /// </summary>
@@ -179,8 +179,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalResetAuthorizationV1Response</returns>
-        AuthenticationexternalResetAuthorizationV1Response AuthenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body, int operationIndex = 0);
+        /// <returns>CommonResponse</returns>
+        CommonResponse AuthenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Reset the Authenticationexternal authorization
@@ -192,8 +192,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalResetAuthorizationV1Response</returns>
-        ApiResponse<AuthenticationexternalResetAuthorizationV1Response> AuthenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of CommonResponse</returns>
+        ApiResponse<CommonResponse> AuthenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -238,8 +238,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<AuthenticationexternalDeleteObjectV1Response> AuthenticationexternalDeleteObjectV1Async(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalDeleteObjectV1Async(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Authenticationexternal
@@ -251,8 +251,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationexternalDeleteObjectV1Response>> AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Authenticationexternal
         /// </summary>
@@ -264,8 +264,8 @@ namespace eZmaxApi.Api
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<AuthenticationexternalEditObjectV1Response> AuthenticationexternalEditObjectV1Async(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalEditObjectV1Async(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Authenticationexternal
@@ -278,8 +278,8 @@ namespace eZmaxApi.Api
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationexternalEditObjectV1Response>> AuthenticationexternalEditObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> AuthenticationexternalEditObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Authenticationexternals and IDs
         /// </summary>
@@ -380,8 +380,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalResetAuthorizationV1Response</returns>
-        System.Threading.Tasks.Task<AuthenticationexternalResetAuthorizationV1Response> AuthenticationexternalResetAuthorizationV1Async(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CommonResponse</returns>
+        System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalResetAuthorizationV1Async(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Reset the Authenticationexternal authorization
@@ -394,8 +394,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalResetAuthorizationV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AuthenticationexternalResetAuthorizationV1Response>> AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -678,10 +678,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalDeleteObjectV1Response</returns>
-        public AuthenticationexternalDeleteObjectV1Response AuthenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse AuthenticationexternalDeleteObjectV1(int pkiAuthenticationexternalID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalDeleteObjectV1Response> localVarResponse = AuthenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = AuthenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
             return localVarResponse.Data;
         }
 
@@ -691,8 +691,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AuthenticationexternalDeleteObjectV1Response> AuthenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> AuthenticationexternalDeleteObjectV1WithHttpInfo(int pkiAuthenticationexternalID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -728,7 +728,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<AuthenticationexternalDeleteObjectV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AuthenticationexternalDeleteObjectV1", localVarResponse);
@@ -748,10 +748,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<AuthenticationexternalDeleteObjectV1Response> AuthenticationexternalDeleteObjectV1Async(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalDeleteObjectV1Async(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalDeleteObjectV1Response> localVarResponse = await AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(pkiAuthenticationexternalID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(pkiAuthenticationexternalID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -762,8 +762,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AuthenticationexternalDeleteObjectV1Response>> AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> AuthenticationexternalDeleteObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -800,7 +800,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<AuthenticationexternalDeleteObjectV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -821,10 +821,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalEditObjectV1Response</returns>
-        public AuthenticationexternalEditObjectV1Response AuthenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse AuthenticationexternalEditObjectV1(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalEditObjectV1Response> localVarResponse = AuthenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = AuthenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -835,8 +835,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID">The unique ID of the Authenticationexternal</param>
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AuthenticationexternalEditObjectV1Response> AuthenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> AuthenticationexternalEditObjectV1WithHttpInfo(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'authenticationexternalEditObjectV1Request' is set
             if (authenticationexternalEditObjectV1Request == null)
@@ -880,7 +880,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<AuthenticationexternalEditObjectV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AuthenticationexternalEditObjectV1", localVarResponse);
@@ -901,10 +901,10 @@ namespace eZmaxApi.Api
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<AuthenticationexternalEditObjectV1Response> AuthenticationexternalEditObjectV1Async(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalEditObjectV1Async(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalEditObjectV1Response> localVarResponse = await AuthenticationexternalEditObjectV1WithHttpInfoAsync(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await AuthenticationexternalEditObjectV1WithHttpInfoAsync(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -916,8 +916,8 @@ namespace eZmaxApi.Api
         /// <param name="authenticationexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AuthenticationexternalEditObjectV1Response>> AuthenticationexternalEditObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> AuthenticationexternalEditObjectV1WithHttpInfoAsync(int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'authenticationexternalEditObjectV1Request' is set
             if (authenticationexternalEditObjectV1Request == null)
@@ -962,7 +962,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<AuthenticationexternalEditObjectV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1513,10 +1513,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AuthenticationexternalResetAuthorizationV1Response</returns>
-        public AuthenticationexternalResetAuthorizationV1Response AuthenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body, int operationIndex = 0)
+        /// <returns>CommonResponse</returns>
+        public CommonResponse AuthenticationexternalResetAuthorizationV1(int pkiAuthenticationexternalID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalResetAuthorizationV1Response> localVarResponse = AuthenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = AuthenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
             return localVarResponse.Data;
         }
 
@@ -1527,8 +1527,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiAuthenticationexternalID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AuthenticationexternalResetAuthorizationV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AuthenticationexternalResetAuthorizationV1Response> AuthenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of CommonResponse</returns>
+        public eZmaxApi.Client.ApiResponse<CommonResponse> AuthenticationexternalResetAuthorizationV1WithHttpInfo(int pkiAuthenticationexternalID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1572,7 +1572,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<AuthenticationexternalResetAuthorizationV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AuthenticationexternalResetAuthorizationV1", localVarResponse);
@@ -1593,10 +1593,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AuthenticationexternalResetAuthorizationV1Response</returns>
-        public async System.Threading.Tasks.Task<AuthenticationexternalResetAuthorizationV1Response> AuthenticationexternalResetAuthorizationV1Async(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CommonResponse</returns>
+        public async System.Threading.Tasks.Task<CommonResponse> AuthenticationexternalResetAuthorizationV1Async(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<AuthenticationexternalResetAuthorizationV1Response> localVarResponse = await AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(pkiAuthenticationexternalID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(pkiAuthenticationexternalID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1608,8 +1608,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AuthenticationexternalResetAuthorizationV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AuthenticationexternalResetAuthorizationV1Response>> AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> AuthenticationexternalResetAuthorizationV1WithHttpInfoAsync(int pkiAuthenticationexternalID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1654,7 +1654,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthenticationexternalResetAuthorizationV1Response>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/authenticationexternal/{pkiAuthenticationexternalID}/resetAuthorization", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

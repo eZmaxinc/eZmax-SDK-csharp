@@ -65,7 +65,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignuserID = null;
             //EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request = null;
             //var response = instance.EzsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
-            //Assert.IsType<EzsignuserEditObjectV1Response>(response);
+            //Assert.IsType<CommonResponse>(response);
         }
 
         /// <summary>

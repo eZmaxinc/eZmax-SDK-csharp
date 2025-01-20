@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignusereditobjectv1"></a>
 # **EzsignuserEditObjectV1**
-> EzsignuserEditObjectV1Response EzsignuserEditObjectV1 (int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request)
+> CommonResponse EzsignuserEditObjectV1 (int pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request)
 
 Edit an existing Ezsignuser
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Edit an existing Ezsignuser
-                EzsignuserEditObjectV1Response result = apiInstance.EzsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+                CommonResponse result = apiInstance.EzsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Ezsignuser
-    ApiResponse<EzsignuserEditObjectV1Response> response = apiInstance.EzsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+    ApiResponse<CommonResponse> response = apiInstance.EzsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -84,7 +84,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**EzsignuserEditObjectV1Response**](EzsignuserEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
