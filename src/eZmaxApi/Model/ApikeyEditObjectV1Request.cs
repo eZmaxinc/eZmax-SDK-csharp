@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApikeyEditObjectV1Request" /> class.
         /// </summary>
-        /// <param name="objApikey">An Apikey Object and children to create a complete structure (required).</param>
-        public ApikeyEditObjectV1Request(ApikeyRequest objApikey = default(ApikeyRequest))
+        /// <param name="objApikey">objApikey (required).</param>
+        public ApikeyEditObjectV1Request(ApikeyRequestCompound objApikey = default(ApikeyRequestCompound))
         {
             // to ensure "objApikey" is required (not null)
             if (objApikey == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// An Apikey Object and children to create a complete structure
+        /// Gets or Sets ObjApikey
         /// </summary>
-        /// <value>An Apikey Object and children to create a complete structure</value>
         [DataMember(Name = "objApikey", IsRequired = true, EmitDefaultValue = true)]
-        public ApikeyRequest ObjApikey { get; set; }
+        public ApikeyRequestCompound ObjApikey { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

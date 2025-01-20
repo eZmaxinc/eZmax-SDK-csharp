@@ -65,7 +65,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request = null;
             //var response = instance.EzsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentApplyEzsigntemplateV1Response>(response);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request = null;
             //var response = instance.EzsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentDeclineToSignV1Response>(response);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigndocumentID = null;
             //var response = instance.EzsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //Object body = null;
             //var response = instance.EzsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentEndPrematurelyV1Response>(response);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //Object body = null;
             //var response = instance.EzsigndocumentFlattenV1(pkiEzsigndocumentID, body);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentFlattenV1Response>(response);
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
             //var response = instance.EzsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentPatchObjectV1Response>(response);
         }
 
         /// <summary>
@@ -464,7 +464,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request = null;
             //var response = instance.EzsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentSubmitEzsignformV1Response>(response);
         }
 
         /// <summary>
@@ -477,7 +477,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigndocumentID = null;
             //Object body = null;
             //var response = instance.EzsigndocumentUnsendV1(pkiEzsigndocumentID, body);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigndocumentUnsendV1Response>(response);
         }
     }
 }

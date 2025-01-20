@@ -91,10 +91,10 @@ namespace eZmaxApi.Model
         /// <param name="fkiPhonelinesharedID">The unique ID of the Phonelineshared.</param>
         /// <param name="eCommunicationsenderObjecttype">eCommunicationsenderObjecttype (required).</param>
         /// <param name="objContactName">objContactName (required).</param>
-        /// <param name="objEmail">An Email Object and children to create a complete structure.</param>
+        /// <param name="objEmail">objEmail.</param>
         /// <param name="objPhoneFax">objPhoneFax.</param>
         /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponse objEmail = default(EmailResponse), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
+        public CustomCommunicationsenderResponse(int fkiAgentID = default(int), int fkiBrokerID = default(int), int fkiUserID = default(int), int fkiMailboxsharedID = default(int), int fkiPhonelinesharedID = default(int), ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype = default(ECommunicationsenderObjecttypeEnum), CustomContactNameResponse objContactName = default(CustomContactNameResponse), EmailResponseCompound objEmail = default(EmailResponseCompound), PhoneResponseCompound objPhoneFax = default(PhoneResponseCompound), PhoneResponseCompound objPhoneSMS = default(PhoneResponseCompound))
         {
             this.ECommunicationsenderObjecttype = eCommunicationsenderObjecttype;
             // to ensure "objContactName" is required (not null)
@@ -160,11 +160,10 @@ namespace eZmaxApi.Model
         public CustomContactNameResponse ObjContactName { get; set; }
 
         /// <summary>
-        /// An Email Object and children to create a complete structure
+        /// Gets or Sets ObjEmail
         /// </summary>
-        /// <value>An Email Object and children to create a complete structure</value>
         [DataMember(Name = "objEmail", EmitDefaultValue = false)]
-        public EmailResponse ObjEmail { get; set; }
+        public EmailResponseCompound ObjEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjPhoneFax

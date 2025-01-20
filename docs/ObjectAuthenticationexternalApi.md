@@ -110,7 +110,7 @@ catch (ApiException e)
 
 <a id="authenticationexternaldeleteobjectv1"></a>
 # **AuthenticationexternalDeleteObjectV1**
-> CommonResponse AuthenticationexternalDeleteObjectV1 (int pkiAuthenticationexternalID)
+> AuthenticationexternalDeleteObjectV1Response AuthenticationexternalDeleteObjectV1 (int pkiAuthenticationexternalID)
 
 Delete an existing Authenticationexternal
 
@@ -141,7 +141,7 @@ namespace Example
             try
             {
                 // Delete an existing Authenticationexternal
-                CommonResponse result = apiInstance.AuthenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
+                AuthenticationexternalDeleteObjectV1Response result = apiInstance.AuthenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Authenticationexternal
-    ApiResponse<CommonResponse> response = apiInstance.AuthenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
+    ApiResponse<AuthenticationexternalDeleteObjectV1Response> response = apiInstance.AuthenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalDeleteObjectV1Response**](AuthenticationexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ catch (ApiException e)
 
 <a id="authenticationexternaleditobjectv1"></a>
 # **AuthenticationexternalEditObjectV1**
-> CommonResponse AuthenticationexternalEditObjectV1 (int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request)
+> AuthenticationexternalEditObjectV1Response AuthenticationexternalEditObjectV1 (int pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request)
 
 Edit an existing Authenticationexternal
 
@@ -237,7 +237,7 @@ namespace Example
             try
             {
                 // Edit an existing Authenticationexternal
-                CommonResponse result = apiInstance.AuthenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+                AuthenticationexternalEditObjectV1Response result = apiInstance.AuthenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -258,7 +258,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Authenticationexternal
-    ApiResponse<CommonResponse> response = apiInstance.AuthenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+    ApiResponse<AuthenticationexternalEditObjectV1Response> response = apiInstance.AuthenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -280,7 +280,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalEditObjectV1Response**](AuthenticationexternalEditObjectV1Response.md)
 
 ### Authorization
 
@@ -605,7 +605,7 @@ catch (ApiException e)
 
 <a id="authenticationexternalresetauthorizationv1"></a>
 # **AuthenticationexternalResetAuthorizationV1**
-> CommonResponse AuthenticationexternalResetAuthorizationV1 (int pkiAuthenticationexternalID, Object body)
+> AuthenticationexternalResetAuthorizationV1Response AuthenticationexternalResetAuthorizationV1 (int pkiAuthenticationexternalID, Object body)
 
 Reset the Authenticationexternal authorization
 
@@ -637,7 +637,7 @@ namespace Example
             try
             {
                 // Reset the Authenticationexternal authorization
-                CommonResponse result = apiInstance.AuthenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
+                AuthenticationexternalResetAuthorizationV1Response result = apiInstance.AuthenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -658,7 +658,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Reset the Authenticationexternal authorization
-    ApiResponse<CommonResponse> response = apiInstance.AuthenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
+    ApiResponse<AuthenticationexternalResetAuthorizationV1Response> response = apiInstance.AuthenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -680,7 +680,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalResetAuthorizationV1Response**](AuthenticationexternalResetAuthorizationV1Response.md)
 
 ### Authorization
 

@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsignbulksendID = null;
             //var response = instance.EzsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsignbulksendDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignbulksendID = null;
             //EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request = null;
             //var response = instance.EzsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsignbulksendEditObjectV1Response>(response);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignbulksendID = null;
             //EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request = null;
             //var response = instance.EzsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsignbulksendReorderV1Response>(response);
         }
     }
 }

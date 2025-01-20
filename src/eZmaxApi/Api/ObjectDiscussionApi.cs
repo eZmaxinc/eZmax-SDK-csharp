@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse DiscussionDeleteObjectV1(int pkiDiscussionID, int operationIndex = 0);
+        /// <returns>DiscussionDeleteObjectV1Response</returns>
+        DiscussionDeleteObjectV1Response DiscussionDeleteObjectV1(int pkiDiscussionID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Discussion
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> DiscussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID, int operationIndex = 0);
+        /// <returns>ApiResponse of DiscussionDeleteObjectV1Response</returns>
+        ApiResponse<DiscussionDeleteObjectV1Response> DiscussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Discussion
         /// </summary>
@@ -97,8 +97,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse DiscussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>DiscussionPatchObjectV1Response</returns>
+        DiscussionPatchObjectV1Response DiscussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Patch an existing Discussion
@@ -110,8 +110,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> DiscussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of DiscussionPatchObjectV1Response</returns>
+        ApiResponse<DiscussionPatchObjectV1Response> DiscussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Update the read status of the discussion
         /// </summary>
@@ -119,8 +119,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID"></param>
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse DiscussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0);
+        /// <returns>DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        DiscussionUpdateDiscussionreadstatusV1Response DiscussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Update the read status of the discussion
@@ -132,8 +132,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID"></param>
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response> DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -178,8 +178,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> DiscussionDeleteObjectV1Async(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of DiscussionDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<DiscussionDeleteObjectV1Response> DiscussionDeleteObjectV1Async(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Discussion
@@ -191,8 +191,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DiscussionDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DiscussionDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscussionDeleteObjectV1Response>> DiscussionDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Discussion
         /// </summary>
@@ -229,8 +229,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> DiscussionPatchObjectV1Async(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of DiscussionPatchObjectV1Response</returns>
+        System.Threading.Tasks.Task<DiscussionPatchObjectV1Response> DiscussionPatchObjectV1Async(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Patch an existing Discussion
@@ -243,8 +243,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DiscussionPatchObjectV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DiscussionPatchObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscussionPatchObjectV1Response>> DiscussionPatchObjectV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update the read status of the discussion
         /// </summary>
@@ -256,8 +256,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> DiscussionUpdateDiscussionreadstatusV1Async(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        System.Threading.Tasks.Task<DiscussionUpdateDiscussionreadstatusV1Response> DiscussionUpdateDiscussionreadstatusV1Async(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update the read status of the discussion
@@ -270,8 +270,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DiscussionUpdateDiscussionreadstatusV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response>> DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -554,10 +554,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse DiscussionDeleteObjectV1(int pkiDiscussionID, int operationIndex = 0)
+        /// <returns>DiscussionDeleteObjectV1Response</returns>
+        public DiscussionDeleteObjectV1Response DiscussionDeleteObjectV1(int pkiDiscussionID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DiscussionDeleteObjectV1WithHttpInfo(pkiDiscussionID);
+            eZmaxApi.Client.ApiResponse<DiscussionDeleteObjectV1Response> localVarResponse = DiscussionDeleteObjectV1WithHttpInfo(pkiDiscussionID);
             return localVarResponse.Data;
         }
 
@@ -567,8 +567,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> DiscussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID, int operationIndex = 0)
+        /// <returns>ApiResponse of DiscussionDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DiscussionDeleteObjectV1Response> DiscussionDeleteObjectV1WithHttpInfo(int pkiDiscussionID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -604,7 +604,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<DiscussionDeleteObjectV1Response>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DiscussionDeleteObjectV1", localVarResponse);
@@ -624,10 +624,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> DiscussionDeleteObjectV1Async(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of DiscussionDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<DiscussionDeleteObjectV1Response> DiscussionDeleteObjectV1Async(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DiscussionDeleteObjectV1WithHttpInfoAsync(pkiDiscussionID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DiscussionDeleteObjectV1Response> localVarResponse = await DiscussionDeleteObjectV1WithHttpInfoAsync(pkiDiscussionID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -638,8 +638,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DiscussionDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DiscussionDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DiscussionDeleteObjectV1Response>> DiscussionDeleteObjectV1WithHttpInfoAsync(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -676,7 +676,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DiscussionDeleteObjectV1Response>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -839,10 +839,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse DiscussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>DiscussionPatchObjectV1Response</returns>
+        public DiscussionPatchObjectV1Response DiscussionPatchObjectV1(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DiscussionPatchObjectV1WithHttpInfo(pkiDiscussionID, discussionPatchObjectV1Request);
+            eZmaxApi.Client.ApiResponse<DiscussionPatchObjectV1Response> localVarResponse = DiscussionPatchObjectV1WithHttpInfo(pkiDiscussionID, discussionPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -853,8 +853,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID">The unique ID of the Discussion</param>
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> DiscussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of DiscussionPatchObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DiscussionPatchObjectV1Response> DiscussionPatchObjectV1WithHttpInfo(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'discussionPatchObjectV1Request' is set
             if (discussionPatchObjectV1Request == null)
@@ -898,7 +898,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<CommonResponse>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<DiscussionPatchObjectV1Response>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DiscussionPatchObjectV1", localVarResponse);
@@ -919,10 +919,10 @@ namespace eZmaxApi.Api
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> DiscussionPatchObjectV1Async(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of DiscussionPatchObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<DiscussionPatchObjectV1Response> DiscussionPatchObjectV1Async(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DiscussionPatchObjectV1WithHttpInfoAsync(pkiDiscussionID, discussionPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DiscussionPatchObjectV1Response> localVarResponse = await DiscussionPatchObjectV1WithHttpInfoAsync(pkiDiscussionID, discussionPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -934,8 +934,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DiscussionPatchObjectV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DiscussionPatchObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DiscussionPatchObjectV1Response>> DiscussionPatchObjectV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionPatchObjectV1Request discussionPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discussionPatchObjectV1Request' is set
             if (discussionPatchObjectV1Request == null)
@@ -980,7 +980,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<CommonResponse>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<DiscussionPatchObjectV1Response>("/1/object/discussion/{pkiDiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1001,10 +1001,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID"></param>
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse DiscussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0)
+        /// <returns>DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        public DiscussionUpdateDiscussionreadstatusV1Response DiscussionUpdateDiscussionreadstatusV1(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
+            eZmaxApi.Client.ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response> localVarResponse = DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
             return localVarResponse.Data;
         }
 
@@ -1015,8 +1015,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDiscussionID"></param>
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response> DiscussionUpdateDiscussionreadstatusV1WithHttpInfo(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'discussionUpdateDiscussionreadstatusV1Request' is set
             if (discussionUpdateDiscussionreadstatusV1Request == null)
@@ -1060,7 +1060,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<DiscussionUpdateDiscussionreadstatusV1Response>("/1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DiscussionUpdateDiscussionreadstatusV1", localVarResponse);
@@ -1081,10 +1081,10 @@ namespace eZmaxApi.Api
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> DiscussionUpdateDiscussionreadstatusV1Async(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of DiscussionUpdateDiscussionreadstatusV1Response</returns>
+        public async System.Threading.Tasks.Task<DiscussionUpdateDiscussionreadstatusV1Response> DiscussionUpdateDiscussionreadstatusV1Async(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response> localVarResponse = await DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1096,8 +1096,8 @@ namespace eZmaxApi.Api
         /// <param name="discussionUpdateDiscussionreadstatusV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DiscussionUpdateDiscussionreadstatusV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DiscussionUpdateDiscussionreadstatusV1Response>> DiscussionUpdateDiscussionreadstatusV1WithHttpInfoAsync(int pkiDiscussionID, DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'discussionUpdateDiscussionreadstatusV1Request' is set
             if (discussionUpdateDiscussionreadstatusV1Request == null)
@@ -1142,7 +1142,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DiscussionUpdateDiscussionreadstatusV1Response>("/1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

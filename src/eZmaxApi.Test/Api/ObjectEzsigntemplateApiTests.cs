@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigntemplateID = null;
             //var response = instance.EzsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigntemplateDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplateID = null;
             //EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = null;
             //var response = instance.EzsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigntemplateEditObjectV3Response>(response);
         }
 
         /// <summary>

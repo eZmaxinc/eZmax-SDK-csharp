@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} (required).</param>
-        public EzsignfoldersignerassociationGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfoldersignerassociationResponseCompound mPayload = default(EzsignfoldersignerassociationResponseCompound))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignfoldersignerassociationGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfoldersignerassociationGetObjectV1ResponseMPayload mPayload = default(EzsignfoldersignerassociationGetObjectV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,11 +73,10 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzsignfoldersignerassociationResponseCompound MPayload { get; set; }
+        public EzsignfoldersignerassociationGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

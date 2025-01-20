@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UsergroupexternalDeleteObjectV1(int pkiUsergroupexternalID, int operationIndex = 0);
+        /// <returns>UsergroupexternalDeleteObjectV1Response</returns>
+        UsergroupexternalDeleteObjectV1Response UsergroupexternalDeleteObjectV1(int pkiUsergroupexternalID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Usergroupexternal
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UsergroupexternalDeleteObjectV1WithHttpInfo(int pkiUsergroupexternalID, int operationIndex = 0);
+        /// <returns>ApiResponse of UsergroupexternalDeleteObjectV1Response</returns>
+        ApiResponse<UsergroupexternalDeleteObjectV1Response> UsergroupexternalDeleteObjectV1WithHttpInfo(int pkiUsergroupexternalID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Usergroupexternal
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UsergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>UsergroupexternalEditObjectV1Response</returns>
+        UsergroupexternalEditObjectV1Response UsergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Usergroupexternal
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UsergroupexternalEditObjectV1WithHttpInfo(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of UsergroupexternalEditObjectV1Response</returns>
+        ApiResponse<UsergroupexternalEditObjectV1Response> UsergroupexternalEditObjectV1WithHttpInfo(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Usergroupexternals and IDs
         /// </summary>
@@ -253,8 +253,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UsergroupexternalDeleteObjectV1Async(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UsergroupexternalDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupexternalDeleteObjectV1Response> UsergroupexternalDeleteObjectV1Async(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Usergroupexternal
@@ -266,8 +266,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupexternalDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsergroupexternalDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupexternalDeleteObjectV1Response>> UsergroupexternalDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Usergroupexternal
         /// </summary>
@@ -279,8 +279,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UsergroupexternalEditObjectV1Async(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UsergroupexternalEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupexternalEditObjectV1Response> UsergroupexternalEditObjectV1Async(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Usergroupexternal
@@ -293,8 +293,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupexternalEditObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsergroupexternalEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupexternalEditObjectV1Response>> UsergroupexternalEditObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Usergroupexternals and IDs
         /// </summary>
@@ -716,10 +716,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UsergroupexternalDeleteObjectV1(int pkiUsergroupexternalID, int operationIndex = 0)
+        /// <returns>UsergroupexternalDeleteObjectV1Response</returns>
+        public UsergroupexternalDeleteObjectV1Response UsergroupexternalDeleteObjectV1(int pkiUsergroupexternalID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID);
+            eZmaxApi.Client.ApiResponse<UsergroupexternalDeleteObjectV1Response> localVarResponse = UsergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID);
             return localVarResponse.Data;
         }
 
@@ -729,8 +729,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupexternalDeleteObjectV1WithHttpInfo(int pkiUsergroupexternalID, int operationIndex = 0)
+        /// <returns>ApiResponse of UsergroupexternalDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UsergroupexternalDeleteObjectV1Response> UsergroupexternalDeleteObjectV1WithHttpInfo(int pkiUsergroupexternalID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -766,7 +766,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<UsergroupexternalDeleteObjectV1Response>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupexternalDeleteObjectV1", localVarResponse);
@@ -786,10 +786,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UsergroupexternalDeleteObjectV1Async(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of UsergroupexternalDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupexternalDeleteObjectV1Response> UsergroupexternalDeleteObjectV1Async(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupexternalDeleteObjectV1WithHttpInfoAsync(pkiUsergroupexternalID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UsergroupexternalDeleteObjectV1Response> localVarResponse = await UsergroupexternalDeleteObjectV1WithHttpInfoAsync(pkiUsergroupexternalID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -800,8 +800,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupexternalDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UsergroupexternalDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupexternalDeleteObjectV1Response>> UsergroupexternalDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -838,7 +838,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<UsergroupexternalDeleteObjectV1Response>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -859,10 +859,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UsergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>UsergroupexternalEditObjectV1Response</returns>
+        public UsergroupexternalEditObjectV1Response UsergroupexternalEditObjectV1(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<UsergroupexternalEditObjectV1Response> localVarResponse = UsergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -873,8 +873,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupexternalID">The unique ID of the Usergroupexternal</param>
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupexternalEditObjectV1WithHttpInfo(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of UsergroupexternalEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UsergroupexternalEditObjectV1Response> UsergroupexternalEditObjectV1WithHttpInfo(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'usergroupexternalEditObjectV1Request' is set
             if (usergroupexternalEditObjectV1Request == null)
@@ -918,7 +918,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<UsergroupexternalEditObjectV1Response>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupexternalEditObjectV1", localVarResponse);
@@ -939,10 +939,10 @@ namespace eZmaxApi.Api
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UsergroupexternalEditObjectV1Async(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of UsergroupexternalEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupexternalEditObjectV1Response> UsergroupexternalEditObjectV1Async(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupexternalEditObjectV1WithHttpInfoAsync(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UsergroupexternalEditObjectV1Response> localVarResponse = await UsergroupexternalEditObjectV1WithHttpInfoAsync(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -954,8 +954,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupexternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupexternalEditObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UsergroupexternalEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupexternalEditObjectV1Response>> UsergroupexternalEditObjectV1WithHttpInfoAsync(int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'usergroupexternalEditObjectV1Request' is set
             if (usergroupexternalEditObjectV1Request == null)
@@ -1000,7 +1000,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<UsergroupexternalEditObjectV1Response>("/1/object/usergroupexternal/{pkiUsergroupexternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID} (required).</param>
-        public EzsigndocumentGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsigndocumentResponseCompound mPayload = default(EzsigndocumentResponseCompound))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsigndocumentGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsigndocumentGetObjectV1ResponseMPayload mPayload = default(EzsigndocumentGetObjectV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,11 +73,10 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzsigndocumentResponseCompound MPayload { get; set; }
+        public EzsigndocumentGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

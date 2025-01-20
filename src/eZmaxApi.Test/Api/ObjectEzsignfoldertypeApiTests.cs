@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsignfoldertypeID = null;
             //EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request = null;
             //var response = instance.EzsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsignfoldertypeEditObjectV3Response>(response);
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjEzsignpage** | [**List&lt;EzsignpageResponseCompound&gt;**](EzsignpageResponse.md) |  | 
+**AObjEzsignpage** | [**List&lt;EzsignpageResponseCompound&gt;**](EzsignpageResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

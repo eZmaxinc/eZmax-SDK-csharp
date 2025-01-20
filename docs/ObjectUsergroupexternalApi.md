@@ -111,7 +111,7 @@ catch (ApiException e)
 
 <a id="usergroupexternaldeleteobjectv1"></a>
 # **UsergroupexternalDeleteObjectV1**
-> CommonResponse UsergroupexternalDeleteObjectV1 (int pkiUsergroupexternalID)
+> UsergroupexternalDeleteObjectV1Response UsergroupexternalDeleteObjectV1 (int pkiUsergroupexternalID)
 
 Delete an existing Usergroupexternal
 
@@ -142,7 +142,7 @@ namespace Example
             try
             {
                 // Delete an existing Usergroupexternal
-                CommonResponse result = apiInstance.UsergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
+                UsergroupexternalDeleteObjectV1Response result = apiInstance.UsergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -163,7 +163,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Usergroupexternal
-    ApiResponse<CommonResponse> response = apiInstance.UsergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID);
+    ApiResponse<UsergroupexternalDeleteObjectV1Response> response = apiInstance.UsergroupexternalDeleteObjectV1WithHttpInfo(pkiUsergroupexternalID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupexternalDeleteObjectV1Response**](UsergroupexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ catch (ApiException e)
 
 <a id="usergroupexternaleditobjectv1"></a>
 # **UsergroupexternalEditObjectV1**
-> CommonResponse UsergroupexternalEditObjectV1 (int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request)
+> UsergroupexternalEditObjectV1Response UsergroupexternalEditObjectV1 (int pkiUsergroupexternalID, UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request)
 
 Edit an existing Usergroupexternal
 
@@ -239,7 +239,7 @@ namespace Example
             try
             {
                 // Edit an existing Usergroupexternal
-                CommonResponse result = apiInstance.UsergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
+                UsergroupexternalEditObjectV1Response result = apiInstance.UsergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -260,7 +260,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Usergroupexternal
-    ApiResponse<CommonResponse> response = apiInstance.UsergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
+    ApiResponse<UsergroupexternalEditObjectV1Response> response = apiInstance.UsergroupexternalEditObjectV1WithHttpInfo(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -282,7 +282,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupexternalEditObjectV1Response**](UsergroupexternalEditObjectV1Response.md)
 
 ### Authorization
 

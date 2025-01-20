@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
-        /// <param name="objUserstaged">A Userstaged Object (required).</param>
-        public WebhookUserstagedUserstagedCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserstagedResponse objUserstaged = default(UserstagedResponse))
+        /// <param name="objUserstaged">objUserstaged (required).</param>
+        public WebhookUserstagedUserstagedCreated(CustomWebhookResponse objWebhook = default(CustomWebhookResponse), List<AttemptResponseCompound> aObjAttempt = default(List<AttemptResponseCompound>), UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound))
         {
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
@@ -79,11 +79,10 @@ namespace eZmaxApi.Model
         public List<AttemptResponseCompound> AObjAttempt { get; set; }
 
         /// <summary>
-        /// A Userstaged Object
+        /// Gets or Sets ObjUserstaged
         /// </summary>
-        /// <value>A Userstaged Object</value>
         [DataMember(Name = "objUserstaged", IsRequired = true, EmitDefaultValue = true)]
-        public UserstagedResponse ObjUserstaged { get; set; }
+        public UserstagedResponseCompound ObjUserstaged { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

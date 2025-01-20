@@ -102,7 +102,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUserID = null;
             //UserEditObjectV1Request userEditObjectV1Request = null;
             //var response = instance.UserEditObjectV1(pkiUserID, userEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<UserEditObjectV1Response>(response);
         }
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUserID = null;
             //Object body = null;
             //var response = instance.UserSendPasswordResetV1(pkiUserID, body);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<UserSendPasswordResetV1Response>(response);
         }
     }
 }

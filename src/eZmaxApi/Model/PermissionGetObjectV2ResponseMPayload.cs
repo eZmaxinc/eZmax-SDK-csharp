@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objPermission">A Permission Object and children to create a complete structure (required).</param>
-        public PermissionGetObjectV2ResponseMPayload(PermissionResponse objPermission = default(PermissionResponse))
+        /// <param name="objPermission">objPermission (required).</param>
+        public PermissionGetObjectV2ResponseMPayload(PermissionResponseCompound objPermission = default(PermissionResponseCompound))
         {
             // to ensure "objPermission" is required (not null)
             if (objPermission == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// A Permission Object and children to create a complete structure
+        /// Gets or Sets ObjPermission
         /// </summary>
-        /// <value>A Permission Object and children to create a complete structure</value>
         [DataMember(Name = "objPermission", IsRequired = true, EmitDefaultValue = true)]
-        public PermissionResponse ObjPermission { get; set; }
+        public PermissionResponseCompound ObjPermission { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

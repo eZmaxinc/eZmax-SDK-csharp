@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiEzsigntemplatedocumentpagerecognitionID = null;
             //var response = instance.EzsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzsigntemplatedocumentpagerecognitionID = null;
             //EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request = null;
             //var response = instance.EzsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>(response);
         }
 
         /// <summary>

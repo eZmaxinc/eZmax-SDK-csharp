@@ -88,7 +88,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzdoctemplatedocumentID = null;
             //EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request = null;
             //var response = instance.EzdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzdoctemplatedocumentEditObjectV1Response>(response);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace eZmaxApi.Test.Api
             //int pkiEzdoctemplatedocumentID = null;
             //EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request = null;
             //var response = instance.EzdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<EzdoctemplatedocumentPatchObjectV1Response>(response);
         }
     }
 }

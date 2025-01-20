@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="billingentityinternaleditobjectv1"></a>
 # **BillingentityinternalEditObjectV1**
-> CommonResponse BillingentityinternalEditObjectV1 (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request)
+> BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1 (int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request)
 
 Edit an existing Billingentityinternal
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Edit an existing Billingentityinternal
-                CommonResponse result = apiInstance.BillingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+                BillingentityinternalEditObjectV1Response result = apiInstance.BillingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Billingentityinternal
-    ApiResponse<CommonResponse> response = apiInstance.BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+    ApiResponse<BillingentityinternalEditObjectV1Response> response = apiInstance.BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**BillingentityinternalEditObjectV1Response**](BillingentityinternalEditObjectV1Response.md)
 
 ### Authorization
 

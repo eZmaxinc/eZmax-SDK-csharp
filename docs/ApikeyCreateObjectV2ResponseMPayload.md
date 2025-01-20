@@ -5,7 +5,7 @@ Payload for POST /2/object/apikey
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AObjApikey** | [**List&lt;ApikeyResponseCompound&gt;**](ApikeyResponse.md) |  | 
+**AObjApikey** | [**List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

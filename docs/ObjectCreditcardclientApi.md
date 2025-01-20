@@ -111,7 +111,7 @@ catch (ApiException e)
 
 <a id="creditcardclientdeleteobjectv1"></a>
 # **CreditcardclientDeleteObjectV1**
-> CommonResponse CreditcardclientDeleteObjectV1 (int pkiCreditcardclientID)
+> CreditcardclientDeleteObjectV1Response CreditcardclientDeleteObjectV1 (int pkiCreditcardclientID)
 
 Delete an existing Creditcardclient
 
@@ -142,7 +142,7 @@ namespace Example
             try
             {
                 // Delete an existing Creditcardclient
-                CommonResponse result = apiInstance.CreditcardclientDeleteObjectV1(pkiCreditcardclientID);
+                CreditcardclientDeleteObjectV1Response result = apiInstance.CreditcardclientDeleteObjectV1(pkiCreditcardclientID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -163,7 +163,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Creditcardclient
-    ApiResponse<CommonResponse> response = apiInstance.CreditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID);
+    ApiResponse<CreditcardclientDeleteObjectV1Response> response = apiInstance.CreditcardclientDeleteObjectV1WithHttpInfo(pkiCreditcardclientID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientDeleteObjectV1Response**](CreditcardclientDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -206,7 +206,7 @@ catch (ApiException e)
 
 <a id="creditcardclienteditobjectv1"></a>
 # **CreditcardclientEditObjectV1**
-> CommonResponse CreditcardclientEditObjectV1 (int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request)
+> CreditcardclientEditObjectV1Response CreditcardclientEditObjectV1 (int pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request)
 
 Edit an existing Creditcardclient
 
@@ -238,7 +238,7 @@ namespace Example
             try
             {
                 // Edit an existing Creditcardclient
-                CommonResponse result = apiInstance.CreditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
+                CreditcardclientEditObjectV1Response result = apiInstance.CreditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -259,7 +259,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Creditcardclient
-    ApiResponse<CommonResponse> response = apiInstance.CreditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
+    ApiResponse<CreditcardclientEditObjectV1Response> response = apiInstance.CreditcardclientEditObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -281,7 +281,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientEditObjectV1Response**](CreditcardclientEditObjectV1Response.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ catch (ApiException e)
 
 <a id="creditcardclientpatchobjectv1"></a>
 # **CreditcardclientPatchObjectV1**
-> CommonResponse CreditcardclientPatchObjectV1 (int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request)
+> CreditcardclientPatchObjectV1Response CreditcardclientPatchObjectV1 (int pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request)
 
 Patch an existing Creditcardclient
 
@@ -636,7 +636,7 @@ namespace Example
             try
             {
                 // Patch an existing Creditcardclient
-                CommonResponse result = apiInstance.CreditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+                CreditcardclientPatchObjectV1Response result = apiInstance.CreditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -657,7 +657,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Patch an existing Creditcardclient
-    ApiResponse<CommonResponse> response = apiInstance.CreditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+    ApiResponse<CreditcardclientPatchObjectV1Response> response = apiInstance.CreditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -679,7 +679,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CreditcardclientPatchObjectV1Response**](CreditcardclientPatchObjectV1Response.md)
 
 ### Authorization
 

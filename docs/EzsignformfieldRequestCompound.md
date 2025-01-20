@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **EEzsignformfieldDependencyrequirement** | **FieldEEzsignformfieldDependencyrequirement** |  | [optional] 
 **EEzsignformfieldHorizontalalignment** | **EnumHorizontalalignment** |  | [optional] 
 **ObjTextstylestatic** | [**TextstylestaticRequestCompound**](TextstylestaticRequestCompound.md) |  | [optional] 
-**AObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequest.md) |  | [optional] 
+**AObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

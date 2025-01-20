@@ -65,7 +65,7 @@ namespace eZmaxApi.Test.Api
             //int pkiSystemconfigurationID = null;
             //SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request = null;
             //var response = instance.SystemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<SystemconfigurationEditObjectV1Response>(response);
         }
 
         /// <summary>

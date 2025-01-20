@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiWebhookID = null;
             //var response = instance.WebhookDeleteObjectV1(pkiWebhookID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<WebhookDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiWebhookID = null;
             //WebhookEditObjectV1Request webhookEditObjectV1Request = null;
             //var response = instance.WebhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<WebhookEditObjectV1Response>(response);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //WebhookSendWebhookV1Request webhookSendWebhookV1Request = null;
             //var response = instance.WebhookSendWebhookV1(webhookSendWebhookV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<WebhookSendWebhookV1Response>(response);
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace eZmaxApi.Test.Api
             //int pkiWebhookID = null;
             //Object body = null;
             //var response = instance.WebhookTestV1(pkiWebhookID, body);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<WebhookTestV1Response>(response);
         }
     }
 }

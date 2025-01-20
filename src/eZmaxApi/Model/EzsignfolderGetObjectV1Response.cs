@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID} (required).</param>
-        public EzsignfolderGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfolderResponseCompound mPayload = default(EzsignfolderResponseCompound))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzsignfolderGetObjectV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzsignfolderGetObjectV1ResponseMPayload mPayload = default(EzsignfolderGetObjectV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,11 +73,10 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzsignfolderResponseCompound MPayload { get; set; }
+        public EzsignfolderGetObjectV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

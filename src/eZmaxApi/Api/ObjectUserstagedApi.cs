@@ -58,8 +58,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UserstagedDeleteObjectV1(int pkiUserstagedID, int operationIndex = 0);
+        /// <returns>UserstagedDeleteObjectV1Response</returns>
+        UserstagedDeleteObjectV1Response UserstagedDeleteObjectV1(int pkiUserstagedID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Userstaged
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UserstagedDeleteObjectV1WithHttpInfo(int pkiUserstagedID, int operationIndex = 0);
+        /// <returns>ApiResponse of UserstagedDeleteObjectV1Response</returns>
+        ApiResponse<UserstagedDeleteObjectV1Response> UserstagedDeleteObjectV1WithHttpInfo(int pkiUserstagedID, int operationIndex = 0);
         /// <summary>
         /// Retrieve Userstaged list
         /// </summary>
@@ -127,8 +127,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UserstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0);
+        /// <returns>UserstagedMapV1Response</returns>
+        UserstagedMapV1Response UserstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Map the Userstaged to an existing user
@@ -140,8 +140,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UserstagedMapV1WithHttpInfo(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of UserstagedMapV1Response</returns>
+        ApiResponse<UserstagedMapV1Response> UserstagedMapV1WithHttpInfo(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -188,8 +188,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UserstagedDeleteObjectV1Async(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UserstagedDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<UserstagedDeleteObjectV1Response> UserstagedDeleteObjectV1Async(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Userstaged
@@ -201,8 +201,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UserstagedDeleteObjectV1WithHttpInfoAsync(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UserstagedDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserstagedDeleteObjectV1Response>> UserstagedDeleteObjectV1WithHttpInfoAsync(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Userstaged list
         /// </summary>
@@ -272,8 +272,8 @@ namespace eZmaxApi.Api
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UserstagedMapV1Async(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UserstagedMapV1Response</returns>
+        System.Threading.Tasks.Task<UserstagedMapV1Response> UserstagedMapV1Async(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Map the Userstaged to an existing user
@@ -286,8 +286,8 @@ namespace eZmaxApi.Api
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UserstagedMapV1WithHttpInfoAsync(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UserstagedMapV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserstagedMapV1Response>> UserstagedMapV1WithHttpInfoAsync(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -576,10 +576,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UserstagedDeleteObjectV1(int pkiUserstagedID, int operationIndex = 0)
+        /// <returns>UserstagedDeleteObjectV1Response</returns>
+        public UserstagedDeleteObjectV1Response UserstagedDeleteObjectV1(int pkiUserstagedID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UserstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID);
+            eZmaxApi.Client.ApiResponse<UserstagedDeleteObjectV1Response> localVarResponse = UserstagedDeleteObjectV1WithHttpInfo(pkiUserstagedID);
             return localVarResponse.Data;
         }
 
@@ -589,8 +589,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UserstagedDeleteObjectV1WithHttpInfo(int pkiUserstagedID, int operationIndex = 0)
+        /// <returns>ApiResponse of UserstagedDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserstagedDeleteObjectV1Response> UserstagedDeleteObjectV1WithHttpInfo(int pkiUserstagedID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -626,7 +626,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/userstaged/{pkiUserstagedID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<UserstagedDeleteObjectV1Response>("/1/object/userstaged/{pkiUserstagedID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserstagedDeleteObjectV1", localVarResponse);
@@ -646,10 +646,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UserstagedDeleteObjectV1Async(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of UserstagedDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UserstagedDeleteObjectV1Response> UserstagedDeleteObjectV1Async(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UserstagedDeleteObjectV1WithHttpInfoAsync(pkiUserstagedID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UserstagedDeleteObjectV1Response> localVarResponse = await UserstagedDeleteObjectV1WithHttpInfoAsync(pkiUserstagedID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -660,8 +660,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UserstagedDeleteObjectV1WithHttpInfoAsync(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UserstagedDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserstagedDeleteObjectV1Response>> UserstagedDeleteObjectV1WithHttpInfoAsync(int pkiUserstagedID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -698,7 +698,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/userstaged/{pkiUserstagedID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<UserstagedDeleteObjectV1Response>("/1/object/userstaged/{pkiUserstagedID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1059,10 +1059,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UserstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0)
+        /// <returns>UserstagedMapV1Response</returns>
+        public UserstagedMapV1Response UserstagedMapV1(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UserstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request);
+            eZmaxApi.Client.ApiResponse<UserstagedMapV1Response> localVarResponse = UserstagedMapV1WithHttpInfo(pkiUserstagedID, userstagedMapV1Request);
             return localVarResponse.Data;
         }
 
@@ -1073,8 +1073,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUserstagedID"></param>
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UserstagedMapV1WithHttpInfo(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of UserstagedMapV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserstagedMapV1Response> UserstagedMapV1WithHttpInfo(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'userstagedMapV1Request' is set
             if (userstagedMapV1Request == null)
@@ -1118,7 +1118,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/userstaged/{pkiUserstagedID}/map", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<UserstagedMapV1Response>("/1/object/userstaged/{pkiUserstagedID}/map", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserstagedMapV1", localVarResponse);
@@ -1139,10 +1139,10 @@ namespace eZmaxApi.Api
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UserstagedMapV1Async(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of UserstagedMapV1Response</returns>
+        public async System.Threading.Tasks.Task<UserstagedMapV1Response> UserstagedMapV1Async(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UserstagedMapV1WithHttpInfoAsync(pkiUserstagedID, userstagedMapV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UserstagedMapV1Response> localVarResponse = await UserstagedMapV1WithHttpInfoAsync(pkiUserstagedID, userstagedMapV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1154,8 +1154,8 @@ namespace eZmaxApi.Api
         /// <param name="userstagedMapV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UserstagedMapV1WithHttpInfoAsync(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UserstagedMapV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserstagedMapV1Response>> UserstagedMapV1WithHttpInfoAsync(int pkiUserstagedID, UserstagedMapV1Request userstagedMapV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'userstagedMapV1Request' is set
             if (userstagedMapV1Request == null)
@@ -1200,7 +1200,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/userstaged/{pkiUserstagedID}/map", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<UserstagedMapV1Response>("/1/object/userstaged/{pkiUserstagedID}/map", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
