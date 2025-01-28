@@ -121,6 +121,24 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
+            if (this.SContactFirstname != null) {
+                // SContactFirstname (string) pattern
+                Regex regexSContactFirstname = new Regex(@"^.{1,20}$", RegexOptions.CultureInvariant);
+                if (!regexSContactFirstname.Match(this.SContactFirstname).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SContactFirstname, must match a pattern of " + regexSContactFirstname, new [] { "SContactFirstname" });
+                }
+            }
+
+            if (this.SContactLastname != null) {
+                // SContactLastname (string) pattern
+                Regex regexSContactLastname = new Regex(@"^.{1,25}$", RegexOptions.CultureInvariant);
+                if (!regexSContactLastname.Match(this.SContactLastname).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SContactLastname, must match a pattern of " + regexSContactLastname, new [] { "SContactLastname" });
+                }
+            }
+
             yield break;
         }
     }

@@ -5,7 +5,7 @@ Request for PUT /3/object/ezsignfolder/{pkiEzsignfolderID}
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjEzsignfolder** | [**EzsignfolderRequestV3**](EzsignfolderRequestV3.md) | An Ezsignfolder Object and children to create a complete structure | 
+**ObjEzsignfolder** | [**EzsignfolderRequestCompoundV3**](EzsignfolderRequestCompoundV3.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

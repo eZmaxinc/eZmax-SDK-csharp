@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiUsergroupID = null;
             //UsergroupEditObjectV1Request usergroupEditObjectV1Request = null;
             //var response = instance.UsergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<UsergroupEditObjectV1Response>(response);
         }
 
         /// <summary>

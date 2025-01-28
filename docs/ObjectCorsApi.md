@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="corsdeleteobjectv1"></a>
 # **CorsDeleteObjectV1**
-> CommonResponse CorsDeleteObjectV1 (int pkiCorsID)
+> CorsDeleteObjectV1Response CorsDeleteObjectV1 (int pkiCorsID)
 
 Delete an existing Cors
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Cors
-                CommonResponse result = apiInstance.CorsDeleteObjectV1(pkiCorsID);
+                CorsDeleteObjectV1Response result = apiInstance.CorsDeleteObjectV1(pkiCorsID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Cors
-    ApiResponse<CommonResponse> response = apiInstance.CorsDeleteObjectV1WithHttpInfo(pkiCorsID);
+    ApiResponse<CorsDeleteObjectV1Response> response = apiInstance.CorsDeleteObjectV1WithHttpInfo(pkiCorsID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsDeleteObjectV1Response**](CorsDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="corseditobjectv1"></a>
 # **CorsEditObjectV1**
-> CommonResponse CorsEditObjectV1 (int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request)
+> CorsEditObjectV1Response CorsEditObjectV1 (int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request)
 
 Edit an existing Cors
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Cors
-                CommonResponse result = apiInstance.CorsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
+                CorsEditObjectV1Response result = apiInstance.CorsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Cors
-    ApiResponse<CommonResponse> response = apiInstance.CorsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
+    ApiResponse<CorsEditObjectV1Response> response = apiInstance.CorsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**CorsEditObjectV1Response**](CorsEditObjectV1Response.md)
 
 ### Authorization
 

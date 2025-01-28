@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApikeyEditObjectV1Response</returns>
+        ApikeyEditObjectV1Response ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Apikey
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of ApikeyEditObjectV1Response</returns>
+        ApiResponse<ApikeyEditObjectV1Response> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -295,8 +295,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApikeyEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<ApikeyEditObjectV1Response> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Apikey
@@ -309,8 +309,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (ApikeyEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApikeyEditObjectV1Response>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Permissions
         /// </summary>
@@ -683,6 +683,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -806,10 +807,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApikeyEditObjectV1Response</returns>
+        public ApikeyEditObjectV1Response ApikeyEditObjectV1(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> localVarResponse = ApikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -820,8 +821,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiApikeyID">The unique ID of the Apikey</param>
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of ApikeyEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> ApikeyEditObjectV1WithHttpInfo(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'apikeyEditObjectV1Request' is set
             if (apikeyEditObjectV1Request == null)
@@ -841,6 +842,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -865,7 +867,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<ApikeyEditObjectV1Response>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ApikeyEditObjectV1", localVarResponse);
@@ -886,10 +888,10 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApikeyEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<ApikeyEditObjectV1Response> ApikeyEditObjectV1Async(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await ApikeyEditObjectV1WithHttpInfoAsync(pkiApikeyID, apikeyEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response> localVarResponse = await ApikeyEditObjectV1WithHttpInfoAsync(pkiApikeyID, apikeyEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -901,8 +903,8 @@ namespace eZmaxApi.Api
         /// <param name="apikeyEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (ApikeyEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ApikeyEditObjectV1Response>> ApikeyEditObjectV1WithHttpInfoAsync(int pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'apikeyEditObjectV1Request' is set
             if (apikeyEditObjectV1Request == null)
@@ -947,7 +949,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<ApikeyEditObjectV1Response>("/1/object/apikey/{pkiApikeyID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1003,6 +1005,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1163,6 +1166,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1312,6 +1316,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1463,6 +1468,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1652,6 +1658,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1794,6 +1801,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1936,6 +1944,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2087,6 +2096,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
+        /// <returns>BrandingEditObjectV2Response</returns>
+        BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Branding
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
+        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
+        ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -197,8 +197,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of BrandingEditObjectV2Response</returns>
+        System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Branding
@@ -211,8 +211,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Brandings and IDs
         /// </summary>
@@ -462,6 +462,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -585,10 +586,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
+        /// <returns>BrandingEditObjectV2Response</returns>
+        public BrandingEditObjectV2Response BrandingEditObjectV2(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
+            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = BrandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -599,8 +600,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBrandingID"></param>
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
+        /// <returns>ApiResponse of BrandingEditObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> BrandingEditObjectV2WithHttpInfo(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0)
         {
             // verify the required parameter 'brandingEditObjectV2Request' is set
             if (brandingEditObjectV2Request == null)
@@ -620,6 +621,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -644,7 +646,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BrandingEditObjectV2", localVarResponse);
@@ -665,10 +667,10 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of BrandingEditObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<BrandingEditObjectV2Response> BrandingEditObjectV2Async(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await BrandingEditObjectV2WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response> localVarResponse = await BrandingEditObjectV2WithHttpInfoAsync(pkiBrandingID, brandingEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -680,8 +682,8 @@ namespace eZmaxApi.Api
         /// <param name="brandingEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BrandingEditObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrandingEditObjectV2Response>> BrandingEditObjectV2WithHttpInfoAsync(int pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'brandingEditObjectV2Request' is set
             if (brandingEditObjectV2Request == null)
@@ -726,7 +728,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<BrandingEditObjectV2Response>("/2/object/branding/{pkiBrandingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -785,6 +787,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -972,6 +975,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1161,6 +1165,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

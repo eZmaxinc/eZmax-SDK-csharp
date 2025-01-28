@@ -108,7 +108,7 @@ catch (ApiException e)
 
 <a id="variableexpenseeditobjectv1"></a>
 # **VariableexpenseEditObjectV1**
-> CommonResponse VariableexpenseEditObjectV1 (int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request)
+> VariableexpenseEditObjectV1Response VariableexpenseEditObjectV1 (int pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request)
 
 Edit an existing Variableexpense
 
@@ -140,7 +140,7 @@ namespace Example
             try
             {
                 // Edit an existing Variableexpense
-                CommonResponse result = apiInstance.VariableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+                VariableexpenseEditObjectV1Response result = apiInstance.VariableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -161,7 +161,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Variableexpense
-    ApiResponse<CommonResponse> response = apiInstance.VariableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+    ApiResponse<VariableexpenseEditObjectV1Response> response = apiInstance.VariableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -183,7 +183,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**VariableexpenseEditObjectV1Response**](VariableexpenseEditObjectV1Response.md)
 
 ### Authorization
 

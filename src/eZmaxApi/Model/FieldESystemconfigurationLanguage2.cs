@@ -34,22 +34,22 @@ namespace eZmaxApi.Model
     public enum FieldESystemconfigurationLanguage2
     {
         /// <summary>
-        /// Enum CA for value: en_CA
+        /// Enum EnCA for value: en_CA
         /// </summary>
         [EnumMember(Value = "en_CA")]
-        CA = 1,
+        EnCA = 1,
 
         /// <summary>
-        /// Enum QC for value: en_QC
+        /// Enum EnQC for value: en_QC
         /// </summary>
         [EnumMember(Value = "en_QC")]
-        QC = 2,
+        EnQC = 2,
 
         /// <summary>
-        /// Enum US for value: en_US
+        /// Enum EnUS for value: en_US
         /// </summary>
         [EnumMember(Value = "en_US")]
-        US = 3
+        EnUS = 3
     }
 
 }

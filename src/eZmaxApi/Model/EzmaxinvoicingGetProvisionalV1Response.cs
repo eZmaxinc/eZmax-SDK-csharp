@@ -42,8 +42,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objDebugPayload">objDebugPayload (required).</param>
         /// <param name="objDebug">objDebug.</param>
-        /// <param name="mPayload">Payload for GET /1/object/ezmaxinvoicing/getProvisional (required).</param>
-        public EzmaxinvoicingGetProvisionalV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzmaxinvoicingResponseCompound mPayload = default(EzmaxinvoicingResponseCompound))
+        /// <param name="mPayload">mPayload (required).</param>
+        public EzmaxinvoicingGetProvisionalV1Response(CommonResponseObjDebugPayload objDebugPayload = default(CommonResponseObjDebugPayload), CommonResponseObjDebug objDebug = default(CommonResponseObjDebug), EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload = default(EzmaxinvoicingGetProvisionalV1ResponseMPayload))
         {
             // to ensure "objDebugPayload" is required (not null)
             if (objDebugPayload == null)
@@ -73,11 +73,10 @@ namespace eZmaxApi.Model
         public CommonResponseObjDebug ObjDebug { get; set; }
 
         /// <summary>
-        /// Payload for GET /1/object/ezmaxinvoicing/getProvisional
+        /// Gets or Sets MPayload
         /// </summary>
-        /// <value>Payload for GET /1/object/ezmaxinvoicing/getProvisional</value>
         [DataMember(Name = "mPayload", IsRequired = true, EmitDefaultValue = true)]
-        public EzmaxinvoicingResponseCompound MPayload { get; set; }
+        public EzmaxinvoicingGetProvisionalV1ResponseMPayload MPayload { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

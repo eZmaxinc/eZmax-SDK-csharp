@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiBrandingID = null;
             //BrandingEditObjectV2Request brandingEditObjectV2Request = null;
             //var response = instance.BrandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<BrandingEditObjectV2Response>(response);
         }
 
         /// <summary>

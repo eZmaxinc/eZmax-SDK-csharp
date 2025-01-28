@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **BCommunicationReadreceipt** | **bool** | Whether we ask for a read receipt or not. | [optional] 
 **AObjCommunicationattachment** | [**List&lt;CustomCommunicationattachmentRequest&gt;**](CustomCommunicationattachmentRequest.md) |  | 
 **AObjCommunicationrecipient** | [**List&lt;CommunicationrecipientRequestCompound&gt;**](CommunicationrecipientRequestCompound.md) |  | 
-**AObjCommunicationreference** | [**List&lt;CommunicationreferenceRequestCompound&gt;**](CommunicationreferenceRequest.md) |  | 
+**AObjCommunicationreference** | [**List&lt;CommunicationreferenceRequestCompound&gt;**](CommunicationreferenceRequestCompound.md) |  | 
 **AObjCommunicationexternalrecipient** | [**List&lt;CommunicationexternalrecipientRequestCompound&gt;**](CommunicationexternalrecipientRequestCompound.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

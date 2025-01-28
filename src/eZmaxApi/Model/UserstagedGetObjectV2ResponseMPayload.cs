@@ -40,8 +40,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserstagedGetObjectV2ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="objUserstaged">A Userstaged Object (required).</param>
-        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponse objUserstaged = default(UserstagedResponse))
+        /// <param name="objUserstaged">objUserstaged (required).</param>
+        public UserstagedGetObjectV2ResponseMPayload(UserstagedResponseCompound objUserstaged = default(UserstagedResponseCompound))
         {
             // to ensure "objUserstaged" is required (not null)
             if (objUserstaged == null)
@@ -52,11 +52,10 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// A Userstaged Object
+        /// Gets or Sets ObjUserstaged
         /// </summary>
-        /// <value>A Userstaged Object</value>
         [DataMember(Name = "objUserstaged", IsRequired = true, EmitDefaultValue = true)]
-        public UserstagedResponse ObjUserstaged { get; set; }
+        public UserstagedResponseCompound ObjUserstaged { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

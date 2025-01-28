@@ -76,7 +76,7 @@ namespace eZmaxApi.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int pkiSupplyID = null;
             //var response = instance.SupplyDeleteObjectV1(pkiSupplyID);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<SupplyDeleteObjectV1Response>(response);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace eZmaxApi.Test.Api
             //int pkiSupplyID = null;
             //SupplyEditObjectV1Request supplyEditObjectV1Request = null;
             //var response = instance.SupplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<SupplyEditObjectV1Response>(response);
         }
 
         /// <summary>

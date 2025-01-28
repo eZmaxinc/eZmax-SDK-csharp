@@ -77,7 +77,7 @@ namespace eZmaxApi.Test.Api
             //int pkiBillingentityinternalID = null;
             //BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = null;
             //var response = instance.BillingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
-            //Assert.IsType<CommonResponse>(response);
+            //Assert.IsType<BillingentityinternalEditObjectV1Response>(response);
         }
 
         /// <summary>

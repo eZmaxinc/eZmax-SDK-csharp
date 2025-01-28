@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
+        /// <returns>PaymenttermEditObjectV1Response</returns>
+        PaymenttermEditObjectV1Response PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Paymentterm
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of PaymenttermEditObjectV1Response</returns>
+        ApiResponse<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Paymentterms and IDs
         /// </summary>
@@ -194,8 +194,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of PaymenttermEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Paymentterm
@@ -208,8 +208,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PaymenttermEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymenttermEditObjectV1Response>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Paymentterms and IDs
         /// </summary>
@@ -459,6 +459,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -582,10 +583,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
+        /// <returns>PaymenttermEditObjectV1Response</returns>
+        public PaymenttermEditObjectV1Response PaymenttermEditObjectV1(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> localVarResponse = PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -596,8 +597,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiPaymenttermID"></param>
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of PaymenttermEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1WithHttpInfo(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'paymenttermEditObjectV1Request' is set
             if (paymenttermEditObjectV1Request == null)
@@ -617,6 +618,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -641,7 +643,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<PaymenttermEditObjectV1Response>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymenttermEditObjectV1", localVarResponse);
@@ -662,10 +664,10 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of PaymenttermEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<PaymenttermEditObjectV1Response> PaymenttermEditObjectV1Async(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await PaymenttermEditObjectV1WithHttpInfoAsync(pkiPaymenttermID, paymenttermEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response> localVarResponse = await PaymenttermEditObjectV1WithHttpInfoAsync(pkiPaymenttermID, paymenttermEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +679,8 @@ namespace eZmaxApi.Api
         /// <param name="paymenttermEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PaymenttermEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymenttermEditObjectV1Response>> PaymenttermEditObjectV1WithHttpInfoAsync(int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'paymenttermEditObjectV1Request' is set
             if (paymenttermEditObjectV1Request == null)
@@ -723,7 +725,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<PaymenttermEditObjectV1Response>("/1/object/paymentterm/{pkiPaymenttermID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -782,6 +784,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -969,6 +972,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1158,6 +1162,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

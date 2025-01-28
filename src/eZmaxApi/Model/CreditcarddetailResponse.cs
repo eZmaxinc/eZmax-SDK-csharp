@@ -127,7 +127,7 @@ namespace eZmaxApi.Model
         /// The street of the Creditcarddetail
         /// </summary>
         /// <value>The street of the Creditcarddetail</value>
-        /* <example>Daniel-Johnson Blvd.</example>*/
+        /* <example>Daniel-Johnson Blvd</example>*/
         [DataMember(Name = "sCreditcarddetailStreet", IsRequired = true, EmitDefaultValue = true)]
         public string SCreditcarddetailStreet { get; set; }
 

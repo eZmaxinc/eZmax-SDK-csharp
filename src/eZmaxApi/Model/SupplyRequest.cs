@@ -127,7 +127,7 @@ namespace eZmaxApi.Model
         /// The unit price of the Supply
         /// </summary>
         /// <value>The unit price of the Supply</value>
-        /* <example>8</example>*/
+        /* <example>8.00</example>*/
         [DataMember(Name = "dSupplyUnitprice", IsRequired = true, EmitDefaultValue = true)]
         public string DSupplyUnitprice { get; set; }
 

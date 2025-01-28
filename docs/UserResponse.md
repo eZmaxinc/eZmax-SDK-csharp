@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **STimezoneName** | **string** | The description of the Timezone | 
 **FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **SLanguageNameX** | **string** | The Name of the Language in the language of the requester | 
-**ObjEmail** | [**EmailResponse**](EmailResponse.md) | An Email Object and children to create a complete structure | 
+**ObjEmail** | [**EmailResponseCompound**](EmailResponseCompound.md) |  | 
 **FkiBillingentityinternalID** | **int** | The unique ID of the Billingentityinternal. | 
 **SBillingentityinternalDescriptionX** | **string** | The description of the Billingentityinternal in the language of the requester | 
 **ObjPhoneHome** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  | [optional] 

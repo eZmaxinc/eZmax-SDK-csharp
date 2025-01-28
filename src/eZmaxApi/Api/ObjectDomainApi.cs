@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0);
+        /// <returns>DomainDeleteObjectV1Response</returns>
+        DomainDeleteObjectV1Response DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Domain
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0);
+        /// <returns>ApiResponse of DomainDeleteObjectV1Response</returns>
+        ApiResponse<DomainDeleteObjectV1Response> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0);
         /// <summary>
         /// Retrieve Domain list
         /// </summary>
@@ -162,8 +162,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of DomainDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<DomainDeleteObjectV1Response> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Domain
@@ -175,8 +175,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (DomainDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainDeleteObjectV1Response>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Domain list
         /// </summary>
@@ -395,6 +395,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -517,10 +518,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0)
+        /// <returns>DomainDeleteObjectV1Response</returns>
+        public DomainDeleteObjectV1Response DomainDeleteObjectV1(int pkiDomainID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
+            eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> localVarResponse = DomainDeleteObjectV1WithHttpInfo(pkiDomainID);
             return localVarResponse.Data;
         }
 
@@ -530,8 +531,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0)
+        /// <returns>ApiResponse of DomainDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> DomainDeleteObjectV1WithHttpInfo(int pkiDomainID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -544,6 +545,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -567,7 +569,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<DomainDeleteObjectV1Response>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DomainDeleteObjectV1", localVarResponse);
@@ -587,10 +589,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of DomainDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<DomainDeleteObjectV1Response> DomainDeleteObjectV1Async(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await DomainDeleteObjectV1WithHttpInfoAsync(pkiDomainID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response> localVarResponse = await DomainDeleteObjectV1WithHttpInfoAsync(pkiDomainID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -601,8 +603,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiDomainID">The unique ID of the Domain</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (DomainDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DomainDeleteObjectV1Response>> DomainDeleteObjectV1WithHttpInfoAsync(int pkiDomainID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -639,7 +641,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DomainDeleteObjectV1Response>("/1/object/domain/{pkiDomainID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -695,6 +697,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -884,6 +887,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

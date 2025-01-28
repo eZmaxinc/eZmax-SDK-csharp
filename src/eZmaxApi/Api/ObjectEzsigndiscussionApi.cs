@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID, int operationIndex = 0);
+        /// <returns>EzsigndiscussionDeleteObjectV1Response</returns>
+        EzsigndiscussionDeleteObjectV1Response EzsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsigndiscussion
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndiscussionDeleteObjectV1Response</returns>
+        ApiResponse<EzsigndiscussionDeleteObjectV1Response> EzsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsigndiscussion
         /// </summary>
@@ -134,8 +134,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndiscussionDeleteObjectV1Async(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndiscussionDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndiscussionDeleteObjectV1Response> EzsigndiscussionDeleteObjectV1Async(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsigndiscussion
@@ -147,8 +147,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndiscussionDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndiscussionDeleteObjectV1Response>> EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsigndiscussion
         /// </summary>
@@ -334,6 +334,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -456,10 +457,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID, int operationIndex = 0)
+        /// <returns>EzsigndiscussionDeleteObjectV1Response</returns>
+        public EzsigndiscussionDeleteObjectV1Response EzsigndiscussionDeleteObjectV1(int pkiEzsigndiscussionID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
+            eZmaxApi.Client.ApiResponse<EzsigndiscussionDeleteObjectV1Response> localVarResponse = EzsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
             return localVarResponse.Data;
         }
 
@@ -469,8 +470,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndiscussionDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndiscussionDeleteObjectV1Response> EzsigndiscussionDeleteObjectV1WithHttpInfo(int pkiEzsigndiscussionID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -483,6 +484,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -506,7 +508,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsigndiscussion/{pkiEzsigndiscussionID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<EzsigndiscussionDeleteObjectV1Response>("/1/object/ezsigndiscussion/{pkiEzsigndiscussionID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndiscussionDeleteObjectV1", localVarResponse);
@@ -526,10 +528,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndiscussionDeleteObjectV1Async(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndiscussionDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndiscussionDeleteObjectV1Response> EzsigndiscussionDeleteObjectV1Async(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(pkiEzsigndiscussionID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndiscussionDeleteObjectV1Response> localVarResponse = await EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(pkiEzsigndiscussionID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -540,8 +542,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndiscussionID">The unique ID of the Ezsigndiscussion</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndiscussionDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndiscussionDeleteObjectV1Response>> EzsigndiscussionDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -578,7 +580,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsigndiscussion/{pkiEzsigndiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsigndiscussionDeleteObjectV1Response>("/1/object/ezsigndiscussion/{pkiEzsigndiscussionID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -625,6 +627,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

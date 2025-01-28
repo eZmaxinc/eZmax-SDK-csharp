@@ -75,7 +75,7 @@ namespace eZmaxApi.Model
         /// The entryurl of the Cors
         /// </summary>
         /// <value>The entryurl of the Cors</value>
-        /* <example>Https://www.example.com</example>*/
+        /* <example>https://www.example.com</example>*/
         [DataMember(Name = "sCorsEntryurl", IsRequired = true, EmitDefaultValue = true)]
         public string SCorsEntryurl { get; set; }
 

@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse SignatureDeleteObjectV1(int pkiSignatureID, int operationIndex = 0);
+        /// <returns>SignatureDeleteObjectV1Response</returns>
+        SignatureDeleteObjectV1Response SignatureDeleteObjectV1(int pkiSignatureID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Signature
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> SignatureDeleteObjectV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
+        /// <returns>ApiResponse of SignatureDeleteObjectV1Response</returns>
+        ApiResponse<SignatureDeleteObjectV1Response> SignatureDeleteObjectV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Signature
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse SignatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0);
+        /// <returns>SignatureEditObjectV1Response</returns>
+        SignatureEditObjectV1Response SignatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Signature
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> SignatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of SignatureEditObjectV1Response</returns>
+        ApiResponse<SignatureEditObjectV1Response> SignatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Signature
         /// </summary>
@@ -218,8 +218,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> SignatureDeleteObjectV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of SignatureDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<SignatureDeleteObjectV1Response> SignatureDeleteObjectV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Signature
@@ -231,8 +231,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> SignatureDeleteObjectV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (SignatureDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SignatureDeleteObjectV1Response>> SignatureDeleteObjectV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Signature
         /// </summary>
@@ -244,8 +244,8 @@ namespace eZmaxApi.Api
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> SignatureEditObjectV1Async(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of SignatureEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<SignatureEditObjectV1Response> SignatureEditObjectV1Async(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Signature
@@ -258,8 +258,8 @@ namespace eZmaxApi.Api
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> SignatureEditObjectV1WithHttpInfoAsync(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (SignatureEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SignatureEditObjectV1Response>> SignatureEditObjectV1WithHttpInfoAsync(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Signature
         /// </summary>
@@ -522,6 +522,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -644,10 +645,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse SignatureDeleteObjectV1(int pkiSignatureID, int operationIndex = 0)
+        /// <returns>SignatureDeleteObjectV1Response</returns>
+        public SignatureDeleteObjectV1Response SignatureDeleteObjectV1(int pkiSignatureID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = SignatureDeleteObjectV1WithHttpInfo(pkiSignatureID);
+            eZmaxApi.Client.ApiResponse<SignatureDeleteObjectV1Response> localVarResponse = SignatureDeleteObjectV1WithHttpInfo(pkiSignatureID);
             return localVarResponse.Data;
         }
 
@@ -657,9 +658,82 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> SignatureDeleteObjectV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
+        /// <returns>ApiResponse of SignatureDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<SignatureDeleteObjectV1Response> SignatureDeleteObjectV1WithHttpInfo(int pkiSignatureID, int operationIndex = 0)
         {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<SignatureDeleteObjectV1Response>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SignatureDeleteObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SignatureDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<SignatureDeleteObjectV1Response> SignatureDeleteObjectV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<SignatureDeleteObjectV1Response> localVarResponse = await SignatureDeleteObjectV1WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Signature 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SignatureDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SignatureDeleteObjectV1Response>> SignatureDeleteObjectV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -694,79 +768,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("SignatureDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Signature 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> SignatureDeleteObjectV1Async(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await SignatureDeleteObjectV1WithHttpInfoAsync(pkiSignatureID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Signature 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiSignatureID">The unique ID of the Signature</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> SignatureDeleteObjectV1WithHttpInfoAsync(int pkiSignatureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiSignatureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSignatureID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectSignatureApi.SignatureDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<SignatureDeleteObjectV1Response>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -787,10 +789,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse SignatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0)
+        /// <returns>SignatureEditObjectV1Response</returns>
+        public SignatureEditObjectV1Response SignatureEditObjectV1(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = SignatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<SignatureEditObjectV1Response> localVarResponse = SignatureEditObjectV1WithHttpInfo(pkiSignatureID, signatureEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -801,8 +803,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiSignatureID">The unique ID of the Signature</param>
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> SignatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of SignatureEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<SignatureEditObjectV1Response> SignatureEditObjectV1WithHttpInfo(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'signatureEditObjectV1Request' is set
             if (signatureEditObjectV1Request == null)
@@ -822,6 +824,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -846,7 +849,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<SignatureEditObjectV1Response>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SignatureEditObjectV1", localVarResponse);
@@ -867,10 +870,10 @@ namespace eZmaxApi.Api
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> SignatureEditObjectV1Async(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of SignatureEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<SignatureEditObjectV1Response> SignatureEditObjectV1Async(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await SignatureEditObjectV1WithHttpInfoAsync(pkiSignatureID, signatureEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<SignatureEditObjectV1Response> localVarResponse = await SignatureEditObjectV1WithHttpInfoAsync(pkiSignatureID, signatureEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -882,8 +885,8 @@ namespace eZmaxApi.Api
         /// <param name="signatureEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> SignatureEditObjectV1WithHttpInfoAsync(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (SignatureEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SignatureEditObjectV1Response>> SignatureEditObjectV1WithHttpInfoAsync(int pkiSignatureID, SignatureEditObjectV1Request signatureEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'signatureEditObjectV1Request' is set
             if (signatureEditObjectV1Request == null)
@@ -928,7 +931,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<SignatureEditObjectV1Response>("/1/object/signature/{pkiSignatureID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -977,6 +980,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1121,6 +1125,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1262,6 +1267,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1402,6 +1408,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

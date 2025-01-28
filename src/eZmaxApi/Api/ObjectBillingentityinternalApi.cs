@@ -57,8 +57,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>BillingentityinternalEditObjectV1Response</returns>
+        BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Billingentityinternal
@@ -70,8 +70,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
+        ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -194,8 +194,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Billingentityinternal
@@ -208,8 +208,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve Billingentityinternals and IDs
         /// </summary>
@@ -459,6 +459,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -582,10 +583,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>BillingentityinternalEditObjectV1Response</returns>
+        public BillingentityinternalEditObjectV1Response BillingentityinternalEditObjectV1(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = BillingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -596,8 +597,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiBillingentityinternalID"></param>
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of BillingentityinternalEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1WithHttpInfo(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
             if (billingentityinternalEditObjectV1Request == null)
@@ -617,6 +618,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -641,7 +643,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<BillingentityinternalEditObjectV1Response>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BillingentityinternalEditObjectV1", localVarResponse);
@@ -662,10 +664,10 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of BillingentityinternalEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<BillingentityinternalEditObjectV1Response> BillingentityinternalEditObjectV1Async(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await BillingentityinternalEditObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response> localVarResponse = await BillingentityinternalEditObjectV1WithHttpInfoAsync(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -677,8 +679,8 @@ namespace eZmaxApi.Api
         /// <param name="billingentityinternalEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (BillingentityinternalEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BillingentityinternalEditObjectV1Response>> BillingentityinternalEditObjectV1WithHttpInfoAsync(int pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
             if (billingentityinternalEditObjectV1Request == null)
@@ -723,7 +725,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<BillingentityinternalEditObjectV1Response>("/1/object/billingentityinternal/{pkiBillingentityinternalID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -782,6 +784,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -969,6 +972,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1158,6 +1162,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

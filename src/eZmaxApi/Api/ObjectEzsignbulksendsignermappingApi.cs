@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID, int operationIndex = 0);
+        /// <returns>EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        EzsignbulksendsignermappingDeleteObjectV1Response EzsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsignbulksendsignermapping
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsignbulksendsignermapping
         /// </summary>
@@ -134,8 +134,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsignbulksendsignermappingDeleteObjectV1Async(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignbulksendsignermappingDeleteObjectV1Response> EzsignbulksendsignermappingDeleteObjectV1Async(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsignbulksendsignermapping
@@ -147,8 +147,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignbulksendsignermappingDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response>> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignbulksendsignermapping
         /// </summary>
@@ -334,6 +334,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -456,10 +457,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID, int operationIndex = 0)
+        /// <returns>EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        public EzsignbulksendsignermappingDeleteObjectV1Response EzsignbulksendsignermappingDeleteObjectV1(int pkiEzsignbulksendsignermappingID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID);
+            eZmaxApi.Client.ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> localVarResponse = EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID);
             return localVarResponse.Data;
         }
 
@@ -469,8 +470,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfo(int pkiEzsignbulksendsignermappingID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -483,6 +484,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -506,7 +508,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<EzsignbulksendsignermappingDeleteObjectV1Response>("/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignbulksendsignermappingDeleteObjectV1", localVarResponse);
@@ -526,10 +528,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsignbulksendsignermappingDeleteObjectV1Async(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsignbulksendsignermappingDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignbulksendsignermappingDeleteObjectV1Response> EzsignbulksendsignermappingDeleteObjectV1Async(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(pkiEzsignbulksendsignermappingID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> localVarResponse = await EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(pkiEzsignbulksendsignermappingID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -540,8 +542,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignbulksendsignermappingID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignbulksendsignermappingDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response>> EzsignbulksendsignermappingDeleteObjectV1WithHttpInfoAsync(int pkiEzsignbulksendsignermappingID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -578,7 +580,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsignbulksendsignermappingDeleteObjectV1Response>("/1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -625,6 +627,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

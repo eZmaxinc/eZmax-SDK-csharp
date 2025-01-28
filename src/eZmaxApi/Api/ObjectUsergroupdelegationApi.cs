@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UsergroupdelegationDeleteObjectV1(int pkiUsergroupdelegationID, int operationIndex = 0);
+        /// <returns>UsergroupdelegationDeleteObjectV1Response</returns>
+        UsergroupdelegationDeleteObjectV1Response UsergroupdelegationDeleteObjectV1(int pkiUsergroupdelegationID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Usergroupdelegation
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UsergroupdelegationDeleteObjectV1WithHttpInfo(int pkiUsergroupdelegationID, int operationIndex = 0);
+        /// <returns>ApiResponse of UsergroupdelegationDeleteObjectV1Response</returns>
+        ApiResponse<UsergroupdelegationDeleteObjectV1Response> UsergroupdelegationDeleteObjectV1WithHttpInfo(int pkiUsergroupdelegationID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Usergroupdelegation
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse UsergroupdelegationEditObjectV1(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>UsergroupdelegationEditObjectV1Response</returns>
+        UsergroupdelegationEditObjectV1Response UsergroupdelegationEditObjectV1(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Usergroupdelegation
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> UsergroupdelegationEditObjectV1WithHttpInfo(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of UsergroupdelegationEditObjectV1Response</returns>
+        ApiResponse<UsergroupdelegationEditObjectV1Response> UsergroupdelegationEditObjectV1WithHttpInfo(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Usergroupdelegation
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UsergroupdelegationDeleteObjectV1Async(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UsergroupdelegationDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupdelegationDeleteObjectV1Response> UsergroupdelegationDeleteObjectV1Async(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Usergroupdelegation
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsergroupdelegationDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupdelegationDeleteObjectV1Response>> UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Usergroupdelegation
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> UsergroupdelegationEditObjectV1Async(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of UsergroupdelegationEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<UsergroupdelegationEditObjectV1Response> UsergroupdelegationEditObjectV1Async(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Usergroupdelegation
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> UsergroupdelegationEditObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (UsergroupdelegationEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsergroupdelegationEditObjectV1Response>> UsergroupdelegationEditObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Usergroupdelegation
         /// </summary>
@@ -383,6 +383,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -505,10 +506,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UsergroupdelegationDeleteObjectV1(int pkiUsergroupdelegationID, int operationIndex = 0)
+        /// <returns>UsergroupdelegationDeleteObjectV1Response</returns>
+        public UsergroupdelegationDeleteObjectV1Response UsergroupdelegationDeleteObjectV1(int pkiUsergroupdelegationID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
+            eZmaxApi.Client.ApiResponse<UsergroupdelegationDeleteObjectV1Response> localVarResponse = UsergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
             return localVarResponse.Data;
         }
 
@@ -518,9 +519,82 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupdelegationDeleteObjectV1WithHttpInfo(int pkiUsergroupdelegationID, int operationIndex = 0)
+        /// <returns>ApiResponse of UsergroupdelegationDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UsergroupdelegationDeleteObjectV1Response> UsergroupdelegationDeleteObjectV1WithHttpInfo(int pkiUsergroupdelegationID, int operationIndex = 0)
         {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUsergroupdelegationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUsergroupdelegationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUsergroupdelegationApi.UsergroupdelegationDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<UsergroupdelegationDeleteObjectV1Response>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsergroupdelegationDeleteObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroupdelegation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UsergroupdelegationDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupdelegationDeleteObjectV1Response> UsergroupdelegationDeleteObjectV1Async(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<UsergroupdelegationDeleteObjectV1Response> localVarResponse = await UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(pkiUsergroupdelegationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Usergroupdelegation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UsergroupdelegationDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupdelegationDeleteObjectV1Response>> UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -555,79 +629,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("UsergroupdelegationDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Usergroupdelegation 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UsergroupdelegationDeleteObjectV1Async(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(pkiUsergroupdelegationID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Usergroupdelegation 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupdelegationDeleteObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiUsergroupdelegationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUsergroupdelegationID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectUsergroupdelegationApi.UsergroupdelegationDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<UsergroupdelegationDeleteObjectV1Response>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +650,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse UsergroupdelegationEditObjectV1(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>UsergroupdelegationEditObjectV1Response</returns>
+        public UsergroupdelegationEditObjectV1Response UsergroupdelegationEditObjectV1(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = UsergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<UsergroupdelegationEditObjectV1Response> localVarResponse = UsergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +664,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiUsergroupdelegationID">The unique ID of the Usergroupdelegation</param>
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> UsergroupdelegationEditObjectV1WithHttpInfo(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of UsergroupdelegationEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UsergroupdelegationEditObjectV1Response> UsergroupdelegationEditObjectV1WithHttpInfo(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'usergroupdelegationEditObjectV1Request' is set
             if (usergroupdelegationEditObjectV1Request == null)
@@ -683,6 +685,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -707,7 +710,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<UsergroupdelegationEditObjectV1Response>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UsergroupdelegationEditObjectV1", localVarResponse);
@@ -728,10 +731,10 @@ namespace eZmaxApi.Api
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> UsergroupdelegationEditObjectV1Async(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of UsergroupdelegationEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<UsergroupdelegationEditObjectV1Response> UsergroupdelegationEditObjectV1Async(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await UsergroupdelegationEditObjectV1WithHttpInfoAsync(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UsergroupdelegationEditObjectV1Response> localVarResponse = await UsergroupdelegationEditObjectV1WithHttpInfoAsync(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +746,8 @@ namespace eZmaxApi.Api
         /// <param name="usergroupdelegationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> UsergroupdelegationEditObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (UsergroupdelegationEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UsergroupdelegationEditObjectV1Response>> UsergroupdelegationEditObjectV1WithHttpInfoAsync(int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'usergroupdelegationEditObjectV1Request' is set
             if (usergroupdelegationEditObjectV1Request == null)
@@ -789,7 +792,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<UsergroupdelegationEditObjectV1Response>("/1/object/usergroupdelegation/{pkiUsergroupdelegationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -836,6 +839,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

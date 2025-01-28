@@ -107,7 +107,7 @@ catch (ApiException e)
 
 <a id="usergroupdelegationdeleteobjectv1"></a>
 # **UsergroupdelegationDeleteObjectV1**
-> CommonResponse UsergroupdelegationDeleteObjectV1 (int pkiUsergroupdelegationID)
+> UsergroupdelegationDeleteObjectV1Response UsergroupdelegationDeleteObjectV1 (int pkiUsergroupdelegationID)
 
 Delete an existing Usergroupdelegation
 
@@ -138,7 +138,7 @@ namespace Example
             try
             {
                 // Delete an existing Usergroupdelegation
-                CommonResponse result = apiInstance.UsergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
+                UsergroupdelegationDeleteObjectV1Response result = apiInstance.UsergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -159,7 +159,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Delete an existing Usergroupdelegation
-    ApiResponse<CommonResponse> response = apiInstance.UsergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
+    ApiResponse<UsergroupdelegationDeleteObjectV1Response> response = apiInstance.UsergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -180,7 +180,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupdelegationDeleteObjectV1Response**](UsergroupdelegationDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ catch (ApiException e)
 
 <a id="usergroupdelegationeditobjectv1"></a>
 # **UsergroupdelegationEditObjectV1**
-> CommonResponse UsergroupdelegationEditObjectV1 (int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request)
+> UsergroupdelegationEditObjectV1Response UsergroupdelegationEditObjectV1 (int pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request)
 
 Edit an existing Usergroupdelegation
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Edit an existing Usergroupdelegation
-                CommonResponse result = apiInstance.UsergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+                UsergroupdelegationEditObjectV1Response result = apiInstance.UsergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -255,7 +255,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Usergroupdelegation
-    ApiResponse<CommonResponse> response = apiInstance.UsergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+    ApiResponse<UsergroupdelegationEditObjectV1Response> response = apiInstance.UsergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -277,7 +277,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupdelegationEditObjectV1Response**](UsergroupdelegationEditObjectV1Response.md)
 
 ### Authorization
 

@@ -36,8 +36,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfolderCreateObjectV1Request" /> class.
         /// </summary>
         /// <param name="objEzsignfolder">objEzsignfolder.</param>
-        /// <param name="objEzsignfolderCompound">An Ezsignfolder Object and children to create a complete structure.</param>
-        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest objEzsignfolder = default(EzsignfolderRequest), EzsignfolderRequest objEzsignfolderCompound = default(EzsignfolderRequest))
+        /// <param name="objEzsignfolderCompound">objEzsignfolderCompound.</param>
+        public EzsignfolderCreateObjectV1Request(EzsignfolderRequest objEzsignfolder = default(EzsignfolderRequest), EzsignfolderRequestCompound objEzsignfolderCompound = default(EzsignfolderRequestCompound))
         {
             this.ObjEzsignfolder = objEzsignfolder;
             this.ObjEzsignfolderCompound = objEzsignfolderCompound;
@@ -50,11 +50,10 @@ namespace eZmaxApi.Model
         public EzsignfolderRequest ObjEzsignfolder { get; set; }
 
         /// <summary>
-        /// An Ezsignfolder Object and children to create a complete structure
+        /// Gets or Sets ObjEzsignfolderCompound
         /// </summary>
-        /// <value>An Ezsignfolder Object and children to create a complete structure</value>
         [DataMember(Name = "objEzsignfolderCompound", EmitDefaultValue = false)]
-        public EzsignfolderRequest ObjEzsignfolderCompound { get; set; }
+        public EzsignfolderRequestCompound ObjEzsignfolderCompound { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

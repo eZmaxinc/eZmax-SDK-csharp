@@ -103,7 +103,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the File
         /// </summary>
         /// <value>The Base64 encoded binary content of the File</value>
-        /* <example>[B@61d9efe0</example>*/
+        /* <example>[B@7eb01b12</example>*/
         [DataMember(Name = "sFileBase64", EmitDefaultValue = false)]
         public byte[] SFileBase64 { get; set; }
 

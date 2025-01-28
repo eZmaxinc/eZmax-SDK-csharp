@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse CorsDeleteObjectV1(int pkiCorsID, int operationIndex = 0);
+        /// <returns>CorsDeleteObjectV1Response</returns>
+        CorsDeleteObjectV1Response CorsDeleteObjectV1(int pkiCorsID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Cors
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> CorsDeleteObjectV1WithHttpInfo(int pkiCorsID, int operationIndex = 0);
+        /// <returns>ApiResponse of CorsDeleteObjectV1Response</returns>
+        ApiResponse<CorsDeleteObjectV1Response> CorsDeleteObjectV1WithHttpInfo(int pkiCorsID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Cors
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse CorsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0);
+        /// <returns>CorsEditObjectV1Response</returns>
+        CorsEditObjectV1Response CorsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Cors
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> CorsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of CorsEditObjectV1Response</returns>
+        ApiResponse<CorsEditObjectV1Response> CorsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Cors
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> CorsDeleteObjectV1Async(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CorsDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<CorsDeleteObjectV1Response> CorsDeleteObjectV1Async(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Cors
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> CorsDeleteObjectV1WithHttpInfoAsync(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CorsDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CorsDeleteObjectV1Response>> CorsDeleteObjectV1WithHttpInfoAsync(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Cors
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> CorsEditObjectV1Async(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of CorsEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<CorsEditObjectV1Response> CorsEditObjectV1Async(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Cors
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> CorsEditObjectV1WithHttpInfoAsync(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (CorsEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CorsEditObjectV1Response>> CorsEditObjectV1WithHttpInfoAsync(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Cors
         /// </summary>
@@ -383,6 +383,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -505,10 +506,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse CorsDeleteObjectV1(int pkiCorsID, int operationIndex = 0)
+        /// <returns>CorsDeleteObjectV1Response</returns>
+        public CorsDeleteObjectV1Response CorsDeleteObjectV1(int pkiCorsID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = CorsDeleteObjectV1WithHttpInfo(pkiCorsID);
+            eZmaxApi.Client.ApiResponse<CorsDeleteObjectV1Response> localVarResponse = CorsDeleteObjectV1WithHttpInfo(pkiCorsID);
             return localVarResponse.Data;
         }
 
@@ -518,9 +519,82 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> CorsDeleteObjectV1WithHttpInfo(int pkiCorsID, int operationIndex = 0)
+        /// <returns>ApiResponse of CorsDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CorsDeleteObjectV1Response> CorsDeleteObjectV1WithHttpInfo(int pkiCorsID, int operationIndex = 0)
         {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCorsID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCorsID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCorsApi.CorsDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<CorsDeleteObjectV1Response>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CorsDeleteObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCorsID">The unique ID of the Cors</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CorsDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<CorsDeleteObjectV1Response> CorsDeleteObjectV1Async(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<CorsDeleteObjectV1Response> localVarResponse = await CorsDeleteObjectV1WithHttpInfoAsync(pkiCorsID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Cors 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCorsID">The unique ID of the Cors</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CorsDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CorsDeleteObjectV1Response>> CorsDeleteObjectV1WithHttpInfoAsync(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -555,79 +629,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("CorsDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Cors 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCorsID">The unique ID of the Cors</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> CorsDeleteObjectV1Async(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await CorsDeleteObjectV1WithHttpInfoAsync(pkiCorsID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Cors 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiCorsID">The unique ID of the Cors</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> CorsDeleteObjectV1WithHttpInfoAsync(int pkiCorsID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiCorsID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCorsID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectCorsApi.CorsDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CorsDeleteObjectV1Response>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +650,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse CorsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0)
+        /// <returns>CorsEditObjectV1Response</returns>
+        public CorsEditObjectV1Response CorsEditObjectV1(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = CorsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<CorsEditObjectV1Response> localVarResponse = CorsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +664,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiCorsID">The unique ID of the Cors</param>
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> CorsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of CorsEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CorsEditObjectV1Response> CorsEditObjectV1WithHttpInfo(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'corsEditObjectV1Request' is set
             if (corsEditObjectV1Request == null)
@@ -683,6 +685,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -707,7 +710,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<CorsEditObjectV1Response>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CorsEditObjectV1", localVarResponse);
@@ -728,10 +731,10 @@ namespace eZmaxApi.Api
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> CorsEditObjectV1Async(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of CorsEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<CorsEditObjectV1Response> CorsEditObjectV1Async(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await CorsEditObjectV1WithHttpInfoAsync(pkiCorsID, corsEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<CorsEditObjectV1Response> localVarResponse = await CorsEditObjectV1WithHttpInfoAsync(pkiCorsID, corsEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +746,8 @@ namespace eZmaxApi.Api
         /// <param name="corsEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> CorsEditObjectV1WithHttpInfoAsync(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (CorsEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CorsEditObjectV1Response>> CorsEditObjectV1WithHttpInfoAsync(int pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'corsEditObjectV1Request' is set
             if (corsEditObjectV1Request == null)
@@ -789,7 +792,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<CorsEditObjectV1Response>("/1/object/cors/{pkiCorsID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -836,6 +839,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

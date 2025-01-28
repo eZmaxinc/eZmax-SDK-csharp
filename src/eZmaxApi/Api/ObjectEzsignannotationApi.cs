@@ -56,8 +56,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsignannotationDeleteObjectV1(int pkiEzsignannotationID, int operationIndex = 0);
+        /// <returns>EzsignannotationDeleteObjectV1Response</returns>
+        EzsignannotationDeleteObjectV1Response EzsignannotationDeleteObjectV1(int pkiEzsignannotationID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsignannotation
@@ -68,8 +68,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsignannotationDeleteObjectV1WithHttpInfo(int pkiEzsignannotationID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignannotationDeleteObjectV1Response</returns>
+        ApiResponse<EzsignannotationDeleteObjectV1Response> EzsignannotationDeleteObjectV1WithHttpInfo(int pkiEzsignannotationID, int operationIndex = 0);
         /// <summary>
         /// Edit an existing Ezsignannotation
         /// </summary>
@@ -77,8 +77,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsignannotationEditObjectV1Response</returns>
+        EzsignannotationEditObjectV1Response EzsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Ezsignannotation
@@ -90,8 +90,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsignannotationEditObjectV1WithHttpInfo(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsignannotationEditObjectV1Response</returns>
+        ApiResponse<EzsignannotationEditObjectV1Response> EzsignannotationEditObjectV1WithHttpInfo(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsignannotation
         /// </summary>
@@ -156,8 +156,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsignannotationDeleteObjectV1Async(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsignannotationDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignannotationDeleteObjectV1Response> EzsignannotationDeleteObjectV1Async(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsignannotation
@@ -169,8 +169,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignannotationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignannotationDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignannotationDeleteObjectV1Response>> EzsignannotationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsignannotation
         /// </summary>
@@ -182,8 +182,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsignannotationEditObjectV1Async(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsignannotationEditObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsignannotationEditObjectV1Response> EzsignannotationEditObjectV1Async(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Edit an existing Ezsignannotation
@@ -196,8 +196,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsignannotationEditObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsignannotationEditObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsignannotationEditObjectV1Response>> EzsignannotationEditObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Ezsignannotation
         /// </summary>
@@ -383,6 +383,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -505,10 +506,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsignannotationDeleteObjectV1(int pkiEzsignannotationID, int operationIndex = 0)
+        /// <returns>EzsignannotationDeleteObjectV1Response</returns>
+        public EzsignannotationDeleteObjectV1Response EzsignannotationDeleteObjectV1(int pkiEzsignannotationID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
+            eZmaxApi.Client.ApiResponse<EzsignannotationDeleteObjectV1Response> localVarResponse = EzsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
             return localVarResponse.Data;
         }
 
@@ -518,9 +519,82 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignannotationDeleteObjectV1WithHttpInfo(int pkiEzsignannotationID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignannotationDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignannotationDeleteObjectV1Response> EzsignannotationDeleteObjectV1WithHttpInfo(int pkiEzsignannotationID, int operationIndex = 0)
         {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsignannotationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignannotationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsignannotationApi.EzsignannotationDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<EzsignannotationDeleteObjectV1Response>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsignannotationDeleteObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsignannotation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignannotationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsignannotationDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignannotationDeleteObjectV1Response> EzsignannotationDeleteObjectV1Async(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsignannotationDeleteObjectV1Response> localVarResponse = await EzsignannotationDeleteObjectV1WithHttpInfoAsync(pkiEzsignannotationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsignannotation 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsignannotationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsignannotationDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignannotationDeleteObjectV1Response>> EzsignannotationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
@@ -555,79 +629,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsignannotationDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Ezsignannotation 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignannotationID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsignannotationDeleteObjectV1Async(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignannotationDeleteObjectV1WithHttpInfoAsync(pkiEzsignannotationID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Ezsignannotation 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsignannotationID"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignannotationDeleteObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsignannotationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsignannotationID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectEzsignannotationApi.EzsignannotationDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsignannotationDeleteObjectV1Response>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -648,10 +650,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsignannotationEditObjectV1Response</returns>
+        public EzsignannotationEditObjectV1Response EzsignannotationEditObjectV1(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsignannotationEditObjectV1Response> localVarResponse = EzsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -662,8 +664,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsignannotationID"></param>
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsignannotationEditObjectV1WithHttpInfo(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsignannotationEditObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsignannotationEditObjectV1Response> EzsignannotationEditObjectV1WithHttpInfo(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsignannotationEditObjectV1Request' is set
             if (ezsignannotationEditObjectV1Request == null)
@@ -683,6 +685,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -707,7 +710,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<CommonResponse>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<EzsignannotationEditObjectV1Response>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsignannotationEditObjectV1", localVarResponse);
@@ -728,10 +731,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsignannotationEditObjectV1Async(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsignannotationEditObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsignannotationEditObjectV1Response> EzsignannotationEditObjectV1Async(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsignannotationEditObjectV1WithHttpInfoAsync(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsignannotationEditObjectV1Response> localVarResponse = await EzsignannotationEditObjectV1WithHttpInfoAsync(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -743,8 +746,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsignannotationEditObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsignannotationEditObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsignannotationEditObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsignannotationEditObjectV1Response>> EzsignannotationEditObjectV1WithHttpInfoAsync(int pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsignannotationEditObjectV1Request' is set
             if (ezsignannotationEditObjectV1Request == null)
@@ -789,7 +792,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<CommonResponse>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsignannotationEditObjectV1Response>("/1/object/ezsignannotation/{pkiEzsignannotationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -836,6 +839,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);

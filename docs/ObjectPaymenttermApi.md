@@ -109,7 +109,7 @@ catch (ApiException e)
 
 <a id="paymenttermeditobjectv1"></a>
 # **PaymenttermEditObjectV1**
-> CommonResponse PaymenttermEditObjectV1 (int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request)
+> PaymenttermEditObjectV1Response PaymenttermEditObjectV1 (int pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -141,7 +141,7 @@ namespace Example
             try
             {
                 // Edit an existing Paymentterm
-                CommonResponse result = apiInstance.PaymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
+                PaymenttermEditObjectV1Response result = apiInstance.PaymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -162,7 +162,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Edit an existing Paymentterm
-    ApiResponse<CommonResponse> response = apiInstance.PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
+    ApiResponse<PaymenttermEditObjectV1Response> response = apiInstance.PaymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
 
 ### Authorization
 

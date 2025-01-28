@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// The Channel on which to route the websocket message
         /// </summary>
         /// <value>The Channel on which to route the websocket message</value>
-        /* <example>Ch@nnel_1.0</example>*/
+        /* <example>Ch@nnel_1.0_124547_3453_4563_567</example>*/
         [DataMember(Name = "sWebsocketChannel", IsRequired = true, EmitDefaultValue = true)]
         public string SWebsocketChannel { get; set; }
 

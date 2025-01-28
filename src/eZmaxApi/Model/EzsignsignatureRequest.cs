@@ -293,7 +293,7 @@ namespace eZmaxApi.Model
         /// A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
         /// </summary>
         /// <value>A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**</value>
-        /* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
+        /* <example>^[0-9]{9}$</example>*/
         [DataMember(Name = "sEzsignsignatureRegexp", EmitDefaultValue = false)]
         public string SEzsignsignatureRegexp { get; set; }
 

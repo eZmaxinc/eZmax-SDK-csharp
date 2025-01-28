@@ -307,7 +307,7 @@ namespace eZmaxApi.Model
         /// A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
         /// </summary>
         /// <value>A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**</value>
-        /* <example>/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/</example>*/
+        /* <example>^.{0,30}$</example>*/
         [DataMember(Name = "sEzsigntemplatesignatureRegexp", EmitDefaultValue = false)]
         public string SEzsigntemplatesignatureRegexp { get; set; }
 

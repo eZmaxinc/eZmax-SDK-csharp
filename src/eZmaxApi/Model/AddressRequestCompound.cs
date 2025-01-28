@@ -162,7 +162,7 @@ namespace eZmaxApi.Model
         /// The Longitude of the Address
         /// </summary>
         /// <value>The Longitude of the Address</value>
-        /* <example>doej</example>*/
+        /* <example>73.5674</example>*/
         [DataMember(Name = "fAddressLongitude", EmitDefaultValue = false)]
         public string FAddressLongitude { get; set; }
 
@@ -170,7 +170,7 @@ namespace eZmaxApi.Model
         /// The Latitude of the Address
         /// </summary>
         /// <value>The Latitude of the Address</value>
-        /* <example>doej</example>*/
+        /* <example>45.5019</example>*/
         [DataMember(Name = "fAddressLatitude", EmitDefaultValue = false)]
         public string FAddressLatitude { get; set; }
 

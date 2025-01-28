@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **EEzsigntemplateformfieldPositioningoccurence** | **FieldEEzsigntemplateformfieldPositioningoccurence** |  | [optional] 
 **EEzsigntemplateformfieldHorizontalalignment** | **EnumHorizontalalignment** |  | [optional] 
 **ObjTextstylestatic** | [**TextstylestaticRequestCompound**](TextstylestaticRequestCompound.md) |  | [optional] 
-**AObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyRequestCompound&gt;**](EzsigntemplateelementdependencyRequest.md) |  | [optional] 
+**AObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyRequestCompound&gt;**](EzsigntemplateelementdependencyRequestCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

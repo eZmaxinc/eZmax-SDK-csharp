@@ -101,7 +101,7 @@ namespace eZmaxApi.Model
         /// The similarpercentage of the Ezsigntemplatedocumentpagerecognition
         /// </summary>
         /// <value>The similarpercentage of the Ezsigntemplatedocumentpagerecognition</value>
-        /* <example>50</example>*/
+        /* <example>75</example>*/
         [DataMember(Name = "iEzsigntemplatedocumentpagerecognitionSimilarpercentage", EmitDefaultValue = false)]
         public int IEzsigntemplatedocumentpagerecognitionSimilarpercentage { get; set; }
 

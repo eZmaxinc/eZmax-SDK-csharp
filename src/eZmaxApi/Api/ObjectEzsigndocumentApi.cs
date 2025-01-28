@@ -37,9 +37,9 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
+        /// <returns>EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        CommonResponse EzsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0);
+        EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Apply an Ezsigntemplate to the Ezsigndocument.
@@ -51,9 +51,9 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        ApiResponse<CommonResponse> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0);
+        ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0);
         /// <summary>
         /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
@@ -212,8 +212,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentDeclineToSignV1(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0);
+        /// <returns>EzsigndocumentDeclineToSignV1Response</returns>
+        EzsigndocumentDeclineToSignV1Response EzsigndocumentDeclineToSignV1(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Decline to sign
@@ -225,16 +225,16 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentDeclineToSignV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentDeclineToSignV1Response</returns>
+        ApiResponse<EzsigndocumentDeclineToSignV1Response> EzsigndocumentDeclineToSignV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0);
         /// <summary>
         /// Delete an existing Ezsigndocument
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentDeleteObjectV1(int pkiEzsigndocumentID, int operationIndex = 0);
+        /// <returns>EzsigndocumentDeleteObjectV1Response</returns>
+        EzsigndocumentDeleteObjectV1Response EzsigndocumentDeleteObjectV1(int pkiEzsigndocumentID, int operationIndex = 0);
 
         /// <summary>
         /// Delete an existing Ezsigndocument
@@ -245,8 +245,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentDeleteObjectV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentDeleteObjectV1Response</returns>
+        ApiResponse<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
         /// <summary>
         /// Edit multiple Ezsignannotations
         /// </summary>
@@ -354,8 +354,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>EzsigndocumentEndPrematurelyV1Response</returns>
+        EzsigndocumentEndPrematurelyV1Response EzsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// End prematurely
@@ -367,8 +367,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentEndPrematurelyV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentEndPrematurelyV1Response</returns>
+        ApiResponse<EzsigndocumentEndPrematurelyV1Response> EzsigndocumentEndPrematurelyV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
         /// <summary>
         /// Extract text from Ezsigndocument area
         /// </summary>
@@ -404,8 +404,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>EzsigndocumentFlattenV1Response</returns>
+        EzsigndocumentFlattenV1Response EzsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Flatten
@@ -417,8 +417,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentFlattenV1Response</returns>
+        ApiResponse<EzsigndocumentFlattenV1Response> EzsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
         /// <summary>
         /// Retrieve actionable elements for the Ezsigndocument
         /// </summary>
@@ -747,8 +747,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>EzsigndocumentPatchObjectV1Response</returns>
+        EzsigndocumentPatchObjectV1Response EzsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Patch an existing Ezsigndocument
@@ -760,8 +760,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentPatchObjectV1Response</returns>
+        ApiResponse<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0);
         /// <summary>
         /// Submit the Ezsignform
         /// </summary>
@@ -769,8 +769,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentSubmitEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0);
+        /// <returns>EzsigndocumentSubmitEzsignformV1Response</returns>
+        EzsigndocumentSubmitEzsignformV1Response EzsigndocumentSubmitEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Submit the Ezsignform
@@ -782,8 +782,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentSubmitEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentSubmitEzsignformV1Response</returns>
+        ApiResponse<EzsigndocumentSubmitEzsignformV1Response> EzsigndocumentSubmitEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0);
         /// <summary>
         /// Unsend the Ezsigndocument
         /// </summary>
@@ -794,8 +794,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        CommonResponse EzsigndocumentUnsendV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>EzsigndocumentUnsendV1Response</returns>
+        EzsigndocumentUnsendV1Response EzsigndocumentUnsendV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
 
         /// <summary>
         /// Unsend the Ezsigndocument
@@ -807,8 +807,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        ApiResponse<CommonResponse> EzsigndocumentUnsendV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
+        /// <returns>ApiResponse of EzsigndocumentUnsendV1Response</returns>
+        ApiResponse<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -829,9 +829,9 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentApplyEzsigntemplateV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Apply an Ezsigntemplate to the Ezsigndocument.
@@ -844,9 +844,9 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV1Response)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response>> EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Apply an Ezsigntemplate to the Ezsigndocument.
         /// </summary>
@@ -1018,8 +1018,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentDeclineToSignV1Async(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentDeclineToSignV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentDeclineToSignV1Response> EzsigndocumentDeclineToSignV1Async(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Decline to sign
@@ -1032,8 +1032,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentDeclineToSignV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentDeclineToSignV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentDeclineToSignV1Response>> EzsigndocumentDeclineToSignV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete an existing Ezsigndocument
         /// </summary>
@@ -1044,8 +1044,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentDeleteObjectV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete an existing Ezsigndocument
@@ -1057,8 +1057,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentDeleteObjectV1Response>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit multiple Ezsignannotations
         /// </summary>
@@ -1178,8 +1178,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentEndPrematurelyV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentEndPrematurelyV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentEndPrematurelyV1Response> EzsigndocumentEndPrematurelyV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// End prematurely
@@ -1192,8 +1192,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentEndPrematurelyV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentEndPrematurelyV1Response>> EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Extract text from Ezsigndocument area
         /// </summary>
@@ -1232,8 +1232,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentFlattenV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentFlattenV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentFlattenV1Response> EzsigndocumentFlattenV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Flatten
@@ -1246,8 +1246,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentFlattenV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentFlattenV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentFlattenV1Response>> EzsigndocumentFlattenV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve actionable elements for the Ezsigndocument
         /// </summary>
@@ -1640,8 +1640,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentPatchObjectV1Async(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentPatchObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1Async(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Patch an existing Ezsigndocument
@@ -1654,8 +1654,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentPatchObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentPatchObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentPatchObjectV1Response>> EzsigndocumentPatchObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Submit the Ezsignform
         /// </summary>
@@ -1667,8 +1667,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentSubmitEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentSubmitEzsignformV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentSubmitEzsignformV1Response> EzsigndocumentSubmitEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Submit the Ezsignform
@@ -1681,8 +1681,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentSubmitEzsignformV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentSubmitEzsignformV1Response>> EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Unsend the Ezsigndocument
         /// </summary>
@@ -1694,8 +1694,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        System.Threading.Tasks.Task<CommonResponse> EzsigndocumentUnsendV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of EzsigndocumentUnsendV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Unsend the Ezsigndocument
@@ -1708,8 +1708,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommonResponse>> EzsigndocumentUnsendV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (EzsigndocumentUnsendV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentUnsendV1Response>> EzsigndocumentUnsendV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1837,11 +1837,11 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
+        /// <returns>EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        public CommonResponse EzsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0)
+        public EzsigndocumentApplyEzsigntemplateV1Response EzsigndocumentApplyEzsigntemplateV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> localVarResponse = EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
             return localVarResponse.Data;
         }
 
@@ -1852,9 +1852,9 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0)
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV1Request' is set
             if (ezsigndocumentApplyEzsigntemplateV1Request == null)
@@ -1874,6 +1874,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -1898,7 +1899,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigndocumentApplyEzsigntemplateV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateV1", localVarResponse);
@@ -1919,11 +1920,11 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateV1Response</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentApplyEzsigntemplateV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV1Response> EzsigndocumentApplyEzsigntemplateV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> localVarResponse = await EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1935,9 +1936,9 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV1Response)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response>> EzsigndocumentApplyEzsigntemplateV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV1Request' is set
             if (ezsigndocumentApplyEzsigntemplateV1Request == null)
@@ -1982,7 +1983,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentApplyEzsigntemplateV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -2038,6 +2039,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2200,6 +2202,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2362,6 +2365,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2524,6 +2528,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2684,6 +2689,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2842,6 +2848,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -2965,10 +2972,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentDeclineToSignV1(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0)
+        /// <returns>EzsigndocumentDeclineToSignV1Response</returns>
+        public EzsigndocumentDeclineToSignV1Response EzsigndocumentDeclineToSignV1(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentDeclineToSignV1Response> localVarResponse = EzsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
             return localVarResponse.Data;
         }
 
@@ -2979,14 +2986,97 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentDeclineToSignV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentDeclineToSignV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentDeclineToSignV1Response> EzsigndocumentDeclineToSignV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentDeclineToSignV1Request' is set
             if (ezsigndocumentDeclineToSignV1Request == null)
             {
                 throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentDeclineToSignV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentDeclineToSignV1");
             }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentDeclineToSignV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentDeclineToSignV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsigndocumentDeclineToSignV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentDeclineToSignV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Decline to sign Decline to sign
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentDeclineToSignV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentDeclineToSignV1Response> EzsigndocumentDeclineToSignV1Async(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentDeclineToSignV1Response> localVarResponse = await EzsigndocumentDeclineToSignV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Decline to sign Decline to sign
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentDeclineToSignV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentDeclineToSignV1Response>> EzsigndocumentDeclineToSignV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsigndocumentDeclineToSignV1Request' is set
+            if (ezsigndocumentDeclineToSignV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentDeclineToSignV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentDeclineToSignV1");
+            }
+
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -3024,89 +3114,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigndocumentDeclineToSignV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Decline to sign Decline to sign
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentDeclineToSignV1Async(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentDeclineToSignV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Decline to sign Decline to sign
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="ezsigndocumentDeclineToSignV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentDeclineToSignV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'ezsigndocumentDeclineToSignV1Request' is set
-            if (ezsigndocumentDeclineToSignV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentDeclineToSignV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentDeclineToSignV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
-            localVarRequestOptions.Data = ezsigndocumentDeclineToSignV1Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentDeclineToSignV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentDeclineToSignV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3126,10 +3134,10 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentDeleteObjectV1(int pkiEzsigndocumentID, int operationIndex = 0)
+        /// <returns>EzsigndocumentDeleteObjectV1Response</returns>
+        public EzsigndocumentDeleteObjectV1Response EzsigndocumentDeleteObjectV1(int pkiEzsigndocumentID, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentDeleteObjectV1Response> localVarResponse = EzsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
             return localVarResponse.Data;
         }
 
@@ -3139,8 +3147,8 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentDeleteObjectV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -3153,6 +3161,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3176,7 +3185,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<EzsigndocumentDeleteObjectV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentDeleteObjectV1", localVarResponse);
@@ -3196,10 +3205,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentDeleteObjectV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndocumentDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentDeleteObjectV1Response> EzsigndocumentDeleteObjectV1Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentDeleteObjectV1WithHttpInfoAsync(pkiEzsigndocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentDeleteObjectV1Response> localVarResponse = await EzsigndocumentDeleteObjectV1WithHttpInfoAsync(pkiEzsigndocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3210,8 +3219,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndocumentDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentDeleteObjectV1Response>> EzsigndocumentDeleteObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -3248,7 +3257,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsigndocumentDeleteObjectV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -3304,6 +3313,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3466,6 +3476,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3628,6 +3639,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3790,6 +3802,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3917,10 +3930,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>EzsigndocumentEndPrematurelyV1Response</returns>
+        public EzsigndocumentEndPrematurelyV1Response EzsigndocumentEndPrematurelyV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentEndPrematurelyV1Response> localVarResponse = EzsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
             return localVarResponse.Data;
         }
 
@@ -3931,8 +3944,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentEndPrematurelyV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentEndPrematurelyV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentEndPrematurelyV1Response> EzsigndocumentEndPrematurelyV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3952,6 +3965,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -3976,7 +3990,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigndocumentEndPrematurelyV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentEndPrematurelyV1", localVarResponse);
@@ -3997,10 +4011,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentEndPrematurelyV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndocumentEndPrematurelyV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentEndPrematurelyV1Response> EzsigndocumentEndPrematurelyV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentEndPrematurelyV1Response> localVarResponse = await EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4012,8 +4026,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndocumentEndPrematurelyV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentEndPrematurelyV1Response>> EzsigndocumentEndPrematurelyV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4058,7 +4072,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentEndPrematurelyV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4114,6 +4128,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -4241,10 +4256,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>EzsigndocumentFlattenV1Response</returns>
+        public EzsigndocumentFlattenV1Response EzsigndocumentFlattenV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentFlattenV1Response> localVarResponse = EzsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
             return localVarResponse.Data;
         }
 
@@ -4255,8 +4270,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentFlattenV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentFlattenV1Response> EzsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4276,6 +4291,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -4300,7 +4316,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigndocumentFlattenV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentFlattenV1", localVarResponse);
@@ -4321,10 +4337,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentFlattenV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndocumentFlattenV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentFlattenV1Response> EzsigndocumentFlattenV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentFlattenV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentFlattenV1Response> localVarResponse = await EzsigndocumentFlattenV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4336,8 +4352,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentFlattenV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndocumentFlattenV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentFlattenV1Response>> EzsigndocumentFlattenV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4382,7 +4398,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentFlattenV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -4429,6 +4445,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -4571,6 +4588,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -4713,6 +4731,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -4863,6 +4882,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5015,6 +5035,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5157,6 +5178,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5299,6 +5321,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5441,6 +5464,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5583,6 +5607,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5725,6 +5750,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -5869,6 +5895,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6015,6 +6042,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6159,6 +6187,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6301,6 +6330,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6452,6 +6482,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6579,10 +6610,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>EzsigndocumentPatchObjectV1Response</returns>
+        public EzsigndocumentPatchObjectV1Response EzsigndocumentPatchObjectV1(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentPatchObjectV1Response> localVarResponse = EzsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
@@ -6593,14 +6624,97 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentPatchObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentPatchObjectV1Request' is set
             if (ezsigndocumentPatchObjectV1Request == null)
             {
                 throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentPatchObjectV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentPatchObjectV1");
             }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentPatchObjectV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentPatchObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<EzsigndocumentPatchObjectV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentPatchObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Patch an existing Ezsigndocument 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentPatchObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1Async(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentPatchObjectV1Response> localVarResponse = await EzsigndocumentPatchObjectV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch an existing Ezsigndocument 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPatchObjectV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentPatchObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentPatchObjectV1Response>> EzsigndocumentPatchObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsigndocumentPatchObjectV1Request' is set
+            if (ezsigndocumentPatchObjectV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentPatchObjectV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentPatchObjectV1");
+            }
+
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
 
@@ -6638,89 +6752,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Patch<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("EzsigndocumentPatchObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Patch an existing Ezsigndocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="ezsigndocumentPatchObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentPatchObjectV1Async(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentPatchObjectV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Patch an existing Ezsigndocument 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiEzsigndocumentID"></param>
-        /// <param name="ezsigndocumentPatchObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentPatchObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-        {
-            // verify the required parameter 'ezsigndocumentPatchObjectV1Request' is set
-            if (ezsigndocumentPatchObjectV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentPatchObjectV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentPatchObjectV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
-            localVarRequestOptions.Data = ezsigndocumentPatchObjectV1Request;
-
-            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentPatchObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PatchAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<EzsigndocumentPatchObjectV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6741,10 +6773,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentSubmitEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0)
+        /// <returns>EzsigndocumentSubmitEzsignformV1Response</returns>
+        public EzsigndocumentSubmitEzsignformV1Response EzsigndocumentSubmitEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentSubmitEzsignformV1Response> localVarResponse = EzsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
             return localVarResponse.Data;
         }
 
@@ -6755,8 +6787,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentSubmitEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentSubmitEzsignformV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentSubmitEzsignformV1Response> EzsigndocumentSubmitEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentSubmitEzsignformV1Request' is set
             if (ezsigndocumentSubmitEzsignformV1Request == null)
@@ -6776,6 +6808,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6800,7 +6833,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigndocumentSubmitEzsignformV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentSubmitEzsignformV1", localVarResponse);
@@ -6821,10 +6854,10 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentSubmitEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndocumentSubmitEzsignformV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentSubmitEzsignformV1Response> EzsigndocumentSubmitEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentSubmitEzsignformV1Response> localVarResponse = await EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6836,8 +6869,8 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentSubmitEzsignformV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndocumentSubmitEzsignformV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentSubmitEzsignformV1Response>> EzsigndocumentSubmitEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'ezsigndocumentSubmitEzsignformV1Request' is set
             if (ezsigndocumentSubmitEzsignformV1Request == null)
@@ -6882,7 +6915,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentSubmitEzsignformV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6903,10 +6936,10 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CommonResponse</returns>
-        public CommonResponse EzsigndocumentUnsendV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>EzsigndocumentUnsendV1Response</returns>
+        public EzsigndocumentUnsendV1Response EzsigndocumentUnsendV1(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = EzsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentUnsendV1Response> localVarResponse = EzsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
             return localVarResponse.Data;
         }
 
@@ -6917,8 +6950,8 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CommonResponse</returns>
-        public eZmaxApi.Client.ApiResponse<CommonResponse> EzsigndocumentUnsendV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
+        /// <returns>ApiResponse of EzsigndocumentUnsendV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6938,6 +6971,7 @@ namespace eZmaxApi.Api
             };
 
             var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
@@ -6962,7 +6996,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzsigndocumentUnsendV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentUnsendV1", localVarResponse);
@@ -6983,10 +7017,10 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CommonResponse</returns>
-        public async System.Threading.Tasks.Task<CommonResponse> EzsigndocumentUnsendV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of EzsigndocumentUnsendV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentUnsendV1Response> EzsigndocumentUnsendV1Async(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
-            eZmaxApi.Client.ApiResponse<CommonResponse> localVarResponse = await EzsigndocumentUnsendV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzsigndocumentUnsendV1Response> localVarResponse = await EzsigndocumentUnsendV1WithHttpInfoAsync(pkiEzsigndocumentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6998,8 +7032,8 @@ namespace eZmaxApi.Api
         /// <param name="body"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CommonResponse)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommonResponse>> EzsigndocumentUnsendV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (EzsigndocumentUnsendV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentUnsendV1Response>> EzsigndocumentUnsendV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7044,7 +7078,7 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CommonResponse>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentUnsendV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
