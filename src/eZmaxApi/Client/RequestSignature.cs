@@ -17,11 +17,11 @@ namespace eZmaxApi.Api
                                                             RestRequest request,
                                                                  String jsonBody) 
         {
-            //Get required "Autorization" & possible "secret"
+            //Get required "Autorization" & possible "Secret"
             //If no secret is defined, we skiped all the processing 
             //to generate the fingerprint and signature
             ////////////////////////////////////////////////////////
-            var sSecret = configuration.GetApiKeyWithPrefix("secret");          		
+            var sSecret = configuration.GetApiKeyWithPrefix("Secret");          		
 			if (sSecret == null) { return; }
             var sAuthorization = configuration.GetApiKeyWithPrefix("Authorization");			
 

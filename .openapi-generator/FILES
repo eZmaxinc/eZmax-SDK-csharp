@@ -3652,7 +3652,6 @@ src/eZmaxApi/Api/ObjectUserstagedApi.cs
 src/eZmaxApi/Api/ObjectVariableexpenseApi.cs
 src/eZmaxApi/Api/ObjectVersionhistoryApi.cs
 src/eZmaxApi/Api/ObjectWebhookApi.cs
-src/eZmaxApi/Api/RequestSignature.cs
 src/eZmaxApi/Api/ScimGroupsApi.cs
 src/eZmaxApi/Api/ScimServiceProviderConfigApi.cs
 src/eZmaxApi/Api/ScimUsersApi.cs
@@ -3671,6 +3670,7 @@ src/eZmaxApi/Client/ISynchronousClient.cs
 src/eZmaxApi/Client/Multimap.cs
 src/eZmaxApi/Client/OpenAPIDateConverter.cs
 src/eZmaxApi/Client/RequestOptions.cs
+src/eZmaxApi/Client/RequestSignature.cs
 src/eZmaxApi/Client/RetryConfiguration.cs
 src/eZmaxApi/Model/AbstractOpenAPISchema.cs
 src/eZmaxApi/Model/ActivesessionGenerateFederationTokenV1Request.cs
