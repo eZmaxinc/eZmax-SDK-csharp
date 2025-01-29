@@ -32,6 +32,8 @@ using FileIO = System.IO.File;
 using Polly;
 using eZmaxApi.Model;
 
+using eZmaxApi.Api;
+
 namespace eZmaxApi.Client
 {
     /// <summary>
@@ -391,6 +393,17 @@ namespace eZmaxApi.Client
                     request.AlwaysMultipartFormData = true;
                 }
             }
+			
+            var customJsonCodec = new CustomJsonCodec(SerializerSettings, configuration);
+            var jsonBody = customJsonCodec.Serialize(options.Data);
+
+            if (jsonBody == "null") {
+            	jsonBody = "";
+            }
+
+            RequestSignature.injectSecurityHeaders(configuration: configuration, 
+                                                         request: request, 
+                                                        jsonBody: jsonBody);
 
             return request;
         }
