@@ -74,6 +74,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigntemplatepublicCreateObjectV1Response</returns>
         ApiResponse<EzsigntemplatepublicCreateObjectV1Response> EzsigntemplatepublicCreateObjectV1WithHttpInfo(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0);
         /// <summary>
+        /// Delete an existing Ezsigntemplatepublic
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatepublicDeleteObjectV1Response</returns>
+        EzsigntemplatepublicDeleteObjectV1Response EzsigntemplatepublicDeleteObjectV1(int pkiEzsigntemplatepublicID, int operationIndex = 0);
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatepublicDeleteObjectV1Response</returns>
+        ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> EzsigntemplatepublicDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, int operationIndex = 0);
+        /// <summary>
         /// Edit an existing Ezsigntemplatepublic
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -292,6 +312,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatepublicCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicCreateObjectV1Response>> EzsigntemplatepublicCreateObjectV1WithHttpInfoAsync(EzsigntemplatepublicCreateObjectV1Request ezsigntemplatepublicCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatepublicDeleteObjectV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatepublicDeleteObjectV1Response> EzsigntemplatepublicDeleteObjectV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepublicDeleteObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatepublicDeleteObjectV1Response>> EzsigntemplatepublicDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Edit an existing Ezsigntemplatepublic
         /// </summary>
@@ -906,6 +951,149 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatepublicCreateObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatepublicDeleteObjectV1Response</returns>
+        public EzsigntemplatepublicDeleteObjectV1Response EzsigntemplatepublicDeleteObjectV1(int pkiEzsigntemplatepublicID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> localVarResponse = EzsigntemplatepublicDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepublicID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatepublicDeleteObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> EzsigntemplatepublicDeleteObjectV1WithHttpInfo(int pkiEzsigntemplatepublicID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatepublicID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatepublicID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatepublicApi.EzsigntemplatepublicDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<EzsigntemplatepublicDeleteObjectV1Response>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatepublicDeleteObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatepublicDeleteObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatepublicDeleteObjectV1Response> EzsigntemplatepublicDeleteObjectV1Async(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> localVarResponse = await EzsigntemplatepublicDeleteObjectV1WithHttpInfoAsync(pkiEzsigntemplatepublicID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing Ezsigntemplatepublic 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatepublicDeleteObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatepublicDeleteObjectV1Response>> EzsigntemplatepublicDeleteObjectV1WithHttpInfoAsync(int pkiEzsigntemplatepublicID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatepublicID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatepublicID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatepublicApi.EzsigntemplatepublicDeleteObjectV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<EzsigntemplatepublicDeleteObjectV1Response>("/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatepublicDeleteObjectV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
