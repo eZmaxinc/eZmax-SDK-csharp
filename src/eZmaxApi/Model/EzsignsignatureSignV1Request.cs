@@ -74,8 +74,9 @@ namespace eZmaxApi.Model
         /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
         /// <param name="sSvg">The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false.</param>
         /// <param name="aObjFile">aObjFile.</param>
+        /// <param name="objCreditcard">objCreditcard.</param>
         /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  (required).</param>
-        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default(int), int fkiFontID = default(int), string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), bool bIsAutomatic = default(bool))
+        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default(int), int fkiFontID = default(int), string sValue = default(string), EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default(EAttachmentsConfirmationDecisionEnum?), string sAttachmentsRefusalReason = default(string), string sSvg = default(string), List<CommonFile> aObjFile = default(List<CommonFile>), CustomCreditcardRequest objCreditcard = default(CustomCreditcardRequest), bool bIsAutomatic = default(bool))
         {
             this.BIsAutomatic = bIsAutomatic;
             this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
@@ -85,6 +86,7 @@ namespace eZmaxApi.Model
             this.SAttachmentsRefusalReason = sAttachmentsRefusalReason;
             this.SSvg = sSvg;
             this.AObjFile = aObjFile;
+            this.ObjCreditcard = objCreditcard;
         }
 
         /// <summary>
@@ -132,6 +134,12 @@ namespace eZmaxApi.Model
         public List<CommonFile> AObjFile { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjCreditcard
+        /// </summary>
+        [DataMember(Name = "objCreditcard", EmitDefaultValue = false)]
+        public CustomCreditcardRequest ObjCreditcard { get; set; }
+
+        /// <summary>
         /// Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
         /// </summary>
         /// <value>Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. </value>
@@ -153,6 +161,7 @@ namespace eZmaxApi.Model
             sb.Append("  SAttachmentsRefusalReason: ").Append(SAttachmentsRefusalReason).Append("\n");
             sb.Append("  SSvg: ").Append(SSvg).Append("\n");
             sb.Append("  AObjFile: ").Append(AObjFile).Append("\n");
+            sb.Append("  ObjCreditcard: ").Append(ObjCreditcard).Append("\n");
             sb.Append("  BIsAutomatic: ").Append(BIsAutomatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

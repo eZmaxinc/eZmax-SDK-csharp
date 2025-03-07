@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ObjReportsubsectionpartHeader** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
 **ObjReportsubsectionpartBody** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
 **ObjReportsubsectionpartFooter** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  | 
+**SReportsubsectionTitle** | **string** | The title of this Reportsubsection | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

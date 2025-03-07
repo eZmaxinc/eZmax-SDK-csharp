@@ -87,11 +87,13 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsignfolderScheduleddispose">The scheduled date at which the Ezsignfolder should be Disposed..</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep.</param>
         /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
+        /// <param name="dtEzsignfolderArchive">The date and time at which the Ezsignfolder was archived..</param>
+        /// <param name="dtEzsignfolderDispose">The date and time at which the Ezsignfolder was disposed..</param>
         /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
         /// <param name="objAudit">objAudit.</param>
         /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         /// <param name="eEzsignfolderAccess">eEzsignfolderAccess.</param>
-        public EzsignfolderResponseV3(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeResponse objEzsignfoldertype = default(CustomEzsignfoldertypeResponse), int fkiTimezoneID = default(int), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default(FieldEEzsignfolderDocumentdependency?), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string), ComputedEEzsignfolderAccess? eEzsignfolderAccess = default(ComputedEEzsignfolderAccess?))
+        public EzsignfolderResponseV3(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeResponse objEzsignfoldertype = default(CustomEzsignfoldertypeResponse), int fkiTimezoneID = default(int), FieldEEzsignfolderCompletion eEzsignfolderCompletion = default(FieldEEzsignfolderCompletion), FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default(FieldEEzsignfolderDocumentdependency?), string sEzsignfoldertypeNameX = default(string), int fkiBillingentityinternalID = default(int), string sBillingentityinternalDescriptionX = default(string), int fkiEzsigntsarequirementID = default(int), string sEzsigntsarequirementDescriptionX = default(string), string sEzsignfolderDescription = default(string), string tEzsignfolderNote = default(string), bool bEzsignfolderIsdisposable = default(bool), int iEzsignfolderSendreminderfirstdays = default(int), int iEzsignfolderSendreminderotherdays = default(int), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderDuedate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderScheduledarchive = default(string), string dtEzsignfolderScheduleddispose = default(string), FieldEEzsignfolderStep? eEzsignfolderStep = default(FieldEEzsignfolderStep?), string dtEzsignfolderClose = default(string), string dtEzsignfolderArchive = default(string), string dtEzsignfolderDispose = default(string), string tEzsignfolderMessage = default(string), CommonAudit objAudit = default(CommonAudit), string sEzsignfolderExternalid = default(string), ComputedEEzsignfolderAccess? eEzsignfolderAccess = default(ComputedEEzsignfolderAccess?))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.EEzsignfolderCompletion = eEzsignfolderCompletion;
@@ -121,6 +123,8 @@ namespace eZmaxApi.Model
             this.DtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
             this.EEzsignfolderStep = eEzsignfolderStep;
             this.DtEzsignfolderClose = dtEzsignfolderClose;
+            this.DtEzsignfolderArchive = dtEzsignfolderArchive;
+            this.DtEzsignfolderDispose = dtEzsignfolderDispose;
             this.TEzsignfolderMessage = tEzsignfolderMessage;
             this.ObjAudit = objAudit;
             this.SEzsignfolderExternalid = sEzsignfolderExternalid;
@@ -285,6 +289,22 @@ namespace eZmaxApi.Model
         public string DtEzsignfolderClose { get; set; }
 
         /// <summary>
+        /// The date and time at which the Ezsignfolder was archived.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder was archived.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtEzsignfolderArchive", EmitDefaultValue = false)]
+        public string DtEzsignfolderArchive { get; set; }
+
+        /// <summary>
+        /// The date and time at which the Ezsignfolder was disposed.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder was disposed.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtEzsignfolderDispose", EmitDefaultValue = false)]
+        public string DtEzsignfolderDispose { get; set; }
+
+        /// <summary>
         /// A custom text message that will be added to the email sent.
         /// </summary>
         /// <value>A custom text message that will be added to the email sent.</value>
@@ -345,6 +365,8 @@ Mary</example>*/
             sb.Append("  DtEzsignfolderScheduleddispose: ").Append(DtEzsignfolderScheduleddispose).Append("\n");
             sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
             sb.Append("  DtEzsignfolderClose: ").Append(DtEzsignfolderClose).Append("\n");
+            sb.Append("  DtEzsignfolderArchive: ").Append(DtEzsignfolderArchive).Append("\n");
+            sb.Append("  DtEzsignfolderDispose: ").Append(DtEzsignfolderDispose).Append("\n");
             sb.Append("  TEzsignfolderMessage: ").Append(TEzsignfolderMessage).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("  SEzsignfolderExternalid: ").Append(SEzsignfolderExternalid).Append("\n");

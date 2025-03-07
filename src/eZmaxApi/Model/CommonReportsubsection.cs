@@ -43,7 +43,8 @@ namespace eZmaxApi.Model
         /// <param name="objReportsubsectionpartHeader">objReportsubsectionpartHeader (required).</param>
         /// <param name="objReportsubsectionpartBody">objReportsubsectionpartBody (required).</param>
         /// <param name="objReportsubsectionpartFooter">objReportsubsectionpartFooter (required).</param>
-        public CommonReportsubsection(CommonReportsubsectionpart objReportsubsectionpartHeader = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartBody = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartFooter = default(CommonReportsubsectionpart))
+        /// <param name="sReportsubsectionTitle">The title of this Reportsubsection.</param>
+        public CommonReportsubsection(CommonReportsubsectionpart objReportsubsectionpartHeader = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartBody = default(CommonReportsubsectionpart), CommonReportsubsectionpart objReportsubsectionpartFooter = default(CommonReportsubsectionpart), string sReportsubsectionTitle = default(string))
         {
             // to ensure "objReportsubsectionpartHeader" is required (not null)
             if (objReportsubsectionpartHeader == null)
@@ -63,6 +64,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objReportsubsectionpartFooter is a required property for CommonReportsubsection and cannot be null");
             }
             this.ObjReportsubsectionpartFooter = objReportsubsectionpartFooter;
+            this.SReportsubsectionTitle = sReportsubsectionTitle;
         }
 
         /// <summary>
@@ -84,6 +86,14 @@ namespace eZmaxApi.Model
         public CommonReportsubsectionpart ObjReportsubsectionpartFooter { get; set; }
 
         /// <summary>
+        /// The title of this Reportsubsection
+        /// </summary>
+        /// <value>The title of this Reportsubsection</value>
+        /* <example>text</example>*/
+        [DataMember(Name = "sReportsubsectionTitle", EmitDefaultValue = false)]
+        public string SReportsubsectionTitle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -94,6 +104,7 @@ namespace eZmaxApi.Model
             sb.Append("  ObjReportsubsectionpartHeader: ").Append(ObjReportsubsectionpartHeader).Append("\n");
             sb.Append("  ObjReportsubsectionpartBody: ").Append(ObjReportsubsectionpartBody).Append("\n");
             sb.Append("  ObjReportsubsectionpartFooter: ").Append(ObjReportsubsectionpartFooter).Append("\n");
+            sb.Append("  SReportsubsectionTitle: ").Append(SReportsubsectionTitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

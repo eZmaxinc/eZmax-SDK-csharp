@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AObjReport** | [**List&lt;CommonReport&gt;**](CommonReport.md) |  | 
 **AObjReportcellstyleCustom** | [**List&lt;CommonReportcellstyle&gt;**](CommonReportcellstyle.md) |  | 
+**AObjReportgroupParameter** | [**List&lt;CommonReportgroupParameter&gt;**](CommonReportgroupParameter.md) |  | 
+**SReportgroupFilename** | **string** | The name of the file | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

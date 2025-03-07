@@ -55,6 +55,7 @@ namespace eZmaxApi.Model
         /// <param name="pkiEzsigntemplateID">The unique ID of the Ezsigntemplate (required).</param>
         /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument.</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
+        /// <param name="objEzsignfoldertype">objEzsignfoldertype.</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="fkiEzdoctemplatedocumentID">The unique ID of the Ezdoctemplatedocument.</param>
         /// <param name="sEzdoctemplatedocumentNameX">The name of the Ezdoctemplatedocument in the language of the requester.</param>
@@ -71,7 +72,7 @@ namespace eZmaxApi.Model
         /// <param name="eEzsigntemplateType">eEzsigntemplateType.</param>
         /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument.</param>
         /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
-        public EzsigntemplateResponseCompoundV3(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), int fkiLanguageID = default(int), int fkiEzdoctemplatedocumentID = default(int), string sEzdoctemplatedocumentNameX = default(string), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), string sEzsigntemplateExternaldescription = default(string), string tEzsigntemplateComment = default(string), FieldEEzsigntemplateRecognition? eEzsigntemplateRecognition = default(FieldEEzsigntemplateRecognition?), string sEzsigntemplateFilenameregexp = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), CommonAudit objAudit = default(CommonAudit), bool bEzsigntemplateEditallowed = default(bool), FieldEEzsigntemplateType? eEzsigntemplateType = default(FieldEEzsigntemplateType?), EzsigntemplatedocumentResponse objEzsigntemplatedocument = default(EzsigntemplatedocumentResponse), List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerResponseCompound>))
+        public EzsigntemplateResponseCompoundV3(int pkiEzsigntemplateID = default(int), int fkiEzsigntemplatedocumentID = default(int), int fkiEzsignfoldertypeID = default(int), CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype = default(CustomEzsignfoldertypeTemplateResponse), int fkiLanguageID = default(int), int fkiEzdoctemplatedocumentID = default(int), string sEzdoctemplatedocumentNameX = default(string), string sLanguageNameX = default(string), string sEzsigntemplateDescription = default(string), string sEzsigntemplateExternaldescription = default(string), string tEzsigntemplateComment = default(string), FieldEEzsigntemplateRecognition? eEzsigntemplateRecognition = default(FieldEEzsigntemplateRecognition?), string sEzsigntemplateFilenameregexp = default(string), bool bEzsigntemplateAdminonly = default(bool), string sEzsignfoldertypeNameX = default(string), CommonAudit objAudit = default(CommonAudit), bool bEzsigntemplateEditallowed = default(bool), FieldEEzsigntemplateType? eEzsigntemplateType = default(FieldEEzsigntemplateType?), EzsigntemplatedocumentResponse objEzsigntemplatedocument = default(EzsigntemplatedocumentResponse), List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default(List<EzsigntemplatesignerResponseCompound>))
         {
             this.PkiEzsigntemplateID = pkiEzsigntemplateID;
             this.FkiLanguageID = fkiLanguageID;
@@ -103,6 +104,7 @@ namespace eZmaxApi.Model
             this.AObjEzsigntemplatesigner = aObjEzsigntemplatesigner;
             this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.ObjEzsignfoldertype = objEzsignfoldertype;
             this.FkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
             this.SEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
             this.SEzsigntemplateExternaldescription = sEzsigntemplateExternaldescription;
@@ -137,6 +139,12 @@ namespace eZmaxApi.Model
         /* <example>5</example>*/
         [DataMember(Name = "fkiEzsignfoldertypeID", EmitDefaultValue = false)]
         public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjEzsignfoldertype
+        /// </summary>
+        [DataMember(Name = "objEzsignfoldertype", EmitDefaultValue = false)]
+        public CustomEzsignfoldertypeTemplateResponse ObjEzsignfoldertype { get; set; }
 
         /// <summary>
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
@@ -252,6 +260,7 @@ namespace eZmaxApi.Model
             sb.Append("  PkiEzsigntemplateID: ").Append(PkiEzsigntemplateID).Append("\n");
             sb.Append("  FkiEzsigntemplatedocumentID: ").Append(FkiEzsigntemplatedocumentID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  ObjEzsignfoldertype: ").Append(ObjEzsignfoldertype).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  FkiEzdoctemplatedocumentID: ").Append(FkiEzdoctemplatedocumentID).Append("\n");
             sb.Append("  SEzdoctemplatedocumentNameX: ").Append(SEzdoctemplatedocumentNameX).Append("\n");

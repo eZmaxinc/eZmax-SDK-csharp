@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. **DEPRECATED** 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. **DEPRECATED** 6. **NameReason** is to ask for a signing reason. **DEPRECATED** 7. **Attachments** is to ask for files as attachment that may be validate in another step.  8. **FieldText** is to ask for a short text. 9. **Fieldtextarea** is to ask for a text 10. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg
+    /// The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **Attachments** is to ask for files as attachment that may be validate in another step.  3. **City** is to request the city where the document is signed. 4. **Consultation** is to trigger the webhook Signaturesigned when the user consult the document 5. **Creditcard** is to ask for a payment using a creditcard 6. **FieldText** is to ask for a short text. 7. **Fieldtextarea** is to ask for a text     8. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. **DEPRECATED** 9. **Initials** is a simple \&quot;click to add initials\&quot; block. 10. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. **DEPRECATED** 11. **NameReason** is to ask for a signing reason. **DEPRECATED** 12. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg
     /// </summary>
-    /// <value>The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. **DEPRECATED** 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. **DEPRECATED** 6. **NameReason** is to ask for a signing reason. **DEPRECATED** 7. **Attachments** is to ask for files as attachment that may be validate in another step.  8. **FieldText** is to ask for a short text. 9. **Fieldtextarea** is to ask for a text 10. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg</value>
+    /// <value>The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **Attachments** is to ask for files as attachment that may be validate in another step.  3. **City** is to request the city where the document is signed. 4. **Consultation** is to trigger the webhook Signaturesigned when the user consult the document 5. **Creditcard** is to ask for a payment using a creditcard 6. **FieldText** is to ask for a short text. 7. **Fieldtextarea** is to ask for a text     8. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. **DEPRECATED** 9. **Initials** is a simple \&quot;click to add initials\&quot; block. 10. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. **DEPRECATED** 11. **NameReason** is to ask for a signing reason. **DEPRECATED** 12. **Signature** is the type replacing **Name** and **Handwritten** and will support a font or svg</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEEzsignsignatureType
     {
@@ -40,70 +40,76 @@ namespace eZmaxApi.Model
         Acknowledgement = 1,
 
         /// <summary>
-        /// Enum City for value: City
-        /// </summary>
-        [EnumMember(Value = "City")]
-        City = 2,
-
-        /// <summary>
-        /// Enum Handwritten for value: Handwritten
-        /// </summary>
-        [EnumMember(Value = "Handwritten")]
-        Handwritten = 3,
-
-        /// <summary>
-        /// Enum Initials for value: Initials
-        /// </summary>
-        [EnumMember(Value = "Initials")]
-        Initials = 4,
-
-        /// <summary>
-        /// Enum Name for value: Name
-        /// </summary>
-        [EnumMember(Value = "Name")]
-        Name = 5,
-
-        /// <summary>
-        /// Enum NameReason for value: NameReason
-        /// </summary>
-        [EnumMember(Value = "NameReason")]
-        NameReason = 6,
-
-        /// <summary>
         /// Enum Attachments for value: Attachments
         /// </summary>
         [EnumMember(Value = "Attachments")]
-        Attachments = 7,
+        Attachments = 2,
 
         /// <summary>
         /// Enum AttachmentsConfirmation for value: AttachmentsConfirmation
         /// </summary>
         [EnumMember(Value = "AttachmentsConfirmation")]
-        AttachmentsConfirmation = 8,
+        AttachmentsConfirmation = 3,
 
         /// <summary>
-        /// Enum FieldText for value: FieldText
+        /// Enum City for value: City
         /// </summary>
-        [EnumMember(Value = "FieldText")]
-        FieldText = 9,
-
-        /// <summary>
-        /// Enum FieldTextarea for value: FieldTextarea
-        /// </summary>
-        [EnumMember(Value = "FieldTextarea")]
-        FieldTextarea = 10,
+        [EnumMember(Value = "City")]
+        City = 4,
 
         /// <summary>
         /// Enum Consultation for value: Consultation
         /// </summary>
         [EnumMember(Value = "Consultation")]
-        Consultation = 11,
+        Consultation = 5,
+
+        /// <summary>
+        /// Enum Creditcard for value: Creditcard
+        /// </summary>
+        [EnumMember(Value = "Creditcard")]
+        Creditcard = 6,
+
+        /// <summary>
+        /// Enum FieldText for value: FieldText
+        /// </summary>
+        [EnumMember(Value = "FieldText")]
+        FieldText = 7,
+
+        /// <summary>
+        /// Enum FieldTextarea for value: FieldTextarea
+        /// </summary>
+        [EnumMember(Value = "FieldTextarea")]
+        FieldTextarea = 8,
+
+        /// <summary>
+        /// Enum Handwritten for value: Handwritten
+        /// </summary>
+        [EnumMember(Value = "Handwritten")]
+        Handwritten = 9,
+
+        /// <summary>
+        /// Enum Initials for value: Initials
+        /// </summary>
+        [EnumMember(Value = "Initials")]
+        Initials = 10,
+
+        /// <summary>
+        /// Enum Name for value: Name
+        /// </summary>
+        [EnumMember(Value = "Name")]
+        Name = 11,
+
+        /// <summary>
+        /// Enum NameReason for value: NameReason
+        /// </summary>
+        [EnumMember(Value = "NameReason")]
+        NameReason = 12,
 
         /// <summary>
         /// Enum Signature for value: Signature
         /// </summary>
         [EnumMember(Value = "Signature")]
-        Signature = 12
+        Signature = 13
     }
 
 }

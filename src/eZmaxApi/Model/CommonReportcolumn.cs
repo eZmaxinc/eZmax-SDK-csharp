@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "Common-Reportcolumn")]
     public partial class CommonReportcolumn : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EReportcolumnType
+        /// </summary>
+        [DataMember(Name = "eReportcolumnType", IsRequired = true, EmitDefaultValue = true)]
+        public EnumReportdataType EReportcolumnType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonReportcolumn" /> class.
         /// </summary>
@@ -42,7 +48,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="objReportcellstyleDefault">objReportcellstyleDefault (required).</param>
         /// <param name="iReportcolumnWidth">The Reportcolumn width in pixels (required).</param>
-        public CommonReportcolumn(CommonReportcellstyle objReportcellstyleDefault = default(CommonReportcellstyle), int iReportcolumnWidth = default(int))
+        /// <param name="eReportcolumnType">eReportcolumnType (required).</param>
+        public CommonReportcolumn(CommonReportcellstyle objReportcellstyleDefault = default(CommonReportcellstyle), int iReportcolumnWidth = default(int), EnumReportdataType eReportcolumnType = default(EnumReportdataType))
         {
             // to ensure "objReportcellstyleDefault" is required (not null)
             if (objReportcellstyleDefault == null)
@@ -51,6 +58,7 @@ namespace eZmaxApi.Model
             }
             this.ObjReportcellstyleDefault = objReportcellstyleDefault;
             this.IReportcolumnWidth = iReportcolumnWidth;
+            this.EReportcolumnType = eReportcolumnType;
         }
 
         /// <summary>
@@ -77,6 +85,7 @@ namespace eZmaxApi.Model
             sb.Append("class CommonReportcolumn {\n");
             sb.Append("  ObjReportcellstyleDefault: ").Append(ObjReportcellstyleDefault).Append("\n");
             sb.Append("  IReportcolumnWidth: ").Append(IReportcolumnWidth).Append("\n");
+            sb.Append("  EReportcolumnType: ").Append(EReportcolumnType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

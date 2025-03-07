@@ -51,7 +51,8 @@ namespace eZmaxApi.Model
         /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
         /// <param name="iReportsectionColumncount">The number of Reportcolumns in the Reportsection (required).</param>
         /// <param name="iReportsectionWidth">The combined width of all the Reportcolumns in the Reportsection (required).</param>
-        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default(List<CommonReportsubsection>), List<CommonReportcolumn> aObjReportcolumn = default(List<CommonReportcolumn>), EnumHorizontalalignment eReportsectionHorizontalalignment = default(EnumHorizontalalignment), int iReportsectionColumncount = default(int), int iReportsectionWidth = default(int))
+        /// <param name="sReportsectionTitle">The title of this Reportsection.</param>
+        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default(List<CommonReportsubsection>), List<CommonReportcolumn> aObjReportcolumn = default(List<CommonReportcolumn>), EnumHorizontalalignment eReportsectionHorizontalalignment = default(EnumHorizontalalignment), int iReportsectionColumncount = default(int), int iReportsectionWidth = default(int), string sReportsectionTitle = default(string))
         {
             // to ensure "aObjReportsubsection" is required (not null)
             if (aObjReportsubsection == null)
@@ -68,6 +69,7 @@ namespace eZmaxApi.Model
             this.EReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
             this.IReportsectionColumncount = iReportsectionColumncount;
             this.IReportsectionWidth = iReportsectionWidth;
+            this.SReportsectionTitle = sReportsectionTitle;
         }
 
         /// <summary>
@@ -99,6 +101,14 @@ namespace eZmaxApi.Model
         public int IReportsectionWidth { get; set; }
 
         /// <summary>
+        /// The title of this Reportsection
+        /// </summary>
+        /// <value>The title of this Reportsection</value>
+        /* <example>text</example>*/
+        [DataMember(Name = "sReportsectionTitle", EmitDefaultValue = false)]
+        public string SReportsectionTitle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -111,6 +121,7 @@ namespace eZmaxApi.Model
             sb.Append("  EReportsectionHorizontalalignment: ").Append(EReportsectionHorizontalalignment).Append("\n");
             sb.Append("  IReportsectionColumncount: ").Append(IReportsectionColumncount).Append("\n");
             sb.Append("  IReportsectionWidth: ").Append(IReportsectionWidth).Append("\n");
+            sb.Append("  SReportsectionTitle: ").Append(SReportsectionTitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

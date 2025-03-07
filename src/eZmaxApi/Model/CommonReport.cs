@@ -41,7 +41,9 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommonReport" /> class.
         /// </summary>
         /// <param name="aObjReportsection">aObjReportsection (required).</param>
-        public CommonReport(List<CommonReportsection> aObjReportsection = default(List<CommonReportsection>))
+        /// <param name="bReportPaginate">Whether we display pagination in the report.</param>
+        /// <param name="sReportTitle">The title of this Report.</param>
+        public CommonReport(List<CommonReportsection> aObjReportsection = default(List<CommonReportsection>), bool bReportPaginate = default(bool), string sReportTitle = default(string))
         {
             // to ensure "aObjReportsection" is required (not null)
             if (aObjReportsection == null)
@@ -49,6 +51,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjReportsection is a required property for CommonReport and cannot be null");
             }
             this.AObjReportsection = aObjReportsection;
+            this.BReportPaginate = bReportPaginate;
+            this.SReportTitle = sReportTitle;
         }
 
         /// <summary>
@@ -56,6 +60,22 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "a_objReportsection", IsRequired = true, EmitDefaultValue = true)]
         public List<CommonReportsection> AObjReportsection { get; set; }
+
+        /// <summary>
+        /// Whether we display pagination in the report
+        /// </summary>
+        /// <value>Whether we display pagination in the report</value>
+        /* <example>true</example>*/
+        [DataMember(Name = "bReportPaginate", EmitDefaultValue = true)]
+        public bool BReportPaginate { get; set; }
+
+        /// <summary>
+        /// The title of this Report
+        /// </summary>
+        /// <value>The title of this Report</value>
+        /* <example>text</example>*/
+        [DataMember(Name = "sReportTitle", EmitDefaultValue = false)]
+        public string SReportTitle { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,6 +86,8 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommonReport {\n");
             sb.Append("  AObjReportsection: ").Append(AObjReportsection).Append("\n");
+            sb.Append("  BReportPaginate: ").Append(BReportPaginate).Append("\n");
+            sb.Append("  SReportTitle: ").Append(SReportTitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

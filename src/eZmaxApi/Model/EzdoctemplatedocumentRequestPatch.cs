@@ -89,7 +89,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzdoctemplatedocumentFormat is set.</value>
-        /* <example>[B@3f093abe</example>*/
+        /* <example>[B@6f70f32f</example>*/
         [DataMember(Name = "sEzdoctemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzdoctemplatedocumentBase64 { get; set; }
 

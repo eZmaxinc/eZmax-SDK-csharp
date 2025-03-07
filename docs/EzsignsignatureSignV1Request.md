@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **SAttachmentsRefusalReason** | **string** | The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation** | [optional] 
 **SSvg** | **string** | The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false | [optional] 
 **AObjFile** | [**List&lt;CommonFile&gt;**](CommonFile.md) |  | [optional] 
+**ObjCreditcard** | [**CustomCreditcardRequest**](CustomCreditcardRequest.md) |  | [optional] 
 **BIsAutomatic** | **bool** | Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -42,7 +42,9 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="aObjReport">aObjReport (required).</param>
         /// <param name="aObjReportcellstyleCustom">aObjReportcellstyleCustom (required).</param>
-        public CommonReportgroup(List<CommonReport> aObjReport = default(List<CommonReport>), List<CommonReportcellstyle> aObjReportcellstyleCustom = default(List<CommonReportcellstyle>))
+        /// <param name="aObjReportgroupParameter">aObjReportgroupParameter (required).</param>
+        /// <param name="sReportgroupFilename">The name of the file (required).</param>
+        public CommonReportgroup(List<CommonReport> aObjReport = default(List<CommonReport>), List<CommonReportcellstyle> aObjReportcellstyleCustom = default(List<CommonReportcellstyle>), List<CommonReportgroupParameter> aObjReportgroupParameter = default(List<CommonReportgroupParameter>), string sReportgroupFilename = default(string))
         {
             // to ensure "aObjReport" is required (not null)
             if (aObjReport == null)
@@ -56,6 +58,18 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjReportcellstyleCustom is a required property for CommonReportgroup and cannot be null");
             }
             this.AObjReportcellstyleCustom = aObjReportcellstyleCustom;
+            // to ensure "aObjReportgroupParameter" is required (not null)
+            if (aObjReportgroupParameter == null)
+            {
+                throw new ArgumentNullException("aObjReportgroupParameter is a required property for CommonReportgroup and cannot be null");
+            }
+            this.AObjReportgroupParameter = aObjReportgroupParameter;
+            // to ensure "sReportgroupFilename" is required (not null)
+            if (sReportgroupFilename == null)
+            {
+                throw new ArgumentNullException("sReportgroupFilename is a required property for CommonReportgroup and cannot be null");
+            }
+            this.SReportgroupFilename = sReportgroupFilename;
         }
 
         /// <summary>
@@ -71,6 +85,20 @@ namespace eZmaxApi.Model
         public List<CommonReportcellstyle> AObjReportcellstyleCustom { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjReportgroupParameter
+        /// </summary>
+        [DataMember(Name = "a_objReportgroupParameter", IsRequired = true, EmitDefaultValue = true)]
+        public List<CommonReportgroupParameter> AObjReportgroupParameter { get; set; }
+
+        /// <summary>
+        /// The name of the file
+        /// </summary>
+        /// <value>The name of the file</value>
+        /* <example>example.pdf</example>*/
+        [DataMember(Name = "sReportgroupFilename", IsRequired = true, EmitDefaultValue = true)]
+        public string SReportgroupFilename { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -80,6 +108,8 @@ namespace eZmaxApi.Model
             sb.Append("class CommonReportgroup {\n");
             sb.Append("  AObjReport: ").Append(AObjReport).Append("\n");
             sb.Append("  AObjReportcellstyleCustom: ").Append(AObjReportcellstyleCustom).Append("\n");
+            sb.Append("  AObjReportgroupParameter: ").Append(AObjReportgroupParameter).Append("\n");
+            sb.Append("  SReportgroupFilename: ").Append(SReportgroupFilename).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

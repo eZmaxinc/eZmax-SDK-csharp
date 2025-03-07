@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **EReportsectionHorizontalalignment** | **EnumHorizontalalignment** |  | 
 **IReportsectionColumncount** | **int** | The number of Reportcolumns in the Reportsection | 
 **IReportsectionWidth** | **int** | The combined width of all the Reportcolumns in the Reportsection | 
+**SReportsectionTitle** | **string** | The title of this Reportsection | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

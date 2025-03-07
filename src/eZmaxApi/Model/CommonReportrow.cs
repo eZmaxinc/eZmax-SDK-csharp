@@ -41,8 +41,9 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CommonReportrow" /> class.
         /// </summary>
         /// <param name="aObjReportcell">aObjReportcell (required).</param>
+        /// <param name="objVariableobject">A Variable object without predefined property names (required).</param>
         /// <param name="iReportrowHeight">The reportrow height in pixels (required).</param>
-        public CommonReportrow(List<CommonReportcell> aObjReportcell = default(List<CommonReportcell>), int iReportrowHeight = default(int))
+        public CommonReportrow(List<CommonReportcell> aObjReportcell = default(List<CommonReportcell>), Dictionary<string, Object> objVariableobject = default(Dictionary<string, Object>), int iReportrowHeight = default(int))
         {
             // to ensure "aObjReportcell" is required (not null)
             if (aObjReportcell == null)
@@ -50,6 +51,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjReportcell is a required property for CommonReportrow and cannot be null");
             }
             this.AObjReportcell = aObjReportcell;
+            // to ensure "objVariableobject" is required (not null)
+            if (objVariableobject == null)
+            {
+                throw new ArgumentNullException("objVariableobject is a required property for CommonReportrow and cannot be null");
+            }
+            this.ObjVariableobject = objVariableobject;
             this.IReportrowHeight = iReportrowHeight;
         }
 
@@ -58,6 +65,13 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "a_objReportcell", IsRequired = true, EmitDefaultValue = true)]
         public List<CommonReportcell> AObjReportcell { get; set; }
+
+        /// <summary>
+        /// A Variable object without predefined property names
+        /// </summary>
+        /// <value>A Variable object without predefined property names</value>
+        [DataMember(Name = "objVariableobject", IsRequired = true, EmitDefaultValue = true)]
+        public Dictionary<string, Object> ObjVariableobject { get; set; }
 
         /// <summary>
         /// The reportrow height in pixels
@@ -76,6 +90,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class CommonReportrow {\n");
             sb.Append("  AObjReportcell: ").Append(AObjReportcell).Append("\n");
+            sb.Append("  ObjVariableobject: ").Append(ObjVariableobject).Append("\n");
             sb.Append("  IReportrowHeight: ").Append(IReportrowHeight).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

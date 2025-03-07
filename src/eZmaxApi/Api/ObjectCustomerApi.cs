@@ -51,6 +51,35 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of CustomerCreateObjectV1Response</returns>
         ApiResponse<CustomerCreateObjectV1Response> CustomerCreateObjectV1WithHttpInfo(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Customers and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomerGetAutocompleteV2Response</returns>
+        CustomerGetAutocompleteV2Response CustomerGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Customers and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomerGetAutocompleteV2Response</returns>
+        ApiResponse<CustomerGetAutocompleteV2Response> CustomerGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0);
+        /// <summary>
         /// Retrieve an existing Customer
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -104,6 +133,37 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CustomerCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// Retrieve Customers and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomerGetAutocompleteV2Response</returns>
+        System.Threading.Tasks.Task<CustomerGetAutocompleteV2Response> CustomerGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Retrieve Customers and IDs
+        /// </summary>
+        /// <remarks>
+        /// Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomerGetAutocompleteV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CustomerGetAutocompleteV2Response>> CustomerGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retrieve an existing Customer
         /// </summary>
@@ -397,6 +457,197 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CustomerCreateObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Customers and IDs Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CustomerGetAutocompleteV2Response</returns>
+        public CustomerGetAutocompleteV2Response CustomerGetAutocompleteV2(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CustomerGetAutocompleteV2Response> localVarResponse = CustomerGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Customers and IDs Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CustomerGetAutocompleteV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<CustomerGetAutocompleteV2Response> CustomerGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0)
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'sSelector' when calling ObjectCustomerApi->CustomerGetAutocompleteV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("sSelector", eZmaxApi.Client.ClientUtils.ParameterToString(sSelector)); // path parameter
+            if (eFilterActive != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));
+            }
+            if (sQuery != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerGetAutocompleteV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CustomerGetAutocompleteV2Response>("/2/object/customer/getAutocomplete/{sSelector}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CustomerGetAutocompleteV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Customers and IDs Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CustomerGetAutocompleteV2Response</returns>
+        public async System.Threading.Tasks.Task<CustomerGetAutocompleteV2Response> CustomerGetAutocompleteV2Async(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<CustomerGetAutocompleteV2Response> localVarResponse = await CustomerGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Customers and IDs Get the list of Customer to be used in a dropdown or autocomplete control.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sSelector">The type of Customers to return</param>
+        /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="sQuery">Allow to filter the returned results (optional)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CustomerGetAutocompleteV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerGetAutocompleteV2Response>> CustomerGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default(string?), string? sQuery = default(string?), HeaderAcceptLanguage? acceptLanguage = default(HeaderAcceptLanguage?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'sSelector' is set
+            if (sSelector == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'sSelector' when calling ObjectCustomerApi->CustomerGetAutocompleteV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("sSelector", eZmaxApi.Client.ClientUtils.ParameterToString(sSelector)); // path parameter
+            if (eFilterActive != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));
+            }
+            if (sQuery != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sQuery", sQuery));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerGetAutocompleteV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CustomerGetAutocompleteV2Response>("/2/object/customer/getAutocomplete/{sSelector}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CustomerGetAutocompleteV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

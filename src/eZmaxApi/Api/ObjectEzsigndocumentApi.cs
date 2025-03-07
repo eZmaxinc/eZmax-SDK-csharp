@@ -763,6 +763,31 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentPatchObjectV1Response</returns>
         ApiResponse<EzsigndocumentPatchObjectV1Response> EzsigndocumentPatchObjectV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0);
         /// <summary>
+        /// Prefill an Ezsignform
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can prefill an Ezsignform.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentPrefillEzsignformV1Response</returns>
+        EzsigndocumentPrefillEzsignformV1Response EzsigndocumentPrefillEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Prefill an Ezsignform
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can prefill an Ezsignform.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentPrefillEzsignformV1Response</returns>
+        ApiResponse<EzsigndocumentPrefillEzsignformV1Response> EzsigndocumentPrefillEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0);
+        /// <summary>
         /// Submit the Ezsignform
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1656,6 +1681,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentPatchObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentPatchObjectV1Response>> EzsigndocumentPatchObjectV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        /// <summary>
+        /// Prefill an Ezsignform
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can prefill an Ezsignform.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentPrefillEzsignformV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentPrefillEzsignformV1Response> EzsigndocumentPrefillEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Prefill an Ezsignform
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can prefill an Ezsignform.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentPrefillEzsignformV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentPrefillEzsignformV1Response>> EzsigndocumentPrefillEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Submit the Ezsignform
         /// </summary>
@@ -6757,6 +6809,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentPatchObjectV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Prefill an Ezsignform Using this endpoint, you can prefill an Ezsignform.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentPrefillEzsignformV1Response</returns>
+        public EzsigndocumentPrefillEzsignformV1Response EzsigndocumentPrefillEzsignformV1(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentPrefillEzsignformV1Response> localVarResponse = EzsigndocumentPrefillEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Prefill an Ezsignform Using this endpoint, you can prefill an Ezsignform.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentPrefillEzsignformV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentPrefillEzsignformV1Response> EzsigndocumentPrefillEzsignformV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsigndocumentPrefillEzsignformV1Request' is set
+            if (ezsigndocumentPrefillEzsignformV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentPrefillEzsignformV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentPrefillEzsignformV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentPrefillEzsignformV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsigndocumentPrefillEzsignformV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentPrefillEzsignformV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Prefill an Ezsignform Using this endpoint, you can prefill an Ezsignform.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentPrefillEzsignformV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentPrefillEzsignformV1Response> EzsigndocumentPrefillEzsignformV1Async(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentPrefillEzsignformV1Response> localVarResponse = await EzsigndocumentPrefillEzsignformV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentPrefillEzsignformV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Prefill an Ezsignform Using this endpoint, you can prefill an Ezsignform.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentPrefillEzsignformV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentPrefillEzsignformV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentPrefillEzsignformV1Response>> EzsigndocumentPrefillEzsignformV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentPrefillEzsignformV1Request ezsigndocumentPrefillEzsignformV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'ezsigndocumentPrefillEzsignformV1Request' is set
+            if (ezsigndocumentPrefillEzsignformV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentPrefillEzsignformV1Request' when calling ObjectEzsigndocumentApi->EzsigndocumentPrefillEzsignformV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentPrefillEzsignformV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentPrefillEzsignformV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentPrefillEzsignformV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/prefillEzsignform", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentPrefillEzsignformV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -42,10 +42,19 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="iReportcellColumnspan">The number of Reportcolumns the Reportcell spans (required).</param>
         /// <param name="iReportcellRowspan">The number of Reportrows the Reportcell spans (required).</param>
-        public CommonReportcell(int iReportcellColumnspan = default(int), int iReportcellRowspan = default(int))
+        /// <param name="sReportcellContent">The content of this Reportcell (required).</param>
+        /// <param name="iReportcellColumn">Position of the column where it is placed (required).</param>
+        public CommonReportcell(int iReportcellColumnspan = default(int), int iReportcellRowspan = default(int), string sReportcellContent = default(string), int iReportcellColumn = default(int))
         {
             this.IReportcellColumnspan = iReportcellColumnspan;
             this.IReportcellRowspan = iReportcellRowspan;
+            // to ensure "sReportcellContent" is required (not null)
+            if (sReportcellContent == null)
+            {
+                throw new ArgumentNullException("sReportcellContent is a required property for CommonReportcell and cannot be null");
+            }
+            this.SReportcellContent = sReportcellContent;
+            this.IReportcellColumn = iReportcellColumn;
         }
 
         /// <summary>
@@ -65,6 +74,22 @@ namespace eZmaxApi.Model
         public int IReportcellRowspan { get; set; }
 
         /// <summary>
+        /// The content of this Reportcell
+        /// </summary>
+        /// <value>The content of this Reportcell</value>
+        /* <example>text</example>*/
+        [DataMember(Name = "sReportcellContent", IsRequired = true, EmitDefaultValue = true)]
+        public string SReportcellContent { get; set; }
+
+        /// <summary>
+        /// Position of the column where it is placed
+        /// </summary>
+        /// <value>Position of the column where it is placed</value>
+        /* <example>1</example>*/
+        [DataMember(Name = "iReportcellColumn", IsRequired = true, EmitDefaultValue = true)]
+        public int IReportcellColumn { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +99,8 @@ namespace eZmaxApi.Model
             sb.Append("class CommonReportcell {\n");
             sb.Append("  IReportcellColumnspan: ").Append(IReportcellColumnspan).Append("\n");
             sb.Append("  IReportcellRowspan: ").Append(IReportcellRowspan).Append("\n");
+            sb.Append("  SReportcellContent: ").Append(SReportcellContent).Append("\n");
+            sb.Append("  IReportcellColumn: ").Append(IReportcellColumn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

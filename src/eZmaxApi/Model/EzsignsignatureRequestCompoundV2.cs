@@ -84,6 +84,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsignsignatureID">The unique ID of the Ezsignsignature.</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation (required).</param>
+        /// <param name="fkiPaymentgatewayID">The unique ID of the Paymentgateway.</param>
         /// <param name="iEzsignpagePagenumber">The page number in the Ezsigndocument (required).</param>
         /// <param name="iEzsignsignatureX">The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. (required).</param>
         /// <param name="iEzsignsignatureY">The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate. (required).</param>
@@ -112,7 +113,8 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
-        public EzsignsignatureRequestCompoundV2(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureHandwritten = default(bool), bool bEzsignsignatureReason = default(bool), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger = default(FieldEEzsignsignatureConsultationtrigger?), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), string sEzsignsignatureDefaultvalue = default(string), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureTextvalidationcustommessage = default(string), string sEzsignsignatureRegexp = default(string), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompoundV2> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompoundV2>), List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyRequestCompound>))
+        /// <param name="aObjEzsignsignaturepaymentdetail">aObjEzsignsignaturepaymentdetail.</param>
+        public EzsignsignatureRequestCompoundV2(int pkiEzsignsignatureID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiPaymentgatewayID = default(int), int iEzsignpagePagenumber = default(int), int iEzsignsignatureX = default(int), int iEzsignsignatureY = default(int), int iEzsignsignatureWidth = default(int), int iEzsignsignatureHeight = default(int), int iEzsignsignatureStep = default(int), FieldEEzsignsignatureType eEzsignsignatureType = default(FieldEEzsignsignatureType), int fkiEzsigndocumentID = default(int), string tEzsignsignatureTooltip = default(string), FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default(FieldEEzsignsignatureTooltipposition?), FieldEEzsignsignatureFont? eEzsignsignatureFont = default(FieldEEzsignsignatureFont?), int fkiEzsignfoldersignerassociationIDValidation = default(int), bool bEzsignsignatureHandwritten = default(bool), bool bEzsignsignatureReason = default(bool), bool bEzsignsignatureRequired = default(bool), FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default(FieldEEzsignsignatureAttachmentnamesource?), string sEzsignsignatureAttachmentdescription = default(string), FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger = default(FieldEEzsignsignatureConsultationtrigger?), int iEzsignsignatureValidationstep = default(int), int iEzsignsignatureMaxlength = default(int), string sEzsignsignatureDefaultvalue = default(string), EnumTextvalidation? eEzsignsignatureTextvalidation = default(EnumTextvalidation?), string sEzsignsignatureTextvalidationcustommessage = default(string), string sEzsignsignatureRegexp = default(string), FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default(FieldEEzsignsignatureDependencyrequirement?), bool bEzsignsignatureCustomdate = default(bool), List<EzsignsignaturecustomdateRequestCompoundV2> aObjEzsignsignaturecustomdate = default(List<EzsignsignaturecustomdateRequestCompoundV2>), List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default(List<EzsignelementdependencyRequestCompound>), List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = default(List<EzsignsignaturepaymentdetailRequestCompound>))
         {
             this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -122,6 +124,7 @@ namespace eZmaxApi.Model
             this.EEzsignsignatureType = eEzsignsignatureType;
             this.FkiEzsigndocumentID = fkiEzsigndocumentID;
             this.PkiEzsignsignatureID = pkiEzsignsignatureID;
+            this.FkiPaymentgatewayID = fkiPaymentgatewayID;
             this.IEzsignsignatureWidth = iEzsignsignatureWidth;
             this.IEzsignsignatureHeight = iEzsignsignatureHeight;
             this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
@@ -144,6 +147,7 @@ namespace eZmaxApi.Model
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
             this.AObjEzsignelementdependency = aObjEzsignelementdependency;
+            this.AObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
         }
 
         /// <summary>
@@ -161,6 +165,14 @@ namespace eZmaxApi.Model
         /* <example>20</example>*/
         [DataMember(Name = "fkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldersignerassociationID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Paymentgateway
+        /// </summary>
+        /// <value>The unique ID of the Paymentgateway</value>
+        /* <example>235</example>*/
+        [DataMember(Name = "fkiPaymentgatewayID", EmitDefaultValue = false)]
+        public int FkiPaymentgatewayID { get; set; }
 
         /// <summary>
         /// The page number in the Ezsigndocument
@@ -324,6 +336,12 @@ namespace eZmaxApi.Model
         public List<EzsignelementdependencyRequestCompound> AObjEzsignelementdependency { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsignsignaturepaymentdetail
+        /// </summary>
+        [DataMember(Name = "a_objEzsignsignaturepaymentdetail", EmitDefaultValue = false)]
+        public List<EzsignsignaturepaymentdetailRequestCompound> AObjEzsignsignaturepaymentdetail { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -333,6 +351,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignsignatureRequestCompoundV2 {\n");
             sb.Append("  PkiEzsignsignatureID: ").Append(PkiEzsignsignatureID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiPaymentgatewayID: ").Append(FkiPaymentgatewayID).Append("\n");
             sb.Append("  IEzsignpagePagenumber: ").Append(IEzsignpagePagenumber).Append("\n");
             sb.Append("  IEzsignsignatureX: ").Append(IEzsignsignatureX).Append("\n");
             sb.Append("  IEzsignsignatureY: ").Append(IEzsignsignatureY).Append("\n");
@@ -361,6 +380,7 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
             sb.Append("  AObjEzsignelementdependency: ").Append(AObjEzsignelementdependency).Append("\n");
+            sb.Append("  AObjEzsignsignaturepaymentdetail: ").Append(AObjEzsignsignaturepaymentdetail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -391,6 +411,18 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+            }
+
+            // FkiPaymentgatewayID (int) maximum
+            if (this.FkiPaymentgatewayID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value less than or equal to 255.", new [] { "FkiPaymentgatewayID" });
+            }
+
+            // FkiPaymentgatewayID (int) minimum
+            if (this.FkiPaymentgatewayID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value greater than or equal to 0.", new [] { "FkiPaymentgatewayID" });
             }
 
             // IEzsignpagePagenumber (int) minimum

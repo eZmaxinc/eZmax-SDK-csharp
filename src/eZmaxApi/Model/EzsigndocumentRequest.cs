@@ -46,16 +46,22 @@ namespace eZmaxApi.Model
             Base64 = 1,
 
             /// <summary>
+            /// Enum Ezsignimportdocument for value: Ezsignimportdocument
+            /// </summary>
+            [EnumMember(Value = "Ezsignimportdocument")]
+            Ezsignimportdocument = 2,
+
+            /// <summary>
             /// Enum Ezsigntemplate for value: Ezsigntemplate
             /// </summary>
             [EnumMember(Value = "Ezsigntemplate")]
-            Ezsigntemplate = 2,
+            Ezsigntemplate = 3,
 
             /// <summary>
             /// Enum Url for value: Url
             /// </summary>
             [EnumMember(Value = "Url")]
-            Url = 3
+            Url = 4
         }
 
 
@@ -173,6 +179,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="fkiEzsigntemplateID">The unique ID of the Ezsigntemplate.</param>
         /// <param name="fkiEzsignfoldersignerassociationID">The unique ID of the Ezsignfoldersignerassociation.</param>
+        /// <param name="fkiEzsignimportdocumentID">The unique ID of the Ezsignimportdocument.</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="eEzsigndocumentSource">Indicates where to look for the document binary content. (required).</param>
         /// <param name="eEzsigndocumentFormat">Indicates the format of the document..</param>
@@ -184,7 +191,7 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
         /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
-        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string), string sEzsigndocumentExternalid = default(string))
+        public EzsigndocumentRequest(int pkiEzsigndocumentID = default(int), int fkiEzsignfolderID = default(int), int fkiEzsigntemplateID = default(int), int fkiEzsignfoldersignerassociationID = default(int), int fkiEzsignimportdocumentID = default(int), int fkiLanguageID = default(int), EEzsigndocumentSourceEnum eEzsigndocumentSource = default(EEzsigndocumentSourceEnum), EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default(EEzsigndocumentFormatEnum?), byte[] sEzsigndocumentBase64 = default(byte[]), string sEzsigndocumentUrl = default(string), bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default(string), EEzsigndocumentFormEnum? eEzsigndocumentForm = default(EEzsigndocumentFormEnum?), string dtEzsigndocumentDuedate = default(string), string sEzsigndocumentName = default(string), string sEzsigndocumentExternalid = default(string))
         {
             this.FkiEzsignfolderID = fkiEzsignfolderID;
             this.FkiLanguageID = fkiLanguageID;
@@ -204,6 +211,7 @@ namespace eZmaxApi.Model
             this.PkiEzsigndocumentID = pkiEzsigndocumentID;
             this.FkiEzsigntemplateID = fkiEzsigntemplateID;
             this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+            this.FkiEzsignimportdocumentID = fkiEzsignimportdocumentID;
             this.EEzsigndocumentFormat = eEzsigndocumentFormat;
             this.SEzsigndocumentBase64 = sEzsigndocumentBase64;
             this.SEzsigndocumentUrl = sEzsigndocumentUrl;
@@ -246,6 +254,14 @@ namespace eZmaxApi.Model
         public int FkiEzsignfoldersignerassociationID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Ezsignimportdocument
+        /// </summary>
+        /// <value>The unique ID of the Ezsignimportdocument</value>
+        /* <example>40</example>*/
+        [DataMember(Name = "fkiEzsignimportdocumentID", EmitDefaultValue = false)]
+        public int FkiEzsignimportdocumentID { get; set; }
+
+        /// <summary>
         /// The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
         /// </summary>
         /// <value>The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|</value>
@@ -257,7 +273,7 @@ namespace eZmaxApi.Model
         /// The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.</value>
-        /* <example>[B@61a002b1</example>*/
+        /* <example>[B@548e76f1</example>*/
         [DataMember(Name = "sEzsigndocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigndocumentBase64 { get; set; }
 
@@ -320,6 +336,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  FkiEzsigntemplateID: ").Append(FkiEzsigntemplateID).Append("\n");
             sb.Append("  FkiEzsignfoldersignerassociationID: ").Append(FkiEzsignfoldersignerassociationID).Append("\n");
+            sb.Append("  FkiEzsignimportdocumentID: ").Append(FkiEzsignimportdocumentID).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
             sb.Append("  EEzsigndocumentSource: ").Append(EEzsigndocumentSource).Append("\n");
             sb.Append("  EEzsigndocumentFormat: ").Append(EEzsigndocumentFormat).Append("\n");
@@ -373,6 +390,18 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfoldersignerassociationID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationID" });
+            }
+
+            // FkiEzsignimportdocumentID (int) maximum
+            if (this.FkiEzsignimportdocumentID > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignimportdocumentID, must be a value less than or equal to 16777215.", new [] { "FkiEzsignimportdocumentID" });
+            }
+
+            // FkiEzsignimportdocumentID (int) minimum
+            if (this.FkiEzsignimportdocumentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignimportdocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsignimportdocumentID" });
             }
 
             // FkiLanguageID (int) maximum

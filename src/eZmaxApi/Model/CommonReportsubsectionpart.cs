@@ -75,7 +75,8 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="eReportsubsectionpartType">The type of the Reportsubsectionpart (required).</param>
         /// <param name="aObjReportrow">aObjReportrow (required).</param>
-        public CommonReportsubsectionpart(EReportsubsectionpartTypeEnum eReportsubsectionpartType = default(EReportsubsectionpartTypeEnum), List<CommonReportrow> aObjReportrow = default(List<CommonReportrow>))
+        /// <param name="aSVariableobjectProperty">aSVariableobjectProperty (required).</param>
+        public CommonReportsubsectionpart(EReportsubsectionpartTypeEnum eReportsubsectionpartType = default(EReportsubsectionpartTypeEnum), List<CommonReportrow> aObjReportrow = default(List<CommonReportrow>), List<string> aSVariableobjectProperty = default(List<string>))
         {
             this.EReportsubsectionpartType = eReportsubsectionpartType;
             // to ensure "aObjReportrow" is required (not null)
@@ -84,6 +85,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("aObjReportrow is a required property for CommonReportsubsectionpart and cannot be null");
             }
             this.AObjReportrow = aObjReportrow;
+            // to ensure "aSVariableobjectProperty" is required (not null)
+            if (aSVariableobjectProperty == null)
+            {
+                throw new ArgumentNullException("aSVariableobjectProperty is a required property for CommonReportsubsectionpart and cannot be null");
+            }
+            this.ASVariableobjectProperty = aSVariableobjectProperty;
         }
 
         /// <summary>
@@ -91,6 +98,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "a_objReportrow", IsRequired = true, EmitDefaultValue = true)]
         public List<CommonReportrow> AObjReportrow { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ASVariableobjectProperty
+        /// </summary>
+        [DataMember(Name = "a_sVariableobjectProperty", IsRequired = true, EmitDefaultValue = true)]
+        public List<string> ASVariableobjectProperty { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,6 +115,7 @@ namespace eZmaxApi.Model
             sb.Append("class CommonReportsubsectionpart {\n");
             sb.Append("  EReportsubsectionpartType: ").Append(EReportsubsectionpartType).Append("\n");
             sb.Append("  AObjReportrow: ").Append(AObjReportrow).Append("\n");
+            sb.Append("  ASVariableobjectProperty: ").Append(ASVariableobjectProperty).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

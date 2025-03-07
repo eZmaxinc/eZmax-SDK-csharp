@@ -72,8 +72,11 @@ namespace eZmaxApi.Model
         /// <param name="dEzsignfolderCompletedpercentage">Percentage of Ezsignform/Ezsignsignatures has completed (required).</param>
         /// <param name="dEzsignfolderFormcompletedpercentage">Percentage of Ezsignform has completed (required).</param>
         /// <param name="dEzsignfolderSignaturecompletedpercentage">Percentage of Ezsignsignatures has signed (required).</param>
+        /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
+        /// <param name="dtEzsignfolderArchive">The date and time at which the Ezsignfolder was archived..</param>
+        /// <param name="dtEzsignfolderDispose">The date and time at which the Ezsignfolder was disposed..</param>
         /// <param name="bEzsignfolderSigner">Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user.</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int), int iEzsignformfieldgroup = default(int), int iEzsignformfieldgroupCompleted = default(int), bool bEzsignformHasdependencies = default(bool), string dEzsignfolderCompletedpercentage = default(string), string dEzsignfolderFormcompletedpercentage = default(string), string dEzsignfolderSignaturecompletedpercentage = default(string), bool bEzsignfolderSigner = default(bool))
+        public EzsignfolderListElement(int pkiEzsignfolderID = default(int), int fkiEzsignfoldertypeID = default(int), FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default(FieldEEzsignfoldertypePrivacylevel), string sEzsignfoldertypeNameX = default(string), string sEzsignfolderDescription = default(string), FieldEEzsignfolderStep eEzsignfolderStep = default(FieldEEzsignfolderStep), string dtCreatedDate = default(string), string dtEzsignfolderDelayedsenddate = default(string), string dtEzsignfolderSentdate = default(string), string dtEzsignfolderDuedate = default(string), int iEzsigndocument = default(int), int iEzsigndocumentEdm = default(int), int iEzsignsignature = default(int), int iEzsignsignatureSigned = default(int), int iEzsignformfieldgroup = default(int), int iEzsignformfieldgroupCompleted = default(int), bool bEzsignformHasdependencies = default(bool), string dEzsignfolderCompletedpercentage = default(string), string dEzsignfolderFormcompletedpercentage = default(string), string dEzsignfolderSignaturecompletedpercentage = default(string), string dtEzsignfolderClose = default(string), string dtEzsignfolderArchive = default(string), string dtEzsignfolderDispose = default(string), bool bEzsignfolderSigner = default(bool))
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
@@ -125,6 +128,9 @@ namespace eZmaxApi.Model
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
             this.BEzsignformHasdependencies = bEzsignformHasdependencies;
+            this.DtEzsignfolderClose = dtEzsignfolderClose;
+            this.DtEzsignfolderArchive = dtEzsignfolderArchive;
+            this.DtEzsignfolderDispose = dtEzsignfolderDispose;
             this.BEzsignfolderSigner = bEzsignfolderSigner;
         }
 
@@ -263,6 +269,30 @@ namespace eZmaxApi.Model
         public string DEzsignfolderSignaturecompletedpercentage { get; set; }
 
         /// <summary>
+        /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtEzsignfolderClose", EmitDefaultValue = false)]
+        public string DtEzsignfolderClose { get; set; }
+
+        /// <summary>
+        /// The date and time at which the Ezsignfolder was archived.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder was archived.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtEzsignfolderArchive", EmitDefaultValue = false)]
+        public string DtEzsignfolderArchive { get; set; }
+
+        /// <summary>
+        /// The date and time at which the Ezsignfolder was disposed.
+        /// </summary>
+        /// <value>The date and time at which the Ezsignfolder was disposed.</value>
+        /* <example>2020-12-31 23:59:59</example>*/
+        [DataMember(Name = "dtEzsignfolderDispose", EmitDefaultValue = false)]
+        public string DtEzsignfolderDispose { get; set; }
+
+        /// <summary>
         /// Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
         /// </summary>
         /// <value>Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user</value>
@@ -298,6 +328,9 @@ namespace eZmaxApi.Model
             sb.Append("  DEzsignfolderCompletedpercentage: ").Append(DEzsignfolderCompletedpercentage).Append("\n");
             sb.Append("  DEzsignfolderFormcompletedpercentage: ").Append(DEzsignfolderFormcompletedpercentage).Append("\n");
             sb.Append("  DEzsignfolderSignaturecompletedpercentage: ").Append(DEzsignfolderSignaturecompletedpercentage).Append("\n");
+            sb.Append("  DtEzsignfolderClose: ").Append(DtEzsignfolderClose).Append("\n");
+            sb.Append("  DtEzsignfolderArchive: ").Append(DtEzsignfolderArchive).Append("\n");
+            sb.Append("  DtEzsignfolderDispose: ").Append(DtEzsignfolderDispose).Append("\n");
             sb.Append("  BEzsignfolderSigner: ").Append(BEzsignfolderSigner).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
