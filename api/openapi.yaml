@@ -81,7 +81,7 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.2.X Releases\r\
-    \n\r\n### [1.2.2] - 2025-\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignimportfolder/{pkiEzsignimportfolderID}\r\
+    \n\r\n### [1.2.2] - 2025-03-07\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignimportfolder/{pkiEzsignimportfolderID}\r\
     \n- DELETE /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}\r\n- GET\
     \ /1/module/user/getKeys\r\n- GET /1/object/currency/getAutocomplete/{sSelector}\r\
     \n- GET /2/object/customer/getAutocomplete/{sSelector}\r\n- GET /1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download\r\
@@ -1290,9 +1290,6 @@ tags:
 - description: Ezdoctemplatetype contains details about Ezdoctemplatetypes
   name: Object_Ezdoctemplatetype
   x-displayName: Ezdoctemplatetype
-- description: Ezmaxcase contains details about Ezmaxcases
-  name: Object_Ezmaxcase
-  x-displayName: Ezmaxcase
 - description: Ezmaxinvoicing contains detail about a Ezmaxinvoicing
   name: Object_Ezmaxinvoicing
   x-displayName: Ezmaxinvoicing
@@ -6147,54 +6144,6 @@ paths:
       - Object_Ezdoctemplatetype
       x-permissions:
       - All
-      x-usertypeextra: []
-  /1/object/ezmaxcase/{pkiEzmaxcaseID}:
-    description: ""
-    patch:
-      description: ""
-      operationId: Ezmaxcase_PatchObject_V1
-      parameters:
-      - description: The unique ID of the Ezmaxcase
-        explode: false
-        in: path
-        name: pkiEzmaxcaseID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzmaxcaseID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezmaxcase-patchObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezmaxcase-patchObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request was syntactically valid but failed because of an
-            interdependance condition. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Patch an existing Ezmaxcase
-      tags:
-      - Object_Ezmaxcase
-      x-permissions: []
       x-usertypeextra: []
   /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
     get:
@@ -34551,36 +34500,6 @@ components:
       maximum: 255
       minimum: 0
       type: integer
-    Field-pkiEzmaxcaseID:
-      description: The unique ID of the Ezmaxcase
-      example: 254
-      maximum: 16777215
-      minimum: 0
-      type: integer
-    Field-pkiEzmaxcasepriorityID:
-      description: The unique ID of the Ezmaxcasepriority
-      example: 32
-      maximum: 255
-      minimum: 0
-      type: integer
-    Field-pkiEzmaxcasequeueID:
-      description: The unique ID of the Ezmaxcasequeue
-      example: 16
-      maximum: 255
-      minimum: 0
-      type: integer
-    Field-pkiEzmaxcasestateID:
-      description: The unique ID of the Ezmaxcasestate
-      example: 16
-      maximum: 255
-      minimum: 0
-      type: integer
-    Field-pkiEzmaxfeaturerequestID:
-      description: The unique ID of the Ezmaxfeaturerequest
-      example: 234
-      maximum: 65535
-      minimum: 0
-      type: integer
     Field-pkiEzmaxinvoicingID:
       description: The unique ID of the Ezmaxinvoicing
       example: 28
@@ -34628,12 +34547,6 @@ components:
     Field-pkiEzmaxinvoicinguserID:
       description: The unique ID of the Ezmaxinvoicinguser
       example: 202
-      minimum: 0
-      type: integer
-    Field-pkiEzmaxknownissueID:
-      description: The unique ID of the Ezmaxknownissue
-      example: 49
-      maximum: 65535
       minimum: 0
       type: integer
     Field-pkiEzmaxpartnerID:
@@ -50570,77 +50483,6 @@ components:
           type: array
       required:
       - a_objEzdoctemplatetype
-      type: object
-    ezmaxcase-RequestPatch:
-      description: An Ezmaxcase Object
-      properties:
-        fkiEzmaxcasequeueID:
-          description: The unique ID of the Ezmaxcasequeue
-          example: 16
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiEzmaxcasepriorityID:
-          description: The unique ID of the Ezmaxcasepriority
-          example: 32
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiEzmaxcasestateID:
-          description: The unique ID of the Ezmaxcasestate
-          example: 16
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiEzmaxfeaturerequestID:
-          description: The unique ID of the Ezmaxfeaturerequest
-          example: 234
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiEzmaxknownissueID:
-          description: The unique ID of the Ezmaxknownissue
-          example: 49
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiUserIDOwner:
-          description: The unique ID of the User
-          example: 70
-          minimum: 0
-          type: integer
-      type: object
-    ezmaxcase-patchObject-v1-Request:
-      description: "Request for PATCH /1/object/ezmaxcase/{pkiEzmaxcaseID}"
-      properties:
-        objEzmaxcase:
-          $ref: '#/components/schemas/ezmaxcase-RequestPatch'
-      required:
-      - objEzmaxcase
-      type: object
-    ezmaxcase-patchObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for PATCH /1/object/creditcardclient/{pkiCreditcardclientID}"
-      example:
-        objDebugPayload:
-          dtResponseDate: 2020-12-31 23:59:59
-          iVersionMax: 2
-          iVersionMin: 1
-          bVersionDeprecated: false
-          a_RequiredPermission:
-          - 117
-          - 117
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
       type: object
     ezmaxinvoicing-AutocompleteElement-Response:
       description: A Ezmaxinvoicing AutocompleteElement Response
@@ -124905,7 +124747,6 @@ x-tagGroups:
   - Object_Ezdoctemplatedocument
   - Object_Ezdoctemplatefieldtypecategory
   - Object_Ezdoctemplatetype
-  - Object_Ezmaxcase
   - Object_Ezmaxinvoicing
   - Object_Ezmaxproduct
   - Object_Ezsignannotation

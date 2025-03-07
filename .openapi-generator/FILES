@@ -433,9 +433,6 @@ docs/EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload.md
 docs/EzdoctemplatetypeAutocompleteElementResponse.md
 docs/EzdoctemplatetypeGetAutocompleteV2Response.md
 docs/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md
-docs/EzmaxcasePatchObjectV1Request.md
-docs/EzmaxcasePatchObjectV1Response.md
-docs/EzmaxcaseRequestPatch.md
 docs/EzmaxinvoicingAutocompleteElementResponse.md
 docs/EzmaxinvoicingGetAutocompleteV2Response.md
 docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
@@ -1358,7 +1355,6 @@ docs/ObjectEmailtypeApi.md
 docs/ObjectEzdoctemplatedocumentApi.md
 docs/ObjectEzdoctemplatefieldtypecategoryApi.md
 docs/ObjectEzdoctemplatetypeApi.md
-docs/ObjectEzmaxcaseApi.md
 docs/ObjectEzmaxinvoicingApi.md
 docs/ObjectEzmaxproductApi.md
 docs/ObjectEzsignannotationApi.md
@@ -1860,7 +1856,6 @@ src/eZmaxApi/Api/ObjectEmailtypeApi.cs
 src/eZmaxApi/Api/ObjectEzdoctemplatedocumentApi.cs
 src/eZmaxApi/Api/ObjectEzdoctemplatefieldtypecategoryApi.cs
 src/eZmaxApi/Api/ObjectEzdoctemplatetypeApi.cs
-src/eZmaxApi/Api/ObjectEzmaxcaseApi.cs
 src/eZmaxApi/Api/ObjectEzmaxinvoicingApi.cs
 src/eZmaxApi/Api/ObjectEzmaxproductApi.cs
 src/eZmaxApi/Api/ObjectEzsignannotationApi.cs
@@ -2389,9 +2384,6 @@ src/eZmaxApi/Model/EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPaylo
 src/eZmaxApi/Model/EzdoctemplatetypeAutocompleteElementResponse.cs
 src/eZmaxApi/Model/EzdoctemplatetypeGetAutocompleteV2Response.cs
 src/eZmaxApi/Model/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.cs
-src/eZmaxApi/Model/EzmaxcasePatchObjectV1Request.cs
-src/eZmaxApi/Model/EzmaxcasePatchObjectV1Response.cs
-src/eZmaxApi/Model/EzmaxcaseRequestPatch.cs
 src/eZmaxApi/Model/EzmaxinvoicingAutocompleteElementResponse.cs
 src/eZmaxApi/Model/EzmaxinvoicingGetAutocompleteV2Response.cs
 src/eZmaxApi/Model/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.cs
