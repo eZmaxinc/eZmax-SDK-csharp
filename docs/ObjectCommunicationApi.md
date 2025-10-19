@@ -4,14 +4,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CommunicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationgetcommunicationbodyv1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body. |
+| [**CommunicationGetCommunicationBodyV1**](ObjectCommunicationApi.md#communicationgetcommunicationbodyv1) | **GET** /1/object/communication/{pkiCommunicationID}/getCommunicationBody | Retrieve the communication body |
 | [**CommunicationSendV1**](ObjectCommunicationApi.md#communicationsendv1) | **POST** /1/object/communication/send | Send a new Communication |
 
 <a id="communicationgetcommunicationbodyv1"></a>
 # **CommunicationGetCommunicationBodyV1**
 > void CommunicationGetCommunicationBodyV1 (int pkiCommunicationID)
 
-Retrieve the communication body.
+Retrieve the communication body
 
 This endpoint returns the communication body.
 
@@ -41,7 +41,7 @@ namespace Example
 
             try
             {
-                // Retrieve the communication body.
+                // Retrieve the communication body
                 apiInstance.CommunicationGetCommunicationBodyV1(pkiCommunicationID);
             }
             catch (ApiException  e)
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Retrieve the communication body.
+    // Retrieve the communication body
     apiInstance.CommunicationGetCommunicationBodyV1WithHttpInfo(pkiCommunicationID);
 }
 catch (ApiException e)

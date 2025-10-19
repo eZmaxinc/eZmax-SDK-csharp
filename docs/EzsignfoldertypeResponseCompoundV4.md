@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **EEzsignfoldertypePdfarequirement** | **FieldEEzsignfoldertypePdfarequirement** |  | [optional] 
 **EEzsignfoldertypePdfanoncompliantaction** | **FieldEEzsignfoldertypePdfanoncompliantaction** |  | [optional] 
 **EEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
+**EEzsignfoldertypeDocumentmerge** | **FieldEEzsignfoldertypeDocumentmerge** |  | [optional] 
 **IEzsignfoldertypeFontsizeannotation** | **int** | Font size for annotations | [optional] 
 **IEzsignfoldertypeFontsizeformfield** | **int** | Font size for form fields | [optional] 
 **IEzsignfoldertypeSendreminderfirstdays** | **int** | The number of days before the the first reminder sending | [optional] 
@@ -44,13 +45,18 @@ Name | Type | Description | Notes
 **BEzsignfoldertypeSendsignedtoezsignsigner** | **bool** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **BEzsignfoldertypeSendsignedtouser** | **bool** | Whether we send an email to User who signed when document is completed | [optional] 
 **BEzsignfoldertypeSendattachmentezsignsigner** | **bool** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 
+**BEzsignfoldertypeSendsignatureattachmentezsignsigner** | **bool** | Whether we send the attachments contained in the Ezsignsignatures in the email to Ezsignsigner | [optional] 
+**BEzsignfoldertypeSendsignatureattachment** | **bool** | Whether we send the attachments contained in the Ezsignsignatures in the email to external recipient | [optional] 
 **BEzsignfoldertypeSendproofezsignsigner** | **bool** | Whether we send the proof in the email to Ezsignsigner | [optional] 
 **BEzsignfoldertypeSendattachmentuser** | **bool** | Whether we send the Ezsigndocument in the email to User | [optional] 
+**BEzsignfoldertypeSendsignatureattachmentuser** | **bool** | Whether we send the attachments contained in the Ezsignsignatures in the email to User | [optional] 
 **BEzsignfoldertypeSendproofuser** | **bool** | Whether we send the proof in the email to User | [optional] 
 **BEzsignfoldertypeSendproofemail** | **bool** | Whether we send the proof in the email to external recipient | [optional] 
 **BEzsignfoldertypeAllowdownloadattachmentezsignsigner** | **bool** | Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner | [optional] 
+**BEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner** | **bool** | Whether we allow the attachments in the Ezsignsignatures to be downloaded by an Ezsignsigner | [optional] 
 **BEzsignfoldertypeAllowdownloadproofezsignsigner** | **bool** | Whether we allow the proof to be downloaded by an Ezsignsigner | [optional] 
 **BEzsignfoldertypeSendproofreceivealldocument** | **bool** | Whether we send the proof to user and Ezsignsigner who receive all documents. | [optional] 
+**BEzsignfoldertypeSendsignatureattachmentreceivealldocument** | **bool** | Whether we send the attachments contained in the Ezsignsignatures to user and Ezsignsigner who receive all documents. | [optional] 
 **BEzsignfoldertypeSendsignedtodocumentowner** | **bool** | Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner | 
 **BEzsignfoldertypeSendsignedtofolderowner** | **bool** | Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner | 
 **BEzsignfoldertypeSendsignedtofullgroup** | **bool** | Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders | [optional] 

@@ -6,7 +6,7 @@ An Ezsignsignaturepaymentdetail Object
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsignsignaturepaymentdetailID** | **int** | The unique ID of the Ezsignsignaturepaymentdetail | [optional] 
-**FkiGlaccountcontainerID** | **int** | The unique ID of the Glaccountcontainer | [optional] 
+**FkiGlaccountcontainerID** | **int** | The unique ID of the Glaccountcontainer | 
 **TEzsignsignaturepaymentdetailDescription** | **string** | A description for the Ezsignsignaturepaymentdetail. | 
 **DEzsignsignaturepaymentdetailAmount** | **string** | The amount of the for the Ezsignsignaturepaymentdetail | 
 **EEzsignsignaturepaymentdetailTaxable** | **FieldEEzsignsignaturepaymentdetailTaxable** |  | 

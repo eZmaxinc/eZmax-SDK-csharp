@@ -6,6 +6,7 @@ A Branding Object and children
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiBrandingID** | **int** | The unique ID of the Branding | [optional] 
+**FkiDomainID** | **int** | The unique ID of the Domain | [optional] 
 **ObjBrandingDescription** | [**MultilingualBrandingDescription**](MultilingualBrandingDescription.md) |  | 
 **EBrandingLogo** | **FieldEBrandingLogo** |  | 
 **EBrandingAlignlogo** | **FieldEBrandingAlignlogo** |  | [optional] 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **SEzsignfoldertypeNameX** | **string** | The name of the Ezsignfoldertype in the language of the requester | 
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **EEzsignfolderStep** | **FieldEEzsignfolderStep** |  | 
+**EEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  | 
 **DtCreatedDate** | **string** | The date and time at which the object was created | 
 **DtEzsignfolderDelayedsenddate** | **string** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **DtEzsignfolderSentdate** | **string** | The date and time at which the Ezsignfolder was sent the last time. | [optional] 

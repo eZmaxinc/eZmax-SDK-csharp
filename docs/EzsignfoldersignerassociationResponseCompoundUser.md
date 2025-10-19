@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **SUserFirstname** | **string** | The first name of the user | 
 **SUserLastname** | **string** | The last name of the user | 
 **SEmailAddress** | **string** | The email address. | 
+**EUserType** | **FieldEUserType** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

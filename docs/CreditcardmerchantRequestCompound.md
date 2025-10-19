@@ -6,8 +6,9 @@ A Creditcardmerchant Object and children
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiCreditcardmerchantID** | **int** | The unique ID of the Creditcardmerchant | [optional] 
-**FkiBankaccountID** | **int** | The unique ID of the Bankaccount | 
-**FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | [optional] 
+**FkiBankaccountID** | **int** | The unique ID of the Bankaccount | [optional] 
+**FkiLanguageID** | **int** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
+**FkiCurrencyID** | **int** | The unique ID of the Currency. | 
 **BCreditcardmerchantDenyvisa** | **bool** | Whether if visa are denied | 
 **BCreditcardmerchantDenymastercard** | **bool** | Whether if mastercard are denied | 
 **BCreditcardmerchantDenyamex** | **bool** | Whether if amex are denied | 

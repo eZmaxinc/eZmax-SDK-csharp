@@ -59,7 +59,7 @@ Name | Type | Description | Notes
 **EAttachmentType** | **FieldEAttachmentType** |  | 
 **IAttachmentSize** | **long** | The size of the Attachment | 
 **IAttachmentEDMmoduleflag** | **int** | The edmmoduleflag of the Attachment | [optional] 
-**SAttachmentMD5** | **string** | The md5 of the Attachment | 
+**SAttachmentMD5** | **string** | The MD5 of the Attachment | 
 **BAttachmentDeleted** | **bool** | Whether if it&#39;s deleted | 
 **BAttachmentValid** | **bool** | Whether if it&#39;s valid | 
 **EAttachmentVerified** | **FieldEAttachmentVerified** |  | 

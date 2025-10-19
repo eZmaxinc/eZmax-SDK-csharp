@@ -6,6 +6,7 @@ A Customer AutocompleteElement Response
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiCustomerID** | **int** | The unique ID of the Customer. | 
+**FkiDepartmentID** | **int** | The unique ID of the Department | 
 **SCustomerName** | **string** | The name of the Customer | 
 **BCustomerIsactive** | **bool** | Whether the customer is active or not | 
 

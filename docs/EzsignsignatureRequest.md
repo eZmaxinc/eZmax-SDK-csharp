@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 **SEzsignsignatureTextvalidationcustommessage** | **string** | Description of validation rule. Show by signatory. | [optional] 
 **SEzsignsignatureRegexp** | **string** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** | [optional] 
 **EEzsignsignatureDependencyrequirement** | **FieldEEzsignsignatureDependencyrequirement** |  | [optional] 
+**SEzsignsignatureCreditcardamountdescription** | **string** | The description of the Creditcard signature | [optional] 
+**DEzsignsignatureCreditcardamount** | **string** | The amount of the Creditcard signature | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
