@@ -258,7 +258,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.</value>
         /*
-        <example>[B@55e7a35c</example>
+        <example>[B@7889a1ac</example>
         */
         [DataMember(Name = "sEzsigntemplatedocumentBase64", EmitDefaultValue = false)]
         public byte[] SEzsigntemplatedocumentBase64 { get; set; }

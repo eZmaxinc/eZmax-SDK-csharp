@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **DtLeadExpiration** | **string** | The expiration of the Lead | 
 **BLeadIsactive** | **bool** | Whether the lead is active or not | 
 **SLeadCode** | **string** | The code of the Lead | 
+**SLeadContacts** | **string** | The contacts&#39; name of the Lead | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

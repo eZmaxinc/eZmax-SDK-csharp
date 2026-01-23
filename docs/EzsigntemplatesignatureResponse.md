@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **IEzsigntemplatesignatureHeight** | **int** | The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight. | [optional] 
 **IEzsigntemplatesignatureStep** | **int** | The step when the Ezsigntemplatesigner will be invited to sign | 
 **EEzsigntemplatesignatureType** | **FieldEEzsigntemplatesignatureType** |  | 
+**EEzsigntemplatesignatureSignaturepad** | **FieldEEzsigntemplatesignatureSignaturepad** |  | [optional] 
+**EEzsigntemplatesignatureSignaturepadrequired** | **FieldEEzsigntemplatesignatureSignaturepadrequired** |  | [optional] 
 **EEzsigntemplatesignatureConsultationtrigger** | **FieldEEzsigntemplatesignatureConsultationtrigger** |  | [optional] 
 **TEzsigntemplatesignatureTooltip** | **string** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplatesignature | [optional] 
 **EEzsigntemplatesignatureTooltipposition** | **FieldEEzsigntemplatesignatureTooltipposition** |  | [optional] 

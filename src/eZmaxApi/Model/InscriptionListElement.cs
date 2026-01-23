@@ -193,7 +193,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The saleprice of the Inscription</value>
         /*
-        <example>200000</example>
+        <example>200000.00</example>
         */
         [DataMember(Name = "dInscriptionSaleprice", IsRequired = true, EmitDefaultValue = true)]
         public string DInscriptionSaleprice { get; set; }
@@ -203,7 +203,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The rentprice of the Inscription</value>
         /*
-        <example>1200</example>
+        <example>1200.00</example>
         */
         [DataMember(Name = "dInscriptionRentprice", IsRequired = true, EmitDefaultValue = true)]
         public string DInscriptionRentprice { get; set; }

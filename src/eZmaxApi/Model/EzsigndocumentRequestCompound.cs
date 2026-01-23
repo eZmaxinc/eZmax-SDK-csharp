@@ -188,7 +188,7 @@ namespace eZmaxApi.Model
         /// <param name="bEzsigndocumentForcerepair">Try to repair the document or flatten it if it cannot be used for electronic signature.  (default to true).</param>
         /// <param name="sEzsigndocumentPassword">If the source document is password protected, the password to open/modify it..</param>
         /// <param name="eEzsigndocumentForm">If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document..</param>
-        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed. (required).</param>
+        /// <param name="dtEzsigndocumentDuedate">The maximum date and time at which the Ezsigndocument can be signed..</param>
         /// <param name="sEzsigndocumentName">The name of the document that will be presented to Ezsignfoldersignerassociations (required).</param>
         /// <param name="sEzsigndocumentExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         public EzsigndocumentRequestCompound(int pkiEzsigndocumentID = default, int fkiEzsignfolderID = default, int fkiEzsigntemplateID = default, int fkiEzsignfoldersignerassociationID = default, int fkiEzsignimportdocumentID = default, int fkiLanguageID = default, EEzsigndocumentSourceEnum eEzsigndocumentSource = default, EEzsigndocumentFormatEnum? eEzsigndocumentFormat = default, byte[] sEzsigndocumentBase64 = default, string sEzsigndocumentUrl = default, bool bEzsigndocumentForcerepair = true, string sEzsigndocumentPassword = default, EEzsigndocumentFormEnum? eEzsigndocumentForm = default, string dtEzsigndocumentDuedate = default, string sEzsigndocumentName = default, string sEzsigndocumentExternalid = default)
@@ -196,12 +196,6 @@ namespace eZmaxApi.Model
             this.FkiEzsignfolderID = fkiEzsignfolderID;
             this.FkiLanguageID = fkiLanguageID;
             this.EEzsigndocumentSource = eEzsigndocumentSource;
-            // to ensure "dtEzsigndocumentDuedate" is required (not null)
-            if (dtEzsigndocumentDuedate == null)
-            {
-                throw new ArgumentNullException("dtEzsigndocumentDuedate is a required property for EzsigndocumentRequestCompound and cannot be null");
-            }
-            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
             // to ensure "sEzsigndocumentName" is required (not null)
             if (sEzsigndocumentName == null)
             {
@@ -218,6 +212,7 @@ namespace eZmaxApi.Model
             this.BEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
             this.SEzsigndocumentPassword = sEzsigndocumentPassword;
             this.EEzsigndocumentForm = eEzsigndocumentForm;
+            this.DtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
             this.SEzsigndocumentExternalid = sEzsigndocumentExternalid;
         }
 
@@ -325,7 +320,7 @@ namespace eZmaxApi.Model
         /*
         <example>2020-12-31 23:59:59</example>
         */
-        [DataMember(Name = "dtEzsigndocumentDuedate", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "dtEzsigndocumentDuedate", EmitDefaultValue = false)]
         public string DtEzsigndocumentDuedate { get; set; }
 
         /// <summary>

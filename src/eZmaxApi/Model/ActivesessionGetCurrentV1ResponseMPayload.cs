@@ -363,7 +363,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The date at which the NPS questionnaire will be show</value>
         /*
-        <example>2020-12-31 23:59:59</example>
+        <example>2020-12-31</example>
         */
         [DataMember(Name = "dtUserNpsrequest", EmitDefaultValue = false)]
         public string DtUserNpsrequest { get; set; }

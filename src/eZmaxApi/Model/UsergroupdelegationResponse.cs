@@ -47,8 +47,9 @@ namespace eZmaxApi.Model
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
         /// <param name="sEmailAddress">The email address..</param>
+        /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
-        public UsergroupdelegationResponse(int pkiUsergroupdelegationID = default, int fkiUsergroupID = default, int fkiUserID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sEmailAddress = default, string sUsergroupNameX = default)
+        public UsergroupdelegationResponse(int pkiUsergroupdelegationID = default, int fkiUsergroupID = default, int fkiUserID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sEmailAddress = default, bool bUserIsactive = default, string sUsergroupNameX = default)
         {
             this.PkiUsergroupdelegationID = pkiUsergroupdelegationID;
             this.FkiUsergroupID = fkiUsergroupID;
@@ -71,6 +72,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sUserLoginname is a required property for UsergroupdelegationResponse and cannot be null");
             }
             this.SUserLoginname = sUserLoginname;
+            this.BUserIsactive = bUserIsactive;
             // to ensure "sUsergroupNameX" is required (not null)
             if (sUsergroupNameX == null)
             {
@@ -151,6 +153,16 @@ namespace eZmaxApi.Model
         public string SEmailAddress { get; set; }
 
         /// <summary>
+        /// Whether the User is active or not
+        /// </summary>
+        /// <value>Whether the User is active or not</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserIsactive", IsRequired = true, EmitDefaultValue = true)]
+        public bool BUserIsactive { get; set; }
+
+        /// <summary>
         /// The Name of the Usergroup in the language of the requester
         /// </summary>
         /// <value>The Name of the Usergroup in the language of the requester</value>
@@ -175,6 +187,7 @@ namespace eZmaxApi.Model
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
+            sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

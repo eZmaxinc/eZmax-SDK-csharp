@@ -69,6 +69,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="fkiEzsignsigningreasonID">The unique ID of the Ezsignsigningreason.</param>
         /// <param name="fkiFontID">The unique ID of the Font.</param>
+        /// <param name="dEzsignsignatureCreditcardamount">The amount of the Creditcard signature.</param>
         /// <param name="sValue">The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**.</param>
         /// <param name="eAttachmentsConfirmationDecision">Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
         /// <param name="sAttachmentsRefusalReason">The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**.</param>
@@ -76,11 +77,12 @@ namespace eZmaxApi.Model
         /// <param name="aObjFile">aObjFile.</param>
         /// <param name="objCreditcard">objCreditcard.</param>
         /// <param name="bIsAutomatic">Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**.  (required).</param>
-        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default, int fkiFontID = default, string sValue = default, EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default, string sAttachmentsRefusalReason = default, string sSvg = default, List<CommonFile> aObjFile = default, CustomCreditcardRequest objCreditcard = default, bool bIsAutomatic = default)
+        public EzsignsignatureSignV1Request(int fkiEzsignsigningreasonID = default, int fkiFontID = default, string dEzsignsignatureCreditcardamount = default, string sValue = default, EAttachmentsConfirmationDecisionEnum? eAttachmentsConfirmationDecision = default, string sAttachmentsRefusalReason = default, string sSvg = default, List<CommonFile> aObjFile = default, CustomCreditcardRequest objCreditcard = default, bool bIsAutomatic = default)
         {
             this.BIsAutomatic = bIsAutomatic;
             this.FkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
             this.FkiFontID = fkiFontID;
+            this.DEzsignsignatureCreditcardamount = dEzsignsignatureCreditcardamount;
             this.SValue = sValue;
             this.EAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
             this.SAttachmentsRefusalReason = sAttachmentsRefusalReason;
@@ -108,6 +110,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiFontID", EmitDefaultValue = false)]
         public int FkiFontID { get; set; }
+
+        /// <summary>
+        /// The amount of the Creditcard signature
+        /// </summary>
+        /// <value>The amount of the Creditcard signature</value>
+        /*
+        <example>100.00</example>
+        */
+        [DataMember(Name = "dEzsignsignatureCreditcardamount", EmitDefaultValue = false)]
+        public string DEzsignsignatureCreditcardamount { get; set; }
 
         /// <summary>
         /// The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
@@ -162,6 +174,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignsignatureSignV1Request {\n");
             sb.Append("  FkiEzsignsigningreasonID: ").Append(FkiEzsignsigningreasonID).Append("\n");
             sb.Append("  FkiFontID: ").Append(FkiFontID).Append("\n");
+            sb.Append("  DEzsignsignatureCreditcardamount: ").Append(DEzsignsignatureCreditcardamount).Append("\n");
             sb.Append("  SValue: ").Append(SValue).Append("\n");
             sb.Append("  EAttachmentsConfirmationDecision: ").Append(EAttachmentsConfirmationDecision).Append("\n");
             sb.Append("  SAttachmentsRefusalReason: ").Append(SAttachmentsRefusalReason).Append("\n");
@@ -205,6 +218,15 @@ namespace eZmaxApi.Model
             if (this.FkiFontID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+            }
+
+            if (this.DEzsignsignatureCreditcardamount != null) {
+                // DEzsignsignatureCreditcardamount (string) pattern
+                Regex regexDEzsignsignatureCreditcardamount = new Regex(@"^[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                if (!regexDEzsignsignatureCreditcardamount.Match(this.DEzsignsignatureCreditcardamount).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzsignsignatureCreditcardamount, must match a pattern of " + regexDEzsignsignatureCreditcardamount, new [] { "DEzsignsignatureCreditcardamount" });
+                }
             }
 
             if (this.SSvg != null) {

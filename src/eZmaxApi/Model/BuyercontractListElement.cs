@@ -145,7 +145,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The minimumprice of the Buyercontract</value>
         /*
-        <example>200000</example>
+        <example>200000.00</example>
         */
         [DataMember(Name = "dBuyercontractMinimumprice", IsRequired = true, EmitDefaultValue = true)]
         public string DBuyercontractMinimumprice { get; set; }
@@ -155,7 +155,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The maximumprice of the Buyercontract</value>
         /*
-        <example>250000</example>
+        <example>250000.00</example>
         */
         [DataMember(Name = "dBuyercontractMaximumprice", IsRequired = true, EmitDefaultValue = true)]
         public string DBuyercontractMaximumprice { get; set; }

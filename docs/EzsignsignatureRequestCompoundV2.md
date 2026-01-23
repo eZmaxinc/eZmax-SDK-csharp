@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **IEzsignsignatureHeight** | **int** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. | [optional] 
 **IEzsignsignatureStep** | **int** | The step when the Ezsignsigner will be invited to sign | 
 **EEzsignsignatureType** | **FieldEEzsignsignatureType** |  | 
+**EEzsignsignatureSignaturepad** | **FieldEEzsignsignatureSignaturepad** |  | [optional] 
+**EEzsignsignatureSignaturepadrequired** | **FieldEEzsignsignatureSignaturepadrequired** |  | [optional] 
 **FkiEzsigndocumentID** | **int** | The unique ID of the Ezsigndocument | 
 **TEzsignsignatureTooltip** | **string** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature | [optional] 
 **EEzsignsignatureTooltipposition** | **FieldEEzsignsignatureTooltipposition** |  | [optional] 
@@ -35,6 +37,7 @@ Name | Type | Description | Notes
 **EEzsignsignatureDependencyrequirement** | **FieldEEzsignsignatureDependencyrequirement** |  | [optional] 
 **SEzsignsignatureCreditcardamountdescription** | **string** | The description of the Creditcard signature | [optional] 
 **DEzsignsignatureCreditcardamount** | **string** | The amount of the Creditcard signature | [optional] 
+**BEzsignsignatureCreditcardcustomamount** | **bool** | Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not | [optional] 
 **BEzsignsignatureCustomdate** | **bool** | Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**) | [optional] 
 **AObjEzsignsignaturecustomdate** | [**List&lt;EzsignsignaturecustomdateRequestCompoundV2&gt;**](EzsignsignaturecustomdateRequestCompoundV2.md) | An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all. | [optional] 
 **AObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequestCompound.md) |  | [optional] 

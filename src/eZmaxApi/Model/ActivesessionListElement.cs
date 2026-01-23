@@ -42,13 +42,13 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiActivesessionID">The unique ID of the Activesession (required).</param>
         /// <param name="fkiUserID">The unique ID of the User (required).</param>
-        /// <param name="fkiComputerID">The unique ID of the Computer (required).</param>
+        /// <param name="fkiComputerID">The unique ID of the Computer.</param>
         /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
         /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
         /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="sActivesessionLoginname">The loginname of the Activesession (required).</param>
-        /// <param name="sComputerDescription">The description of the Computer (required).</param>
+        /// <param name="sComputerDescription">The description of the Computer.</param>
         /// <param name="dtActivesessionFirsthit">The first hit of the Activesession (required).</param>
         /// <param name="dtActivesessionLasthit">The last hit of the Activesession (required).</param>
         /// <param name="sActivesessionIP">Represent an IP address. (required).</param>
@@ -56,7 +56,6 @@ namespace eZmaxApi.Model
         {
             this.PkiActivesessionID = pkiActivesessionID;
             this.FkiUserID = fkiUserID;
-            this.FkiComputerID = fkiComputerID;
             this.FkiCompanyID = fkiCompanyID;
             this.FkiDepartmentID = fkiDepartmentID;
             // to ensure "sCompanyNameX" is required (not null)
@@ -77,12 +76,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sActivesessionLoginname is a required property for ActivesessionListElement and cannot be null");
             }
             this.SActivesessionLoginname = sActivesessionLoginname;
-            // to ensure "sComputerDescription" is required (not null)
-            if (sComputerDescription == null)
-            {
-                throw new ArgumentNullException("sComputerDescription is a required property for ActivesessionListElement and cannot be null");
-            }
-            this.SComputerDescription = sComputerDescription;
             // to ensure "dtActivesessionFirsthit" is required (not null)
             if (dtActivesessionFirsthit == null)
             {
@@ -101,6 +94,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sActivesessionIP is a required property for ActivesessionListElement and cannot be null");
             }
             this.SActivesessionIP = sActivesessionIP;
+            this.FkiComputerID = fkiComputerID;
+            this.SComputerDescription = sComputerDescription;
         }
 
         /// <summary>
@@ -130,7 +125,7 @@ namespace eZmaxApi.Model
         /*
         <example>249</example>
         */
-        [DataMember(Name = "fkiComputerID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiComputerID", EmitDefaultValue = false)]
         public int FkiComputerID { get; set; }
 
         /// <summary>
@@ -190,7 +185,7 @@ namespace eZmaxApi.Model
         /*
         <example>PC001</example>
         */
-        [DataMember(Name = "sComputerDescription", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sComputerDescription", EmitDefaultValue = false)]
         public string SComputerDescription { get; set; }
 
         /// <summary>

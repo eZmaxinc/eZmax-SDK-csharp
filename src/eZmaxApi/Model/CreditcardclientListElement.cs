@@ -44,18 +44,20 @@ namespace eZmaxApi.Model
         /// <param name="fkiCreditcarddetailID">The unique ID of the Creditcarddetail (required).</param>
         /// <param name="fkiCreditcardtypeID">The unique ID of the Creditcardtype (required).</param>
         /// <param name="bCreditcardclientrelationIsdefault">Whether if it&#39;s the creditcardclient is the default one (required).</param>
+        /// <param name="bCreditcardclientLegacy">Whether the Creditcardclient is legacy or not (required).</param>
         /// <param name="sCreditcardclientDescription">The description of the Creditcardclient (required).</param>
         /// <param name="bCreditcardclientAllowedcompanypayment">Whether if it&#39;s an allowedagencypayment (required).</param>
         /// <param name="bCreditcardclientAllowedtranquillit">Whether if it&#39;s an allowedtranquillit (required).</param>
         /// <param name="iCreditcarddetailExpirationmonth">The expirationmonth of the Creditcarddetail (required).</param>
         /// <param name="iCreditcarddetailExpirationyear">The expirationyear of the Creditcarddetail (required).</param>
         /// <param name="iCreditcarddetailLastdigits">The last digits of the Creditcarddetail (required).</param>
-        public CreditcardclientListElement(int pkiCreditcardclientID = default, int fkiCreditcarddetailID = default, int fkiCreditcardtypeID = default, bool bCreditcardclientrelationIsdefault = default, string sCreditcardclientDescription = default, bool bCreditcardclientAllowedcompanypayment = default, bool bCreditcardclientAllowedtranquillit = default, int iCreditcarddetailExpirationmonth = default, int iCreditcarddetailExpirationyear = default, int iCreditcarddetailLastdigits = default)
+        public CreditcardclientListElement(int pkiCreditcardclientID = default, int fkiCreditcarddetailID = default, int fkiCreditcardtypeID = default, bool bCreditcardclientrelationIsdefault = default, bool bCreditcardclientLegacy = default, string sCreditcardclientDescription = default, bool bCreditcardclientAllowedcompanypayment = default, bool bCreditcardclientAllowedtranquillit = default, int iCreditcarddetailExpirationmonth = default, int iCreditcarddetailExpirationyear = default, int iCreditcarddetailLastdigits = default)
         {
             this.PkiCreditcardclientID = pkiCreditcardclientID;
             this.FkiCreditcarddetailID = fkiCreditcarddetailID;
             this.FkiCreditcardtypeID = fkiCreditcardtypeID;
             this.BCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+            this.BCreditcardclientLegacy = bCreditcardclientLegacy;
             // to ensure "sCreditcardclientDescription" is required (not null)
             if (sCreditcardclientDescription == null)
             {
@@ -108,6 +110,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "bCreditcardclientrelationIsdefault", IsRequired = true, EmitDefaultValue = true)]
         public bool BCreditcardclientrelationIsdefault { get; set; }
+
+        /// <summary>
+        /// Whether the Creditcardclient is legacy or not
+        /// </summary>
+        /// <value>Whether the Creditcardclient is legacy or not</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bCreditcardclientLegacy", IsRequired = true, EmitDefaultValue = true)]
+        public bool BCreditcardclientLegacy { get; set; }
 
         /// <summary>
         /// The description of the Creditcardclient
@@ -181,6 +193,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiCreditcarddetailID: ").Append(FkiCreditcarddetailID).Append("\n");
             sb.Append("  FkiCreditcardtypeID: ").Append(FkiCreditcardtypeID).Append("\n");
             sb.Append("  BCreditcardclientrelationIsdefault: ").Append(BCreditcardclientrelationIsdefault).Append("\n");
+            sb.Append("  BCreditcardclientLegacy: ").Append(BCreditcardclientLegacy).Append("\n");
             sb.Append("  SCreditcardclientDescription: ").Append(SCreditcardclientDescription).Append("\n");
             sb.Append("  BCreditcardclientAllowedcompanypayment: ").Append(BCreditcardclientAllowedcompanypayment).Append("\n");
             sb.Append("  BCreditcardclientAllowedtranquillit: ").Append(BCreditcardclientAllowedtranquillit).Append("\n");

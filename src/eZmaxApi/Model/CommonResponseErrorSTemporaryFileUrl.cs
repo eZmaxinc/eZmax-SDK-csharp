@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.</value>
         /*
-        <example>http://www.example.com/document.pdf</example>
+        <example>https://www.example.com/document.pdf</example>
         */
         [DataMember(Name = "sTemporaryFileUrl", EmitDefaultValue = false)]
         public string STemporaryFileUrl { get; set; }

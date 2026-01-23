@@ -40,6 +40,18 @@ namespace eZmaxApi.Model
         public FieldEEzsignsignatureType EEzsignsignatureType { get; set; }
 
         /// <summary>
+        /// Gets or Sets EEzsignsignatureSignaturepad
+        /// </summary>
+        [DataMember(Name = "eEzsignsignatureSignaturepad", EmitDefaultValue = false)]
+        public FieldEEzsignsignatureSignaturepad? EEzsignsignatureSignaturepad { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EEzsignsignatureSignaturepadrequired
+        /// </summary>
+        [DataMember(Name = "eEzsignsignatureSignaturepadrequired", EmitDefaultValue = false)]
+        public FieldEEzsignsignatureSignaturepadrequired? EEzsignsignatureSignaturepadrequired { get; set; }
+
+        /// <summary>
         /// Gets or Sets EEzsignsignatureTooltipposition
         /// </summary>
         [DataMember(Name = "eEzsignsignatureTooltipposition", EmitDefaultValue = false)]
@@ -92,6 +104,8 @@ namespace eZmaxApi.Model
         /// <param name="iEzsignsignatureHeight">The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight..</param>
         /// <param name="iEzsignsignatureStep">The step when the Ezsignsigner will be invited to sign (required).</param>
         /// <param name="eEzsignsignatureType">eEzsignsignatureType (required).</param>
+        /// <param name="eEzsignsignatureSignaturepad">eEzsignsignatureSignaturepad.</param>
+        /// <param name="eEzsignsignatureSignaturepadrequired">eEzsignsignatureSignaturepadrequired.</param>
         /// <param name="fkiEzsigndocumentID">The unique ID of the Ezsigndocument (required).</param>
         /// <param name="tEzsignsignatureTooltip">A tooltip that will be presented to Ezsignsigner about the Ezsignsignature.</param>
         /// <param name="eEzsignsignatureTooltipposition">eEzsignsignatureTooltipposition.</param>
@@ -112,11 +126,12 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignsignatureDependencyrequirement">eEzsignsignatureDependencyrequirement.</param>
         /// <param name="sEzsignsignatureCreditcardamountdescription">The description of the Creditcard signature.</param>
         /// <param name="dEzsignsignatureCreditcardamount">The amount of the Creditcard signature.</param>
+        /// <param name="bEzsignsignatureCreditcardcustomamount">Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not.</param>
         /// <param name="bEzsignsignatureCustomdate">Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**).</param>
         /// <param name="aObjEzsignsignaturecustomdate">An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all..</param>
         /// <param name="aObjEzsignelementdependency">aObjEzsignelementdependency.</param>
         /// <param name="aObjEzsignsignaturepaymentdetail">aObjEzsignsignaturepaymentdetail.</param>
-        public EzsignsignatureRequestCompound(int pkiEzsignsignatureID = default, int fkiEzsignfoldersignerassociationID = default, int fkiPaymentgatewayID = default, int iEzsignpagePagenumber = default, int iEzsignsignatureX = default, int iEzsignsignatureY = default, int iEzsignsignatureWidth = default, int iEzsignsignatureHeight = default, int iEzsignsignatureStep = default, FieldEEzsignsignatureType eEzsignsignatureType = default, int fkiEzsigndocumentID = default, string tEzsignsignatureTooltip = default, FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default, FieldEEzsignsignatureFont? eEzsignsignatureFont = default, int fkiEzsignfoldersignerassociationIDValidation = default, bool bEzsignsignatureHandwritten = default, bool bEzsignsignatureReason = default, bool bEzsignsignatureRequired = default, FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default, string sEzsignsignatureAttachmentdescription = default, FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger = default, int iEzsignsignatureValidationstep = default, int iEzsignsignatureMaxlength = default, string sEzsignsignatureDefaultvalue = default, EnumTextvalidation? eEzsignsignatureTextvalidation = default, string sEzsignsignatureTextvalidationcustommessage = default, string sEzsignsignatureRegexp = default, FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default, string sEzsignsignatureCreditcardamountdescription = default, string dEzsignsignatureCreditcardamount = default, bool bEzsignsignatureCustomdate = default, List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default, List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default, List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = default)
+        public EzsignsignatureRequestCompound(int pkiEzsignsignatureID = default, int fkiEzsignfoldersignerassociationID = default, int fkiPaymentgatewayID = default, int iEzsignpagePagenumber = default, int iEzsignsignatureX = default, int iEzsignsignatureY = default, int iEzsignsignatureWidth = default, int iEzsignsignatureHeight = default, int iEzsignsignatureStep = default, FieldEEzsignsignatureType eEzsignsignatureType = default, FieldEEzsignsignatureSignaturepad? eEzsignsignatureSignaturepad = default, FieldEEzsignsignatureSignaturepadrequired? eEzsignsignatureSignaturepadrequired = default, int fkiEzsigndocumentID = default, string tEzsignsignatureTooltip = default, FieldEEzsignsignatureTooltipposition? eEzsignsignatureTooltipposition = default, FieldEEzsignsignatureFont? eEzsignsignatureFont = default, int fkiEzsignfoldersignerassociationIDValidation = default, bool bEzsignsignatureHandwritten = default, bool bEzsignsignatureReason = default, bool bEzsignsignatureRequired = default, FieldEEzsignsignatureAttachmentnamesource? eEzsignsignatureAttachmentnamesource = default, string sEzsignsignatureAttachmentdescription = default, FieldEEzsignsignatureConsultationtrigger? eEzsignsignatureConsultationtrigger = default, int iEzsignsignatureValidationstep = default, int iEzsignsignatureMaxlength = default, string sEzsignsignatureDefaultvalue = default, EnumTextvalidation? eEzsignsignatureTextvalidation = default, string sEzsignsignatureTextvalidationcustommessage = default, string sEzsignsignatureRegexp = default, FieldEEzsignsignatureDependencyrequirement? eEzsignsignatureDependencyrequirement = default, string sEzsignsignatureCreditcardamountdescription = default, string dEzsignsignatureCreditcardamount = default, bool bEzsignsignatureCreditcardcustomamount = default, bool bEzsignsignatureCustomdate = default, List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = default, List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = default, List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = default)
         {
             this.FkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
             this.IEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -129,6 +144,8 @@ namespace eZmaxApi.Model
             this.FkiPaymentgatewayID = fkiPaymentgatewayID;
             this.IEzsignsignatureWidth = iEzsignsignatureWidth;
             this.IEzsignsignatureHeight = iEzsignsignatureHeight;
+            this.EEzsignsignatureSignaturepad = eEzsignsignatureSignaturepad;
+            this.EEzsignsignatureSignaturepadrequired = eEzsignsignatureSignaturepadrequired;
             this.TEzsignsignatureTooltip = tEzsignsignatureTooltip;
             this.EEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
             this.EEzsignsignatureFont = eEzsignsignatureFont;
@@ -148,6 +165,7 @@ namespace eZmaxApi.Model
             this.EEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
             this.SEzsignsignatureCreditcardamountdescription = sEzsignsignatureCreditcardamountdescription;
             this.DEzsignsignatureCreditcardamount = dEzsignsignatureCreditcardamount;
+            this.BEzsignsignatureCreditcardcustomamount = bEzsignsignatureCreditcardcustomamount;
             this.BEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
             this.AObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
             this.AObjEzsignelementdependency = aObjEzsignelementdependency;
@@ -376,6 +394,16 @@ namespace eZmaxApi.Model
         public string DEzsignsignatureCreditcardamount { get; set; }
 
         /// <summary>
+        /// Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not
+        /// </summary>
+        /// <value>Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsignsignatureCreditcardcustomamount", EmitDefaultValue = true)]
+        public bool BEzsignsignatureCreditcardcustomamount { get; set; }
+
+        /// <summary>
         /// Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
         /// </summary>
         /// <value>Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)</value>
@@ -419,6 +447,8 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsignsignatureHeight: ").Append(IEzsignsignatureHeight).Append("\n");
             sb.Append("  IEzsignsignatureStep: ").Append(IEzsignsignatureStep).Append("\n");
             sb.Append("  EEzsignsignatureType: ").Append(EEzsignsignatureType).Append("\n");
+            sb.Append("  EEzsignsignatureSignaturepad: ").Append(EEzsignsignatureSignaturepad).Append("\n");
+            sb.Append("  EEzsignsignatureSignaturepadrequired: ").Append(EEzsignsignatureSignaturepadrequired).Append("\n");
             sb.Append("  FkiEzsigndocumentID: ").Append(FkiEzsigndocumentID).Append("\n");
             sb.Append("  TEzsignsignatureTooltip: ").Append(TEzsignsignatureTooltip).Append("\n");
             sb.Append("  EEzsignsignatureTooltipposition: ").Append(EEzsignsignatureTooltipposition).Append("\n");
@@ -439,6 +469,7 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsignsignatureDependencyrequirement: ").Append(EEzsignsignatureDependencyrequirement).Append("\n");
             sb.Append("  SEzsignsignatureCreditcardamountdescription: ").Append(SEzsignsignatureCreditcardamountdescription).Append("\n");
             sb.Append("  DEzsignsignatureCreditcardamount: ").Append(DEzsignsignatureCreditcardamount).Append("\n");
+            sb.Append("  BEzsignsignatureCreditcardcustomamount: ").Append(BEzsignsignatureCreditcardcustomamount).Append("\n");
             sb.Append("  BEzsignsignatureCustomdate: ").Append(BEzsignsignatureCustomdate).Append("\n");
             sb.Append("  AObjEzsignsignaturecustomdate: ").Append(AObjEzsignsignaturecustomdate).Append("\n");
             sb.Append("  AObjEzsignelementdependency: ").Append(AObjEzsignelementdependency).Append("\n");
@@ -573,7 +604,7 @@ namespace eZmaxApi.Model
 
             if (this.DEzsignsignatureCreditcardamount != null) {
                 // DEzsignsignatureCreditcardamount (string) pattern
-                Regex regexDEzsignsignatureCreditcardamount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                Regex regexDEzsignsignatureCreditcardamount = new Regex(@"^[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
                 if (!regexDEzsignsignatureCreditcardamount.Match(this.DEzsignsignatureCreditcardamount).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzsignsignatureCreditcardamount, must match a pattern of " + regexDEzsignsignatureCreditcardamount, new [] { "DEzsignsignatureCreditcardamount" });

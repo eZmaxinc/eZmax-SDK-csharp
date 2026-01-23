@@ -43,8 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="pkiCustomerID">The unique ID of the Customer. (required).</param>
         /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
         /// <param name="sCustomerName">The name of the Customer (required).</param>
+        /// <param name="sCustomerCode">The code of the Customer (required).</param>
         /// <param name="bCustomerIsactive">Whether the customer is active or not (required).</param>
-        public CustomerAutocompleteElementResponse(int pkiCustomerID = default, int fkiDepartmentID = default, string sCustomerName = default, bool bCustomerIsactive = default)
+        public CustomerAutocompleteElementResponse(int pkiCustomerID = default, int fkiDepartmentID = default, string sCustomerName = default, string sCustomerCode = default, bool bCustomerIsactive = default)
         {
             this.PkiCustomerID = pkiCustomerID;
             this.FkiDepartmentID = fkiDepartmentID;
@@ -54,6 +55,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sCustomerName is a required property for CustomerAutocompleteElementResponse and cannot be null");
             }
             this.SCustomerName = sCustomerName;
+            // to ensure "sCustomerCode" is required (not null)
+            if (sCustomerCode == null)
+            {
+                throw new ArgumentNullException("sCustomerCode is a required property for CustomerAutocompleteElementResponse and cannot be null");
+            }
+            this.SCustomerCode = sCustomerCode;
             this.BCustomerIsactive = bCustomerIsactive;
         }
 
@@ -88,6 +95,16 @@ namespace eZmaxApi.Model
         public string SCustomerName { get; set; }
 
         /// <summary>
+        /// The code of the Customer
+        /// </summary>
+        /// <value>The code of the Customer</value>
+        /*
+        <example>EZMA1</example>
+        */
+        [DataMember(Name = "sCustomerCode", IsRequired = true, EmitDefaultValue = true)]
+        public string SCustomerCode { get; set; }
+
+        /// <summary>
         /// Whether the customer is active or not
         /// </summary>
         /// <value>Whether the customer is active or not</value>
@@ -108,6 +125,7 @@ namespace eZmaxApi.Model
             sb.Append("  PkiCustomerID: ").Append(PkiCustomerID).Append("\n");
             sb.Append("  FkiDepartmentID: ").Append(FkiDepartmentID).Append("\n");
             sb.Append("  SCustomerName: ").Append(SCustomerName).Append("\n");
+            sb.Append("  SCustomerCode: ").Append(SCustomerCode).Append("\n");
             sb.Append("  BCustomerIsactive: ").Append(BCustomerIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -147,6 +165,15 @@ namespace eZmaxApi.Model
                 if (!regexSCustomerName.Match(this.SCustomerName).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCustomerName, must match a pattern of " + regexSCustomerName, new [] { "SCustomerName" });
+                }
+            }
+
+            if (this.SCustomerCode != null) {
+                // SCustomerCode (string) pattern
+                Regex regexSCustomerCode = new Regex(@"^.{0,6}$", RegexOptions.CultureInvariant);
+                if (!regexSCustomerCode.Match(this.SCustomerCode).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCustomerCode, must match a pattern of " + regexSCustomerCode, new [] { "SCustomerCode" });
                 }
             }
 

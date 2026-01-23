@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsignfolderImportEzsignfoldersignerassociationsV1Request" /> class.
         /// </summary>
         /// <param name="aFkiEzsignfoldersignerassociationID">aFkiEzsignfoldersignerassociationID (required).</param>
-        public EzsignfolderImportEzsignfoldersignerassociationsV1Request(Set<int> aFkiEzsignfoldersignerassociationID = default)
+        public EzsignfolderImportEzsignfoldersignerassociationsV1Request(List<int> aFkiEzsignfoldersignerassociationID = default)
         {
             // to ensure "aFkiEzsignfoldersignerassociationID" is required (not null)
             if (aFkiEzsignfoldersignerassociationID == null)
@@ -55,7 +55,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets AFkiEzsignfoldersignerassociationID
         /// </summary>
         [DataMember(Name = "a_fkiEzsignfoldersignerassociationID", IsRequired = true, EmitDefaultValue = true)]
-        public Set<int> AFkiEzsignfoldersignerassociationID { get; set; }
+        public List<int> AFkiEzsignfoldersignerassociationID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **AObjReportsubsection** | [**List&lt;CommonReportsubsection&gt;**](CommonReportsubsection.md) |  | 
 **EReportsectionHorizontalalignment** | **EnumHorizontalalignment** |  | 
 **SReportsectionTitle** | **string** | The title of this Reportsection | [optional] 
+**SReportsectionTabname** | **string** | The name of tab in excel version | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

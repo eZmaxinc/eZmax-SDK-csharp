@@ -49,8 +49,9 @@ namespace eZmaxApi.Model
         /// <param name="sUserLoginname">The login name of the User..</param>
         /// <param name="sEmailAddress">The email address..</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
+        /// <param name="bUserIsactive">Whether the User is active or not.</param>
         /// <param name="sUsergroupexternalName">The name of the Usergroupexternal.</param>
-        public UsergroupmembershipResponseCompound(int pkiUsergroupmembershipID = default, int fkiUsergroupID = default, int fkiUserID = default, int fkiUsergroupexternalID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sEmailAddress = default, string sUsergroupNameX = default, string sUsergroupexternalName = default)
+        public UsergroupmembershipResponseCompound(int pkiUsergroupmembershipID = default, int fkiUsergroupID = default, int fkiUserID = default, int fkiUsergroupexternalID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sEmailAddress = default, string sUsergroupNameX = default, bool bUserIsactive = default, string sUsergroupexternalName = default)
         {
             this.PkiUsergroupmembershipID = pkiUsergroupmembershipID;
             this.FkiUsergroupID = fkiUsergroupID;
@@ -66,6 +67,7 @@ namespace eZmaxApi.Model
             this.SUserLastname = sUserLastname;
             this.SUserLoginname = sUserLoginname;
             this.SEmailAddress = sEmailAddress;
+            this.BUserIsactive = bUserIsactive;
             this.SUsergroupexternalName = sUsergroupexternalName;
         }
 
@@ -160,6 +162,16 @@ namespace eZmaxApi.Model
         public string SUsergroupNameX { get; set; }
 
         /// <summary>
+        /// Whether the User is active or not
+        /// </summary>
+        /// <value>Whether the User is active or not</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserIsactive", EmitDefaultValue = true)]
+        public bool BUserIsactive { get; set; }
+
+        /// <summary>
         /// The name of the Usergroupexternal
         /// </summary>
         /// <value>The name of the Usergroupexternal</value>
@@ -186,6 +198,7 @@ namespace eZmaxApi.Model
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
             sb.Append("  SEmailAddress: ").Append(SEmailAddress).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
+            sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
             sb.Append("  SUsergroupexternalName: ").Append(SUsergroupexternalName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

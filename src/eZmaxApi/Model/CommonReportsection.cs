@@ -49,7 +49,8 @@ namespace eZmaxApi.Model
         /// <param name="aObjReportsubsection">aObjReportsubsection (required).</param>
         /// <param name="eReportsectionHorizontalalignment">eReportsectionHorizontalalignment (required).</param>
         /// <param name="sReportsectionTitle">The title of this Reportsection.</param>
-        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default, EnumHorizontalalignment eReportsectionHorizontalalignment = default, string sReportsectionTitle = default)
+        /// <param name="sReportsectionTabname">The name of tab in excel version.</param>
+        public CommonReportsection(List<CommonReportsubsection> aObjReportsubsection = default, EnumHorizontalalignment eReportsectionHorizontalalignment = default, string sReportsectionTitle = default, string sReportsectionTabname = default)
         {
             // to ensure "aObjReportsubsection" is required (not null)
             if (aObjReportsubsection == null)
@@ -59,6 +60,7 @@ namespace eZmaxApi.Model
             this.AObjReportsubsection = aObjReportsubsection;
             this.EReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
             this.SReportsectionTitle = sReportsectionTitle;
+            this.SReportsectionTabname = sReportsectionTabname;
         }
 
         /// <summary>
@@ -78,6 +80,16 @@ namespace eZmaxApi.Model
         public string SReportsectionTitle { get; set; }
 
         /// <summary>
+        /// The name of tab in excel version
+        /// </summary>
+        /// <value>The name of tab in excel version</value>
+        /*
+        <example>text</example>
+        */
+        [DataMember(Name = "sReportsectionTabname", EmitDefaultValue = false)]
+        public string SReportsectionTabname { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -88,6 +100,7 @@ namespace eZmaxApi.Model
             sb.Append("  AObjReportsubsection: ").Append(AObjReportsubsection).Append("\n");
             sb.Append("  EReportsectionHorizontalalignment: ").Append(EReportsectionHorizontalalignment).Append("\n");
             sb.Append("  SReportsectionTitle: ").Append(SReportsectionTitle).Append("\n");
+            sb.Append("  SReportsectionTabname: ").Append(SReportsectionTabname).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

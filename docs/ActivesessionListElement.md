@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiActivesessionID** | **int** | The unique ID of the Activesession | 
 **FkiUserID** | **int** | The unique ID of the User | 
-**FkiComputerID** | **int** | The unique ID of the Computer | 
+**FkiComputerID** | **int** | The unique ID of the Computer | [optional] 
 **FkiCompanyID** | **int** | The unique ID of the Company | 
 **FkiDepartmentID** | **int** | The unique ID of the Department | 
 **SCompanyNameX** | **string** | The Name of the Company in the language of the requester | 
 **SDepartmentNameX** | **string** | The Name of the Department in the language of the requester | 
 **SActivesessionLoginname** | **string** | The loginname of the Activesession | 
-**SComputerDescription** | **string** | The description of the Computer | 
+**SComputerDescription** | **string** | The description of the Computer | [optional] 
 **DtActivesessionFirsthit** | **string** | The first hit of the Activesession | 
 **DtActivesessionLasthit** | **string** | The last hit of the Activesession | 
 **SActivesessionIP** | **string** | Represent an IP address. | 

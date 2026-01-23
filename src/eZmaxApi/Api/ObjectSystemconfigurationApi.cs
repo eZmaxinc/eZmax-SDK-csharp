@@ -32,10 +32,10 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SystemconfigurationEditObjectV1Response</returns>
-        SystemconfigurationEditObjectV1Response SystemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>SystemconfigurationEditObjectV2Response</returns>
+        SystemconfigurationEditObjectV2Response SystemconfigurationEditObjectV2(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0);
 
         /// <summary>
         /// Edit an existing Systemconfiguration
@@ -45,10 +45,10 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SystemconfigurationEditObjectV1Response</returns>
-        ApiResponse<SystemconfigurationEditObjectV1Response> SystemconfigurationEditObjectV1WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of SystemconfigurationEditObjectV2Response</returns>
+        ApiResponse<SystemconfigurationEditObjectV2Response> SystemconfigurationEditObjectV2WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Systemconfiguration
         /// </summary>
@@ -86,11 +86,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SystemconfigurationEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<SystemconfigurationEditObjectV1Response> SystemconfigurationEditObjectV1Async(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of SystemconfigurationEditObjectV2Response</returns>
+        System.Threading.Tasks.Task<SystemconfigurationEditObjectV2Response> SystemconfigurationEditObjectV2Async(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Edit an existing Systemconfiguration
@@ -100,11 +100,11 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SystemconfigurationEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemconfigurationEditObjectV1Response>> SystemconfigurationEditObjectV1WithHttpInfoAsync(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of ApiResponse (SystemconfigurationEditObjectV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SystemconfigurationEditObjectV2Response>> SystemconfigurationEditObjectV2WithHttpInfoAsync(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve an existing Systemconfiguration
         /// </summary>
@@ -255,12 +255,12 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>SystemconfigurationEditObjectV1Response</returns>
-        public SystemconfigurationEditObjectV1Response SystemconfigurationEditObjectV1(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>SystemconfigurationEditObjectV2Response</returns>
+        public SystemconfigurationEditObjectV2Response SystemconfigurationEditObjectV2(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV1Response> localVarResponse = SystemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV2Response> localVarResponse = SystemconfigurationEditObjectV2WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
             return localVarResponse.Data;
         }
 
@@ -269,15 +269,15 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of SystemconfigurationEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV1Response> SystemconfigurationEditObjectV1WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of SystemconfigurationEditObjectV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV2Response> SystemconfigurationEditObjectV2WithHttpInfo(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0)
         {
-            // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-            if (systemconfigurationEditObjectV1Request == null)
+            // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+            if (systemconfigurationEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV1Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV2Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV2");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -305,9 +305,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiSystemconfigurationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSystemconfigurationID)); // path parameter
-            localVarRequestOptions.Data = systemconfigurationEditObjectV1Request;
+            localVarRequestOptions.Data = systemconfigurationEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectSystemconfigurationApi.SystemconfigurationEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectSystemconfigurationApi.SystemconfigurationEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -317,10 +317,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<SystemconfigurationEditObjectV1Response>("/1/object/systemconfiguration/{pkiSystemconfigurationID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<SystemconfigurationEditObjectV2Response>("/2/object/systemconfiguration/{pkiSystemconfigurationID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SystemconfigurationEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SystemconfigurationEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -335,13 +335,13 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of SystemconfigurationEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<SystemconfigurationEditObjectV1Response> SystemconfigurationEditObjectV1Async(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of SystemconfigurationEditObjectV2Response</returns>
+        public async System.Threading.Tasks.Task<SystemconfigurationEditObjectV2Response> SystemconfigurationEditObjectV2Async(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV1Response> localVarResponse = await SystemconfigurationEditObjectV1WithHttpInfoAsync(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV2Response> localVarResponse = await SystemconfigurationEditObjectV2WithHttpInfoAsync(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -350,16 +350,16 @@ namespace eZmaxApi.Api
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration</param>
-        /// <param name="systemconfigurationEditObjectV1Request"></param>
+        /// <param name="systemconfigurationEditObjectV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (SystemconfigurationEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV1Response>> SystemconfigurationEditObjectV1WithHttpInfoAsync(int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of ApiResponse (SystemconfigurationEditObjectV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<SystemconfigurationEditObjectV2Response>> SystemconfigurationEditObjectV2WithHttpInfoAsync(int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-            if (systemconfigurationEditObjectV1Request == null)
+            // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+            if (systemconfigurationEditObjectV2Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV1Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'systemconfigurationEditObjectV2Request' when calling ObjectSystemconfigurationApi->SystemconfigurationEditObjectV2");
             }
 
 
@@ -387,9 +387,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiSystemconfigurationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiSystemconfigurationID)); // path parameter
-            localVarRequestOptions.Data = systemconfigurationEditObjectV1Request;
+            localVarRequestOptions.Data = systemconfigurationEditObjectV2Request;
 
-            localVarRequestOptions.Operation = "ObjectSystemconfigurationApi.SystemconfigurationEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectSystemconfigurationApi.SystemconfigurationEditObjectV2";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -399,11 +399,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<SystemconfigurationEditObjectV1Response>("/1/object/systemconfiguration/{pkiSystemconfigurationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<SystemconfigurationEditObjectV2Response>("/2/object/systemconfiguration/{pkiSystemconfigurationID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("SystemconfigurationEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("SystemconfigurationEditObjectV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

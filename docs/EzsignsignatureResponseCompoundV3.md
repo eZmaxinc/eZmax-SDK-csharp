@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SCurrencyDescriptionX** | **string** | The description of the Currency in the language of the requester | [optional] 
 **DEzsignsignatureCreditcardamount** | **string** | The amount of the Creditcard signature | [optional] 
 **SEzsignsignatureCreditcardamountdescription** | **string** | The description of the Creditcard signature | [optional] 
+**BEzsignsignatureCreditcardcustomamount** | **bool** | Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not | [optional] 
 **SEzsignsigningreasonDescriptionX** | **string** | The description of the Ezsignsigningreason in the language of the requester | [optional] 
 **IEzsignpagePagenumber** | **int** | The page number in the Ezsigndocument | 
 **IEzsignsignatureX** | **int** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. | 
@@ -23,6 +24,8 @@ Name | Type | Description | Notes
 **IEzsignsignatureStep** | **int** | The step when the Ezsignsigner will be invited to sign | 
 **IEzsignsignatureStepadjusted** | **int** | The step when the Ezsignsigner will be invited to sign | [optional] 
 **EEzsignsignatureType** | **FieldEEzsignsignatureType** |  | 
+**EEzsignsignatureSignaturepad** | **FieldEEzsignsignatureSignaturepad** |  | [optional] 
+**EEzsignsignatureSignaturepadrequired** | **FieldEEzsignsignatureSignaturepadrequired** |  | [optional] 
 **TEzsignsignatureTooltip** | **string** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature | [optional] 
 **EEzsignsignatureTooltipposition** | **FieldEEzsignsignatureTooltipposition** |  | [optional] 
 **EEzsignsignatureFont** | **FieldEEzsignsignatureFont** |  | [optional] 

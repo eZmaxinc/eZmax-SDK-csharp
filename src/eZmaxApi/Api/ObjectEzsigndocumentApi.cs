@@ -325,6 +325,33 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentEditEzsignformfieldgroupsV1Response</returns>
         ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV1Response> EzsigndocumentEditEzsignformfieldgroupsV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request, int operationIndex = 0);
         /// <summary>
+        /// Edit multiple Ezsignformfieldgroups
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        EzsigndocumentEditEzsignformfieldgroupsV2Response EzsigndocumentEditEzsignformfieldgroupsV2(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Edit multiple Ezsignformfieldgroups
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response> EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0);
+        /// <summary>
         /// Edit multiple Ezsignsignatures
         /// </summary>
         /// <remarks>
@@ -508,6 +535,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         EzsigndocumentGetActionableElementsV2Response EzsigndocumentGetActionableElementsV2(int pkiEzsigndocumentID, int operationIndex = 0);
 
         /// <summary>
@@ -520,7 +548,31 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         ApiResponse<EzsigndocumentGetActionableElementsV2Response> EzsigndocumentGetActionableElementsV2WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetActionableElementsV3Response</returns>
+        EzsigndocumentGetActionableElementsV3Response EzsigndocumentGetActionableElementsV3(int pkiEzsigndocumentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV3Response</returns>
+        ApiResponse<EzsigndocumentGetActionableElementsV3Response> EzsigndocumentGetActionableElementsV3WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0);
         /// <summary>
         /// Retrieve Ezsigndocument&#39;s Attachments
         /// </summary>
@@ -1325,6 +1377,35 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (EzsigndocumentEditEzsignformfieldgroupsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV1Response>> EzsigndocumentEditEzsignformfieldgroupsV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Edit multiple Ezsignformfieldgroups
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        System.Threading.Tasks.Task<EzsigndocumentEditEzsignformfieldgroupsV2Response> EzsigndocumentEditEzsignformfieldgroupsV2Async(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Edit multiple Ezsignformfieldgroups
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentEditEzsignformfieldgroupsV2Response)</returns>
+        [Obsolete]
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response>> EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Edit multiple Ezsignsignatures
         /// </summary>
         /// <remarks>
@@ -1526,6 +1607,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV2Response> EzsigndocumentGetActionableElementsV2Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -1539,7 +1621,33 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsV2Response>> EzsigndocumentGetActionableElementsV2WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsV3Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV3Response> EzsigndocumentGetActionableElementsV3Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsV3Response>> EzsigndocumentGetActionableElementsV3WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Ezsigndocument&#39;s Attachments
         /// </summary>
@@ -4140,6 +4248,173 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Edit multiple Ezsignformfieldgroups Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        public EzsigndocumentEditEzsignformfieldgroupsV2Response EzsigndocumentEditEzsignformfieldgroupsV2(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response> localVarResponse = EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsignformfieldgroups Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response> EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' is set
+            if (ezsigndocumentEditEzsignformfieldgroupsV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentEditEzsignformfieldgroupsV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentEditEzsignformfieldgroupsV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentEditEzsignformfieldgroupsV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<EzsigndocumentEditEzsignformfieldgroupsV2Response>("/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentEditEzsignformfieldgroupsV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsignformfieldgroups Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentEditEzsignformfieldgroupsV2Response</returns>
+        [Obsolete]
+        public async System.Threading.Tasks.Task<EzsigndocumentEditEzsignformfieldgroupsV2Response> EzsigndocumentEditEzsignformfieldgroupsV2Async(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response> localVarResponse = await EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsignformfieldgroups Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentEditEzsignformfieldgroupsV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentEditEzsignformfieldgroupsV2Response)</returns>
+        [Obsolete]
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentEditEzsignformfieldgroupsV2Response>> EzsigndocumentEditEzsignformfieldgroupsV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' is set
+            if (ezsigndocumentEditEzsignformfieldgroupsV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentEditEzsignformfieldgroupsV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentEditEzsignformfieldgroupsV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentEditEzsignformfieldgroupsV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentEditEzsignformfieldgroupsV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigndocumentEditEzsignformfieldgroupsV2Response>("/2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentEditEzsignformfieldgroupsV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Edit multiple Ezsignsignatures Using this endpoint, you can edit multiple Ezsignsignatures at the same time.  Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5275,6 +5550,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         public EzsigndocumentGetActionableElementsV2Response EzsigndocumentGetActionableElementsV2(int pkiEzsigndocumentID, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV2Response> localVarResponse = EzsigndocumentGetActionableElementsV2WithHttpInfo(pkiEzsigndocumentID);
@@ -5288,6 +5564,7 @@ namespace eZmaxApi.Api
         /// <param name="pkiEzsigndocumentID"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV2Response> EzsigndocumentGetActionableElementsV2WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0)
         {
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -5346,6 +5623,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentGetActionableElementsV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV2Response> EzsigndocumentGetActionableElementsV2Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV2Response> localVarResponse = await EzsigndocumentGetActionableElementsV2WithHttpInfoAsync(pkiEzsigndocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -5360,6 +5638,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV2Response>> EzsigndocumentGetActionableElementsV2WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
 
@@ -5402,6 +5681,149 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetActionableElementsV3Response</returns>
+        public EzsigndocumentGetActionableElementsV3Response EzsigndocumentGetActionableElementsV3(int pkiEzsigndocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV3Response> localVarResponse = EzsigndocumentGetActionableElementsV3WithHttpInfo(pkiEzsigndocumentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV3Response> EzsigndocumentGetActionableElementsV3WithHttpInfo(int pkiEzsigndocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetActionableElementsV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsigndocumentGetActionableElementsV3Response>("/3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsV3Response> EzsigndocumentGetActionableElementsV3Async(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV3Response> localVarResponse = await EzsigndocumentGetActionableElementsV3WithHttpInfoAsync(pkiEzsigndocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsV3Response>> EzsigndocumentGetActionableElementsV3WithHttpInfoAsync(int pkiEzsigndocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetActionableElementsV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigndocumentGetActionableElementsV3Response>("/3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsV3", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

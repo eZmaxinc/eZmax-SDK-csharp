@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **FkiCreditcarddetailID** | **int** | The unique ID of the Creditcarddetail | 
 **FkiCreditcardtypeID** | **int** | The unique ID of the Creditcardtype | 
 **BCreditcardclientrelationIsdefault** | **bool** | Whether if it&#39;s the creditcardclient is the default one | 
+**BCreditcardclientLegacy** | **bool** | Whether the Creditcardclient is legacy or not | 
 **SCreditcardclientDescription** | **string** | The description of the Creditcardclient | 
 **BCreditcardclientAllowedcompanypayment** | **bool** | Whether if it&#39;s an allowedagencypayment | 
 **BCreditcardclientAllowedtranquillit** | **bool** | Whether if it&#39;s an allowedtranquillit | 

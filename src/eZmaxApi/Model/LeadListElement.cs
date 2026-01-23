@@ -53,7 +53,8 @@ namespace eZmaxApi.Model
         /// <param name="dtLeadExpiration">The expiration of the Lead (required).</param>
         /// <param name="bLeadIsactive">Whether the lead is active or not (required).</param>
         /// <param name="sLeadCode">The code of the Lead (required).</param>
-        public LeadListElement(int pkiLeadID = default, int fkiLeadsourceID = default, string sLeadsourceNameX = default, FieldELeadStatus eLeadStatus = default, string dtLeadExpiration = default, bool bLeadIsactive = default, string sLeadCode = default)
+        /// <param name="sLeadContacts">The contacts&#39; name of the Lead.</param>
+        public LeadListElement(int pkiLeadID = default, int fkiLeadsourceID = default, string sLeadsourceNameX = default, FieldELeadStatus eLeadStatus = default, string dtLeadExpiration = default, bool bLeadIsactive = default, string sLeadCode = default, string sLeadContacts = default)
         {
             this.PkiLeadID = pkiLeadID;
             this.FkiLeadsourceID = fkiLeadsourceID;
@@ -77,6 +78,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sLeadCode is a required property for LeadListElement and cannot be null");
             }
             this.SLeadCode = sLeadCode;
+            this.SLeadContacts = sLeadContacts;
         }
 
         /// <summary>
@@ -140,6 +142,16 @@ namespace eZmaxApi.Model
         public string SLeadCode { get; set; }
 
         /// <summary>
+        /// The contacts&#39; name of the Lead
+        /// </summary>
+        /// <value>The contacts&#39; name of the Lead</value>
+        /*
+        <example>Jane Doe</example>
+        */
+        [DataMember(Name = "sLeadContacts", EmitDefaultValue = false)]
+        public string SLeadContacts { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -154,6 +166,7 @@ namespace eZmaxApi.Model
             sb.Append("  DtLeadExpiration: ").Append(DtLeadExpiration).Append("\n");
             sb.Append("  BLeadIsactive: ").Append(BLeadIsactive).Append("\n");
             sb.Append("  SLeadCode: ").Append(SLeadCode).Append("\n");
+            sb.Append("  SLeadContacts: ").Append(SLeadContacts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,7 +231,7 @@ namespace eZmaxApi.Model
 
             if (this.SLeadCode != null) {
                 // SLeadCode (string) pattern
-                Regex regexSLeadCode = new Regex(@"^.{0,10}$", RegexOptions.CultureInvariant);
+                Regex regexSLeadCode = new Regex(@"^.{0,25}$", RegexOptions.CultureInvariant);
                 if (!regexSLeadCode.Match(this.SLeadCode).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SLeadCode, must match a pattern of " + regexSLeadCode, new [] { "SLeadCode" });

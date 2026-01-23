@@ -74,6 +74,8 @@ namespace eZmaxApi.Model
         /// <param name="pkiSystemconfigurationID">The unique ID of the Systemconfiguration (required).</param>
         /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
         /// <param name="fkiBrandingID">The unique ID of the Branding.</param>
+        /// <param name="fkiTimezoneIDDefault">The unique ID of the Timezone (required).</param>
+        /// <param name="sTimezoneNameDefault">The description of the Timezone (required).</param>
         /// <param name="sSystemconfigurationtypeDescriptionX">The description of the Systemconfigurationtype in the language of the requester (required).</param>
         /// <param name="eSystemconfigurationNewexternaluseraction">eSystemconfigurationNewexternaluseraction (required).</param>
         /// <param name="eSystemconfigurationLanguage1">eSystemconfigurationLanguage1 (required).</param>
@@ -88,10 +90,18 @@ namespace eZmaxApi.Model
         /// <param name="dtSystemconfigurationReadonlyexpirationstart">The start date where the system will be in read only.</param>
         /// <param name="dtSystemconfigurationReadonlyexpirationend">The end date where the system will be in read only.</param>
         /// <param name="objBranding">objBranding.</param>
-        public SystemconfigurationResponseCompound(int pkiSystemconfigurationID = default, int fkiSystemconfigurationtypeID = default, int fkiBrandingID = default, string sSystemconfigurationtypeDescriptionX = default, FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default, FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default, FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default, FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default, FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default, bool bSystemconfigurationEzsignpaidbyoffice = default, bool bSystemconfigurationEzsignpersonnal = default, bool bSystemconfigurationHascreditcardmerchant = default, bool bSystemconfigurationIsdisposalactive = default, bool bSystemconfigurationSspr = default, string dtSystemconfigurationReadonlyexpirationstart = default, string dtSystemconfigurationReadonlyexpirationend = default, CustomBrandingResponse objBranding = default)
+        /// <param name="iSystemconfigurationEzsignreminderhoursend">The hour we will send the eZsign reminders.</param>
+        public SystemconfigurationResponseCompound(int pkiSystemconfigurationID = default, int fkiSystemconfigurationtypeID = default, int fkiBrandingID = default, int fkiTimezoneIDDefault = default, string sTimezoneNameDefault = default, string sSystemconfigurationtypeDescriptionX = default, FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction = default, FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1 = default, FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2 = default, FieldESystemconfigurationEzsign? eSystemconfigurationEzsign = default, FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default, bool bSystemconfigurationEzsignpaidbyoffice = default, bool bSystemconfigurationEzsignpersonnal = default, bool bSystemconfigurationHascreditcardmerchant = default, bool bSystemconfigurationIsdisposalactive = default, bool bSystemconfigurationSspr = default, string dtSystemconfigurationReadonlyexpirationstart = default, string dtSystemconfigurationReadonlyexpirationend = default, CustomBrandingResponse objBranding = default, int iSystemconfigurationEzsignreminderhoursend = default)
         {
             this.PkiSystemconfigurationID = pkiSystemconfigurationID;
             this.FkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+            this.FkiTimezoneIDDefault = fkiTimezoneIDDefault;
+            // to ensure "sTimezoneNameDefault" is required (not null)
+            if (sTimezoneNameDefault == null)
+            {
+                throw new ArgumentNullException("sTimezoneNameDefault is a required property for SystemconfigurationResponseCompound and cannot be null");
+            }
+            this.STimezoneNameDefault = sTimezoneNameDefault;
             // to ensure "sSystemconfigurationtypeDescriptionX" is required (not null)
             if (sSystemconfigurationtypeDescriptionX == null)
             {
@@ -112,6 +122,7 @@ namespace eZmaxApi.Model
             this.DtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
             this.DtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
             this.ObjBranding = objBranding;
+            this.ISystemconfigurationEzsignreminderhoursend = iSystemconfigurationEzsignreminderhoursend;
         }
 
         /// <summary>
@@ -143,6 +154,26 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiBrandingID", EmitDefaultValue = false)]
         public int FkiBrandingID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Timezone
+        /// </summary>
+        /// <value>The unique ID of the Timezone</value>
+        /*
+        <example>247</example>
+        */
+        [DataMember(Name = "fkiTimezoneIDDefault", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiTimezoneIDDefault { get; set; }
+
+        /// <summary>
+        /// The description of the Timezone
+        /// </summary>
+        /// <value>The description of the Timezone</value>
+        /*
+        <example>Default</example>
+        */
+        [DataMember(Name = "sTimezoneNameDefault", IsRequired = true, EmitDefaultValue = true)]
+        public string STimezoneNameDefault { get; set; }
 
         /// <summary>
         /// The description of the Systemconfigurationtype in the language of the requester
@@ -225,6 +256,16 @@ namespace eZmaxApi.Model
         public CustomBrandingResponse ObjBranding { get; set; }
 
         /// <summary>
+        /// The hour we will send the eZsign reminders
+        /// </summary>
+        /// <value>The hour we will send the eZsign reminders</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "iSystemconfigurationEzsignreminderhoursend", EmitDefaultValue = false)]
+        public int ISystemconfigurationEzsignreminderhoursend { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -235,6 +276,8 @@ namespace eZmaxApi.Model
             sb.Append("  PkiSystemconfigurationID: ").Append(PkiSystemconfigurationID).Append("\n");
             sb.Append("  FkiSystemconfigurationtypeID: ").Append(FkiSystemconfigurationtypeID).Append("\n");
             sb.Append("  FkiBrandingID: ").Append(FkiBrandingID).Append("\n");
+            sb.Append("  FkiTimezoneIDDefault: ").Append(FkiTimezoneIDDefault).Append("\n");
+            sb.Append("  STimezoneNameDefault: ").Append(STimezoneNameDefault).Append("\n");
             sb.Append("  SSystemconfigurationtypeDescriptionX: ").Append(SSystemconfigurationtypeDescriptionX).Append("\n");
             sb.Append("  ESystemconfigurationNewexternaluseraction: ").Append(ESystemconfigurationNewexternaluseraction).Append("\n");
             sb.Append("  ESystemconfigurationLanguage1: ").Append(ESystemconfigurationLanguage1).Append("\n");
@@ -249,6 +292,7 @@ namespace eZmaxApi.Model
             sb.Append("  DtSystemconfigurationReadonlyexpirationstart: ").Append(DtSystemconfigurationReadonlyexpirationstart).Append("\n");
             sb.Append("  DtSystemconfigurationReadonlyexpirationend: ").Append(DtSystemconfigurationReadonlyexpirationend).Append("\n");
             sb.Append("  ObjBranding: ").Append(ObjBranding).Append("\n");
+            sb.Append("  ISystemconfigurationEzsignreminderhoursend: ").Append(ISystemconfigurationEzsignreminderhoursend).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -293,6 +337,12 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
+            // FkiTimezoneIDDefault (int) minimum
+            if (this.FkiTimezoneIDDefault < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiTimezoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiTimezoneIDDefault" });
+            }
+
             if (this.DtSystemconfigurationReadonlyexpirationstart != null) {
                 // DtSystemconfigurationReadonlyexpirationstart (string) pattern
                 Regex regexDtSystemconfigurationReadonlyexpirationstart = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
@@ -309,6 +359,18 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtSystemconfigurationReadonlyexpirationend, must match a pattern of " + regexDtSystemconfigurationReadonlyexpirationend, new [] { "DtSystemconfigurationReadonlyexpirationend" });
                 }
+            }
+
+            // ISystemconfigurationEzsignreminderhoursend (int) maximum
+            if (this.ISystemconfigurationEzsignreminderhoursend > (int)23)
+            {
+                yield return new ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value less than or equal to 23.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
+            }
+
+            // ISystemconfigurationEzsignreminderhoursend (int) minimum
+            if (this.ISystemconfigurationEzsignreminderhoursend < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value greater than or equal to 0.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
             }
 
             yield break;

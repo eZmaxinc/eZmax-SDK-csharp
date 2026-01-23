@@ -104,7 +104,7 @@ namespace eZmaxApi.Model
 
             if (this.SIframeOrigin != null) {
                 // SIframeOrigin (string) pattern
-                Regex regexSIframeOrigin = new Regex(@"^https:\/\/[a-z0-9.-]+(:\d{1,5})?$", RegexOptions.CultureInvariant);
+                Regex regexSIframeOrigin = new Regex(@"^(https|http):\/\/[a-z0-9.-]+(:\d{1,5})?$", RegexOptions.CultureInvariant);
                 if (!regexSIframeOrigin.Match(this.SIframeOrigin).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SIframeOrigin, must match a pattern of " + regexSIframeOrigin, new [] { "SIframeOrigin" });

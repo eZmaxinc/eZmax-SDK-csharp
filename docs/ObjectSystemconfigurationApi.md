@@ -4,12 +4,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**SystemconfigurationEditObjectV1**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
+| [**SystemconfigurationEditObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationeditobjectv2) | **PUT** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
 | [**SystemconfigurationGetObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationgetobjectv2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration |
 
-<a id="systemconfigurationeditobjectv1"></a>
-# **SystemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response SystemconfigurationEditObjectV1 (int pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request)
+<a id="systemconfigurationeditobjectv2"></a>
+# **SystemconfigurationEditObjectV2**
+> SystemconfigurationEditObjectV2Response SystemconfigurationEditObjectV2 (int pkiSystemconfigurationID, SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request)
 
 Edit an existing Systemconfiguration
 
@@ -23,7 +23,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class SystemconfigurationEditObjectV1Example
+    public class SystemconfigurationEditObjectV2Example
     {
         public static void Main()
         {
@@ -36,17 +36,17 @@ namespace Example
 
             var apiInstance = new ObjectSystemconfigurationApi(config);
             var pkiSystemconfigurationID = 56;  // int | The unique ID of the Systemconfiguration
-            var systemconfigurationEditObjectV1Request = new SystemconfigurationEditObjectV1Request(); // SystemconfigurationEditObjectV1Request | 
+            var systemconfigurationEditObjectV2Request = new SystemconfigurationEditObjectV2Request(); // SystemconfigurationEditObjectV2Request | 
 
             try
             {
                 // Edit an existing Systemconfiguration
-                SystemconfigurationEditObjectV1Response result = apiInstance.SystemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+                SystemconfigurationEditObjectV2Response result = apiInstance.SystemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ObjectSystemconfigurationApi.SystemconfigurationEditObjectV1: " + e.Message);
+                Debug.Print("Exception when calling ObjectSystemconfigurationApi.SystemconfigurationEditObjectV2: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -55,21 +55,21 @@ namespace Example
 }
 ```
 
-#### Using the SystemconfigurationEditObjectV1WithHttpInfo variant
+#### Using the SystemconfigurationEditObjectV2WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Edit an existing Systemconfiguration
-    ApiResponse<SystemconfigurationEditObjectV1Response> response = apiInstance.SystemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    ApiResponse<SystemconfigurationEditObjectV2Response> response = apiInstance.SystemconfigurationEditObjectV2WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ObjectSystemconfigurationApi.SystemconfigurationEditObjectV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ObjectSystemconfigurationApi.SystemconfigurationEditObjectV2WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -80,11 +80,11 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **pkiSystemconfigurationID** | **int** | The unique ID of the Systemconfiguration |  |
-| **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request**](SystemconfigurationEditObjectV1Request.md) |  |  |
+| **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request**](SystemconfigurationEditObjectV2Request.md) |  |  |
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**SystemconfigurationEditObjectV2Response**](SystemconfigurationEditObjectV2Response.md)
 
 ### Authorization
 

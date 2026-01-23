@@ -42,7 +42,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="aEEzsignsignatureType">All eEzsignsignatureType contained in the response (required).</param>
         /// <param name="aObjEzsignfolder">aObjEzsignfolder (required).</param>
-        public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload(Set<FieldEEzsignsignatureType> aEEzsignsignatureType = default, List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder = default)
+        public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload(List<FieldEEzsignsignatureType> aEEzsignsignatureType = default, List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder = default)
         {
             // to ensure "aEEzsignsignatureType" is required (not null)
             if (aEEzsignsignatureType == null)
@@ -63,7 +63,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>All eEzsignsignatureType contained in the response</value>
         [DataMember(Name = "a_eEzsignsignatureType", IsRequired = true, EmitDefaultValue = true)]
-        public Set<FieldEEzsignsignatureType> AEEzsignsignatureType { get; set; }
+        public List<FieldEEzsignsignatureType> AEEzsignsignatureType { get; set; }
 
         /// <summary>
         /// Gets or Sets AObjEzsignfolder

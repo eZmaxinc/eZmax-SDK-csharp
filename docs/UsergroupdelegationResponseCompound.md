@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **SUserLastname** | **string** | The last name of the user | 
 **SUserLoginname** | **string** | The login name of the User. | 
 **SEmailAddress** | **string** | The email address. | [optional] 
+**BUserIsactive** | **bool** | Whether the User is active or not | 
 **SUsergroupNameX** | **string** | The Name of the Usergroup in the language of the requester | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -28,29 +28,6 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new Customer
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomerCreateObjectV1Response</returns>
-        CustomerCreateObjectV1Response CustomerCreateObjectV1(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Create a new Customer
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomerCreateObjectV1Response</returns>
-        ApiResponse<CustomerCreateObjectV1Response> CustomerCreateObjectV1WithHttpInfo(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0);
-        /// <summary>
         /// Retrieve Customers and IDs
         /// </summary>
         /// <remarks>
@@ -80,34 +57,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of CustomerGetAutocompleteV2Response</returns>
         ApiResponse<CustomerGetAutocompleteV2Response> CustomerGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
         /// <summary>
-        /// Retrieve Customer list
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomerGetListV1Response</returns>
-        CustomerGetListV1Response CustomerGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
-
-        /// <summary>
-        /// Retrieve Customer list
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomerGetListV1Response</returns>
-        ApiResponse<CustomerGetListV1Response> CustomerGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
-        /// <summary>
         /// Retrieve an existing Customer
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -128,7 +77,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of CustomerGetObjectV2Response</returns>
         ApiResponse<CustomerGetObjectV2Response> CustomerGetObjectV2WithHttpInfo(int pkiCustomerID, int operationIndex = 0);
         /// <summary>
-        /// Import attachments into the Buyercontract
+        /// Import attachments into the Customer
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCustomerID"></param>
@@ -138,7 +87,7 @@ namespace eZmaxApi.Api
         CustomerImportIntoEDMV1Response CustomerImportIntoEDMV1(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, int operationIndex = 0);
 
         /// <summary>
-        /// Import attachments into the Buyercontract
+        /// Import attachments into the Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -158,31 +107,6 @@ namespace eZmaxApi.Api
     public interface IObjectCustomerApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
-        /// <summary>
-        /// Create a new Customer
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomerCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Create a new Customer
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomerCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Customers and IDs
         /// </summary>
@@ -215,39 +139,6 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (CustomerGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CustomerGetAutocompleteV2Response>> CustomerGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Retrieve Customer list
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomerGetListV1Response</returns>
-        System.Threading.Tasks.Task<CustomerGetListV1Response> CustomerGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Retrieve Customer list
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomerGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CustomerGetListV1Response>> CustomerGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
         /// Retrieve an existing Customer
         /// </summary>
         /// <remarks>
@@ -273,7 +164,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (CustomerGetObjectV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CustomerGetObjectV2Response>> CustomerGetObjectV2WithHttpInfoAsync(int pkiCustomerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Import attachments into the Buyercontract
+        /// Import attachments into the Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -287,7 +178,7 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<CustomerImportIntoEDMV1Response> CustomerImportIntoEDMV1Async(int pkiCustomerID, CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Import attachments into the Buyercontract
+        /// Import attachments into the Customer
         /// </summary>
         /// <remarks>
         /// 
@@ -417,163 +308,6 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
-        }
-
-        /// <summary>
-        /// Create a new Customer The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomerCreateObjectV1Response</returns>
-        public CustomerCreateObjectV1Response CustomerCreateObjectV1(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response> localVarResponse = CustomerCreateObjectV1WithHttpInfo(customerCreateObjectV1Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Customer The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomerCreateObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response> CustomerCreateObjectV1WithHttpInfo(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'customerCreateObjectV1Request' is set
-            if (customerCreateObjectV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'customerCreateObjectV1Request' when calling ObjectCustomerApi->CustomerCreateObjectV1");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = customerCreateObjectV1Request;
-
-            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerCreateObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<CustomerCreateObjectV1Response>("/1/object/customer", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("CustomerCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create a new Customer The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomerCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<CustomerCreateObjectV1Response> CustomerCreateObjectV1Async(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response> localVarResponse = await CustomerCreateObjectV1WithHttpInfoAsync(customerCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Customer The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="customerCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomerCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerCreateObjectV1Response>> CustomerCreateObjectV1WithHttpInfoAsync(CustomerCreateObjectV1Request customerCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            // verify the required parameter 'customerCreateObjectV1Request' is set
-            if (customerCreateObjectV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'customerCreateObjectV1Request' when calling ObjectCustomerApi->CustomerCreateObjectV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = customerCreateObjectV1Request;
-
-            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerCreateObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<CustomerCreateObjectV1Response>("/1/object/customer", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("CustomerCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
         }
 
         /// <summary>
@@ -768,205 +502,6 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Retrieve Customer list 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>CustomerGetListV1Response</returns>
-        public CustomerGetListV1Response CustomerGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<CustomerGetListV1Response> localVarResponse = CustomerGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve Customer list 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of CustomerGetListV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<CustomerGetListV1Response> CustomerGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json",
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            if (eOrderBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
-            }
-            if (iRowMax != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
-            }
-            if (iRowOffset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
-            }
-            if (sFilter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
-            }
-            if (acceptLanguage != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
-            }
-
-            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerGetListV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<CustomerGetListV1Response>("/1/object/customer/getList", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("CustomerGetListV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve Customer list 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of CustomerGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<CustomerGetListV1Response> CustomerGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<CustomerGetListV1Response> localVarResponse = await CustomerGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve Customer list 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (CustomerGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CustomerGetListV1Response>> CustomerGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json",
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            if (eOrderBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
-            }
-            if (iRowMax != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
-            }
-            if (iRowOffset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
-            }
-            if (sFilter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
-            }
-            if (acceptLanguage != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
-            }
-
-            localVarRequestOptions.Operation = "ObjectCustomerApi.CustomerGetListV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<CustomerGetListV1Response>("/1/object/customer/getList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("CustomerGetListV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// Retrieve an existing Customer 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1110,7 +645,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Import attachments into the Buyercontract 
+        /// Import attachments into the Customer 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCustomerID"></param>
@@ -1124,7 +659,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Import attachments into the Buyercontract 
+        /// Import attachments into the Customer 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCustomerID"></param>
@@ -1190,7 +725,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Import attachments into the Buyercontract 
+        /// Import attachments into the Customer 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCustomerID"></param>
@@ -1205,7 +740,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Import attachments into the Buyercontract 
+        /// Import attachments into the Customer 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiCustomerID"></param>

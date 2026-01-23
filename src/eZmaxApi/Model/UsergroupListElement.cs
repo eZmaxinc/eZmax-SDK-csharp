@@ -43,7 +43,8 @@ namespace eZmaxApi.Model
         /// <param name="pkiUsergroupID">The unique ID of the Usergroup (required).</param>
         /// <param name="sUsergroupNameX">The Name of the Usergroup in the language of the requester (required).</param>
         /// <param name="iCountUser">Number of users in group (required).</param>
-        public UsergroupListElement(int pkiUsergroupID = default, string sUsergroupNameX = default, int iCountUser = default)
+        /// <param name="iCountInactiveuser">Number of inactive users in group (required).</param>
+        public UsergroupListElement(int pkiUsergroupID = default, string sUsergroupNameX = default, int iCountUser = default, int iCountInactiveuser = default)
         {
             this.PkiUsergroupID = pkiUsergroupID;
             // to ensure "sUsergroupNameX" is required (not null)
@@ -53,6 +54,7 @@ namespace eZmaxApi.Model
             }
             this.SUsergroupNameX = sUsergroupNameX;
             this.ICountUser = iCountUser;
+            this.ICountInactiveuser = iCountInactiveuser;
         }
 
         /// <summary>
@@ -86,6 +88,16 @@ namespace eZmaxApi.Model
         public int ICountUser { get; set; }
 
         /// <summary>
+        /// Number of inactive users in group
+        /// </summary>
+        /// <value>Number of inactive users in group</value>
+        /*
+        <example>15</example>
+        */
+        [DataMember(Name = "iCountInactiveuser", IsRequired = true, EmitDefaultValue = true)]
+        public int ICountInactiveuser { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -96,6 +108,7 @@ namespace eZmaxApi.Model
             sb.Append("  PkiUsergroupID: ").Append(PkiUsergroupID).Append("\n");
             sb.Append("  SUsergroupNameX: ").Append(SUsergroupNameX).Append("\n");
             sb.Append("  ICountUser: ").Append(ICountUser).Append("\n");
+            sb.Append("  ICountInactiveuser: ").Append(ICountInactiveuser).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,6 +160,18 @@ namespace eZmaxApi.Model
             if (this.ICountUser < (int)0)
             {
                 yield return new ValidationResult("Invalid value for ICountUser, must be a value greater than or equal to 0.", new [] { "ICountUser" });
+            }
+
+            // ICountInactiveuser (int) maximum
+            if (this.ICountInactiveuser > (int)16777215)
+            {
+                yield return new ValidationResult("Invalid value for ICountInactiveuser, must be a value less than or equal to 16777215.", new [] { "ICountInactiveuser" });
+            }
+
+            // ICountInactiveuser (int) minimum
+            if (this.ICountInactiveuser < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for ICountInactiveuser, must be a value greater than or equal to 0.", new [] { "ICountInactiveuser" });
             }
 
             yield break;

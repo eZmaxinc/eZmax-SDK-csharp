@@ -135,7 +135,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The remuneration subtotal of the Otherincome</value>
         /*
-        <example>400</example>
+        <example>400.00</example>
         */
         [DataMember(Name = "dOtherincomeRemunerationsubtotal", IsRequired = true, EmitDefaultValue = true)]
         public string DOtherincomeRemunerationsubtotal { get; set; }
