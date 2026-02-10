@@ -70,10 +70,9 @@ namespace eZmaxApi.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept">Test csharp (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEzsignfolderBatchDownloadV1ApiResponse"/>&gt;</returns>
-        Task<IEzsignfolderBatchDownloadV1ApiResponse> EzsignfolderBatchDownloadV1Async(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEzsignfolderBatchDownloadV1ApiResponse> EzsignfolderBatchDownloadV1Async(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Download multiples files from an Ezsignfolder
@@ -83,10 +82,9 @@ namespace eZmaxApi.Api
         /// </remarks>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept">Test csharp (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEzsignfolderBatchDownloadV1ApiResponse"/>?&gt;</returns>
-        Task<IEzsignfolderBatchDownloadV1ApiResponse?> EzsignfolderBatchDownloadV1OrDefaultAsync(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept = default, System.Threading.CancellationToken cancellationToken = default);
+        Task<IEzsignfolderBatchDownloadV1ApiResponse?> EzsignfolderBatchDownloadV1OrDefaultAsync(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Create a new Ezsignfolder
@@ -2738,21 +2736,17 @@ namespace eZmaxApi.Api
             partial void OnDeserializationError(ref bool suppressDefaultLog, Exception exception, HttpStatusCode httpStatusCode);
         }
 
-        partial void FormatEzsignfolderBatchDownloadV1(ref int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, ref Option<string> accept);
+        partial void FormatEzsignfolderBatchDownloadV1(ref int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request);
 
         /// <summary>
         /// Validates the request parameters
         /// </summary>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept"></param>
         /// <returns></returns>
-        private void ValidateEzsignfolderBatchDownloadV1(EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept)
+        private void ValidateEzsignfolderBatchDownloadV1(EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
         {
             if (ezsignfolderBatchDownloadV1Request == null)
                 throw new ArgumentNullException(nameof(ezsignfolderBatchDownloadV1Request));
-
-            if (accept.IsSet && accept.Value == null)
-                throw new ArgumentNullException(nameof(accept));
         }
 
         /// <summary>
@@ -2761,11 +2755,10 @@ namespace eZmaxApi.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept"></param>
-        private void AfterEzsignfolderBatchDownloadV1DefaultImplementation(IEzsignfolderBatchDownloadV1ApiResponse apiResponseLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept)
+        private void AfterEzsignfolderBatchDownloadV1DefaultImplementation(IEzsignfolderBatchDownloadV1ApiResponse apiResponseLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
         {
             bool suppressDefaultLog = false;
-            AfterEzsignfolderBatchDownloadV1(ref suppressDefaultLog, apiResponseLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+            AfterEzsignfolderBatchDownloadV1(ref suppressDefaultLog, apiResponseLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
             if (!suppressDefaultLog)
                 Logger.LogInformation("{0,-9} | {1} | {2}", (apiResponseLocalVar.DownloadedAt - apiResponseLocalVar.RequestedAt).TotalSeconds, apiResponseLocalVar.StatusCode, apiResponseLocalVar.Path);
         }
@@ -2777,8 +2770,7 @@ namespace eZmaxApi.Api
         /// <param name="apiResponseLocalVar"></param>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept"></param>
-        partial void AfterEzsignfolderBatchDownloadV1(ref bool suppressDefaultLog, IEzsignfolderBatchDownloadV1ApiResponse apiResponseLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept);
+        partial void AfterEzsignfolderBatchDownloadV1(ref bool suppressDefaultLog, IEzsignfolderBatchDownloadV1ApiResponse apiResponseLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request);
 
         /// <summary>
         /// Logs exceptions that occur while retrieving the server response
@@ -2788,11 +2780,10 @@ namespace eZmaxApi.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept"></param>
-        private void OnErrorEzsignfolderBatchDownloadV1DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept)
+        private void OnErrorEzsignfolderBatchDownloadV1DefaultImplementation(Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
         {
             bool suppressDefaultLogLocalVar = false;
-            OnErrorEzsignfolderBatchDownloadV1(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+            OnErrorEzsignfolderBatchDownloadV1(ref suppressDefaultLogLocalVar, exceptionLocalVar, pathFormatLocalVar, pathLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
             if (!suppressDefaultLogLocalVar)
                 Logger.LogError(exceptionLocalVar, "An error occurred while sending the request to the server.");
         }
@@ -2806,22 +2797,20 @@ namespace eZmaxApi.Api
         /// <param name="pathLocalVar"></param>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept"></param>
-        partial void OnErrorEzsignfolderBatchDownloadV1(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept);
+        partial void OnErrorEzsignfolderBatchDownloadV1(ref bool suppressDefaultLogLocalVar, Exception exceptionLocalVar, string pathFormatLocalVar, string pathLocalVar, int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request);
 
         /// <summary>
         /// Download multiples files from an Ezsignfolder 
         /// </summary>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept">Test csharp (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEzsignfolderBatchDownloadV1ApiResponse"/>&gt;</returns>
-        public async Task<IEzsignfolderBatchDownloadV1ApiResponse?> EzsignfolderBatchDownloadV1OrDefaultAsync(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEzsignfolderBatchDownloadV1ApiResponse?> EzsignfolderBatchDownloadV1OrDefaultAsync(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, System.Threading.CancellationToken cancellationToken = default)
         {
             try
             {
-                return await EzsignfolderBatchDownloadV1Async(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept, cancellationToken).ConfigureAwait(false);
+                return await EzsignfolderBatchDownloadV1Async(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception)
             {
@@ -2835,18 +2824,17 @@ namespace eZmaxApi.Api
         /// <exception cref="ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiEzsignfolderID"></param>
         /// <param name="ezsignfolderBatchDownloadV1Request"></param>
-        /// <param name="accept">Test csharp (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns><see cref="Task"/>&lt;<see cref="IEzsignfolderBatchDownloadV1ApiResponse"/>&gt;</returns>
-        public async Task<IEzsignfolderBatchDownloadV1ApiResponse> EzsignfolderBatchDownloadV1Async(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, Option<string> accept = default, System.Threading.CancellationToken cancellationToken = default)
+        public async Task<IEzsignfolderBatchDownloadV1ApiResponse> EzsignfolderBatchDownloadV1Async(int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, System.Threading.CancellationToken cancellationToken = default)
         {
             UriBuilder uriBuilderLocalVar = new UriBuilder();
 
             try
             {
-                ValidateEzsignfolderBatchDownloadV1(ezsignfolderBatchDownloadV1Request, accept);
+                ValidateEzsignfolderBatchDownloadV1(ezsignfolderBatchDownloadV1Request);
 
-                FormatEzsignfolderBatchDownloadV1(ref pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, ref accept);
+                FormatEzsignfolderBatchDownloadV1(ref pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
 
                 using (HttpRequestMessage httpRequestMessageLocalVar = new HttpRequestMessage())
                 {
@@ -2857,9 +2845,6 @@ namespace eZmaxApi.Api
                         ? "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload"
                         : string.Concat(HttpClient.BaseAddress.AbsolutePath, "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload");
                     uriBuilderLocalVar.Path = uriBuilderLocalVar.Path.Replace("%7BpkiEzsignfolderID%7D", Uri.EscapeDataString(pkiEzsignfolderID.ToString()));
-
-                    if (accept.IsSet)
-                        httpRequestMessageLocalVar.Headers.Add("Accept", ClientUtils.ParameterToString(accept.Value));
 
                     httpRequestMessageLocalVar.Content = (ezsignfolderBatchDownloadV1Request as object) is System.IO.Stream stream
                         ? httpRequestMessageLocalVar.Content = new StreamContent(stream)
@@ -2918,7 +2903,7 @@ namespace eZmaxApi.Api
                             }
                         }
 
-                        AfterEzsignfolderBatchDownloadV1DefaultImplementation(apiResponseLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+                        AfterEzsignfolderBatchDownloadV1DefaultImplementation(apiResponseLocalVar, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
 
                         Events.ExecuteOnEzsignfolderBatchDownloadV1(apiResponseLocalVar);
 
@@ -2932,7 +2917,7 @@ namespace eZmaxApi.Api
             }
             catch(Exception e)
             {
-                OnErrorEzsignfolderBatchDownloadV1DefaultImplementation(e, "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload", uriBuilderLocalVar.Path, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+                OnErrorEzsignfolderBatchDownloadV1DefaultImplementation(e, "/1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload", uriBuilderLocalVar.Path, pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
                 Events.ExecuteOnErrorEzsignfolderBatchDownloadV1(e);
                 throw;
             }

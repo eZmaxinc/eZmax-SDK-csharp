@@ -11631,18 +11631,6 @@ paths:
         schema:
           $ref: "#/components/schemas/Field-pkiEzsignfolderID"
         style: simple
-      - description: Test csharp
-        explode: false
-        in: header
-        name: Accept
-        required: false
-        schema:
-          enum:
-          - application/json
-          - application/zip
-          - application/pdf
-          type: string
-        style: simple
       requestBody:
         content:
           application/json:

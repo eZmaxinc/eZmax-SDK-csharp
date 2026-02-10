@@ -79,7 +79,7 @@ Archive the Ezsignfolder
 
 <a id="ezsignfolderbatchdownloadv1"></a>
 # **EzsignfolderBatchDownloadV1**
-> System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, string accept = null)
+> System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
 
 Download multiples files from an Ezsignfolder
 
@@ -90,7 +90,6 @@ Download multiples files from an Ezsignfolder
 |------|------|-------------|-------|
 | **pkiEzsignfolderID** | **int** |  |  |
 | **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md) |  |  |
-| **accept** | **string** | Test csharp | [optional]  |
 
 ### Return type
 
