@@ -1,0 +1,277 @@
+# eZmaxApi.Api.ObjectEzsigntemplatepackageApi
+
+All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
+
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**EzsigntemplatepackageCreateObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagecreateobjectv1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage |
+| [**EzsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage |
+| [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners |
+| [**EzsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage |
+| [**EzsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs |
+| [**EzsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list |
+| [**EzsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage |
+
+<a id="ezsigntemplatepackagecreateobjectv1"></a>
+# **EzsigntemplatepackageCreateObjectV1**
+> EzsigntemplatepackageCreateObjectV1Response EzsigntemplatepackageCreateObjectV1 (EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request)
+
+Create a new Ezsigntemplatepackage
+
+The endpoint allows to create one or many elements at once.
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **ezsigntemplatepackageCreateObjectV1Request** | [**EzsigntemplatepackageCreateObjectV1Request**](EzsigntemplatepackageCreateObjectV1Request.md) |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageCreateObjectV1Response**](EzsigntemplatepackageCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackagedeleteobjectv1"></a>
+# **EzsigntemplatepackageDeleteObjectV1**
+> EzsigntemplatepackageDeleteObjectV1Response EzsigntemplatepackageDeleteObjectV1 (int pkiEzsigntemplatepackageID)
+
+Delete an existing Ezsigntemplatepackage
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageDeleteObjectV1Response**](EzsigntemplatepackageDeleteObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackageeditezsigntemplatepackagesignersv1"></a>
+# **EzsigntemplatepackageEditEzsigntemplatepackagesignersV1**
+> EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response EzsigntemplatepackageEditEzsigntemplatepackagesignersV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request)
+
+Edit multiple Ezsigntemplatepackagesigners
+
+Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+| **ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request** | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request.md) |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackageeditobjectv1"></a>
+# **EzsigntemplatepackageEditObjectV1**
+> EzsigntemplatepackageEditObjectV1Response EzsigntemplatepackageEditObjectV1 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request)
+
+Edit an existing Ezsigntemplatepackage
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+| **ezsigntemplatepackageEditObjectV1Request** | [**EzsigntemplatepackageEditObjectV1Request**](EzsigntemplatepackageEditObjectV1Request.md) |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageEditObjectV1Response**](EzsigntemplatepackageEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackagegetautocompletev2"></a>
+# **EzsigntemplatepackageGetAutocompleteV2**
+> EzsigntemplatepackageGetAutocompleteV2Response EzsigntemplatepackageGetAutocompleteV2 (string sSelector, string eFilterActive = null, string sQuery = null, HeaderAcceptLanguage acceptLanguage = null, int fkiEzsignfoldertypeID = null)
+
+Retrieve Ezsigntemplatepackages and IDs
+
+Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **sSelector** | **string** | The type of Ezsigntemplatepackages to return |  |
+| **eFilterActive** | **string** | Specify which results we want to display. | [optional] [default to Active] |
+| **sQuery** | **string** | Allow to filter the returned results | [optional]  |
+| **acceptLanguage** | **HeaderAcceptLanguage** |  | [optional]  |
+| **fkiEzsignfoldertypeID** | **int** | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional]  |
+
+### Return type
+
+[**EzsigntemplatepackageGetAutocompleteV2Response**](EzsigntemplatepackageGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackagegetlistv1"></a>
+# **EzsigntemplatepackageGetListV1**
+> EzsigntemplatepackageGetListV1Response EzsigntemplatepackageGetListV1 (string eOrderBy = null, int iRowMax = null, int iRowOffset = null, HeaderAcceptLanguage acceptLanguage = null, string sFilter = null)
+
+Retrieve Ezsigntemplatepackage list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsigntemplatepackageType | Company<br>Team<br>User<br>Usergroup |
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **eOrderBy** | **string** | Specify how you want the results to be sorted | [optional]  |
+| **iRowMax** | **int** |  | [optional]  |
+| **iRowOffset** | **int** |  | [optional] [default to 0] |
+| **acceptLanguage** | **HeaderAcceptLanguage** |  | [optional]  |
+| **sFilter** | **string** |  | [optional]  |
+
+### Return type
+
+[**EzsigntemplatepackageGetListV1Response**](EzsigntemplatepackageGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+<a id="ezsigntemplatepackagegetobjectv2"></a>
+# **EzsigntemplatepackageGetObjectV2**
+> EzsigntemplatepackageGetObjectV2Response EzsigntemplatepackageGetObjectV2 (int pkiEzsigntemplatepackageID)
+
+Retrieve an existing Ezsigntemplatepackage
+
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageGetObjectV2Response**](EzsigntemplatepackageGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
