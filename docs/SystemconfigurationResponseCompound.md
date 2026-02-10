@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **BSystemconfigurationEzsignpersonnal** | **bool** | Whether if we allow the creation of personal files in eZsign | 
 **BSystemconfigurationHascreditcardmerchant** | **bool** | Whether there is a creditcard merchant configured or not | [optional] 
 **BSystemconfigurationIsdisposalactive** | **bool** | Whether is Disposal processus is active or not | [optional] 
+**BSystemconfigurationAllowcomplexcreditcardsignature** | **bool** | Whether is the system allows to have a complex creditcard signature | [optional] 
 **BSystemconfigurationSspr** | **bool** | Whether if we allow SSPR | 
 **DtSystemconfigurationReadonlyexpirationstart** | **string** | The start date where the system will be in read only | [optional] 
 **DtSystemconfigurationReadonlyexpirationend** | **string** | The end date where the system will be in read only | [optional] 

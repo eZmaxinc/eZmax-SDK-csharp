@@ -140,7 +140,7 @@ catch (ApiException e)
 
 <a id="ezsignfolderbatchdownloadv1"></a>
 # **EzsignfolderBatchDownloadV1**
-> System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request)
+> System.IO.Stream EzsignfolderBatchDownloadV1 (int pkiEzsignfolderID, EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, string? accept = null)
 
 Download multiples files from an Ezsignfolder
 
@@ -168,11 +168,12 @@ namespace Example
             var apiInstance = new ObjectEzsignfolderApi(config);
             var pkiEzsignfolderID = 56;  // int | 
             var ezsignfolderBatchDownloadV1Request = new EzsignfolderBatchDownloadV1Request(); // EzsignfolderBatchDownloadV1Request | 
+            var accept = "application/json";  // string? | Test csharp (optional) 
 
             try
             {
                 // Download multiples files from an Ezsignfolder
-                System.IO.Stream result = apiInstance.EzsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+                System.IO.Stream result = apiInstance.EzsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -193,7 +194,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Download multiples files from an Ezsignfolder
-    ApiResponse<System.IO.Stream> response = apiInstance.EzsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+    ApiResponse<System.IO.Stream> response = apiInstance.EzsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -212,6 +213,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **pkiEzsignfolderID** | **int** |  |  |
 | **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md) |  |  |
+| **accept** | **string?** | Test csharp | [optional]  |
 
 ### Return type
 

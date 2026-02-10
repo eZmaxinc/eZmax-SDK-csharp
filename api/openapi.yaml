@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.3.0
+  version: 1.3.1
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: "#fafafa"
@@ -122,9 +122,13 @@ tags:
     \n* PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\r\n\
     * PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\r\
     \n* PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\r\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\
-    \n\r\n---\r\n\r\n### [1.3.0] - 2025-11-XXXXXXXXXXXXX\r\n\r\n#### Added\r\n- GET\
-    \ /1/object/agent/getList\r\n- GET /1/object/broker/getList\r\n- GET /1/object/buyercontract/getList\r\
-    \n- GET /1/object/customer/getList\r\n- GET /1/object/employee/getList\r\n- GET\
+    \n\r\n---\r\n\r\n### [1.3.1] - 2026-XX-XX\r\n\r\n#### Added\r\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
+    \n- POST /1/object/ezsigntemplateannotation\r\n- PUT /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
+    \n- GET /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\n\
+    - GET /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}\r\
+    \n\r\n\r\n### [1.3.0] - 2026-01-24\r\n\r\n#### Added\r\n- GET /1/object/agent/getList\r\
+    \n- GET /1/object/broker/getList\r\n- GET /1/object/buyercontract/getList\r\n\
+    - GET /1/object/customer/getList\r\n- GET /1/object/employee/getList\r\n- GET\
     \ /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile\r\n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile\r\
     \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download\r\
     \n- GET /1/object/inscriptiontemp/getList\r\n- GET /1/object/lead/getList\r\n\
@@ -1129,6 +1133,9 @@ tags:
 - description: Ezsigntemplate contains detail about Document types and block templates
   name: Object_Ezsigntemplate
   x-displayName: Ezsigntemplate
+- description: Ezsigntemplateannotation contains details about Ezsigntemplateannotations
+  name: Object_Ezsigntemplateannotation
+  x-displayName: Ezsigntemplateannotation
 - description: Ezsigntemplatedocument contains detail about a document in an Ezsigntemplate
   name: Object_Ezsigntemplatedocument
   x-displayName: Ezsigntemplatedocument
@@ -1143,6 +1150,9 @@ tags:
     templates
   name: Object_Ezsigntemplateglobal
   x-displayName: Ezsigntemplateglobal
+- description: Ezsigntemplateglobalannotation contains details about Ezsigntemplateglobalannotations
+  name: Object_Ezsigntemplateglobalannotation
+  x-displayName: Ezsigntemplateglobalannotation
 - description: Ezsigntemplatepackage contains detail about a package of ezsign templates
     that can be used as a whole
   name: Object_Ezsigntemplatepackage
@@ -5683,6 +5693,7 @@ paths:
       - Object_Customer
       x-permissions:
       - FinancialsReports_ARReport
+      - Ezmaxcustomer_CreationModification
       x-usertypeextra: []
       x-systemconfigurationtype:
       - RealEstate
@@ -9914,7 +9925,6 @@ paths:
       - All
   /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups:
     put:
-      deprecated: true
       description: "Using this endpoint, you can edit multiple Ezsignformfieldgroups\
         \ at the same time."
       operationId: Ezsigndocument_EditEzsignformfieldgroups_V2
@@ -9966,6 +9976,7 @@ paths:
       - All
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups:
     put:
+      deprecated: true
       description: "Using this endpoint, you can edit multiple Ezsignformfieldgroups\
         \ at the same time."
       operationId: Ezsigndocument_EditEzsignformfieldgroups_V1
@@ -11620,6 +11631,18 @@ paths:
         schema:
           $ref: "#/components/schemas/Field-pkiEzsignfolderID"
         style: simple
+      - description: Test csharp
+        explode: false
+        in: header
+        name: Accept
+        required: false
+        schema:
+          enum:
+          - application/json
+          - application/zip
+          - application/pdf
+          type: string
+        style: simple
       requestBody:
         content:
           application/json:
@@ -13206,6 +13229,60 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ezsignfoldersignerassociation-createEmbeddedUrl-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Creates an Url to allow embedded signing
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-systemconfigurationtype:
+      - All
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl:
+    post:
+      deprecated: true
+      description: |-
+        This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.
+
+        The signer Login type must be configured as Embedded.
+      operationId: Ezsignfoldersignerassociation_CreateEmbeddedUrl_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsignfoldersignerassociationID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ezsignfoldersignerassociation-createEmbeddedUrl-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsignfoldersignerassociation-createEmbeddedUrl-v1-Response"
           description: Successful response
         "404":
           content:
@@ -15444,6 +15521,163 @@ paths:
       - AgentBroker
       x-systemconfigurationtype:
       - All
+  /1/object/ezsigntemplateannotation:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsigntemplateannotation_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ezsigntemplateannotation-createObject-v1-Request"
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigntemplateannotation-createObject-v1-Response"
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsigntemplateannotation
+      tags:
+      - Object_Ezsigntemplateannotation
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+  /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsigntemplateannotation_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezsigntemplateannotation
+        explode: false
+        in: path
+        name: pkiEzsigntemplateannotationID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsigntemplateannotationID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigntemplateannotation-getObject-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplateannotation
+      tags:
+      - Object_Ezsigntemplateannotation
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+  /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}:
+    delete:
+      description: ""
+      operationId: Ezsigntemplateannotation_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigntemplateannotation
+        explode: false
+        in: path
+        name: pkiEzsigntemplateannotationID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsigntemplateannotationID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigntemplateannotation-deleteObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsigntemplateannotation
+      tags:
+      - Object_Ezsigntemplateannotation
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+    description: ""
+    put:
+      description: ""
+      operationId: Ezsigntemplateannotation_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigntemplateannotation
+        explode: false
+        in: path
+        name: pkiEzsigntemplateannotationID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsigntemplateannotationID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ezsigntemplateannotation-editObject-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigntemplateannotation-editObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Edit an existing Ezsigntemplateannotation
+      tags:
+      - Object_Ezsigntemplateannotation
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
   /1/object/ezsigntemplatedocument:
     description: ""
     post:
@@ -16592,6 +16826,45 @@ paths:
       - AgentBroker
       x-systemconfigurationtype:
       - All
+  /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsigntemplateglobalannotation_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezsigntemplateglobalannotation
+        explode: false
+        in: path
+        name: pkiEzsigntemplateglobalannotationID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsigntemplateglobalannotationID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigntemplateglobalannotation-getObject-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplateglobalannotation
+      tags:
+      - Object_Ezsigntemplateglobalannotation
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
   /1/object/ezsigntemplatepackage:
     description: ""
     post:
@@ -24019,6 +24292,7 @@ paths:
   /1/object/user:
     description: ""
     post:
+      deprecated: true
       description: The endpoint allows to create one or many elements at once.
       operationId: User_CreateObject_V1
       requestBody:
@@ -40741,6 +41015,29 @@ components:
       - Ezsignfoldertype
       example: Ezsignfoldertype
       type: string
+    Field-eEzsigntemplateannotationHorizontalalignment:
+      description: The horizontalalignment of the Ezsigntemplateannotation
+      enum:
+      - Center
+      - Left
+      - Right
+      example: Center
+      type: string
+    Field-eEzsigntemplateannotationType:
+      description: The type of the Ezsigntemplateannotation
+      enum:
+      - Dropdown
+      - Text
+      example: Dropdown
+      type: string
+    Field-eEzsigntemplateannotationVerticalalignment:
+      description: The verticalalignment of the Ezsigntemplateannotation
+      enum:
+      - Bottom
+      - Middle
+      - Top
+      example: Bottom
+      type: string
     Field-eEzsigntemplatedocumentpagerecognitionOperator:
       description: The operator of the Ezsigntemplatedocumentpagerecognition
       enum:
@@ -40856,6 +41153,29 @@ components:
       - Webforms
       - GHACQ
       example: Centris
+      type: string
+    Field-eEzsigntemplateglobalannotationHorizontalalignment:
+      description: The horizontalalignment of the Ezsigntemplateglobalannotation
+      enum:
+      - Center
+      - Left
+      - Right
+      example: Center
+      type: string
+    Field-eEzsigntemplateglobalannotationType:
+      description: The type of the Ezsigntemplateglobalannotation
+      enum:
+      - Dropdown
+      - Text
+      example: Dropdown
+      type: string
+    Field-eEzsigntemplateglobalannotationVerticalalignment:
+      description: The verticalalignment of the Ezsigntemplateglobalannotation
+      enum:
+      - Bottom
+      - Middle
+      - Top
+      example: Bottom
       type: string
     Field-eEzsigntemplatepackagesignerMapping:
       default: Manual
@@ -41809,6 +42129,30 @@ components:
       example: 300
       minimum: 0
       type: integer
+    Field-iEzsigntemplateannotationHeight:
+      description: The height of the Ezsigntemplateannotation
+      example: 58213
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateannotationWidth:
+      description: The width of the Ezsigntemplateannotation
+      example: 51755
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateannotationX:
+      description: The x of the Ezsigntemplateannotation
+      example: 17864
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateannotationY:
+      description: The y of the Ezsigntemplateannotation
+      example: 23342
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-iEzsigntemplatedocumentPagetotal:
       description: The number of pages in the Ezsigntemplatedocument.
       example: 5
@@ -41937,6 +42281,30 @@ components:
         the form fields
       example: 1
       minimum: 1
+      type: integer
+    Field-iEzsigntemplateglobalannotationHeight:
+      description: The height of the Ezsigntemplateglobalannotation
+      example: 31702
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateglobalannotationWidth:
+      description: The width of the Ezsigntemplateglobalannotation
+      example: 26049
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateglobalannotationX:
+      description: The x of the Ezsigntemplateglobalannotation
+      example: 59074
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplateglobalannotationY:
+      description: The y of the Ezsigntemplateglobalannotation
+      example: 27324
+      maximum: 65535
+      minimum: 0
       type: integer
     Field-iEzsigntemplatepackagemembershipOrder:
       description: The order in which the Ezsigntemplate will be imported when using
@@ -42771,6 +43139,12 @@ components:
       example: 36
       minimum: 0
       type: integer
+    Field-pkiEzsigntemplateannotationID:
+      description: The unique ID of the Ezsigntemplateannotation
+      example: 79
+      maximum: 16777215
+      minimum: 0
+      type: integer
     Field-pkiEzsigntemplatedocumentID:
       description: The unique ID of the Ezsigntemplatedocument
       example: 133
@@ -42813,9 +43187,21 @@ components:
       example: 36
       minimum: 0
       type: integer
+    Field-pkiEzsigntemplateglobalannotationID:
+      description: The unique ID of the Ezsigntemplateglobalannotation
+      example: 200
+      maximum: 16777215
+      minimum: 0
+      type: integer
     Field-pkiEzsigntemplateglobaldocumentID:
       description: The unique ID of the Ezsigntemplateglobaldocument
       example: 133
+      minimum: 0
+      type: integer
+    Field-pkiEzsigntemplateglobaldocumentpageID:
+      description: The unique ID of the Ezsigntemplateglobaldocumentpage
+      example: 225
+      maximum: 16777215
       minimum: 0
       type: integer
     Field-pkiEzsigntemplateglobalsignerID:
@@ -44201,6 +44587,21 @@ components:
       example: Contract
       pattern: "^.{1,50}$"
       type: string
+    Field-sEzsigntemplateannotationDefaulttext:
+      description: The defaulttext of the Ezsigntemplateannotation
+      example: John Doe
+      pattern: "^.{0,65535}$"
+      type: string
+    Field-sEzsigntemplateannotationDescription:
+      description: The description of the Ezsigntemplateannotation
+      example: Name
+      pattern: "^.{0,80}$"
+      type: string
+    Field-sEzsigntemplateannotationnDropdownvalues:
+      description: The ndropdownvalues of the Ezsigntemplateannotation
+      example: "{\"Accepts\",\"Refuses\"}"
+      pattern: "^.{0,65535}$"
+      type: string
     Field-sEzsigntemplatedocumentName:
       description: The name of the Ezsigntemplatedocument.
       example: Standard Contract
@@ -44272,6 +44673,21 @@ components:
     Field-sEzsigntemplateglobalDescription:
       description: The description of the Ezsigntemplate
       example: Standard Contract
+      type: string
+    Field-sEzsigntemplateglobalannotationDefaulttext:
+      description: The defaulttext of the Ezsigntemplateglobalannotation
+      example: John Doe
+      pattern: "^.{0,65535}$"
+      type: string
+    Field-sEzsigntemplateglobalannotationDescription:
+      description: The description of the Ezsigntemplateglobalannotation
+      example: Name
+      pattern: "^.{0,80}$"
+      type: string
+    Field-sEzsigntemplateglobalannotationDropdownvalues:
+      description: The dropdownvalues of the Ezsigntemplateglobalannotation
+      example: "{\"Accepts\",\"Refuses\"}"
+      pattern: "^.{0,65535}$"
       type: string
     Field-sEzsigntemplateglobaldocumentName:
       description: The name of the Ezsigntemplateglobaldocument.
@@ -98563,6 +98979,84 @@ components:
       - sUserFirstname
       - sUserLastname
       type: object
+    ezsignfoldersignerassociation-createEmbeddedUrl-v1-Request:
+      description: Request for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
+      properties:
+        sReturnUrl:
+          description: "The return Url to redirect after the signing is completed\n\
+            \n**Warning** Due to the potential for Ezsignsigners to cancel redirection,\
+            \ close their browser post-signing, or spoof the landing URL, it's advisable\
+            \ not to solely depend on the sReturnUrl for accurate status within your\
+            \ integration.\n\nOnce the Ezsignsigner finishes, they are directed back\
+            \ to your application. Your application can retain transaction state details\
+            \ by either storing data in a cookie or incorporating query parameters\
+            \ in the sReturnUrl. For example: https://www.example.com/sReturnUrl?sSessionID=ABC123\n\
+            \nThe actual url that will be called will have an extra url parameter\
+            \ appended to give details about the process. The possible values are\
+            \ listed in the table below. For example: https://www.example.com/sReturnUrl?sSessionID=ABC123&eEzsignEvent=CompletedEzsignfolder\
+            \ \n\n|**Query parameters appended**|\n|---|\n|eEzsignEvent|\n\n\n|**eEzsignEvent**|**Description**|\n\
+            |---|---|\n|SessionTimeout|The session timed out|\n|SessionLogout|The\
+            \ Ezsignsigner signed out|\n|DeclinedTermOfUse|The Ezsignsigner refused\
+            \ the terms|\n|DeclinedSign|The Ezsignsigner refused to sign|\n|Reassigned|The\
+            \ Ezsignsigner reassigned his signatures to someone else|\n|CompletedStep|The\
+            \ Ezsignsigner completed his step. There is other signatures to complete\
+            \ the Ezsigndocument|\n|CompletedEzsignfolder|The Ezsignfolder is completed.\
+            \ Everyone signed their signatures|"
+          example: https://www.example.com
+          pattern: "^(https|http):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
+          type: string
+        sIframedomain:
+          description: Domain protection for the iFrame
+          example: '*.example.com'
+          type: string
+        bIsIframe:
+          description: Whether the url would be in an iFrame or not
+          type: boolean
+      type: object
+    ezsignfoldersignerassociation-createEmbeddedUrl-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsignfoldersignerassociation-createEmbeddedUrl-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        mPayload:
+          sEmbeddedUrl: sEmbeddedUrl
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsignfoldersignerassociation-createEmbeddedUrl-v1-Response-mPayload:
+      description: Payload for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
+      example:
+        sEmbeddedUrl: sEmbeddedUrl
+      properties:
+        sEmbeddedUrl:
+          description: "The embedded Url to the signing application.\r\n\r\nUrl will\
+            \ expire after 5 minutes.\r\n"
+          type: string
+      required:
+      - sEmbeddedUrl
+      type: object
     ezsignfoldersignerassociation-createEmbeddedUrl-v2-Request:
       description: Request for POST /2/object/ezsignfoldersignerassociation/createEmbeddedUrl
       properties:
@@ -107137,6 +107631,376 @@ components:
       required:
       - objEzsigntemplate
       type: object
+    ezsigntemplateannotation-Request:
+      description: A Ezsigntemplateannotation Object
+      properties:
+        pkiEzsigntemplateannotationID:
+          description: The unique ID of the Ezsigntemplateannotation
+          example: 79
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatedocumentpageID:
+          description: The unique ID of the Ezsigntemplatedocumentpage
+          example: 85
+          minimum: 0
+          type: integer
+        fkiTextstylestaticID:
+          description: The unique ID of the Textstylestatic
+          example: 216
+          minimum: 0
+          type: integer
+        eEzsigntemplateannotationHorizontalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationHorizontalalignment"
+        eEzsigntemplateannotationVerticalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationVerticalalignment"
+        eEzsigntemplateannotationType:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationType"
+        iEzsigntemplateannotationX:
+          description: The x of the Ezsigntemplateannotation
+          example: 17864
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationY:
+          description: The y of the Ezsigntemplateannotation
+          example: 23342
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationWidth:
+          description: The width of the Ezsigntemplateannotation
+          example: 51755
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationHeight:
+          description: The height of the Ezsigntemplateannotation
+          example: 58213
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sEzsigntemplateannotationDescription:
+          description: The description of the Ezsigntemplateannotation
+          example: Name
+          pattern: "^.{0,80}$"
+          type: string
+        sEzsigntemplateannotationDefaulttext:
+          description: The defaulttext of the Ezsigntemplateannotation
+          example: John Doe
+          pattern: "^.{0,65535}$"
+          type: string
+        sEzsigntemplateannotationnDropdownvalues:
+          description: The ndropdownvalues of the Ezsigntemplateannotation
+          example: "{\"Accepts\",\"Refuses\"}"
+          pattern: "^.{0,65535}$"
+          type: string
+      required:
+      - eEzsigntemplateannotationHorizontalalignment
+      - eEzsigntemplateannotationType
+      - eEzsigntemplateannotationVerticalalignment
+      - fkiEzsigntemplatedocumentpageID
+      - fkiTextstylestaticID
+      - iEzsigntemplateannotationHeight
+      - iEzsigntemplateannotationWidth
+      - iEzsigntemplateannotationX
+      - iEzsigntemplateannotationY
+      - sEzsigntemplateannotationDefaulttext
+      - sEzsigntemplateannotationDescription
+      - sEzsigntemplateannotationnDropdownvalues
+      type: object
+    ezsigntemplateannotation-RequestCompound:
+      allOf:
+      - $ref: "#/components/schemas/ezsigntemplateannotation-Request"
+      - type: object
+      description: A Ezsigntemplateannotation Object and children
+      type: object
+    ezsigntemplateannotation-Response:
+      description: A Ezsigntemplateannotation Object
+      properties:
+        pkiEzsigntemplateannotationID:
+          description: The unique ID of the Ezsigntemplateannotation
+          example: 79
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatedocumentpageID:
+          description: The unique ID of the Ezsigntemplatedocumentpage
+          example: 85
+          minimum: 0
+          type: integer
+        fkiTextstylestaticID:
+          description: The unique ID of the Textstylestatic
+          example: 216
+          minimum: 0
+          type: integer
+        eEzsigntemplateannotationHorizontalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationHorizontalalignment"
+        eEzsigntemplateannotationVerticalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationVerticalalignment"
+        eEzsigntemplateannotationType:
+          $ref: "#/components/schemas/Field-eEzsigntemplateannotationType"
+        iEzsigntemplateannotationX:
+          description: The x of the Ezsigntemplateannotation
+          example: 17864
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationY:
+          description: The y of the Ezsigntemplateannotation
+          example: 23342
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationWidth:
+          description: The width of the Ezsigntemplateannotation
+          example: 51755
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateannotationHeight:
+          description: The height of the Ezsigntemplateannotation
+          example: 58213
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sEzsigntemplateannotationDescription:
+          description: The description of the Ezsigntemplateannotation
+          example: Name
+          pattern: "^.{0,80}$"
+          type: string
+        sEzsigntemplateannotationDefaulttext:
+          description: The defaulttext of the Ezsigntemplateannotation
+          example: John Doe
+          pattern: "^.{0,65535}$"
+          type: string
+        sEzsigntemplateannotationnDropdownvalues:
+          description: The ndropdownvalues of the Ezsigntemplateannotation
+          example: "{\"Accepts\",\"Refuses\"}"
+          pattern: "^.{0,65535}$"
+          type: string
+      required:
+      - eEzsigntemplateannotationHorizontalalignment
+      - eEzsigntemplateannotationType
+      - eEzsigntemplateannotationVerticalalignment
+      - fkiEzsigntemplatedocumentpageID
+      - fkiTextstylestaticID
+      - iEzsigntemplateannotationHeight
+      - iEzsigntemplateannotationWidth
+      - iEzsigntemplateannotationX
+      - iEzsigntemplateannotationY
+      - pkiEzsigntemplateannotationID
+      - sEzsigntemplateannotationDefaulttext
+      - sEzsigntemplateannotationDescription
+      - sEzsigntemplateannotationnDropdownvalues
+      type: object
+    ezsigntemplateannotation-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/ezsigntemplateannotation-Response"
+      - type: object
+      description: A Ezsigntemplateannotation Object
+      example:
+        fkiTextstylestaticID: 216
+        sEzsigntemplateannotationDefaulttext: John Doe
+        sEzsigntemplateannotationnDropdownvalues: "{\"Accepts\",\"Refuses\"}"
+        eEzsigntemplateannotationHorizontalalignment: Center
+        eEzsigntemplateannotationType: Dropdown
+        iEzsigntemplateannotationHeight: 58213
+        iEzsigntemplateannotationWidth: 51755
+        iEzsigntemplateannotationX: 17864
+        iEzsigntemplateannotationY: 23342
+        sEzsigntemplateannotationDescription: Name
+        eEzsigntemplateannotationVerticalalignment: Bottom
+        pkiEzsigntemplateannotationID: 79
+        fkiEzsigntemplatedocumentpageID: 85
+      type: object
+    ezsigntemplateannotation-createObject-v1-Request:
+      description: Request for POST /1/object/ezsigntemplateannotation
+      properties:
+        a_objEzsigntemplateannotation:
+          items:
+            $ref: "#/components/schemas/ezsigntemplateannotation-RequestCompound"
+          minItems: 1
+          type: array
+      required:
+      - a_objEzsigntemplateannotation
+      type: object
+    ezsigntemplateannotation-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsigntemplateannotation-createObject-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for POST /1/object/ezsigntemplateannotation
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        mPayload:
+          a_pkiEzsigntemplateannotationID:
+          - 79
+          - 79
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigntemplateannotation-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/ezsigntemplateannotation
+      example:
+        a_pkiEzsigntemplateannotationID:
+        - 79
+        - 79
+      properties:
+        a_pkiEzsigntemplateannotationID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: "#/components/schemas/Field-pkiEzsigntemplateannotationID"
+          type: array
+      required:
+      - a_pkiEzsigntemplateannotationID
+      type: object
+    ezsigntemplateannotation-deleteObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}"
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigntemplateannotation-editObject-v1-Request:
+      description: "Request for PUT /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}"
+      properties:
+        objEzsigntemplateannotation:
+          $ref: "#/components/schemas/ezsigntemplateannotation-RequestCompound"
+      required:
+      - objEzsigntemplateannotation
+      type: object
+    ezsigntemplateannotation-editObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for PUT /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}"
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigntemplateannotation-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsigntemplateannotation-getObject-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}"
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        mPayload:
+          objEzsigntemplateannotation:
+            fkiTextstylestaticID: 216
+            sEzsigntemplateannotationDefaulttext: John Doe
+            sEzsigntemplateannotationnDropdownvalues: "{\"Accepts\",\"Refuses\"}"
+            eEzsigntemplateannotationHorizontalalignment: Center
+            eEzsigntemplateannotationType: Dropdown
+            iEzsigntemplateannotationHeight: 58213
+            iEzsigntemplateannotationWidth: 51755
+            iEzsigntemplateannotationX: 17864
+            iEzsigntemplateannotationY: 23342
+            sEzsigntemplateannotationDescription: Name
+            eEzsigntemplateannotationVerticalalignment: Bottom
+            pkiEzsigntemplateannotationID: 79
+            fkiEzsigntemplatedocumentpageID: 85
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigntemplateannotation-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}"
+      example:
+        objEzsigntemplateannotation:
+          fkiTextstylestaticID: 216
+          sEzsigntemplateannotationDefaulttext: John Doe
+          sEzsigntemplateannotationnDropdownvalues: "{\"Accepts\",\"Refuses\"}"
+          eEzsigntemplateannotationHorizontalalignment: Center
+          eEzsigntemplateannotationType: Dropdown
+          iEzsigntemplateannotationHeight: 58213
+          iEzsigntemplateannotationWidth: 51755
+          iEzsigntemplateannotationX: 17864
+          iEzsigntemplateannotationY: 23342
+          sEzsigntemplateannotationDescription: Name
+          eEzsigntemplateannotationVerticalalignment: Bottom
+          pkiEzsigntemplateannotationID: 79
+          fkiEzsigntemplatedocumentpageID: 85
+      properties:
+        objEzsigntemplateannotation:
+          $ref: "#/components/schemas/ezsigntemplateannotation-ResponseCompound"
+      required:
+      - objEzsigntemplateannotation
+      type: object
     ezsigntemplatedocument-Request:
       description: A Ezsigntemplatedocument Object
       properties:
@@ -110851,6 +111715,176 @@ components:
           $ref: "#/components/schemas/ezsigntemplateglobal-ResponseCompound"
       required:
       - objEzsigntemplateglobal
+      type: object
+    ezsigntemplateglobalannotation-Response:
+      description: A Ezsigntemplateglobalannotation Object
+      properties:
+        pkiEzsigntemplateglobalannotationID:
+          description: The unique ID of the Ezsigntemplateglobalannotation
+          example: 200
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsigntemplateglobaldocumentpageID:
+          description: The unique ID of the Ezsigntemplateglobaldocumentpage
+          example: 225
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiTextstylestaticID:
+          description: The unique ID of the Textstylestatic
+          example: 216
+          minimum: 0
+          type: integer
+        eEzsigntemplateglobalannotationHorizontalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateglobalannotationHorizontalalignment"
+        eEzsigntemplateglobalannotationVerticalalignment:
+          $ref: "#/components/schemas/Field-eEzsigntemplateglobalannotationVerticalalignment"
+        eEzsigntemplateglobalannotationType:
+          $ref: "#/components/schemas/Field-eEzsigntemplateglobalannotationType"
+        iEzsigntemplateglobalannotationX:
+          description: The x of the Ezsigntemplateglobalannotation
+          example: 59074
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateglobalannotationY:
+          description: The y of the Ezsigntemplateglobalannotation
+          example: 27324
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateglobalannotationWidth:
+          description: The width of the Ezsigntemplateglobalannotation
+          example: 26049
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigntemplateglobalannotationHeight:
+          description: The height of the Ezsigntemplateglobalannotation
+          example: 31702
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sEzsigntemplateglobalannotationDescription:
+          description: The description of the Ezsigntemplateglobalannotation
+          example: Name
+          pattern: "^.{0,80}$"
+          type: string
+        sEzsigntemplateglobalannotationDefaulttext:
+          description: The defaulttext of the Ezsigntemplateglobalannotation
+          example: John Doe
+          pattern: "^.{0,65535}$"
+          type: string
+        sEzsigntemplateglobalannotationDropdownvalues:
+          description: The dropdownvalues of the Ezsigntemplateglobalannotation
+          example: "{\"Accepts\",\"Refuses\"}"
+          pattern: "^.{0,65535}$"
+          type: string
+      required:
+      - eEzsigntemplateglobalannotationHorizontalalignment
+      - eEzsigntemplateglobalannotationType
+      - eEzsigntemplateglobalannotationVerticalalignment
+      - fkiEzsigntemplateglobaldocumentpageID
+      - fkiTextstylestaticID
+      - iEzsigntemplateglobalannotationHeight
+      - iEzsigntemplateglobalannotationWidth
+      - iEzsigntemplateglobalannotationX
+      - iEzsigntemplateglobalannotationY
+      - pkiEzsigntemplateglobalannotationID
+      - sEzsigntemplateglobalannotationDefaulttext
+      - sEzsigntemplateglobalannotationDescription
+      - sEzsigntemplateglobalannotationDropdownvalues
+      type: object
+    ezsigntemplateglobalannotation-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/ezsigntemplateglobalannotation-Response"
+      - type: object
+      description: A Ezsigntemplateglobalannotation Object
+      example:
+        eEzsigntemplateglobalannotationHorizontalalignment: Center
+        fkiTextstylestaticID: 216
+        eEzsigntemplateglobalannotationType: Dropdown
+        iEzsigntemplateglobalannotationY: 27324
+        pkiEzsigntemplateglobalannotationID: 200
+        iEzsigntemplateglobalannotationX: 59074
+        iEzsigntemplateglobalannotationWidth: 26049
+        iEzsigntemplateglobalannotationHeight: 31702
+        fkiEzsigntemplateglobaldocumentpageID: 225
+        eEzsigntemplateglobalannotationVerticalalignment: Bottom
+        sEzsigntemplateglobalannotationDropdownvalues: "{\"Accepts\",\"Refuses\"}"
+        sEzsigntemplateglobalannotationDescription: Name
+        sEzsigntemplateglobalannotationDefaulttext: John Doe
+      type: object
+    ezsigntemplateglobalannotation-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsigntemplateglobalannotation-getObject-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}"
+      example:
+        objDebugPayload:
+          dtResponseDate: 2020-12-31 23:59:59
+          iVersionMax: 2
+          iVersionMin: 1
+          bVersionDeprecated: false
+          a_RequiredPermission:
+          - 117
+          - 117
+        mPayload:
+          objEzsigntemplateglobalannotation:
+            eEzsigntemplateglobalannotationHorizontalalignment: Center
+            fkiTextstylestaticID: 216
+            eEzsigntemplateglobalannotationType: Dropdown
+            iEzsigntemplateglobalannotationY: 27324
+            pkiEzsigntemplateglobalannotationID: 200
+            iEzsigntemplateglobalannotationX: 59074
+            iEzsigntemplateglobalannotationWidth: 26049
+            iEzsigntemplateglobalannotationHeight: 31702
+            fkiEzsigntemplateglobaldocumentpageID: 225
+            eEzsigntemplateglobalannotationVerticalalignment: Bottom
+            sEzsigntemplateglobalannotationDropdownvalues: "{\"Accepts\",\"Refuses\"\
+              }"
+            sEzsigntemplateglobalannotationDescription: Name
+            sEzsigntemplateglobalannotationDefaulttext: John Doe
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigntemplateglobalannotation-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}"
+      example:
+        objEzsigntemplateglobalannotation:
+          eEzsigntemplateglobalannotationHorizontalalignment: Center
+          fkiTextstylestaticID: 216
+          eEzsigntemplateglobalannotationType: Dropdown
+          iEzsigntemplateglobalannotationY: 27324
+          pkiEzsigntemplateglobalannotationID: 200
+          iEzsigntemplateglobalannotationX: 59074
+          iEzsigntemplateglobalannotationWidth: 26049
+          iEzsigntemplateglobalannotationHeight: 31702
+          fkiEzsigntemplateglobaldocumentpageID: 225
+          eEzsigntemplateglobalannotationVerticalalignment: Bottom
+          sEzsigntemplateglobalannotationDropdownvalues: "{\"Accepts\",\"Refuses\"\
+            }"
+          sEzsigntemplateglobalannotationDescription: Name
+          sEzsigntemplateglobalannotationDefaulttext: John Doe
+      properties:
+        objEzsigntemplateglobalannotation:
+          $ref: "#/components/schemas/ezsigntemplateglobalannotation-ResponseCompound"
+      required:
+      - objEzsigntemplateglobalannotation
       type: object
     ezsigntemplateglobaldocument-Response:
       description: A Ezsigntemplateglobaldocument Object
@@ -137961,6 +138995,9 @@ components:
         bSystemconfigurationIsdisposalactive:
           description: Whether is Disposal processus is active or not
           type: boolean
+        bSystemconfigurationAllowcomplexcreditcardsignature:
+          description: Whether is the system allows to have a complex creditcard signature
+          type: boolean
         bSystemconfigurationSspr:
           description: Whether if we allow SSPR
           example: true
@@ -138009,6 +139046,7 @@ components:
         bSystemconfigurationSspr: true
         bSystemconfigurationEzsignpersonnal: true
         bSystemconfigurationEzsignpaidbyoffice: true
+        bSystemconfigurationAllowcomplexcreditcardsignature: true
         sSystemconfigurationtypeDescriptionX: eZsign (Pro)
         eSystemconfigurationEzsign: "Yes"
         fkiTimezoneIDDefault: 247
@@ -138085,6 +139123,7 @@ components:
             bSystemconfigurationSspr: true
             bSystemconfigurationEzsignpersonnal: true
             bSystemconfigurationEzsignpaidbyoffice: true
+            bSystemconfigurationAllowcomplexcreditcardsignature: true
             sSystemconfigurationtypeDescriptionX: eZsign (Pro)
             eSystemconfigurationEzsign: "Yes"
             fkiTimezoneIDDefault: 247
@@ -138122,6 +139161,7 @@ components:
           bSystemconfigurationSspr: true
           bSystemconfigurationEzsignpersonnal: true
           bSystemconfigurationEzsignpaidbyoffice: true
+          bSystemconfigurationAllowcomplexcreditcardsignature: true
           sSystemconfigurationtypeDescriptionX: eZsign (Pro)
           eSystemconfigurationEzsign: "Yes"
           fkiTimezoneIDDefault: 247
@@ -147532,10 +148572,12 @@ x-tagGroups:
   - Object_Ezsignsignergroupmembership
   - Object_Ezsignsigningreason
   - Object_Ezsigntemplate
+  - Object_Ezsigntemplateannotation
   - Object_Ezsigntemplatedocument
   - Object_Ezsigntemplatedocumentpagerecognition
   - Object_Ezsigntemplateformfieldgroup
   - Object_Ezsigntemplateglobal
+  - Object_Ezsigntemplateglobalannotation
   - Object_Ezsigntemplatepackage
   - Object_Ezsigntemplatepackagemembership
   - Object_Ezsigntemplatepackagesigner
