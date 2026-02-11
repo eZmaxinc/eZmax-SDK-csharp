@@ -1,0 +1,13 @@
+# eZmaxApi.Model.EzsignsignergroupEditEzsignsignergroupmembershipsV1Response
+Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ObjDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  | 
+**ObjDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  | [optional] 
+**MPayload** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
