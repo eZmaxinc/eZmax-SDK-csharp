@@ -79,7 +79,7 @@ namespace eZmaxApi.Model
         /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
         /// <param name="bEzsignfolderIsdisposable">If the Ezsigndocument can be disposed.</param>
         /// <param name="eEzsignfolderSendreminderfrequency">eEzsignfolderSendreminderfrequency.</param>
-        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the the first reminder sending.</param>
+        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the first reminder sending.</param>
         /// <param name="iEzsignfolderSendreminderotherdays">The number of days after the first reminder sending.</param>
         /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
         /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
@@ -244,9 +244,9 @@ namespace eZmaxApi.Model
         public bool BEzsignfolderIsdisposable { get; set; }
 
         /// <summary>
-        /// The number of days before the the first reminder sending
+        /// The number of days before the first reminder sending
         /// </summary>
-        /// <value>The number of days before the the first reminder sending</value>
+        /// <value>The number of days before the first reminder sending</value>
         /*
         <example>30</example>
         */

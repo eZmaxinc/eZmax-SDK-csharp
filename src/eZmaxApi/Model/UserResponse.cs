@@ -69,6 +69,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
         /// <param name="fkiAssistantID">The unique ID of the Assistant..</param>
         /// <param name="fkiEmployeeID">The unique ID of the Employee..</param>
+        /// <param name="fkiEzmaxpartnerID">The unique ID of the Ezmaxpartner.</param>
         /// <param name="fkiCompanyIDDefault">The unique ID of the Company (required).</param>
         /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
         /// <param name="fkiDepartmentIDDefault">The unique ID of the Department (required).</param>
@@ -82,7 +83,7 @@ namespace eZmaxApi.Model
         /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester (required).</param>
         /// <param name="objPhoneHome">objPhoneHome.</param>
         /// <param name="objPhoneSMS">objPhoneSMS.</param>
-        /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|.</param>
+        /// <param name="fkiSecretquestionID">The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|.</param>
         /// <param name="fkiModuleIDForm">The unique ID of the Module.</param>
         /// <param name="sModuleNameX">The Name of the Module in the language of the requester.</param>
         /// <param name="eUserOrigin">eUserOrigin (required).</param>
@@ -97,12 +98,14 @@ namespace eZmaxApi.Model
         /// <param name="dtUserPasswordchanged">The date at which the User&#39;s password was last changed.</param>
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="bUserSuspended">Whether the User is suspended or not.</param>
         /// <param name="bUserValidatebyadministration">Whether if the transactions in which the User is implicated must be validated by administrative personnel or not.</param>
         /// <param name="bUserValidatebydirector">Whether if the transactions in which the User is implicated must be validated by a director or not.</param>
         /// <param name="bUserAttachmentautoverified">Whether if Attachments uploaded by the User must be validated or not.</param>
         /// <param name="bUserChangepassword">Whether if the User is forced to change its password (required).</param>
+        /// <param name="bUserEzsigntemplaterolegrouping">Whether we group or not the Ezsigntemplate roles.</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public UserResponse(int pkiUserID = default, int fkiAgentID = default, int fkiBrokerID = default, int fkiAssistantID = default, int fkiEmployeeID = default, int fkiCompanyIDDefault = default, string sCompanyNameX = default, int fkiDepartmentIDDefault = default, string sDepartmentNameX = default, int fkiTimezoneID = default, string sTimezoneName = default, int fkiLanguageID = default, string sLanguageNameX = default, EmailResponseCompound objEmail = default, int fkiBillingentityinternalID = default, string sBillingentityinternalDescriptionX = default, PhoneResponseCompound objPhoneHome = default, PhoneResponseCompound objPhoneSMS = default, int fkiSecretquestionID = default, int fkiModuleIDForm = default, string sModuleNameX = default, FieldEUserOrigin eUserOrigin = default, FieldEUserType eUserType = default, FieldEUserLogintype eUserLogintype = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sUserJobtitle = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserLastlogondate = default, string dtUserPasswordchanged = default, string dtUserEzsignprepaidexpiration = default, bool bUserIsactive = default, bool bUserValidatebyadministration = default, bool bUserValidatebydirector = default, bool bUserAttachmentautoverified = default, bool bUserChangepassword = default, CommonAudit objAudit = default)
+        public UserResponse(int pkiUserID = default, int fkiAgentID = default, int fkiBrokerID = default, int fkiAssistantID = default, int fkiEmployeeID = default, int fkiEzmaxpartnerID = default, int fkiCompanyIDDefault = default, string sCompanyNameX = default, int fkiDepartmentIDDefault = default, string sDepartmentNameX = default, int fkiTimezoneID = default, string sTimezoneName = default, int fkiLanguageID = default, string sLanguageNameX = default, EmailResponseCompound objEmail = default, int fkiBillingentityinternalID = default, string sBillingentityinternalDescriptionX = default, PhoneResponseCompound objPhoneHome = default, PhoneResponseCompound objPhoneSMS = default, int fkiSecretquestionID = default, int fkiModuleIDForm = default, string sModuleNameX = default, FieldEUserOrigin eUserOrigin = default, FieldEUserType eUserType = default, FieldEUserLogintype eUserLogintype = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, string sUserJobtitle = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserLastlogondate = default, string dtUserPasswordchanged = default, string dtUserEzsignprepaidexpiration = default, bool bUserIsactive = default, bool bUserSuspended = default, bool bUserValidatebyadministration = default, bool bUserValidatebydirector = default, bool bUserAttachmentautoverified = default, bool bUserChangepassword = default, bool bUserEzsigntemplaterolegrouping = default, CommonAudit objAudit = default)
         {
             this.PkiUserID = pkiUserID;
             this.FkiCompanyIDDefault = fkiCompanyIDDefault;
@@ -180,6 +183,7 @@ namespace eZmaxApi.Model
             this.FkiBrokerID = fkiBrokerID;
             this.FkiAssistantID = fkiAssistantID;
             this.FkiEmployeeID = fkiEmployeeID;
+            this.FkiEzmaxpartnerID = fkiEzmaxpartnerID;
             this.ObjPhoneHome = objPhoneHome;
             this.ObjPhoneSMS = objPhoneSMS;
             this.FkiSecretquestionID = fkiSecretquestionID;
@@ -189,9 +193,11 @@ namespace eZmaxApi.Model
             this.DtUserLastlogondate = dtUserLastlogondate;
             this.DtUserPasswordchanged = dtUserPasswordchanged;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+            this.BUserSuspended = bUserSuspended;
             this.BUserValidatebyadministration = bUserValidatebyadministration;
             this.BUserValidatebydirector = bUserValidatebydirector;
             this.BUserAttachmentautoverified = bUserAttachmentautoverified;
+            this.BUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
         }
 
         /// <summary>
@@ -243,6 +249,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiEmployeeID", EmitDefaultValue = false)]
         public int FkiEmployeeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxpartner
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxpartner</value>
+        /*
+        <example>12</example>
+        */
+        [DataMember(Name = "fkiEzmaxpartnerID", EmitDefaultValue = false)]
+        public int FkiEzmaxpartnerID { get; set; }
 
         /// <summary>
         /// The unique ID of the Company
@@ -363,9 +379,9 @@ namespace eZmaxApi.Model
         public PhoneResponseCompound ObjPhoneSMS { get; set; }
 
         /// <summary>
-        /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+        /// The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
         /// </summary>
-        /// <value>The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|</value>
+        /// <value>The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|</value>
         /*
         <example>7</example>
         */
@@ -473,6 +489,16 @@ namespace eZmaxApi.Model
         public bool BUserIsactive { get; set; }
 
         /// <summary>
+        /// Whether the User is suspended or not
+        /// </summary>
+        /// <value>Whether the User is suspended or not</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserSuspended", EmitDefaultValue = true)]
+        public bool BUserSuspended { get; set; }
+
+        /// <summary>
         /// Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
         /// </summary>
         /// <value>Whether if the transactions in which the User is implicated must be validated by administrative personnel or not</value>
@@ -513,6 +539,16 @@ namespace eZmaxApi.Model
         public bool BUserChangepassword { get; set; }
 
         /// <summary>
+        /// Whether we group or not the Ezsigntemplate roles
+        /// </summary>
+        /// <value>Whether we group or not the Ezsigntemplate roles</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserEzsigntemplaterolegrouping", EmitDefaultValue = true)]
+        public bool BUserEzsigntemplaterolegrouping { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjAudit
         /// </summary>
         [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
@@ -531,6 +567,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
             sb.Append("  FkiAssistantID: ").Append(FkiAssistantID).Append("\n");
             sb.Append("  FkiEmployeeID: ").Append(FkiEmployeeID).Append("\n");
+            sb.Append("  FkiEzmaxpartnerID: ").Append(FkiEzmaxpartnerID).Append("\n");
             sb.Append("  FkiCompanyIDDefault: ").Append(FkiCompanyIDDefault).Append("\n");
             sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
             sb.Append("  FkiDepartmentIDDefault: ").Append(FkiDepartmentIDDefault).Append("\n");
@@ -559,10 +596,12 @@ namespace eZmaxApi.Model
             sb.Append("  DtUserPasswordchanged: ").Append(DtUserPasswordchanged).Append("\n");
             sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");
             sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
+            sb.Append("  BUserSuspended: ").Append(BUserSuspended).Append("\n");
             sb.Append("  BUserValidatebyadministration: ").Append(BUserValidatebyadministration).Append("\n");
             sb.Append("  BUserValidatebydirector: ").Append(BUserValidatebydirector).Append("\n");
             sb.Append("  BUserAttachmentautoverified: ").Append(BUserAttachmentautoverified).Append("\n");
             sb.Append("  BUserChangepassword: ").Append(BUserChangepassword).Append("\n");
+            sb.Append("  BUserEzsigntemplaterolegrouping: ").Append(BUserEzsigntemplaterolegrouping).Append("\n");
             sb.Append("  ObjAudit: ").Append(ObjAudit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -612,6 +651,12 @@ namespace eZmaxApi.Model
             if (this.FkiEmployeeID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiEmployeeID, must be a value greater than or equal to 0.", new [] { "FkiEmployeeID" });
+            }
+
+            // FkiEzmaxpartnerID (int) minimum
+            if (this.FkiEzmaxpartnerID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
             }
 
             // FkiCompanyIDDefault (int) maximum

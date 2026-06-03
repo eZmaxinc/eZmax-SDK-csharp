@@ -40,7 +40,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RealestateboardAutocompleteElementResponse" /> class.
         /// </summary>
-        /// <param name="pkiRealestateboardID">The unique ID of the Activesession (required).</param>
+        /// <param name="pkiRealestateboardID">The unique ID of the Realestateboard (required).</param>
         /// <param name="sProvinceNameX">The name of the Province in the language of the requester (required).</param>
         /// <param name="sRealestateboardNameX">The name of the Realestateboard (required).</param>
         /// <param name="bRealestateboardIsactive">Whether the Agenttype is active or not (required).</param>
@@ -63,9 +63,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The unique ID of the Activesession
+        /// The unique ID of the Realestateboard
         /// </summary>
-        /// <value>The unique ID of the Activesession</value>
+        /// <value>The unique ID of the Realestateboard</value>
         /*
         <example>16</example>
         */

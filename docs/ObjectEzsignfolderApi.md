@@ -12,6 +12,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderdeleteobjectv1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder |
 | [**EzsignfolderDisposeEzsignfoldersV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposeezsignfoldersv1) | **POST** /1/object/ezsignfolder/disposeEzsignfolders | Dispose Ezsignfolders |
 | [**EzsignfolderDisposeV1**](ObjectEzsignfolderApi.md#ezsignfolderdisposev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose | Dispose the Ezsignfolder |
+| [**EzsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderduplicatev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder |
 | [**EzsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfoldereditobjectv3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder |
 | [**EzsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderendprematurelyv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely |
 | [**EzsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetactionableelementsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
@@ -23,10 +24,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationlistv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list |
 | [**EzsignfolderGetCommunicationrecipientsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationrecipientsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients | Retrieve Ezsignfolder&#39;s Communicationrecipient |
 | [**EzsignfolderGetCommunicationsendersV1**](ObjectEzsignfolderApi.md#ezsignfoldergetcommunicationsendersv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders | Retrieve Ezsignfolder&#39;s Communicationsender |
+| [**EzsignfolderGetEzsignannotationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignannotationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations | Retrieve an existing Ezsignfolder&#39;s Ezsignannotations |
 | [**EzsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments |
 | [**EzsignfolderGetEzsigndocumentsV2**](ObjectEzsignfolderApi.md#ezsignfoldergetezsigndocumentsv2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments |
 | [**EzsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignfoldersignerassociationsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations |
+| [**EzsignfolderGetEzsignformfieldgroupsV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignformfieldgroupsv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups | Retrieve an existing Ezsignfolder&#39;s Ezsignformfieldgroups |
 | [**EzsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesautomaticv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures |
+| [**EzsignfolderGetEzsignsignaturesV1**](ObjectEzsignfolderApi.md#ezsignfoldergetezsignsignaturesv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures | Retrieve an existing Ezsignfolder&#39;s Ezsignsignatures |
 | [**EzsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfoldergetformsdatav1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data |
 | [**EzsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfoldergetlistv1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list |
 | [**EzsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfoldergetobjectv1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder |
@@ -35,6 +39,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsignfolderImportEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsignfoldersignerassociationsv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations | Import an existing Ezsignfoldersignerassociation into this Ezsignfolder |
 | [**EzsignfolderImportEzsigntemplatepackageV1**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder |
 | [**EzsignfolderImportEzsigntemplatepackageV2**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder |
+| [**EzsignfolderImportEzsigntemplatepackageV3**](ObjectEzsignfolderApi.md#ezsignfolderimportezsigntemplatepackagev3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage | Import an Ezsigntemplatepackage in the Ezsignfolder |
 | [**EzsignfolderReorderV2**](ObjectEzsignfolderApi.md#ezsignfolderreorderv2) | **POST** /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder | Reorder Ezsigndocuments in the Ezsignfolder |
 | [**EzsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfoldersendv1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature |
 | [**EzsignfolderSendV3**](ObjectEzsignfolderApi.md#ezsignfoldersendv3) | **POST** /3/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature |
@@ -795,6 +800,104 @@ catch (ApiException e)
 ### Return type
 
 [**EzsignfolderDisposeV1Response**](EzsignfolderDisposeV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignfolderduplicatev1"></a>
+# **EzsignfolderDuplicateV1**
+> EzsignfolderDuplicateV1Response EzsignfolderDuplicateV1 (int pkiEzsignfolderID, EzsignfolderDuplicateV1Request ezsignfolderDuplicateV1Request)
+
+Duplicate the Ezsignfolder
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderDuplicateV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(config);
+            var pkiEzsignfolderID = 56;  // int | 
+            var ezsignfolderDuplicateV1Request = new EzsignfolderDuplicateV1Request(); // EzsignfolderDuplicateV1Request | 
+
+            try
+            {
+                // Duplicate the Ezsignfolder
+                EzsignfolderDuplicateV1Response result = apiInstance.EzsignfolderDuplicateV1(pkiEzsignfolderID, ezsignfolderDuplicateV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderDuplicateV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfolderDuplicateV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Duplicate the Ezsignfolder
+    ApiResponse<EzsignfolderDuplicateV1Response> response = apiInstance.EzsignfolderDuplicateV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderDuplicateV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderDuplicateV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfolderID** | **int** |  |  |
+| **ezsignfolderDuplicateV1Request** | [**EzsignfolderDuplicateV1Request**](EzsignfolderDuplicateV1Request.md) |  |  |
+
+### Return type
+
+[**EzsignfolderDuplicateV1Response**](EzsignfolderDuplicateV1Response.md)
 
 ### Authorization
 
@@ -1877,6 +1980,102 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="ezsignfoldergetezsignannotationsv1"></a>
+# **EzsignfolderGetEzsignannotationsV1**
+> EzsignfolderGetEzsignannotationsV1Response EzsignfolderGetEzsignannotationsV1 (int pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder's Ezsignannotations
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderGetEzsignannotationsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(config);
+            var pkiEzsignfolderID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignfolder's Ezsignannotations
+                EzsignfolderGetEzsignannotationsV1Response result = apiInstance.EzsignfolderGetEzsignannotationsV1(pkiEzsignfolderID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignannotationsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfolderGetEzsignannotationsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignfolder's Ezsignannotations
+    ApiResponse<EzsignfolderGetEzsignannotationsV1Response> response = apiInstance.EzsignfolderGetEzsignannotationsV1WithHttpInfo(pkiEzsignfolderID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignannotationsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfolderID** | **int** |  |  |
+
+### Return type
+
+[**EzsignfolderGetEzsignannotationsV1Response**](EzsignfolderGetEzsignannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="ezsignfoldergetezsigndocumentsv1"></a>
 # **EzsignfolderGetEzsigndocumentsV1**
 > EzsignfolderGetEzsigndocumentsV1Response EzsignfolderGetEzsigndocumentsV1 (int pkiEzsignfolderID)
@@ -2164,6 +2363,102 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="ezsignfoldergetezsignformfieldgroupsv1"></a>
+# **EzsignfolderGetEzsignformfieldgroupsV1**
+> EzsignfolderGetEzsignformfieldgroupsV1Response EzsignfolderGetEzsignformfieldgroupsV1 (int pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderGetEzsignformfieldgroupsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(config);
+            var pkiEzsignfolderID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+                EzsignfolderGetEzsignformfieldgroupsV1Response result = apiInstance.EzsignfolderGetEzsignformfieldgroupsV1(pkiEzsignfolderID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignformfieldgroupsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfolderGetEzsignformfieldgroupsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignfolder's Ezsignformfieldgroups
+    ApiResponse<EzsignfolderGetEzsignformfieldgroupsV1Response> response = apiInstance.EzsignfolderGetEzsignformfieldgroupsV1WithHttpInfo(pkiEzsignfolderID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignformfieldgroupsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfolderID** | **int** |  |  |
+
+### Return type
+
+[**EzsignfolderGetEzsignformfieldgroupsV1Response**](EzsignfolderGetEzsignformfieldgroupsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="ezsignfoldergetezsignsignaturesautomaticv1"></a>
 # **EzsignfolderGetEzsignsignaturesAutomaticV1**
 > EzsignfolderGetEzsignsignaturesAutomaticV1Response EzsignfolderGetEzsignsignaturesAutomaticV1 (int pkiEzsignfolderID)
@@ -2258,6 +2553,102 @@ catch (ApiException e)
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignfoldergetezsignsignaturesv1"></a>
+# **EzsignfolderGetEzsignsignaturesV1**
+> EzsignfolderGetEzsignsignaturesV1Response EzsignfolderGetEzsignsignaturesV1 (int pkiEzsignfolderID)
+
+Retrieve an existing Ezsignfolder's Ezsignsignatures
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderGetEzsignsignaturesV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(config);
+            var pkiEzsignfolderID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignfolder's Ezsignsignatures
+                EzsignfolderGetEzsignsignaturesV1Response result = apiInstance.EzsignfolderGetEzsignsignaturesV1(pkiEzsignfolderID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignsignaturesV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfolderGetEzsignsignaturesV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignfolder's Ezsignsignatures
+    ApiResponse<EzsignfolderGetEzsignsignaturesV1Response> response = apiInstance.EzsignfolderGetEzsignsignaturesV1WithHttpInfo(pkiEzsignfolderID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderGetEzsignsignaturesV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfolderID** | **int** |  |  |
+
+### Return type
+
+[**EzsignfolderGetEzsignsignaturesV1Response**](EzsignfolderGetEzsignsignaturesV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2364,7 +2755,7 @@ catch (ApiException e)
 
 Retrieve Ezsignfolder list
 
-Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived<br>Disposed| | eEzsignfoldertypePrivacylevel | User<br>Usergroup | | eEzsignfolderSource | Normal<br>Ezsignbulksend<br>Ezsigntemplatepublic |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |- --| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
 
 ### Example
 ```csharp
@@ -3027,6 +3418,106 @@ catch (ApiException e)
 ### Return type
 
 [**EzsignfolderImportEzsigntemplatepackageV2Response**](EzsignfolderImportEzsigntemplatepackageV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignfolderimportezsigntemplatepackagev3"></a>
+# **EzsignfolderImportEzsigntemplatepackageV3**
+> EzsignfolderImportEzsigntemplatepackageV3Response EzsignfolderImportEzsigntemplatepackageV3 (int pkiEzsignfolderID, EzsignfolderImportEzsigntemplatepackageV3Request ezsignfolderImportEzsigntemplatepackageV3Request)
+
+Import an Ezsigntemplatepackage in the Ezsignfolder
+
+This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfolderImportEzsigntemplatepackageV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfolderApi(config);
+            var pkiEzsignfolderID = 56;  // int | 
+            var ezsignfolderImportEzsigntemplatepackageV3Request = new EzsignfolderImportEzsigntemplatepackageV3Request(); // EzsignfolderImportEzsigntemplatepackageV3Request | 
+
+            try
+            {
+                // Import an Ezsigntemplatepackage in the Ezsignfolder
+                EzsignfolderImportEzsigntemplatepackageV3Response result = apiInstance.EzsignfolderImportEzsigntemplatepackageV3(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV3Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderImportEzsigntemplatepackageV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfolderImportEzsigntemplatepackageV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Import an Ezsigntemplatepackage in the Ezsignfolder
+    ApiResponse<EzsignfolderImportEzsigntemplatepackageV3Response> response = apiInstance.EzsignfolderImportEzsigntemplatepackageV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV3Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfolderApi.EzsignfolderImportEzsigntemplatepackageV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfolderID** | **int** |  |  |
+| **ezsignfolderImportEzsigntemplatepackageV3Request** | [**EzsignfolderImportEzsigntemplatepackageV3Request**](EzsignfolderImportEzsigntemplatepackageV3Request.md) |  |  |
+
+### Return type
+
+[**EzsignfolderImportEzsigntemplatepackageV3Response**](EzsignfolderImportEzsigntemplatepackageV3Response.md)
 
 ### Authorization
 

@@ -50,20 +50,19 @@ namespace eZmaxApi.Model
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
         /// <param name="fkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
+        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory.</param>
         /// <param name="eEzdoctemplatedocumentPrivacylevel">eEzdoctemplatedocumentPrivacylevel.</param>
         /// <param name="bEzdoctemplatedocumentIsactive">Whether the ezdoctemplatedocument is active or not (required).</param>
         /// <param name="objEzdoctemplatedocumentName">objEzdoctemplatedocumentName (required).</param>
         /// <param name="sEzdoctemplatedocumentNameX">The name of the Ezdoctemplatedocument in the language of the requester.</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
-        /// <param name="sEzdoctemplatefieldtypecategoryDescriptionX">The description of the Ezdoctemplatefieldtypecategory in the language of the requester (required).</param>
+        /// <param name="sEzdoctemplatefieldtypecategoryDescriptionX">The description of the Ezdoctemplatefieldtypecategory in the language of the requester.</param>
         /// <param name="sEzdoctemplatetypeDescriptionX">The description of the Ezdoctemplatetype in the language of the requester (required).</param>
         public EzdoctemplatedocumentResponse(int pkiEzdoctemplatedocumentID = default, int fkiLanguageID = default, int fkiEzsignfoldertypeID = default, int fkiEzdoctemplatetypeID = default, int fkiEzdoctemplatefieldtypecategoryID = default, FieldEEzdoctemplatedocumentPrivacylevel? eEzdoctemplatedocumentPrivacylevel = default, bool bEzdoctemplatedocumentIsactive = default, MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName = default, string sEzdoctemplatedocumentNameX = default, string sEzsignfoldertypeNameX = default, string sEzdoctemplatefieldtypecategoryDescriptionX = default, string sEzdoctemplatetypeDescriptionX = default)
         {
             this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
             this.FkiLanguageID = fkiLanguageID;
             this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
-            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
             // to ensure "objEzdoctemplatedocumentName" is required (not null)
             if (objEzdoctemplatedocumentName == null)
@@ -71,12 +70,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objEzdoctemplatedocumentName is a required property for EzdoctemplatedocumentResponse and cannot be null");
             }
             this.ObjEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
-            // to ensure "sEzdoctemplatefieldtypecategoryDescriptionX" is required (not null)
-            if (sEzdoctemplatefieldtypecategoryDescriptionX == null)
-            {
-                throw new ArgumentNullException("sEzdoctemplatefieldtypecategoryDescriptionX is a required property for EzdoctemplatedocumentResponse and cannot be null");
-            }
-            this.SEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
             // to ensure "sEzdoctemplatetypeDescriptionX" is required (not null)
             if (sEzdoctemplatetypeDescriptionX == null)
             {
@@ -84,9 +77,11 @@ namespace eZmaxApi.Model
             }
             this.SEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.EEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
             this.SEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+            this.SEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
         }
 
         /// <summary>
@@ -136,7 +131,7 @@ namespace eZmaxApi.Model
         /*
         <example>4</example>
         */
-        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", EmitDefaultValue = false)]
         public int FkiEzdoctemplatefieldtypecategoryID { get; set; }
 
         /// <summary>
@@ -182,7 +177,7 @@ namespace eZmaxApi.Model
         /*
         <example>Sale</example>
         */
-        [DataMember(Name = "sEzdoctemplatefieldtypecategoryDescriptionX", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "sEzdoctemplatefieldtypecategoryDescriptionX", EmitDefaultValue = false)]
         public string SEzdoctemplatefieldtypecategoryDescriptionX { get; set; }
 
         /// <summary>

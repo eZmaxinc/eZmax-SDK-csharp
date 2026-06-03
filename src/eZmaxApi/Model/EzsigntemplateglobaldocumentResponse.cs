@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "ezsigntemplateglobaldocument-Response")]
     public partial class EzsigntemplateglobaldocumentResponse : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EEzsigntemplateglobaldocumentAcceptationtype
+        /// </summary>
+        [DataMember(Name = "eEzsigntemplateglobaldocumentAcceptationtype", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsigntemplateglobaldocumentAcceptationtype EEzsigntemplateglobaldocumentAcceptationtype { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EzsigntemplateglobaldocumentResponse" /> class.
         /// </summary>
@@ -42,9 +48,10 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsigntemplateglobaldocumentID">The unique ID of the Ezsigntemplateglobaldocument (required).</param>
         /// <param name="sEzsigntemplateglobaldocumentName">The name of the Ezsigntemplateglobaldocument. (required).</param>
+        /// <param name="eEzsigntemplateglobaldocumentAcceptationtype">eEzsigntemplateglobaldocumentAcceptationtype (required).</param>
         /// <param name="iEzsigntemplateglobaldocumentPagetotal">The number of pages in the Ezsigntemplateglobaldocument. (required).</param>
         /// <param name="iEzsigntemplateglobaldocumentSignaturetotal">The number of total signatures in the Ezsigntemplateglobal. (required).</param>
-        public EzsigntemplateglobaldocumentResponse(int pkiEzsigntemplateglobaldocumentID = default, string sEzsigntemplateglobaldocumentName = default, int iEzsigntemplateglobaldocumentPagetotal = default, int iEzsigntemplateglobaldocumentSignaturetotal = default)
+        public EzsigntemplateglobaldocumentResponse(int pkiEzsigntemplateglobaldocumentID = default, string sEzsigntemplateglobaldocumentName = default, FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype = default, int iEzsigntemplateglobaldocumentPagetotal = default, int iEzsigntemplateglobaldocumentSignaturetotal = default)
         {
             this.PkiEzsigntemplateglobaldocumentID = pkiEzsigntemplateglobaldocumentID;
             // to ensure "sEzsigntemplateglobaldocumentName" is required (not null)
@@ -53,6 +60,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzsigntemplateglobaldocumentName is a required property for EzsigntemplateglobaldocumentResponse and cannot be null");
             }
             this.SEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
+            this.EEzsigntemplateglobaldocumentAcceptationtype = eEzsigntemplateglobaldocumentAcceptationtype;
             this.IEzsigntemplateglobaldocumentPagetotal = iEzsigntemplateglobaldocumentPagetotal;
             this.IEzsigntemplateglobaldocumentSignaturetotal = iEzsigntemplateglobaldocumentSignaturetotal;
         }
@@ -107,6 +115,7 @@ namespace eZmaxApi.Model
             sb.Append("class EzsigntemplateglobaldocumentResponse {\n");
             sb.Append("  PkiEzsigntemplateglobaldocumentID: ").Append(PkiEzsigntemplateglobaldocumentID).Append("\n");
             sb.Append("  SEzsigntemplateglobaldocumentName: ").Append(SEzsigntemplateglobaldocumentName).Append("\n");
+            sb.Append("  EEzsigntemplateglobaldocumentAcceptationtype: ").Append(EEzsigntemplateglobaldocumentAcceptationtype).Append("\n");
             sb.Append("  IEzsigntemplateglobaldocumentPagetotal: ").Append(IEzsigntemplateglobaldocumentPagetotal).Append("\n");
             sb.Append("  IEzsigntemplateglobaldocumentSignaturetotal: ").Append(IEzsigntemplateglobaldocumentSignaturetotal).Append("\n");
             sb.Append("}\n");

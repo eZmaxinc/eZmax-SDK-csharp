@@ -125,6 +125,7 @@ namespace eZmaxApi.Model
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="eUserEzsignprepaid">eUserEzsignprepaid.</param>
         /// <param name="bUserEzsigntrial">Whether the User&#39;s eZsign subscription is a trial.</param>
+        /// <param name="bUserEzsigntemplaterolegrouping">Whether we group or not the Ezsigntemplate roles.</param>
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="dtUserNpsrequest">The date at which the NPS questionnaire will be show.</param>
         /// <param name="aPkiPermissionID">An array of permissions granted to the user or api key (required).</param>
@@ -132,7 +133,8 @@ namespace eZmaxApi.Model
         /// <param name="objUserCloned">objUserCloned.</param>
         /// <param name="objApikey">objApikey.</param>
         /// <param name="aEModuleInternalname">An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. (required).</param>
-        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default, FieldEActivesessionOrigin eActivesessionOrigin = default, FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default, int fkiLanguageID = default, string sCompanyNameX = default, string sDepartmentNameX = default, bool bActivesessionDebug = default, bool bActivesessionIssuperadmin = default, bool bActivesessionAttachment = default, bool bActivesessionCanafe = default, bool bActivesessionFinancial = default, bool bActivesessionRealestatecompleted = default, FieldEActivesessionEzsign? eActivesessionEzsign = default, FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default, FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default, FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default, string pksCustomerCode = default, int fkiSystemconfigurationtypeID = default, int fkiSignatureID = default, int fkiEzsignuserID = default, bool bSystemconfigurationEzsignpaidbyoffice = default, FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default, FieldEUserEzsignaccess eUserEzsignaccess = default, FieldEUserEzsignprepaid? eUserEzsignprepaid = default, bool bUserEzsigntrial = default, string dtUserEzsignprepaidexpiration = default, string dtUserNpsrequest = default, List<int> aPkiPermissionID = default, ActivesessionResponseCompoundUser objUserReal = default, ActivesessionResponseCompoundUser objUserCloned = default, ActivesessionResponseCompoundApikey objApikey = default, List<string> aEModuleInternalname = default)
+        /// <param name="bActivesessionMaillinglistrequest">If you need to ask which mailing lists this user wants to subscribe to.</param>
+        public ActivesessionGetCurrentV1ResponseMPayload(FieldEActivesessionUsertype eActivesessionUsertype = default, FieldEActivesessionOrigin eActivesessionOrigin = default, FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default, int fkiLanguageID = default, string sCompanyNameX = default, string sDepartmentNameX = default, bool bActivesessionDebug = default, bool bActivesessionIssuperadmin = default, bool bActivesessionAttachment = default, bool bActivesessionCanafe = default, bool bActivesessionFinancial = default, bool bActivesessionRealestatecompleted = default, FieldEActivesessionEzsign? eActivesessionEzsign = default, FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default, FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default, FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default, string pksCustomerCode = default, int fkiSystemconfigurationtypeID = default, int fkiSignatureID = default, int fkiEzsignuserID = default, bool bSystemconfigurationEzsignpaidbyoffice = default, FieldESystemconfigurationEzsignofficeplan? eSystemconfigurationEzsignofficeplan = default, FieldEUserEzsignaccess eUserEzsignaccess = default, FieldEUserEzsignprepaid? eUserEzsignprepaid = default, bool bUserEzsigntrial = default, bool bUserEzsigntemplaterolegrouping = default, string dtUserEzsignprepaidexpiration = default, string dtUserNpsrequest = default, List<int> aPkiPermissionID = default, ActivesessionResponseCompoundUser objUserReal = default, ActivesessionResponseCompoundUser objUserCloned = default, ActivesessionResponseCompoundApikey objApikey = default, List<string> aEModuleInternalname = default, bool bActivesessionMaillinglistrequest = default)
         {
             this.EActivesessionUsertype = eActivesessionUsertype;
             this.EActivesessionOrigin = eActivesessionOrigin;
@@ -192,10 +194,12 @@ namespace eZmaxApi.Model
             this.ESystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
             this.EUserEzsignprepaid = eUserEzsignprepaid;
             this.BUserEzsigntrial = bUserEzsigntrial;
+            this.BUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
             this.DtUserNpsrequest = dtUserNpsrequest;
             this.ObjUserCloned = objUserCloned;
             this.ObjApikey = objApikey;
+            this.BActivesessionMaillinglistrequest = bActivesessionMaillinglistrequest;
         }
 
         /// <summary>
@@ -349,6 +353,16 @@ namespace eZmaxApi.Model
         public bool BUserEzsigntrial { get; set; }
 
         /// <summary>
+        /// Whether we group or not the Ezsigntemplate roles
+        /// </summary>
+        /// <value>Whether we group or not the Ezsigntemplate roles</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserEzsigntemplaterolegrouping", EmitDefaultValue = true)]
+        public bool BUserEzsigntemplaterolegrouping { get; set; }
+
+        /// <summary>
         /// The eZsign prepaid expiration date
         /// </summary>
         /// <value>The eZsign prepaid expiration date</value>
@@ -401,6 +415,16 @@ namespace eZmaxApi.Model
         public List<string> AEModuleInternalname { get; set; }
 
         /// <summary>
+        /// If you need to ask which mailing lists this user wants to subscribe to
+        /// </summary>
+        /// <value>If you need to ask which mailing lists this user wants to subscribe to</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bActivesessionMaillinglistrequest", EmitDefaultValue = true)]
+        public bool BActivesessionMaillinglistrequest { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -433,6 +457,7 @@ namespace eZmaxApi.Model
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");
             sb.Append("  EUserEzsignprepaid: ").Append(EUserEzsignprepaid).Append("\n");
             sb.Append("  BUserEzsigntrial: ").Append(BUserEzsigntrial).Append("\n");
+            sb.Append("  BUserEzsigntemplaterolegrouping: ").Append(BUserEzsigntemplaterolegrouping).Append("\n");
             sb.Append("  DtUserEzsignprepaidexpiration: ").Append(DtUserEzsignprepaidexpiration).Append("\n");
             sb.Append("  DtUserNpsrequest: ").Append(DtUserNpsrequest).Append("\n");
             sb.Append("  APkiPermissionID: ").Append(APkiPermissionID).Append("\n");
@@ -440,6 +465,7 @@ namespace eZmaxApi.Model
             sb.Append("  ObjUserCloned: ").Append(ObjUserCloned).Append("\n");
             sb.Append("  ObjApikey: ").Append(ObjApikey).Append("\n");
             sb.Append("  AEModuleInternalname: ").Append(AEModuleInternalname).Append("\n");
+            sb.Append("  BActivesessionMaillinglistrequest: ").Append(BActivesessionMaillinglistrequest).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

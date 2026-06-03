@@ -59,12 +59,13 @@ namespace eZmaxApi.Model
         /// <param name="dBuyercontractMinimumprice">The minimumprice of the Buyercontract (required).</param>
         /// <param name="dBuyercontractMaximumprice">The maximumprice of the Buyercontract (required).</param>
         /// <param name="eBuyercontractType">eBuyercontractType (required).</param>
+        /// <param name="sBuyercontractContract">The number of the Buyercontract.</param>
         /// <param name="dtBuyercontractDate">The date of the Buyercontract (required).</param>
         /// <param name="dtBuyercontractExpirationdate">The expirationdate of the Buyercontract.</param>
         /// <param name="bBuyercontractIsactive">Whether the buyercontract is active or not (required).</param>
         /// <param name="sBuyercontractBrokers">The brokers&#39; name of the Buyercontract (required).</param>
         /// <param name="sBuyercontractBuyers">The buyers&#39; name of the Buyercontract (required).</param>
-        public BuyercontractListElement(int pkiBuyercontractID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, FieldEBuyercontractStep eBuyercontractStep = default, string dBuyercontractMinimumprice = default, string dBuyercontractMaximumprice = default, FieldEBuyercontractType eBuyercontractType = default, string dtBuyercontractDate = default, string dtBuyercontractExpirationdate = default, bool bBuyercontractIsactive = default, string sBuyercontractBrokers = default, string sBuyercontractBuyers = default)
+        public BuyercontractListElement(int pkiBuyercontractID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, FieldEBuyercontractStep eBuyercontractStep = default, string dBuyercontractMinimumprice = default, string dBuyercontractMaximumprice = default, FieldEBuyercontractType eBuyercontractType = default, string sBuyercontractContract = default, string dtBuyercontractDate = default, string dtBuyercontractExpirationdate = default, bool bBuyercontractIsactive = default, string sBuyercontractBrokers = default, string sBuyercontractBuyers = default)
         {
             this.PkiBuyercontractID = pkiBuyercontractID;
             this.FkiInscriptiontypeID = fkiInscriptiontypeID;
@@ -107,6 +108,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sBuyercontractBuyers is a required property for BuyercontractListElement and cannot be null");
             }
             this.SBuyercontractBuyers = sBuyercontractBuyers;
+            this.SBuyercontractContract = sBuyercontractContract;
             this.DtBuyercontractExpirationdate = dtBuyercontractExpirationdate;
         }
 
@@ -159,6 +161,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "dBuyercontractMaximumprice", IsRequired = true, EmitDefaultValue = true)]
         public string DBuyercontractMaximumprice { get; set; }
+
+        /// <summary>
+        /// The number of the Buyercontract
+        /// </summary>
+        /// <value>The number of the Buyercontract</value>
+        /*
+        <example>12345</example>
+        */
+        [DataMember(Name = "sBuyercontractContract", EmitDefaultValue = false)]
+        public string SBuyercontractContract { get; set; }
 
         /// <summary>
         /// The date of the Buyercontract
@@ -225,6 +237,7 @@ namespace eZmaxApi.Model
             sb.Append("  DBuyercontractMinimumprice: ").Append(DBuyercontractMinimumprice).Append("\n");
             sb.Append("  DBuyercontractMaximumprice: ").Append(DBuyercontractMaximumprice).Append("\n");
             sb.Append("  EBuyercontractType: ").Append(EBuyercontractType).Append("\n");
+            sb.Append("  SBuyercontractContract: ").Append(SBuyercontractContract).Append("\n");
             sb.Append("  DtBuyercontractDate: ").Append(DtBuyercontractDate).Append("\n");
             sb.Append("  DtBuyercontractExpirationdate: ").Append(DtBuyercontractExpirationdate).Append("\n");
             sb.Append("  BBuyercontractIsactive: ").Append(BBuyercontractIsactive).Append("\n");

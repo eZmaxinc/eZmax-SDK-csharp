@@ -64,7 +64,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzsigntemplateglobalDescription">The description of the Ezsigntemplate (required).</param>
         /// <param name="objEzsigntemplateglobaldocument">objEzsigntemplateglobaldocument.</param>
         /// <param name="aObjEzsigntemplateglobalsigner">aObjEzsigntemplateglobalsigner (required).</param>
-        public EzsigntemplateglobalResponseCompound(int pkiEzsigntemplateglobalID = default, int fkiEzsigntemplateglobaldocumentID = default, int fkiModuleID = default, string sModuleNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule = default, FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier = default, string sEzsigntemplateglobalCode = default, string sEzsigntemplateglobalDescription = default, EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument = default, List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner = default)
+        /// <param name="aObjEzsigntemplateglobalannotation">aObjEzsigntemplateglobalannotation.</param>
+        public EzsigntemplateglobalResponseCompound(int pkiEzsigntemplateglobalID = default, int fkiEzsigntemplateglobaldocumentID = default, int fkiModuleID = default, string sModuleNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule = default, FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier = default, string sEzsigntemplateglobalCode = default, string sEzsigntemplateglobalDescription = default, EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument = default, List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner = default, List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation = default)
         {
             this.PkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
             this.FkiEzsigntemplateglobaldocumentID = fkiEzsigntemplateglobaldocumentID;
@@ -98,6 +99,7 @@ namespace eZmaxApi.Model
             this.AObjEzsigntemplateglobalsigner = aObjEzsigntemplateglobalsigner;
             this.SModuleNameX = sModuleNameX;
             this.ObjEzsigntemplateglobaldocument = objEzsigntemplateglobaldocument;
+            this.AObjEzsigntemplateglobalannotation = aObjEzsigntemplateglobalannotation;
         }
 
         /// <summary>
@@ -193,6 +195,12 @@ namespace eZmaxApi.Model
         public List<EzsigntemplateglobalsignerResponseCompound> AObjEzsigntemplateglobalsigner { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsigntemplateglobalannotation
+        /// </summary>
+        [DataMember(Name = "a_objEzsigntemplateglobalannotation", EmitDefaultValue = false)]
+        public List<EzsigntemplateglobalannotationResponseCompound> AObjEzsigntemplateglobalannotation { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -212,6 +220,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzsigntemplateglobalDescription: ").Append(SEzsigntemplateglobalDescription).Append("\n");
             sb.Append("  ObjEzsigntemplateglobaldocument: ").Append(ObjEzsigntemplateglobaldocument).Append("\n");
             sb.Append("  AObjEzsigntemplateglobalsigner: ").Append(AObjEzsigntemplateglobalsigner).Append("\n");
+            sb.Append("  AObjEzsigntemplateglobalannotation: ").Append(AObjEzsigntemplateglobalannotation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

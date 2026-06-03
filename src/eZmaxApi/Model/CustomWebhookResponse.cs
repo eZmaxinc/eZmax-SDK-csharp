@@ -91,7 +91,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomWebhookResponse" /> class.
         /// </summary>
-        /// <param name="pkiWebhookID">The unique ID of the Webhook (required).</param>
+        /// <param name="pkiWebhookID">The unique ID of the Webhook.</param>
         /// <param name="fkiAuthenticationexternalID">The unique ID of the Authenticationexternal.</param>
         /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
@@ -107,16 +107,16 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal.</param>
-        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="objAudit">objAudit.</param>
         /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
         /// <param name="sWebhookAuthentificationexternalerror">Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set..</param>
         /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="bWebhookTest">Wheter the webhook received is a manual test or a real event (required).</param>
         /// <param name="eWebhookEmittype">Wheter the webhook received is a manual test or a real event.</param>
-        public CustomWebhookResponse(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, string sWebhookDescription = default, int fkiEzsignfoldertypeID = default, string sEzsignfoldertypeNameX = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, string sWebhookApikey = default, string sWebhookSecret = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, string sAuthenticationexternalDescription = default, CommonAudit objAudit = default, string sWebhookEvent = default, string sWebhookAuthentificationexternalerror = default, List<WebhookheaderResponseCompound> aObjWebhookheader = default, string pksCustomerCode = default, bool bWebhookTest = default, EWebhookEmittypeEnum? eWebhookEmittype = default)
+        /// <param name="fkiEzmaxpartnerproductstagewebhookID">The unique ID of the Ezmaxpartnerproductstagewebhook.</param>
+        public CustomWebhookResponse(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, string sWebhookDescription = default, int fkiEzsignfoldertypeID = default, string sEzsignfoldertypeNameX = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, string sWebhookApikey = default, string sWebhookSecret = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, string sAuthenticationexternalDescription = default, CommonAudit objAudit = default, string sWebhookEvent = default, string sWebhookAuthentificationexternalerror = default, List<WebhookheaderResponseCompound> aObjWebhookheader = default, string pksCustomerCode = default, bool bWebhookTest = default, EWebhookEmittypeEnum? eWebhookEmittype = default, int fkiEzmaxpartnerproductstagewebhookID = default)
         {
-            this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
             if (sWebhookDescription == null)
             {
@@ -139,12 +139,6 @@ namespace eZmaxApi.Model
             this.BWebhookIsactive = bWebhookIsactive;
             this.BWebhookIssigned = bWebhookIssigned;
             this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
-            {
-                throw new ArgumentNullException("objAudit is a required property for CustomWebhookResponse and cannot be null");
-            }
-            this.ObjAudit = objAudit;
             // to ensure "pksCustomerCode" is required (not null)
             if (pksCustomerCode == null)
             {
@@ -152,6 +146,7 @@ namespace eZmaxApi.Model
             }
             this.PksCustomerCode = pksCustomerCode;
             this.BWebhookTest = bWebhookTest;
+            this.PkiWebhookID = pkiWebhookID;
             this.FkiAuthenticationexternalID = fkiAuthenticationexternalID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
@@ -160,10 +155,12 @@ namespace eZmaxApi.Model
             this.SWebhookApikey = sWebhookApikey;
             this.SWebhookSecret = sWebhookSecret;
             this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
+            this.ObjAudit = objAudit;
             this.SWebhookEvent = sWebhookEvent;
             this.SWebhookAuthentificationexternalerror = sWebhookAuthentificationexternalerror;
             this.AObjWebhookheader = aObjWebhookheader;
             this.EWebhookEmittype = eWebhookEmittype;
+            this.FkiEzmaxpartnerproductstagewebhookID = fkiEzmaxpartnerproductstagewebhookID;
         }
 
         /// <summary>
@@ -173,7 +170,7 @@ namespace eZmaxApi.Model
         /*
         <example>77</example>
         */
-        [DataMember(Name = "pkiWebhookID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "pkiWebhookID", EmitDefaultValue = false)]
         public int PkiWebhookID { get; set; }
 
         /// <summary>
@@ -293,7 +290,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets ObjAudit
         /// </summary>
-        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "objAudit", EmitDefaultValue = false)]
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>
@@ -341,6 +338,16 @@ namespace eZmaxApi.Model
         public bool BWebhookTest { get; set; }
 
         /// <summary>
+        /// The unique ID of the Ezmaxpartnerproductstagewebhook
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxpartnerproductstagewebhook</value>
+        /*
+        <example>182</example>
+        */
+        [DataMember(Name = "fkiEzmaxpartnerproductstagewebhookID", EmitDefaultValue = false)]
+        public int FkiEzmaxpartnerproductstagewebhookID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -371,6 +378,7 @@ namespace eZmaxApi.Model
             sb.Append("  PksCustomerCode: ").Append(PksCustomerCode).Append("\n");
             sb.Append("  BWebhookTest: ").Append(BWebhookTest).Append("\n");
             sb.Append("  EWebhookEmittype: ").Append(EWebhookEmittype).Append("\n");
+            sb.Append("  FkiEzmaxpartnerproductstagewebhookID: ").Append(FkiEzmaxpartnerproductstagewebhookID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -443,6 +451,18 @@ namespace eZmaxApi.Model
             if (this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
             {
                 yield return new ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
+            }
+
+            // FkiEzmaxpartnerproductstagewebhookID (int) maximum
+            if (this.FkiEzmaxpartnerproductstagewebhookID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value less than or equal to 65535.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
+            }
+
+            // FkiEzmaxpartnerproductstagewebhookID (int) minimum
+            if (this.FkiEzmaxpartnerproductstagewebhookID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
             }
 
             yield break;

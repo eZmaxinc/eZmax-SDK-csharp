@@ -57,6 +57,11 @@ namespace eZmaxApi.Model
         /// <param name="sAgentRealestateassociationlicense">The realestateassociationlicense of the Agent (required).</param>
         /// <param name="dtAgentHiredate">The hiredate of the Agent.</param>
         /// <param name="dtAgentLeavedate">The leavedate of the Agent.</param>
+        /// <param name="dtAgentContractdate">The contract date of the Agent.</param>
+        /// <param name="dtAgentTransferdate">The transfer date of the Agent.</param>
+        /// <param name="dtAgentSenioritydate">The seniority date of the Agent.</param>
+        /// <param name="dtAgentSickleavestart">The sick leave start date of the Agent.</param>
+        /// <param name="dtAgentSickleaveend">The sick leave end date of the Agent.</param>
         /// <param name="bAgentTranquillit">Whether if it&#39;s an tranquillit (required).</param>
         /// <param name="bAgentResidentiallicense">Whether if it&#39;s an residentiallicense (required).</param>
         /// <param name="bAgentCommerciallicense">Whether if it&#39;s an commerciallicense (required).</param>
@@ -74,9 +79,11 @@ namespace eZmaxApi.Model
         /// <param name="sAddressSuite">The Suite or appartment number.</param>
         /// <param name="sAddressCity">The City name.</param>
         /// <param name="sAddressZip">The Postal/Zip Code  The value must be entered without spaces.</param>
+        /// <param name="fkiProvinceID">The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|.</param>
         /// <param name="sProvinceNameX">The name of the Province in the language of the requester.</param>
+        /// <param name="fkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|.</param>
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
-        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, string sProvinceNameX = default, string sCountryNameX = default)
+        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, string dtAgentContractdate = default, string dtAgentTransferdate = default, string dtAgentSenioritydate = default, string dtAgentSickleavestart = default, string dtAgentSickleaveend = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default)
         {
             this.PkiAgentID = pkiAgentID;
             this.FkiAgenttypeID = fkiAgenttypeID;
@@ -138,6 +145,11 @@ namespace eZmaxApi.Model
             this.SRealestateboardnumberNumber = sRealestateboardnumberNumber;
             this.DtAgentHiredate = dtAgentHiredate;
             this.DtAgentLeavedate = dtAgentLeavedate;
+            this.DtAgentContractdate = dtAgentContractdate;
+            this.DtAgentTransferdate = dtAgentTransferdate;
+            this.DtAgentSenioritydate = dtAgentSenioritydate;
+            this.DtAgentSickleavestart = dtAgentSickleavestart;
+            this.DtAgentSickleaveend = dtAgentSickleaveend;
             this.DtAgentFintraccertification = dtAgentFintraccertification;
             this.DtContactBirthdate = dtContactBirthdate;
             this.SEmailAddress = sEmailAddress;
@@ -147,7 +159,9 @@ namespace eZmaxApi.Model
             this.SAddressSuite = sAddressSuite;
             this.SAddressCity = sAddressCity;
             this.SAddressZip = sAddressZip;
+            this.FkiProvinceID = fkiProvinceID;
             this.SProvinceNameX = sProvinceNameX;
+            this.FkiCountryID = fkiCountryID;
             this.SCountryNameX = sCountryNameX;
         }
 
@@ -322,6 +336,56 @@ namespace eZmaxApi.Model
         public string DtAgentLeavedate { get; set; }
 
         /// <summary>
+        /// The contract date of the Agent
+        /// </summary>
+        /// <value>The contract date of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentContractdate", EmitDefaultValue = false)]
+        public string DtAgentContractdate { get; set; }
+
+        /// <summary>
+        /// The transfer date of the Agent
+        /// </summary>
+        /// <value>The transfer date of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentTransferdate", EmitDefaultValue = false)]
+        public string DtAgentTransferdate { get; set; }
+
+        /// <summary>
+        /// The seniority date of the Agent
+        /// </summary>
+        /// <value>The seniority date of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentSenioritydate", EmitDefaultValue = false)]
+        public string DtAgentSenioritydate { get; set; }
+
+        /// <summary>
+        /// The sick leave start date of the Agent
+        /// </summary>
+        /// <value>The sick leave start date of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentSickleavestart", EmitDefaultValue = false)]
+        public string DtAgentSickleavestart { get; set; }
+
+        /// <summary>
+        /// The sick leave end date of the Agent
+        /// </summary>
+        /// <value>The sick leave end date of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentSickleaveend", EmitDefaultValue = false)]
+        public string DtAgentSickleaveend { get; set; }
+
+        /// <summary>
         /// Whether if it&#39;s an tranquillit
         /// </summary>
         /// <value>Whether if it&#39;s an tranquillit</value>
@@ -492,6 +556,16 @@ namespace eZmaxApi.Model
         public string SAddressZip { get; set; }
 
         /// <summary>
+        /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+        /// </summary>
+        /// <value>The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|</value>
+        /*
+        <example>11</example>
+        */
+        [DataMember(Name = "fkiProvinceID", EmitDefaultValue = false)]
+        public int FkiProvinceID { get; set; }
+
+        /// <summary>
         /// The name of the Province in the language of the requester
         /// </summary>
         /// <value>The name of the Province in the language of the requester</value>
@@ -500,6 +574,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "sProvinceNameX", EmitDefaultValue = false)]
         public string SProvinceNameX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+        /// </summary>
+        /// <value>The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "fkiCountryID", EmitDefaultValue = false)]
+        public int FkiCountryID { get; set; }
 
         /// <summary>
         /// The name of the Country in the language of the requester
@@ -536,6 +620,11 @@ namespace eZmaxApi.Model
             sb.Append("  SAgentRealestateassociationlicense: ").Append(SAgentRealestateassociationlicense).Append("\n");
             sb.Append("  DtAgentHiredate: ").Append(DtAgentHiredate).Append("\n");
             sb.Append("  DtAgentLeavedate: ").Append(DtAgentLeavedate).Append("\n");
+            sb.Append("  DtAgentContractdate: ").Append(DtAgentContractdate).Append("\n");
+            sb.Append("  DtAgentTransferdate: ").Append(DtAgentTransferdate).Append("\n");
+            sb.Append("  DtAgentSenioritydate: ").Append(DtAgentSenioritydate).Append("\n");
+            sb.Append("  DtAgentSickleavestart: ").Append(DtAgentSickleavestart).Append("\n");
+            sb.Append("  DtAgentSickleaveend: ").Append(DtAgentSickleaveend).Append("\n");
             sb.Append("  BAgentTranquillit: ").Append(BAgentTranquillit).Append("\n");
             sb.Append("  BAgentResidentiallicense: ").Append(BAgentResidentiallicense).Append("\n");
             sb.Append("  BAgentCommerciallicense: ").Append(BAgentCommerciallicense).Append("\n");
@@ -553,7 +642,9 @@ namespace eZmaxApi.Model
             sb.Append("  SAddressSuite: ").Append(SAddressSuite).Append("\n");
             sb.Append("  SAddressCity: ").Append(SAddressCity).Append("\n");
             sb.Append("  SAddressZip: ").Append(SAddressZip).Append("\n");
+            sb.Append("  FkiProvinceID: ").Append(FkiProvinceID).Append("\n");
             sb.Append("  SProvinceNameX: ").Append(SProvinceNameX).Append("\n");
+            sb.Append("  FkiCountryID: ").Append(FkiCountryID).Append("\n");
             sb.Append("  SCountryNameX: ").Append(SCountryNameX).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -716,6 +807,51 @@ namespace eZmaxApi.Model
                 }
             }
 
+            if (this.DtAgentContractdate != null) {
+                // DtAgentContractdate (string) pattern
+                Regex regexDtAgentContractdate = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentContractdate.Match(this.DtAgentContractdate).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentContractdate, must match a pattern of " + regexDtAgentContractdate, new [] { "DtAgentContractdate" });
+                }
+            }
+
+            if (this.DtAgentTransferdate != null) {
+                // DtAgentTransferdate (string) pattern
+                Regex regexDtAgentTransferdate = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentTransferdate.Match(this.DtAgentTransferdate).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentTransferdate, must match a pattern of " + regexDtAgentTransferdate, new [] { "DtAgentTransferdate" });
+                }
+            }
+
+            if (this.DtAgentSenioritydate != null) {
+                // DtAgentSenioritydate (string) pattern
+                Regex regexDtAgentSenioritydate = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentSenioritydate.Match(this.DtAgentSenioritydate).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentSenioritydate, must match a pattern of " + regexDtAgentSenioritydate, new [] { "DtAgentSenioritydate" });
+                }
+            }
+
+            if (this.DtAgentSickleavestart != null) {
+                // DtAgentSickleavestart (string) pattern
+                Regex regexDtAgentSickleavestart = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentSickleavestart.Match(this.DtAgentSickleavestart).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentSickleavestart, must match a pattern of " + regexDtAgentSickleavestart, new [] { "DtAgentSickleavestart" });
+                }
+            }
+
+            if (this.DtAgentSickleaveend != null) {
+                // DtAgentSickleaveend (string) pattern
+                Regex regexDtAgentSickleaveend = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentSickleaveend.Match(this.DtAgentSickleaveend).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentSickleaveend, must match a pattern of " + regexDtAgentSickleaveend, new [] { "DtAgentSickleaveend" });
+                }
+            }
+
             if (this.DtAgentFintraccertification != null) {
                 // DtAgentFintraccertification (string) pattern
                 Regex regexDtAgentFintraccertification = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
@@ -761,6 +897,12 @@ namespace eZmaxApi.Model
                 }
             }
 
+            // FkiProvinceID (int) minimum
+            if (this.FkiProvinceID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+            }
+
             if (this.SProvinceNameX != null) {
                 // SProvinceNameX (string) pattern
                 Regex regexSProvinceNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
@@ -768,6 +910,12 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SProvinceNameX, must match a pattern of " + regexSProvinceNameX, new [] { "SProvinceNameX" });
                 }
+            }
+
+            // FkiCountryID (int) minimum
+            if (this.FkiCountryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

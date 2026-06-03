@@ -5,7 +5,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
 | [**EzsignfoldertypeCreateObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv3) | **POST** /3/object/ezsignfoldertype | Create a new Ezsignfoldertype |
+| [**EzsignfoldertypeCreateObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypecreateobjectv4) | **POST** /4/object/ezsignfoldertype | Create a new Ezsignfoldertype |
 | [**EzsignfoldertypeEditObjectV3**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv3) | **PUT** /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
+| [**EzsignfoldertypeEditObjectV4**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeeditobjectv4) | **PUT** /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Edit an existing Ezsignfoldertype |
 | [**EzsignfoldertypeGetAutocompleteV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetautocompletev2) | **GET** /2/object/ezsignfoldertype/getAutocomplete/{sSelector} | Retrieve Ezsignfoldertypes and IDs |
 | [**EzsignfoldertypeGetListV1**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetlistv1) | **GET** /1/object/ezsignfoldertype/getList | Retrieve Ezsignfoldertype list |
 | [**EzsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypegetobjectv2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype |
@@ -107,6 +109,102 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="ezsignfoldertypecreateobjectv4"></a>
+# **EzsignfoldertypeCreateObjectV4**
+> EzsignfoldertypeCreateObjectV4Response EzsignfoldertypeCreateObjectV4 (EzsignfoldertypeCreateObjectV4Request ezsignfoldertypeCreateObjectV4Request)
+
+Create a new Ezsignfoldertype
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfoldertypeCreateObjectV4Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfoldertypeApi(config);
+            var ezsignfoldertypeCreateObjectV4Request = new EzsignfoldertypeCreateObjectV4Request(); // EzsignfoldertypeCreateObjectV4Request | 
+
+            try
+            {
+                // Create a new Ezsignfoldertype
+                EzsignfoldertypeCreateObjectV4Response result = apiInstance.EzsignfoldertypeCreateObjectV4(ezsignfoldertypeCreateObjectV4Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV4: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfoldertypeCreateObjectV4WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a new Ezsignfoldertype
+    ApiResponse<EzsignfoldertypeCreateObjectV4Response> response = apiInstance.EzsignfoldertypeCreateObjectV4WithHttpInfo(ezsignfoldertypeCreateObjectV4Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeCreateObjectV4WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **ezsignfoldertypeCreateObjectV4Request** | [**EzsignfoldertypeCreateObjectV4Request**](EzsignfoldertypeCreateObjectV4Request.md) |  |  |
+
+### Return type
+
+[**EzsignfoldertypeCreateObjectV4Response**](EzsignfoldertypeCreateObjectV4Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="ezsignfoldertypeeditobjectv3"></a>
 # **EzsignfoldertypeEditObjectV3**
 > EzsignfoldertypeEditObjectV3Response EzsignfoldertypeEditObjectV3 (int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request)
@@ -185,6 +283,104 @@ catch (ApiException e)
 ### Return type
 
 [**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignfoldertypeeditobjectv4"></a>
+# **EzsignfoldertypeEditObjectV4**
+> EzsignfoldertypeEditObjectV4Response EzsignfoldertypeEditObjectV4 (int pkiEzsignfoldertypeID, EzsignfoldertypeEditObjectV4Request ezsignfoldertypeEditObjectV4Request)
+
+Edit an existing Ezsignfoldertype
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignfoldertypeEditObjectV4Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignfoldertypeApi(config);
+            var pkiEzsignfoldertypeID = 56;  // int | 
+            var ezsignfoldertypeEditObjectV4Request = new EzsignfoldertypeEditObjectV4Request(); // EzsignfoldertypeEditObjectV4Request | 
+
+            try
+            {
+                // Edit an existing Ezsignfoldertype
+                EzsignfoldertypeEditObjectV4Response result = apiInstance.EzsignfoldertypeEditObjectV4(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeEditObjectV4: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignfoldertypeEditObjectV4WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit an existing Ezsignfoldertype
+    ApiResponse<EzsignfoldertypeEditObjectV4Response> response = apiInstance.EzsignfoldertypeEditObjectV4WithHttpInfo(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV4Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignfoldertypeApi.EzsignfoldertypeEditObjectV4WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignfoldertypeID** | **int** |  |  |
+| **ezsignfoldertypeEditObjectV4Request** | [**EzsignfoldertypeEditObjectV4Request**](EzsignfoldertypeEditObjectV4Request.md) |  |  |
+
+### Return type
+
+[**EzsignfoldertypeEditObjectV4Response**](EzsignfoldertypeEditObjectV4Response.md)
 
 ### Authorization
 

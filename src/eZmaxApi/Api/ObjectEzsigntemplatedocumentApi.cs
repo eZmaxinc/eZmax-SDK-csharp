@@ -71,6 +71,31 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> EzsigntemplatedocumentDownloadV1WithHttpInfo(int pkiEzsigntemplatedocumentID, int operationIndex = 0);
         /// <summary>
+        /// Edit multiple Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response EzsigntemplatedocumentEditEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0);
+        /// <summary>
         /// Edit multiple Ezsigntemplatedocumentpagerecognitions
         /// </summary>
         /// <remarks>
@@ -244,6 +269,26 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigntemplatedocumentFlattenV1Response</returns>
         ApiResponse<EzsigntemplatedocumentFlattenV1Response> EzsigntemplatedocumentFlattenV1WithHttpInfo(int pkiEzsigntemplatedocumentID, Object body, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response EzsigntemplatedocumentGetEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
         /// </summary>
@@ -448,6 +493,33 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EzsigntemplatedocumentDownloadV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Edit multiple Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> EzsigntemplatedocumentEditEzsigntemplateannotationsV1Async(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response>> EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Edit multiple Ezsigntemplatedocumentpagerecognitions
         /// </summary>
         /// <remarks>
@@ -638,6 +710,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigntemplatedocumentFlattenV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentFlattenV1Response>> EzsigntemplatedocumentFlattenV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        System.Threading.Tasks.Task<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> EzsigntemplatedocumentGetEzsigntemplateannotationsV1Async(int pkiEzsigntemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response>> EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
         /// </summary>
@@ -1226,6 +1323,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        public EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response EzsigntemplatedocumentEditEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> localVarResponse = EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request' is set
+            if (ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentEditEzsigntemplateannotationsV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatedocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentEditEzsigntemplateannotationsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response>("/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentEditEzsigntemplateannotationsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> EzsigntemplatedocumentEditEzsigntemplateannotationsV1Async(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> localVarResponse = await EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfoAsync(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Edit multiple Ezsigntemplateannotations Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response>> EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request' is set
+            if (ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request' when calling ObjectEzsigntemplatedocumentApi->EzsigntemplatedocumentEditEzsigntemplateannotationsV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatedocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentEditEzsigntemplateannotationsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response>("/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentEditEzsigntemplateannotationsV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -2371,6 +2631,149 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentFlattenV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        public EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response EzsigntemplatedocumentGetEzsigntemplateannotationsV1(int pkiEzsigntemplatedocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> localVarResponse = EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(int pkiEzsigntemplatedocumentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatedocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentGetEzsigntemplateannotationsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response>("/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentGetEzsigntemplateannotationsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> EzsigntemplatedocumentGetEzsigntemplateannotationsV1Async(int pkiEzsigntemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> localVarResponse = await EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfoAsync(pkiEzsigntemplatedocumentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigntemplatedocumentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response>> EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfoAsync(int pkiEzsigntemplatedocumentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigntemplatedocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigntemplatedocumentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentGetEzsigntemplateannotationsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response>("/1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigntemplatedocumentGetEzsigntemplateannotationsV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

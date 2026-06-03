@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **EEzsigntemplateType** | **FieldEEzsigntemplateType** |  | [optional] 
 **ObjEzsigntemplatedocument** | [**EzsigntemplatedocumentResponse**](EzsigntemplatedocumentResponse.md) |  | [optional] 
 **AObjEzsigntemplatesigner** | [**List&lt;EzsigntemplatesignerResponseCompound&gt;**](EzsigntemplatesignerResponseCompound.md) |  | 
+**AObjEzsigntemplateannotation** | [**List&lt;EzsigntemplateannotationResponseCompound&gt;**](EzsigntemplateannotationResponseCompound.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

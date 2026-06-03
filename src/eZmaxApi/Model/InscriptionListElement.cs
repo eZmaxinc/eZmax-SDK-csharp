@@ -71,11 +71,13 @@ namespace eZmaxApi.Model
         /// <param name="sAddressSuite">The Suite or appartment number.</param>
         /// <param name="sAddressCity">The City name.</param>
         /// <param name="sAddressZip">The Postal/Zip Code  The value must be entered without spaces.</param>
+        /// <param name="fkiProvinceID">The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|.</param>
         /// <param name="sProvinceNameX">The name of the Province in the language of the requester.</param>
+        /// <param name="fkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|.</param>
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
         /// <param name="iInscriptionnotauthenticatedCanceled">The numbre of inscriptionnotauthenticated was canceled in this Inscription (required).</param>
         /// <param name="bAllowedCopyintoinscriptionedm">Whether we are allowed to copy into the Inscription EDM (required).</param>
-        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, FieldEInscriptionStep eInscriptionStep = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, string sProvinceNameX = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, bool bAllowedCopyintoinscriptionedm = default)
+        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, FieldEInscriptionStep eInscriptionStep = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, bool bAllowedCopyintoinscriptionedm = default)
         {
             this.PkiInscriptionID = pkiInscriptionID;
             this.FkiInscriptiontypeID = fkiInscriptiontypeID;
@@ -124,7 +126,9 @@ namespace eZmaxApi.Model
             this.SAddressSuite = sAddressSuite;
             this.SAddressCity = sAddressCity;
             this.SAddressZip = sAddressZip;
+            this.FkiProvinceID = fkiProvinceID;
             this.SProvinceNameX = sProvinceNameX;
+            this.FkiCountryID = fkiCountryID;
             this.SCountryNameX = sCountryNameX;
         }
 
@@ -369,6 +373,16 @@ namespace eZmaxApi.Model
         public string SAddressZip { get; set; }
 
         /// <summary>
+        /// The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+        /// </summary>
+        /// <value>The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|</value>
+        /*
+        <example>11</example>
+        */
+        [DataMember(Name = "fkiProvinceID", EmitDefaultValue = false)]
+        public int FkiProvinceID { get; set; }
+
+        /// <summary>
         /// The name of the Province in the language of the requester
         /// </summary>
         /// <value>The name of the Province in the language of the requester</value>
@@ -377,6 +391,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "sProvinceNameX", EmitDefaultValue = false)]
         public string SProvinceNameX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+        /// </summary>
+        /// <value>The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "fkiCountryID", EmitDefaultValue = false)]
+        public int FkiCountryID { get; set; }
 
         /// <summary>
         /// The name of the Country in the language of the requester
@@ -438,7 +462,9 @@ namespace eZmaxApi.Model
             sb.Append("  SAddressSuite: ").Append(SAddressSuite).Append("\n");
             sb.Append("  SAddressCity: ").Append(SAddressCity).Append("\n");
             sb.Append("  SAddressZip: ").Append(SAddressZip).Append("\n");
+            sb.Append("  FkiProvinceID: ").Append(FkiProvinceID).Append("\n");
             sb.Append("  SProvinceNameX: ").Append(SProvinceNameX).Append("\n");
+            sb.Append("  FkiCountryID: ").Append(FkiCountryID).Append("\n");
             sb.Append("  SCountryNameX: ").Append(SCountryNameX).Append("\n");
             sb.Append("  IInscriptionnotauthenticatedCanceled: ").Append(IInscriptionnotauthenticatedCanceled).Append("\n");
             sb.Append("  BAllowedCopyintoinscriptionedm: ").Append(BAllowedCopyintoinscriptionedm).Append("\n");
@@ -609,6 +635,12 @@ namespace eZmaxApi.Model
                 }
             }
 
+            // FkiProvinceID (int) minimum
+            if (this.FkiProvinceID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+            }
+
             if (this.SProvinceNameX != null) {
                 // SProvinceNameX (string) pattern
                 Regex regexSProvinceNameX = new Regex(@"^.{0,50}$", RegexOptions.CultureInvariant);
@@ -616,6 +648,12 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SProvinceNameX, must match a pattern of " + regexSProvinceNameX, new [] { "SProvinceNameX" });
                 }
+            }
+
+            // FkiCountryID (int) minimum
+            if (this.FkiCountryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

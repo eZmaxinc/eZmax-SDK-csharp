@@ -115,7 +115,13 @@ namespace eZmaxApi.Model
         /// Enum ForcedLogoff for value: ForcedLogoff
         /// </summary>
         [EnumMember(Value = "ForcedLogoff")]
-        ForcedLogoff = 14
+        ForcedLogoff = 14,
+
+        /// <summary>
+        /// Enum Suspended for value: Suspended
+        /// </summary>
+        [EnumMember(Value = "Suspended")]
+        Suspended = 15
     }
 
 }

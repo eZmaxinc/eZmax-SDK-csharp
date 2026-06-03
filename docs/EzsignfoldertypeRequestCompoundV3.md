@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **EEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
 **IEzsignfoldertypeFontsizeannotation** | **int** | Font size for annotations | [optional] 
 **IEzsignfoldertypeFontsizeformfield** | **int** | Font size for form fields | [optional] 
-**IEzsignfoldertypeSendreminderfirstdays** | **int** | The number of days before the the first reminder sending | [optional] 
+**IEzsignfoldertypeSendreminderfirstdays** | **int** | The number of days before the first reminder sending | [optional] 
 **IEzsignfoldertypeSendreminderotherdays** | **int** | The number of days after the first reminder sending | [optional] 
 **IEzsignfoldertypeArchivaldays** | **int** | The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype | 
 **EEzsignfoldertypeDisposal** | **FieldEEzsignfoldertypeDisposal** |  | 
@@ -44,6 +44,10 @@ Name | Type | Description | Notes
 **BEzsignfoldertypeReassignezsignsigner** | **bool** | Wheter if Reassignment of signature is allowed by a signatory to another signatory or not | [optional] 
 **BEzsignfoldertypeReassignuser** | **bool** | Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not | [optional] 
 **BEzsignfoldertypeReassigngroup** | **bool** | Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself | [optional] 
+**BEzsignfoldertypeSenddocumentmergetoemail** | **bool** | Whether we send the merged documents in the email to external recipient | [optional] 
+**BEzsignfoldertypeSenddocumentmergetoezsignsigner** | **bool** | Whether we send the merged documents in the email to Ezsignsigner | [optional] 
+**BEzsignfoldertypeSenddocumentmergetoreceivealldocument** | **bool** | Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents. | [optional] 
+**BEzsignfoldertypeSenddocumentmergetouser** | **bool** | Whether we send the merged documents in the email to User | [optional] 
 **BEzsignfoldertypeSendsignedtoezsignsigner** | **bool** | Whether we send an email to Ezsignsigner  when document is completed | [optional] 
 **BEzsignfoldertypeSendsignedtouser** | **bool** | Whether we send an email to User who signed when document is completed | [optional] 
 **BEzsignfoldertypeSendattachmentezsignsigner** | **bool** | Whether we send the Ezsigndocument in the email to Ezsignsigner | [optional] 

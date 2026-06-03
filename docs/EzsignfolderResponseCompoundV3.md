@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **SEzsignfolderDescription** | **string** | The description of the Ezsignfolder | 
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | [optional] 
 **BEzsignfolderIsdisposable** | **bool** | If the Ezsigndocument can be disposed | [optional] 
-**IEzsignfolderSendreminderfirstdays** | **int** | The number of days before the the first reminder sending | [optional] 
+**IEzsignfolderSendreminderfirstdays** | **int** | The number of days before the first reminder sending | [optional] 
 **IEzsignfolderSendreminderotherdays** | **int** | The number of days after the first reminder sending | [optional] 
 **DtEzsignfolderDelayedsenddate** | **string** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 
@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **DtEzsignfolderScheduledarchive** | **string** | The scheduled date and time at which the Ezsignfolder should be archived. | [optional] 
 **DtEzsignfolderScheduleddispose** | **string** | The scheduled date at which the Ezsignfolder should be Disposed. | [optional] 
 **EEzsignfolderStep** | **FieldEEzsignfolderStep** |  | [optional] 
+**IEzsignfolderStepcurrent** | **int** | The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39; | [optional] 
 **DtEzsignfolderClose** | **string** | The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely. | [optional] 
 **DtEzsignfolderArchive** | **string** | The date and time at which the Ezsignfolder was archived. | [optional] 
 **DtEzsignfolderDispose** | **string** | The date and time at which the Ezsignfolder was disposed. | [optional] 

@@ -41,10 +41,10 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CustomDiscussionconfigurationResponse" /> class.
         /// </summary>
         /// <param name="bDiscussionconfigurationCompletehistorywhenadded">If the added Discussionmembership will have access to the entire history or not (required).</param>
-        /// <param name="bDiscussionconfigurationCreateallowed">If the the creation of the Discussion is allowed or not (required).</param>
-        /// <param name="bDiscussionconfigurationDeleteallowed">If the the destruction of the Discussion is allowed or not (required).</param>
-        /// <param name="bDiscussionconfigurationDeletediscussionmessageallowed">If the the destruction of the Discussionmessage is allowed or not (required).</param>
-        /// <param name="bDiscussionconfigurationEditdiscussionmessageallowed">If the the creation of the Discussionmessage is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationCreateallowed">If the creation of the Discussion is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationDeleteallowed">If the destruction of the Discussion is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationDeletediscussionmessageallowed">If the destruction of the Discussionmessage is allowed or not (required).</param>
+        /// <param name="bDiscussionconfigurationEditdiscussionmessageallowed">If the creation of the Discussionmessage is allowed or not (required).</param>
         public CustomDiscussionconfigurationResponse(bool bDiscussionconfigurationCompletehistorywhenadded = default, bool bDiscussionconfigurationCreateallowed = default, bool bDiscussionconfigurationDeleteallowed = default, bool bDiscussionconfigurationDeletediscussionmessageallowed = default, bool bDiscussionconfigurationEditdiscussionmessageallowed = default)
         {
             this.BDiscussionconfigurationCompletehistorywhenadded = bDiscussionconfigurationCompletehistorywhenadded;
@@ -65,9 +65,9 @@ namespace eZmaxApi.Model
         public bool BDiscussionconfigurationCompletehistorywhenadded { get; set; }
 
         /// <summary>
-        /// If the the creation of the Discussion is allowed or not
+        /// If the creation of the Discussion is allowed or not
         /// </summary>
-        /// <value>If the the creation of the Discussion is allowed or not</value>
+        /// <value>If the creation of the Discussion is allowed or not</value>
         /*
         <example>true</example>
         */
@@ -75,9 +75,9 @@ namespace eZmaxApi.Model
         public bool BDiscussionconfigurationCreateallowed { get; set; }
 
         /// <summary>
-        /// If the the destruction of the Discussion is allowed or not
+        /// If the destruction of the Discussion is allowed or not
         /// </summary>
-        /// <value>If the the destruction of the Discussion is allowed or not</value>
+        /// <value>If the destruction of the Discussion is allowed or not</value>
         /*
         <example>true</example>
         */
@@ -85,9 +85,9 @@ namespace eZmaxApi.Model
         public bool BDiscussionconfigurationDeleteallowed { get; set; }
 
         /// <summary>
-        /// If the the destruction of the Discussionmessage is allowed or not
+        /// If the destruction of the Discussionmessage is allowed or not
         /// </summary>
-        /// <value>If the the destruction of the Discussionmessage is allowed or not</value>
+        /// <value>If the destruction of the Discussionmessage is allowed or not</value>
         /*
         <example>true</example>
         */
@@ -95,9 +95,9 @@ namespace eZmaxApi.Model
         public bool BDiscussionconfigurationDeletediscussionmessageallowed { get; set; }
 
         /// <summary>
-        /// If the the creation of the Discussionmessage is allowed or not
+        /// If the creation of the Discussionmessage is allowed or not
         /// </summary>
-        /// <value>If the the creation of the Discussionmessage is allowed or not</value>
+        /// <value>If the creation of the Discussionmessage is allowed or not</value>
         /*
         <example>true</example>
         */

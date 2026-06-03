@@ -50,7 +50,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
         /// <param name="fkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
+        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory.</param>
         /// <param name="eEzdoctemplatedocumentPrivacylevel">eEzdoctemplatedocumentPrivacylevel.</param>
         /// <param name="bEzdoctemplatedocumentIsactive">Whether the ezdoctemplatedocument is active or not (required).</param>
         /// <param name="objEzdoctemplatedocumentName">objEzdoctemplatedocumentName (required).</param>
@@ -58,7 +58,6 @@ namespace eZmaxApi.Model
         {
             this.FkiLanguageID = fkiLanguageID;
             this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
-            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
             // to ensure "objEzdoctemplatedocumentName" is required (not null)
             if (objEzdoctemplatedocumentName == null)
@@ -68,6 +67,7 @@ namespace eZmaxApi.Model
             this.ObjEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
             this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.EEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
         }
 
@@ -118,7 +118,7 @@ namespace eZmaxApi.Model
         /*
         <example>4</example>
         */
-        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", EmitDefaultValue = false)]
         public int FkiEzdoctemplatefieldtypecategoryID { get; set; }
 
         /// <summary>

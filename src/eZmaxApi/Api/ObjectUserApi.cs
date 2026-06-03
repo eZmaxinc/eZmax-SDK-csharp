@@ -240,6 +240,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of UserGetEffectivePermissionsV1Response</returns>
         ApiResponse<UserGetEffectivePermissionsV1Response> UserGetEffectivePermissionsV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
         /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetEzmaxcustomeruserV1Response</returns>
+        UserGetEzmaxcustomeruserV1Response UserGetEzmaxcustomeruserV1(int pkiUserID, int operationIndex = 0);
+
+        /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetEzmaxcustomeruserV1Response</returns>
+        ApiResponse<UserGetEzmaxcustomeruserV1Response> UserGetEzmaxcustomeruserV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve User list
         /// </summary>
         /// <remarks>
@@ -370,6 +393,31 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserGetUsergroupsV1Response</returns>
         ApiResponse<UserGetUsergroupsV1Response> UserGetUsergroupsV1WithHttpInfo(int pkiUserID, int operationIndex = 0);
+        /// <summary>
+        /// Impersonate the user
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can impersonate the user.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserImpersonateV1Response</returns>
+        UserImpersonateV1Response UserImpersonateV1(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Impersonate the user
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can impersonate the user.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserImpersonateV1Response</returns>
+        ApiResponse<UserImpersonateV1Response> UserImpersonateV1WithHttpInfo(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0);
         /// <summary>
         /// Send password reset
         /// </summary>
@@ -644,6 +692,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (UserGetEffectivePermissionsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserGetEffectivePermissionsV1Response>> UserGetEffectivePermissionsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetEzmaxcustomeruserV1Response</returns>
+        System.Threading.Tasks.Task<UserGetEzmaxcustomeruserV1Response> UserGetEzmaxcustomeruserV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <remarks>
+        /// Returns the Ezmaxcustomeruser for the User
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetEzmaxcustomeruserV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserGetEzmaxcustomeruserV1Response>> UserGetEzmaxcustomeruserV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve User list
         /// </summary>
         /// <remarks>
@@ -801,6 +874,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetUsergroupsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserGetUsergroupsV1Response>> UserGetUsergroupsV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Impersonate the user
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can impersonate the user.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserImpersonateV1Response</returns>
+        System.Threading.Tasks.Task<UserImpersonateV1Response> UserImpersonateV1Async(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Impersonate the user
+        /// </summary>
+        /// <remarks>
+        /// Using this endpoint, you can impersonate the user.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserImpersonateV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserImpersonateV1Response>> UserImpersonateV1WithHttpInfoAsync(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Send password reset
         /// </summary>
@@ -2376,6 +2476,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserGetEzmaxcustomeruserV1Response</returns>
+        public UserGetEzmaxcustomeruserV1Response UserGetEzmaxcustomeruserV1(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserGetEzmaxcustomeruserV1Response> localVarResponse = UserGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserGetEzmaxcustomeruserV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserGetEzmaxcustomeruserV1Response> UserGetEzmaxcustomeruserV1WithHttpInfo(int pkiUserID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetEzmaxcustomeruserV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<UserGetEzmaxcustomeruserV1Response>("/1/object/user/{pkiUserID}/getEzmaxcustomeruser", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetEzmaxcustomeruserV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserGetEzmaxcustomeruserV1Response</returns>
+        public async System.Threading.Tasks.Task<UserGetEzmaxcustomeruserV1Response> UserGetEzmaxcustomeruserV1Async(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<UserGetEzmaxcustomeruserV1Response> localVarResponse = await UserGetEzmaxcustomeruserV1WithHttpInfoAsync(pkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the Ezmaxcustomeruser for the User Returns the Ezmaxcustomeruser for the User
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserGetEzmaxcustomeruserV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetEzmaxcustomeruserV1Response>> UserGetEzmaxcustomeruserV1WithHttpInfoAsync(int pkiUserID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserGetEzmaxcustomeruserV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<UserGetEzmaxcustomeruserV1Response>("/1/object/user/{pkiUserID}/getEzmaxcustomeruser", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserGetEzmaxcustomeruserV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve User list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3280,6 +3523,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UserGetUsergroupsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Impersonate the user Using this endpoint, you can impersonate the user.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>UserImpersonateV1Response</returns>
+        public UserImpersonateV1Response UserImpersonateV1(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<UserImpersonateV1Response> localVarResponse = UserImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Impersonate the user Using this endpoint, you can impersonate the user.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of UserImpersonateV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<UserImpersonateV1Response> UserImpersonateV1WithHttpInfo(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'userImpersonateV1Request' is set
+            if (userImpersonateV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userImpersonateV1Request' when calling ObjectUserApi->UserImpersonateV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+            localVarRequestOptions.Data = userImpersonateV1Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserImpersonateV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<UserImpersonateV1Response>("/1/object/user/{pkiUserID}/impersonate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserImpersonateV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Impersonate the user Using this endpoint, you can impersonate the user.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of UserImpersonateV1Response</returns>
+        public async System.Threading.Tasks.Task<UserImpersonateV1Response> UserImpersonateV1Async(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<UserImpersonateV1Response> localVarResponse = await UserImpersonateV1WithHttpInfoAsync(pkiUserID, userImpersonateV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Impersonate the user Using this endpoint, you can impersonate the user.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiUserID"></param>
+        /// <param name="userImpersonateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (UserImpersonateV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserImpersonateV1Response>> UserImpersonateV1WithHttpInfoAsync(int pkiUserID, UserImpersonateV1Request userImpersonateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'userImpersonateV1Request' is set
+            if (userImpersonateV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'userImpersonateV1Request' when calling ObjectUserApi->UserImpersonateV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiUserID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiUserID)); // path parameter
+            localVarRequestOptions.Data = userImpersonateV1Request;
+
+            localVarRequestOptions.Operation = "ObjectUserApi.UserImpersonateV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<UserImpersonateV1Response>("/1/object/user/{pkiUserID}/impersonate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UserImpersonateV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

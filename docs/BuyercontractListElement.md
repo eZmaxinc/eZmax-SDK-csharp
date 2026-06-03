@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **DBuyercontractMinimumprice** | **string** | The minimumprice of the Buyercontract | 
 **DBuyercontractMaximumprice** | **string** | The maximumprice of the Buyercontract | 
 **EBuyercontractType** | **FieldEBuyercontractType** |  | 
+**SBuyercontractContract** | **string** | The number of the Buyercontract | [optional] 
 **DtBuyercontractDate** | **string** | The date of the Buyercontract | 
 **DtBuyercontractExpirationdate** | **string** | The expirationdate of the Buyercontract | [optional] 
 **BBuyercontractIsactive** | **bool** | Whether the buyercontract is active or not | 

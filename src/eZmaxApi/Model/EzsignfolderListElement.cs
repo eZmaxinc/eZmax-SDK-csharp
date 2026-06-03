@@ -34,6 +34,12 @@ namespace eZmaxApi.Model
     {
 
         /// <summary>
+        /// Gets or Sets EEzsignfolderSource
+        /// </summary>
+        [DataMember(Name = "eEzsignfolderSource", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsignfolderSource EEzsignfolderSource { get; set; }
+
+        /// <summary>
         /// Gets or Sets EEzsignfoldertypePrivacylevel
         /// </summary>
         [DataMember(Name = "eEzsignfoldertypePrivacylevel", IsRequired = true, EmitDefaultValue = true)]
@@ -60,6 +66,13 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiEzsignfolderID">The unique ID of the Ezsignfolder (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype. (required).</param>
+        /// <param name="fkiEzsignbulksendID">The unique ID of the Ezsignbulksend.</param>
+        /// <param name="sEzsignbulksendDescription">The description of the Ezsignbulksend.</param>
+        /// <param name="fkiEzsignbulksendtransmissionID">The unique ID of the Ezsignbulksendtransmission.</param>
+        /// <param name="sEzsignbulksendtransmissionDescription">The description of the Ezsignbulksendtransmission.</param>
+        /// <param name="fkiEzsigntemplatepublicID">The unique ID of the Ezsigntemplatepublic.</param>
+        /// <param name="sEzsigntemplatepublicDescription">The description of the Ezsigntemplatepublic.</param>
+        /// <param name="eEzsignfolderSource">eEzsignfolderSource (required).</param>
         /// <param name="eEzsignfoldertypePrivacylevel">eEzsignfoldertypePrivacylevel (required).</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester (required).</param>
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
@@ -83,10 +96,12 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsignfolderArchive">The date and time at which the Ezsignfolder was archived..</param>
         /// <param name="dtEzsignfolderDispose">The date and time at which the Ezsignfolder was disposed..</param>
         /// <param name="bEzsignfolderSigner">Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user.</param>
-        public EzsignfolderListElement(int pkiEzsignfolderID = default, int fkiEzsignfoldertypeID = default, FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default, string sEzsignfoldertypeNameX = default, string sEzsignfolderDescription = default, FieldEEzsignfolderStep eEzsignfolderStep = default, FieldEEzsignfolderCompletion eEzsignfolderCompletion = default, string dtCreatedDate = default, string dtEzsignfolderDelayedsenddate = default, string dtEzsignfolderSentdate = default, string dtEzsignfolderDuedate = default, int iEzsigndocument = default, int iEzsigndocumentEdm = default, int iEzsignsignature = default, int iEzsignsignatureSigned = default, int iEzsignformfieldgroup = default, int iEzsignformfieldgroupCompleted = default, bool bEzsignformHasdependencies = default, string dEzsignfolderCompletedpercentage = default, string dEzsignfolderFormcompletedpercentage = default, string dEzsignfolderSignaturecompletedpercentage = default, string dtEzsignfolderClose = default, string dtEzsignfolderArchive = default, string dtEzsignfolderDispose = default, bool bEzsignfolderSigner = default)
+        /// <param name="bEzsignfolderIsmyown">Whether the Ezsignfolder is my own or not.</param>
+        public EzsignfolderListElement(int pkiEzsignfolderID = default, int fkiEzsignfoldertypeID = default, int fkiEzsignbulksendID = default, string sEzsignbulksendDescription = default, int fkiEzsignbulksendtransmissionID = default, string sEzsignbulksendtransmissionDescription = default, int fkiEzsigntemplatepublicID = default, string sEzsigntemplatepublicDescription = default, FieldEEzsignfolderSource eEzsignfolderSource = default, FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default, string sEzsignfoldertypeNameX = default, string sEzsignfolderDescription = default, FieldEEzsignfolderStep eEzsignfolderStep = default, FieldEEzsignfolderCompletion eEzsignfolderCompletion = default, string dtCreatedDate = default, string dtEzsignfolderDelayedsenddate = default, string dtEzsignfolderSentdate = default, string dtEzsignfolderDuedate = default, int iEzsigndocument = default, int iEzsigndocumentEdm = default, int iEzsignsignature = default, int iEzsignsignatureSigned = default, int iEzsignformfieldgroup = default, int iEzsignformfieldgroupCompleted = default, bool bEzsignformHasdependencies = default, string dEzsignfolderCompletedpercentage = default, string dEzsignfolderFormcompletedpercentage = default, string dEzsignfolderSignaturecompletedpercentage = default, string dtEzsignfolderClose = default, string dtEzsignfolderArchive = default, string dtEzsignfolderDispose = default, bool bEzsignfolderSigner = default, bool bEzsignfolderIsmyown = default)
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.EEzsignfolderSource = eEzsignfolderSource;
             this.EEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
             // to ensure "sEzsignfoldertypeNameX" is required (not null)
             if (sEzsignfoldertypeNameX == null)
@@ -132,6 +147,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("dEzsignfolderSignaturecompletedpercentage is a required property for EzsignfolderListElement and cannot be null");
             }
             this.DEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
+            this.FkiEzsignbulksendID = fkiEzsignbulksendID;
+            this.SEzsignbulksendDescription = sEzsignbulksendDescription;
+            this.FkiEzsignbulksendtransmissionID = fkiEzsignbulksendtransmissionID;
+            this.SEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+            this.FkiEzsigntemplatepublicID = fkiEzsigntemplatepublicID;
+            this.SEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
             this.DtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
             this.DtEzsignfolderSentdate = dtEzsignfolderSentdate;
             this.DtEzsignfolderDuedate = dtEzsignfolderDuedate;
@@ -140,6 +161,7 @@ namespace eZmaxApi.Model
             this.DtEzsignfolderArchive = dtEzsignfolderArchive;
             this.DtEzsignfolderDispose = dtEzsignfolderDispose;
             this.BEzsignfolderSigner = bEzsignfolderSigner;
+            this.BEzsignfolderIsmyown = bEzsignfolderIsmyown;
         }
 
         /// <summary>
@@ -161,6 +183,66 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiEzsignfoldertypeID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiEzsignfoldertypeID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksend
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksend</value>
+        /*
+        <example>8</example>
+        */
+        [DataMember(Name = "fkiEzsignbulksendID", EmitDefaultValue = false)]
+        public int FkiEzsignbulksendID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignbulksend
+        /// </summary>
+        /// <value>The description of the Ezsignbulksend</value>
+        /*
+        <example>Test eZsign Bulk Send</example>
+        */
+        [DataMember(Name = "sEzsignbulksendDescription", EmitDefaultValue = false)]
+        public string SEzsignbulksendDescription { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsignbulksendtransmission
+        /// </summary>
+        /// <value>The unique ID of the Ezsignbulksendtransmission</value>
+        /*
+        <example>21</example>
+        */
+        [DataMember(Name = "fkiEzsignbulksendtransmissionID", EmitDefaultValue = false)]
+        public int FkiEzsignbulksendtransmissionID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsignbulksendtransmission
+        /// </summary>
+        /// <value>The description of the Ezsignbulksendtransmission</value>
+        /*
+        <example>Test eZsign Bulk Send Transmission #1</example>
+        */
+        [DataMember(Name = "sEzsignbulksendtransmissionDescription", EmitDefaultValue = false)]
+        public string SEzsignbulksendtransmissionDescription { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezsigntemplatepublic
+        /// </summary>
+        /// <value>The unique ID of the Ezsigntemplatepublic</value>
+        /*
+        <example>96</example>
+        */
+        [DataMember(Name = "fkiEzsigntemplatepublicID", EmitDefaultValue = false)]
+        public int FkiEzsigntemplatepublicID { get; set; }
+
+        /// <summary>
+        /// The description of the Ezsigntemplatepublic
+        /// </summary>
+        /// <value>The description of the Ezsigntemplatepublic</value>
+        /*
+        <example>Inscription form</example>
+        */
+        [DataMember(Name = "sEzsigntemplatepublicDescription", EmitDefaultValue = false)]
+        public string SEzsigntemplatepublicDescription { get; set; }
 
         /// <summary>
         /// The name of the Ezsignfoldertype in the language of the requester
@@ -333,6 +415,16 @@ namespace eZmaxApi.Model
         public bool BEzsignfolderSigner { get; set; }
 
         /// <summary>
+        /// Whether the Ezsignfolder is my own or not
+        /// </summary>
+        /// <value>Whether the Ezsignfolder is my own or not</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bEzsignfolderIsmyown", EmitDefaultValue = true)]
+        public bool BEzsignfolderIsmyown { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -342,6 +434,13 @@ namespace eZmaxApi.Model
             sb.Append("class EzsignfolderListElement {\n");
             sb.Append("  PkiEzsignfolderID: ").Append(PkiEzsignfolderID).Append("\n");
             sb.Append("  FkiEzsignfoldertypeID: ").Append(FkiEzsignfoldertypeID).Append("\n");
+            sb.Append("  FkiEzsignbulksendID: ").Append(FkiEzsignbulksendID).Append("\n");
+            sb.Append("  SEzsignbulksendDescription: ").Append(SEzsignbulksendDescription).Append("\n");
+            sb.Append("  FkiEzsignbulksendtransmissionID: ").Append(FkiEzsignbulksendtransmissionID).Append("\n");
+            sb.Append("  SEzsignbulksendtransmissionDescription: ").Append(SEzsignbulksendtransmissionDescription).Append("\n");
+            sb.Append("  FkiEzsigntemplatepublicID: ").Append(FkiEzsigntemplatepublicID).Append("\n");
+            sb.Append("  SEzsigntemplatepublicDescription: ").Append(SEzsigntemplatepublicDescription).Append("\n");
+            sb.Append("  EEzsignfolderSource: ").Append(EEzsignfolderSource).Append("\n");
             sb.Append("  EEzsignfoldertypePrivacylevel: ").Append(EEzsignfoldertypePrivacylevel).Append("\n");
             sb.Append("  SEzsignfoldertypeNameX: ").Append(SEzsignfoldertypeNameX).Append("\n");
             sb.Append("  SEzsignfolderDescription: ").Append(SEzsignfolderDescription).Append("\n");
@@ -365,6 +464,7 @@ namespace eZmaxApi.Model
             sb.Append("  DtEzsignfolderArchive: ").Append(DtEzsignfolderArchive).Append("\n");
             sb.Append("  DtEzsignfolderDispose: ").Append(DtEzsignfolderDispose).Append("\n");
             sb.Append("  BEzsignfolderSigner: ").Append(BEzsignfolderSigner).Append("\n");
+            sb.Append("  BEzsignfolderIsmyown: ").Append(BEzsignfolderIsmyown).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -401,6 +501,39 @@ namespace eZmaxApi.Model
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+            }
+
+            // FkiEzsignbulksendID (int) minimum
+            if (this.FkiEzsignbulksendID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+            }
+
+            // FkiEzsignbulksendtransmissionID (int) minimum
+            if (this.FkiEzsignbulksendtransmissionID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendtransmissionID" });
+            }
+
+            // FkiEzsigntemplatepublicID (int) maximum
+            if (this.FkiEzsigntemplatepublicID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value less than or equal to 65535.", new [] { "FkiEzsigntemplatepublicID" });
+            }
+
+            // FkiEzsigntemplatepublicID (int) minimum
+            if (this.FkiEzsigntemplatepublicID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepublicID" });
+            }
+
+            if (this.SEzsigntemplatepublicDescription != null) {
+                // SEzsigntemplatepublicDescription (string) pattern
+                Regex regexSEzsigntemplatepublicDescription = new Regex(@"^.{0,80}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplatepublicDescription.Match(this.SEzsigntemplatepublicDescription).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatepublicDescription, must match a pattern of " + regexSEzsigntemplatepublicDescription, new [] { "SEzsigntemplatepublicDescription" });
+                }
             }
 
             if (this.SEzsignfolderDescription != null) {

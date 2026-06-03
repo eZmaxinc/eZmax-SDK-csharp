@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |--------|--------------|-------------|
 | [**EzsigntemplatedocumentCreateObjectV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentcreateobjectv1) | **POST** /1/object/ezsigntemplatedocument | Create a new Ezsigntemplatedocument |
 | [**EzsigntemplatedocumentDownloadV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentdownloadv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download | Retrieve an existing Ezsigntemplatedocument&#39;s original file |
+| [**EzsigntemplatedocumentEditEzsigntemplateannotationsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplateannotationsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations | Edit multiple Ezsigntemplateannotations |
 | [**EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatedocumentpagerecognitionsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatedocumentpagerecognitions | Edit multiple Ezsigntemplatedocumentpagerecognitions |
 | [**EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplateformfieldgroupsv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups | Edit multiple Ezsigntemplateformfieldgroups |
 | [**EzsigntemplatedocumentEditEzsigntemplatesignaturesV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditezsigntemplatesignaturesv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures | Edit multiple Ezsigntemplatesignatures |
@@ -13,6 +14,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsigntemplatedocumentEditObjectV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumenteditobjectv1) | **PUT** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID} | Edit an existing Ezsigntemplatedocument |
 | [**EzsigntemplatedocumentExtractTextV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentextracttextv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/extractText | Extract text from Ezsigntemplatedocument area |
 | [**EzsigntemplatedocumentFlattenV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentflattenv1) | **POST** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten | Flatten |
+| [**EzsigntemplatedocumentGetEzsigntemplateannotationsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplateannotationsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateannotations |
 | [**EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatedocumentpagerecognitionsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpagerecognitions | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions |
 | [**EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplatedocumentpagesv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages |
 | [**EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1**](ObjectEzsigntemplatedocumentApi.md#ezsigntemplatedocumentgetezsigntemplateformfieldgroupsv1) | **GET** /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups | Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplateformfieldgroups |
@@ -207,6 +209,106 @@ void (empty response body)
 |-------------|-------------|------------------|
 | **302** | The user has been redirected |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsigntemplatedocumenteditezsigntemplateannotationsv1"></a>
+# **EzsigntemplatedocumentEditEzsigntemplateannotationsV1**
+> EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response EzsigntemplatedocumentEditEzsigntemplateannotationsV1 (int pkiEzsigntemplatedocumentID, EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request)
+
+Edit multiple Ezsigntemplateannotations
+
+Using this endpoint, you can edit multiple Ezsigntemplateannotations at the same time.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigntemplatedocumentEditEzsigntemplateannotationsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigntemplatedocumentApi(config);
+            var pkiEzsigntemplatedocumentID = 56;  // int | 
+            var ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request = new EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request(); // EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request | 
+
+            try
+            {
+                // Edit multiple Ezsigntemplateannotations
+                EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response result = apiInstance.EzsigntemplatedocumentEditEzsigntemplateannotationsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentEditEzsigntemplateannotationsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit multiple Ezsigntemplateannotations
+    ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> response = apiInstance.EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatedocumentID** | **int** |  |  |
+| **ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request** | [**EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request**](EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request.md) |  |  |
+
+### Return type
+
+[**EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response**](EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -896,6 +998,102 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsigntemplatedocumentgetezsigntemplateannotationsv1"></a>
+# **EzsigntemplatedocumentGetEzsigntemplateannotationsV1**
+> EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response EzsigntemplatedocumentGetEzsigntemplateannotationsV1 (int pkiEzsigntemplatedocumentID)
+
+Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateannotations
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigntemplatedocumentGetEzsigntemplateannotationsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigntemplatedocumentApi(config);
+            var pkiEzsigntemplatedocumentID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateannotations
+                EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response result = apiInstance.EzsigntemplatedocumentGetEzsigntemplateannotationsV1(pkiEzsigntemplatedocumentID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentGetEzsigntemplateannotationsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsigntemplatedocument's Ezsigntemplateannotations
+    ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> response = apiInstance.EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(pkiEzsigntemplatedocumentID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigntemplatedocumentApi.EzsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatedocumentID** | **int** |  |  |
+
+### Return type
+
+[**EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response**](EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 

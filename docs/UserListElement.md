@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **SUserLastname** | **string** | The last name of the user | 
 **SUserLoginname** | **string** | The login name of the User. | 
 **BUserIsactive** | **bool** | Whether the User is active or not | 
+**BUserSuspended** | **bool** | Whether the User is suspended or not | [optional] 
 **EUserType** | **FieldEUserType** |  | 
 **EUserOrigin** | **FieldEUserOrigin** |  | 
 **EUserEzsignaccess** | **FieldEUserEzsignaccess** |  | 

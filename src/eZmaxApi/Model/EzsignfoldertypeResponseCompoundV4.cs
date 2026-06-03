@@ -34,6 +34,12 @@ namespace eZmaxApi.Model
     {
 
         /// <summary>
+        /// Gets or Sets EEzsignfoldertypeSignaturedatedisplay
+        /// </summary>
+        [DataMember(Name = "eEzsignfoldertypeSignaturedatedisplay", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEEzsignfoldertypeSignaturedatedisplay EEzsignfoldertypeSignaturedatedisplay { get; set; }
+
+        /// <summary>
         /// Gets or Sets EEzsignfoldertypeDocumentdependency
         /// </summary>
         [DataMember(Name = "eEzsignfoldertypeDocumentdependency", EmitDefaultValue = false)]
@@ -97,6 +103,8 @@ namespace eZmaxApi.Model
         /// <param name="fkiFontIDFormfield">The unique ID of the Font.</param>
         /// <param name="fkiFontIDSignature">The unique ID of the Font.</param>
         /// <param name="fkiPdfalevelIDConvert">The unique ID of the Pdfalevel.</param>
+        /// <param name="eEzsignfoldertypeSignaturedatedisplay">eEzsignfoldertypeSignaturedatedisplay (required).</param>
+        /// <param name="sEzsignfoldertypeSignaturedatecustomformat">The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | .</param>
         /// <param name="eEzsignfoldertypeDocumentdependency">eEzsignfoldertypeDocumentdependency.</param>
         /// <param name="sBrandingDescriptionX">The Description of the Branding in the language of the requester (required).</param>
         /// <param name="sBillingentityinternalDescriptionX">The description of the Billingentityinternal in the language of the requester.</param>
@@ -109,7 +117,7 @@ namespace eZmaxApi.Model
         /// <param name="eEzsignfoldertypeDocumentmerge">eEzsignfoldertypeDocumentmerge.</param>
         /// <param name="iEzsignfoldertypeFontsizeannotation">Font size for annotations.</param>
         /// <param name="iEzsignfoldertypeFontsizeformfield">Font size for form fields.</param>
-        /// <param name="iEzsignfoldertypeSendreminderfirstdays">The number of days before the the first reminder sending.</param>
+        /// <param name="iEzsignfoldertypeSendreminderfirstdays">The number of days before the first reminder sending.</param>
         /// <param name="iEzsignfoldertypeSendreminderotherdays">The number of days after the first reminder sending.</param>
         /// <param name="iEzsignfoldertypeArchivaldays">The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype (required).</param>
         /// <param name="eEzsignfoldertypeDisposal">eEzsignfoldertypeDisposal (required).</param>
@@ -125,6 +133,10 @@ namespace eZmaxApi.Model
         /// <param name="bEzsignfoldertypeReassignezsignsigner">Wheter if Reassignment of signature is allowed by a signatory to another signatory or not.</param>
         /// <param name="bEzsignfoldertypeReassignuser">Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not.</param>
         /// <param name="bEzsignfoldertypeReassigngroup">Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself.</param>
+        /// <param name="bEzsignfoldertypeSenddocumentmergetoemail">Whether we send the merged documents in the email to external recipient.</param>
+        /// <param name="bEzsignfoldertypeSenddocumentmergetoezsignsigner">Whether we send the merged documents in the email to Ezsignsigner.</param>
+        /// <param name="bEzsignfoldertypeSenddocumentmergetoreceivealldocument">Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents..</param>
+        /// <param name="bEzsignfoldertypeSenddocumentmergetouser">Whether we send the merged documents in the email to User.</param>
         /// <param name="bEzsignfoldertypeSendsignedtoezsignsigner">Whether we send an email to Ezsignsigner  when document is completed.</param>
         /// <param name="bEzsignfoldertypeSendsignedtouser">Whether we send an email to User who signed when document is completed.</param>
         /// <param name="bEzsignfoldertypeSendattachmentezsignsigner">Whether we send the Ezsigndocument in the email to Ezsignsigner.</param>
@@ -160,7 +172,7 @@ namespace eZmaxApi.Model
         /// <param name="objAudit">objAudit (required).</param>
         /// <param name="aFkiUserIDSigned">aFkiUserIDSigned.</param>
         /// <param name="aFkiUserIDSummary">aFkiUserIDSummary.</param>
-        public EzsignfoldertypeResponseCompoundV4(int pkiEzsignfoldertypeID = default, MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default, int fkiBrandingID = default, int fkiBillingentityinternalID = default, int fkiEzsigntsarequirementID = default, int fkiFontIDAnnotation = default, int fkiFontIDFormfield = default, int fkiFontIDSignature = default, int fkiPdfalevelIDConvert = default, FieldEEzsignfoldertypeDocumentdependency? eEzsignfoldertypeDocumentdependency = default, string sBrandingDescriptionX = default, string sBillingentityinternalDescriptionX = default, string sEzsigntsarequirementDescriptionX = default, string sEmailAddressSigned = default, string sEmailAddressSummary = default, FieldEEzsignfoldertypePdfarequirement? eEzsignfoldertypePdfarequirement = default, FieldEEzsignfoldertypePdfanoncompliantaction? eEzsignfoldertypePdfanoncompliantaction = default, FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default, FieldEEzsignfoldertypeDocumentmerge? eEzsignfoldertypeDocumentmerge = default, int iEzsignfoldertypeFontsizeannotation = default, int iEzsignfoldertypeFontsizeformfield = default, int iEzsignfoldertypeSendreminderfirstdays = default, int iEzsignfoldertypeSendreminderotherdays = default, int iEzsignfoldertypeArchivaldays = default, FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default, FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = default, int iEzsignfoldertypeDisposaldays = default, int iEzsignfoldertypeDeadlinedays = default, bool bEzsignfoldertypePrematurelyendautomatically = default, int iEzsignfoldertypePrematurelyendautomaticallydays = default, bool bEzsignfoldertypeAutomaticsignature = default, bool bEzsignfoldertypeDelegate = default, bool bEzsignfoldertypeDiscussion = default, bool bEzsignfoldertypeLogrecipientinproof = default, bool bEzsignfoldertypeReassignezsignsigner = default, bool bEzsignfoldertypeReassignuser = default, bool bEzsignfoldertypeReassigngroup = default, bool bEzsignfoldertypeSendsignedtoezsignsigner = default, bool bEzsignfoldertypeSendsignedtouser = default, bool bEzsignfoldertypeSendattachmentezsignsigner = default, bool bEzsignfoldertypeSendsignatureattachmentezsignsigner = default, bool bEzsignfoldertypeSendsignatureattachment = default, bool bEzsignfoldertypeSendproofezsignsigner = default, bool bEzsignfoldertypeSendattachmentuser = default, bool bEzsignfoldertypeSendsignatureattachmentuser = default, bool bEzsignfoldertypeSendproofuser = default, bool bEzsignfoldertypeSendproofemail = default, bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default, bool bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner = default, bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default, bool bEzsignfoldertypeSendproofreceivealldocument = default, bool bEzsignfoldertypeSendsignatureattachmentreceivealldocument = default, bool bEzsignfoldertypeSendsignedtodocumentowner = default, bool bEzsignfoldertypeSendsignedtofolderowner = default, bool bEzsignfoldertypeSendsignedtofullgroup = default, bool bEzsignfoldertypeSendsignedtolimitedgroup = default, bool bEzsignfoldertypeSendsignedtocolleague = default, bool bEzsignfoldertypeSendsummarytodocumentowner = default, bool bEzsignfoldertypeSendsummarytofolderowner = default, bool bEzsignfoldertypeSendsummarytofullgroup = default, bool bEzsignfoldertypeSendsummarytolimitedgroup = default, bool bEzsignfoldertypeSendsummarytocolleague = default, FieldEEzsignfoldertypeSigneraccess? eEzsignfoldertypeSigneraccess = default, bool bEzsignfoldertypeIsactive = default, List<int> aFkiPdfalevelID = default, List<UserlogintypeResponse> aObjUserlogintype = default, List<UsergroupResponse> aObjUsergroupAll = default, List<UsergroupResponse> aObjUsergroupRestricted = default, List<UsergroupResponse> aObjUsergroupTemplate = default, CommonAudit objAudit = default, List<int> aFkiUserIDSigned = default, List<int> aFkiUserIDSummary = default)
+        public EzsignfoldertypeResponseCompoundV4(int pkiEzsignfoldertypeID = default, MultilingualEzsignfoldertypeName objEzsignfoldertypeName = default, int fkiBrandingID = default, int fkiBillingentityinternalID = default, int fkiEzsigntsarequirementID = default, int fkiFontIDAnnotation = default, int fkiFontIDFormfield = default, int fkiFontIDSignature = default, int fkiPdfalevelIDConvert = default, FieldEEzsignfoldertypeSignaturedatedisplay eEzsignfoldertypeSignaturedatedisplay = default, string sEzsignfoldertypeSignaturedatecustomformat = default, FieldEEzsignfoldertypeDocumentdependency? eEzsignfoldertypeDocumentdependency = default, string sBrandingDescriptionX = default, string sBillingentityinternalDescriptionX = default, string sEzsigntsarequirementDescriptionX = default, string sEmailAddressSigned = default, string sEmailAddressSummary = default, FieldEEzsignfoldertypePdfarequirement? eEzsignfoldertypePdfarequirement = default, FieldEEzsignfoldertypePdfanoncompliantaction? eEzsignfoldertypePdfanoncompliantaction = default, FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel = default, FieldEEzsignfoldertypeDocumentmerge? eEzsignfoldertypeDocumentmerge = default, int iEzsignfoldertypeFontsizeannotation = default, int iEzsignfoldertypeFontsizeformfield = default, int iEzsignfoldertypeSendreminderfirstdays = default, int iEzsignfoldertypeSendreminderotherdays = default, int iEzsignfoldertypeArchivaldays = default, FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal = default, FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = default, int iEzsignfoldertypeDisposaldays = default, int iEzsignfoldertypeDeadlinedays = default, bool bEzsignfoldertypePrematurelyendautomatically = default, int iEzsignfoldertypePrematurelyendautomaticallydays = default, bool bEzsignfoldertypeAutomaticsignature = default, bool bEzsignfoldertypeDelegate = default, bool bEzsignfoldertypeDiscussion = default, bool bEzsignfoldertypeLogrecipientinproof = default, bool bEzsignfoldertypeReassignezsignsigner = default, bool bEzsignfoldertypeReassignuser = default, bool bEzsignfoldertypeReassigngroup = default, bool bEzsignfoldertypeSenddocumentmergetoemail = default, bool bEzsignfoldertypeSenddocumentmergetoezsignsigner = default, bool bEzsignfoldertypeSenddocumentmergetoreceivealldocument = default, bool bEzsignfoldertypeSenddocumentmergetouser = default, bool bEzsignfoldertypeSendsignedtoezsignsigner = default, bool bEzsignfoldertypeSendsignedtouser = default, bool bEzsignfoldertypeSendattachmentezsignsigner = default, bool bEzsignfoldertypeSendsignatureattachmentezsignsigner = default, bool bEzsignfoldertypeSendsignatureattachment = default, bool bEzsignfoldertypeSendproofezsignsigner = default, bool bEzsignfoldertypeSendattachmentuser = default, bool bEzsignfoldertypeSendsignatureattachmentuser = default, bool bEzsignfoldertypeSendproofuser = default, bool bEzsignfoldertypeSendproofemail = default, bool bEzsignfoldertypeAllowdownloadattachmentezsignsigner = default, bool bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner = default, bool bEzsignfoldertypeAllowdownloadproofezsignsigner = default, bool bEzsignfoldertypeSendproofreceivealldocument = default, bool bEzsignfoldertypeSendsignatureattachmentreceivealldocument = default, bool bEzsignfoldertypeSendsignedtodocumentowner = default, bool bEzsignfoldertypeSendsignedtofolderowner = default, bool bEzsignfoldertypeSendsignedtofullgroup = default, bool bEzsignfoldertypeSendsignedtolimitedgroup = default, bool bEzsignfoldertypeSendsignedtocolleague = default, bool bEzsignfoldertypeSendsummarytodocumentowner = default, bool bEzsignfoldertypeSendsummarytofolderowner = default, bool bEzsignfoldertypeSendsummarytofullgroup = default, bool bEzsignfoldertypeSendsummarytolimitedgroup = default, bool bEzsignfoldertypeSendsummarytocolleague = default, FieldEEzsignfoldertypeSigneraccess? eEzsignfoldertypeSigneraccess = default, bool bEzsignfoldertypeIsactive = default, List<int> aFkiPdfalevelID = default, List<UserlogintypeResponse> aObjUserlogintype = default, List<UsergroupResponse> aObjUsergroupAll = default, List<UsergroupResponse> aObjUsergroupRestricted = default, List<UsergroupResponse> aObjUsergroupTemplate = default, CommonAudit objAudit = default, List<int> aFkiUserIDSigned = default, List<int> aFkiUserIDSummary = default)
         {
             this.PkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
             // to ensure "objEzsignfoldertypeName" is required (not null)
@@ -170,6 +182,7 @@ namespace eZmaxApi.Model
             }
             this.ObjEzsignfoldertypeName = objEzsignfoldertypeName;
             this.FkiBrandingID = fkiBrandingID;
+            this.EEzsignfoldertypeSignaturedatedisplay = eEzsignfoldertypeSignaturedatedisplay;
             // to ensure "sBrandingDescriptionX" is required (not null)
             if (sBrandingDescriptionX == null)
             {
@@ -206,6 +219,7 @@ namespace eZmaxApi.Model
             this.FkiFontIDFormfield = fkiFontIDFormfield;
             this.FkiFontIDSignature = fkiFontIDSignature;
             this.FkiPdfalevelIDConvert = fkiPdfalevelIDConvert;
+            this.SEzsignfoldertypeSignaturedatecustomformat = sEzsignfoldertypeSignaturedatecustomformat;
             this.EEzsignfoldertypeDocumentdependency = eEzsignfoldertypeDocumentdependency;
             this.SBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
             this.SEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
@@ -228,6 +242,10 @@ namespace eZmaxApi.Model
             this.BEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
             this.BEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
             this.BEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+            this.BEzsignfoldertypeSenddocumentmergetoemail = bEzsignfoldertypeSenddocumentmergetoemail;
+            this.BEzsignfoldertypeSenddocumentmergetoezsignsigner = bEzsignfoldertypeSenddocumentmergetoezsignsigner;
+            this.BEzsignfoldertypeSenddocumentmergetoreceivealldocument = bEzsignfoldertypeSenddocumentmergetoreceivealldocument;
+            this.BEzsignfoldertypeSenddocumentmergetouser = bEzsignfoldertypeSenddocumentmergetouser;
             this.BEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
             this.BEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
             this.BEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
@@ -343,6 +361,16 @@ namespace eZmaxApi.Model
         public int FkiPdfalevelIDConvert { get; set; }
 
         /// <summary>
+        /// The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
+        /// </summary>
+        /// <value>The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | </value>
+        /*
+        <example>Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}</example>
+        */
+        [DataMember(Name = "sEzsignfoldertypeSignaturedatecustomformat", EmitDefaultValue = false)]
+        public string SEzsignfoldertypeSignaturedatecustomformat { get; set; }
+
+        /// <summary>
         /// The Description of the Branding in the language of the requester
         /// </summary>
         /// <value>The Description of the Branding in the language of the requester</value>
@@ -413,9 +441,9 @@ namespace eZmaxApi.Model
         public int IEzsignfoldertypeFontsizeformfield { get; set; }
 
         /// <summary>
-        /// The number of days before the the first reminder sending
+        /// The number of days before the first reminder sending
         /// </summary>
-        /// <value>The number of days before the the first reminder sending</value>
+        /// <value>The number of days before the first reminder sending</value>
         /*
         <example>30</example>
         */
@@ -551,6 +579,46 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "bEzsignfoldertypeReassigngroup", EmitDefaultValue = true)]
         public bool BEzsignfoldertypeReassigngroup { get; set; }
+
+        /// <summary>
+        /// Whether we send the merged documents in the email to external recipient
+        /// </summary>
+        /// <value>Whether we send the merged documents in the email to external recipient</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsignfoldertypeSenddocumentmergetoemail", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeSenddocumentmergetoemail { get; set; }
+
+        /// <summary>
+        /// Whether we send the merged documents in the email to Ezsignsigner
+        /// </summary>
+        /// <value>Whether we send the merged documents in the email to Ezsignsigner</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsignfoldertypeSenddocumentmergetoezsignsigner", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeSenddocumentmergetoezsignsigner { get; set; }
+
+        /// <summary>
+        /// Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.
+        /// </summary>
+        /// <value>Whether we send the merged documents in the email to user and Ezsignsigner who receive all documents.</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsignfoldertypeSenddocumentmergetoreceivealldocument", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeSenddocumentmergetoreceivealldocument { get; set; }
+
+        /// <summary>
+        /// Whether we send the merged documents in the email to User
+        /// </summary>
+        /// <value>Whether we send the merged documents in the email to User</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsignfoldertypeSenddocumentmergetouser", EmitDefaultValue = true)]
+        public bool BEzsignfoldertypeSenddocumentmergetouser { get; set; }
 
         /// <summary>
         /// Whether we send an email to Ezsignsigner  when document is completed
@@ -877,6 +945,8 @@ namespace eZmaxApi.Model
             sb.Append("  FkiFontIDFormfield: ").Append(FkiFontIDFormfield).Append("\n");
             sb.Append("  FkiFontIDSignature: ").Append(FkiFontIDSignature).Append("\n");
             sb.Append("  FkiPdfalevelIDConvert: ").Append(FkiPdfalevelIDConvert).Append("\n");
+            sb.Append("  EEzsignfoldertypeSignaturedatedisplay: ").Append(EEzsignfoldertypeSignaturedatedisplay).Append("\n");
+            sb.Append("  SEzsignfoldertypeSignaturedatecustomformat: ").Append(SEzsignfoldertypeSignaturedatecustomformat).Append("\n");
             sb.Append("  EEzsignfoldertypeDocumentdependency: ").Append(EEzsignfoldertypeDocumentdependency).Append("\n");
             sb.Append("  SBrandingDescriptionX: ").Append(SBrandingDescriptionX).Append("\n");
             sb.Append("  SBillingentityinternalDescriptionX: ").Append(SBillingentityinternalDescriptionX).Append("\n");
@@ -905,6 +975,10 @@ namespace eZmaxApi.Model
             sb.Append("  BEzsignfoldertypeReassignezsignsigner: ").Append(BEzsignfoldertypeReassignezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeReassignuser: ").Append(BEzsignfoldertypeReassignuser).Append("\n");
             sb.Append("  BEzsignfoldertypeReassigngroup: ").Append(BEzsignfoldertypeReassigngroup).Append("\n");
+            sb.Append("  BEzsignfoldertypeSenddocumentmergetoemail: ").Append(BEzsignfoldertypeSenddocumentmergetoemail).Append("\n");
+            sb.Append("  BEzsignfoldertypeSenddocumentmergetoezsignsigner: ").Append(BEzsignfoldertypeSenddocumentmergetoezsignsigner).Append("\n");
+            sb.Append("  BEzsignfoldertypeSenddocumentmergetoreceivealldocument: ").Append(BEzsignfoldertypeSenddocumentmergetoreceivealldocument).Append("\n");
+            sb.Append("  BEzsignfoldertypeSenddocumentmergetouser: ").Append(BEzsignfoldertypeSenddocumentmergetouser).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtoezsignsigner: ").Append(BEzsignfoldertypeSendsignedtoezsignsigner).Append("\n");
             sb.Append("  BEzsignfoldertypeSendsignedtouser: ").Append(BEzsignfoldertypeSendsignedtouser).Append("\n");
             sb.Append("  BEzsignfoldertypeSendattachmentezsignsigner: ").Append(BEzsignfoldertypeSendattachmentezsignsigner).Append("\n");

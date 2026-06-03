@@ -13,12 +13,14 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**UserGetAutocompleteV2**](ObjectUserApi.md#usergetautocompletev2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs |
 | [**UserGetColleaguesV2**](ObjectUserApi.md#usergetcolleaguesv2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues |
 | [**UserGetEffectivePermissionsV1**](ObjectUserApi.md#usergeteffectivepermissionsv1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions |
+| [**UserGetEzmaxcustomeruserV1**](ObjectUserApi.md#usergetezmaxcustomeruserv1) | **GET** /1/object/user/{pkiUserID}/getEzmaxcustomeruser | Returns the Ezmaxcustomeruser for the User |
 | [**UserGetListV1**](ObjectUserApi.md#usergetlistv1) | **GET** /1/object/user/getList | Retrieve User list |
 | [**UserGetObjectV2**](ObjectUserApi.md#usergetobjectv2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User |
 | [**UserGetPermissionsV1**](ObjectUserApi.md#usergetpermissionsv1) | **GET** /1/object/user/{pkiUserID}/getPermissions | Retrieve an existing User&#39;s Permissions |
 | [**UserGetSubnetsV1**](ObjectUserApi.md#usergetsubnetsv1) | **GET** /1/object/user/{pkiUserID}/getSubnets | Retrieve an existing User&#39;s Subnets |
 | [**UserGetUsergroupexternalsV1**](ObjectUserApi.md#usergetusergroupexternalsv1) | **GET** /1/object/user/{pkiUserID}/getUsergroupexternals | Get User&#39;s Usergroupexternals |
 | [**UserGetUsergroupsV1**](ObjectUserApi.md#usergetusergroupsv1) | **GET** /1/object/user/{pkiUserID}/getUsergroups | Get User&#39;s Usergroups |
+| [**UserImpersonateV1**](ObjectUserApi.md#userimpersonatev1) | **POST** /1/object/user/{pkiUserID}/impersonate | Impersonate the user |
 | [**UserSendPasswordResetV1**](ObjectUserApi.md#usersendpasswordresetv1) | **POST** /1/object/user/{pkiUserID}/sendPasswordReset | Send password reset |
 
 <a id="usercreateobjectv1"></a>
@@ -900,6 +902,104 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="usergetezmaxcustomeruserv1"></a>
+# **UserGetEzmaxcustomeruserV1**
+> UserGetEzmaxcustomeruserV1Response UserGetEzmaxcustomeruserV1 (int pkiUserID)
+
+Returns the Ezmaxcustomeruser for the User
+
+Returns the Ezmaxcustomeruser for the User
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UserGetEzmaxcustomeruserV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUserApi(config);
+            var pkiUserID = 56;  // int | 
+
+            try
+            {
+                // Returns the Ezmaxcustomeruser for the User
+                UserGetEzmaxcustomeruserV1Response result = apiInstance.UserGetEzmaxcustomeruserV1(pkiUserID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectUserApi.UserGetEzmaxcustomeruserV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UserGetEzmaxcustomeruserV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Returns the Ezmaxcustomeruser for the User
+    ApiResponse<UserGetEzmaxcustomeruserV1Response> response = apiInstance.UserGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserApi.UserGetEzmaxcustomeruserV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserID** | **int** |  |  |
+
+### Return type
+
+[**UserGetEzmaxcustomeruserV1Response**](UserGetEzmaxcustomeruserV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="usergetlistv1"></a>
 # **UserGetListV1**
 > UserGetListV1Response UserGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
@@ -1477,6 +1577,106 @@ catch (ApiException e)
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="userimpersonatev1"></a>
+# **UserImpersonateV1**
+> UserImpersonateV1Response UserImpersonateV1 (int pkiUserID, UserImpersonateV1Request userImpersonateV1Request)
+
+Impersonate the user
+
+Using this endpoint, you can impersonate the user.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class UserImpersonateV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectUserApi(config);
+            var pkiUserID = 56;  // int | 
+            var userImpersonateV1Request = new UserImpersonateV1Request(); // UserImpersonateV1Request | 
+
+            try
+            {
+                // Impersonate the user
+                UserImpersonateV1Response result = apiInstance.UserImpersonateV1(pkiUserID, userImpersonateV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectUserApi.UserImpersonateV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UserImpersonateV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Impersonate the user
+    ApiResponse<UserImpersonateV1Response> response = apiInstance.UserImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectUserApi.UserImpersonateV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiUserID** | **int** |  |  |
+| **userImpersonateV1Request** | [**UserImpersonateV1Request**](UserImpersonateV1Request.md) |  |  |
+
+### Return type
+
+[**UserImpersonateV1Response**](UserImpersonateV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

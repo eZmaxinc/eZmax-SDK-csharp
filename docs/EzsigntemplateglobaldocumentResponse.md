@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsigntemplateglobaldocumentID** | **int** | The unique ID of the Ezsigntemplateglobaldocument | 
 **SEzsigntemplateglobaldocumentName** | **string** | The name of the Ezsigntemplateglobaldocument. | 
+**EEzsigntemplateglobaldocumentAcceptationtype** | **FieldEEzsigntemplateglobaldocumentAcceptationtype** |  | 
 **IEzsigntemplateglobaldocumentPagetotal** | **int** | The number of pages in the Ezsigntemplateglobaldocument. | 
 **IEzsigntemplateglobaldocumentSignaturetotal** | **int** | The number of total signatures in the Ezsigntemplateglobal. | 
 

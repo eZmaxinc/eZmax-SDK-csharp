@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
+    /// Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal
     /// </summary>
     [DataContract(Name = "ezsigndocument-applyEzsigntemplateglobal-v1-Response")]
     public partial class EzsigndocumentApplyEzsigntemplateglobalV1Response : IValidatableObject

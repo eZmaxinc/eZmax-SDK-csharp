@@ -54,7 +54,7 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
         /// <param name="tEzsignfolderMessage">A custom text message that will be added to the email sent..</param>
-        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the the first reminder sending (required).</param>
+        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the first reminder sending (required).</param>
         /// <param name="iEzsignfolderSendreminderotherdays">The number of days after the first reminder sending (required).</param>
         /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         public EzsignfolderRequestV3(int pkiEzsignfolderID = default, int fkiEzsignfoldertypeID = default, int fkiTimezoneID = default, int fkiEzsigntsarequirementID = default, FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default, string sEzsignfolderDescription = default, string tEzsignfolderNote = default, string tEzsignfolderMessage = default, int iEzsignfolderSendreminderfirstdays = default, int iEzsignfolderSendreminderotherdays = default, string sEzsignfolderExternalid = default)
@@ -156,9 +156,9 @@ Mary</example>
         public string TEzsignfolderMessage { get; set; }
 
         /// <summary>
-        /// The number of days before the the first reminder sending
+        /// The number of days before the first reminder sending
         /// </summary>
-        /// <value>The number of days before the the first reminder sending</value>
+        /// <value>The number of days before the first reminder sending</value>
         /*
         <example>30</example>
         */

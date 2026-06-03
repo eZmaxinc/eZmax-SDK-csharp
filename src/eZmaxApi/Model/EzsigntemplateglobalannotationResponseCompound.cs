@@ -59,8 +59,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigntemplateglobalannotationResponseCompound" /> class.
         /// </summary>
         /// <param name="pkiEzsigntemplateglobalannotationID">The unique ID of the Ezsigntemplateglobalannotation (required).</param>
-        /// <param name="fkiEzsigntemplateglobaldocumentpageID">The unique ID of the Ezsigntemplateglobaldocumentpage (required).</param>
-        /// <param name="fkiTextstylestaticID">The unique ID of the Textstylestatic (required).</param>
+        /// <param name="fkiTextstylestaticID">The unique ID of the Textstylestatic.</param>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
         /// <param name="eEzsigntemplateglobalannotationHorizontalalignment">eEzsigntemplateglobalannotationHorizontalalignment (required).</param>
         /// <param name="eEzsigntemplateglobalannotationVerticalalignment">eEzsigntemplateglobalannotationVerticalalignment (required).</param>
         /// <param name="eEzsigntemplateglobalannotationType">eEzsigntemplateglobalannotationType (required).</param>
@@ -68,14 +68,13 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplateglobalannotationY">The y of the Ezsigntemplateglobalannotation (required).</param>
         /// <param name="iEzsigntemplateglobalannotationWidth">The width of the Ezsigntemplateglobalannotation (required).</param>
         /// <param name="iEzsigntemplateglobalannotationHeight">The height of the Ezsigntemplateglobalannotation (required).</param>
+        /// <param name="iEzsigntemplateglobaldocumentpagePagenumber">The page number in the Ezsigntemplateglobaldocument (required).</param>
         /// <param name="sEzsigntemplateglobalannotationDescription">The description of the Ezsigntemplateglobalannotation (required).</param>
         /// <param name="sEzsigntemplateglobalannotationDefaulttext">The defaulttext of the Ezsigntemplateglobalannotation (required).</param>
         /// <param name="sEzsigntemplateglobalannotationDropdownvalues">The dropdownvalues of the Ezsigntemplateglobalannotation (required).</param>
-        public EzsigntemplateglobalannotationResponseCompound(int pkiEzsigntemplateglobalannotationID = default, int fkiEzsigntemplateglobaldocumentpageID = default, int fkiTextstylestaticID = default, FieldEEzsigntemplateglobalannotationHorizontalalignment eEzsigntemplateglobalannotationHorizontalalignment = default, FieldEEzsigntemplateglobalannotationVerticalalignment eEzsigntemplateglobalannotationVerticalalignment = default, FieldEEzsigntemplateglobalannotationType eEzsigntemplateglobalannotationType = default, int iEzsigntemplateglobalannotationX = default, int iEzsigntemplateglobalannotationY = default, int iEzsigntemplateglobalannotationWidth = default, int iEzsigntemplateglobalannotationHeight = default, string sEzsigntemplateglobalannotationDescription = default, string sEzsigntemplateglobalannotationDefaulttext = default, string sEzsigntemplateglobalannotationDropdownvalues = default)
+        public EzsigntemplateglobalannotationResponseCompound(int pkiEzsigntemplateglobalannotationID = default, int fkiTextstylestaticID = default, TextstylestaticRequestCompound objTextstylestatic = default, FieldEEzsigntemplateglobalannotationHorizontalalignment eEzsigntemplateglobalannotationHorizontalalignment = default, FieldEEzsigntemplateglobalannotationVerticalalignment eEzsigntemplateglobalannotationVerticalalignment = default, FieldEEzsigntemplateglobalannotationType eEzsigntemplateglobalannotationType = default, int iEzsigntemplateglobalannotationX = default, int iEzsigntemplateglobalannotationY = default, int iEzsigntemplateglobalannotationWidth = default, int iEzsigntemplateglobalannotationHeight = default, int iEzsigntemplateglobaldocumentpagePagenumber = default, string sEzsigntemplateglobalannotationDescription = default, string sEzsigntemplateglobalannotationDefaulttext = default, string sEzsigntemplateglobalannotationDropdownvalues = default)
         {
             this.PkiEzsigntemplateglobalannotationID = pkiEzsigntemplateglobalannotationID;
-            this.FkiEzsigntemplateglobaldocumentpageID = fkiEzsigntemplateglobaldocumentpageID;
-            this.FkiTextstylestaticID = fkiTextstylestaticID;
             this.EEzsigntemplateglobalannotationHorizontalalignment = eEzsigntemplateglobalannotationHorizontalalignment;
             this.EEzsigntemplateglobalannotationVerticalalignment = eEzsigntemplateglobalannotationVerticalalignment;
             this.EEzsigntemplateglobalannotationType = eEzsigntemplateglobalannotationType;
@@ -83,6 +82,7 @@ namespace eZmaxApi.Model
             this.IEzsigntemplateglobalannotationY = iEzsigntemplateglobalannotationY;
             this.IEzsigntemplateglobalannotationWidth = iEzsigntemplateglobalannotationWidth;
             this.IEzsigntemplateglobalannotationHeight = iEzsigntemplateglobalannotationHeight;
+            this.IEzsigntemplateglobaldocumentpagePagenumber = iEzsigntemplateglobaldocumentpagePagenumber;
             // to ensure "sEzsigntemplateglobalannotationDescription" is required (not null)
             if (sEzsigntemplateglobalannotationDescription == null)
             {
@@ -101,6 +101,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzsigntemplateglobalannotationDropdownvalues is a required property for EzsigntemplateglobalannotationResponseCompound and cannot be null");
             }
             this.SEzsigntemplateglobalannotationDropdownvalues = sEzsigntemplateglobalannotationDropdownvalues;
+            this.FkiTextstylestaticID = fkiTextstylestaticID;
+            this.ObjTextstylestatic = objTextstylestatic;
         }
 
         /// <summary>
@@ -114,24 +116,20 @@ namespace eZmaxApi.Model
         public int PkiEzsigntemplateglobalannotationID { get; set; }
 
         /// <summary>
-        /// The unique ID of the Ezsigntemplateglobaldocumentpage
-        /// </summary>
-        /// <value>The unique ID of the Ezsigntemplateglobaldocumentpage</value>
-        /*
-        <example>225</example>
-        */
-        [DataMember(Name = "fkiEzsigntemplateglobaldocumentpageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplateglobaldocumentpageID { get; set; }
-
-        /// <summary>
         /// The unique ID of the Textstylestatic
         /// </summary>
         /// <value>The unique ID of the Textstylestatic</value>
         /*
         <example>216</example>
         */
-        [DataMember(Name = "fkiTextstylestaticID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiTextstylestaticID", EmitDefaultValue = false)]
         public int FkiTextstylestaticID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjTextstylestatic
+        /// </summary>
+        [DataMember(Name = "objTextstylestatic", EmitDefaultValue = false)]
+        public TextstylestaticRequestCompound ObjTextstylestatic { get; set; }
 
         /// <summary>
         /// The x of the Ezsigntemplateglobalannotation
@@ -174,6 +172,16 @@ namespace eZmaxApi.Model
         public int IEzsigntemplateglobalannotationHeight { get; set; }
 
         /// <summary>
+        /// The page number in the Ezsigntemplateglobaldocument
+        /// </summary>
+        /// <value>The page number in the Ezsigntemplateglobaldocument</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "iEzsigntemplateglobaldocumentpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigntemplateglobaldocumentpagePagenumber { get; set; }
+
+        /// <summary>
         /// The description of the Ezsigntemplateglobalannotation
         /// </summary>
         /// <value>The description of the Ezsigntemplateglobalannotation</value>
@@ -212,8 +220,8 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplateglobalannotationResponseCompound {\n");
             sb.Append("  PkiEzsigntemplateglobalannotationID: ").Append(PkiEzsigntemplateglobalannotationID).Append("\n");
-            sb.Append("  FkiEzsigntemplateglobaldocumentpageID: ").Append(FkiEzsigntemplateglobaldocumentpageID).Append("\n");
             sb.Append("  FkiTextstylestaticID: ").Append(FkiTextstylestaticID).Append("\n");
+            sb.Append("  ObjTextstylestatic: ").Append(ObjTextstylestatic).Append("\n");
             sb.Append("  EEzsigntemplateglobalannotationHorizontalalignment: ").Append(EEzsigntemplateglobalannotationHorizontalalignment).Append("\n");
             sb.Append("  EEzsigntemplateglobalannotationVerticalalignment: ").Append(EEzsigntemplateglobalannotationVerticalalignment).Append("\n");
             sb.Append("  EEzsigntemplateglobalannotationType: ").Append(EEzsigntemplateglobalannotationType).Append("\n");
@@ -221,6 +229,7 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateglobalannotationY: ").Append(IEzsigntemplateglobalannotationY).Append("\n");
             sb.Append("  IEzsigntemplateglobalannotationWidth: ").Append(IEzsigntemplateglobalannotationWidth).Append("\n");
             sb.Append("  IEzsigntemplateglobalannotationHeight: ").Append(IEzsigntemplateglobalannotationHeight).Append("\n");
+            sb.Append("  IEzsigntemplateglobaldocumentpagePagenumber: ").Append(IEzsigntemplateglobaldocumentpagePagenumber).Append("\n");
             sb.Append("  SEzsigntemplateglobalannotationDescription: ").Append(SEzsigntemplateglobalannotationDescription).Append("\n");
             sb.Append("  SEzsigntemplateglobalannotationDefaulttext: ").Append(SEzsigntemplateglobalannotationDefaulttext).Append("\n");
             sb.Append("  SEzsigntemplateglobalannotationDropdownvalues: ").Append(SEzsigntemplateglobalannotationDropdownvalues).Append("\n");
@@ -254,18 +263,6 @@ namespace eZmaxApi.Model
             if (this.PkiEzsigntemplateglobalannotationID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobalannotationID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobalannotationID" });
-            }
-
-            // FkiEzsigntemplateglobaldocumentpageID (int) maximum
-            if (this.FkiEzsigntemplateglobaldocumentpageID > (int)16777215)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateglobaldocumentpageID, must be a value less than or equal to 16777215.", new [] { "FkiEzsigntemplateglobaldocumentpageID" });
-            }
-
-            // FkiEzsigntemplateglobaldocumentpageID (int) minimum
-            if (this.FkiEzsigntemplateglobaldocumentpageID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateglobaldocumentpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobaldocumentpageID" });
             }
 
             // FkiTextstylestaticID (int) minimum
@@ -320,6 +317,12 @@ namespace eZmaxApi.Model
             if (this.IEzsigntemplateglobalannotationHeight < (int)0)
             {
                 yield return new ValidationResult("Invalid value for IEzsigntemplateglobalannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateglobalannotationHeight" });
+            }
+
+            // IEzsigntemplateglobaldocumentpagePagenumber (int) minimum
+            if (this.IEzsigntemplateglobaldocumentpagePagenumber < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplateglobaldocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateglobaldocumentpagePagenumber" });
             }
 
             if (this.SEzsigntemplateglobalannotationDescription != null) {

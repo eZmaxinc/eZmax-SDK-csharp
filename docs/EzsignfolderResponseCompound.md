@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | [optional] 
 **BEzsignfolderIsdisposable** | **bool** | If the Ezsigndocument can be disposed | [optional] 
 **EEzsignfolderSendreminderfrequency** | **FieldEEzsignfolderSendreminderfrequency** |  | [optional] 
-**IEzsignfolderSendreminderfirstdays** | **int** | The number of days before the the first reminder sending | [optional] 
+**IEzsignfolderSendreminderfirstdays** | **int** | The number of days before the first reminder sending | [optional] 
 **IEzsignfolderSendreminderotherdays** | **int** | The number of days after the first reminder sending | [optional] 
 **DtEzsignfolderDelayedsenddate** | **string** | The date and time at which the Ezsignfolder will be sent in the future. | [optional] 
 **DtEzsignfolderDuedate** | **string** | The maximum date and time at which the Ezsignfolder can be signed. | [optional] 

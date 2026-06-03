@@ -72,7 +72,8 @@ namespace eZmaxApi.Model
         /// <param name="eEzsigntemplateType">eEzsigntemplateType.</param>
         /// <param name="objEzsigntemplatedocument">objEzsigntemplatedocument.</param>
         /// <param name="aObjEzsigntemplatesigner">aObjEzsigntemplatesigner (required).</param>
-        public EzsigntemplateResponseCompoundV3(int pkiEzsigntemplateID = default, int fkiEzsigntemplatedocumentID = default, int fkiEzsignfoldertypeID = default, CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype = default, int fkiLanguageID = default, int fkiEzdoctemplatedocumentID = default, string sEzdoctemplatedocumentNameX = default, string sLanguageNameX = default, string sEzsigntemplateDescription = default, string sEzsigntemplateExternaldescription = default, string tEzsigntemplateComment = default, FieldEEzsigntemplateRecognition? eEzsigntemplateRecognition = default, string sEzsigntemplateFilenameregexp = default, bool bEzsigntemplateAdminonly = default, string sEzsignfoldertypeNameX = default, CommonAudit objAudit = default, bool bEzsigntemplateEditallowed = default, FieldEEzsigntemplateType? eEzsigntemplateType = default, EzsigntemplatedocumentResponse objEzsigntemplatedocument = default, List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default)
+        /// <param name="aObjEzsigntemplateannotation">aObjEzsigntemplateannotation.</param>
+        public EzsigntemplateResponseCompoundV3(int pkiEzsigntemplateID = default, int fkiEzsigntemplatedocumentID = default, int fkiEzsignfoldertypeID = default, CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype = default, int fkiLanguageID = default, int fkiEzdoctemplatedocumentID = default, string sEzdoctemplatedocumentNameX = default, string sLanguageNameX = default, string sEzsigntemplateDescription = default, string sEzsigntemplateExternaldescription = default, string tEzsigntemplateComment = default, FieldEEzsigntemplateRecognition? eEzsigntemplateRecognition = default, string sEzsigntemplateFilenameregexp = default, bool bEzsigntemplateAdminonly = default, string sEzsignfoldertypeNameX = default, CommonAudit objAudit = default, bool bEzsigntemplateEditallowed = default, FieldEEzsigntemplateType? eEzsigntemplateType = default, EzsigntemplatedocumentResponse objEzsigntemplatedocument = default, List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = default, List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation = default)
         {
             this.PkiEzsigntemplateID = pkiEzsigntemplateID;
             this.FkiLanguageID = fkiLanguageID;
@@ -114,6 +115,7 @@ namespace eZmaxApi.Model
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.EEzsigntemplateType = eEzsigntemplateType;
             this.ObjEzsigntemplatedocument = objEzsigntemplatedocument;
+            this.AObjEzsigntemplateannotation = aObjEzsigntemplateannotation;
         }
 
         /// <summary>
@@ -272,6 +274,12 @@ namespace eZmaxApi.Model
         public List<EzsigntemplatesignerResponseCompound> AObjEzsigntemplatesigner { get; set; }
 
         /// <summary>
+        /// Gets or Sets AObjEzsigntemplateannotation
+        /// </summary>
+        [DataMember(Name = "a_objEzsigntemplateannotation", EmitDefaultValue = false)]
+        public List<EzsigntemplateannotationResponseCompound> AObjEzsigntemplateannotation { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -299,6 +307,7 @@ namespace eZmaxApi.Model
             sb.Append("  EEzsigntemplateType: ").Append(EEzsigntemplateType).Append("\n");
             sb.Append("  ObjEzsigntemplatedocument: ").Append(ObjEzsigntemplatedocument).Append("\n");
             sb.Append("  AObjEzsigntemplatesigner: ").Append(AObjEzsigntemplatesigner).Append("\n");
+            sb.Append("  AObjEzsigntemplateannotation: ").Append(AObjEzsigntemplateannotation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

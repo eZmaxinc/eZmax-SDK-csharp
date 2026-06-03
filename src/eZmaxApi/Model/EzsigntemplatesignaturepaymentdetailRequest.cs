@@ -163,7 +163,7 @@ namespace eZmaxApi.Model
 
             if (this.DEzsigntemplatesignaturepaymentdetailAmount != null) {
                 // DEzsigntemplatesignaturepaymentdetailAmount (string) pattern
-                Regex regexDEzsigntemplatesignaturepaymentdetailAmount = new Regex(@"^-{0,1}[\d]{1,9}?\.[\d]{2}$", RegexOptions.CultureInvariant);
+                Regex regexDEzsigntemplatesignaturepaymentdetailAmount = new Regex(@"^[\d]{1,3}?\.[\d]{2}$", RegexOptions.CultureInvariant);
                 if (!regexDEzsigntemplatesignaturepaymentdetailAmount.Match(this.DEzsigntemplatesignaturepaymentdetailAmount).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DEzsigntemplatesignaturepaymentdetailAmount, must match a pattern of " + regexDEzsigntemplatesignaturepaymentdetailAmount, new [] { "DEzsigntemplatesignaturepaymentdetailAmount" });

@@ -63,13 +63,14 @@ namespace eZmaxApi.Model
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
         /// <param name="bUserIsactive">Whether the User is active or not (required).</param>
+        /// <param name="bUserSuspended">Whether the User is suspended or not.</param>
         /// <param name="eUserType">eUserType (required).</param>
         /// <param name="eUserOrigin">eUserOrigin (required).</param>
         /// <param name="eUserEzsignaccess">eUserEzsignaccess (required).</param>
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="sEmailAddress">The email address. (required).</param>
         /// <param name="sUserJobtitle">The job title of the user.</param>
-        public UserListElement(int pkiUserID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, bool bUserIsactive = default, FieldEUserType eUserType = default, FieldEUserOrigin eUserOrigin = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserEzsignprepaidexpiration = default, string sEmailAddress = default, string sUserJobtitle = default)
+        public UserListElement(int pkiUserID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, bool bUserIsactive = default, bool bUserSuspended = default, FieldEUserType eUserType = default, FieldEUserOrigin eUserOrigin = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserEzsignprepaidexpiration = default, string sEmailAddress = default, string sUserJobtitle = default)
         {
             this.PkiUserID = pkiUserID;
             // to ensure "sUserFirstname" is required (not null)
@@ -100,6 +101,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEmailAddress is a required property for UserListElement and cannot be null");
             }
             this.SEmailAddress = sEmailAddress;
+            this.BUserSuspended = bUserSuspended;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
             this.SUserJobtitle = sUserJobtitle;
         }
@@ -155,6 +157,16 @@ namespace eZmaxApi.Model
         public bool BUserIsactive { get; set; }
 
         /// <summary>
+        /// Whether the User is suspended or not
+        /// </summary>
+        /// <value>Whether the User is suspended or not</value>
+        /*
+        <example>true</example>
+        */
+        [DataMember(Name = "bUserSuspended", EmitDefaultValue = true)]
+        public bool BUserSuspended { get; set; }
+
+        /// <summary>
         /// The eZsign prepaid expiration date
         /// </summary>
         /// <value>The eZsign prepaid expiration date</value>
@@ -197,6 +209,7 @@ namespace eZmaxApi.Model
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
             sb.Append("  BUserIsactive: ").Append(BUserIsactive).Append("\n");
+            sb.Append("  BUserSuspended: ").Append(BUserSuspended).Append("\n");
             sb.Append("  EUserType: ").Append(EUserType).Append("\n");
             sb.Append("  EUserOrigin: ").Append(EUserOrigin).Append("\n");
             sb.Append("  EUserEzsignaccess: ").Append(EUserEzsignaccess).Append("\n");

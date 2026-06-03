@@ -84,7 +84,7 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderDescription">The description of the Ezsignfolder (required).</param>
         /// <param name="tEzsignfolderNote">Note about the Ezsignfolder.</param>
         /// <param name="bEzsignfolderIsdisposable">If the Ezsigndocument can be disposed.</param>
-        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the the first reminder sending.</param>
+        /// <param name="iEzsignfolderSendreminderfirstdays">The number of days before the first reminder sending.</param>
         /// <param name="iEzsignfolderSendreminderotherdays">The number of days after the first reminder sending.</param>
         /// <param name="dtEzsignfolderDelayedsenddate">The date and time at which the Ezsignfolder will be sent in the future..</param>
         /// <param name="dtEzsignfolderDuedate">The maximum date and time at which the Ezsignfolder can be signed..</param>
@@ -92,6 +92,7 @@ namespace eZmaxApi.Model
         /// <param name="dtEzsignfolderScheduledarchive">The scheduled date and time at which the Ezsignfolder should be archived..</param>
         /// <param name="dtEzsignfolderScheduleddispose">The scheduled date at which the Ezsignfolder should be Disposed..</param>
         /// <param name="eEzsignfolderStep">eEzsignfolderStep.</param>
+        /// <param name="iEzsignfolderStepcurrent">The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39;.</param>
         /// <param name="dtEzsignfolderClose">The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely..</param>
         /// <param name="dtEzsignfolderArchive">The date and time at which the Ezsignfolder was archived..</param>
         /// <param name="dtEzsignfolderDispose">The date and time at which the Ezsignfolder was disposed..</param>
@@ -101,7 +102,7 @@ namespace eZmaxApi.Model
         /// <param name="sEzsignfolderExternalid">This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. .</param>
         /// <param name="eEzsignfolderAccess">eEzsignfolderAccess.</param>
         /// <param name="objTimezone">objTimezone.</param>
-        public EzsignfolderResponseCompoundV3(int pkiEzsignfolderID = default, int fkiEzsignfoldertypeID = default, CustomEzsignfoldertypeResponse objEzsignfoldertype = default, int fkiTimezoneID = default, FieldEEzsignfolderCompletion eEzsignfolderCompletion = default, FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default, string sEzsignfoldertypeNameX = default, int fkiBillingentityinternalID = default, string sBillingentityinternalDescriptionX = default, int fkiEzsigntsarequirementID = default, string sEzsigntsarequirementDescriptionX = default, string sEzsignfolderDescription = default, string tEzsignfolderNote = default, bool bEzsignfolderIsdisposable = default, int iEzsignfolderSendreminderfirstdays = default, int iEzsignfolderSendreminderotherdays = default, string dtEzsignfolderDelayedsenddate = default, string dtEzsignfolderDuedate = default, string dtEzsignfolderSentdate = default, string dtEzsignfolderScheduledarchive = default, string dtEzsignfolderScheduleddispose = default, FieldEEzsignfolderStep? eEzsignfolderStep = default, string dtEzsignfolderClose = default, string dtEzsignfolderArchive = default, string dtEzsignfolderDispose = default, string tEzsignfolderMessage = default, FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder = default, CommonAudit objAudit = default, string sEzsignfolderExternalid = default, ComputedEEzsignfolderAccess? eEzsignfolderAccess = default, CustomTimezoneWithCodeResponse objTimezone = default)
+        public EzsignfolderResponseCompoundV3(int pkiEzsignfolderID = default, int fkiEzsignfoldertypeID = default, CustomEzsignfoldertypeResponse objEzsignfoldertype = default, int fkiTimezoneID = default, FieldEEzsignfolderCompletion eEzsignfolderCompletion = default, FieldEEzsignfolderDocumentdependency? eEzsignfolderDocumentdependency = default, string sEzsignfoldertypeNameX = default, int fkiBillingentityinternalID = default, string sBillingentityinternalDescriptionX = default, int fkiEzsigntsarequirementID = default, string sEzsigntsarequirementDescriptionX = default, string sEzsignfolderDescription = default, string tEzsignfolderNote = default, bool bEzsignfolderIsdisposable = default, int iEzsignfolderSendreminderfirstdays = default, int iEzsignfolderSendreminderotherdays = default, string dtEzsignfolderDelayedsenddate = default, string dtEzsignfolderDuedate = default, string dtEzsignfolderSentdate = default, string dtEzsignfolderScheduledarchive = default, string dtEzsignfolderScheduleddispose = default, FieldEEzsignfolderStep? eEzsignfolderStep = default, int iEzsignfolderStepcurrent = default, string dtEzsignfolderClose = default, string dtEzsignfolderArchive = default, string dtEzsignfolderDispose = default, string tEzsignfolderMessage = default, FieldEEzsignfolderMessageorder? eEzsignfolderMessageorder = default, CommonAudit objAudit = default, string sEzsignfolderExternalid = default, ComputedEEzsignfolderAccess? eEzsignfolderAccess = default, CustomTimezoneWithCodeResponse objTimezone = default)
         {
             this.PkiEzsignfolderID = pkiEzsignfolderID;
             this.EEzsignfolderCompletion = eEzsignfolderCompletion;
@@ -130,6 +131,7 @@ namespace eZmaxApi.Model
             this.DtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
             this.DtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
             this.EEzsignfolderStep = eEzsignfolderStep;
+            this.IEzsignfolderStepcurrent = iEzsignfolderStepcurrent;
             this.DtEzsignfolderClose = dtEzsignfolderClose;
             this.DtEzsignfolderArchive = dtEzsignfolderArchive;
             this.DtEzsignfolderDispose = dtEzsignfolderDispose;
@@ -255,9 +257,9 @@ namespace eZmaxApi.Model
         public bool BEzsignfolderIsdisposable { get; set; }
 
         /// <summary>
-        /// The number of days before the the first reminder sending
+        /// The number of days before the first reminder sending
         /// </summary>
-        /// <value>The number of days before the the first reminder sending</value>
+        /// <value>The number of days before the first reminder sending</value>
         /*
         <example>30</example>
         */
@@ -323,6 +325,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "dtEzsignfolderScheduleddispose", EmitDefaultValue = false)]
         public string DtEzsignfolderScheduleddispose { get; set; }
+
+        /// <summary>
+        /// The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39;
+        /// </summary>
+        /// <value>The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39;</value>
+        /*
+        <example>30</example>
+        */
+        [DataMember(Name = "iEzsignfolderStepcurrent", EmitDefaultValue = false)]
+        public int IEzsignfolderStepcurrent { get; set; }
 
         /// <summary>
         /// The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
@@ -424,6 +436,7 @@ Mary</example>
             sb.Append("  DtEzsignfolderScheduledarchive: ").Append(DtEzsignfolderScheduledarchive).Append("\n");
             sb.Append("  DtEzsignfolderScheduleddispose: ").Append(DtEzsignfolderScheduleddispose).Append("\n");
             sb.Append("  EEzsignfolderStep: ").Append(EEzsignfolderStep).Append("\n");
+            sb.Append("  IEzsignfolderStepcurrent: ").Append(IEzsignfolderStepcurrent).Append("\n");
             sb.Append("  DtEzsignfolderClose: ").Append(DtEzsignfolderClose).Append("\n");
             sb.Append("  DtEzsignfolderArchive: ").Append(DtEzsignfolderArchive).Append("\n");
             sb.Append("  DtEzsignfolderDispose: ").Append(DtEzsignfolderDispose).Append("\n");
@@ -526,6 +539,18 @@ Mary</example>
             if (this.IEzsignfolderSendreminderotherdays < (int)0)
             {
                 yield return new ValidationResult("Invalid value for IEzsignfolderSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfolderSendreminderotherdays" });
+            }
+
+            // IEzsignfolderStepcurrent (int) maximum
+            if (this.IEzsignfolderStepcurrent > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for IEzsignfolderStepcurrent, must be a value less than or equal to 255.", new [] { "IEzsignfolderStepcurrent" });
+            }
+
+            // IEzsignfolderStepcurrent (int) minimum
+            if (this.IEzsignfolderStepcurrent < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IEzsignfolderStepcurrent, must be a value greater than or equal to 0.", new [] { "IEzsignfolderStepcurrent" });
             }
 
             if (this.SEzsignfolderExternalid != null) {

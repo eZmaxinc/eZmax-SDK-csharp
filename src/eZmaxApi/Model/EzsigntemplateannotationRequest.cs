@@ -59,8 +59,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="EzsigntemplateannotationRequest" /> class.
         /// </summary>
         /// <param name="pkiEzsigntemplateannotationID">The unique ID of the Ezsigntemplateannotation.</param>
-        /// <param name="fkiEzsigntemplatedocumentpageID">The unique ID of the Ezsigntemplatedocumentpage (required).</param>
-        /// <param name="fkiTextstylestaticID">The unique ID of the Textstylestatic (required).</param>
+        /// <param name="fkiEzsigntemplatedocumentID">The unique ID of the Ezsigntemplatedocument (required).</param>
         /// <param name="eEzsigntemplateannotationHorizontalalignment">eEzsigntemplateannotationHorizontalalignment (required).</param>
         /// <param name="eEzsigntemplateannotationVerticalalignment">eEzsigntemplateannotationVerticalalignment (required).</param>
         /// <param name="eEzsigntemplateannotationType">eEzsigntemplateannotationType (required).</param>
@@ -68,13 +67,14 @@ namespace eZmaxApi.Model
         /// <param name="iEzsigntemplateannotationY">The y of the Ezsigntemplateannotation (required).</param>
         /// <param name="iEzsigntemplateannotationWidth">The width of the Ezsigntemplateannotation (required).</param>
         /// <param name="iEzsigntemplateannotationHeight">The height of the Ezsigntemplateannotation (required).</param>
+        /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
         /// <param name="sEzsigntemplateannotationDescription">The description of the Ezsigntemplateannotation (required).</param>
         /// <param name="sEzsigntemplateannotationDefaulttext">The defaulttext of the Ezsigntemplateannotation (required).</param>
-        /// <param name="sEzsigntemplateannotationnDropdownvalues">The ndropdownvalues of the Ezsigntemplateannotation (required).</param>
-        public EzsigntemplateannotationRequest(int pkiEzsigntemplateannotationID = default, int fkiEzsigntemplatedocumentpageID = default, int fkiTextstylestaticID = default, FieldEEzsigntemplateannotationHorizontalalignment eEzsigntemplateannotationHorizontalalignment = default, FieldEEzsigntemplateannotationVerticalalignment eEzsigntemplateannotationVerticalalignment = default, FieldEEzsigntemplateannotationType eEzsigntemplateannotationType = default, int iEzsigntemplateannotationX = default, int iEzsigntemplateannotationY = default, int iEzsigntemplateannotationWidth = default, int iEzsigntemplateannotationHeight = default, string sEzsigntemplateannotationDescription = default, string sEzsigntemplateannotationDefaulttext = default, string sEzsigntemplateannotationnDropdownvalues = default)
+        /// <param name="sEzsigntemplateannotationDropdownvalues">The ndropdownvalues of the Ezsigntemplateannotation (required).</param>
+        /// <param name="objTextstylestatic">objTextstylestatic.</param>
+        public EzsigntemplateannotationRequest(int pkiEzsigntemplateannotationID = default, int fkiEzsigntemplatedocumentID = default, FieldEEzsigntemplateannotationHorizontalalignment eEzsigntemplateannotationHorizontalalignment = default, FieldEEzsigntemplateannotationVerticalalignment eEzsigntemplateannotationVerticalalignment = default, FieldEEzsigntemplateannotationType eEzsigntemplateannotationType = default, int iEzsigntemplateannotationX = default, int iEzsigntemplateannotationY = default, int iEzsigntemplateannotationWidth = default, int iEzsigntemplateannotationHeight = default, int iEzsigntemplatedocumentpagePagenumber = default, string sEzsigntemplateannotationDescription = default, string sEzsigntemplateannotationDefaulttext = default, string sEzsigntemplateannotationDropdownvalues = default, TextstylestaticRequestCompound objTextstylestatic = default)
         {
-            this.FkiEzsigntemplatedocumentpageID = fkiEzsigntemplatedocumentpageID;
-            this.FkiTextstylestaticID = fkiTextstylestaticID;
+            this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
             this.EEzsigntemplateannotationHorizontalalignment = eEzsigntemplateannotationHorizontalalignment;
             this.EEzsigntemplateannotationVerticalalignment = eEzsigntemplateannotationVerticalalignment;
             this.EEzsigntemplateannotationType = eEzsigntemplateannotationType;
@@ -82,6 +82,7 @@ namespace eZmaxApi.Model
             this.IEzsigntemplateannotationY = iEzsigntemplateannotationY;
             this.IEzsigntemplateannotationWidth = iEzsigntemplateannotationWidth;
             this.IEzsigntemplateannotationHeight = iEzsigntemplateannotationHeight;
+            this.IEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
             // to ensure "sEzsigntemplateannotationDescription" is required (not null)
             if (sEzsigntemplateannotationDescription == null)
             {
@@ -94,13 +95,14 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzsigntemplateannotationDefaulttext is a required property for EzsigntemplateannotationRequest and cannot be null");
             }
             this.SEzsigntemplateannotationDefaulttext = sEzsigntemplateannotationDefaulttext;
-            // to ensure "sEzsigntemplateannotationnDropdownvalues" is required (not null)
-            if (sEzsigntemplateannotationnDropdownvalues == null)
+            // to ensure "sEzsigntemplateannotationDropdownvalues" is required (not null)
+            if (sEzsigntemplateannotationDropdownvalues == null)
             {
-                throw new ArgumentNullException("sEzsigntemplateannotationnDropdownvalues is a required property for EzsigntemplateannotationRequest and cannot be null");
+                throw new ArgumentNullException("sEzsigntemplateannotationDropdownvalues is a required property for EzsigntemplateannotationRequest and cannot be null");
             }
-            this.SEzsigntemplateannotationnDropdownvalues = sEzsigntemplateannotationnDropdownvalues;
+            this.SEzsigntemplateannotationDropdownvalues = sEzsigntemplateannotationDropdownvalues;
             this.PkiEzsigntemplateannotationID = pkiEzsigntemplateannotationID;
+            this.ObjTextstylestatic = objTextstylestatic;
         }
 
         /// <summary>
@@ -114,24 +116,14 @@ namespace eZmaxApi.Model
         public int PkiEzsigntemplateannotationID { get; set; }
 
         /// <summary>
-        /// The unique ID of the Ezsigntemplatedocumentpage
+        /// The unique ID of the Ezsigntemplatedocument
         /// </summary>
-        /// <value>The unique ID of the Ezsigntemplatedocumentpage</value>
+        /// <value>The unique ID of the Ezsigntemplatedocument</value>
         /*
-        <example>85</example>
+        <example>133</example>
         */
-        [DataMember(Name = "fkiEzsigntemplatedocumentpageID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiEzsigntemplatedocumentpageID { get; set; }
-
-        /// <summary>
-        /// The unique ID of the Textstylestatic
-        /// </summary>
-        /// <value>The unique ID of the Textstylestatic</value>
-        /*
-        <example>216</example>
-        */
-        [DataMember(Name = "fkiTextstylestaticID", IsRequired = true, EmitDefaultValue = true)]
-        public int FkiTextstylestaticID { get; set; }
+        [DataMember(Name = "fkiEzsigntemplatedocumentID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiEzsigntemplatedocumentID { get; set; }
 
         /// <summary>
         /// The x of the Ezsigntemplateannotation
@@ -174,6 +166,16 @@ namespace eZmaxApi.Model
         public int IEzsigntemplateannotationHeight { get; set; }
 
         /// <summary>
+        /// The page number in the Ezsigntemplatedocument
+        /// </summary>
+        /// <value>The page number in the Ezsigntemplatedocument</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "iEzsigntemplatedocumentpagePagenumber", IsRequired = true, EmitDefaultValue = true)]
+        public int IEzsigntemplatedocumentpagePagenumber { get; set; }
+
+        /// <summary>
         /// The description of the Ezsigntemplateannotation
         /// </summary>
         /// <value>The description of the Ezsigntemplateannotation</value>
@@ -200,8 +202,14 @@ namespace eZmaxApi.Model
         /*
         <example>{&quot;Accepts&quot;,&quot;Refuses&quot;}</example>
         */
-        [DataMember(Name = "sEzsigntemplateannotationnDropdownvalues", IsRequired = true, EmitDefaultValue = true)]
-        public string SEzsigntemplateannotationnDropdownvalues { get; set; }
+        [DataMember(Name = "sEzsigntemplateannotationDropdownvalues", IsRequired = true, EmitDefaultValue = true)]
+        public string SEzsigntemplateannotationDropdownvalues { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjTextstylestatic
+        /// </summary>
+        [DataMember(Name = "objTextstylestatic", EmitDefaultValue = false)]
+        public TextstylestaticRequestCompound ObjTextstylestatic { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -212,8 +220,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class EzsigntemplateannotationRequest {\n");
             sb.Append("  PkiEzsigntemplateannotationID: ").Append(PkiEzsigntemplateannotationID).Append("\n");
-            sb.Append("  FkiEzsigntemplatedocumentpageID: ").Append(FkiEzsigntemplatedocumentpageID).Append("\n");
-            sb.Append("  FkiTextstylestaticID: ").Append(FkiTextstylestaticID).Append("\n");
+            sb.Append("  FkiEzsigntemplatedocumentID: ").Append(FkiEzsigntemplatedocumentID).Append("\n");
             sb.Append("  EEzsigntemplateannotationHorizontalalignment: ").Append(EEzsigntemplateannotationHorizontalalignment).Append("\n");
             sb.Append("  EEzsigntemplateannotationVerticalalignment: ").Append(EEzsigntemplateannotationVerticalalignment).Append("\n");
             sb.Append("  EEzsigntemplateannotationType: ").Append(EEzsigntemplateannotationType).Append("\n");
@@ -221,9 +228,11 @@ namespace eZmaxApi.Model
             sb.Append("  IEzsigntemplateannotationY: ").Append(IEzsigntemplateannotationY).Append("\n");
             sb.Append("  IEzsigntemplateannotationWidth: ").Append(IEzsigntemplateannotationWidth).Append("\n");
             sb.Append("  IEzsigntemplateannotationHeight: ").Append(IEzsigntemplateannotationHeight).Append("\n");
+            sb.Append("  IEzsigntemplatedocumentpagePagenumber: ").Append(IEzsigntemplatedocumentpagePagenumber).Append("\n");
             sb.Append("  SEzsigntemplateannotationDescription: ").Append(SEzsigntemplateannotationDescription).Append("\n");
             sb.Append("  SEzsigntemplateannotationDefaulttext: ").Append(SEzsigntemplateannotationDefaulttext).Append("\n");
-            sb.Append("  SEzsigntemplateannotationnDropdownvalues: ").Append(SEzsigntemplateannotationnDropdownvalues).Append("\n");
+            sb.Append("  SEzsigntemplateannotationDropdownvalues: ").Append(SEzsigntemplateannotationDropdownvalues).Append("\n");
+            sb.Append("  ObjTextstylestatic: ").Append(ObjTextstylestatic).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -256,16 +265,10 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for PkiEzsigntemplateannotationID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateannotationID" });
             }
 
-            // FkiEzsigntemplatedocumentpageID (int) minimum
-            if (this.FkiEzsigntemplatedocumentpageID < (int)0)
+            // FkiEzsigntemplatedocumentID (int) minimum
+            if (this.FkiEzsigntemplatedocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentpageID" });
-            }
-
-            // FkiTextstylestaticID (int) minimum
-            if (this.FkiTextstylestaticID < (int)0)
-            {
-                yield return new ValidationResult("Invalid value for FkiTextstylestaticID, must be a value greater than or equal to 0.", new [] { "FkiTextstylestaticID" });
+                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
             }
 
             // IEzsigntemplateannotationX (int) maximum
@@ -316,6 +319,12 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for IEzsigntemplateannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationHeight" });
             }
 
+            // IEzsigntemplatedocumentpagePagenumber (int) minimum
+            if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+            }
+
             if (this.SEzsigntemplateannotationDescription != null) {
                 // SEzsigntemplateannotationDescription (string) pattern
                 Regex regexSEzsigntemplateannotationDescription = new Regex(@"^.{0,80}$", RegexOptions.CultureInvariant);
@@ -334,12 +343,12 @@ namespace eZmaxApi.Model
                 }
             }
 
-            if (this.SEzsigntemplateannotationnDropdownvalues != null) {
-                // SEzsigntemplateannotationnDropdownvalues (string) pattern
-                Regex regexSEzsigntemplateannotationnDropdownvalues = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
-                if (!regexSEzsigntemplateannotationnDropdownvalues.Match(this.SEzsigntemplateannotationnDropdownvalues).Success)
+            if (this.SEzsigntemplateannotationDropdownvalues != null) {
+                // SEzsigntemplateannotationDropdownvalues (string) pattern
+                Regex regexSEzsigntemplateannotationDropdownvalues = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexSEzsigntemplateannotationDropdownvalues.Match(this.SEzsigntemplateannotationDropdownvalues).Success)
                 {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateannotationnDropdownvalues, must match a pattern of " + regexSEzsigntemplateannotationnDropdownvalues, new [] { "SEzsigntemplateannotationnDropdownvalues" });
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplateannotationDropdownvalues, must match a pattern of " + regexSEzsigntemplateannotationDropdownvalues, new [] { "SEzsigntemplateannotationDropdownvalues" });
                 }
             }
 

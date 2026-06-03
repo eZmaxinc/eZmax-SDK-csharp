@@ -65,6 +65,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         EzsigndocumentApplyEzsigntemplateV2Response EzsigndocumentApplyEzsigntemplateV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0);
 
         /// <summary>
@@ -78,7 +79,33 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response> EzsigndocumentApplyEzsigntemplateV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0);
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        EzsigndocumentApplyEzsigntemplateV3Response EzsigndocumentApplyEzsigntemplateV3(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response> EzsigndocumentApplyEzsigntemplateV3WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0);
         /// <summary>
         /// Apply an Ezsigntemplateglobal to the Ezsigndocument
         /// </summary>
@@ -90,6 +117,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateglobalV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         EzsigndocumentApplyEzsigntemplateglobalV1Response EzsigndocumentApplyEzsigntemplateglobalV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0);
 
         /// <summary>
@@ -103,7 +131,33 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateglobalV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response> EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        EzsigndocumentApplyEzsigntemplateglobalV2Response EzsigndocumentApplyEzsigntemplateglobalV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response> EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0);
         /// <summary>
         /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
         /// </summary>
@@ -1093,6 +1147,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV2Response> EzsigndocumentApplyEzsigntemplateV2Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -1107,7 +1162,35 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV2Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response>> EzsigndocumentApplyEzsigntemplateV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV3Response> EzsigndocumentApplyEzsigntemplateV3Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV3Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response>> EzsigndocumentApplyEzsigntemplateV3WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Apply an Ezsigntemplateglobal to the Ezsigndocument
         /// </summary>
@@ -1120,6 +1203,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateglobalV1Response> EzsigndocumentApplyEzsigntemplateglobalV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -1134,7 +1218,35 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateglobalV1Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response>> EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateglobalV2Response> EzsigndocumentApplyEzsigntemplateglobalV2Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateglobalV2Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response>> EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create multiple Ezsignsignatures/Ezsignformfieldgroups
         /// </summary>
@@ -2488,6 +2600,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         public EzsigndocumentApplyEzsigntemplateV2Response EzsigndocumentApplyEzsigntemplateV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response> localVarResponse = EzsigndocumentApplyEzsigntemplateV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
@@ -2502,6 +2615,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateV2Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response> EzsigndocumentApplyEzsigntemplateV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV2Request' is set
@@ -2569,6 +2683,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateV2Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV2Response> EzsigndocumentApplyEzsigntemplateV2Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response> localVarResponse = await EzsigndocumentApplyEzsigntemplateV2WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -2584,6 +2699,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV2Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response>> EzsigndocumentApplyEzsigntemplateV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV2Request' is set
@@ -2644,6 +2760,169 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        public EzsigndocumentApplyEzsigntemplateV3Response EzsigndocumentApplyEzsigntemplateV3(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response> localVarResponse = EzsigndocumentApplyEzsigntemplateV3WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response> EzsigndocumentApplyEzsigntemplateV3WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' is set
+            if (ezsigndocumentApplyEzsigntemplateV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ObjectEzsigndocumentApi->EzsigndocumentApplyEzsigntemplateV3");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentApplyEzsigntemplateV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsigndocumentApplyEzsigntemplateV3Response>("/3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateV3Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateV3Response> EzsigndocumentApplyEzsigntemplateV3Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response> localVarResponse = await EzsigndocumentApplyEzsigntemplateV3WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplate to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateV3Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateV3Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response>> EzsigndocumentApplyEzsigntemplateV3WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' is set
+            if (ezsigndocumentApplyEzsigntemplateV3Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentApplyEzsigntemplateV3Request' when calling ObjectEzsigndocumentApi->EzsigndocumentApplyEzsigntemplateV3");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentApplyEzsigntemplateV3Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateV3";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentApplyEzsigntemplateV3Response>("/3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateV3", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Apply an Ezsigntemplateglobal to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2651,6 +2930,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateglobalV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         public EzsigndocumentApplyEzsigntemplateglobalV1Response EzsigndocumentApplyEzsigntemplateglobalV1(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response> localVarResponse = EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request);
@@ -2665,6 +2945,7 @@ namespace eZmaxApi.Api
         /// <param name="ezsigndocumentApplyEzsigntemplateglobalV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response> EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0)
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV1Request' is set
@@ -2732,6 +3013,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of EzsigndocumentApplyEzsigntemplateglobalV1Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateglobalV1Response> EzsigndocumentApplyEzsigntemplateglobalV1Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response> localVarResponse = await EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -2747,6 +3029,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateglobalV1Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV1Response>> EzsigndocumentApplyEzsigntemplateglobalV1WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV1Request' is set
@@ -2797,6 +3080,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateglobalV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        public EzsigndocumentApplyEzsigntemplateglobalV2Response EzsigndocumentApplyEzsigntemplateglobalV2(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response> localVarResponse = EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response> EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' is set
+            if (ezsigndocumentApplyEzsigntemplateglobalV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentApplyEzsigntemplateglobalV2");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentApplyEzsigntemplateglobalV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateglobalV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<EzsigndocumentApplyEzsigntemplateglobalV2Response>("/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateglobalV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentApplyEzsigntemplateglobalV2Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentApplyEzsigntemplateglobalV2Response> EzsigndocumentApplyEzsigntemplateglobalV2Async(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response> localVarResponse = await EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfoAsync(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apply an Ezsigntemplateglobal to the Ezsigndocument This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="ezsigndocumentApplyEzsigntemplateglobalV2Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentApplyEzsigntemplateglobalV2Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response>> EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfoAsync(int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' is set
+            if (ezsigndocumentApplyEzsigntemplateglobalV2Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezsigndocumentApplyEzsigntemplateglobalV2Request' when calling ObjectEzsigndocumentApi->EzsigndocumentApplyEzsigntemplateglobalV2");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.Data = ezsigndocumentApplyEzsigntemplateglobalV2Request;
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateglobalV2";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzsigndocumentApplyEzsigntemplateglobalV2Response>("/2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentApplyEzsigntemplateglobalV2", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="CreditcardmerchantListElement" /> class.
         /// </summary>
         /// <param name="pkiCreditcardmerchantID">The unique ID of the Creditcardmerchant (required).</param>
-        /// <param name="fkiBankaccountID">The unique ID of the Bankaccount (required).</param>
+        /// <param name="fkiBankaccountID">The unique ID of the Bankaccount.</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|.</param>
         /// <param name="bCreditcardmerchantDenyvisa">Whether if visa are denied (required).</param>
         /// <param name="bCreditcardmerchantDenymastercard">Whether if mastercard are denied (required).</param>
@@ -52,7 +52,6 @@ namespace eZmaxApi.Model
         public CreditcardmerchantListElement(int pkiCreditcardmerchantID = default, int fkiBankaccountID = default, int fkiLanguageID = default, bool bCreditcardmerchantDenyvisa = default, bool bCreditcardmerchantDenymastercard = default, bool bCreditcardmerchantDenyamex = default, bool bCreditcardmerchantIsactive = default, string sCreditcardmerchantDescription = default, string sCreditcardmerchantStoreid = default)
         {
             this.PkiCreditcardmerchantID = pkiCreditcardmerchantID;
-            this.FkiBankaccountID = fkiBankaccountID;
             this.BCreditcardmerchantDenyvisa = bCreditcardmerchantDenyvisa;
             this.BCreditcardmerchantDenymastercard = bCreditcardmerchantDenymastercard;
             this.BCreditcardmerchantDenyamex = bCreditcardmerchantDenyamex;
@@ -69,6 +68,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sCreditcardmerchantStoreid is a required property for CreditcardmerchantListElement and cannot be null");
             }
             this.SCreditcardmerchantStoreid = sCreditcardmerchantStoreid;
+            this.FkiBankaccountID = fkiBankaccountID;
             this.FkiLanguageID = fkiLanguageID;
         }
 
@@ -89,7 +89,7 @@ namespace eZmaxApi.Model
         /*
         <example>46</example>
         */
-        [DataMember(Name = "fkiBankaccountID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiBankaccountID", EmitDefaultValue = false)]
         public int FkiBankaccountID { get; set; }
 
         /// <summary>

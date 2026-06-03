@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookResponseCompound" /> class.
         /// </summary>
-        /// <param name="pkiWebhookID">The unique ID of the Webhook (required).</param>
+        /// <param name="pkiWebhookID">The unique ID of the Webhook.</param>
         /// <param name="fkiAuthenticationexternalID">The unique ID of the Authenticationexternal.</param>
         /// <param name="sWebhookDescription">The description of the Webhook (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
@@ -74,13 +74,12 @@ namespace eZmaxApi.Model
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="sAuthenticationexternalDescription">The description of the Authenticationexternal.</param>
-        /// <param name="objAudit">objAudit (required).</param>
+        /// <param name="objAudit">objAudit.</param>
         /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
         /// <param name="sWebhookAuthentificationexternalerror">Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set..</param>
         /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
         public WebhookResponseCompound(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, string sWebhookDescription = default, int fkiEzsignfoldertypeID = default, string sEzsignfoldertypeNameX = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, string sWebhookApikey = default, string sWebhookSecret = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, string sAuthenticationexternalDescription = default, CommonAudit objAudit = default, string sWebhookEvent = default, string sWebhookAuthentificationexternalerror = default, List<WebhookheaderResponseCompound> aObjWebhookheader = default)
         {
-            this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
             if (sWebhookDescription == null)
             {
@@ -103,12 +102,7 @@ namespace eZmaxApi.Model
             this.BWebhookIsactive = bWebhookIsactive;
             this.BWebhookIssigned = bWebhookIssigned;
             this.BWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-            // to ensure "objAudit" is required (not null)
-            if (objAudit == null)
-            {
-                throw new ArgumentNullException("objAudit is a required property for WebhookResponseCompound and cannot be null");
-            }
-            this.ObjAudit = objAudit;
+            this.PkiWebhookID = pkiWebhookID;
             this.FkiAuthenticationexternalID = fkiAuthenticationexternalID;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
@@ -117,6 +111,7 @@ namespace eZmaxApi.Model
             this.SWebhookApikey = sWebhookApikey;
             this.SWebhookSecret = sWebhookSecret;
             this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
+            this.ObjAudit = objAudit;
             this.SWebhookEvent = sWebhookEvent;
             this.SWebhookAuthentificationexternalerror = sWebhookAuthentificationexternalerror;
             this.AObjWebhookheader = aObjWebhookheader;
@@ -129,7 +124,7 @@ namespace eZmaxApi.Model
         /*
         <example>77</example>
         */
-        [DataMember(Name = "pkiWebhookID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "pkiWebhookID", EmitDefaultValue = false)]
         public int PkiWebhookID { get; set; }
 
         /// <summary>
@@ -249,7 +244,7 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets ObjAudit
         /// </summary>
-        [DataMember(Name = "objAudit", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "objAudit", EmitDefaultValue = false)]
         public CommonAudit ObjAudit { get; set; }
 
         /// <summary>

@@ -6,7 +6,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |--------|--------------|-------------|
 | [**EzsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
 | [**EzsigndocumentApplyEzsigntemplateV2**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
+| [**EzsigndocumentApplyEzsigntemplateV3**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplatev3) | **POST** /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsigntemplate to the Ezsigndocument |
 | [**EzsigndocumentApplyEzsigntemplateglobalV1**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplateglobalv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument |
+| [**EzsigndocumentApplyEzsigntemplateglobalV2**](ObjectEzsigndocumentApi.md#ezsigndocumentapplyezsigntemplateglobalv2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal | Apply an Ezsigntemplateglobal to the Ezsigndocument |
 | [**EzsigndocumentCreateEzsignelementsPositionedByWordV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups |
 | [**EzsigndocumentCreateEzsignelementsPositionedByWordV2**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateezsignelementspositionedbywordv2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord | Create multiple Ezsignsignatures/Ezsignformfieldgroups |
 | [**EzsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentcreateobjectv1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument |
@@ -248,6 +250,106 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="ezsigndocumentapplyezsigntemplatev3"></a>
+# **EzsigndocumentApplyEzsigntemplateV3**
+> EzsigndocumentApplyEzsigntemplateV3Response EzsigndocumentApplyEzsigntemplateV3 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV3Request ezsigndocumentApplyEzsigntemplateV3Request)
+
+Apply an Ezsigntemplate to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigndocumentApplyEzsigntemplateV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigndocumentApi(config);
+            var pkiEzsigndocumentID = 56;  // int | 
+            var ezsigndocumentApplyEzsigntemplateV3Request = new EzsigndocumentApplyEzsigntemplateV3Request(); // EzsigndocumentApplyEzsigntemplateV3Request | 
+
+            try
+            {
+                // Apply an Ezsigntemplate to the Ezsigndocument
+                EzsigndocumentApplyEzsigntemplateV3Response result = apiInstance.EzsigndocumentApplyEzsigntemplateV3(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigndocumentApplyEzsigntemplateV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Apply an Ezsigntemplate to the Ezsigndocument
+    ApiResponse<EzsigndocumentApplyEzsigntemplateV3Response> response = apiInstance.EzsigndocumentApplyEzsigntemplateV3WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV3Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigndocumentID** | **int** |  |  |
+| **ezsigndocumentApplyEzsigntemplateV3Request** | [**EzsigndocumentApplyEzsigntemplateV3Request**](EzsigndocumentApplyEzsigntemplateV3Request.md) |  |  |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateV3Response**](EzsigndocumentApplyEzsigntemplateV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="ezsigndocumentapplyezsigntemplateglobalv1"></a>
 # **EzsigndocumentApplyEzsigntemplateglobalV1**
 > EzsigndocumentApplyEzsigntemplateglobalV1Response EzsigndocumentApplyEzsigntemplateglobalV1 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request)
@@ -328,6 +430,106 @@ catch (ApiException e)
 ### Return type
 
 [**EzsigndocumentApplyEzsigntemplateglobalV1Response**](EzsigndocumentApplyEzsigntemplateglobalV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsigndocumentapplyezsigntemplateglobalv2"></a>
+# **EzsigndocumentApplyEzsigntemplateglobalV2**
+> EzsigndocumentApplyEzsigntemplateglobalV2Response EzsigndocumentApplyEzsigntemplateglobalV2 (int pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateglobalV2Request ezsigndocumentApplyEzsigntemplateglobalV2Request)
+
+Apply an Ezsigntemplateglobal to the Ezsigndocument
+
+This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigndocumentApplyEzsigntemplateglobalV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigndocumentApi(config);
+            var pkiEzsigndocumentID = 56;  // int | 
+            var ezsigndocumentApplyEzsigntemplateglobalV2Request = new EzsigndocumentApplyEzsigntemplateglobalV2Request(); // EzsigndocumentApplyEzsigntemplateglobalV2Request | 
+
+            try
+            {
+                // Apply an Ezsigntemplateglobal to the Ezsigndocument
+                EzsigndocumentApplyEzsigntemplateglobalV2Response result = apiInstance.EzsigndocumentApplyEzsigntemplateglobalV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateglobalV2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Apply an Ezsigntemplateglobal to the Ezsigndocument
+    ApiResponse<EzsigndocumentApplyEzsigntemplateglobalV2Response> response = apiInstance.EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV2Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigndocumentApi.EzsigndocumentApplyEzsigntemplateglobalV2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigndocumentID** | **int** |  |  |
+| **ezsigndocumentApplyEzsigntemplateglobalV2Request** | [**EzsigndocumentApplyEzsigntemplateglobalV2Request**](EzsigndocumentApplyEzsigntemplateglobalV2Request.md) |  |  |
+
+### Return type
+
+[**EzsigndocumentApplyEzsigntemplateglobalV2Response**](EzsigndocumentApplyEzsigntemplateglobalV2Response.md)
 
 ### Authorization
 

@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **EUserEzsignaccess** | **FieldEUserEzsignaccess** |  | 
 **EUserEzsignprepaid** | **FieldEUserEzsignprepaid** |  | [optional] 
 **BUserEzsigntrial** | **bool** | Whether the User&#39;s eZsign subscription is a trial | [optional] 
+**BUserEzsigntemplaterolegrouping** | **bool** | Whether we group or not the Ezsigntemplate roles | [optional] 
 **DtUserEzsignprepaidexpiration** | **string** | The eZsign prepaid expiration date | [optional] 
 **DtUserNpsrequest** | **string** | The date at which the NPS questionnaire will be show | [optional] 
 **APkiPermissionID** | **List&lt;int&gt;** | An array of permissions granted to the user or api key | 
@@ -37,6 +38,7 @@ Name | Type | Description | Notes
 **ObjUserCloned** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  | [optional] 
 **ObjApikey** | [**ActivesessionResponseCompoundApikey**](ActivesessionResponseCompoundApikey.md) |  | [optional] 
 **AEModuleInternalname** | **List&lt;string&gt;** | An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key. | 
+**BActivesessionMaillinglistrequest** | **bool** | If you need to ask which mailing lists this user wants to subscribe to | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

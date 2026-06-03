@@ -6,8 +6,8 @@ A Ezsigntemplateglobalannotation Object
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiEzsigntemplateglobalannotationID** | **int** | The unique ID of the Ezsigntemplateglobalannotation | 
-**FkiEzsigntemplateglobaldocumentpageID** | **int** | The unique ID of the Ezsigntemplateglobaldocumentpage | 
-**FkiTextstylestaticID** | **int** | The unique ID of the Textstylestatic | 
+**FkiTextstylestaticID** | **int** | The unique ID of the Textstylestatic | [optional] 
+**ObjTextstylestatic** | [**TextstylestaticRequestCompound**](TextstylestaticRequestCompound.md) |  | [optional] 
 **EEzsigntemplateglobalannotationHorizontalalignment** | **FieldEEzsigntemplateglobalannotationHorizontalalignment** |  | 
 **EEzsigntemplateglobalannotationVerticalalignment** | **FieldEEzsigntemplateglobalannotationVerticalalignment** |  | 
 **EEzsigntemplateglobalannotationType** | **FieldEEzsigntemplateglobalannotationType** |  | 
@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **IEzsigntemplateglobalannotationY** | **int** | The y of the Ezsigntemplateglobalannotation | 
 **IEzsigntemplateglobalannotationWidth** | **int** | The width of the Ezsigntemplateglobalannotation | 
 **IEzsigntemplateglobalannotationHeight** | **int** | The height of the Ezsigntemplateglobalannotation | 
+**IEzsigntemplateglobaldocumentpagePagenumber** | **int** | The page number in the Ezsigntemplateglobaldocument | 
 **SEzsigntemplateglobalannotationDescription** | **string** | The description of the Ezsigntemplateglobalannotation | 
 **SEzsigntemplateglobalannotationDefaulttext** | **string** | The defaulttext of the Ezsigntemplateglobalannotation | 
 **SEzsigntemplateglobalannotationDropdownvalues** | **string** | The dropdownvalues of the Ezsigntemplateglobalannotation | 

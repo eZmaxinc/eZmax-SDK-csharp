@@ -50,7 +50,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="fkiEzsignfoldertypeID">The unique ID of the Ezsignfoldertype..</param>
         /// <param name="fkiEzdoctemplatetypeID">The unique ID of the Ezdoctemplatetype (required).</param>
-        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory (required).</param>
+        /// <param name="fkiEzdoctemplatefieldtypecategoryID">The unique ID of the Ezdoctemplatefieldtypecategory.</param>
         /// <param name="sEzsignfoldertypeNameX">The name of the Ezsignfoldertype in the language of the requester.</param>
         /// <param name="sEzdoctemplatetypeDescriptionX">The description of the Ezdoctemplatetype in the language of the requester.</param>
         /// <param name="sEzdoctemplatefieldtypecategoryDescriptionX">The description of the Ezdoctemplatefieldtypecategory in the language of the requester.</param>
@@ -62,7 +62,6 @@ namespace eZmaxApi.Model
             this.PkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
             this.FkiLanguageID = fkiLanguageID;
             this.FkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
-            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.BEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
             // to ensure "sEzdoctemplatedocumentNameX" is required (not null)
             if (sEzdoctemplatedocumentNameX == null)
@@ -71,6 +70,7 @@ namespace eZmaxApi.Model
             }
             this.SEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+            this.FkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
             this.SEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
             this.SEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
             this.SEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
@@ -124,7 +124,7 @@ namespace eZmaxApi.Model
         /*
         <example>4</example>
         */
-        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiEzdoctemplatefieldtypecategoryID", EmitDefaultValue = false)]
         public int FkiEzdoctemplatefieldtypecategoryID { get; set; }
 
         /// <summary>
