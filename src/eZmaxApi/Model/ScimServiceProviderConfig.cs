@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// <param name="filter">filter (required).</param>
         /// <param name="patch">patch (required).</param>
         /// <param name="sort">sort (required).</param>
-        public ScimServiceProviderConfig(List<ScimAuthenticationScheme> authenticationSchemes = default, ScimServiceProviderConfigBulk bulk = default, ScimServiceProviderConfigChangePassword changePassword = default, string documentationUri = default, ScimServiceProviderConfigEtag etag = default, ScimServiceProviderConfigFilter filter = default, ScimServiceProviderConfigPatch patch = default, ScimServiceProviderConfigSort sort = default)
+        public ScimServiceProviderConfig(List<ScimAuthenticationScheme> authenticationSchemes = default, ScimServiceProviderConfigBulk bulk = default, ScimServiceProviderConfigChangePassword changePassword = default, string documentationUri = default, ScimServiceProviderConfigChangePassword etag = default, ScimServiceProviderConfigFilter filter = default, ScimServiceProviderConfigChangePassword patch = default, ScimServiceProviderConfigChangePassword sort = default)
         {
             // to ensure "authenticationSchemes" is required (not null)
             if (authenticationSchemes == null)
@@ -133,7 +133,7 @@ namespace eZmaxApi.Model
         /// Gets or Sets Etag
         /// </summary>
         [DataMember(Name = "etag", IsRequired = true, EmitDefaultValue = true)]
-        public ScimServiceProviderConfigEtag Etag { get; set; }
+        public ScimServiceProviderConfigChangePassword Etag { get; set; }
 
         /// <summary>
         /// Gets or Sets Filter
@@ -145,13 +145,13 @@ namespace eZmaxApi.Model
         /// Gets or Sets Patch
         /// </summary>
         [DataMember(Name = "patch", IsRequired = true, EmitDefaultValue = true)]
-        public ScimServiceProviderConfigPatch Patch { get; set; }
+        public ScimServiceProviderConfigChangePassword Patch { get; set; }
 
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
         [DataMember(Name = "sort", IsRequired = true, EmitDefaultValue = true)]
-        public ScimServiceProviderConfigSort Sort { get; set; }
+        public ScimServiceProviderConfigChangePassword Sort { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

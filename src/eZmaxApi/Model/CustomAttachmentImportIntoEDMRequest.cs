@@ -152,7 +152,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Base64 encoded binary content of the attachment.</value>
         /*
-        <example>[B@74f7d1d2</example>
+        <example>[B@263f04ca</example>
         */
         [DataMember(Name = "sAttachmentBase64", EmitDefaultValue = false)]
         public byte[] SAttachmentBase64 { get; set; }

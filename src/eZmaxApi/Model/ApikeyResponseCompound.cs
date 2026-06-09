@@ -42,6 +42,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiApikeyID">The unique ID of the Apikey (required).</param>
         /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiEzmaxpartnerproductstageID">The unique ID of the Ezmaxpartnerproductstage.</param>
         /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
         /// <param name="objContactName">objContactName (required).</param>
         /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
@@ -49,7 +50,7 @@ namespace eZmaxApi.Model
         /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
         /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
         /// <param name="objAudit">objAudit (required).</param>
-        public ApikeyResponseCompound(int pkiApikeyID = default, int fkiUserID = default, MultilingualApikeyDescription objApikeyDescription = default, CustomContactNameResponse objContactName = default, string sApikeyApikey = default, string sApikeySecret = default, bool bApikeyIsactive = default, bool bApikeyIssigned = default, CommonAudit objAudit = default)
+        public ApikeyResponseCompound(int pkiApikeyID = default, int fkiUserID = default, int fkiEzmaxpartnerproductstageID = default, MultilingualApikeyDescription objApikeyDescription = default, CustomContactNameResponse objContactName = default, string sApikeyApikey = default, string sApikeySecret = default, bool bApikeyIsactive = default, bool bApikeyIssigned = default, CommonAudit objAudit = default)
         {
             this.PkiApikeyID = pkiApikeyID;
             this.FkiUserID = fkiUserID;
@@ -72,6 +73,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objAudit is a required property for ApikeyResponseCompound and cannot be null");
             }
             this.ObjAudit = objAudit;
+            this.FkiEzmaxpartnerproductstageID = fkiEzmaxpartnerproductstageID;
             this.SApikeyApikey = sApikeyApikey;
             this.SApikeySecret = sApikeySecret;
             this.BApikeyIssigned = bApikeyIssigned;
@@ -96,6 +98,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Ezmaxpartnerproductstage
+        /// </summary>
+        /// <value>The unique ID of the Ezmaxpartnerproductstage</value>
+        /*
+        <example>16</example>
+        */
+        [DataMember(Name = "fkiEzmaxpartnerproductstageID", EmitDefaultValue = false)]
+        public int FkiEzmaxpartnerproductstageID { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjApikeyDescription
@@ -159,6 +171,7 @@ namespace eZmaxApi.Model
             sb.Append("class ApikeyResponseCompound {\n");
             sb.Append("  PkiApikeyID: ").Append(PkiApikeyID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  FkiEzmaxpartnerproductstageID: ").Append(FkiEzmaxpartnerproductstageID).Append("\n");
             sb.Append("  ObjApikeyDescription: ").Append(ObjApikeyDescription).Append("\n");
             sb.Append("  ObjContactName: ").Append(ObjContactName).Append("\n");
             sb.Append("  SApikeyApikey: ").Append(SApikeyApikey).Append("\n");
@@ -196,6 +209,18 @@ namespace eZmaxApi.Model
             if (this.FkiUserID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+            }
+
+            // FkiEzmaxpartnerproductstageID (int) maximum
+            if (this.FkiEzmaxpartnerproductstageID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value less than or equal to 255.", new [] { "FkiEzmaxpartnerproductstageID" });
+            }
+
+            // FkiEzmaxpartnerproductstageID (int) minimum
+            if (this.FkiEzmaxpartnerproductstageID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstageID" });
             }
 
             yield break;
