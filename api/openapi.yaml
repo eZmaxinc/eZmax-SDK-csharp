@@ -122,18 +122,19 @@ tags:
     \n* PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\r\n\
     * PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\r\
     \n* PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\r\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\
-    \n\r\n---\r\n\r\n### [1.3.1] - 2026-XX-XX\r\n\r\n#### Added\r\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
+    \n\r\n---\r\n\r\n### [1.3.1] - 2026-06-17\r\n\r\n#### Added\r\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
     \n- GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions\r\
     \n- GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks\r\
-    \n- GET /1/object/ezmaxmaillinglist/getList\r\n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations\r\
+    \n- GET /1/object/ezmaxmaillinglist/getList\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations\r\
     \n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate\r\n- POST /1/object/ezsigntemplateannotation\r\
     \n- POST /4/object/ezsignfoldertype\r\n- PUT /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
     \n- PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations\r\
-    \n- PUT /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations\r\
-    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups\r\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures\r\n- GET\
-    \ /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\n- GET\
-    \ /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}\r\
+    \n- PUT /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations\r\n- GET\
+    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups\r\n- GET\
+    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures\r\n- GET /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
+    \n- GET /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}\r\
     \n- POST /1/module/ezmaxmaillinglist/subscribe\r\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal\r\
     \n- POST /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\r\n\
     - POST /3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\r\
@@ -1111,6 +1112,9 @@ tags:
 - description: Ezmaxpartner contains details about Ezmaxpartner
   name: Object_Ezmaxpartner
   x-displayName: Ezmaxpartner
+- description: Ezmaxpartnerproduct contains details about Ezmaxpartnerproducts
+  name: Object_Ezmaxpartnerproduct
+  x-displayName: Ezmaxpartnerproduct
 - description: Ezmaxproduct contains details about Ezmaxproducts
   name: Object_Ezmaxproduct
   x-displayName: Ezmaxproduct
@@ -1417,6 +1421,10 @@ tags:
     over the websocket connection
   name: Websocket_Response
   x-displayName: Response
+- description: Documentation Ezmaxpartner contains detail about the format of the
+    webhook we will return to you in the context of Ezmaxpartner
+  name: Documentation_Ezmaxpartner
+  x-displayName: Ezmaxpartner
 paths:
   /1/customer/{pksCustomerCode}/endpoint:
     description: ""
@@ -1469,6 +1477,34 @@ paths:
       tags:
       - Global_Customer
       x-permissions: []
+      x-usertypeextra: []
+      x-systemconfigurationtype:
+      - All
+  /1/documentation/subscribe:
+    post:
+      description: Subscribe to an Ezmaxparnerproductstage
+      operationId: Documentation_Subscribe_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/documentation-subscribe-v1-Request"
+        description: ""
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documentation-subscribe-v1-Response"
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Subscribe to an Ezmaxparnerproductstage
+      tags:
+      - Documentation_Ezmaxpartner
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-systemconfigurationtype:
       - All
@@ -10832,6 +10868,75 @@ paths:
       - EzsignSigner
       x-systemconfigurationtype:
       - All
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner:
+    get:
+      description: Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups
+        that can be filled by a user at the current step in the process
+      operationId: Ezsigndocument_GetActionableElementsForSigner_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsigndocumentID"
+        style: simple
+      - explode: true
+        in: query
+        name: eSignerType
+        required: true
+        schema:
+          enum:
+          - Ezsignsigner
+          - User
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: fkiEzsignsignerID
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsignsignerID"
+        style: form
+      - explode: true
+        in: query
+        name: fkiUserID
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-pkiUserID"
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsigndocument-getActionableElementsForSigner-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve actionable elements of a user for the Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-systemconfigurationtype:
+      - All
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments:
     get:
       description: ""
@@ -12375,6 +12480,75 @@ paths:
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
+      x-systemconfigurationtype:
+      - All
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner:
+    get:
+      description: Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups
+        that can be filled by an user at the current step in the process
+      operationId: Ezsignfolder_GetActionableElementsForSigner_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsignfolderID"
+        style: simple
+      - explode: true
+        in: query
+        name: eSignerType
+        required: true
+        schema:
+          enum:
+          - Ezsignsigner
+          - User
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: fkiEzsignsignerID
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzsignsignerID"
+        style: form
+      - explode: true
+        in: query
+        name: fkiUserID
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-pkiUserID"
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezsignfolder-getActionableElementsForSigner-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve actionable elements of a user for the Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
       x-systemconfigurationtype:
       - All
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount:
@@ -25764,7 +25938,9 @@ paths:
       tags:
       - Object_User
       x-permissions:
-      - All
+      - Impersonate_Impersonate
+      - Impersonate_ImpersonateBrokerAgency
+      - Impersonate_ImpersonateEmployee
       x-usertypeextra: []
       x-systemconfigurationtype:
       - All
@@ -38384,6 +38560,124 @@ components:
       - sEzmaxpartnerShortdescriptionX
       - sEzmaxpartnerUrlX
       type: object
+    Custom-Ezmaxpartnerproduct-Subscribe:
+      description: Request for POST /1/webhookdocumentation/subscribe
+      properties:
+        pksEzmaxcustomerCode:
+          description: The Ezmaxcustomer code
+          example: demo
+          maxLength: 6
+          minLength: 2
+          pattern: "^[a-z\\d]{2,6}$"
+          type: string
+        sInfrastructureenvironmenttypeDescription:
+          description: The environment type Description
+          example: prod
+          type: string
+        sCompanyName1:
+          description: The Name of the Company in French
+          example: Acme inc.
+          type: string
+        sCompanyName2:
+          description: The Name of the Company in English
+          example: Acme inc.
+          type: string
+        fkiSystemconfigurationtypeID:
+          description: The unique ID of the Systemconfigurationtype
+          example: 28
+          minimum: 1
+          type: integer
+        sSystemconfigurationtypeDescription1:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        sSystemconfigurationtypeDescription2:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        fkiEzmaxpartnerID:
+          description: The unique ID of the Ezmaxpartner
+          example: 12
+          minimum: 1
+          type: integer
+        sEzmaxpartnerName1:
+          description: The name of the Ezmaxpartner in french
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        sEzmaxpartnerName2:
+          description: The name of the Ezmaxpartner in english
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        fkiEzmaxpartnerproductID:
+          description: The unique ID of the Ezmaxpartnerproduct
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductName1:
+          description: The name1 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        sEzmaxpartnerproductName2:
+          description: The name2 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        fkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductstageCode:
+          description: The code of the sEzmaxpartnerproductstage
+          example: Default
+          pattern: "^.{0,15}$"
+          type: string
+        sUserLoginName:
+          description: The login name of the User.
+          example: JohnDoe
+          pattern: "^(?:([\\w.%+\\-!#$%&'*+\\/=?^`{|}~]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$"
+          type: string
+        sUserFirstName:
+          description: The first name of the user
+          example: John
+          type: string
+        sUserLastName:
+          description: The last name of the user
+          example: Doe
+          type: string
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        objAddress:
+          $ref: "#/components/schemas/address-RequestCompound"
+        objphone:
+          $ref: "#/components/schemas/phone-RequestCompoundV2"
+        objEmail:
+          $ref: "#/components/schemas/email-RequestCompound"
+      type: object
     Custom-Ezmaxpricing-Response:
       description: A Custom Ezmaxpricing Object
       example:
@@ -44857,6 +45151,12 @@ components:
       example: 12
       minimum: 1
       type: integer
+    Field-pkiEzmaxpartnerproductID:
+      description: The unique ID of the Ezmaxpartnerproduct
+      example: 16
+      maximum: 255
+      minimum: 0
+      type: integer
     Field-pkiEzmaxpartnerproductstageID:
       description: The unique ID of the Ezmaxpartnerproductstage
       example: 16
@@ -46027,6 +46327,14 @@ components:
       example: John Doe
       pattern: "^.{0,50}$"
       type: string
+    Field-sCompanyName1:
+      description: The Name of the Company in French
+      example: Acme inc.
+      type: string
+    Field-sCompanyName2:
+      description: The Name of the Company in English
+      example: Acme inc.
+      type: string
     Field-sCompanyNameX:
       description: The Name of the Company in the language of the requester
       example: Acme inc.
@@ -46356,6 +46664,21 @@ components:
       description: The url of the Ezmaxpartner website in the language of the requester
       example: http://www.website.com/avatar.jpg
       pattern: "^(https|http):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
+      type: string
+    Field-sEzmaxpartnerproductName1:
+      description: The name1 of the Ezmaxpartnerproduct
+      example: "1"
+      pattern: "^.{0,35}$"
+      type: string
+    Field-sEzmaxpartnerproductName2:
+      description: The name2 of the Ezmaxpartnerproduct
+      example: "1"
+      pattern: "^.{0,35}$"
+      type: string
+    Field-sEzmaxpartnerproductstageCode:
+      description: The code of the sEzmaxpartnerproductstage
+      example: Default
+      pattern: "^.{0,15}$"
       type: string
     Field-sEzmaxproductDescriptionX:
       description: The description of the Ezmaxproduct in the language of the requester
@@ -46833,6 +47156,11 @@ components:
       example: "630"
       pattern: "^.{0,6}$"
       type: string
+    Field-sInscriptionContract:
+      description: The sale contract number
+      example: "1542254"
+      pattern: "^.{0,20}$"
+      type: string
     Field-sInscriptionMLS:
       description: The mls of the Inscription
       example: X00000
@@ -47117,6 +47445,16 @@ components:
       description: The description of the Supply in the language of the requester
       example: Letter paper package
       pattern: "^.{0,50}$"
+      type: string
+    Field-sSystemconfigurationtypeDescription1:
+      description: The description of the Systemconfigurationtype in the language
+        of the requester
+      example: eZsign (Pro)
+      type: string
+    Field-sSystemconfigurationtypeDescription2:
+      description: The description of the Systemconfigurationtype in the language
+        of the requester
+      example: eZsign (Pro)
       type: string
     Field-sSystemconfigurationtypeDescriptionX:
       description: The description of the Systemconfigurationtype in the language
@@ -48145,6 +48483,34 @@ components:
           items:
             $ref: "#/components/schemas/Scim-User"
           type: array
+      type: object
+    Webhook-Ezmaxpartnerproduct-Subscribe:
+      allOf:
+      - properties:
+          objEzmaxpartnerproduct:
+            $ref: "#/components/schemas/Custom-Ezmaxpartnerproduct-Subscribe"
+          sExternalID:
+            type: string
+          sApikeyApikey:
+            type: string
+          sApikeySecret:
+            type: string
+        required:
+        - objEzmaxpartnerproduct
+        type: object
+      - $ref: "#/components/schemas/Common-Webhook"
+      description: This is the base Webhook object
+      type: object
+    Webhook-Ezmaxpartnerproduct-Unsubscribe:
+      allOf:
+      - properties:
+          objEzmaxpartnerproduct:
+            $ref: "#/components/schemas/Custom-Ezmaxpartnerproduct-Subscribe"
+        required:
+        - objEzmaxpartnerproduct
+        type: object
+      - $ref: "#/components/schemas/Common-Webhook"
+      description: This is the base Webhook object
       type: object
     Webhook-Ezsign-DocumentCompleted:
       allOf:
@@ -61056,6 +61422,135 @@ components:
             fDuration: 1.0E-4
           - sQuery: SELECT * FROM table
             fDuration: 1.0E-4
+      type: object
+    documentation-subscribe-v1-Request:
+      description: Request for POST /1/webhookdocumentation/subscribe
+      properties:
+        pksEzmaxcustomerCode:
+          description: The Ezmaxcustomer code
+          example: demo
+          maxLength: 6
+          minLength: 2
+          pattern: "^[a-z\\d]{2,6}$"
+          type: string
+        sInfrastructureenvironmenttypeDescription:
+          description: The environment type Description
+          example: prod
+          type: string
+        sCompanyName1:
+          description: The Name of the Company in French
+          example: Acme inc.
+          type: string
+        sCompanyName2:
+          description: The Name of the Company in English
+          example: Acme inc.
+          type: string
+        fkiSystemconfigurationtypeID:
+          description: The unique ID of the Systemconfigurationtype
+          example: 28
+          minimum: 1
+          type: integer
+        sSystemconfigurationtypeDescription1:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        sSystemconfigurationtypeDescription2:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        fkiEzmaxpartnerID:
+          description: The unique ID of the Ezmaxpartner
+          example: 12
+          minimum: 1
+          type: integer
+        sEzmaxpartnerName1:
+          description: The name of the Ezmaxpartner in french
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        sEzmaxpartnerName2:
+          description: The name of the Ezmaxpartner in english
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        fkiEzmaxpartnerproductID:
+          description: The unique ID of the Ezmaxpartnerproduct
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductName1:
+          description: The name1 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        sEzmaxpartnerproductName2:
+          description: The name2 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        fkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductstageCode:
+          description: The code of the sEzmaxpartnerproductstage
+          example: Default
+          pattern: "^.{0,15}$"
+          type: string
+        sUserLoginName:
+          description: The login name of the User.
+          example: JohnDoe
+          pattern: "^(?:([\\w.%+\\-!#$%&'*+\\/=?^`{|}~]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$"
+          type: string
+        sUserFirstName:
+          description: The first name of the user
+          example: John
+          type: string
+        sUserLastName:
+          description: The last name of the user
+          example: Doe
+          type: string
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        objAddress:
+          $ref: "#/components/schemas/address-RequestCompound"
+        objphone:
+          $ref: "#/components/schemas/phone-RequestCompoundV2"
+        objEmail:
+          $ref: "#/components/schemas/email-RequestCompound"
+      type: object
+    documentation-subscribe-v1-Response:
+      description: Request for POST /1/module/ezmaxmaillinglist/subscribe
+      example:
+        sExternalID: sExternalID
+      properties:
+        sExternalID:
+          description: ""
+          type: string
+      required:
+      - sExternalID
       type: object
     domain-AutocompleteElement-Response:
       description: A Domain AutocompleteElement Response
@@ -81877,6 +82372,945 @@ components:
       - a_objEzsignformfieldgroup
       - a_objEzsignsignature
       type: object
+    ezsigndocument-getActionableElementsForSigner-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsigndocument-getActionableElementsForSigner-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner"
+      example:
+        mPayload:
+          a_objEzsignsignature:
+          - pkiEzsignsignatureID: 49
+            fkiEzsigndocumentID: 97
+            fkiEzsignfoldersignerassociationID: 20
+            fkiEzsignsigningreasonID: 194
+            fkiFontID: 1
+            fkiPaymentgatewayID: 235
+            sCurrencyDescriptionX: Canadian
+            dEzsignsignatureCreditcardamount: "100.00"
+            sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+            bEzsignsignatureCreditcardcustomamount: false
+            sEzsignsigningreasonDescriptionX: I approve this document
+            iEzsignpagePagenumber: 1
+            iEzsignsignatureX: 200
+            iEzsignsignatureY: 300
+            iEzsignsignatureHeight: 200
+            iEzsignsignatureWidth: 200
+            iEzsignsignatureStep: 1
+            iEzsignsignatureStepadjusted: 1
+            eEzsignsignatureType: Name
+            eEzsignsignatureSignaturepad: Topaz
+            eEzsignsignatureSignaturepadrequired: "No"
+            tEzsignsignatureTooltip: Please sign here if you agree to the terms
+            eEzsignsignatureTooltipposition: TopLeft
+            eEzsignsignatureFont: Normal
+            iEzsignsignatureValidationstep: 1
+            sEzsignsignatureAttachmentdescription: Attachment
+            eEzsignsignatureAttachmentnamesource: Description
+            eEzsignsignatureConsultationtrigger: Manual
+            bEzsignsignatureHandwritten: true
+            bEzsignsignatureReason: true
+            bEzsignsignatureRequired: true
+            fkiEzsignfoldersignerassociationIDValidation: 20
+            dtEzsignsignatureDate: 2020-12-31 23:59:59
+            iEzsignsignatureattachmentCount: 7
+            sEzsignsignatureDescription: Montreal
+            iEzsignsignatureMaxlength: 75
+            eEzsignsignatureTextvalidation: None
+            sEzsignsignatureTextvalidationcustommessage: Phone number
+            eEzsignsignatureDependencyrequirement: AllOf
+            sEzsignsignatureDefaultvalue: Foo
+            sEzsignsignatureRegexp: "^[0-9]{9}$"
+            objContactName:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objContactNameDelegation:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objSignature:
+              pkiSignatureID: 12
+              fkiFontID: 1
+              sSignatureUrl: https://www.example.com/signature.svg
+              sSignatureUrlinitials: https://www.example.com/signature.svg
+            dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+            sEzsignsignergroupDescriptionX: HR
+            bEzsignsignatureCustomdate: null
+            a_objEzsignsignaturecustomdate:
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            objCreditcardtransaction:
+              eCreditcardtypeCodename: Visa
+              dCreditcardtransactionAmount: "167.58"
+              sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+              sCreditcardtransactionReferencenumber: "651447854715478415"
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            objTimezone:
+              sTimezoneName: sTimezoneName
+              sCode: EST
+            a_objEzsignsignaturepaymentdetail:
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignatureID: 49
+            fkiEzsigndocumentID: 97
+            fkiEzsignfoldersignerassociationID: 20
+            fkiEzsignsigningreasonID: 194
+            fkiFontID: 1
+            fkiPaymentgatewayID: 235
+            sCurrencyDescriptionX: Canadian
+            dEzsignsignatureCreditcardamount: "100.00"
+            sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+            bEzsignsignatureCreditcardcustomamount: false
+            sEzsignsigningreasonDescriptionX: I approve this document
+            iEzsignpagePagenumber: 1
+            iEzsignsignatureX: 200
+            iEzsignsignatureY: 300
+            iEzsignsignatureHeight: 200
+            iEzsignsignatureWidth: 200
+            iEzsignsignatureStep: 1
+            iEzsignsignatureStepadjusted: 1
+            eEzsignsignatureType: Name
+            eEzsignsignatureSignaturepad: Topaz
+            eEzsignsignatureSignaturepadrequired: "No"
+            tEzsignsignatureTooltip: Please sign here if you agree to the terms
+            eEzsignsignatureTooltipposition: TopLeft
+            eEzsignsignatureFont: Normal
+            iEzsignsignatureValidationstep: 1
+            sEzsignsignatureAttachmentdescription: Attachment
+            eEzsignsignatureAttachmentnamesource: Description
+            eEzsignsignatureConsultationtrigger: Manual
+            bEzsignsignatureHandwritten: true
+            bEzsignsignatureReason: true
+            bEzsignsignatureRequired: true
+            fkiEzsignfoldersignerassociationIDValidation: 20
+            dtEzsignsignatureDate: 2020-12-31 23:59:59
+            iEzsignsignatureattachmentCount: 7
+            sEzsignsignatureDescription: Montreal
+            iEzsignsignatureMaxlength: 75
+            eEzsignsignatureTextvalidation: None
+            sEzsignsignatureTextvalidationcustommessage: Phone number
+            eEzsignsignatureDependencyrequirement: AllOf
+            sEzsignsignatureDefaultvalue: Foo
+            sEzsignsignatureRegexp: "^[0-9]{9}$"
+            objContactName:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objContactNameDelegation:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objSignature:
+              pkiSignatureID: 12
+              fkiFontID: 1
+              sSignatureUrl: https://www.example.com/signature.svg
+              sSignatureUrlinitials: https://www.example.com/signature.svg
+            dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+            sEzsignsignergroupDescriptionX: HR
+            bEzsignsignatureCustomdate: null
+            a_objEzsignsignaturecustomdate:
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            objCreditcardtransaction:
+              eCreditcardtypeCodename: Visa
+              dCreditcardtransactionAmount: "167.58"
+              sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+              sCreditcardtransactionReferencenumber: "651447854715478415"
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            objTimezone:
+              sTimezoneName: sTimezoneName
+              sCode: EST
+            a_objEzsignsignaturepaymentdetail:
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+          a_objEzsignformfieldgroup:
+          - pkiEzsignformfieldgroupID: 26
+            fkiEzsigndocumentID: 97
+            eEzsignformfieldgroupType: Text
+            eEzsignformfieldgroupSignerrequirement: One
+            sEzsignformfieldgroupLabel: Allergies
+            iEzsignformfieldgroupStep: 1
+            sEzsignformfieldgroupDefaultvalue: Foo
+            iEzsignformfieldgroupFilledmin: 1
+            iEzsignformfieldgroupFilledmax: 2
+            bEzsignformfieldgroupReadonly: true
+            iEzsignformfieldgroupMaxlength: 75
+            bEzsignformfieldgroupEncrypted: true
+            eEzsignformfieldgroupTextvalidation: None
+            sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+            sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+            tEzsignformfieldgroupTooltip: Please enter a valid email address
+            eEzsignformfieldgroupTooltipposition: TopLeft
+            a_objEzsignformfield:
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            a_objDropdownElement:
+            - sLabel: sLabel
+              sValue: sValue
+            - sLabel: sLabel
+              sValue: sValue
+            a_objEzsignformfieldgroupsigner:
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupID: 26
+            fkiEzsigndocumentID: 97
+            eEzsignformfieldgroupType: Text
+            eEzsignformfieldgroupSignerrequirement: One
+            sEzsignformfieldgroupLabel: Allergies
+            iEzsignformfieldgroupStep: 1
+            sEzsignformfieldgroupDefaultvalue: Foo
+            iEzsignformfieldgroupFilledmin: 1
+            iEzsignformfieldgroupFilledmax: 2
+            bEzsignformfieldgroupReadonly: true
+            iEzsignformfieldgroupMaxlength: 75
+            bEzsignformfieldgroupEncrypted: true
+            eEzsignformfieldgroupTextvalidation: None
+            sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+            sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+            tEzsignformfieldgroupTooltip: Please enter a valid email address
+            eEzsignformfieldgroupTooltipposition: TopLeft
+            a_objEzsignformfield:
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            a_objDropdownElement:
+            - sLabel: sLabel
+              sValue: sValue
+            - sLabel: sLabel
+              sValue: sValue
+            a_objEzsignformfieldgroupsigner:
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsigndocument-getActionableElementsForSigner-v1-Response-mPayload:
+      description: "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner"
+      example:
+        a_objEzsignsignature:
+        - pkiEzsignsignatureID: 49
+          fkiEzsigndocumentID: 97
+          fkiEzsignfoldersignerassociationID: 20
+          fkiEzsignsigningreasonID: 194
+          fkiFontID: 1
+          fkiPaymentgatewayID: 235
+          sCurrencyDescriptionX: Canadian
+          dEzsignsignatureCreditcardamount: "100.00"
+          sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+          bEzsignsignatureCreditcardcustomamount: false
+          sEzsignsigningreasonDescriptionX: I approve this document
+          iEzsignpagePagenumber: 1
+          iEzsignsignatureX: 200
+          iEzsignsignatureY: 300
+          iEzsignsignatureHeight: 200
+          iEzsignsignatureWidth: 200
+          iEzsignsignatureStep: 1
+          iEzsignsignatureStepadjusted: 1
+          eEzsignsignatureType: Name
+          eEzsignsignatureSignaturepad: Topaz
+          eEzsignsignatureSignaturepadrequired: "No"
+          tEzsignsignatureTooltip: Please sign here if you agree to the terms
+          eEzsignsignatureTooltipposition: TopLeft
+          eEzsignsignatureFont: Normal
+          iEzsignsignatureValidationstep: 1
+          sEzsignsignatureAttachmentdescription: Attachment
+          eEzsignsignatureAttachmentnamesource: Description
+          eEzsignsignatureConsultationtrigger: Manual
+          bEzsignsignatureHandwritten: true
+          bEzsignsignatureReason: true
+          bEzsignsignatureRequired: true
+          fkiEzsignfoldersignerassociationIDValidation: 20
+          dtEzsignsignatureDate: 2020-12-31 23:59:59
+          iEzsignsignatureattachmentCount: 7
+          sEzsignsignatureDescription: Montreal
+          iEzsignsignatureMaxlength: 75
+          eEzsignsignatureTextvalidation: None
+          sEzsignsignatureTextvalidationcustommessage: Phone number
+          eEzsignsignatureDependencyrequirement: AllOf
+          sEzsignsignatureDefaultvalue: Foo
+          sEzsignsignatureRegexp: "^[0-9]{9}$"
+          objContactName:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objContactNameDelegation:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objSignature:
+            pkiSignatureID: 12
+            fkiFontID: 1
+            sSignatureUrl: https://www.example.com/signature.svg
+            sSignatureUrlinitials: https://www.example.com/signature.svg
+          dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+          sEzsignsignergroupDescriptionX: HR
+          bEzsignsignatureCustomdate: null
+          a_objEzsignsignaturecustomdate:
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          objCreditcardtransaction:
+            eCreditcardtypeCodename: Visa
+            dCreditcardtransactionAmount: "167.58"
+            sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+            sCreditcardtransactionReferencenumber: "651447854715478415"
+          a_objEzsignelementdependency:
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          objTimezone:
+            sTimezoneName: sTimezoneName
+            sCode: EST
+          a_objEzsignsignaturepaymentdetail:
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+        - pkiEzsignsignatureID: 49
+          fkiEzsigndocumentID: 97
+          fkiEzsignfoldersignerassociationID: 20
+          fkiEzsignsigningreasonID: 194
+          fkiFontID: 1
+          fkiPaymentgatewayID: 235
+          sCurrencyDescriptionX: Canadian
+          dEzsignsignatureCreditcardamount: "100.00"
+          sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+          bEzsignsignatureCreditcardcustomamount: false
+          sEzsignsigningreasonDescriptionX: I approve this document
+          iEzsignpagePagenumber: 1
+          iEzsignsignatureX: 200
+          iEzsignsignatureY: 300
+          iEzsignsignatureHeight: 200
+          iEzsignsignatureWidth: 200
+          iEzsignsignatureStep: 1
+          iEzsignsignatureStepadjusted: 1
+          eEzsignsignatureType: Name
+          eEzsignsignatureSignaturepad: Topaz
+          eEzsignsignatureSignaturepadrequired: "No"
+          tEzsignsignatureTooltip: Please sign here if you agree to the terms
+          eEzsignsignatureTooltipposition: TopLeft
+          eEzsignsignatureFont: Normal
+          iEzsignsignatureValidationstep: 1
+          sEzsignsignatureAttachmentdescription: Attachment
+          eEzsignsignatureAttachmentnamesource: Description
+          eEzsignsignatureConsultationtrigger: Manual
+          bEzsignsignatureHandwritten: true
+          bEzsignsignatureReason: true
+          bEzsignsignatureRequired: true
+          fkiEzsignfoldersignerassociationIDValidation: 20
+          dtEzsignsignatureDate: 2020-12-31 23:59:59
+          iEzsignsignatureattachmentCount: 7
+          sEzsignsignatureDescription: Montreal
+          iEzsignsignatureMaxlength: 75
+          eEzsignsignatureTextvalidation: None
+          sEzsignsignatureTextvalidationcustommessage: Phone number
+          eEzsignsignatureDependencyrequirement: AllOf
+          sEzsignsignatureDefaultvalue: Foo
+          sEzsignsignatureRegexp: "^[0-9]{9}$"
+          objContactName:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objContactNameDelegation:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objSignature:
+            pkiSignatureID: 12
+            fkiFontID: 1
+            sSignatureUrl: https://www.example.com/signature.svg
+            sSignatureUrlinitials: https://www.example.com/signature.svg
+          dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+          sEzsignsignergroupDescriptionX: HR
+          bEzsignsignatureCustomdate: null
+          a_objEzsignsignaturecustomdate:
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          objCreditcardtransaction:
+            eCreditcardtypeCodename: Visa
+            dCreditcardtransactionAmount: "167.58"
+            sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+            sCreditcardtransactionReferencenumber: "651447854715478415"
+          a_objEzsignelementdependency:
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          objTimezone:
+            sTimezoneName: sTimezoneName
+            sCode: EST
+          a_objEzsignsignaturepaymentdetail:
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+        a_objEzsignformfieldgroup:
+        - pkiEzsignformfieldgroupID: 26
+          fkiEzsigndocumentID: 97
+          eEzsignformfieldgroupType: Text
+          eEzsignformfieldgroupSignerrequirement: One
+          sEzsignformfieldgroupLabel: Allergies
+          iEzsignformfieldgroupStep: 1
+          sEzsignformfieldgroupDefaultvalue: Foo
+          iEzsignformfieldgroupFilledmin: 1
+          iEzsignformfieldgroupFilledmax: 2
+          bEzsignformfieldgroupReadonly: true
+          iEzsignformfieldgroupMaxlength: 75
+          bEzsignformfieldgroupEncrypted: true
+          eEzsignformfieldgroupTextvalidation: None
+          sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+          sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+          tEzsignformfieldgroupTooltip: Please enter a valid email address
+          eEzsignformfieldgroupTooltipposition: TopLeft
+          a_objEzsignformfield:
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          a_objDropdownElement:
+          - sLabel: sLabel
+            sValue: sValue
+          - sLabel: sLabel
+            sValue: sValue
+          a_objEzsignformfieldgroupsigner:
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+        - pkiEzsignformfieldgroupID: 26
+          fkiEzsigndocumentID: 97
+          eEzsignformfieldgroupType: Text
+          eEzsignformfieldgroupSignerrequirement: One
+          sEzsignformfieldgroupLabel: Allergies
+          iEzsignformfieldgroupStep: 1
+          sEzsignformfieldgroupDefaultvalue: Foo
+          iEzsignformfieldgroupFilledmin: 1
+          iEzsignformfieldgroupFilledmax: 2
+          bEzsignformfieldgroupReadonly: true
+          iEzsignformfieldgroupMaxlength: 75
+          bEzsignformfieldgroupEncrypted: true
+          eEzsignformfieldgroupTextvalidation: None
+          sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+          sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+          tEzsignformfieldgroupTooltip: Please enter a valid email address
+          eEzsignformfieldgroupTooltipposition: TopLeft
+          a_objEzsignformfield:
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          a_objDropdownElement:
+          - sLabel: sLabel
+            sValue: sValue
+          - sLabel: sLabel
+            sValue: sValue
+          a_objEzsignformfieldgroupsigner:
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+      properties:
+        a_objEzsignsignature:
+          items:
+            $ref: "#/components/schemas/ezsignsignature-ResponseCompound"
+          type: array
+        a_objEzsignformfieldgroup:
+          items:
+            $ref: "#/components/schemas/ezsignformfieldgroup-ResponseCompound"
+          type: array
+      required:
+      - a_objEzsignformfieldgroup
+      - a_objEzsignsignature
+      type: object
     ezsigndocument-getAttachments-v1-Response:
       allOf:
       - properties:
@@ -95320,6 +96754,945 @@ components:
       type: object
     ezsignfolder-getActionableElements-v3-Response-mPayload:
       description: "Payload for GET /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements"
+      example:
+        a_objEzsignsignature:
+        - pkiEzsignsignatureID: 49
+          fkiEzsigndocumentID: 97
+          fkiEzsignfoldersignerassociationID: 20
+          fkiEzsignsigningreasonID: 194
+          fkiFontID: 1
+          fkiPaymentgatewayID: 235
+          sCurrencyDescriptionX: Canadian
+          dEzsignsignatureCreditcardamount: "100.00"
+          sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+          bEzsignsignatureCreditcardcustomamount: false
+          sEzsignsigningreasonDescriptionX: I approve this document
+          iEzsignpagePagenumber: 1
+          iEzsignsignatureX: 200
+          iEzsignsignatureY: 300
+          iEzsignsignatureHeight: 200
+          iEzsignsignatureWidth: 200
+          iEzsignsignatureStep: 1
+          iEzsignsignatureStepadjusted: 1
+          eEzsignsignatureType: Name
+          eEzsignsignatureSignaturepad: Topaz
+          eEzsignsignatureSignaturepadrequired: "No"
+          tEzsignsignatureTooltip: Please sign here if you agree to the terms
+          eEzsignsignatureTooltipposition: TopLeft
+          eEzsignsignatureFont: Normal
+          iEzsignsignatureValidationstep: 1
+          sEzsignsignatureAttachmentdescription: Attachment
+          eEzsignsignatureAttachmentnamesource: Description
+          eEzsignsignatureConsultationtrigger: Manual
+          bEzsignsignatureHandwritten: true
+          bEzsignsignatureReason: true
+          bEzsignsignatureRequired: true
+          fkiEzsignfoldersignerassociationIDValidation: 20
+          dtEzsignsignatureDate: 2020-12-31 23:59:59
+          iEzsignsignatureattachmentCount: 7
+          sEzsignsignatureDescription: Montreal
+          iEzsignsignatureMaxlength: 75
+          eEzsignsignatureTextvalidation: None
+          sEzsignsignatureTextvalidationcustommessage: Phone number
+          eEzsignsignatureDependencyrequirement: AllOf
+          sEzsignsignatureDefaultvalue: Foo
+          sEzsignsignatureRegexp: "^[0-9]{9}$"
+          objContactName:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objContactNameDelegation:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objSignature:
+            pkiSignatureID: 12
+            fkiFontID: 1
+            sSignatureUrl: https://www.example.com/signature.svg
+            sSignatureUrlinitials: https://www.example.com/signature.svg
+          dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+          sEzsignsignergroupDescriptionX: HR
+          bEzsignsignatureCustomdate: null
+          a_objEzsignsignaturecustomdate:
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          objCreditcardtransaction:
+            eCreditcardtypeCodename: Visa
+            dCreditcardtransactionAmount: "167.58"
+            sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+            sCreditcardtransactionReferencenumber: "651447854715478415"
+          a_objEzsignelementdependency:
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          objTimezone:
+            sTimezoneName: sTimezoneName
+            sCode: EST
+          a_objEzsignsignaturepaymentdetail:
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+        - pkiEzsignsignatureID: 49
+          fkiEzsigndocumentID: 97
+          fkiEzsignfoldersignerassociationID: 20
+          fkiEzsignsigningreasonID: 194
+          fkiFontID: 1
+          fkiPaymentgatewayID: 235
+          sCurrencyDescriptionX: Canadian
+          dEzsignsignatureCreditcardamount: "100.00"
+          sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+          bEzsignsignatureCreditcardcustomamount: false
+          sEzsignsigningreasonDescriptionX: I approve this document
+          iEzsignpagePagenumber: 1
+          iEzsignsignatureX: 200
+          iEzsignsignatureY: 300
+          iEzsignsignatureHeight: 200
+          iEzsignsignatureWidth: 200
+          iEzsignsignatureStep: 1
+          iEzsignsignatureStepadjusted: 1
+          eEzsignsignatureType: Name
+          eEzsignsignatureSignaturepad: Topaz
+          eEzsignsignatureSignaturepadrequired: "No"
+          tEzsignsignatureTooltip: Please sign here if you agree to the terms
+          eEzsignsignatureTooltipposition: TopLeft
+          eEzsignsignatureFont: Normal
+          iEzsignsignatureValidationstep: 1
+          sEzsignsignatureAttachmentdescription: Attachment
+          eEzsignsignatureAttachmentnamesource: Description
+          eEzsignsignatureConsultationtrigger: Manual
+          bEzsignsignatureHandwritten: true
+          bEzsignsignatureReason: true
+          bEzsignsignatureRequired: true
+          fkiEzsignfoldersignerassociationIDValidation: 20
+          dtEzsignsignatureDate: 2020-12-31 23:59:59
+          iEzsignsignatureattachmentCount: 7
+          sEzsignsignatureDescription: Montreal
+          iEzsignsignatureMaxlength: 75
+          eEzsignsignatureTextvalidation: None
+          sEzsignsignatureTextvalidationcustommessage: Phone number
+          eEzsignsignatureDependencyrequirement: AllOf
+          sEzsignsignatureDefaultvalue: Foo
+          sEzsignsignatureRegexp: "^[0-9]{9}$"
+          objContactName:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objContactNameDelegation:
+            sContactFirstname: John
+            sContactLastname: Doe
+            sContactCompany: eZmax Solutions Inc.
+          objSignature:
+            pkiSignatureID: 12
+            fkiFontID: 1
+            sSignatureUrl: https://www.example.com/signature.svg
+            sSignatureUrlinitials: https://www.example.com/signature.svg
+          dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+          sEzsignsignergroupDescriptionX: HR
+          bEzsignsignatureCustomdate: null
+          a_objEzsignsignaturecustomdate:
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          - pkiEzsignsignaturecustomdateID: 27
+            iEzsignsignaturecustomdateX: 200
+            iEzsignsignaturecustomdateY: 300
+            iEzsignsignaturecustomdateOffsetx: 200
+            iEzsignsignaturecustomdateOffsety: 300
+            sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss}\
+              \ {Z}"
+          objCreditcardtransaction:
+            eCreditcardtypeCodename: Visa
+            dCreditcardtransactionAmount: "167.58"
+            sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+            sCreditcardtransactionReferencenumber: "651447854715478415"
+          a_objEzsignelementdependency:
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          - pkiEzsignelementdependencyID: 89
+            fkiEzsignformfieldID: 32
+            fkiEzsignsignatureID: 49
+            fkiEzsignformfieldIDValidation: 32
+            fkiEzsignformfieldgroupIDValidation: 26
+            eEzsignelementdependencyValidation: Value
+            bEzsignelementdependencySelected: false
+            eEzsignelementdependencyOperator: eq
+            sEzsignelementdependencyValue: Montreal
+          objTimezone:
+            sTimezoneName: sTimezoneName
+            sCode: EST
+          a_objEzsignsignaturepaymentdetail:
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignaturepaymentdetailID: 154
+            fkiGlaccountcontainerID: 66
+            tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+            dEzsignsignaturepaymentdetailAmount: "167.58"
+            eEzsignsignaturepaymentdetailTaxable: "Yes"
+        a_objEzsignformfieldgroup:
+        - pkiEzsignformfieldgroupID: 26
+          fkiEzsigndocumentID: 97
+          eEzsignformfieldgroupType: Text
+          eEzsignformfieldgroupSignerrequirement: One
+          sEzsignformfieldgroupLabel: Allergies
+          iEzsignformfieldgroupStep: 1
+          sEzsignformfieldgroupDefaultvalue: Foo
+          iEzsignformfieldgroupFilledmin: 1
+          iEzsignformfieldgroupFilledmax: 2
+          bEzsignformfieldgroupReadonly: true
+          iEzsignformfieldgroupMaxlength: 75
+          bEzsignformfieldgroupEncrypted: true
+          eEzsignformfieldgroupTextvalidation: None
+          sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+          sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+          tEzsignformfieldgroupTooltip: Please enter a valid email address
+          eEzsignformfieldgroupTooltipposition: TopLeft
+          a_objEzsignformfield:
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          a_objDropdownElement:
+          - sLabel: sLabel
+            sValue: sValue
+          - sLabel: sLabel
+            sValue: sValue
+          a_objEzsignformfieldgroupsigner:
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+        - pkiEzsignformfieldgroupID: 26
+          fkiEzsigndocumentID: 97
+          eEzsignformfieldgroupType: Text
+          eEzsignformfieldgroupSignerrequirement: One
+          sEzsignformfieldgroupLabel: Allergies
+          iEzsignformfieldgroupStep: 1
+          sEzsignformfieldgroupDefaultvalue: Foo
+          iEzsignformfieldgroupFilledmin: 1
+          iEzsignformfieldgroupFilledmax: 2
+          bEzsignformfieldgroupReadonly: true
+          iEzsignformfieldgroupMaxlength: 75
+          bEzsignformfieldgroupEncrypted: true
+          eEzsignformfieldgroupTextvalidation: None
+          sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+          sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+          tEzsignformfieldgroupTooltip: Please enter a valid email address
+          eEzsignformfieldgroupTooltipposition: TopLeft
+          a_objEzsignformfield:
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          - pkiEzsignformfieldID: 32
+            iEzsignpagePagenumber: 1
+            sEzsignformfieldLabel: Peanuts
+            sEzsignformfieldValue: "Yes"
+            iEzsignformfieldX: 200
+            iEzsignformfieldY: 300
+            iEzsignformfieldWidth: 102
+            iEzsignformfieldHeight: 22
+            bEzsignformfieldAutocomplete: true
+            bEzsignformfieldSelected: true
+            sEzsignformfieldEnteredvalue: Montreal
+            eEzsignformfieldDependencyrequirement: AllOf
+            eEzsignformfieldHorizontalalignment: Center
+            objTextstylestatic:
+              pkiTextstylestaticID: 216
+              fkiFontID: 1
+              sFontName: Arial
+              bTextstylestaticBold: true
+              bTextstylestaticUnderline: true
+              bTextstylestaticItalic: true
+              bTextstylestaticStrikethrough: true
+              iTextstylestaticFontcolor: 3752795
+              iTextstylestaticSize: 12
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+          a_objDropdownElement:
+          - sLabel: sLabel
+            sValue: sValue
+          - sLabel: sLabel
+            sValue: sValue
+          a_objEzsignformfieldgroupsigner:
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupsignerID: 81
+            fkiEzsignfoldersignerassociationID: 20
+      properties:
+        a_objEzsignsignature:
+          items:
+            $ref: "#/components/schemas/ezsignsignature-ResponseCompound"
+          type: array
+        a_objEzsignformfieldgroup:
+          items:
+            $ref: "#/components/schemas/ezsignformfieldgroup-ResponseCompound"
+          type: array
+      required:
+      - a_objEzsignformfieldgroup
+      - a_objEzsignsignature
+      type: object
+    ezsignfolder-getActionableElementsForSigner-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezsignfolder-getActionableElementsForSigner-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner"
+      example:
+        mPayload:
+          a_objEzsignsignature:
+          - pkiEzsignsignatureID: 49
+            fkiEzsigndocumentID: 97
+            fkiEzsignfoldersignerassociationID: 20
+            fkiEzsignsigningreasonID: 194
+            fkiFontID: 1
+            fkiPaymentgatewayID: 235
+            sCurrencyDescriptionX: Canadian
+            dEzsignsignatureCreditcardamount: "100.00"
+            sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+            bEzsignsignatureCreditcardcustomamount: false
+            sEzsignsigningreasonDescriptionX: I approve this document
+            iEzsignpagePagenumber: 1
+            iEzsignsignatureX: 200
+            iEzsignsignatureY: 300
+            iEzsignsignatureHeight: 200
+            iEzsignsignatureWidth: 200
+            iEzsignsignatureStep: 1
+            iEzsignsignatureStepadjusted: 1
+            eEzsignsignatureType: Name
+            eEzsignsignatureSignaturepad: Topaz
+            eEzsignsignatureSignaturepadrequired: "No"
+            tEzsignsignatureTooltip: Please sign here if you agree to the terms
+            eEzsignsignatureTooltipposition: TopLeft
+            eEzsignsignatureFont: Normal
+            iEzsignsignatureValidationstep: 1
+            sEzsignsignatureAttachmentdescription: Attachment
+            eEzsignsignatureAttachmentnamesource: Description
+            eEzsignsignatureConsultationtrigger: Manual
+            bEzsignsignatureHandwritten: true
+            bEzsignsignatureReason: true
+            bEzsignsignatureRequired: true
+            fkiEzsignfoldersignerassociationIDValidation: 20
+            dtEzsignsignatureDate: 2020-12-31 23:59:59
+            iEzsignsignatureattachmentCount: 7
+            sEzsignsignatureDescription: Montreal
+            iEzsignsignatureMaxlength: 75
+            eEzsignsignatureTextvalidation: None
+            sEzsignsignatureTextvalidationcustommessage: Phone number
+            eEzsignsignatureDependencyrequirement: AllOf
+            sEzsignsignatureDefaultvalue: Foo
+            sEzsignsignatureRegexp: "^[0-9]{9}$"
+            objContactName:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objContactNameDelegation:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objSignature:
+              pkiSignatureID: 12
+              fkiFontID: 1
+              sSignatureUrl: https://www.example.com/signature.svg
+              sSignatureUrlinitials: https://www.example.com/signature.svg
+            dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+            sEzsignsignergroupDescriptionX: HR
+            bEzsignsignatureCustomdate: null
+            a_objEzsignsignaturecustomdate:
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            objCreditcardtransaction:
+              eCreditcardtypeCodename: Visa
+              dCreditcardtransactionAmount: "167.58"
+              sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+              sCreditcardtransactionReferencenumber: "651447854715478415"
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            objTimezone:
+              sTimezoneName: sTimezoneName
+              sCode: EST
+            a_objEzsignsignaturepaymentdetail:
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+          - pkiEzsignsignatureID: 49
+            fkiEzsigndocumentID: 97
+            fkiEzsignfoldersignerassociationID: 20
+            fkiEzsignsigningreasonID: 194
+            fkiFontID: 1
+            fkiPaymentgatewayID: 235
+            sCurrencyDescriptionX: Canadian
+            dEzsignsignatureCreditcardamount: "100.00"
+            sEzsignsignatureCreditcardamountdescription: "Invoice #123"
+            bEzsignsignatureCreditcardcustomamount: false
+            sEzsignsigningreasonDescriptionX: I approve this document
+            iEzsignpagePagenumber: 1
+            iEzsignsignatureX: 200
+            iEzsignsignatureY: 300
+            iEzsignsignatureHeight: 200
+            iEzsignsignatureWidth: 200
+            iEzsignsignatureStep: 1
+            iEzsignsignatureStepadjusted: 1
+            eEzsignsignatureType: Name
+            eEzsignsignatureSignaturepad: Topaz
+            eEzsignsignatureSignaturepadrequired: "No"
+            tEzsignsignatureTooltip: Please sign here if you agree to the terms
+            eEzsignsignatureTooltipposition: TopLeft
+            eEzsignsignatureFont: Normal
+            iEzsignsignatureValidationstep: 1
+            sEzsignsignatureAttachmentdescription: Attachment
+            eEzsignsignatureAttachmentnamesource: Description
+            eEzsignsignatureConsultationtrigger: Manual
+            bEzsignsignatureHandwritten: true
+            bEzsignsignatureReason: true
+            bEzsignsignatureRequired: true
+            fkiEzsignfoldersignerassociationIDValidation: 20
+            dtEzsignsignatureDate: 2020-12-31 23:59:59
+            iEzsignsignatureattachmentCount: 7
+            sEzsignsignatureDescription: Montreal
+            iEzsignsignatureMaxlength: 75
+            eEzsignsignatureTextvalidation: None
+            sEzsignsignatureTextvalidationcustommessage: Phone number
+            eEzsignsignatureDependencyrequirement: AllOf
+            sEzsignsignatureDefaultvalue: Foo
+            sEzsignsignatureRegexp: "^[0-9]{9}$"
+            objContactName:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objContactNameDelegation:
+              sContactFirstname: John
+              sContactLastname: Doe
+              sContactCompany: eZmax Solutions Inc.
+            objSignature:
+              pkiSignatureID: 12
+              fkiFontID: 1
+              sSignatureUrl: https://www.example.com/signature.svg
+              sSignatureUrlinitials: https://www.example.com/signature.svg
+            dtEzsignsignatureDateInFolderTimezone: 2020-12-31 23:59:59
+            sEzsignsignergroupDescriptionX: HR
+            bEzsignsignatureCustomdate: null
+            a_objEzsignsignaturecustomdate:
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            - pkiEzsignsignaturecustomdateID: 27
+              iEzsignsignaturecustomdateX: 200
+              iEzsignsignaturecustomdateY: 300
+              iEzsignsignaturecustomdateOffsetx: 200
+              iEzsignsignaturecustomdateOffsety: 300
+              sEzsignsignaturecustomdateFormat: "Signature date: {YYYY}/{MM}/{DD}\
+                \ {hh}:{mm}{ss} {Z}"
+            objCreditcardtransaction:
+              eCreditcardtypeCodename: Visa
+              dCreditcardtransactionAmount: "167.58"
+              sCreditcardtransactionPartiallydecryptednumber: XXXX XXXX XXXX 1234
+              sCreditcardtransactionReferencenumber: "651447854715478415"
+            a_objEzsignelementdependency:
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            - pkiEzsignelementdependencyID: 89
+              fkiEzsignformfieldID: 32
+              fkiEzsignsignatureID: 49
+              fkiEzsignformfieldIDValidation: 32
+              fkiEzsignformfieldgroupIDValidation: 26
+              eEzsignelementdependencyValidation: Value
+              bEzsignelementdependencySelected: false
+              eEzsignelementdependencyOperator: eq
+              sEzsignelementdependencyValue: Montreal
+            objTimezone:
+              sTimezoneName: sTimezoneName
+              sCode: EST
+            a_objEzsignsignaturepaymentdetail:
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+            - pkiEzsignsignaturepaymentdetailID: 154
+              fkiGlaccountcontainerID: 66
+              tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
+              dEzsignsignaturepaymentdetailAmount: "167.58"
+              eEzsignsignaturepaymentdetailTaxable: "Yes"
+          a_objEzsignformfieldgroup:
+          - pkiEzsignformfieldgroupID: 26
+            fkiEzsigndocumentID: 97
+            eEzsignformfieldgroupType: Text
+            eEzsignformfieldgroupSignerrequirement: One
+            sEzsignformfieldgroupLabel: Allergies
+            iEzsignformfieldgroupStep: 1
+            sEzsignformfieldgroupDefaultvalue: Foo
+            iEzsignformfieldgroupFilledmin: 1
+            iEzsignformfieldgroupFilledmax: 2
+            bEzsignformfieldgroupReadonly: true
+            iEzsignformfieldgroupMaxlength: 75
+            bEzsignformfieldgroupEncrypted: true
+            eEzsignformfieldgroupTextvalidation: None
+            sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+            sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+            tEzsignformfieldgroupTooltip: Please enter a valid email address
+            eEzsignformfieldgroupTooltipposition: TopLeft
+            a_objEzsignformfield:
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            a_objDropdownElement:
+            - sLabel: sLabel
+              sValue: sValue
+            - sLabel: sLabel
+              sValue: sValue
+            a_objEzsignformfieldgroupsigner:
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+          - pkiEzsignformfieldgroupID: 26
+            fkiEzsigndocumentID: 97
+            eEzsignformfieldgroupType: Text
+            eEzsignformfieldgroupSignerrequirement: One
+            sEzsignformfieldgroupLabel: Allergies
+            iEzsignformfieldgroupStep: 1
+            sEzsignformfieldgroupDefaultvalue: Foo
+            iEzsignformfieldgroupFilledmin: 1
+            iEzsignformfieldgroupFilledmax: 2
+            bEzsignformfieldgroupReadonly: true
+            iEzsignformfieldgroupMaxlength: 75
+            bEzsignformfieldgroupEncrypted: true
+            eEzsignformfieldgroupTextvalidation: None
+            sEzsignformfieldgroupRegexp: "^[0-9]{9}$"
+            sEzsignformfieldgroupTextvalidationcustommessage: Phone number
+            tEzsignformfieldgroupTooltip: Please enter a valid email address
+            eEzsignformfieldgroupTooltipposition: TopLeft
+            a_objEzsignformfield:
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            - pkiEzsignformfieldID: 32
+              iEzsignpagePagenumber: 1
+              sEzsignformfieldLabel: Peanuts
+              sEzsignformfieldValue: "Yes"
+              iEzsignformfieldX: 200
+              iEzsignformfieldY: 300
+              iEzsignformfieldWidth: 102
+              iEzsignformfieldHeight: 22
+              bEzsignformfieldAutocomplete: true
+              bEzsignformfieldSelected: true
+              sEzsignformfieldEnteredvalue: Montreal
+              eEzsignformfieldDependencyrequirement: AllOf
+              eEzsignformfieldHorizontalalignment: Center
+              objTextstylestatic:
+                pkiTextstylestaticID: 216
+                fkiFontID: 1
+                sFontName: Arial
+                bTextstylestaticBold: true
+                bTextstylestaticUnderline: true
+                bTextstylestaticItalic: true
+                bTextstylestaticStrikethrough: true
+                iTextstylestaticFontcolor: 3752795
+                iTextstylestaticSize: 12
+              a_objEzsignelementdependency:
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+              - pkiEzsignelementdependencyID: 89
+                fkiEzsignformfieldID: 32
+                fkiEzsignsignatureID: 49
+                fkiEzsignformfieldIDValidation: 32
+                fkiEzsignformfieldgroupIDValidation: 26
+                eEzsignelementdependencyValidation: Value
+                bEzsignelementdependencySelected: false
+                eEzsignelementdependencyOperator: eq
+                sEzsignelementdependencyValue: Montreal
+            a_objDropdownElement:
+            - sLabel: sLabel
+              sValue: sValue
+            - sLabel: sLabel
+              sValue: sValue
+            a_objEzsignformfieldgroupsigner:
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+            - pkiEzsignformfieldgroupsignerID: 81
+              fkiEzsignfoldersignerassociationID: 20
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezsignfolder-getActionableElementsForSigner-v1-Response-mPayload:
+      description: "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner"
       example:
         a_objEzsignsignature:
         - pkiEzsignsignatureID: 49
@@ -128087,10 +130460,13 @@ components:
         pkiInscriptionID: 17
         pkiInscriptionnotauthenticatedID: 24
         fkiInscriptiontypeID: 51
+        fkiBuyercontractID: 38
+        sBuyercontractContract: "12345"
         sInscriptiontypeNameX: Revenue Property
         eInscriptionStep: TemporaryNotAuthenticated
         sInscriptionCivicend: "630"
         sInscriptionMLS: X00000
+        sInscriptionContract: "1542254"
         dInscriptionSaleprice: "200000.00"
         dInscriptionRentprice: "1200.00"
         dtInscriptionDate: 2020-12-31
@@ -128132,6 +130508,16 @@ components:
           maximum: 255
           minimum: 0
           type: integer
+        fkiBuyercontractID:
+          description: The unique ID of the Buyercontract
+          example: 38
+          maximum: 65535
+          minimum: 1
+          type: integer
+        sBuyercontractContract:
+          description: The number of the Buyercontract
+          example: "12345"
+          type: string
         sInscriptiontypeNameX:
           description: The name of the Inscriptiontype in the language of the requester
           example: Revenue Property
@@ -128147,6 +130533,11 @@ components:
         sInscriptionMLS:
           description: The mls of the Inscription
           example: X00000
+          pattern: "^.{0,20}$"
+          type: string
+        sInscriptionContract:
+          description: The sale contract number
+          example: "1542254"
           pattern: "^.{0,20}$"
           type: string
         dInscriptionSaleprice:
@@ -133416,10 +135807,13 @@ components:
           - pkiInscriptionID: 17
             pkiInscriptionnotauthenticatedID: 24
             fkiInscriptiontypeID: 51
+            fkiBuyercontractID: 38
+            sBuyercontractContract: "12345"
             sInscriptiontypeNameX: Revenue Property
             eInscriptionStep: TemporaryNotAuthenticated
             sInscriptionCivicend: "630"
             sInscriptionMLS: X00000
+            sInscriptionContract: "1542254"
             dInscriptionSaleprice: "200000.00"
             dInscriptionRentprice: "1200.00"
             dtInscriptionDate: 2020-12-31
@@ -133447,10 +135841,13 @@ components:
           - pkiInscriptionID: 17
             pkiInscriptionnotauthenticatedID: 24
             fkiInscriptiontypeID: 51
+            fkiBuyercontractID: 38
+            sBuyercontractContract: "12345"
             sInscriptiontypeNameX: Revenue Property
             eInscriptionStep: TemporaryNotAuthenticated
             sInscriptionCivicend: "630"
             sInscriptionMLS: X00000
+            sInscriptionContract: "1542254"
             dInscriptionSaleprice: "200000.00"
             dInscriptionRentprice: "1200.00"
             dtInscriptionDate: 2020-12-31
@@ -133525,10 +135922,13 @@ components:
         - pkiInscriptionID: 17
           pkiInscriptionnotauthenticatedID: 24
           fkiInscriptiontypeID: 51
+          fkiBuyercontractID: 38
+          sBuyercontractContract: "12345"
           sInscriptiontypeNameX: Revenue Property
           eInscriptionStep: TemporaryNotAuthenticated
           sInscriptionCivicend: "630"
           sInscriptionMLS: X00000
+          sInscriptionContract: "1542254"
           dInscriptionSaleprice: "200000.00"
           dInscriptionRentprice: "1200.00"
           dtInscriptionDate: 2020-12-31
@@ -133556,10 +135956,13 @@ components:
         - pkiInscriptionID: 17
           pkiInscriptionnotauthenticatedID: 24
           fkiInscriptiontypeID: 51
+          fkiBuyercontractID: 38
+          sBuyercontractContract: "12345"
           sInscriptiontypeNameX: Revenue Property
           eInscriptionStep: TemporaryNotAuthenticated
           sInscriptionCivicend: "630"
           sInscriptionMLS: X00000
+          sInscriptionContract: "1542254"
           dInscriptionSaleprice: "200000.00"
           dInscriptionRentprice: "1200.00"
           dtInscriptionDate: 2020-12-31
@@ -133807,10 +136210,13 @@ components:
         pkiInscriptionID: 17
         pkiInscriptionnotauthenticatedID: 24
         fkiInscriptiontypeID: 51
+        fkiBuyercontractID: 38
+        sBuyercontractContract: "12345"
         sInscriptiontypeNameX: Revenue Property
         eInscriptionStep: TemporaryNotAuthenticated
         sInscriptionCivicend: "630"
         sInscriptionMLS: X00000
+        sInscriptionContract: "1542254"
         dInscriptionSaleprice: "200000.00"
         dInscriptionRentprice: "1200.00"
         dtInscriptionDate: 2020-12-31
@@ -133851,6 +136257,16 @@ components:
           maximum: 255
           minimum: 0
           type: integer
+        fkiBuyercontractID:
+          description: The unique ID of the Buyercontract
+          example: 38
+          maximum: 65535
+          minimum: 1
+          type: integer
+        sBuyercontractContract:
+          description: The number of the Buyercontract
+          example: "12345"
+          type: string
         sInscriptiontypeNameX:
           description: The name of the Inscriptiontype in the language of the requester
           example: Revenue Property
@@ -133866,6 +136282,11 @@ components:
         sInscriptionMLS:
           description: The mls of the Inscription
           example: X00000
+          pattern: "^.{0,20}$"
+          type: string
+        sInscriptionContract:
+          description: The sale contract number
+          example: "1542254"
           pattern: "^.{0,20}$"
           type: string
         dInscriptionSaleprice:
@@ -134850,10 +137271,13 @@ components:
           - pkiInscriptionID: 17
             pkiInscriptionnotauthenticatedID: 24
             fkiInscriptiontypeID: 51
+            fkiBuyercontractID: 38
+            sBuyercontractContract: "12345"
             sInscriptiontypeNameX: Revenue Property
             eInscriptionStep: TemporaryNotAuthenticated
             sInscriptionCivicend: "630"
             sInscriptionMLS: X00000
+            sInscriptionContract: "1542254"
             dInscriptionSaleprice: "200000.00"
             dInscriptionRentprice: "1200.00"
             dtInscriptionDate: 2020-12-31
@@ -134880,10 +137304,13 @@ components:
           - pkiInscriptionID: 17
             pkiInscriptionnotauthenticatedID: 24
             fkiInscriptiontypeID: 51
+            fkiBuyercontractID: 38
+            sBuyercontractContract: "12345"
             sInscriptiontypeNameX: Revenue Property
             eInscriptionStep: TemporaryNotAuthenticated
             sInscriptionCivicend: "630"
             sInscriptionMLS: X00000
+            sInscriptionContract: "1542254"
             dInscriptionSaleprice: "200000.00"
             dInscriptionRentprice: "1200.00"
             dtInscriptionDate: 2020-12-31
@@ -134957,10 +137384,13 @@ components:
         - pkiInscriptionID: 17
           pkiInscriptionnotauthenticatedID: 24
           fkiInscriptiontypeID: 51
+          fkiBuyercontractID: 38
+          sBuyercontractContract: "12345"
           sInscriptiontypeNameX: Revenue Property
           eInscriptionStep: TemporaryNotAuthenticated
           sInscriptionCivicend: "630"
           sInscriptionMLS: X00000
+          sInscriptionContract: "1542254"
           dInscriptionSaleprice: "200000.00"
           dInscriptionRentprice: "1200.00"
           dtInscriptionDate: 2020-12-31
@@ -134987,10 +137417,13 @@ components:
         - pkiInscriptionID: 17
           pkiInscriptionnotauthenticatedID: 24
           fkiInscriptiontypeID: 51
+          fkiBuyercontractID: 38
+          sBuyercontractContract: "12345"
           sInscriptiontypeNameX: Revenue Property
           eInscriptionStep: TemporaryNotAuthenticated
           sInscriptionCivicend: "630"
           sInscriptionMLS: X00000
+          sInscriptionContract: "1542254"
           dInscriptionSaleprice: "200000.00"
           dInscriptionRentprice: "1200.00"
           dtInscriptionDate: 2020-12-31
@@ -153382,18 +155815,12 @@ components:
     user-impersonate-v1-Request:
       description: "Request for POST /1/object/user/{pkiUserID}/impersonate"
       properties:
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          minimum: 0
-          type: integer
         iExpirationMinutes:
           description: The number of minute before key is no longer active
           maximum: 180
           minimum: 1
           type: integer
       required:
-      - fkiUserID
       - iExpirationMinutes
       type: object
     user-impersonate-v1-Response:
@@ -158237,6 +160664,45 @@ components:
       name: sAuthorization
       type: apiKey
 x-webhooks:
+  Webhook-Ezmaxpartnerproduct-Subscribe:
+    post:
+      summary: Webhook Ezmaxpartnerproduct Subscribe
+      description: This Webhook will be called when the user subscribes to an Ezmaxpartnerproduct.
+      security:
+      - {}
+      operationId: Webhook_Ezmaxpartnerproduct_Subscribe
+      tags:
+      - Object_Ezmaxpartnerproduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Webhook-Ezmaxpartnerproduct-Subscribe"
+      responses:
+        "202":
+          $ref: "#/components/responses/Response-Webhook-202"
+        "204":
+          $ref: "#/components/responses/Response-Webhook-204"
+  Webhook-Ezmaxpartnerproduct-Unsubscribe:
+    post:
+      summary: Webhook Ezmaxpartnerproduct Unsubscribe
+      description: This Webhook will be called when the user unsubscribes from an
+        Ezmaxpartnerproduct.
+      security:
+      - {}
+      operationId: Webhook_Ezmaxpartnerproduct_Unsubscribe
+      tags:
+      - Object_Ezmaxpartnerproduct
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Webhook-Ezmaxpartnerproduct-Unsubscribe"
+      responses:
+        "202":
+          $ref: "#/components/responses/Response-Webhook-202"
+        "204":
+          $ref: "#/components/responses/Response-Webhook-204"
   Webhook-Ezsign-DocumentCompleted:
     post:
       summary: Webhook Document Completed
@@ -158602,6 +161068,7 @@ x-tagGroups:
   - Object_Ezmaxinvoicing
   - Object_Ezmaxmaillinglist
   - Object_Ezmaxpartner
+  - Object_Ezmaxpartnerproduct
   - Object_Ezmaxproduct
   - Object_Ezsignannotation
   - Object_Ezsignbulksend
@@ -158700,6 +161167,9 @@ x-tagGroups:
   tags:
   - Websocket_RequestServer
   - Websocket_Response
+- name: Documentation
+  tags:
+  - Documentation_Ezmaxpartner
 x-presentations:
 - Ezsign
 - RemaxQC

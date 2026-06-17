@@ -27,31 +27,35 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Request for POST /1/object/user/{pkiUserID}/impersonate
+    /// Request for POST /1/module/ezmaxmaillinglist/subscribe
     /// </summary>
-    [DataContract(Name = "user-impersonate-v1-Request")]
-    public partial class UserImpersonateV1Request : IValidatableObject
+    [DataContract(Name = "documentation-subscribe-v1-Response")]
+    public partial class DocumentationSubscribeV1Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserImpersonateV1Request" /> class.
+        /// Initializes a new instance of the <see cref="DocumentationSubscribeV1Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected UserImpersonateV1Request() { }
+        protected DocumentationSubscribeV1Response() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserImpersonateV1Request" /> class.
+        /// Initializes a new instance of the <see cref="DocumentationSubscribeV1Response" /> class.
         /// </summary>
-        /// <param name="iExpirationMinutes">The number of minute before key is no longer active (required).</param>
-        public UserImpersonateV1Request(int iExpirationMinutes = default)
+        /// <param name="sExternalID">sExternalID (required).</param>
+        public DocumentationSubscribeV1Response(string sExternalID = default)
         {
-            this.IExpirationMinutes = iExpirationMinutes;
+            // to ensure "sExternalID" is required (not null)
+            if (sExternalID == null)
+            {
+                throw new ArgumentNullException("sExternalID is a required property for DocumentationSubscribeV1Response and cannot be null");
+            }
+            this.SExternalID = sExternalID;
         }
 
         /// <summary>
-        /// The number of minute before key is no longer active
+        /// Gets or Sets SExternalID
         /// </summary>
-        /// <value>The number of minute before key is no longer active</value>
-        [DataMember(Name = "iExpirationMinutes", IsRequired = true, EmitDefaultValue = true)]
-        public int IExpirationMinutes { get; set; }
+        [DataMember(Name = "sExternalID", IsRequired = true, EmitDefaultValue = true)]
+        public string SExternalID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +64,8 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class UserImpersonateV1Request {\n");
-            sb.Append("  IExpirationMinutes: ").Append(IExpirationMinutes).Append("\n");
+            sb.Append("class DocumentationSubscribeV1Response {\n");
+            sb.Append("  SExternalID: ").Append(SExternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,18 +86,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // IExpirationMinutes (int) maximum
-            if (this.IExpirationMinutes > (int)180)
-            {
-                yield return new ValidationResult("Invalid value for IExpirationMinutes, must be a value less than or equal to 180.", new [] { "IExpirationMinutes" });
-            }
-
-            // IExpirationMinutes (int) minimum
-            if (this.IExpirationMinutes < (int)1)
-            {
-                yield return new ValidationResult("Invalid value for IExpirationMinutes, must be a value greater than or equal to 1.", new [] { "IExpirationMinutes" });
-            }
-
             yield break;
         }
     }

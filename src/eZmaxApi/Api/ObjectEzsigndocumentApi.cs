@@ -555,6 +555,35 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of EzsigndocumentFlattenV1Response</returns>
         ApiResponse<EzsigndocumentFlattenV1Response> EzsigndocumentFlattenV1WithHttpInfo(int pkiEzsigndocumentID, Object body, int operationIndex = 0);
         /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        EzsigndocumentGetActionableElementsForSignerV1Response EzsigndocumentGetActionableElementsForSignerV1(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response> EzsigndocumentGetActionableElementsForSignerV1WithHttpInfo(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0);
+        /// <summary>
         /// Retrieve actionable elements for the Ezsigndocument
         /// </summary>
         /// <remarks>
@@ -1681,6 +1710,37 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (EzsigndocumentFlattenV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<EzsigndocumentFlattenV1Response>> EzsigndocumentFlattenV1WithHttpInfoAsync(int pkiEzsigndocumentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsForSignerV1Response> EzsigndocumentGetActionableElementsForSignerV1Async(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument
+        /// </summary>
+        /// <remarks>
+        /// Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsForSignerV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response>> EzsigndocumentGetActionableElementsForSignerV1WithHttpInfoAsync(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve actionable elements for the Ezsigndocument
         /// </summary>
@@ -5833,6 +5893,191 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EzsigndocumentFlattenV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        public EzsigndocumentGetActionableElementsForSignerV1Response EzsigndocumentGetActionableElementsForSignerV1(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response> localVarResponse = EzsigndocumentGetActionableElementsForSignerV1WithHttpInfo(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response> EzsigndocumentGetActionableElementsForSignerV1WithHttpInfo(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0)
+        {
+            // verify the required parameter 'eSignerType' is set
+            if (eSignerType == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'eSignerType' when calling ObjectEzsigndocumentApi->EzsigndocumentGetActionableElementsForSignerV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eSignerType", eSignerType));
+            if (fkiEzsignsignerID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignsignerID", fkiEzsignsignerID));
+            }
+            if (fkiUserID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiUserID", fkiUserID));
+            }
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetActionableElementsForSignerV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<EzsigndocumentGetActionableElementsForSignerV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsForSignerV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of EzsigndocumentGetActionableElementsForSignerV1Response</returns>
+        public async System.Threading.Tasks.Task<EzsigndocumentGetActionableElementsForSignerV1Response> EzsigndocumentGetActionableElementsForSignerV1Async(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response> localVarResponse = await EzsigndocumentGetActionableElementsForSignerV1WithHttpInfoAsync(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve actionable elements of a user for the Ezsigndocument Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiEzsigndocumentID"></param>
+        /// <param name="eSignerType"></param>
+        /// <param name="fkiEzsignsignerID"> (optional)</param>
+        /// <param name="fkiUserID"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (EzsigndocumentGetActionableElementsForSignerV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzsigndocumentGetActionableElementsForSignerV1Response>> EzsigndocumentGetActionableElementsForSignerV1WithHttpInfoAsync(int pkiEzsigndocumentID, string eSignerType, int? fkiEzsignsignerID = default, int? fkiUserID = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'eSignerType' is set
+            if (eSignerType == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'eSignerType' when calling ObjectEzsigndocumentApi->EzsigndocumentGetActionableElementsForSignerV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiEzsigndocumentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiEzsigndocumentID)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eSignerType", eSignerType));
+            if (fkiEzsignsignerID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiEzsignsignerID", fkiEzsignsignerID));
+            }
+            if (fkiUserID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiUserID", fkiUserID));
+            }
+
+            localVarRequestOptions.Operation = "ObjectEzsigndocumentApi.EzsigndocumentGetActionableElementsForSignerV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<EzsigndocumentGetActionableElementsForSignerV1Response>("/1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("EzsigndocumentGetActionableElementsForSignerV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

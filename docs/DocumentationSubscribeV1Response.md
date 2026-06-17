@@ -1,11 +1,11 @@
-# eZmaxApi.Model.UserImpersonateV1Request
-Request for POST /1/object/user/{pkiUserID}/impersonate
+# eZmaxApi.Model.DocumentationSubscribeV1Response
+Request for POST /1/module/ezmaxmaillinglist/subscribe
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IExpirationMinutes** | **int** | The number of minute before key is no longer active | 
+**SExternalID** | **string** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

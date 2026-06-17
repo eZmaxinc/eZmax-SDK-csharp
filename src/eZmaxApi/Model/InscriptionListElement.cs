@@ -49,10 +49,13 @@ namespace eZmaxApi.Model
         /// <param name="pkiInscriptionID">The unique ID of the Inscription. (required).</param>
         /// <param name="pkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
         /// <param name="fkiInscriptiontypeID">The unique ID of the Inscriptiontype (required).</param>
+        /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
+        /// <param name="sBuyercontractContract">The number of the Buyercontract.</param>
         /// <param name="sInscriptiontypeNameX">The name of the Inscriptiontype in the language of the requester (required).</param>
         /// <param name="eInscriptionStep">eInscriptionStep (required).</param>
         /// <param name="sInscriptionCivicend">The civicend of the Inscription (required).</param>
         /// <param name="sInscriptionMLS">The mls of the Inscription.</param>
+        /// <param name="sInscriptionContract">The sale contract number.</param>
         /// <param name="dInscriptionSaleprice">The saleprice of the Inscription (required).</param>
         /// <param name="dInscriptionRentprice">The rentprice of the Inscription (required).</param>
         /// <param name="dtInscriptionDate">The date of the Inscription.</param>
@@ -77,7 +80,7 @@ namespace eZmaxApi.Model
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
         /// <param name="iInscriptionnotauthenticatedCanceled">The numbre of inscriptionnotauthenticated was canceled in this Inscription (required).</param>
         /// <param name="bAllowedCopyintoinscriptionedm">Whether we are allowed to copy into the Inscription EDM (required).</param>
-        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, FieldEInscriptionStep eInscriptionStep = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, bool bAllowedCopyintoinscriptionedm = default)
+        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, int fkiBuyercontractID = default, string sBuyercontractContract = default, string sInscriptiontypeNameX = default, FieldEInscriptionStep eInscriptionStep = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string sInscriptionContract = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, bool bAllowedCopyintoinscriptionedm = default)
         {
             this.PkiInscriptionID = pkiInscriptionID;
             this.FkiInscriptiontypeID = fkiInscriptiontypeID;
@@ -111,7 +114,10 @@ namespace eZmaxApi.Model
             this.IInscriptionnotauthenticatedCanceled = iInscriptionnotauthenticatedCanceled;
             this.BAllowedCopyintoinscriptionedm = bAllowedCopyintoinscriptionedm;
             this.PkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID;
+            this.FkiBuyercontractID = fkiBuyercontractID;
+            this.SBuyercontractContract = sBuyercontractContract;
             this.SInscriptionMLS = sInscriptionMLS;
+            this.SInscriptionContract = sInscriptionContract;
             this.DtInscriptionDate = dtInscriptionDate;
             this.DtInscriptionExpirationdate = dtInscriptionExpirationdate;
             this.DtInscriptionNotarydate = dtInscriptionNotarydate;
@@ -163,6 +169,26 @@ namespace eZmaxApi.Model
         public int FkiInscriptiontypeID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Buyercontract
+        /// </summary>
+        /// <value>The unique ID of the Buyercontract</value>
+        /*
+        <example>38</example>
+        */
+        [DataMember(Name = "fkiBuyercontractID", EmitDefaultValue = false)]
+        public int FkiBuyercontractID { get; set; }
+
+        /// <summary>
+        /// The number of the Buyercontract
+        /// </summary>
+        /// <value>The number of the Buyercontract</value>
+        /*
+        <example>12345</example>
+        */
+        [DataMember(Name = "sBuyercontractContract", EmitDefaultValue = false)]
+        public string SBuyercontractContract { get; set; }
+
+        /// <summary>
         /// The name of the Inscriptiontype in the language of the requester
         /// </summary>
         /// <value>The name of the Inscriptiontype in the language of the requester</value>
@@ -191,6 +217,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "sInscriptionMLS", EmitDefaultValue = false)]
         public string SInscriptionMLS { get; set; }
+
+        /// <summary>
+        /// The sale contract number
+        /// </summary>
+        /// <value>The sale contract number</value>
+        /*
+        <example>1542254</example>
+        */
+        [DataMember(Name = "sInscriptionContract", EmitDefaultValue = false)]
+        public string SInscriptionContract { get; set; }
 
         /// <summary>
         /// The saleprice of the Inscription
@@ -440,10 +476,13 @@ namespace eZmaxApi.Model
             sb.Append("  PkiInscriptionID: ").Append(PkiInscriptionID).Append("\n");
             sb.Append("  PkiInscriptionnotauthenticatedID: ").Append(PkiInscriptionnotauthenticatedID).Append("\n");
             sb.Append("  FkiInscriptiontypeID: ").Append(FkiInscriptiontypeID).Append("\n");
+            sb.Append("  FkiBuyercontractID: ").Append(FkiBuyercontractID).Append("\n");
+            sb.Append("  SBuyercontractContract: ").Append(SBuyercontractContract).Append("\n");
             sb.Append("  SInscriptiontypeNameX: ").Append(SInscriptiontypeNameX).Append("\n");
             sb.Append("  EInscriptionStep: ").Append(EInscriptionStep).Append("\n");
             sb.Append("  SInscriptionCivicend: ").Append(SInscriptionCivicend).Append("\n");
             sb.Append("  SInscriptionMLS: ").Append(SInscriptionMLS).Append("\n");
+            sb.Append("  SInscriptionContract: ").Append(SInscriptionContract).Append("\n");
             sb.Append("  DInscriptionSaleprice: ").Append(DInscriptionSaleprice).Append("\n");
             sb.Append("  DInscriptionRentprice: ").Append(DInscriptionRentprice).Append("\n");
             sb.Append("  DtInscriptionDate: ").Append(DtInscriptionDate).Append("\n");
@@ -512,6 +551,18 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
             }
 
+            // FkiBuyercontractID (int) maximum
+            if (this.FkiBuyercontractID > (int)65535)
+            {
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
+            }
+
+            // FkiBuyercontractID (int) minimum
+            if (this.FkiBuyercontractID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
+            }
+
             if (this.SInscriptiontypeNameX != null) {
                 // SInscriptiontypeNameX (string) pattern
                 Regex regexSInscriptiontypeNameX = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
@@ -536,6 +587,15 @@ namespace eZmaxApi.Model
                 if (!regexSInscriptionMLS.Match(this.SInscriptionMLS).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptionMLS, must match a pattern of " + regexSInscriptionMLS, new [] { "SInscriptionMLS" });
+                }
+            }
+
+            if (this.SInscriptionContract != null) {
+                // SInscriptionContract (string) pattern
+                Regex regexSInscriptionContract = new Regex(@"^.{0,20}$", RegexOptions.CultureInvariant);
+                if (!regexSInscriptionContract.Match(this.SInscriptionContract).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptionContract, must match a pattern of " + regexSInscriptionContract, new [] { "SInscriptionContract" });
                 }
             }
 
