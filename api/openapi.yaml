@@ -122,17 +122,22 @@ tags:
     \n* PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\r\n\
     * PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\r\
     \n* PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\r\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\
-    \n\r\n---\r\n\r\n### [1.3.2] - 2026-XX-XX\r\n\r\n#### Added\r\n- GET /2/module/ezsign/suggestSigners\r\
+    \n\r\n---\r\n\r\n### [1.3.2] - 2026-07-20\r\n\r\n#### Added\r\n- GET /2/module/ezsign/suggestSigners\r\
     \n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\r\
     \n- GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- GET /2/object/inscription/{pkiInscriptionID}\r\n- GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds\r\
+    \n- GET /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}\r\
     \n- POST /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
-    \n- POST /3/object/ezsignfoldersignerassociation\r\n- Properties pkiInscriptionbuildingtypeID,\
-    \ sInscriptionbuildingtypeNameX, pkiInscriptioncategoryID, sInscriptioncategoryNameX,\
-    \ iInscriptionUnit in inscription-Listelement\r\n- Properties pkiInscriptionbuildingtypeID,\
-    \ sInscriptionbuildingtypeNameX, pkiInscriptioncategoryID, sInscriptioncategoryNameX,\
-    \ iInscriptionUnit in inscriptionnotauthenticated-Listelement\r\n- Property eAgentSchedule\
-    \ in agent-ListElement\r\n- Property bInscriptionnotauthenticatedDraft in inscriptionnotauthenticated-ListElement\r\
-    \n\r\n\r\n### [1.3.1] - 2026-06-17\r\n\r\n#### Added\r\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
+    \n- POST /3/object/ezsignfoldersignerassociation\r\n- Enum value 'Realestate'\
+    \ for eWebhookModule\r\n- Properties pkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX,\
+    \ pkiInscriptioncategoryID, sInscriptioncategoryNameX, iInscriptionUnit in inscription-Listelement\r\
+    \n- Properties pkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX, pkiInscriptioncategoryID,\
+    \ sInscriptioncategoryNameX, iInscriptionUnit in inscriptionnotauthenticated-Listelement\r\
+    \n- Property eAgentSchedule in agent-ListElement\r\n- Property bInscriptionnotauthenticatedDraft\
+    \ in inscriptionnotauthenticated-ListElement\r\n- Webhook Realestate InscriptionCreated\r\
+    \n- Webhook Realestate InscriptionModified\r\n- Webhook Realestate InscriptionnotauthenticatedCreated\r\
+    \n- Webhook Realestate InscriptionnotauthenticatedModified\r\n\r\n\r\n\r\n###\
+    \ [1.3.1] - 2026-06-17\r\n\r\n#### Added\r\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\r\
     \n- GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions\r\
     \n- GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks\r\
     \n- GET /1/object/ezmaxmaillinglist/getList\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner\r\
