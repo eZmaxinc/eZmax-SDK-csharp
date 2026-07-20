@@ -50,6 +50,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eWebhookManagementevent", EmitDefaultValue = false)]
         public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EWebhookRealestateevent
+        /// </summary>
+        [DataMember(Name = "eWebhookRealestateevent", EmitDefaultValue = false)]
+        public FieldEWebhookRealestateevent? EWebhookRealestateevent { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookListElement" /> class.
         /// </summary>
@@ -66,9 +72,10 @@ namespace eZmaxApi.Model
         /// <param name="eWebhookModule">eWebhookModule (required).</param>
         /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="eWebhookRealestateevent">eWebhookRealestateevent.</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not (required).</param>
-        public WebhookListElement(int pkiWebhookID = default, string sWebhookDescription = default, string sWebhookUrl = default, string sWebhookEvent = default, string sWebhookEmailfailed = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default)
+        public WebhookListElement(int pkiWebhookID = default, string sWebhookDescription = default, string sWebhookUrl = default, string sWebhookEvent = default, string sWebhookEmailfailed = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, FieldEWebhookRealestateevent? eWebhookRealestateevent = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default)
         {
             this.PkiWebhookID = pkiWebhookID;
             // to ensure "sWebhookDescription" is required (not null)
@@ -100,6 +107,7 @@ namespace eZmaxApi.Model
             this.BWebhookIssigned = bWebhookIssigned;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
+            this.EWebhookRealestateevent = eWebhookRealestateevent;
         }
 
         /// <summary>
@@ -188,6 +196,7 @@ namespace eZmaxApi.Model
             sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
+            sb.Append("  EWebhookRealestateevent: ").Append(EWebhookRealestateevent).Append("\n");
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");
             sb.Append("  BWebhookIssigned: ").Append(BWebhookIssigned).Append("\n");
             sb.Append("}\n");

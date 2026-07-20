@@ -49,7 +49,13 @@ namespace eZmaxApi.Model
         /// Enum Management for value: Management
         /// </summary>
         [EnumMember(Value = "Management")]
-        Management = 3
+        Management = 3,
+
+        /// <summary>
+        /// Enum Realestate for value: Realestate
+        /// </summary>
+        [EnumMember(Value = "Realestate")]
+        Realestate = 4
     }
 
 }

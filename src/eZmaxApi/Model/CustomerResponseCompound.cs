@@ -1149,7 +1149,7 @@ namespace eZmaxApi.Model
 
             if (this.TCustomerComment != null) {
                 // TCustomerComment (string) pattern
-                Regex regexTCustomerComment = new Regex(@"^.{0,16777215}$", RegexOptions.CultureInvariant);
+                Regex regexTCustomerComment = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTCustomerComment.Match(this.TCustomerComment).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TCustomerComment, must match a pattern of " + regexTCustomerComment, new [] { "TCustomerComment" });

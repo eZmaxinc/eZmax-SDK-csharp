@@ -38,6 +38,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eInscriptionStep", IsRequired = true, EmitDefaultValue = true)]
         public FieldEInscriptionStep EInscriptionStep { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EInscriptionType
+        /// </summary>
+        [DataMember(Name = "eInscriptionType", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEInscriptionType EInscriptionType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="InscriptionListElement" /> class.
         /// </summary>
@@ -49,10 +55,15 @@ namespace eZmaxApi.Model
         /// <param name="pkiInscriptionID">The unique ID of the Inscription. (required).</param>
         /// <param name="pkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
         /// <param name="fkiInscriptiontypeID">The unique ID of the Inscriptiontype (required).</param>
+        /// <param name="sInscriptiontypeNameX">The name of the Inscriptiontype in the language of the requester (required).</param>
+        /// <param name="fkiInscriptionbuildingtypeID">The unique ID of the Inscriptionbuildingtype (required).</param>
+        /// <param name="sInscriptionbuildingtypeNameX">The name of the Inscriptionbuildingtype in the language of the requester (required).</param>
+        /// <param name="fkiInscriptioncategoryID">The unique ID of the Inscriptioncategory (required).</param>
+        /// <param name="sInscriptioncategoryNameX">The name of the Inscriptioncategory in the language of the requester (required).</param>
         /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
         /// <param name="sBuyercontractContract">The number of the Buyercontract.</param>
-        /// <param name="sInscriptiontypeNameX">The name of the Inscriptiontype in the language of the requester (required).</param>
         /// <param name="eInscriptionStep">eInscriptionStep (required).</param>
+        /// <param name="eInscriptionType">eInscriptionType (required).</param>
         /// <param name="sInscriptionCivicend">The civicend of the Inscription (required).</param>
         /// <param name="sInscriptionMLS">The mls of the Inscription.</param>
         /// <param name="sInscriptionContract">The sale contract number.</param>
@@ -79,8 +90,9 @@ namespace eZmaxApi.Model
         /// <param name="fkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|.</param>
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
         /// <param name="iInscriptionnotauthenticatedCanceled">The numbre of inscriptionnotauthenticated was canceled in this Inscription (required).</param>
+        /// <param name="iInscriptionUnit">The unit of the Inscription (required).</param>
         /// <param name="bAllowedCopyintoinscriptionedm">Whether we are allowed to copy into the Inscription EDM (required).</param>
-        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, int fkiBuyercontractID = default, string sBuyercontractContract = default, string sInscriptiontypeNameX = default, FieldEInscriptionStep eInscriptionStep = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string sInscriptionContract = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, bool bAllowedCopyintoinscriptionedm = default)
+        public InscriptionListElement(int pkiInscriptionID = default, int pkiInscriptionnotauthenticatedID = default, int fkiInscriptiontypeID = default, string sInscriptiontypeNameX = default, int fkiInscriptionbuildingtypeID = default, string sInscriptionbuildingtypeNameX = default, int fkiInscriptioncategoryID = default, string sInscriptioncategoryNameX = default, int fkiBuyercontractID = default, string sBuyercontractContract = default, FieldEInscriptionStep eInscriptionStep = default, FieldEInscriptionType eInscriptionType = default, string sInscriptionCivicend = default, string sInscriptionMLS = default, string sInscriptionContract = default, string dInscriptionSaleprice = default, string dInscriptionRentprice = default, string dtInscriptionDate = default, string dtInscriptionExpirationdate = default, string dtInscriptionNotarydate = default, bool bInscriptionIsactive = default, bool bInscriptionArchived = default, bool bInscriptionInspection = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedIsactive = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default, int iInscriptionnotauthenticatedCanceled = default, int iInscriptionUnit = default, bool bAllowedCopyintoinscriptionedm = default)
         {
             this.PkiInscriptionID = pkiInscriptionID;
             this.FkiInscriptiontypeID = fkiInscriptiontypeID;
@@ -90,7 +102,22 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sInscriptiontypeNameX is a required property for InscriptionListElement and cannot be null");
             }
             this.SInscriptiontypeNameX = sInscriptiontypeNameX;
+            this.FkiInscriptionbuildingtypeID = fkiInscriptionbuildingtypeID;
+            // to ensure "sInscriptionbuildingtypeNameX" is required (not null)
+            if (sInscriptionbuildingtypeNameX == null)
+            {
+                throw new ArgumentNullException("sInscriptionbuildingtypeNameX is a required property for InscriptionListElement and cannot be null");
+            }
+            this.SInscriptionbuildingtypeNameX = sInscriptionbuildingtypeNameX;
+            this.FkiInscriptioncategoryID = fkiInscriptioncategoryID;
+            // to ensure "sInscriptioncategoryNameX" is required (not null)
+            if (sInscriptioncategoryNameX == null)
+            {
+                throw new ArgumentNullException("sInscriptioncategoryNameX is a required property for InscriptionListElement and cannot be null");
+            }
+            this.SInscriptioncategoryNameX = sInscriptioncategoryNameX;
             this.EInscriptionStep = eInscriptionStep;
+            this.EInscriptionType = eInscriptionType;
             // to ensure "sInscriptionCivicend" is required (not null)
             if (sInscriptionCivicend == null)
             {
@@ -112,6 +139,7 @@ namespace eZmaxApi.Model
             this.BInscriptionIsactive = bInscriptionIsactive;
             this.BInscriptionArchived = bInscriptionArchived;
             this.IInscriptionnotauthenticatedCanceled = iInscriptionnotauthenticatedCanceled;
+            this.IInscriptionUnit = iInscriptionUnit;
             this.BAllowedCopyintoinscriptionedm = bAllowedCopyintoinscriptionedm;
             this.PkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID;
             this.FkiBuyercontractID = fkiBuyercontractID;
@@ -169,6 +197,56 @@ namespace eZmaxApi.Model
         public int FkiInscriptiontypeID { get; set; }
 
         /// <summary>
+        /// The name of the Inscriptiontype in the language of the requester
+        /// </summary>
+        /// <value>The name of the Inscriptiontype in the language of the requester</value>
+        /*
+        <example>Revenue Property</example>
+        */
+        [DataMember(Name = "sInscriptiontypeNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SInscriptiontypeNameX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptionbuildingtype
+        /// </summary>
+        /// <value>The unique ID of the Inscriptionbuildingtype</value>
+        /*
+        <example>182</example>
+        */
+        [DataMember(Name = "fkiInscriptionbuildingtypeID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiInscriptionbuildingtypeID { get; set; }
+
+        /// <summary>
+        /// The name of the Inscriptionbuildingtype in the language of the requester
+        /// </summary>
+        /// <value>The name of the Inscriptionbuildingtype in the language of the requester</value>
+        /*
+        <example>Semi-detached</example>
+        */
+        [DataMember(Name = "sInscriptionbuildingtypeNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SInscriptionbuildingtypeNameX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptioncategory
+        /// </summary>
+        /// <value>The unique ID of the Inscriptioncategory</value>
+        /*
+        <example>185</example>
+        */
+        [DataMember(Name = "fkiInscriptioncategoryID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiInscriptioncategoryID { get; set; }
+
+        /// <summary>
+        /// The name of the Inscriptioncategory in the language of the requester
+        /// </summary>
+        /// <value>The name of the Inscriptioncategory in the language of the requester</value>
+        /*
+        <example>Bungalow</example>
+        */
+        [DataMember(Name = "sInscriptioncategoryNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SInscriptioncategoryNameX { get; set; }
+
+        /// <summary>
         /// The unique ID of the Buyercontract
         /// </summary>
         /// <value>The unique ID of the Buyercontract</value>
@@ -187,16 +265,6 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "sBuyercontractContract", EmitDefaultValue = false)]
         public string SBuyercontractContract { get; set; }
-
-        /// <summary>
-        /// The name of the Inscriptiontype in the language of the requester
-        /// </summary>
-        /// <value>The name of the Inscriptiontype in the language of the requester</value>
-        /*
-        <example>Revenue Property</example>
-        */
-        [DataMember(Name = "sInscriptiontypeNameX", IsRequired = true, EmitDefaultValue = true)]
-        public string SInscriptiontypeNameX { get; set; }
 
         /// <summary>
         /// The civicend of the Inscription
@@ -459,6 +527,16 @@ namespace eZmaxApi.Model
         public int IInscriptionnotauthenticatedCanceled { get; set; }
 
         /// <summary>
+        /// The unit of the Inscription
+        /// </summary>
+        /// <value>The unit of the Inscription</value>
+        /*
+        <example>247</example>
+        */
+        [DataMember(Name = "iInscriptionUnit", IsRequired = true, EmitDefaultValue = true)]
+        public int IInscriptionUnit { get; set; }
+
+        /// <summary>
         /// Whether we are allowed to copy into the Inscription EDM
         /// </summary>
         /// <value>Whether we are allowed to copy into the Inscription EDM</value>
@@ -476,10 +554,15 @@ namespace eZmaxApi.Model
             sb.Append("  PkiInscriptionID: ").Append(PkiInscriptionID).Append("\n");
             sb.Append("  PkiInscriptionnotauthenticatedID: ").Append(PkiInscriptionnotauthenticatedID).Append("\n");
             sb.Append("  FkiInscriptiontypeID: ").Append(FkiInscriptiontypeID).Append("\n");
+            sb.Append("  SInscriptiontypeNameX: ").Append(SInscriptiontypeNameX).Append("\n");
+            sb.Append("  FkiInscriptionbuildingtypeID: ").Append(FkiInscriptionbuildingtypeID).Append("\n");
+            sb.Append("  SInscriptionbuildingtypeNameX: ").Append(SInscriptionbuildingtypeNameX).Append("\n");
+            sb.Append("  FkiInscriptioncategoryID: ").Append(FkiInscriptioncategoryID).Append("\n");
+            sb.Append("  SInscriptioncategoryNameX: ").Append(SInscriptioncategoryNameX).Append("\n");
             sb.Append("  FkiBuyercontractID: ").Append(FkiBuyercontractID).Append("\n");
             sb.Append("  SBuyercontractContract: ").Append(SBuyercontractContract).Append("\n");
-            sb.Append("  SInscriptiontypeNameX: ").Append(SInscriptiontypeNameX).Append("\n");
             sb.Append("  EInscriptionStep: ").Append(EInscriptionStep).Append("\n");
+            sb.Append("  EInscriptionType: ").Append(EInscriptionType).Append("\n");
             sb.Append("  SInscriptionCivicend: ").Append(SInscriptionCivicend).Append("\n");
             sb.Append("  SInscriptionMLS: ").Append(SInscriptionMLS).Append("\n");
             sb.Append("  SInscriptionContract: ").Append(SInscriptionContract).Append("\n");
@@ -506,6 +589,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiCountryID: ").Append(FkiCountryID).Append("\n");
             sb.Append("  SCountryNameX: ").Append(SCountryNameX).Append("\n");
             sb.Append("  IInscriptionnotauthenticatedCanceled: ").Append(IInscriptionnotauthenticatedCanceled).Append("\n");
+            sb.Append("  IInscriptionUnit: ").Append(IInscriptionUnit).Append("\n");
             sb.Append("  BAllowedCopyintoinscriptionedm: ").Append(BAllowedCopyintoinscriptionedm).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -551,6 +635,57 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
             }
 
+            if (this.SInscriptiontypeNameX != null) {
+                // SInscriptiontypeNameX (string) pattern
+                Regex regexSInscriptiontypeNameX = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
+                if (!regexSInscriptiontypeNameX.Match(this.SInscriptiontypeNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptiontypeNameX, must match a pattern of " + regexSInscriptiontypeNameX, new [] { "SInscriptiontypeNameX" });
+                }
+            }
+
+            // FkiInscriptionbuildingtypeID (int) maximum
+            if (this.FkiInscriptionbuildingtypeID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptionbuildingtypeID" });
+            }
+
+            // FkiInscriptionbuildingtypeID (int) minimum
+            if (this.FkiInscriptionbuildingtypeID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionbuildingtypeID" });
+            }
+
+            if (this.SInscriptionbuildingtypeNameX != null) {
+                // SInscriptionbuildingtypeNameX (string) pattern
+                Regex regexSInscriptionbuildingtypeNameX = new Regex(@"^.{0,20}$", RegexOptions.CultureInvariant);
+                if (!regexSInscriptionbuildingtypeNameX.Match(this.SInscriptionbuildingtypeNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptionbuildingtypeNameX, must match a pattern of " + regexSInscriptionbuildingtypeNameX, new [] { "SInscriptionbuildingtypeNameX" });
+                }
+            }
+
+            // FkiInscriptioncategoryID (int) maximum
+            if (this.FkiInscriptioncategoryID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value less than or equal to 255.", new [] { "FkiInscriptioncategoryID" });
+            }
+
+            // FkiInscriptioncategoryID (int) minimum
+            if (this.FkiInscriptioncategoryID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value greater than or equal to 0.", new [] { "FkiInscriptioncategoryID" });
+            }
+
+            if (this.SInscriptioncategoryNameX != null) {
+                // SInscriptioncategoryNameX (string) pattern
+                Regex regexSInscriptioncategoryNameX = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
+                if (!regexSInscriptioncategoryNameX.Match(this.SInscriptioncategoryNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptioncategoryNameX, must match a pattern of " + regexSInscriptioncategoryNameX, new [] { "SInscriptioncategoryNameX" });
+                }
+            }
+
             // FkiBuyercontractID (int) maximum
             if (this.FkiBuyercontractID > (int)65535)
             {
@@ -561,15 +696,6 @@ namespace eZmaxApi.Model
             if (this.FkiBuyercontractID < (int)1)
             {
                 yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
-            }
-
-            if (this.SInscriptiontypeNameX != null) {
-                // SInscriptiontypeNameX (string) pattern
-                Regex regexSInscriptiontypeNameX = new Regex(@"^.{0,30}$", RegexOptions.CultureInvariant);
-                if (!regexSInscriptiontypeNameX.Match(this.SInscriptiontypeNameX).Success)
-                {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SInscriptiontypeNameX, must match a pattern of " + regexSInscriptiontypeNameX, new [] { "SInscriptiontypeNameX" });
-                }
             }
 
             if (this.SInscriptionCivicend != null) {
@@ -723,6 +849,18 @@ namespace eZmaxApi.Model
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SCountryNameX, must match a pattern of " + regexSCountryNameX, new [] { "SCountryNameX" });
                 }
+            }
+
+            // IInscriptionUnit (int) maximum
+            if (this.IInscriptionUnit > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for IInscriptionUnit, must be a value less than or equal to 255.", new [] { "IInscriptionUnit" });
+            }
+
+            // IInscriptionUnit (int) minimum
+            if (this.IInscriptionUnit < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for IInscriptionUnit, must be a value greater than or equal to 0.", new [] { "IInscriptionUnit" });
             }
 
             yield break;

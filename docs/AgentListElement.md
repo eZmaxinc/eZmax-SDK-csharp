@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **DtAgentSenioritydate** | **string** | The seniority date of the Agent | [optional] 
 **DtAgentSickleavestart** | **string** | The sick leave start date of the Agent | [optional] 
 **DtAgentSickleaveend** | **string** | The sick leave end date of the Agent | [optional] 
+**EAgentSchedule** | **FieldEAgentSchedule** |  | 
 **BAgentTranquillit** | **bool** | Whether if it&#39;s an tranquillit | 
 **BAgentResidentiallicense** | **bool** | Whether if it&#39;s an residentiallicense | 
 **BAgentCommerciallicense** | **bool** | Whether if it&#39;s an commerciallicense | 

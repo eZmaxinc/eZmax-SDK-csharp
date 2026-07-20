@@ -8,10 +8,15 @@ Name | Type | Description | Notes
 **PkiInscriptionID** | **int** | The unique ID of the Inscription. | 
 **PkiInscriptionnotauthenticatedID** | **int** | The unique ID of the Inscriptionnotauthenticated. | [optional] 
 **FkiInscriptiontypeID** | **int** | The unique ID of the Inscriptiontype | 
+**SInscriptiontypeNameX** | **string** | The name of the Inscriptiontype in the language of the requester | 
+**FkiInscriptionbuildingtypeID** | **int** | The unique ID of the Inscriptionbuildingtype | 
+**SInscriptionbuildingtypeNameX** | **string** | The name of the Inscriptionbuildingtype in the language of the requester | 
+**FkiInscriptioncategoryID** | **int** | The unique ID of the Inscriptioncategory | 
+**SInscriptioncategoryNameX** | **string** | The name of the Inscriptioncategory in the language of the requester | 
 **FkiBuyercontractID** | **int** | The unique ID of the Buyercontract | [optional] 
 **SBuyercontractContract** | **string** | The number of the Buyercontract | [optional] 
-**SInscriptiontypeNameX** | **string** | The name of the Inscriptiontype in the language of the requester | 
 **EInscriptionStep** | **FieldEInscriptionStep** |  | 
+**EInscriptionType** | **FieldEInscriptionType** |  | 
 **SInscriptionCivicend** | **string** | The civicend of the Inscription | 
 **SInscriptionMLS** | **string** | The mls of the Inscription | [optional] 
 **SInscriptionContract** | **string** | The sale contract number | [optional] 
@@ -38,6 +43,7 @@ Name | Type | Description | Notes
 **FkiCountryID** | **int** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | [optional] 
 **SCountryNameX** | **string** | The name of the Country in the language of the requester | [optional] 
 **IInscriptionnotauthenticatedCanceled** | **int** | The numbre of inscriptionnotauthenticated was canceled in this Inscription | 
+**IInscriptionUnit** | **int** | The unit of the Inscription | 
 **BAllowedCopyintoinscriptionedm** | **bool** | Whether we are allowed to copy into the Inscription EDM | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

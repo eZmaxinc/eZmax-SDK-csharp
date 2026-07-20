@@ -50,6 +50,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eWebhookManagementevent", EmitDefaultValue = false)]
         public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EWebhookRealestateevent
+        /// </summary>
+        [DataMember(Name = "eWebhookRealestateevent", EmitDefaultValue = false)]
+        public FieldEWebhookRealestateevent? EWebhookRealestateevent { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookRequestCompound" /> class.
         /// </summary>
@@ -65,13 +71,14 @@ namespace eZmaxApi.Model
         /// <param name="eWebhookModule">eWebhookModule (required).</param>
         /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="eWebhookRealestateevent">eWebhookRealestateevent.</param>
         /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
         /// <param name="bWebhookIsactive">Whether the Webhook is active or not (required).</param>
         /// <param name="bWebhookIssigned">Whether the requests will be signed or not.</param>
         /// <param name="bWebhookSkipsslvalidation">Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use (required).</param>
         /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
-        public WebhookRequestCompound(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, int fkiEzsignfoldertypeID = default, string sWebhookDescription = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, List<WebhookheaderRequestCompound> aObjWebhookheader = default)
+        public WebhookRequestCompound(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, int fkiEzsignfoldertypeID = default, string sWebhookDescription = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, FieldEWebhookRealestateevent? eWebhookRealestateevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, List<WebhookheaderRequestCompound> aObjWebhookheader = default)
         {
             // to ensure "sWebhookDescription" is required (not null)
             if (sWebhookDescription == null)
@@ -99,6 +106,7 @@ namespace eZmaxApi.Model
             this.FkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
+            this.EWebhookRealestateevent = eWebhookRealestateevent;
             this.BWebhookIssigned = bWebhookIssigned;
             this.AObjWebhookheader = aObjWebhookheader;
         }
@@ -214,6 +222,7 @@ namespace eZmaxApi.Model
             sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
+            sb.Append("  EWebhookRealestateevent: ").Append(EWebhookRealestateevent).Append("\n");
             sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
             sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("  BWebhookIsactive: ").Append(BWebhookIsactive).Append("\n");

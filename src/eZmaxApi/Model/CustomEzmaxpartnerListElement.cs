@@ -47,7 +47,8 @@ namespace eZmaxApi.Model
         /// <param name="sEzmaxpartnerNameX">The name of the Ezmaxpartner in the language of the requester (required).</param>
         /// <param name="sEzmaxpartnerPhoneE164X">A phone number in E.164 Format (required).</param>
         /// <param name="sEzmaxpartnerUrlX">The url of the Ezmaxpartner website in the language of the requester (required).</param>
-        public CustomEzmaxpartnerListElement(int pkiEzmaxpartnerID = default, string sEzmaxpartnerAddressX = default, string sEzmaxpartnerEmailaddressX = default, string sEzmaxpartnerShortdescriptionX = default, string sEzmaxpartnerNameX = default, string sEzmaxpartnerPhoneE164X = default, string sEzmaxpartnerUrlX = default)
+        /// <param name="objEzmaxpartnerLogourl">objEzmaxpartnerLogourl (required).</param>
+        public CustomEzmaxpartnerListElement(int pkiEzmaxpartnerID = default, string sEzmaxpartnerAddressX = default, string sEzmaxpartnerEmailaddressX = default, string sEzmaxpartnerShortdescriptionX = default, string sEzmaxpartnerNameX = default, string sEzmaxpartnerPhoneE164X = default, string sEzmaxpartnerUrlX = default, MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl = default)
         {
             this.PkiEzmaxpartnerID = pkiEzmaxpartnerID;
             // to ensure "sEzmaxpartnerAddressX" is required (not null)
@@ -86,6 +87,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEzmaxpartnerUrlX is a required property for CustomEzmaxpartnerListElement and cannot be null");
             }
             this.SEzmaxpartnerUrlX = sEzmaxpartnerUrlX;
+            // to ensure "objEzmaxpartnerLogourl" is required (not null)
+            if (objEzmaxpartnerLogourl == null)
+            {
+                throw new ArgumentNullException("objEzmaxpartnerLogourl is a required property for CustomEzmaxpartnerListElement and cannot be null");
+            }
+            this.ObjEzmaxpartnerLogourl = objEzmaxpartnerLogourl;
         }
 
         /// <summary>
@@ -159,6 +166,12 @@ namespace eZmaxApi.Model
         public string SEzmaxpartnerUrlX { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjEzmaxpartnerLogourl
+        /// </summary>
+        [DataMember(Name = "objEzmaxpartnerLogourl", IsRequired = true, EmitDefaultValue = true)]
+        public MultilingualEzmaxpartnerLogourl ObjEzmaxpartnerLogourl { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -173,6 +186,7 @@ namespace eZmaxApi.Model
             sb.Append("  SEzmaxpartnerNameX: ").Append(SEzmaxpartnerNameX).Append("\n");
             sb.Append("  SEzmaxpartnerPhoneE164X: ").Append(SEzmaxpartnerPhoneE164X).Append("\n");
             sb.Append("  SEzmaxpartnerUrlX: ").Append(SEzmaxpartnerUrlX).Append("\n");
+            sb.Append("  ObjEzmaxpartnerLogourl: ").Append(ObjEzmaxpartnerLogourl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -949,7 +949,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionnotauthenticatedConditions != null) {
                 // TInscriptionnotauthenticatedConditions (string) pattern
-                Regex regexTInscriptionnotauthenticatedConditions = new Regex(@"^.{0,16777215}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionnotauthenticatedConditions = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionnotauthenticatedConditions.Match(this.TInscriptionnotauthenticatedConditions).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionnotauthenticatedConditions, must match a pattern of " + regexTInscriptionnotauthenticatedConditions, new [] { "TInscriptionnotauthenticatedConditions" });
@@ -979,7 +979,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionnotauthenticatedChecklistnote != null) {
                 // TInscriptionnotauthenticatedChecklistnote (string) pattern
-                Regex regexTInscriptionnotauthenticatedChecklistnote = new Regex(@"^.{0,16777215}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionnotauthenticatedChecklistnote = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionnotauthenticatedChecklistnote.Match(this.TInscriptionnotauthenticatedChecklistnote).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionnotauthenticatedChecklistnote, must match a pattern of " + regexTInscriptionnotauthenticatedChecklistnote, new [] { "TInscriptionnotauthenticatedChecklistnote" });

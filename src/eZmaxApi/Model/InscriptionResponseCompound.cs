@@ -1228,7 +1228,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionCadastre != null) {
                 // TInscriptionCadastre (string) pattern
-                Regex regexTInscriptionCadastre = new Regex(@"^.{0,16777215}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionCadastre = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionCadastre.Match(this.TInscriptionCadastre).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionCadastre, must match a pattern of " + regexTInscriptionCadastre, new [] { "TInscriptionCadastre" });
@@ -1237,7 +1237,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionChecklistnote != null) {
                 // TInscriptionChecklistnote (string) pattern
-                Regex regexTInscriptionChecklistnote = new Regex(@"^.{0,16777215}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionChecklistnote = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionChecklistnote.Match(this.TInscriptionChecklistnote).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionChecklistnote, must match a pattern of " + regexTInscriptionChecklistnote, new [] { "TInscriptionChecklistnote" });

@@ -56,6 +56,12 @@ namespace eZmaxApi.Model
         /// </summary>
         [DataMember(Name = "eWebhookManagementevent", EmitDefaultValue = false)]
         public FieldEWebhookManagementevent? EWebhookManagementevent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EWebhookRealestateevent
+        /// </summary>
+        [DataMember(Name = "eWebhookRealestateevent", EmitDefaultValue = false)]
+        public FieldEWebhookRealestateevent? EWebhookRealestateevent { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookResponseCompound" /> class.
         /// </summary>
@@ -73,6 +79,7 @@ namespace eZmaxApi.Model
         /// <param name="eWebhookEzmaxpartnerevent">eWebhookEzmaxpartnerevent.</param>
         /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
+        /// <param name="eWebhookRealestateevent">eWebhookRealestateevent.</param>
         /// <param name="sWebhookUrl">The URL of the Webhook callback (required).</param>
         /// <param name="sWebhookEmailfailed">The email that will receive the Webhook in case all attempts fail (required).</param>
         /// <param name="sWebhookApikey">The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey..</param>
@@ -85,7 +92,7 @@ namespace eZmaxApi.Model
         /// <param name="sWebhookEvent">The concatenated string to describe the Webhook event.</param>
         /// <param name="sWebhookAuthentificationexternalerror">Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set..</param>
         /// <param name="aObjWebhookheader">aObjWebhookheader.</param>
-        public WebhookResponseCompound(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, string sWebhookDescription = default, int fkiEzsignfoldertypeID = default, string sEzsignfoldertypeNameX = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzmaxpartnerevent? eWebhookEzmaxpartnerevent = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, string sWebhookApikey = default, string sWebhookSecret = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, string sAuthenticationexternalDescription = default, CommonAudit objAudit = default, string sWebhookEvent = default, string sWebhookAuthentificationexternalerror = default, List<WebhookheaderResponseCompound> aObjWebhookheader = default)
+        public WebhookResponseCompound(int pkiWebhookID = default, int fkiAuthenticationexternalID = default, string sWebhookDescription = default, int fkiEzsignfoldertypeID = default, string sEzsignfoldertypeNameX = default, FieldEWebhookModule eWebhookModule = default, FieldEWebhookEzmaxpartnerevent? eWebhookEzmaxpartnerevent = default, FieldEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, FieldEWebhookRealestateevent? eWebhookRealestateevent = default, string sWebhookUrl = default, string sWebhookEmailfailed = default, string sWebhookApikey = default, string sWebhookSecret = default, bool bWebhookIsactive = default, bool bWebhookIssigned = default, bool bWebhookSkipsslvalidation = default, string sAuthenticationexternalDescription = default, CommonAudit objAudit = default, string sWebhookEvent = default, string sWebhookAuthentificationexternalerror = default, List<WebhookheaderResponseCompound> aObjWebhookheader = default)
         {
             // to ensure "sWebhookDescription" is required (not null)
             if (sWebhookDescription == null)
@@ -116,6 +123,7 @@ namespace eZmaxApi.Model
             this.EWebhookEzmaxpartnerevent = eWebhookEzmaxpartnerevent;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
+            this.EWebhookRealestateevent = eWebhookRealestateevent;
             this.SWebhookApikey = sWebhookApikey;
             this.SWebhookSecret = sWebhookSecret;
             this.SAuthenticationexternalDescription = sAuthenticationexternalDescription;
@@ -298,6 +306,7 @@ namespace eZmaxApi.Model
             sb.Append("  EWebhookEzmaxpartnerevent: ").Append(EWebhookEzmaxpartnerevent).Append("\n");
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
+            sb.Append("  EWebhookRealestateevent: ").Append(EWebhookRealestateevent).Append("\n");
             sb.Append("  SWebhookUrl: ").Append(SWebhookUrl).Append("\n");
             sb.Append("  SWebhookEmailfailed: ").Append(SWebhookEmailfailed).Append("\n");
             sb.Append("  SWebhookApikey: ").Append(SWebhookApikey).Append("\n");

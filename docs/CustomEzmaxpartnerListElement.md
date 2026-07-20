@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **SEzmaxpartnerNameX** | **string** | The name of the Ezmaxpartner in the language of the requester | 
 **SEzmaxpartnerPhoneE164X** | **string** | A phone number in E.164 Format | 
 **SEzmaxpartnerUrlX** | **string** | The url of the Ezmaxpartner website in the language of the requester | 
+**ObjEzmaxpartnerLogourl** | [**MultilingualEzmaxpartnerLogourl**](MultilingualEzmaxpartnerLogourl.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

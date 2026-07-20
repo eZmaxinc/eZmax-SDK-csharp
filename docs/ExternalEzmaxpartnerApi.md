@@ -1,14 +1,14 @@
-# eZmaxApi.Api.DocumentationEzmaxpartnerApi
+# eZmaxApi.Api.ExternalEzmaxpartnerApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DocumentationSubscribeV1**](DocumentationEzmaxpartnerApi.md#documentationsubscribev1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| [**ExternalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
 
-<a id="documentationsubscribev1"></a>
-# **DocumentationSubscribeV1**
-> DocumentationSubscribeV1Response DocumentationSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request)
+<a id="externalpartnersubscribev1"></a>
+# **ExternalpartnerSubscribeV1**
+> DocumentationSubscribeV1Response ExternalpartnerSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request)
 
 Subscribe to an Ezmaxparnerproductstage
 
@@ -24,7 +24,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class DocumentationSubscribeV1Example
+    public class ExternalpartnerSubscribeV1Example
     {
         public static void Main()
         {
@@ -35,18 +35,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
-            var apiInstance = new DocumentationEzmaxpartnerApi(config);
+            var apiInstance = new ExternalEzmaxpartnerApi(config);
             var documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
 
             try
             {
                 // Subscribe to an Ezmaxparnerproductstage
-                DocumentationSubscribeV1Response result = apiInstance.DocumentationSubscribeV1(documentationSubscribeV1Request);
+                DocumentationSubscribeV1Response result = apiInstance.ExternalpartnerSubscribeV1(documentationSubscribeV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DocumentationEzmaxpartnerApi.DocumentationSubscribeV1: " + e.Message);
+                Debug.Print("Exception when calling ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -55,21 +55,21 @@ namespace Example
 }
 ```
 
-#### Using the DocumentationSubscribeV1WithHttpInfo variant
+#### Using the ExternalpartnerSubscribeV1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Subscribe to an Ezmaxparnerproductstage
-    ApiResponse<DocumentationSubscribeV1Response> response = apiInstance.DocumentationSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
+    ApiResponse<DocumentationSubscribeV1Response> response = apiInstance.ExternalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DocumentationEzmaxpartnerApi.DocumentationSubscribeV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

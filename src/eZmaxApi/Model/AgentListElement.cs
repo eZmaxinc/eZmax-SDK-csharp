@@ -32,6 +32,12 @@ namespace eZmaxApi.Model
     [DataContract(Name = "agent-ListElement")]
     public partial class AgentListElement : IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets EAgentSchedule
+        /// </summary>
+        [DataMember(Name = "eAgentSchedule", IsRequired = true, EmitDefaultValue = true)]
+        public FieldEAgentSchedule EAgentSchedule { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentListElement" /> class.
         /// </summary>
@@ -62,6 +68,7 @@ namespace eZmaxApi.Model
         /// <param name="dtAgentSenioritydate">The seniority date of the Agent.</param>
         /// <param name="dtAgentSickleavestart">The sick leave start date of the Agent.</param>
         /// <param name="dtAgentSickleaveend">The sick leave end date of the Agent.</param>
+        /// <param name="eAgentSchedule">eAgentSchedule (required).</param>
         /// <param name="bAgentTranquillit">Whether if it&#39;s an tranquillit (required).</param>
         /// <param name="bAgentResidentiallicense">Whether if it&#39;s an residentiallicense (required).</param>
         /// <param name="bAgentCommerciallicense">Whether if it&#39;s an commerciallicense (required).</param>
@@ -83,7 +90,7 @@ namespace eZmaxApi.Model
         /// <param name="sProvinceNameX">The name of the Province in the language of the requester.</param>
         /// <param name="fkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|.</param>
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
-        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, string dtAgentContractdate = default, string dtAgentTransferdate = default, string dtAgentSenioritydate = default, string dtAgentSickleavestart = default, string dtAgentSickleaveend = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default)
+        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, string dtAgentContractdate = default, string dtAgentTransferdate = default, string dtAgentSenioritydate = default, string dtAgentSickleavestart = default, string dtAgentSickleaveend = default, FieldEAgentSchedule eAgentSchedule = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default)
         {
             this.PkiAgentID = pkiAgentID;
             this.FkiAgenttypeID = fkiAgenttypeID;
@@ -122,6 +129,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sAgentRealestateassociationlicense is a required property for AgentListElement and cannot be null");
             }
             this.SAgentRealestateassociationlicense = sAgentRealestateassociationlicense;
+            this.EAgentSchedule = eAgentSchedule;
             this.BAgentTranquillit = bAgentTranquillit;
             this.BAgentResidentiallicense = bAgentResidentiallicense;
             this.BAgentCommerciallicense = bAgentCommerciallicense;
@@ -625,6 +633,7 @@ namespace eZmaxApi.Model
             sb.Append("  DtAgentSenioritydate: ").Append(DtAgentSenioritydate).Append("\n");
             sb.Append("  DtAgentSickleavestart: ").Append(DtAgentSickleavestart).Append("\n");
             sb.Append("  DtAgentSickleaveend: ").Append(DtAgentSickleaveend).Append("\n");
+            sb.Append("  EAgentSchedule: ").Append(EAgentSchedule).Append("\n");
             sb.Append("  BAgentTranquillit: ").Append(BAgentTranquillit).Append("\n");
             sb.Append("  BAgentResidentiallicense: ").Append(BAgentResidentiallicense).Append("\n");
             sb.Append("  BAgentCommerciallicense: ").Append(BAgentCommerciallicense).Append("\n");

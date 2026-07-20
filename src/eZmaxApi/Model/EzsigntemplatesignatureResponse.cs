@@ -113,6 +113,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiPaymentgatewayID">The unique ID of the Paymentgateway.</param>
         /// <param name="bEzsigntemplatesignatureHandwritten">Whether the Ezsigntemplatesignature must be handwritten or not when eEzsigntemplatesignatureType &#x3D; Signature..</param>
         /// <param name="bEzsigntemplatesignatureReason">Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature..</param>
+        /// <param name="bEzsigntemplatesignatureCreditcardcustomamount">Whether we can enter a custom amount while signing an Ezsigntemplatesignature &#39;Creditcard&#39; or not.</param>
         /// <param name="eEzsigntemplatesignaturePositioning">eEzsigntemplatesignaturePositioning.</param>
         /// <param name="iEzsigntemplatedocumentpagePagenumber">The page number in the Ezsigntemplatedocument (required).</param>
         /// <param name="iEzsigntemplatesignatureX">The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate..</param>
@@ -143,7 +144,7 @@ namespace eZmaxApi.Model
         /// <param name="eEzsigntemplatesignaturePositioningoccurence">eEzsigntemplatesignaturePositioningoccurence.</param>
         /// <param name="sEzsigntemplatesignatureCreditcardamountdescription">The description of the Creditcard signature.</param>
         /// <param name="dEzsigntemplatesignatureCreditcardamount">The amount of the Creditcard signature.</param>
-        public EzsigntemplatesignatureResponse(int pkiEzsigntemplatesignatureID = default, int fkiEzsigntemplatedocumentID = default, int fkiEzsigntemplatesignerID = default, int fkiEzsigntemplatesignerIDValidation = default, int fkiPaymentgatewayID = default, bool bEzsigntemplatesignatureHandwritten = default, bool bEzsigntemplatesignatureReason = default, FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning = default, int iEzsigntemplatedocumentpagePagenumber = default, int iEzsigntemplatesignatureX = default, int iEzsigntemplatesignatureY = default, int iEzsigntemplatesignatureWidth = default, int iEzsigntemplatesignatureHeight = default, int iEzsigntemplatesignatureStep = default, FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default, FieldEEzsigntemplatesignatureSignaturepad? eEzsigntemplatesignatureSignaturepad = default, FieldEEzsigntemplatesignatureSignaturepadrequired? eEzsigntemplatesignatureSignaturepadrequired = default, FieldEEzsigntemplatesignatureConsultationtrigger? eEzsigntemplatesignatureConsultationtrigger = default, string tEzsigntemplatesignatureTooltip = default, FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default, FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default, int iEzsigntemplatesignatureValidationstep = default, string sEzsigntemplatesignatureAttachmentdescription = default, FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default, bool bEzsigntemplatesignatureRequired = default, int iEzsigntemplatesignatureMaxlength = default, string sEzsigntemplatesignatureDefaultvalue = default, string sEzsigntemplatesignatureRegexp = default, EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default, string sEzsigntemplatesignatureTextvalidationcustommessage = default, FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default, string sEzsigntemplatesignaturePositioningpattern = default, int iEzsigntemplatesignaturePositioningoffsetx = default, int iEzsigntemplatesignaturePositioningoffsety = default, FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence = default, string sEzsigntemplatesignatureCreditcardamountdescription = default, string dEzsigntemplatesignatureCreditcardamount = default)
+        public EzsigntemplatesignatureResponse(int pkiEzsigntemplatesignatureID = default, int fkiEzsigntemplatedocumentID = default, int fkiEzsigntemplatesignerID = default, int fkiEzsigntemplatesignerIDValidation = default, int fkiPaymentgatewayID = default, bool bEzsigntemplatesignatureHandwritten = default, bool bEzsigntemplatesignatureReason = default, bool bEzsigntemplatesignatureCreditcardcustomamount = default, FieldEEzsigntemplatesignaturePositioning? eEzsigntemplatesignaturePositioning = default, int iEzsigntemplatedocumentpagePagenumber = default, int iEzsigntemplatesignatureX = default, int iEzsigntemplatesignatureY = default, int iEzsigntemplatesignatureWidth = default, int iEzsigntemplatesignatureHeight = default, int iEzsigntemplatesignatureStep = default, FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType = default, FieldEEzsigntemplatesignatureSignaturepad? eEzsigntemplatesignatureSignaturepad = default, FieldEEzsigntemplatesignatureSignaturepadrequired? eEzsigntemplatesignatureSignaturepadrequired = default, FieldEEzsigntemplatesignatureConsultationtrigger? eEzsigntemplatesignatureConsultationtrigger = default, string tEzsigntemplatesignatureTooltip = default, FieldEEzsigntemplatesignatureTooltipposition? eEzsigntemplatesignatureTooltipposition = default, FieldEEzsigntemplatesignatureFont? eEzsigntemplatesignatureFont = default, int iEzsigntemplatesignatureValidationstep = default, string sEzsigntemplatesignatureAttachmentdescription = default, FieldEEzsigntemplatesignatureAttachmentnamesource? eEzsigntemplatesignatureAttachmentnamesource = default, bool bEzsigntemplatesignatureRequired = default, int iEzsigntemplatesignatureMaxlength = default, string sEzsigntemplatesignatureDefaultvalue = default, string sEzsigntemplatesignatureRegexp = default, EnumTextvalidation? eEzsigntemplatesignatureTextvalidation = default, string sEzsigntemplatesignatureTextvalidationcustommessage = default, FieldEEzsigntemplatesignatureDependencyrequirement? eEzsigntemplatesignatureDependencyrequirement = default, string sEzsigntemplatesignaturePositioningpattern = default, int iEzsigntemplatesignaturePositioningoffsetx = default, int iEzsigntemplatesignaturePositioningoffsety = default, FieldEEzsigntemplatesignaturePositioningoccurence? eEzsigntemplatesignaturePositioningoccurence = default, string sEzsigntemplatesignatureCreditcardamountdescription = default, string dEzsigntemplatesignatureCreditcardamount = default)
         {
             this.PkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID;
             this.FkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
@@ -155,6 +156,7 @@ namespace eZmaxApi.Model
             this.FkiPaymentgatewayID = fkiPaymentgatewayID;
             this.BEzsigntemplatesignatureHandwritten = bEzsigntemplatesignatureHandwritten;
             this.BEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
+            this.BEzsigntemplatesignatureCreditcardcustomamount = bEzsigntemplatesignatureCreditcardcustomamount;
             this.EEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
             this.IEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
             this.IEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
@@ -247,6 +249,16 @@ namespace eZmaxApi.Model
         /// <value>Whether the Ezsigntemplatesignature must include a reason or not when eEzsigntemplatesignatureType &#x3D; Signature.</value>
         [DataMember(Name = "bEzsigntemplatesignatureReason", EmitDefaultValue = true)]
         public bool BEzsigntemplatesignatureReason { get; set; }
+
+        /// <summary>
+        /// Whether we can enter a custom amount while signing an Ezsigntemplatesignature &#39;Creditcard&#39; or not
+        /// </summary>
+        /// <value>Whether we can enter a custom amount while signing an Ezsigntemplatesignature &#39;Creditcard&#39; or not</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bEzsigntemplatesignatureCreditcardcustomamount", EmitDefaultValue = true)]
+        public bool BEzsigntemplatesignatureCreditcardcustomamount { get; set; }
 
         /// <summary>
         /// The page number in the Ezsigntemplatedocument
@@ -450,6 +462,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiPaymentgatewayID: ").Append(FkiPaymentgatewayID).Append("\n");
             sb.Append("  BEzsigntemplatesignatureHandwritten: ").Append(BEzsigntemplatesignatureHandwritten).Append("\n");
             sb.Append("  BEzsigntemplatesignatureReason: ").Append(BEzsigntemplatesignatureReason).Append("\n");
+            sb.Append("  BEzsigntemplatesignatureCreditcardcustomamount: ").Append(BEzsigntemplatesignatureCreditcardcustomamount).Append("\n");
             sb.Append("  EEzsigntemplatesignaturePositioning: ").Append(EEzsigntemplatesignaturePositioning).Append("\n");
             sb.Append("  IEzsigntemplatedocumentpagePagenumber: ").Append(IEzsigntemplatedocumentpagePagenumber).Append("\n");
             sb.Append("  IEzsigntemplatesignatureX: ").Append(IEzsigntemplatesignatureX).Append("\n");
