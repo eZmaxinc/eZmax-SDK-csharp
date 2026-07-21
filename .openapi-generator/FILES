@@ -420,8 +420,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationSubscribeV1Request.md
-docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -542,6 +540,8 @@ docs/EzmaxpartnerGetObjectV2Response.md
 docs/EzmaxpartnerGetObjectV2ResponseMPayload.md
 docs/EzmaxpartnerResponse.md
 docs/EzmaxpartnerResponseCompound.md
+docs/EzmaxpartnerSubscribeV1Request.md
+docs/EzmaxpartnerSubscribeV1Response.md
 docs/EzmaxproductAutocompleteElementResponse.md
 docs/EzmaxproductGetAutocompleteV2Response.md
 docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md
@@ -2766,8 +2766,6 @@ src/eZmaxApi/Model/DiscussionmessageRequestCompound.cs
 src/eZmaxApi/Model/DiscussionmessageRequestPatch.cs
 src/eZmaxApi/Model/DiscussionmessageResponse.cs
 src/eZmaxApi/Model/DiscussionmessageResponseCompound.cs
-src/eZmaxApi/Model/DocumentationSubscribeV1Request.cs
-src/eZmaxApi/Model/DocumentationSubscribeV1Response.cs
 src/eZmaxApi/Model/DomainAutocompleteElementResponse.cs
 src/eZmaxApi/Model/DomainCreateObjectV1Request.cs
 src/eZmaxApi/Model/DomainCreateObjectV1Response.cs
@@ -2887,6 +2885,8 @@ src/eZmaxApi/Model/EzmaxpartnerGetObjectV2Response.cs
 src/eZmaxApi/Model/EzmaxpartnerGetObjectV2ResponseMPayload.cs
 src/eZmaxApi/Model/EzmaxpartnerResponse.cs
 src/eZmaxApi/Model/EzmaxpartnerResponseCompound.cs
+src/eZmaxApi/Model/EzmaxpartnerSubscribeV1Request.cs
+src/eZmaxApi/Model/EzmaxpartnerSubscribeV1Response.cs
 src/eZmaxApi/Model/EzmaxproductAutocompleteElementResponse.cs
 src/eZmaxApi/Model/EzmaxproductGetAutocompleteV2Response.cs
 src/eZmaxApi/Model/EzmaxproductGetAutocompleteV2ResponseMPayload.cs

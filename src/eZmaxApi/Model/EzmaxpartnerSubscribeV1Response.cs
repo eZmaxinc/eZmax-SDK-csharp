@@ -29,24 +29,24 @@ namespace eZmaxApi.Model
     /// <summary>
     /// Request for POST /1/module/ezmaxmaillinglist/subscribe
     /// </summary>
-    [DataContract(Name = "documentation-subscribe-v1-Response")]
-    public partial class DocumentationSubscribeV1Response : IValidatableObject
+    [DataContract(Name = "ezmaxpartner-subscribe-v1-Response")]
+    public partial class EzmaxpartnerSubscribeV1Response : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentationSubscribeV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzmaxpartnerSubscribeV1Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected DocumentationSubscribeV1Response() { }
+        protected EzmaxpartnerSubscribeV1Response() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentationSubscribeV1Response" /> class.
+        /// Initializes a new instance of the <see cref="EzmaxpartnerSubscribeV1Response" /> class.
         /// </summary>
         /// <param name="sExternalID">sExternalID (required).</param>
-        public DocumentationSubscribeV1Response(string sExternalID = default)
+        public EzmaxpartnerSubscribeV1Response(string sExternalID = default)
         {
             // to ensure "sExternalID" is required (not null)
             if (sExternalID == null)
             {
-                throw new ArgumentNullException("sExternalID is a required property for DocumentationSubscribeV1Response and cannot be null");
+                throw new ArgumentNullException("sExternalID is a required property for EzmaxpartnerSubscribeV1Response and cannot be null");
             }
             this.SExternalID = sExternalID;
         }
@@ -64,7 +64,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DocumentationSubscribeV1Response {\n");
+            sb.Append("class EzmaxpartnerSubscribeV1Response {\n");
             sb.Append("  SExternalID: ").Append(SExternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();

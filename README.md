@@ -93,17 +93,17 @@ namespace Example
             // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new ExternalEzmaxpartnerApi(config);
-            var documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+            var ezmaxpartnerSubscribeV1Request = new EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
 
             try
             {
                 // Subscribe to an Ezmaxparnerproductstage
-                DocumentationSubscribeV1Response result = apiInstance.ExternalpartnerSubscribeV1(documentationSubscribeV1Request);
+                EzmaxpartnerSubscribeV1Response result = apiInstance.EzmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1: " + e.Message );
+                Debug.Print("Exception when calling ExternalEzmaxpartnerApi.EzmaxpartnerSubscribeV1: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -120,7 +120,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ExternalEzmaxpartnerApi* | [**ExternalpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+*ExternalEzmaxpartnerApi* | [**EzmaxpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 *GlobalCustomerApi* | [**GlobalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalcustomergetendpointv1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**GlobalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalezmaxclientversionv1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *GlobalEzmaxcustomerApi* | [**GlobalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalezmaxcustomergetconfigurationv1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
@@ -1112,8 +1112,6 @@ Class | Method | HTTP request | Description
  - [Model.DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [Model.DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [Model.DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
- - [Model.DocumentationSubscribeV1Request](docs/DocumentationSubscribeV1Request.md)
- - [Model.DocumentationSubscribeV1Response](docs/DocumentationSubscribeV1Response.md)
  - [Model.DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [Model.DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [Model.DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -1233,6 +1231,8 @@ Class | Method | HTTP request | Description
  - [Model.EzmaxpartnerGetObjectV2ResponseMPayload](docs/EzmaxpartnerGetObjectV2ResponseMPayload.md)
  - [Model.EzmaxpartnerResponse](docs/EzmaxpartnerResponse.md)
  - [Model.EzmaxpartnerResponseCompound](docs/EzmaxpartnerResponseCompound.md)
+ - [Model.EzmaxpartnerSubscribeV1Request](docs/EzmaxpartnerSubscribeV1Request.md)
+ - [Model.EzmaxpartnerSubscribeV1Response](docs/EzmaxpartnerSubscribeV1Response.md)
  - [Model.EzmaxproductAutocompleteElementResponse](docs/EzmaxproductAutocompleteElementResponse.md)
  - [Model.EzmaxproductGetAutocompleteV2Response](docs/EzmaxproductGetAutocompleteV2Response.md)
  - [Model.EzmaxproductGetAutocompleteV2ResponseMPayload](docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md)

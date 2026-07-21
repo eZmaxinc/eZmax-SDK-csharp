@@ -43,7 +43,8 @@ namespace eZmaxApi.Model
         /// <param name="objWebhook">objWebhook (required).</param>
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         /// <param name="objEzmaxpartnerproduct">objEzmaxpartnerproduct (required).</param>
-        public WebhookEzmaxpartnerproductUnsubscribe(CustomWebhookResponse objWebhook = default, List<AttemptResponseCompound> aObjAttempt = default, CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct = default)
+        /// <param name="sExternalID">sExternalID.</param>
+        public WebhookEzmaxpartnerproductUnsubscribe(CustomWebhookResponse objWebhook = default, List<AttemptResponseCompound> aObjAttempt = default, CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct = default, string sExternalID = default)
         {
             // to ensure "objWebhook" is required (not null)
             if (objWebhook == null)
@@ -63,6 +64,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objEzmaxpartnerproduct is a required property for WebhookEzmaxpartnerproductUnsubscribe and cannot be null");
             }
             this.ObjEzmaxpartnerproduct = objEzmaxpartnerproduct;
+            this.SExternalID = sExternalID;
         }
 
         /// <summary>
@@ -85,6 +87,12 @@ namespace eZmaxApi.Model
         public CustomEzmaxpartnerproductSubscribe ObjEzmaxpartnerproduct { get; set; }
 
         /// <summary>
+        /// Gets or Sets SExternalID
+        /// </summary>
+        [DataMember(Name = "sExternalID", EmitDefaultValue = false)]
+        public string SExternalID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,6 +103,7 @@ namespace eZmaxApi.Model
             sb.Append("  ObjWebhook: ").Append(ObjWebhook).Append("\n");
             sb.Append("  AObjAttempt: ").Append(AObjAttempt).Append("\n");
             sb.Append("  ObjEzmaxpartnerproduct: ").Append(ObjEzmaxpartnerproduct).Append("\n");
+            sb.Append("  SExternalID: ").Append(SExternalID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

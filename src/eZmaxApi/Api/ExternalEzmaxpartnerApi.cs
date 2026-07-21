@@ -34,10 +34,10 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumentationSubscribeV1Response</returns>
-        DocumentationSubscribeV1Response ExternalpartnerSubscribeV1(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0);
+        /// <returns>EzmaxpartnerSubscribeV1Response</returns>
+        EzmaxpartnerSubscribeV1Response EzmaxpartnerSubscribeV1(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0);
 
         /// <summary>
         /// Subscribe to an Ezmaxparnerproductstage
@@ -46,10 +46,10 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumentationSubscribeV1Response</returns>
-        ApiResponse<DocumentationSubscribeV1Response> ExternalpartnerSubscribeV1WithHttpInfo(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0);
+        /// <returns>ApiResponse of EzmaxpartnerSubscribeV1Response</returns>
+        ApiResponse<EzmaxpartnerSubscribeV1Response> EzmaxpartnerSubscribeV1WithHttpInfo(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -66,11 +66,11 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumentationSubscribeV1Response</returns>
-        System.Threading.Tasks.Task<DocumentationSubscribeV1Response> ExternalpartnerSubscribeV1Async(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of EzmaxpartnerSubscribeV1Response</returns>
+        System.Threading.Tasks.Task<EzmaxpartnerSubscribeV1Response> EzmaxpartnerSubscribeV1Async(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Subscribe to an Ezmaxparnerproductstage
@@ -79,11 +79,11 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumentationSubscribeV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentationSubscribeV1Response>> ExternalpartnerSubscribeV1WithHttpInfoAsync(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of ApiResponse (EzmaxpartnerSubscribeV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EzmaxpartnerSubscribeV1Response>> EzmaxpartnerSubscribeV1WithHttpInfoAsync(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -208,12 +208,12 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumentationSubscribeV1Response</returns>
-        public DocumentationSubscribeV1Response ExternalpartnerSubscribeV1(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0)
+        /// <returns>EzmaxpartnerSubscribeV1Response</returns>
+        public EzmaxpartnerSubscribeV1Response EzmaxpartnerSubscribeV1(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<DocumentationSubscribeV1Response> localVarResponse = ExternalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
+            eZmaxApi.Client.ApiResponse<EzmaxpartnerSubscribeV1Response> localVarResponse = EzmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request);
             return localVarResponse.Data;
         }
 
@@ -221,15 +221,15 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumentationSubscribeV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumentationSubscribeV1Response> ExternalpartnerSubscribeV1WithHttpInfo(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of EzmaxpartnerSubscribeV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<EzmaxpartnerSubscribeV1Response> EzmaxpartnerSubscribeV1WithHttpInfo(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0)
         {
-            // verify the required parameter 'documentationSubscribeV1Request' is set
-            if (documentationSubscribeV1Request == null)
+            // verify the required parameter 'ezmaxpartnerSubscribeV1Request' is set
+            if (ezmaxpartnerSubscribeV1Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documentationSubscribeV1Request' when calling ExternalEzmaxpartnerApi->ExternalpartnerSubscribeV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezmaxpartnerSubscribeV1Request' when calling ExternalEzmaxpartnerApi->EzmaxpartnerSubscribeV1");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -256,9 +256,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = documentationSubscribeV1Request;
+            localVarRequestOptions.Data = ezmaxpartnerSubscribeV1Request;
 
-            localVarRequestOptions.Operation = "ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1";
+            localVarRequestOptions.Operation = "ExternalEzmaxpartnerApi.EzmaxpartnerSubscribeV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -268,10 +268,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<DocumentationSubscribeV1Response>("/1/external/ezmaxpartner/subscribe", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<EzmaxpartnerSubscribeV1Response>("/1/external/ezmaxpartner/subscribe", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ExternalpartnerSubscribeV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzmaxpartnerSubscribeV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -285,13 +285,13 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumentationSubscribeV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumentationSubscribeV1Response> ExternalpartnerSubscribeV1Async(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of EzmaxpartnerSubscribeV1Response</returns>
+        public async System.Threading.Tasks.Task<EzmaxpartnerSubscribeV1Response> EzmaxpartnerSubscribeV1Async(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            eZmaxApi.Client.ApiResponse<DocumentationSubscribeV1Response> localVarResponse = await ExternalpartnerSubscribeV1WithHttpInfoAsync(documentationSubscribeV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<EzmaxpartnerSubscribeV1Response> localVarResponse = await EzmaxpartnerSubscribeV1WithHttpInfoAsync(ezmaxpartnerSubscribeV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -299,16 +299,16 @@ namespace eZmaxApi.Api
         /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documentationSubscribeV1Request"></param>
+        /// <param name="ezmaxpartnerSubscribeV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumentationSubscribeV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumentationSubscribeV1Response>> ExternalpartnerSubscribeV1WithHttpInfoAsync(DocumentationSubscribeV1Request documentationSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of ApiResponse (EzmaxpartnerSubscribeV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<EzmaxpartnerSubscribeV1Response>> EzmaxpartnerSubscribeV1WithHttpInfoAsync(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            // verify the required parameter 'documentationSubscribeV1Request' is set
-            if (documentationSubscribeV1Request == null)
+            // verify the required parameter 'ezmaxpartnerSubscribeV1Request' is set
+            if (ezmaxpartnerSubscribeV1Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documentationSubscribeV1Request' when calling ExternalEzmaxpartnerApi->ExternalpartnerSubscribeV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'ezmaxpartnerSubscribeV1Request' when calling ExternalEzmaxpartnerApi->EzmaxpartnerSubscribeV1");
             }
 
 
@@ -335,9 +335,9 @@ namespace eZmaxApi.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = documentationSubscribeV1Request;
+            localVarRequestOptions.Data = ezmaxpartnerSubscribeV1Request;
 
-            localVarRequestOptions.Operation = "ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1";
+            localVarRequestOptions.Operation = "ExternalEzmaxpartnerApi.EzmaxpartnerSubscribeV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -347,11 +347,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<DocumentationSubscribeV1Response>("/1/external/ezmaxpartner/subscribe", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<EzmaxpartnerSubscribeV1Response>("/1/external/ezmaxpartner/subscribe", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ExternalpartnerSubscribeV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("EzmaxpartnerSubscribeV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

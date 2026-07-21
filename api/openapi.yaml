@@ -122,7 +122,7 @@ tags:
     \n* PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\r\n\
     * PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\r\
     \n* PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\r\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\
-    \n\r\n---\r\n\r\n### [1.3.2] - 2026-07-20\r\n\r\n#### Added\r\n- GET /2/module/ezsign/suggestSigners\r\
+    \n\r\n---\r\n\r\n### [1.3.2] - 2026-07-21\r\n\r\n#### Added\r\n- GET /2/module/ezsign/suggestSigners\r\
     \n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\r\
     \n- GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
     \n- GET /2/object/inscription/{pkiInscriptionID}\r\n- GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds\r\
@@ -1498,12 +1498,12 @@ paths:
   /1/external/ezmaxpartner/subscribe:
     post:
       description: Subscribe to an Ezmaxparnerproductstage
-      operationId: Externalpartner_Subscribe_V1
+      operationId: Ezmaxpartner_Subscribe_V1
       requestBody:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/documentation-subscribe-v1-Request"
+              $ref: "#/components/schemas/ezmaxpartner-subscribe-v1-Request"
         description: ""
         required: true
       responses:
@@ -1511,7 +1511,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/documentation-subscribe-v1-Response"
+                $ref: "#/components/schemas/ezmaxpartner-subscribe-v1-Response"
           description: Successful response
       security:
       - Authorization: []
@@ -49275,6 +49275,8 @@ components:
       - properties:
           objEzmaxpartnerproduct:
             $ref: "#/components/schemas/Custom-Ezmaxpartnerproduct-Subscribe"
+          sExternalID:
+            type: string
         required:
         - objEzmaxpartnerproduct
         type: object
@@ -62246,135 +62248,6 @@ components:
           - sQuery: SELECT * FROM table
             fDuration: 1.0E-4
       type: object
-    documentation-subscribe-v1-Request:
-      description: Request for POST /1/webhookdocumentation/subscribe
-      properties:
-        pksEzmaxcustomerCode:
-          description: The Ezmaxcustomer code
-          example: demo
-          maxLength: 6
-          minLength: 2
-          pattern: "^[a-z\\d]{2,6}$"
-          type: string
-        sInfrastructureenvironmenttypeDescription:
-          description: The environment type Description
-          example: prod
-          type: string
-        sCompanyName1:
-          description: The Name of the Company in French
-          example: Acme inc.
-          type: string
-        sCompanyName2:
-          description: The Name of the Company in English
-          example: Acme inc.
-          type: string
-        fkiSystemconfigurationtypeID:
-          description: The unique ID of the Systemconfigurationtype
-          example: 28
-          minimum: 1
-          type: integer
-        sSystemconfigurationtypeDescription1:
-          description: The description of the Systemconfigurationtype in the language
-            of the requester
-          example: eZsign (Pro)
-          type: string
-        sSystemconfigurationtypeDescription2:
-          description: The description of the Systemconfigurationtype in the language
-            of the requester
-          example: eZsign (Pro)
-          type: string
-        fkiEzmaxpartnerID:
-          description: The unique ID of the Ezmaxpartner
-          example: 12
-          minimum: 1
-          type: integer
-        sEzmaxpartnerName1:
-          description: The name of the Ezmaxpartner in french
-          example: eZmax
-          pattern: "^.{0,50}$"
-          type: string
-        sEzmaxpartnerName2:
-          description: The name of the Ezmaxpartner in english
-          example: eZmax
-          pattern: "^.{0,50}$"
-          type: string
-        fkiEzmaxpartnerproductID:
-          description: The unique ID of the Ezmaxpartnerproduct
-          example: 16
-          maximum: 255
-          minimum: 0
-          type: integer
-        sEzmaxpartnerproductName1:
-          description: The name1 of the Ezmaxpartnerproduct
-          example: "1"
-          pattern: "^.{0,35}$"
-          type: string
-        sEzmaxpartnerproductName2:
-          description: The name2 of the Ezmaxpartnerproduct
-          example: "1"
-          pattern: "^.{0,35}$"
-          type: string
-        fkiEzmaxpartnerproductstageID:
-          description: The unique ID of the Ezmaxpartnerproductstage
-          example: 16
-          maximum: 255
-          minimum: 0
-          type: integer
-        sEzmaxpartnerproductstageCode:
-          description: The code of the sEzmaxpartnerproductstage
-          example: Default
-          pattern: "^.{0,15}$"
-          type: string
-        sUserLoginName:
-          description: The login name of the User.
-          example: JohnDoe
-          pattern: "^(?:([\\w.%+\\-!#$%&'*+\\/=?^`{|}~]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$"
-          type: string
-        sUserFirstName:
-          description: The first name of the user
-          example: John
-          type: string
-        sUserLastName:
-          description: The last name of the user
-          example: Doe
-          type: string
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          minimum: 0
-          type: integer
-        fkiLanguageID:
-          description: |-
-            The unique ID of the Language.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|French|
-            |2|English|
-          example: 2
-          maximum: 2
-          minimum: 1
-          type: integer
-        objAddress:
-          $ref: "#/components/schemas/address-RequestCompound"
-        objphone:
-          $ref: "#/components/schemas/phone-RequestCompoundV2"
-        objEmail:
-          $ref: "#/components/schemas/email-RequestCompound"
-      type: object
-    documentation-subscribe-v1-Response:
-      description: Request for POST /1/module/ezmaxmaillinglist/subscribe
-      example:
-        sExternalID: sExternalID
-      properties:
-        sExternalID:
-          description: ""
-          type: string
-      required:
-      - sExternalID
-      type: object
     domain-AutocompleteElement-Response:
       description: A Domain AutocompleteElement Response
       example:
@@ -68578,6 +68451,135 @@ components:
       properties:
         objEzmaxpartner:
           $ref: "#/components/schemas/ezmaxpartner-ResponseCompound"
+      type: object
+    ezmaxpartner-subscribe-v1-Request:
+      description: Request for POST /1/webhookdocumentation/subscribe
+      properties:
+        pksEzmaxcustomerCode:
+          description: The Ezmaxcustomer code
+          example: demo
+          maxLength: 6
+          minLength: 2
+          pattern: "^[a-z\\d]{2,6}$"
+          type: string
+        sInfrastructureenvironmenttypeDescription:
+          description: The environment type Description
+          example: prod
+          type: string
+        sCompanyName1:
+          description: The Name of the Company in French
+          example: Acme inc.
+          type: string
+        sCompanyName2:
+          description: The Name of the Company in English
+          example: Acme inc.
+          type: string
+        fkiSystemconfigurationtypeID:
+          description: The unique ID of the Systemconfigurationtype
+          example: 28
+          minimum: 1
+          type: integer
+        sSystemconfigurationtypeDescription1:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        sSystemconfigurationtypeDescription2:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        fkiEzmaxpartnerID:
+          description: The unique ID of the Ezmaxpartner
+          example: 12
+          minimum: 1
+          type: integer
+        sEzmaxpartnerName1:
+          description: The name of the Ezmaxpartner in french
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        sEzmaxpartnerName2:
+          description: The name of the Ezmaxpartner in english
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        fkiEzmaxpartnerproductID:
+          description: The unique ID of the Ezmaxpartnerproduct
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductName1:
+          description: The name1 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        sEzmaxpartnerproductName2:
+          description: The name2 of the Ezmaxpartnerproduct
+          example: "1"
+          pattern: "^.{0,35}$"
+          type: string
+        fkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductstageCode:
+          description: The code of the sEzmaxpartnerproductstage
+          example: Default
+          pattern: "^.{0,15}$"
+          type: string
+        sUserLoginName:
+          description: The login name of the User.
+          example: JohnDoe
+          pattern: "^(?:([\\w.%+\\-!#$%&'*+\\/=?^`{|}~]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$"
+          type: string
+        sUserFirstName:
+          description: The first name of the user
+          example: John
+          type: string
+        sUserLastName:
+          description: The last name of the user
+          example: Doe
+          type: string
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        objAddress:
+          $ref: "#/components/schemas/address-RequestCompound"
+        objphone:
+          $ref: "#/components/schemas/phone-RequestCompoundV2"
+        objEmail:
+          $ref: "#/components/schemas/email-RequestCompound"
+      type: object
+    ezmaxpartner-subscribe-v1-Response:
+      description: Request for POST /1/module/ezmaxmaillinglist/subscribe
+      example:
+        sExternalID: sExternalID
+      properties:
+        sExternalID:
+          description: ""
+          type: string
+      required:
+      - sExternalID
       type: object
     ezmaxproduct-AutocompleteElement-Response:
       description: A Ezmaxproduct AutocompleteElement Response

@@ -1,4 +1,4 @@
-# eZmaxApi.Model.DocumentationSubscribeV1Request
+# eZmaxApi.Model.EzmaxpartnerSubscribeV1Request
 Request for POST /1/webhookdocumentation/subscribe
 
 ## Properties

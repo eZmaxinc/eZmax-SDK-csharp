@@ -4,11 +4,11 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ExternalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| [**EzmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
 
-<a id="externalpartnersubscribev1"></a>
-# **ExternalpartnerSubscribeV1**
-> DocumentationSubscribeV1Response ExternalpartnerSubscribeV1 (DocumentationSubscribeV1Request documentationSubscribeV1Request)
+<a id="ezmaxpartnersubscribev1"></a>
+# **EzmaxpartnerSubscribeV1**
+> EzmaxpartnerSubscribeV1Response EzmaxpartnerSubscribeV1 (EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request)
 
 Subscribe to an Ezmaxparnerproductstage
 
@@ -24,7 +24,7 @@ using eZmaxApi.Model;
 
 namespace Example
 {
-    public class ExternalpartnerSubscribeV1Example
+    public class EzmaxpartnerSubscribeV1Example
     {
         public static void Main()
         {
@@ -36,17 +36,17 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ExternalEzmaxpartnerApi(config);
-            var documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+            var ezmaxpartnerSubscribeV1Request = new EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
 
             try
             {
                 // Subscribe to an Ezmaxparnerproductstage
-                DocumentationSubscribeV1Response result = apiInstance.ExternalpartnerSubscribeV1(documentationSubscribeV1Request);
+                EzmaxpartnerSubscribeV1Response result = apiInstance.EzmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1: " + e.Message);
+                Debug.Print("Exception when calling ExternalEzmaxpartnerApi.EzmaxpartnerSubscribeV1: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -55,21 +55,21 @@ namespace Example
 }
 ```
 
-#### Using the ExternalpartnerSubscribeV1WithHttpInfo variant
+#### Using the EzmaxpartnerSubscribeV1WithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
     // Subscribe to an Ezmaxparnerproductstage
-    ApiResponse<DocumentationSubscribeV1Response> response = apiInstance.ExternalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
+    ApiResponse<EzmaxpartnerSubscribeV1Response> response = apiInstance.EzmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling ExternalEzmaxpartnerApi.ExternalpartnerSubscribeV1WithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling ExternalEzmaxpartnerApi.EzmaxpartnerSubscribeV1WithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -79,11 +79,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **documentationSubscribeV1Request** | [**DocumentationSubscribeV1Request**](DocumentationSubscribeV1Request.md) |  |  |
+| **ezmaxpartnerSubscribeV1Request** | [**EzmaxpartnerSubscribeV1Request**](EzmaxpartnerSubscribeV1Request.md) |  |  |
 
 ### Return type
 
-[**DocumentationSubscribeV1Response**](DocumentationSubscribeV1Response.md)
+[**EzmaxpartnerSubscribeV1Response**](EzmaxpartnerSubscribeV1Response.md)
 
 ### Authorization
 

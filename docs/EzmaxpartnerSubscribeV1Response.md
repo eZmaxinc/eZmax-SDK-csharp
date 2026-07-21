@@ -1,4 +1,4 @@
-# eZmaxApi.Model.DocumentationSubscribeV1Response
+# eZmaxApi.Model.EzmaxpartnerSubscribeV1Response
 Request for POST /1/module/ezmaxmaillinglist/subscribe
 
 ## Properties

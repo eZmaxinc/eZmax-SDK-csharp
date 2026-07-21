@@ -29,11 +29,11 @@ namespace eZmaxApi.Model
     /// <summary>
     /// Request for POST /1/webhookdocumentation/subscribe
     /// </summary>
-    [DataContract(Name = "documentation-subscribe-v1-Request")]
-    public partial class DocumentationSubscribeV1Request : IValidatableObject
+    [DataContract(Name = "ezmaxpartner-subscribe-v1-Request")]
+    public partial class EzmaxpartnerSubscribeV1Request : IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentationSubscribeV1Request" /> class.
+        /// Initializes a new instance of the <see cref="EzmaxpartnerSubscribeV1Request" /> class.
         /// </summary>
         /// <param name="pksEzmaxcustomerCode">The Ezmaxcustomer code.</param>
         /// <param name="sInfrastructureenvironmenttypeDescription">The environment type Description.</param>
@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// <param name="objAddress">objAddress.</param>
         /// <param name="objphone">objphone.</param>
         /// <param name="objEmail">objEmail.</param>
-        public DocumentationSubscribeV1Request(string pksEzmaxcustomerCode = default, string sInfrastructureenvironmenttypeDescription = default, string sCompanyName1 = default, string sCompanyName2 = default, int fkiSystemconfigurationtypeID = default, string sSystemconfigurationtypeDescription1 = default, string sSystemconfigurationtypeDescription2 = default, int fkiEzmaxpartnerID = default, string sEzmaxpartnerName1 = default, string sEzmaxpartnerName2 = default, int fkiEzmaxpartnerproductID = default, string sEzmaxpartnerproductName1 = default, string sEzmaxpartnerproductName2 = default, int fkiEzmaxpartnerproductstageID = default, string sEzmaxpartnerproductstageCode = default, string sUserLoginName = default, string sUserFirstName = default, string sUserLastName = default, int fkiUserID = default, int fkiLanguageID = default, AddressRequestCompound objAddress = default, PhoneRequestCompoundV2 objphone = default, EmailRequestCompound objEmail = default)
+        public EzmaxpartnerSubscribeV1Request(string pksEzmaxcustomerCode = default, string sInfrastructureenvironmenttypeDescription = default, string sCompanyName1 = default, string sCompanyName2 = default, int fkiSystemconfigurationtypeID = default, string sSystemconfigurationtypeDescription1 = default, string sSystemconfigurationtypeDescription2 = default, int fkiEzmaxpartnerID = default, string sEzmaxpartnerName1 = default, string sEzmaxpartnerName2 = default, int fkiEzmaxpartnerproductID = default, string sEzmaxpartnerproductName1 = default, string sEzmaxpartnerproductName2 = default, int fkiEzmaxpartnerproductstageID = default, string sEzmaxpartnerproductstageCode = default, string sUserLoginName = default, string sUserFirstName = default, string sUserLastName = default, int fkiUserID = default, int fkiLanguageID = default, AddressRequestCompound objAddress = default, PhoneRequestCompoundV2 objphone = default, EmailRequestCompound objEmail = default)
         {
             this.PksEzmaxcustomerCode = pksEzmaxcustomerCode;
             this.SInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
@@ -310,7 +310,7 @@ namespace eZmaxApi.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DocumentationSubscribeV1Request {\n");
+            sb.Append("class EzmaxpartnerSubscribeV1Request {\n");
             sb.Append("  PksEzmaxcustomerCode: ").Append(PksEzmaxcustomerCode).Append("\n");
             sb.Append("  SInfrastructureenvironmenttypeDescription: ").Append(SInfrastructureenvironmenttypeDescription).Append("\n");
             sb.Append("  SCompanyName1: ").Append(SCompanyName1).Append("\n");
