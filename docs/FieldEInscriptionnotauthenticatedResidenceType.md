@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEInscriptionnotauthenticatedResidenceType
-The residencetype of the Inscriptionnotauthenticated
+The residence type of the Inscriptionnotauthenticated
 
 ## Properties
 

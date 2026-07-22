@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEInscriptionRemunerationtotaltype
-The remunerationtotaltype of the Inscription
+The type for the remuneration total of the Inscription
 
 ## Properties
 

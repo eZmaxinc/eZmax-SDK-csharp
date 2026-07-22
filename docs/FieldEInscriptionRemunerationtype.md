@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEInscriptionRemunerationtype
-The remunerationtype of the Inscription
+The type of remuneration of the Inscription
 
 ## Properties
 

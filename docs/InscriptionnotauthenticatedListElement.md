@@ -17,23 +17,23 @@ Name | Type | Description | Notes
 **SBuyercontractContract** | **string** | The number of the Buyercontract | [optional] 
 **EInscriptionStep** | **FieldEInscriptionStep** |  | 
 **EInscriptionType** | **FieldEInscriptionType** |  | 
-**SInscriptionCivicend** | **string** | The civicend of the Inscription | 
+**SInscriptionCivicend** | **string** | The address civic end of the Inscription | 
 **SInscriptionMLS** | **string** | The mls of the Inscription | [optional] 
 **SInscriptionContract** | **string** | The sale contract number | [optional] 
 **DInscriptionSaleprice** | **string** | The saleprice of the Inscription | 
-**DInscriptionRentprice** | **string** | The rentprice of the Inscription | 
+**DInscriptionRentprice** | **string** | The rent price of the Inscription | 
 **DtInscriptionDate** | **string** | The date of the Inscription | [optional] 
-**DtInscriptionExpirationdate** | **string** | The expirationdate of the Inscription | [optional] 
-**DtInscriptionNotarydate** | **string** | The notarydate of the Inscription | [optional] 
+**DtInscriptionExpirationdate** | **string** | The expiration date of the Inscription | [optional] 
+**DtInscriptionNotarydate** | **string** | The notary date of the Inscription | [optional] 
 **BInscriptionInspection** | **bool** | Whether the inscription can be acces by an inspector | [optional] 
 **BInscriptionIsactive** | **bool** | Whether the inscription is active or not | 
 **BInscriptionArchived** | **bool** | Whether the inscription is archived or not | 
-**DtInscriptionnotauthenticatedNotaryscheduledate** | **string** | The notaryscheduledate of the Inscriptionnotauthenticated | [optional] 
-**DtInscriptionnotauthenticatedTransactiondate** | **string** | The transactiondate of the Inscriptionnotauthenticated | [optional] 
-**DtInscriptionnotauthenticatedTransactiondateReal** | **string** | The transactiondatereal of the Inscriptionnotauthenticated | [optional] 
+**DtInscriptionnotauthenticatedNotaryscheduledate** | **string** | The notary schedule date of the Inscriptionnotauthenticated | [optional] 
+**DtInscriptionnotauthenticatedTransactiondate** | **string** | The transaction date of the Inscriptionnotauthenticated | [optional] 
+**DtInscriptionnotauthenticatedTransactiondateReal** | **string** | The real transactiondate of the Inscriptionnotauthenticated | [optional] 
 **BInscriptionnotauthenticatedConditional** | **bool** | Whether the inscriptionnotauthenticated is conditional | [optional] 
 **BInscriptionnotauthenticatedIsactive** | **bool** | Whether the inscriptionnotauthenticated is active or not | [optional] 
-**BInscriptionnotauthenticatedDraft** | **bool** | Whether the inscriptionnotauthenticated is a draft or not | [optional] 
+**BInscriptionnotauthenticatedDraft** | **bool** | Whether the Inscriptionnotauthenticated is a draft or not | [optional] 
 **SAddressCivic** | **string** | The Civic number. | [optional] 
 **SAddressStreet** | **string** | The Street Name | [optional] 
 **SAddressSuite** | **string** | The Suite or appartment number | [optional] 
@@ -43,8 +43,8 @@ Name | Type | Description | Notes
 **SProvinceNameX** | **string** | The name of the Province in the language of the requester | [optional] 
 **FkiCountryID** | **int** | The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States| | [optional] 
 **SCountryNameX** | **string** | The name of the Country in the language of the requester | [optional] 
-**SInscriptionnotauthenticatedOffertopurchasenumber** | **string** | The Offer to purchase number | 
-**IInscriptionUnit** | **int** | The unit of the Inscription | 
+**SInscriptionnotauthenticatedOffertopurchasenumber** | **string** | The offer to purchase number of the Inscriptionnotauthenticated | 
+**IInscriptionUnit** | **int** | The number of unit for the Inscription | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEWebhookRealestateevent
-The realestateevent of the Webhook
+The Realestateevent of the Webhook
 
 ## Properties
 

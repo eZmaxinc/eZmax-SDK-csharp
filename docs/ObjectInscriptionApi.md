@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**InscriptionGetCommunicationListV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationlistv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationList | Retrieve Communication list |
 | [**InscriptionGetCommunicationrecipientsV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationrecipientsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients | Retrieve Inscription&#39;s Communicationrecipient |
 | [**InscriptionGetCommunicationsendersV1**](ObjectInscriptionApi.md#inscriptiongetcommunicationsendersv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders | Retrieve Inscription&#39;s Communicationsender |
-| [**InscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscriptionnotauthenticated list |
+| [**InscriptionGetInscriptionnotauthenticatedsV1**](ObjectInscriptionApi.md#inscriptiongetinscriptionnotauthenticatedsv1) | **GET** /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds | Retrieve Inscription&#39;s Inscriptionnotauthenticated |
 | [**InscriptionGetListV1**](ObjectInscriptionApi.md#inscriptiongetlistv1) | **GET** /1/object/inscription/getList | Retrieve Inscription list |
 | [**InscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | [**InscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
@@ -494,7 +494,7 @@ catch (ApiException e)
 # **InscriptionGetInscriptionnotauthenticatedsV1**
 > InscriptionGetInscriptionnotauthenticatedsV1Response InscriptionGetInscriptionnotauthenticatedsV1 (int pkiInscriptionID)
 
-Retrieve Inscriptionnotauthenticated list
+Retrieve Inscription's Inscriptionnotauthenticated
 
 ### Example
 ```csharp
@@ -522,7 +522,7 @@ namespace Example
 
             try
             {
-                // Retrieve Inscriptionnotauthenticated list
+                // Retrieve Inscription's Inscriptionnotauthenticated
                 InscriptionGetInscriptionnotauthenticatedsV1Response result = apiInstance.InscriptionGetInscriptionnotauthenticatedsV1(pkiInscriptionID);
                 Debug.WriteLine(result);
             }
@@ -543,7 +543,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Retrieve Inscriptionnotauthenticated list
+    // Retrieve Inscription's Inscriptionnotauthenticated
     ApiResponse<InscriptionGetInscriptionnotauthenticatedsV1Response> response = apiInstance.InscriptionGetInscriptionnotauthenticatedsV1WithHttpInfo(pkiInscriptionID);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

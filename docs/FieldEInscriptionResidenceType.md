@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEInscriptionResidenceType
-The residencetype of the Inscription
+The residence type of the Inscription
 
 ## Properties
 
