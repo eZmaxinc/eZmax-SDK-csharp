@@ -5,7 +5,7 @@ Request for POST /1/module/ezmaxmaillinglist/subscribe
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SExternalID** | **string** |  | 
+**SExternalID** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

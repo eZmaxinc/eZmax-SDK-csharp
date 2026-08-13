@@ -7,6 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsignbulksenddocumentmappingCreateObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingcreateobjectv1) | **POST** /1/object/ezsignbulksenddocumentmapping | Create a new Ezsignbulksenddocumentmapping |
 | [**EzsignbulksenddocumentmappingDeleteObjectV1**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappingdeleteobjectv1) | **DELETE** /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Delete an existing Ezsignbulksenddocumentmapping |
 | [**EzsignbulksenddocumentmappingGetObjectV2**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv2) | **GET** /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping |
+| [**EzsignbulksenddocumentmappingGetObjectV3**](ObjectEzsignbulksenddocumentmappingApi.md#ezsignbulksenddocumentmappinggetobjectv3) | **GET** /3/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID} | Retrieve an existing Ezsignbulksenddocumentmapping |
 
 <a id="ezsignbulksenddocumentmappingcreateobjectv1"></a>
 # **EzsignbulksenddocumentmappingCreateObjectV1**
@@ -276,6 +277,101 @@ catch (ApiException e)
 ### Return type
 
 [**EzsignbulksenddocumentmappingGetObjectV2Response**](EzsignbulksenddocumentmappingGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsignbulksenddocumentmappinggetobjectv3"></a>
+# **EzsignbulksenddocumentmappingGetObjectV3**
+> EzsignbulksenddocumentmappingGetObjectV3Response EzsignbulksenddocumentmappingGetObjectV3 (int pkiEzsignbulksenddocumentmappingID)
+
+Retrieve an existing Ezsignbulksenddocumentmapping
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsignbulksenddocumentmappingGetObjectV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsignbulksenddocumentmappingApi(config);
+            var pkiEzsignbulksenddocumentmappingID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsignbulksenddocumentmapping
+                EzsignbulksenddocumentmappingGetObjectV3Response result = apiInstance.EzsignbulksenddocumentmappingGetObjectV3(pkiEzsignbulksenddocumentmappingID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsignbulksenddocumentmappingApi.EzsignbulksenddocumentmappingGetObjectV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsignbulksenddocumentmappingGetObjectV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsignbulksenddocumentmapping
+    ApiResponse<EzsignbulksenddocumentmappingGetObjectV3Response> response = apiInstance.EzsignbulksenddocumentmappingGetObjectV3WithHttpInfo(pkiEzsignbulksenddocumentmappingID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsignbulksenddocumentmappingApi.EzsignbulksenddocumentmappingGetObjectV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsignbulksenddocumentmappingID** | **int** |  |  |
+
+### Return type
+
+[**EzsignbulksenddocumentmappingGetObjectV3Response**](EzsignbulksenddocumentmappingGetObjectV3Response.md)
 
 ### Authorization
 

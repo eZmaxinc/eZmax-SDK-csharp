@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **AFkiEzsignfoldersignerassociationID** | **List&lt;int&gt;** |  | 
 **AObjEzsigndocument** | [**List&lt;CustomEzsigndocumentDuplicateRequest&gt;**](CustomEzsigndocumentDuplicateRequest.md) |  | 
 **TEzsignfolderNote** | **string** | Note about the Ezsignfolder | [optional] 
+**BKeepenteredvalues** | **bool** | Whether we keep the entered values or not in the Ezsignform | [optional] [default to true]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

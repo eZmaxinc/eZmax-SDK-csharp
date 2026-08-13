@@ -7,10 +7,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**EzsigntemplatepackageCreateObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagecreateobjectv1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage |
 | [**EzsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagedeleteobjectv1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage |
 | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners |
+| [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditezsigntemplatepackagesignersv2) | **PUT** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners |
 | [**EzsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageeditobjectv1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage |
 | [**EzsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetautocompletev2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs |
 | [**EzsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetlistv1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list |
 | [**EzsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage |
+| [**EzsigntemplatepackageGetObjectV3**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackagegetobjectv3) | **GET** /3/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage |
 
 <a id="ezsigntemplatepackagecreateobjectv1"></a>
 # **EzsigntemplatepackageCreateObjectV1**
@@ -283,6 +285,106 @@ catch (ApiException e)
 ### Return type
 
 [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsigntemplatepackageeditezsigntemplatepackagesignersv2"></a>
+# **EzsigntemplatepackageEditEzsigntemplatepackagesignersV2**
+> EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response EzsigntemplatepackageEditEzsigntemplatepackagesignersV2 (int pkiEzsigntemplatepackageID, EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request)
+
+Edit multiple Ezsigntemplatepackagesigners
+
+Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigntemplatepackageApi(config);
+            var pkiEzsigntemplatepackageID = 56;  // int | 
+            var ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request = new EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request(); // EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request | 
+
+            try
+            {
+                // Edit multiple Ezsigntemplatepackagesigners
+                EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response result = apiInstance.EzsigntemplatepackageEditEzsigntemplatepackagesignersV2(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageEditEzsigntemplatepackagesignersV2: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigntemplatepackageEditEzsigntemplatepackagesignersV2WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Edit multiple Ezsigntemplatepackagesigners
+    ApiResponse<EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response> response = apiInstance.EzsigntemplatepackageEditEzsigntemplatepackagesignersV2WithHttpInfo(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageEditEzsigntemplatepackagesignersV2WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+| **ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request** | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request.md) |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response.md)
 
 ### Authorization
 
@@ -686,6 +788,101 @@ catch (ApiException e)
 ### Return type
 
 [**EzsigntemplatepackageGetObjectV2Response**](EzsigntemplatepackageGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="ezsigntemplatepackagegetobjectv3"></a>
+# **EzsigntemplatepackageGetObjectV3**
+> EzsigntemplatepackageGetObjectV3Response EzsigntemplatepackageGetObjectV3 (int pkiEzsigntemplatepackageID)
+
+Retrieve an existing Ezsigntemplatepackage
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class EzsigntemplatepackageGetObjectV3Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectEzsigntemplatepackageApi(config);
+            var pkiEzsigntemplatepackageID = 56;  // int | 
+
+            try
+            {
+                // Retrieve an existing Ezsigntemplatepackage
+                EzsigntemplatepackageGetObjectV3Response result = apiInstance.EzsigntemplatepackageGetObjectV3(pkiEzsigntemplatepackageID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageGetObjectV3: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the EzsigntemplatepackageGetObjectV3WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve an existing Ezsigntemplatepackage
+    ApiResponse<EzsigntemplatepackageGetObjectV3Response> response = apiInstance.EzsigntemplatepackageGetObjectV3WithHttpInfo(pkiEzsigntemplatepackageID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectEzsigntemplatepackageApi.EzsigntemplatepackageGetObjectV3WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiEzsigntemplatepackageID** | **int** |  |  |
+
+### Return type
+
+[**EzsigntemplatepackageGetObjectV3Response**](EzsigntemplatepackageGetObjectV3Response.md)
 
 ### Authorization
 
