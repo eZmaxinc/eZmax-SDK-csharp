@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Buyercontract
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream BuyercontractBatchDownloadV1(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> BuyercontractBatchDownloadV1WithHttpInfo(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetAttachmentsV1Response</returns>
+        BuyercontractGetAttachmentsV1Response BuyercontractGetAttachmentsV1(int pkiBuyercontractID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetAttachmentsV1Response</returns>
+        ApiResponse<BuyercontractGetAttachmentsV1Response> BuyercontractGetAttachmentsV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication count
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -169,6 +211,58 @@ namespace eZmaxApi.Api
     public interface IObjectBuyercontractApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> BuyercontractBatchDownloadV1Async(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> BuyercontractBatchDownloadV1WithHttpInfoAsync(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractGetAttachmentsV1Response> BuyercontractGetAttachmentsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetAttachmentsV1Response>> BuyercontractGetAttachmentsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Communication count
         /// </summary>
@@ -447,6 +541,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream BuyercontractBatchDownloadV1(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = BuyercontractBatchDownloadV1WithHttpInfo(pkiBuyercontractID, buyercontractBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> BuyercontractBatchDownloadV1WithHttpInfo(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'buyercontractBatchDownloadV1Request' is set
+            if (buyercontractBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'buyercontractBatchDownloadV1Request' when calling ObjectBuyercontractApi->BuyercontractBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+            localVarRequestOptions.Data = buyercontractBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/buyercontract/{pkiBuyercontractID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> BuyercontractBatchDownloadV1Async(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await BuyercontractBatchDownloadV1WithHttpInfoAsync(pkiBuyercontractID, buyercontractBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Buyercontract 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="buyercontractBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> BuyercontractBatchDownloadV1WithHttpInfoAsync(int pkiBuyercontractID, BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'buyercontractBatchDownloadV1Request' is set
+            if (buyercontractBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'buyercontractBatchDownloadV1Request' when calling ObjectBuyercontractApi->BuyercontractBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+            localVarRequestOptions.Data = buyercontractBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/buyercontract/{pkiBuyercontractID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetAttachmentsV1Response</returns>
+        public BuyercontractGetAttachmentsV1Response BuyercontractGetAttachmentsV1(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetAttachmentsV1Response> localVarResponse = BuyercontractGetAttachmentsV1WithHttpInfo(pkiBuyercontractID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractGetAttachmentsV1Response> BuyercontractGetAttachmentsV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BuyercontractGetAttachmentsV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractGetAttachmentsV1Response> BuyercontractGetAttachmentsV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetAttachmentsV1Response> localVarResponse = await BuyercontractGetAttachmentsV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Buyercontract&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetAttachmentsV1Response>> BuyercontractGetAttachmentsV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BuyercontractGetAttachmentsV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

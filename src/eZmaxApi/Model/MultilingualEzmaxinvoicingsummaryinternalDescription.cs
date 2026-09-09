@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in French</value>
         /*
-        <example>Défaut</example>
+        <example>DÃ©faut</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescription1", EmitDefaultValue = false)]
         public string SEzmaxinvoicingsummaryinternalDescription1 { get; set; }
@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in English</value>
         /*
-        <example>Défault</example>
+        <example>DÃ©fault</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescription2", EmitDefaultValue = false)]
         public string SEzmaxinvoicingsummaryinternalDescription2 { get; set; }

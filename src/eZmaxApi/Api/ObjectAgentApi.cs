@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Agent
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream AgentBatchDownloadV1(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> AgentBatchDownloadV1WithHttpInfo(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AgentGetAttachmentsV1Response</returns>
+        AgentGetAttachmentsV1Response AgentGetAttachmentsV1(int pkiAgentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AgentGetAttachmentsV1Response</returns>
+        ApiResponse<AgentGetAttachmentsV1Response> AgentGetAttachmentsV1WithHttpInfo(int pkiAgentID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Agents and IDs
         /// </summary>
         /// <remarks>
@@ -115,6 +157,58 @@ namespace eZmaxApi.Api
     public interface IObjectAgentApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> AgentBatchDownloadV1Async(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Agent
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> AgentBatchDownloadV1WithHttpInfoAsync(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AgentGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<AgentGetAttachmentsV1Response> AgentGetAttachmentsV1Async(int pkiAgentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AgentGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AgentGetAttachmentsV1Response>> AgentGetAttachmentsV1WithHttpInfoAsync(int pkiAgentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Agents and IDs
         /// </summary>
@@ -324,6 +418,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Agent 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream AgentBatchDownloadV1(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = AgentBatchDownloadV1WithHttpInfo(pkiAgentID, agentBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Agent 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> AgentBatchDownloadV1WithHttpInfo(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'agentBatchDownloadV1Request' is set
+            if (agentBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'agentBatchDownloadV1Request' when calling ObjectAgentApi->AgentBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAgentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAgentID)); // path parameter
+            localVarRequestOptions.Data = agentBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAgentApi.AgentBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/agent/{pkiAgentID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AgentBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Agent 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> AgentBatchDownloadV1Async(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await AgentBatchDownloadV1WithHttpInfoAsync(pkiAgentID, agentBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Agent 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="agentBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> AgentBatchDownloadV1WithHttpInfoAsync(int pkiAgentID, AgentBatchDownloadV1Request agentBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'agentBatchDownloadV1Request' is set
+            if (agentBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'agentBatchDownloadV1Request' when calling ObjectAgentApi->AgentBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAgentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAgentID)); // path parameter
+            localVarRequestOptions.Data = agentBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAgentApi.AgentBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/agent/{pkiAgentID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AgentBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AgentGetAttachmentsV1Response</returns>
+        public AgentGetAttachmentsV1Response AgentGetAttachmentsV1(int pkiAgentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AgentGetAttachmentsV1Response> localVarResponse = AgentGetAttachmentsV1WithHttpInfo(pkiAgentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AgentGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AgentGetAttachmentsV1Response> AgentGetAttachmentsV1WithHttpInfo(int pkiAgentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAgentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAgentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAgentApi.AgentGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AgentGetAttachmentsV1Response>("/1/object/agent/{pkiAgentID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AgentGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AgentGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<AgentGetAttachmentsV1Response> AgentGetAttachmentsV1Async(int pkiAgentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AgentGetAttachmentsV1Response> localVarResponse = await AgentGetAttachmentsV1WithHttpInfoAsync(pkiAgentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Agent&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAgentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AgentGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AgentGetAttachmentsV1Response>> AgentGetAttachmentsV1WithHttpInfoAsync(int pkiAgentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAgentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAgentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAgentApi.AgentGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AgentGetAttachmentsV1Response>("/1/object/agent/{pkiAgentID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AgentGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

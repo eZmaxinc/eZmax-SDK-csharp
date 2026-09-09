@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream InscriptiontempBatchDownloadV1(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> InscriptiontempBatchDownloadV1WithHttpInfo(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetAttachmentsV1Response</returns>
+        InscriptiontempGetAttachmentsV1Response InscriptiontempGetAttachmentsV1(int pkiInscriptiontempID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetAttachmentsV1Response</returns>
+        ApiResponse<InscriptiontempGetAttachmentsV1Response> InscriptiontempGetAttachmentsV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication count
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -169,6 +211,58 @@ namespace eZmaxApi.Api
     public interface IObjectInscriptiontempApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> InscriptiontempBatchDownloadV1Async(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> InscriptiontempBatchDownloadV1WithHttpInfoAsync(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<InscriptiontempGetAttachmentsV1Response> InscriptiontempGetAttachmentsV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InscriptiontempGetAttachmentsV1Response>> InscriptiontempGetAttachmentsV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Communication count
         /// </summary>
@@ -447,6 +541,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream InscriptiontempBatchDownloadV1(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = InscriptiontempBatchDownloadV1WithHttpInfo(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> InscriptiontempBatchDownloadV1WithHttpInfo(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'inscriptiontempBatchDownloadV1Request' is set
+            if (inscriptiontempBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'inscriptiontempBatchDownloadV1Request' when calling ObjectInscriptiontempApi->InscriptiontempBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+            localVarRequestOptions.Data = inscriptiontempBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> InscriptiontempBatchDownloadV1Async(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await InscriptiontempBatchDownloadV1WithHttpInfoAsync(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Inscriptiontemp 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="inscriptiontempBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> InscriptiontempBatchDownloadV1WithHttpInfoAsync(int pkiInscriptiontempID, InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'inscriptiontempBatchDownloadV1Request' is set
+            if (inscriptiontempBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'inscriptiontempBatchDownloadV1Request' when calling ObjectInscriptiontempApi->InscriptiontempBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+            localVarRequestOptions.Data = inscriptiontempBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptiontempGetAttachmentsV1Response</returns>
+        public InscriptiontempGetAttachmentsV1Response InscriptiontempGetAttachmentsV1(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetAttachmentsV1Response> localVarResponse = InscriptiontempGetAttachmentsV1WithHttpInfo(pkiInscriptiontempID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptiontempGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InscriptiontempGetAttachmentsV1Response> InscriptiontempGetAttachmentsV1WithHttpInfo(int pkiInscriptiontempID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InscriptiontempGetAttachmentsV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptiontempGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<InscriptiontempGetAttachmentsV1Response> InscriptiontempGetAttachmentsV1Async(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptiontempGetAttachmentsV1Response> localVarResponse = await InscriptiontempGetAttachmentsV1WithHttpInfoAsync(pkiInscriptiontempID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Inscriptiontemp&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptiontempID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptiontempGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptiontempGetAttachmentsV1Response>> InscriptiontempGetAttachmentsV1WithHttpInfoAsync(int pkiInscriptiontempID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptiontempID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptiontempID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectInscriptiontempApi.InscriptiontempGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InscriptiontempGetAttachmentsV1Response>("/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptiontempGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

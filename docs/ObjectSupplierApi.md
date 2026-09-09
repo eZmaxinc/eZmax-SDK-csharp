@@ -4,8 +4,202 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
+| [**SupplierBatchDownloadV1**](ObjectSupplierApi.md#supplierbatchdownloadv1) | **POST** /1/object/supplier/{pkiSupplierID}/batchDownload | Download multiples attachments from a Supplier |
+| [**SupplierGetAttachmentsV1**](ObjectSupplierApi.md#suppliergetattachmentsv1) | **GET** /1/object/supplier/{pkiSupplierID}/getAttachments | Retrieve Supplier&#39;s attachments |
 | [**SupplierGetListV1**](ObjectSupplierApi.md#suppliergetlistv1) | **GET** /1/object/supplier/getList | Retrieve Supplier list |
 | [**SupplierImportIntoEDMV1**](ObjectSupplierApi.md#supplierimportintoedmv1) | **POST** /1/object/supplier/{pkiSupplierID}/importIntoEDM | Import attachments into the Supplier |
+
+<a id="supplierbatchdownloadv1"></a>
+# **SupplierBatchDownloadV1**
+> System.IO.Stream SupplierBatchDownloadV1 (int pkiSupplierID, SupplierBatchDownloadV1Request supplierBatchDownloadV1Request)
+
+Download multiples attachments from a Supplier
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class SupplierBatchDownloadV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectSupplierApi(config);
+            var pkiSupplierID = 56;  // int | 
+            var supplierBatchDownloadV1Request = new SupplierBatchDownloadV1Request(); // SupplierBatchDownloadV1Request | 
+
+            try
+            {
+                // Download multiples attachments from a Supplier
+                System.IO.Stream result = apiInstance.SupplierBatchDownloadV1(pkiSupplierID, supplierBatchDownloadV1Request);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectSupplierApi.SupplierBatchDownloadV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the SupplierBatchDownloadV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Download multiples attachments from a Supplier
+    ApiResponse<System.IO.Stream> response = apiInstance.SupplierBatchDownloadV1WithHttpInfo(pkiSupplierID, supplierBatchDownloadV1Request);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectSupplierApi.SupplierBatchDownloadV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiSupplierID** | **int** |  |  |
+| **supplierBatchDownloadV1Request** | [**SupplierBatchDownloadV1Request**](SupplierBatchDownloadV1Request.md) |  |  |
+
+### Return type
+
+**System.IO.Stream**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="suppliergetattachmentsv1"></a>
+# **SupplierGetAttachmentsV1**
+> SupplierGetAttachmentsV1Response SupplierGetAttachmentsV1 (int pkiSupplierID)
+
+Retrieve Supplier's attachments
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class SupplierGetAttachmentsV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectSupplierApi(config);
+            var pkiSupplierID = 56;  // int | 
+
+            try
+            {
+                // Retrieve Supplier's attachments
+                SupplierGetAttachmentsV1Response result = apiInstance.SupplierGetAttachmentsV1(pkiSupplierID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectSupplierApi.SupplierGetAttachmentsV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the SupplierGetAttachmentsV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Supplier's attachments
+    ApiResponse<SupplierGetAttachmentsV1Response> response = apiInstance.SupplierGetAttachmentsV1WithHttpInfo(pkiSupplierID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectSupplierApi.SupplierGetAttachmentsV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiSupplierID** | **int** |  |  |
+
+### Return type
+
+[**SupplierGetAttachmentsV1Response**](SupplierGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a id="suppliergetlistv1"></a>
 # **SupplierGetListV1**
@@ -203,7 +397,7 @@ catch (ApiException e)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

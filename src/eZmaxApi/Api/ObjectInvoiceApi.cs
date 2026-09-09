@@ -28,6 +28,28 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from an Invoice
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream InvoiceBatchDownloadV1(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> InvoiceBatchDownloadV1WithHttpInfo(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Invoice&#39;s Attachments
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -158,6 +180,33 @@ namespace eZmaxApi.Api
     public interface IObjectInvoiceApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from an Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> InvoiceBatchDownloadV1Async(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> InvoiceBatchDownloadV1WithHttpInfoAsync(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Invoice&#39;s Attachments
         /// </summary>
@@ -428,6 +477,173 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream InvoiceBatchDownloadV1(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = InvoiceBatchDownloadV1WithHttpInfo(pkiInvoiceID, invoiceBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> InvoiceBatchDownloadV1WithHttpInfo(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'invoiceBatchDownloadV1Request' is set
+            if (invoiceBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'invoiceBatchDownloadV1Request' when calling ObjectInvoiceApi->InvoiceBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+            localVarRequestOptions.Data = invoiceBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/invoice/{pkiInvoiceID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> InvoiceBatchDownloadV1Async(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await InvoiceBatchDownloadV1WithHttpInfoAsync(pkiInvoiceID, invoiceBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Invoice 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInvoiceID"></param>
+        /// <param name="invoiceBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> InvoiceBatchDownloadV1WithHttpInfoAsync(int pkiInvoiceID, InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'invoiceBatchDownloadV1Request' is set
+            if (invoiceBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'invoiceBatchDownloadV1Request' when calling ObjectInvoiceApi->InvoiceBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInvoiceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInvoiceID)); // path parameter
+            localVarRequestOptions.Data = invoiceBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/invoice/{pkiInvoiceID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

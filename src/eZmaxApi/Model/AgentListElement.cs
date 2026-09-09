@@ -61,8 +61,9 @@ namespace eZmaxApi.Model
         /// <param name="iAgentLongdistancecode">The longdistancecode of the Agent (required).</param>
         /// <param name="iAgentBannernumber">The bannernumber of the Agent (required).</param>
         /// <param name="sAgentRealestateassociationlicense">The realestateassociationlicense of the Agent (required).</param>
-        /// <param name="dtAgentHiredate">The hiredate of the Agent.</param>
-        /// <param name="dtAgentLeavedate">The leavedate of the Agent.</param>
+        /// <param name="dtAgentPermitexpiration">The expiration date of permit of the Agent.</param>
+        /// <param name="dtAgentHiredate">The hire date of the Agent.</param>
+        /// <param name="dtAgentLeavedate">The leave date of the Agent.</param>
         /// <param name="dtAgentContractdate">The contract date of the Agent.</param>
         /// <param name="dtAgentTransferdate">The transfer date of the Agent.</param>
         /// <param name="dtAgentSenioritydate">The seniority date of the Agent.</param>
@@ -90,7 +91,7 @@ namespace eZmaxApi.Model
         /// <param name="sProvinceNameX">The name of the Province in the language of the requester.</param>
         /// <param name="fkiCountryID">The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|.</param>
         /// <param name="sCountryNameX">The name of the Country in the language of the requester.</param>
-        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, string dtAgentContractdate = default, string dtAgentTransferdate = default, string dtAgentSenioritydate = default, string dtAgentSickleavestart = default, string dtAgentSickleaveend = default, FieldEAgentSchedule eAgentSchedule = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default)
+        public AgentListElement(int pkiAgentID = default, int fkiAgenttypeID = default, string sAgenttypeNameX = default, int fkiAgentincorporationID = default, string sAgentincorporationName = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiLanguageID = default, string sLanguageNameX = default, string sRealestateboardnumberNumber = default, string sAgentCode = default, int iAgentPhotocopiercode = default, int iAgentLongdistancecode = default, int iAgentBannernumber = default, string sAgentRealestateassociationlicense = default, string dtAgentPermitexpiration = default, string dtAgentHiredate = default, string dtAgentLeavedate = default, string dtAgentContractdate = default, string dtAgentTransferdate = default, string dtAgentSenioritydate = default, string dtAgentSickleavestart = default, string dtAgentSickleaveend = default, FieldEAgentSchedule eAgentSchedule = default, bool bAgentTranquillit = default, bool bAgentResidentiallicense = default, bool bAgentCommerciallicense = default, bool bAgentMortgagelicense = default, bool bAgentPaidbyofficetranquillit = default, string dtAgentFintraccertification = default, bool bAgentIsactive = default, string sContactFirstname = default, string sContactLastname = default, string dtContactBirthdate = default, string sEmailAddress = default, string sPhoneE164 = default, string sAddressCivic = default, string sAddressStreet = default, string sAddressSuite = default, string sAddressCity = default, string sAddressZip = default, int fkiProvinceID = default, string sProvinceNameX = default, int fkiCountryID = default, string sCountryNameX = default)
         {
             this.PkiAgentID = pkiAgentID;
             this.FkiAgenttypeID = fkiAgenttypeID;
@@ -151,6 +152,7 @@ namespace eZmaxApi.Model
             this.FkiAgentincorporationID = fkiAgentincorporationID;
             this.SAgentincorporationName = sAgentincorporationName;
             this.SRealestateboardnumberNumber = sRealestateboardnumberNumber;
+            this.DtAgentPermitexpiration = dtAgentPermitexpiration;
             this.DtAgentHiredate = dtAgentHiredate;
             this.DtAgentLeavedate = dtAgentLeavedate;
             this.DtAgentContractdate = dtAgentContractdate;
@@ -324,9 +326,19 @@ namespace eZmaxApi.Model
         public string SAgentRealestateassociationlicense { get; set; }
 
         /// <summary>
-        /// The hiredate of the Agent
+        /// The expiration date of permit of the Agent
         /// </summary>
-        /// <value>The hiredate of the Agent</value>
+        /// <value>The expiration date of permit of the Agent</value>
+        /*
+        <example>2020-12-31</example>
+        */
+        [DataMember(Name = "dtAgentPermitexpiration", EmitDefaultValue = false)]
+        public string DtAgentPermitexpiration { get; set; }
+
+        /// <summary>
+        /// The hire date of the Agent
+        /// </summary>
+        /// <value>The hire date of the Agent</value>
         /*
         <example>2020-12-31</example>
         */
@@ -334,9 +346,9 @@ namespace eZmaxApi.Model
         public string DtAgentHiredate { get; set; }
 
         /// <summary>
-        /// The leavedate of the Agent
+        /// The leave date of the Agent
         /// </summary>
-        /// <value>The leavedate of the Agent</value>
+        /// <value>The leave date of the Agent</value>
         /*
         <example>2020-12-31</example>
         */
@@ -626,6 +638,7 @@ namespace eZmaxApi.Model
             sb.Append("  IAgentLongdistancecode: ").Append(IAgentLongdistancecode).Append("\n");
             sb.Append("  IAgentBannernumber: ").Append(IAgentBannernumber).Append("\n");
             sb.Append("  SAgentRealestateassociationlicense: ").Append(SAgentRealestateassociationlicense).Append("\n");
+            sb.Append("  DtAgentPermitexpiration: ").Append(DtAgentPermitexpiration).Append("\n");
             sb.Append("  DtAgentHiredate: ").Append(DtAgentHiredate).Append("\n");
             sb.Append("  DtAgentLeavedate: ").Append(DtAgentLeavedate).Append("\n");
             sb.Append("  DtAgentContractdate: ").Append(DtAgentContractdate).Append("\n");
@@ -795,6 +808,15 @@ namespace eZmaxApi.Model
                 if (!regexSAgentRealestateassociationlicense.Match(this.SAgentRealestateassociationlicense).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAgentRealestateassociationlicense, must match a pattern of " + regexSAgentRealestateassociationlicense, new [] { "SAgentRealestateassociationlicense" });
+                }
+            }
+
+            if (this.DtAgentPermitexpiration != null) {
+                // DtAgentPermitexpiration (string) pattern
+                Regex regexDtAgentPermitexpiration = new Regex(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$", RegexOptions.CultureInvariant);
+                if (!regexDtAgentPermitexpiration.Match(this.DtAgentPermitexpiration).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DtAgentPermitexpiration, must match a pattern of " + regexDtAgentPermitexpiration, new [] { "DtAgentPermitexpiration" });
                 }
             }
 

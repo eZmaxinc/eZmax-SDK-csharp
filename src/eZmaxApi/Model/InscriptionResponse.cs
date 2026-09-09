@@ -1151,7 +1151,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionCadastre != null) {
                 // TInscriptionCadastre (string) pattern
-                Regex regexTInscriptionCadastre = new Regex(@"^(\n|.){0,65535}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionCadastre = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionCadastre.Match(this.TInscriptionCadastre).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionCadastre, must match a pattern of " + regexTInscriptionCadastre, new [] { "TInscriptionCadastre" });

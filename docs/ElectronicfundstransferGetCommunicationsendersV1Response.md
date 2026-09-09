@@ -1,5 +1,5 @@
 # eZmaxApi.Model.ElectronicfundstransferGetCommunicationsendersV1Response
-Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients
+Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders
 
 ## Properties
 

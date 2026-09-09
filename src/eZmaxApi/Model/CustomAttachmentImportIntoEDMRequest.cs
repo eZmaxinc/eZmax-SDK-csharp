@@ -152,7 +152,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Base64 encoded binary content of the attachment.</value>
         /*
-        <example>[B@30b34287</example>
+        <example>[B@3b152928</example>
         */
         [DataMember(Name = "sAttachmentBase64", EmitDefaultValue = false)]
         public byte[] SAttachmentBase64 { get; set; }
@@ -286,7 +286,7 @@ namespace eZmaxApi.Model
 
             if (this.SAttachmentName != null) {
                 // SAttachmentName (string) pattern
-                Regex regexSAttachmentName = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                Regex regexSAttachmentName = new Regex(@"^(?!\.{1,2}$)(?!.*[ .]$)(?!(?:CON|PRN|AUX|NUL|COM(?:[1-9]|[¹²³])|LPT(?:[1-9]|[¹²³]))(?:\.|$))[^\x00-\x1F<>:""/\\\\|?*]{1,75}$", RegexOptions.CultureInvariant);
                 if (!regexSAttachmentName.Match(this.SAttachmentName).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentName, must match a pattern of " + regexSAttachmentName, new [] { "SAttachmentName" });
@@ -295,7 +295,7 @@ namespace eZmaxApi.Model
 
             if (this.SAttachmentCategory != null) {
                 // SAttachmentCategory (string) pattern
-                Regex regexSAttachmentCategory = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                Regex regexSAttachmentCategory = new Regex(@"^(?!\.{1,2}$)(?!.*[ .]$)(?!(?:CON|PRN|AUX|NUL|COM(?:[1-9]|[¹²³])|LPT(?:[1-9]|[¹²³]))(?:\.|$))[^\x00-\x1F<>:""/\\\\|?*]{0,75}$", RegexOptions.CultureInvariant);
                 if (!regexSAttachmentCategory.Match(this.SAttachmentCategory).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentCategory, must match a pattern of " + regexSAttachmentCategory, new [] { "SAttachmentCategory" });
@@ -310,7 +310,7 @@ namespace eZmaxApi.Model
 
             if (this.SAttachmentMD5 != null) {
                 // SAttachmentMD5 (string) pattern
-                Regex regexSAttachmentMD5 = new Regex(@"^.{32}$", RegexOptions.CultureInvariant);
+                Regex regexSAttachmentMD5 = new Regex(@"^[a-f0-9]{32}$", RegexOptions.CultureInvariant);
                 if (!regexSAttachmentMD5.Match(this.SAttachmentMD5).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentMD5, must match a pattern of " + regexSAttachmentMD5, new [] { "SAttachmentMD5" });

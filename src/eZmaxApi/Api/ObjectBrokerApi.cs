@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Broker
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream BrokerBatchDownloadV1(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Broker
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> BrokerBatchDownloadV1WithHttpInfo(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerGetAttachmentsV1Response</returns>
+        BrokerGetAttachmentsV1Response BrokerGetAttachmentsV1(int pkiBrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerGetAttachmentsV1Response</returns>
+        ApiResponse<BrokerGetAttachmentsV1Response> BrokerGetAttachmentsV1WithHttpInfo(int pkiBrokerID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Brokers and IDs
         /// </summary>
         /// <remarks>
@@ -115,6 +157,58 @@ namespace eZmaxApi.Api
     public interface IObjectBrokerApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Broker
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> BrokerBatchDownloadV1Async(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Broker
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> BrokerBatchDownloadV1WithHttpInfoAsync(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<BrokerGetAttachmentsV1Response> BrokerGetAttachmentsV1Async(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrokerGetAttachmentsV1Response>> BrokerGetAttachmentsV1WithHttpInfoAsync(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Brokers and IDs
         /// </summary>
@@ -324,6 +418,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Broker 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream BrokerBatchDownloadV1(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = BrokerBatchDownloadV1WithHttpInfo(pkiBrokerID, brokerBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Broker 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> BrokerBatchDownloadV1WithHttpInfo(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'brokerBatchDownloadV1Request' is set
+            if (brokerBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brokerBatchDownloadV1Request' when calling ObjectBrokerApi->BrokerBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+            localVarRequestOptions.Data = brokerBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/broker/{pkiBrokerID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Broker 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> BrokerBatchDownloadV1Async(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await BrokerBatchDownloadV1WithHttpInfoAsync(pkiBrokerID, brokerBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Broker 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="brokerBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> BrokerBatchDownloadV1WithHttpInfoAsync(int pkiBrokerID, BrokerBatchDownloadV1Request brokerBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'brokerBatchDownloadV1Request' is set
+            if (brokerBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'brokerBatchDownloadV1Request' when calling ObjectBrokerApi->BrokerBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+            localVarRequestOptions.Data = brokerBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/broker/{pkiBrokerID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerGetAttachmentsV1Response</returns>
+        public BrokerGetAttachmentsV1Response BrokerGetAttachmentsV1(int pkiBrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerGetAttachmentsV1Response> localVarResponse = BrokerGetAttachmentsV1WithHttpInfo(pkiBrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrokerGetAttachmentsV1Response> BrokerGetAttachmentsV1WithHttpInfo(int pkiBrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BrokerGetAttachmentsV1Response>("/1/object/broker/{pkiBrokerID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<BrokerGetAttachmentsV1Response> BrokerGetAttachmentsV1Async(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerGetAttachmentsV1Response> localVarResponse = await BrokerGetAttachmentsV1WithHttpInfoAsync(pkiBrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Broker&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrokerGetAttachmentsV1Response>> BrokerGetAttachmentsV1WithHttpInfoAsync(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BrokerGetAttachmentsV1Response>("/1/object/broker/{pkiBrokerID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

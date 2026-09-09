@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Bankaccount
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream BankaccountBatchDownloadV1(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> BankaccountBatchDownloadV1WithHttpInfo(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountGetAttachmentsV1Response</returns>
+        BankaccountGetAttachmentsV1Response BankaccountGetAttachmentsV1(int pkiBankaccountID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountGetAttachmentsV1Response</returns>
+        ApiResponse<BankaccountGetAttachmentsV1Response> BankaccountGetAttachmentsV1WithHttpInfo(int pkiBankaccountID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Bankaccounts and IDs
         /// </summary>
         /// <remarks>
@@ -56,6 +98,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BankaccountGetAutocompleteV2Response</returns>
         ApiResponse<BankaccountGetAutocompleteV2Response> BankaccountGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
+        /// <summary>
+        /// Import attachments into the Bankaccount
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountImportIntoEDMV1Response</returns>
+        BankaccountImportIntoEDMV1Response BankaccountImportIntoEDMV1(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Import attachments into the Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountImportIntoEDMV1Response</returns>
+        ApiResponse<BankaccountImportIntoEDMV1Response> BankaccountImportIntoEDMV1WithHttpInfo(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -65,6 +129,58 @@ namespace eZmaxApi.Api
     public interface IObjectBankaccountApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> BankaccountBatchDownloadV1Async(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> BankaccountBatchDownloadV1WithHttpInfoAsync(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<BankaccountGetAttachmentsV1Response> BankaccountGetAttachmentsV1Async(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BankaccountGetAttachmentsV1Response>> BankaccountGetAttachmentsV1WithHttpInfoAsync(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Bankaccounts and IDs
         /// </summary>
@@ -96,6 +212,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BankaccountGetAutocompleteV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BankaccountGetAutocompleteV2Response>> BankaccountGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Import attachments into the Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountImportIntoEDMV1Response</returns>
+        System.Threading.Tasks.Task<BankaccountImportIntoEDMV1Response> BankaccountImportIntoEDMV1Async(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Import attachments into the Bankaccount
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountImportIntoEDMV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BankaccountImportIntoEDMV1Response>> BankaccountImportIntoEDMV1WithHttpInfoAsync(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -214,6 +357,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream BankaccountBatchDownloadV1(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = BankaccountBatchDownloadV1WithHttpInfo(pkiBankaccountID, bankaccountBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> BankaccountBatchDownloadV1WithHttpInfo(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'bankaccountBatchDownloadV1Request' is set
+            if (bankaccountBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'bankaccountBatchDownloadV1Request' when calling ObjectBankaccountApi->BankaccountBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = bankaccountBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/bankaccount/{pkiBankaccountID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> BankaccountBatchDownloadV1Async(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await BankaccountBatchDownloadV1WithHttpInfoAsync(pkiBankaccountID, bankaccountBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> BankaccountBatchDownloadV1WithHttpInfoAsync(int pkiBankaccountID, BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'bankaccountBatchDownloadV1Request' is set
+            if (bankaccountBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'bankaccountBatchDownloadV1Request' when calling ObjectBankaccountApi->BankaccountBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = bankaccountBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/bankaccount/{pkiBankaccountID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountGetAttachmentsV1Response</returns>
+        public BankaccountGetAttachmentsV1Response BankaccountGetAttachmentsV1(int pkiBankaccountID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountGetAttachmentsV1Response> localVarResponse = BankaccountGetAttachmentsV1WithHttpInfo(pkiBankaccountID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BankaccountGetAttachmentsV1Response> BankaccountGetAttachmentsV1WithHttpInfo(int pkiBankaccountID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BankaccountGetAttachmentsV1Response>("/1/object/bankaccount/{pkiBankaccountID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<BankaccountGetAttachmentsV1Response> BankaccountGetAttachmentsV1Async(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountGetAttachmentsV1Response> localVarResponse = await BankaccountGetAttachmentsV1WithHttpInfoAsync(pkiBankaccountID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Bankaccount&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BankaccountGetAttachmentsV1Response>> BankaccountGetAttachmentsV1WithHttpInfoAsync(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BankaccountGetAttachmentsV1Response>("/1/object/bankaccount/{pkiBankaccountID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -398,6 +851,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BankaccountGetAutocompleteV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Import attachments into the Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountImportIntoEDMV1Response</returns>
+        public BankaccountImportIntoEDMV1Response BankaccountImportIntoEDMV1(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountImportIntoEDMV1Response> localVarResponse = BankaccountImportIntoEDMV1WithHttpInfo(pkiBankaccountID, bankaccountImportIntoEDMV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Import attachments into the Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountImportIntoEDMV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BankaccountImportIntoEDMV1Response> BankaccountImportIntoEDMV1WithHttpInfo(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'bankaccountImportIntoEDMV1Request' is set
+            if (bankaccountImportIntoEDMV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'bankaccountImportIntoEDMV1Request' when calling ObjectBankaccountApi->BankaccountImportIntoEDMV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = bankaccountImportIntoEDMV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountImportIntoEDMV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<BankaccountImportIntoEDMV1Response>("/1/object/bankaccount/{pkiBankaccountID}/importIntoEDM", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Import attachments into the Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountImportIntoEDMV1Response</returns>
+        public async System.Threading.Tasks.Task<BankaccountImportIntoEDMV1Response> BankaccountImportIntoEDMV1Async(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountImportIntoEDMV1Response> localVarResponse = await BankaccountImportIntoEDMV1WithHttpInfoAsync(pkiBankaccountID, bankaccountImportIntoEDMV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Import attachments into the Bankaccount 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="bankaccountImportIntoEDMV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountImportIntoEDMV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BankaccountImportIntoEDMV1Response>> BankaccountImportIntoEDMV1WithHttpInfoAsync(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'bankaccountImportIntoEDMV1Request' is set
+            if (bankaccountImportIntoEDMV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'bankaccountImportIntoEDMV1Request' when calling ObjectBankaccountApi->BankaccountImportIntoEDMV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = bankaccountImportIntoEDMV1Request;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountImportIntoEDMV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<BankaccountImportIntoEDMV1Response>("/1/object/bankaccount/{pkiBankaccountID}/importIntoEDM", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountImportIntoEDMV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

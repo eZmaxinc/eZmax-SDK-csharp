@@ -6,6 +6,8 @@ A User List Element
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiUserID** | **int** | The unique ID of the User | 
+**FkiAgentID** | **int** | The unique ID of the Agent. | [optional] 
+**FkiBrokerID** | **int** | The unique ID of the Broker. | [optional] 
 **SUserFirstname** | **string** | The first name of the user | 
 **SUserLastname** | **string** | The last name of the user | 
 **SUserLoginname** | **string** | The login name of the User. | 

@@ -60,7 +60,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Variableexpense in the language of the requester</value>
         /*
-        <example>Équipements de bureau</example>
+        <example>Ã‰quipements de bureau</example>
         */
         [DataMember(Name = "sVariableexpenseDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SVariableexpenseDescriptionX { get; set; }

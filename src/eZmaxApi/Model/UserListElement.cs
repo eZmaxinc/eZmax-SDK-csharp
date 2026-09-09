@@ -59,6 +59,8 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="UserListElement" /> class.
         /// </summary>
         /// <param name="pkiUserID">The unique ID of the User (required).</param>
+        /// <param name="fkiAgentID">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerID">The unique ID of the Broker..</param>
         /// <param name="sUserFirstname">The first name of the user (required).</param>
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserLoginname">The login name of the User. (required).</param>
@@ -70,7 +72,7 @@ namespace eZmaxApi.Model
         /// <param name="dtUserEzsignprepaidexpiration">The eZsign prepaid expiration date.</param>
         /// <param name="sEmailAddress">The email address. (required).</param>
         /// <param name="sUserJobtitle">The job title of the user.</param>
-        public UserListElement(int pkiUserID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, bool bUserIsactive = default, bool bUserSuspended = default, FieldEUserType eUserType = default, FieldEUserOrigin eUserOrigin = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserEzsignprepaidexpiration = default, string sEmailAddress = default, string sUserJobtitle = default)
+        public UserListElement(int pkiUserID = default, int fkiAgentID = default, int fkiBrokerID = default, string sUserFirstname = default, string sUserLastname = default, string sUserLoginname = default, bool bUserIsactive = default, bool bUserSuspended = default, FieldEUserType eUserType = default, FieldEUserOrigin eUserOrigin = default, FieldEUserEzsignaccess eUserEzsignaccess = default, string dtUserEzsignprepaidexpiration = default, string sEmailAddress = default, string sUserJobtitle = default)
         {
             this.PkiUserID = pkiUserID;
             // to ensure "sUserFirstname" is required (not null)
@@ -101,6 +103,8 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sEmailAddress is a required property for UserListElement and cannot be null");
             }
             this.SEmailAddress = sEmailAddress;
+            this.FkiAgentID = fkiAgentID;
+            this.FkiBrokerID = fkiBrokerID;
             this.BUserSuspended = bUserSuspended;
             this.DtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
             this.SUserJobtitle = sUserJobtitle;
@@ -115,6 +119,26 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "pkiUserID", IsRequired = true, EmitDefaultValue = true)]
         public int PkiUserID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Agent.
+        /// </summary>
+        /// <value>The unique ID of the Agent.</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "fkiAgentID", EmitDefaultValue = false)]
+        public int FkiAgentID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Broker.
+        /// </summary>
+        /// <value>The unique ID of the Broker.</value>
+        /*
+        <example>26</example>
+        */
+        [DataMember(Name = "fkiBrokerID", EmitDefaultValue = false)]
+        public int FkiBrokerID { get; set; }
 
         /// <summary>
         /// The first name of the user
@@ -205,6 +229,8 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class UserListElement {\n");
             sb.Append("  PkiUserID: ").Append(PkiUserID).Append("\n");
+            sb.Append("  FkiAgentID: ").Append(FkiAgentID).Append("\n");
+            sb.Append("  FkiBrokerID: ").Append(FkiBrokerID).Append("\n");
             sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
@@ -240,6 +266,18 @@ namespace eZmaxApi.Model
             if (this.PkiUserID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+            }
+
+            // FkiAgentID (int) minimum
+            if (this.FkiAgentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+            }
+
+            // FkiBrokerID (int) minimum
+            if (this.FkiBrokerID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             if (this.SUserLoginname != null) {

@@ -526,7 +526,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The amount retribution for the seller only of the Inscriptionnotauthenticated</value>
         /*
-        <example>1500.14</example>
+        <example>500.140</example>
         */
         [DataMember(Name = "dInscriptionnotauthenticatedSelleronlyretribution", IsRequired = true, EmitDefaultValue = true)]
         public string DInscriptionnotauthenticatedSelleronlyretribution { get; set; }

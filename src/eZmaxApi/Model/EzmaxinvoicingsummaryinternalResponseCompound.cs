@@ -99,7 +99,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in the language of the requester</value>
         /*
-        <example>Défaut</example>
+        <example>DÃ©faut</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxinvoicingsummaryinternalDescriptionX { get; set; }

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients
+    /// Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders
     /// </summary>
     [DataContract(Name = "electronicfundstransfer-getCommunicationsenders-v1-Response")]
     public partial class ElectronicfundstransferGetCommunicationsendersV1Response : IValidatableObject

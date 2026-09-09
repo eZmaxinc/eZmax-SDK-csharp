@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Userlogintype in French</value>
         /*
-        <example>Courriel et téléphone ou SMS</example>
+        <example>Courriel et tÃ©lÃ©phone ou SMS</example>
         */
         [DataMember(Name = "sUserlogintypeDescription1", EmitDefaultValue = false)]
         public string SUserlogintypeDescription1 { get; set; }

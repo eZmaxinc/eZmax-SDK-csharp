@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Notificationsubsection in French</value>
         /*
-        <example>Signature électronique</example>
+        <example>Signature Ã©lectronique</example>
         */
         [DataMember(Name = "sNotificationsubsectionName1", EmitDefaultValue = false)]
         public string SNotificationsubsectionName1 { get; set; }

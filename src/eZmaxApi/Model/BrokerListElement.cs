@@ -186,7 +186,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Brokertype in the language of the requester</value>
         /*
-        <example>Agence immobilière</example>
+        <example>Agence immobiliÃ¨re</example>
         */
         [DataMember(Name = "sBrokertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SBrokertypeNameX { get; set; }

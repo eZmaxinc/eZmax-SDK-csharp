@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream ElectronicfundstransferBatchDownloadV1(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> ElectronicfundstransferBatchDownloadV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferGetAttachmentsV1Response</returns>
+        ElectronicfundstransferGetAttachmentsV1Response ElectronicfundstransferGetAttachmentsV1(int pkiElectronicfundstransferID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferGetAttachmentsV1Response</returns>
+        ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> ElectronicfundstransferGetAttachmentsV1WithHttpInfo(int pkiElectronicfundstransferID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication count
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -138,6 +180,58 @@ namespace eZmaxApi.Api
     public interface IObjectElectronicfundstransferApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> ElectronicfundstransferBatchDownloadV1Async(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> ElectronicfundstransferBatchDownloadV1WithHttpInfoAsync(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<ElectronicfundstransferGetAttachmentsV1Response> ElectronicfundstransferGetAttachmentsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetAttachmentsV1Response>> ElectronicfundstransferGetAttachmentsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Communication count
         /// </summary>
@@ -383,6 +477,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream ElectronicfundstransferBatchDownloadV1(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = ElectronicfundstransferBatchDownloadV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> ElectronicfundstransferBatchDownloadV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'electronicfundstransferBatchDownloadV1Request' is set
+            if (electronicfundstransferBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'electronicfundstransferBatchDownloadV1Request' when calling ObjectElectronicfundstransferApi->ElectronicfundstransferBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+            localVarRequestOptions.Data = electronicfundstransferBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> ElectronicfundstransferBatchDownloadV1Async(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await ElectronicfundstransferBatchDownloadV1WithHttpInfoAsync(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from an Electronicfundstransfer 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="electronicfundstransferBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> ElectronicfundstransferBatchDownloadV1WithHttpInfoAsync(int pkiElectronicfundstransferID, ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'electronicfundstransferBatchDownloadV1Request' is set
+            if (electronicfundstransferBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'electronicfundstransferBatchDownloadV1Request' when calling ObjectElectronicfundstransferApi->ElectronicfundstransferBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+            localVarRequestOptions.Data = electronicfundstransferBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferGetAttachmentsV1Response</returns>
+        public ElectronicfundstransferGetAttachmentsV1Response ElectronicfundstransferGetAttachmentsV1(int pkiElectronicfundstransferID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> localVarResponse = ElectronicfundstransferGetAttachmentsV1WithHttpInfo(pkiElectronicfundstransferID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> ElectronicfundstransferGetAttachmentsV1WithHttpInfo(int pkiElectronicfundstransferID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ElectronicfundstransferGetAttachmentsV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetAttachmentsV1Response> ElectronicfundstransferGetAttachmentsV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> localVarResponse = await ElectronicfundstransferGetAttachmentsV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Electronicfundstransfer&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetAttachmentsV1Response>> ElectronicfundstransferGetAttachmentsV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ElectronicfundstransferGetAttachmentsV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>

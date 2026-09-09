@@ -182,9 +182,9 @@ namespace eZmaxApi.Model
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateelementdependencyID (int) maximum
-            if (this.PkiEzsigntemplateelementdependencyID > (int)65535)
+            if (this.PkiEzsigntemplateelementdependencyID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplateelementdependencyID" });
+                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigntemplateelementdependencyID" });
             }
 
             // PkiEzsigntemplateelementdependencyID (int) minimum

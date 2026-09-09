@@ -40,16 +40,22 @@ namespace eZmaxApi.Model
         CC = 1,
 
         /// <summary>
+        /// Enum CCDeleted for value: CCDeleted
+        /// </summary>
+        [EnumMember(Value = "CCDeleted")]
+        CCDeleted = 2,
+
+        /// <summary>
         /// Enum Signer for value: Signer
         /// </summary>
         [EnumMember(Value = "Signer")]
-        Signer = 2,
+        Signer = 3,
 
         /// <summary>
         /// Enum SignerAndCC for value: SignerAndCC
         /// </summary>
         [EnumMember(Value = "SignerAndCC")]
-        SignerAndCC = 3
+        SignerAndCC = 4
     }
 
 }

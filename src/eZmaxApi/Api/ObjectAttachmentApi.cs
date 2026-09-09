@@ -73,6 +73,31 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttachmentGetAttachmentlogsV1Response</returns>
         ApiResponse<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
+        /// <summary>
+        /// Rename an Attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the attachment&#39;s file name and category.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentRenameV1Response</returns>
+        AttachmentRenameV1Response AttachmentRenameV1(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Rename an Attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the attachment&#39;s file name and category.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentRenameV1Response</returns>
+        ApiResponse<AttachmentRenameV1Response> AttachmentRenameV1WithHttpInfo(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -132,6 +157,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Rename an Attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the attachment&#39;s file name and category.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentRenameV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentRenameV1Response> AttachmentRenameV1Async(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Rename an Attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the attachment&#39;s file name and category.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentRenameV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentRenameV1Response>> AttachmentRenameV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -537,6 +589,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentGetAttachmentlogsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentRenameV1Response</returns>
+        public AttachmentRenameV1Response AttachmentRenameV1(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentRenameV1Response> localVarResponse = AttachmentRenameV1WithHttpInfo(pkiAttachmentID, attachmentRenameV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentRenameV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentRenameV1Response> AttachmentRenameV1WithHttpInfo(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'attachmentRenameV1Request' is set
+            if (attachmentRenameV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentRenameV1Request' when calling ObjectAttachmentApi->AttachmentRenameV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentRenameV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentRenameV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttachmentRenameV1Response>("/1/object/attachment/{pkiAttachmentID}/rename", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentRenameV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentRenameV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentRenameV1Response> AttachmentRenameV1Async(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentRenameV1Response> localVarResponse = await AttachmentRenameV1WithHttpInfoAsync(pkiAttachmentID, attachmentRenameV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRenameV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentRenameV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentRenameV1Response>> AttachmentRenameV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'attachmentRenameV1Request' is set
+            if (attachmentRenameV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentRenameV1Request' when calling ObjectAttachmentApi->AttachmentRenameV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentRenameV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentRenameV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentRenameV1Response>("/1/object/attachment/{pkiAttachmentID}/rename", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentRenameV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -56,12 +56,12 @@ namespace eZmaxApi.Model
         /// <param name="fkiInscriptiontypeID">The unique ID of the Inscriptiontype (required).</param>
         /// <param name="sInscriptiontypeNameX">The name of the Inscriptiontype in the language of the requester (required).</param>
         /// <param name="eBuyercontractStep">eBuyercontractStep (required).</param>
-        /// <param name="dBuyercontractMinimumprice">The minimumprice of the Buyercontract (required).</param>
-        /// <param name="dBuyercontractMaximumprice">The maximumprice of the Buyercontract (required).</param>
+        /// <param name="dBuyercontractMinimumprice">The minimum price of the Buyercontract (required).</param>
+        /// <param name="dBuyercontractMaximumprice">The maximum price of the Buyercontract (required).</param>
         /// <param name="eBuyercontractType">eBuyercontractType (required).</param>
         /// <param name="sBuyercontractContract">The number of the Buyercontract.</param>
         /// <param name="dtBuyercontractDate">The date of the Buyercontract (required).</param>
-        /// <param name="dtBuyercontractExpirationdate">The expirationdate of the Buyercontract.</param>
+        /// <param name="dtBuyercontractExpirationdate">The expiration date of the Buyercontract.</param>
         /// <param name="bBuyercontractIsactive">Whether the buyercontract is active or not (required).</param>
         /// <param name="sBuyercontractBrokers">The brokers&#39; name of the Buyercontract (required).</param>
         /// <param name="sBuyercontractBuyers">The buyers&#39; name of the Buyercontract (required).</param>
@@ -143,9 +143,9 @@ namespace eZmaxApi.Model
         public string SInscriptiontypeNameX { get; set; }
 
         /// <summary>
-        /// The minimumprice of the Buyercontract
+        /// The minimum price of the Buyercontract
         /// </summary>
-        /// <value>The minimumprice of the Buyercontract</value>
+        /// <value>The minimum price of the Buyercontract</value>
         /*
         <example>200000.00</example>
         */
@@ -153,9 +153,9 @@ namespace eZmaxApi.Model
         public string DBuyercontractMinimumprice { get; set; }
 
         /// <summary>
-        /// The maximumprice of the Buyercontract
+        /// The maximum price of the Buyercontract
         /// </summary>
-        /// <value>The maximumprice of the Buyercontract</value>
+        /// <value>The maximum price of the Buyercontract</value>
         /*
         <example>250000.00</example>
         */
@@ -183,9 +183,9 @@ namespace eZmaxApi.Model
         public string DtBuyercontractDate { get; set; }
 
         /// <summary>
-        /// The expirationdate of the Buyercontract
+        /// The expiration date of the Buyercontract
         /// </summary>
-        /// <value>The expirationdate of the Buyercontract</value>
+        /// <value>The expiration date of the Buyercontract</value>
         /*
         <example>2020-12-31</example>
         */

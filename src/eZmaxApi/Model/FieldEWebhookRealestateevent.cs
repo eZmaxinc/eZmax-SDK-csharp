@@ -34,28 +34,40 @@ namespace eZmaxApi.Model
     public enum FieldEWebhookRealestateevent
     {
         /// <summary>
+        /// Enum BuyercontractCreated for value: BuyercontractCreated
+        /// </summary>
+        [EnumMember(Value = "BuyercontractCreated")]
+        BuyercontractCreated = 1,
+
+        /// <summary>
+        /// Enum BuyercontractModified for value: BuyercontractModified
+        /// </summary>
+        [EnumMember(Value = "BuyercontractModified")]
+        BuyercontractModified = 2,
+
+        /// <summary>
         /// Enum InscriptionCreated for value: InscriptionCreated
         /// </summary>
         [EnumMember(Value = "InscriptionCreated")]
-        InscriptionCreated = 1,
+        InscriptionCreated = 3,
 
         /// <summary>
         /// Enum InscriptionModified for value: InscriptionModified
         /// </summary>
         [EnumMember(Value = "InscriptionModified")]
-        InscriptionModified = 2,
+        InscriptionModified = 4,
 
         /// <summary>
         /// Enum InscriptionnotauthenticatedCreated for value: InscriptionnotauthenticatedCreated
         /// </summary>
         [EnumMember(Value = "InscriptionnotauthenticatedCreated")]
-        InscriptionnotauthenticatedCreated = 3,
+        InscriptionnotauthenticatedCreated = 5,
 
         /// <summary>
         /// Enum InscriptionnotauthenticatedModified for value: InscriptionnotauthenticatedModified
         /// </summary>
         [EnumMember(Value = "InscriptionnotauthenticatedModified")]
-        InscriptionnotauthenticatedModified = 4
+        InscriptionnotauthenticatedModified = 6
     }
 
 }

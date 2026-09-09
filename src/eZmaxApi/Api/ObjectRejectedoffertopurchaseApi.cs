@@ -28,6 +28,48 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream RejectedoffertopurchaseBatchDownloadV1(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> RejectedoffertopurchaseBatchDownloadV1WithHttpInfo(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        RejectedoffertopurchaseGetAttachmentsV1Response RejectedoffertopurchaseGetAttachmentsV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> RejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Communication count
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -166,6 +208,58 @@ namespace eZmaxApi.Api
     public interface IObjectRejectedoffertopurchaseApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> RejectedoffertopurchaseBatchDownloadV1Async(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> RejectedoffertopurchaseBatchDownloadV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        System.Threading.Tasks.Task<RejectedoffertopurchaseGetAttachmentsV1Response> RejectedoffertopurchaseGetAttachmentsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetAttachmentsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response>> RejectedoffertopurchaseGetAttachmentsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Communication count
         /// </summary>
@@ -444,6 +538,316 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream RejectedoffertopurchaseBatchDownloadV1(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = RejectedoffertopurchaseBatchDownloadV1WithHttpInfo(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public eZmaxApi.Client.ApiResponse<System.IO.Stream> RejectedoffertopurchaseBatchDownloadV1WithHttpInfo(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' is set
+            if (rejectedoffertopurchaseBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' when calling ObjectRejectedoffertopurchaseApi->RejectedoffertopurchaseBatchDownloadV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+            localVarRequestOptions.Data = rejectedoffertopurchaseBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<System.IO.Stream>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> RejectedoffertopurchaseBatchDownloadV1Async(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<System.IO.Stream> localVarResponse = await RejectedoffertopurchaseBatchDownloadV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download multiples attachments from a Rejectedoffertopurchase 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="rejectedoffertopurchaseBatchDownloadV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<System.IO.Stream>> RejectedoffertopurchaseBatchDownloadV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' is set
+            if (rejectedoffertopurchaseBatchDownloadV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' when calling ObjectRejectedoffertopurchaseApi->RejectedoffertopurchaseBatchDownloadV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/zip",
+                "text/xml",
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+            localVarRequestOptions.Data = rejectedoffertopurchaseBatchDownloadV1Request;
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseBatchDownloadV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<System.IO.Stream>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseBatchDownloadV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        public RejectedoffertopurchaseGetAttachmentsV1Response RejectedoffertopurchaseGetAttachmentsV1(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> localVarResponse = RejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> RejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(int pkiRejectedoffertopurchaseID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RejectedoffertopurchaseGetAttachmentsV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RejectedoffertopurchaseGetAttachmentsV1Response</returns>
+        public async System.Threading.Tasks.Task<RejectedoffertopurchaseGetAttachmentsV1Response> RejectedoffertopurchaseGetAttachmentsV1Async(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> localVarResponse = await RejectedoffertopurchaseGetAttachmentsV1WithHttpInfoAsync(pkiRejectedoffertopurchaseID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Rejectedoffertopurchase&#39;s attachments 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiRejectedoffertopurchaseID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RejectedoffertopurchaseGetAttachmentsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response>> RejectedoffertopurchaseGetAttachmentsV1WithHttpInfoAsync(int pkiRejectedoffertopurchaseID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiRejectedoffertopurchaseID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiRejectedoffertopurchaseID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetAttachmentsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RejectedoffertopurchaseGetAttachmentsV1Response>("/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RejectedoffertopurchaseGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
