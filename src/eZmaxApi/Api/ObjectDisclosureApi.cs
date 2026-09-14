@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DisclosureGetAttachmentsV1Response</returns>
         ApiResponse<DisclosureGetAttachmentsV1Response> DisclosureGetAttachmentsV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationCountV1Response</returns>
+        DisclosureGetCommunicationCountV1Response DisclosureGetCommunicationCountV1(int pkiDisclosureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationCountV1Response</returns>
+        ApiResponse<DisclosureGetCommunicationCountV1Response> DisclosureGetCommunicationCountV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationListV1Response</returns>
+        DisclosureGetCommunicationListV1Response DisclosureGetCommunicationListV1(int pkiDisclosureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationListV1Response</returns>
+        ApiResponse<DisclosureGetCommunicationListV1Response> DisclosureGetCommunicationListV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationrecipientsV1Response</returns>
+        DisclosureGetCommunicationrecipientsV1Response DisclosureGetCommunicationrecipientsV1(int pkiDisclosureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<DisclosureGetCommunicationrecipientsV1Response> DisclosureGetCommunicationrecipientsV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationsendersV1Response</returns>
+        DisclosureGetCommunicationsendersV1Response DisclosureGetCommunicationsendersV1(int pkiDisclosureID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationsendersV1Response</returns>
+        ApiResponse<DisclosureGetCommunicationsendersV1Response> DisclosureGetCommunicationsendersV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Disclosure
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DisclosureGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DisclosureGetAttachmentsV1Response>> DisclosureGetAttachmentsV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<DisclosureGetCommunicationCountV1Response> DisclosureGetCommunicationCountV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DisclosureGetCommunicationCountV1Response>> DisclosureGetCommunicationCountV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<DisclosureGetCommunicationListV1Response> DisclosureGetCommunicationListV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DisclosureGetCommunicationListV1Response>> DisclosureGetCommunicationListV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<DisclosureGetCommunicationrecipientsV1Response> DisclosureGetCommunicationrecipientsV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DisclosureGetCommunicationrecipientsV1Response>> DisclosureGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<DisclosureGetCommunicationsendersV1Response> DisclosureGetCommunicationsendersV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DisclosureGetCommunicationsendersV1Response>> DisclosureGetCommunicationsendersV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Disclosure
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DisclosureGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationCountV1Response</returns>
+        public DisclosureGetCommunicationCountV1Response DisclosureGetCommunicationCountV1(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationCountV1Response> localVarResponse = DisclosureGetCommunicationCountV1WithHttpInfo(pkiDisclosureID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationCountV1Response> DisclosureGetCommunicationCountV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DisclosureGetCommunicationCountV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<DisclosureGetCommunicationCountV1Response> DisclosureGetCommunicationCountV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationCountV1Response> localVarResponse = await DisclosureGetCommunicationCountV1WithHttpInfoAsync(pkiDisclosureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationCountV1Response>> DisclosureGetCommunicationCountV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DisclosureGetCommunicationCountV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationListV1Response</returns>
+        public DisclosureGetCommunicationListV1Response DisclosureGetCommunicationListV1(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationListV1Response> localVarResponse = DisclosureGetCommunicationListV1WithHttpInfo(pkiDisclosureID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationListV1Response> DisclosureGetCommunicationListV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DisclosureGetCommunicationListV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<DisclosureGetCommunicationListV1Response> DisclosureGetCommunicationListV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationListV1Response> localVarResponse = await DisclosureGetCommunicationListV1WithHttpInfoAsync(pkiDisclosureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationListV1Response>> DisclosureGetCommunicationListV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DisclosureGetCommunicationListV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationrecipientsV1Response</returns>
+        public DisclosureGetCommunicationrecipientsV1Response DisclosureGetCommunicationrecipientsV1(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationrecipientsV1Response> localVarResponse = DisclosureGetCommunicationrecipientsV1WithHttpInfo(pkiDisclosureID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationrecipientsV1Response> DisclosureGetCommunicationrecipientsV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DisclosureGetCommunicationrecipientsV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<DisclosureGetCommunicationrecipientsV1Response> DisclosureGetCommunicationrecipientsV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationrecipientsV1Response> localVarResponse = await DisclosureGetCommunicationrecipientsV1WithHttpInfoAsync(pkiDisclosureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationrecipientsV1Response>> DisclosureGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DisclosureGetCommunicationrecipientsV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DisclosureGetCommunicationsendersV1Response</returns>
+        public DisclosureGetCommunicationsendersV1Response DisclosureGetCommunicationsendersV1(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationsendersV1Response> localVarResponse = DisclosureGetCommunicationsendersV1WithHttpInfo(pkiDisclosureID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DisclosureGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationsendersV1Response> DisclosureGetCommunicationsendersV1WithHttpInfo(int pkiDisclosureID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DisclosureGetCommunicationsendersV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DisclosureGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<DisclosureGetCommunicationsendersV1Response> DisclosureGetCommunicationsendersV1Async(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationsendersV1Response> localVarResponse = await DisclosureGetCommunicationsendersV1WithHttpInfoAsync(pkiDisclosureID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDisclosureID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DisclosureGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DisclosureGetCommunicationsendersV1Response>> DisclosureGetCommunicationsendersV1WithHttpInfoAsync(int pkiDisclosureID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDisclosureID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDisclosureID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDisclosureApi.DisclosureGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DisclosureGetCommunicationsendersV1Response>("/1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DisclosureGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DeposittransitchequeGetAttachmentsV1Response</returns>
         ApiResponse<DeposittransitchequeGetAttachmentsV1Response> DeposittransitchequeGetAttachmentsV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationCountV1Response</returns>
+        DeposittransitchequeGetCommunicationCountV1Response DeposittransitchequeGetCommunicationCountV1(int pkiDeposittransitchequeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationCountV1Response</returns>
+        ApiResponse<DeposittransitchequeGetCommunicationCountV1Response> DeposittransitchequeGetCommunicationCountV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationListV1Response</returns>
+        DeposittransitchequeGetCommunicationListV1Response DeposittransitchequeGetCommunicationListV1(int pkiDeposittransitchequeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationListV1Response</returns>
+        ApiResponse<DeposittransitchequeGetCommunicationListV1Response> DeposittransitchequeGetCommunicationListV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        DeposittransitchequeGetCommunicationrecipientsV1Response DeposittransitchequeGetCommunicationrecipientsV1(int pkiDeposittransitchequeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response> DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        DeposittransitchequeGetCommunicationsendersV1Response DeposittransitchequeGetCommunicationsendersV1(int pkiDeposittransitchequeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response> DeposittransitchequeGetCommunicationsendersV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Deposittransitcheque
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeposittransitchequeGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetAttachmentsV1Response>> DeposittransitchequeGetAttachmentsV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationCountV1Response> DeposittransitchequeGetCommunicationCountV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetCommunicationCountV1Response>> DeposittransitchequeGetCommunicationCountV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationListV1Response> DeposittransitchequeGetCommunicationListV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetCommunicationListV1Response>> DeposittransitchequeGetCommunicationListV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationrecipientsV1Response> DeposittransitchequeGetCommunicationrecipientsV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response>> DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationsendersV1Response> DeposittransitchequeGetCommunicationsendersV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response>> DeposittransitchequeGetCommunicationsendersV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Deposittransitcheque
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeposittransitchequeGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationCountV1Response</returns>
+        public DeposittransitchequeGetCommunicationCountV1Response DeposittransitchequeGetCommunicationCountV1(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationCountV1Response> localVarResponse = DeposittransitchequeGetCommunicationCountV1WithHttpInfo(pkiDeposittransitchequeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationCountV1Response> DeposittransitchequeGetCommunicationCountV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeposittransitchequeGetCommunicationCountV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationCountV1Response> DeposittransitchequeGetCommunicationCountV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationCountV1Response> localVarResponse = await DeposittransitchequeGetCommunicationCountV1WithHttpInfoAsync(pkiDeposittransitchequeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationCountV1Response>> DeposittransitchequeGetCommunicationCountV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeposittransitchequeGetCommunicationCountV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationListV1Response</returns>
+        public DeposittransitchequeGetCommunicationListV1Response DeposittransitchequeGetCommunicationListV1(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationListV1Response> localVarResponse = DeposittransitchequeGetCommunicationListV1WithHttpInfo(pkiDeposittransitchequeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationListV1Response> DeposittransitchequeGetCommunicationListV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeposittransitchequeGetCommunicationListV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationListV1Response> DeposittransitchequeGetCommunicationListV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationListV1Response> localVarResponse = await DeposittransitchequeGetCommunicationListV1WithHttpInfoAsync(pkiDeposittransitchequeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationListV1Response>> DeposittransitchequeGetCommunicationListV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeposittransitchequeGetCommunicationListV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        public DeposittransitchequeGetCommunicationrecipientsV1Response DeposittransitchequeGetCommunicationrecipientsV1(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response> localVarResponse = DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(pkiDeposittransitchequeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response> DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeposittransitchequeGetCommunicationrecipientsV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationrecipientsV1Response> DeposittransitchequeGetCommunicationrecipientsV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response> localVarResponse = await DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfoAsync(pkiDeposittransitchequeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationrecipientsV1Response>> DeposittransitchequeGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeposittransitchequeGetCommunicationrecipientsV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        public DeposittransitchequeGetCommunicationsendersV1Response DeposittransitchequeGetCommunicationsendersV1(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response> localVarResponse = DeposittransitchequeGetCommunicationsendersV1WithHttpInfo(pkiDeposittransitchequeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response> DeposittransitchequeGetCommunicationsendersV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeposittransitchequeGetCommunicationsendersV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeGetCommunicationsendersV1Response> DeposittransitchequeGetCommunicationsendersV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response> localVarResponse = await DeposittransitchequeGetCommunicationsendersV1WithHttpInfoAsync(pkiDeposittransitchequeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response>> DeposittransitchequeGetCommunicationsendersV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeposittransitchequeGetCommunicationsendersV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of CommissionadvanceGetAttachmentsV1Response</returns>
         ApiResponse<CommissionadvanceGetAttachmentsV1Response> CommissionadvanceGetAttachmentsV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationCountV1Response</returns>
+        CommissionadvanceGetCommunicationCountV1Response CommissionadvanceGetCommunicationCountV1(int pkiCommissionadvanceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationCountV1Response</returns>
+        ApiResponse<CommissionadvanceGetCommunicationCountV1Response> CommissionadvanceGetCommunicationCountV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationListV1Response</returns>
+        CommissionadvanceGetCommunicationListV1Response CommissionadvanceGetCommunicationListV1(int pkiCommissionadvanceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationListV1Response</returns>
+        ApiResponse<CommissionadvanceGetCommunicationListV1Response> CommissionadvanceGetCommunicationListV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        CommissionadvanceGetCommunicationrecipientsV1Response CommissionadvanceGetCommunicationrecipientsV1(int pkiCommissionadvanceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> CommissionadvanceGetCommunicationrecipientsV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationsendersV1Response</returns>
+        CommissionadvanceGetCommunicationsendersV1Response CommissionadvanceGetCommunicationsendersV1(int pkiCommissionadvanceID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationsendersV1Response</returns>
+        ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> CommissionadvanceGetCommunicationsendersV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Commissionadvance
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CommissionadvanceGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<CommissionadvanceGetAttachmentsV1Response>> CommissionadvanceGetAttachmentsV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<CommissionadvanceGetCommunicationCountV1Response> CommissionadvanceGetCommunicationCountV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommissionadvanceGetCommunicationCountV1Response>> CommissionadvanceGetCommunicationCountV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<CommissionadvanceGetCommunicationListV1Response> CommissionadvanceGetCommunicationListV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommissionadvanceGetCommunicationListV1Response>> CommissionadvanceGetCommunicationListV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<CommissionadvanceGetCommunicationrecipientsV1Response> CommissionadvanceGetCommunicationrecipientsV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response>> CommissionadvanceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<CommissionadvanceGetCommunicationsendersV1Response> CommissionadvanceGetCommunicationsendersV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CommissionadvanceGetCommunicationsendersV1Response>> CommissionadvanceGetCommunicationsendersV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Commissionadvance
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CommissionadvanceGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationCountV1Response</returns>
+        public CommissionadvanceGetCommunicationCountV1Response CommissionadvanceGetCommunicationCountV1(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationCountV1Response> localVarResponse = CommissionadvanceGetCommunicationCountV1WithHttpInfo(pkiCommissionadvanceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationCountV1Response> CommissionadvanceGetCommunicationCountV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CommissionadvanceGetCommunicationCountV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<CommissionadvanceGetCommunicationCountV1Response> CommissionadvanceGetCommunicationCountV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationCountV1Response> localVarResponse = await CommissionadvanceGetCommunicationCountV1WithHttpInfoAsync(pkiCommissionadvanceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationCountV1Response>> CommissionadvanceGetCommunicationCountV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CommissionadvanceGetCommunicationCountV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationListV1Response</returns>
+        public CommissionadvanceGetCommunicationListV1Response CommissionadvanceGetCommunicationListV1(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationListV1Response> localVarResponse = CommissionadvanceGetCommunicationListV1WithHttpInfo(pkiCommissionadvanceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationListV1Response> CommissionadvanceGetCommunicationListV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CommissionadvanceGetCommunicationListV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<CommissionadvanceGetCommunicationListV1Response> CommissionadvanceGetCommunicationListV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationListV1Response> localVarResponse = await CommissionadvanceGetCommunicationListV1WithHttpInfoAsync(pkiCommissionadvanceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationListV1Response>> CommissionadvanceGetCommunicationListV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CommissionadvanceGetCommunicationListV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        public CommissionadvanceGetCommunicationrecipientsV1Response CommissionadvanceGetCommunicationrecipientsV1(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> localVarResponse = CommissionadvanceGetCommunicationrecipientsV1WithHttpInfo(pkiCommissionadvanceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> CommissionadvanceGetCommunicationrecipientsV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CommissionadvanceGetCommunicationrecipientsV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<CommissionadvanceGetCommunicationrecipientsV1Response> CommissionadvanceGetCommunicationrecipientsV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> localVarResponse = await CommissionadvanceGetCommunicationrecipientsV1WithHttpInfoAsync(pkiCommissionadvanceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response>> CommissionadvanceGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CommissionadvanceGetCommunicationrecipientsV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CommissionadvanceGetCommunicationsendersV1Response</returns>
+        public CommissionadvanceGetCommunicationsendersV1Response CommissionadvanceGetCommunicationsendersV1(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> localVarResponse = CommissionadvanceGetCommunicationsendersV1WithHttpInfo(pkiCommissionadvanceID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CommissionadvanceGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> CommissionadvanceGetCommunicationsendersV1WithHttpInfo(int pkiCommissionadvanceID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CommissionadvanceGetCommunicationsendersV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CommissionadvanceGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<CommissionadvanceGetCommunicationsendersV1Response> CommissionadvanceGetCommunicationsendersV1Async(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> localVarResponse = await CommissionadvanceGetCommunicationsendersV1WithHttpInfoAsync(pkiCommissionadvanceID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiCommissionadvanceID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CommissionadvanceGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<CommissionadvanceGetCommunicationsendersV1Response>> CommissionadvanceGetCommunicationsendersV1WithHttpInfoAsync(int pkiCommissionadvanceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiCommissionadvanceID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiCommissionadvanceID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectCommissionadvanceApi.CommissionadvanceGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CommissionadvanceGetCommunicationsendersV1Response>("/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CommissionadvanceGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

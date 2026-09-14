@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of ExternalbrokerGetAttachmentsV1Response</returns>
         ApiResponse<ExternalbrokerGetAttachmentsV1Response> ExternalbrokerGetAttachmentsV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationCountV1Response</returns>
+        ExternalbrokerGetCommunicationCountV1Response ExternalbrokerGetCommunicationCountV1(int pkiExternalbrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationCountV1Response</returns>
+        ApiResponse<ExternalbrokerGetCommunicationCountV1Response> ExternalbrokerGetCommunicationCountV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationListV1Response</returns>
+        ExternalbrokerGetCommunicationListV1Response ExternalbrokerGetCommunicationListV1(int pkiExternalbrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationListV1Response</returns>
+        ApiResponse<ExternalbrokerGetCommunicationListV1Response> ExternalbrokerGetCommunicationListV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        ExternalbrokerGetCommunicationrecipientsV1Response ExternalbrokerGetCommunicationrecipientsV1(int pkiExternalbrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response> ExternalbrokerGetCommunicationrecipientsV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationsendersV1Response</returns>
+        ExternalbrokerGetCommunicationsendersV1Response ExternalbrokerGetCommunicationsendersV1(int pkiExternalbrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationsendersV1Response</returns>
+        ApiResponse<ExternalbrokerGetCommunicationsendersV1Response> ExternalbrokerGetCommunicationsendersV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Externalbroker
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ExternalbrokerGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExternalbrokerGetAttachmentsV1Response>> ExternalbrokerGetAttachmentsV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<ExternalbrokerGetCommunicationCountV1Response> ExternalbrokerGetCommunicationCountV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalbrokerGetCommunicationCountV1Response>> ExternalbrokerGetCommunicationCountV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<ExternalbrokerGetCommunicationListV1Response> ExternalbrokerGetCommunicationListV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalbrokerGetCommunicationListV1Response>> ExternalbrokerGetCommunicationListV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<ExternalbrokerGetCommunicationrecipientsV1Response> ExternalbrokerGetCommunicationrecipientsV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response>> ExternalbrokerGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<ExternalbrokerGetCommunicationsendersV1Response> ExternalbrokerGetCommunicationsendersV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalbrokerGetCommunicationsendersV1Response>> ExternalbrokerGetCommunicationsendersV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Externalbroker
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExternalbrokerGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationCountV1Response</returns>
+        public ExternalbrokerGetCommunicationCountV1Response ExternalbrokerGetCommunicationCountV1(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationCountV1Response> localVarResponse = ExternalbrokerGetCommunicationCountV1WithHttpInfo(pkiExternalbrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationCountV1Response> ExternalbrokerGetCommunicationCountV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ExternalbrokerGetCommunicationCountV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<ExternalbrokerGetCommunicationCountV1Response> ExternalbrokerGetCommunicationCountV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationCountV1Response> localVarResponse = await ExternalbrokerGetCommunicationCountV1WithHttpInfoAsync(pkiExternalbrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationCountV1Response>> ExternalbrokerGetCommunicationCountV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ExternalbrokerGetCommunicationCountV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationListV1Response</returns>
+        public ExternalbrokerGetCommunicationListV1Response ExternalbrokerGetCommunicationListV1(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationListV1Response> localVarResponse = ExternalbrokerGetCommunicationListV1WithHttpInfo(pkiExternalbrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationListV1Response> ExternalbrokerGetCommunicationListV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ExternalbrokerGetCommunicationListV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<ExternalbrokerGetCommunicationListV1Response> ExternalbrokerGetCommunicationListV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationListV1Response> localVarResponse = await ExternalbrokerGetCommunicationListV1WithHttpInfoAsync(pkiExternalbrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationListV1Response>> ExternalbrokerGetCommunicationListV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ExternalbrokerGetCommunicationListV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        public ExternalbrokerGetCommunicationrecipientsV1Response ExternalbrokerGetCommunicationrecipientsV1(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response> localVarResponse = ExternalbrokerGetCommunicationrecipientsV1WithHttpInfo(pkiExternalbrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response> ExternalbrokerGetCommunicationrecipientsV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ExternalbrokerGetCommunicationrecipientsV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<ExternalbrokerGetCommunicationrecipientsV1Response> ExternalbrokerGetCommunicationrecipientsV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response> localVarResponse = await ExternalbrokerGetCommunicationrecipientsV1WithHttpInfoAsync(pkiExternalbrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationrecipientsV1Response>> ExternalbrokerGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ExternalbrokerGetCommunicationrecipientsV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ExternalbrokerGetCommunicationsendersV1Response</returns>
+        public ExternalbrokerGetCommunicationsendersV1Response ExternalbrokerGetCommunicationsendersV1(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationsendersV1Response> localVarResponse = ExternalbrokerGetCommunicationsendersV1WithHttpInfo(pkiExternalbrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ExternalbrokerGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationsendersV1Response> ExternalbrokerGetCommunicationsendersV1WithHttpInfo(int pkiExternalbrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ExternalbrokerGetCommunicationsendersV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ExternalbrokerGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<ExternalbrokerGetCommunicationsendersV1Response> ExternalbrokerGetCommunicationsendersV1Async(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationsendersV1Response> localVarResponse = await ExternalbrokerGetCommunicationsendersV1WithHttpInfoAsync(pkiExternalbrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiExternalbrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ExternalbrokerGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ExternalbrokerGetCommunicationsendersV1Response>> ExternalbrokerGetCommunicationsendersV1WithHttpInfoAsync(int pkiExternalbrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiExternalbrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiExternalbrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectExternalbrokerApi.ExternalbrokerGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ExternalbrokerGetCommunicationsendersV1Response>("/1/object/externalbroker/{pkiExternalbrokerID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ExternalbrokerGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -28,6 +28,31 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// Te endpoint allows to delete an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentDeleteV1Response</returns>
+        AttachmentDeleteV1Response AttachmentDeleteV1(int pkiAttachmentID, Object body, int operationIndex = 0);
+
+        /// <summary>
+        /// Delete an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// Te endpoint allows to delete an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentDeleteV1Response</returns>
+        ApiResponse<AttachmentDeleteV1Response> AttachmentDeleteV1WithHttpInfo(int pkiAttachmentID, Object body, int operationIndex = 0);
+        /// <summary>
         /// Retrieve the content
         /// </summary>
         /// <remarks>
@@ -74,7 +99,7 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of AttachmentGetAttachmentlogsV1Response</returns>
         ApiResponse<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
         /// <summary>
-        /// Rename an Attachment
+        /// Rename an attachment
         /// </summary>
         /// <remarks>
         /// The endpoint allows to change the attachment&#39;s file name and category.
@@ -87,7 +112,7 @@ namespace eZmaxApi.Api
         AttachmentRenameV1Response AttachmentRenameV1(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0);
 
         /// <summary>
-        /// Rename an Attachment
+        /// Rename an attachment
         /// </summary>
         /// <remarks>
         /// The endpoint allows to change the attachment&#39;s file name and category.
@@ -98,6 +123,56 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttachmentRenameV1Response</returns>
         ApiResponse<AttachmentRenameV1Response> AttachmentRenameV1WithHttpInfo(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Restore a deleted attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoints allows to restore a previously deleted attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentRestoreV1Response</returns>
+        AttachmentRestoreV1Response AttachmentRestoreV1(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Restore a deleted attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoints allows to restore a previously deleted attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentRestoreV1Response</returns>
+        ApiResponse<AttachmentRestoreV1Response> AttachmentRestoreV1WithHttpInfo(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Validate an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows to validate or reject an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentValidateV1Response</returns>
+        AttachmentValidateV1Response AttachmentValidateV1(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Validate an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows to validate or reject an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentValidateV1Response</returns>
+        ApiResponse<AttachmentValidateV1Response> AttachmentValidateV1WithHttpInfo(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -107,6 +182,33 @@ namespace eZmaxApi.Api
     public interface IObjectAttachmentApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// Delete an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// Te endpoint allows to delete an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentDeleteV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentDeleteV1Response> AttachmentDeleteV1Async(int pkiAttachmentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Delete an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// Te endpoint allows to delete an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentDeleteV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentDeleteV1Response>> AttachmentDeleteV1WithHttpInfoAsync(int pkiAttachmentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve the content
         /// </summary>
@@ -158,7 +260,7 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Rename an Attachment
+        /// Rename an attachment
         /// </summary>
         /// <remarks>
         /// The endpoint allows to change the attachment&#39;s file name and category.
@@ -172,7 +274,7 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<AttachmentRenameV1Response> AttachmentRenameV1Async(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Rename an Attachment
+        /// Rename an attachment
         /// </summary>
         /// <remarks>
         /// The endpoint allows to change the attachment&#39;s file name and category.
@@ -184,6 +286,60 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentRenameV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentRenameV1Response>> AttachmentRenameV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRenameV1Request attachmentRenameV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Restore a deleted attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoints allows to restore a previously deleted attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentRestoreV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentRestoreV1Response> AttachmentRestoreV1Async(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Restore a deleted attachment
+        /// </summary>
+        /// <remarks>
+        /// The endpoints allows to restore a previously deleted attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentRestoreV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentRestoreV1Response>> AttachmentRestoreV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Validate an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows to validate or reject an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentValidateV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentValidateV1Response> AttachmentValidateV1Async(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Validate an existing attachment
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows to validate or reject an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentValidateV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentValidateV1Response>> AttachmentValidateV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -302,6 +458,169 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
+        }
+
+        /// <summary>
+        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentDeleteV1Response</returns>
+        public AttachmentDeleteV1Response AttachmentDeleteV1(int pkiAttachmentID, Object body, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentDeleteV1Response> localVarResponse = AttachmentDeleteV1WithHttpInfo(pkiAttachmentID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentDeleteV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentDeleteV1Response> AttachmentDeleteV1WithHttpInfo(int pkiAttachmentID, Object body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'body' when calling ObjectAttachmentApi->AttachmentDeleteV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentDeleteV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttachmentDeleteV1Response>("/1/object/attachment/{pkiAttachmentID}/delete", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentDeleteV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentDeleteV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentDeleteV1Response> AttachmentDeleteV1Async(int pkiAttachmentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentDeleteV1Response> localVarResponse = await AttachmentDeleteV1WithHttpInfoAsync(pkiAttachmentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentDeleteV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentDeleteV1Response>> AttachmentDeleteV1WithHttpInfoAsync(int pkiAttachmentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'body' when calling ObjectAttachmentApi->AttachmentDeleteV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentDeleteV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentDeleteV1Response>("/1/object/attachment/{pkiAttachmentID}/delete", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentDeleteV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
         }
 
         /// <summary>
@@ -599,7 +918,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// Rename an attachment The endpoint allows to change the attachment&#39;s file name and category.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -613,7 +932,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// Rename an attachment The endpoint allows to change the attachment&#39;s file name and category.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -679,7 +998,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// Rename an attachment The endpoint allows to change the attachment&#39;s file name and category.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -694,7 +1013,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Rename an Attachment The endpoint allows to change the attachment&#39;s file name and category.
+        /// Rename an attachment The endpoint allows to change the attachment&#39;s file name and category.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -752,6 +1071,332 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentRenameV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentRestoreV1Response</returns>
+        public AttachmentRestoreV1Response AttachmentRestoreV1(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentRestoreV1Response> localVarResponse = AttachmentRestoreV1WithHttpInfo(pkiAttachmentID, attachmentRestoreV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentRestoreV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentRestoreV1Response> AttachmentRestoreV1WithHttpInfo(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'attachmentRestoreV1Request' is set
+            if (attachmentRestoreV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentRestoreV1Request' when calling ObjectAttachmentApi->AttachmentRestoreV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentRestoreV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentRestoreV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttachmentRestoreV1Response>("/1/object/attachment/{pkiAttachmentID}/restore", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentRestoreV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentRestoreV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentRestoreV1Response> AttachmentRestoreV1Async(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentRestoreV1Response> localVarResponse = await AttachmentRestoreV1WithHttpInfoAsync(pkiAttachmentID, attachmentRestoreV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentRestoreV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentRestoreV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentRestoreV1Response>> AttachmentRestoreV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'attachmentRestoreV1Request' is set
+            if (attachmentRestoreV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentRestoreV1Request' when calling ObjectAttachmentApi->AttachmentRestoreV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentRestoreV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentRestoreV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentRestoreV1Response>("/1/object/attachment/{pkiAttachmentID}/restore", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentRestoreV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Validate an existing attachment This endpoint allows to validate or reject an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentValidateV1Response</returns>
+        public AttachmentValidateV1Response AttachmentValidateV1(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentValidateV1Response> localVarResponse = AttachmentValidateV1WithHttpInfo(pkiAttachmentID, attachmentValidateV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate an existing attachment This endpoint allows to validate or reject an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentValidateV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentValidateV1Response> AttachmentValidateV1WithHttpInfo(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'attachmentValidateV1Request' is set
+            if (attachmentValidateV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentValidateV1Request' when calling ObjectAttachmentApi->AttachmentValidateV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentValidateV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentValidateV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Patch<AttachmentValidateV1Response>("/1/object/attachment/{pkiAttachmentID}/validate", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentValidateV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Validate an existing attachment This endpoint allows to validate or reject an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentValidateV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentValidateV1Response> AttachmentValidateV1Async(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentValidateV1Response> localVarResponse = await AttachmentValidateV1WithHttpInfoAsync(pkiAttachmentID, attachmentValidateV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate an existing attachment This endpoint allows to validate or reject an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentValidateV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentValidateV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentValidateV1Response>> AttachmentValidateV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentValidateV1Request attachmentValidateV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'attachmentValidateV1Request' is set
+            if (attachmentValidateV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentValidateV1Request' when calling ObjectAttachmentApi->AttachmentValidateV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentValidateV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentValidateV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<AttachmentValidateV1Response>("/1/object/attachment/{pkiAttachmentID}/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentValidateV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

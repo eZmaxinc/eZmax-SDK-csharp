@@ -113,6 +113,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsigndocumentIDReference">The unique ID of the Ezsigndocument.</param>
         /// <param name="eAttachmentDocumenttype">eAttachmentDocumenttype (required).</param>
         /// <param name="sAttachmentName">The name of the Attachment (required).</param>
+        /// <param name="sAttachmentCategory">The attachment category (required).</param>
         /// <param name="eAttachmentPrivacy">eAttachmentPrivacy (required).</param>
         /// <param name="fkiUserIDSpecific">The unique ID of the User.</param>
         /// <param name="eAttachmentType">eAttachmentType (required).</param>
@@ -129,7 +130,7 @@ namespace eZmaxApi.Model
         /// <param name="objAttachmentProofdocument">objAttachmentProofdocument.</param>
         /// <param name="aObjAttachmentAttachment">aObjAttachmentAttachment.</param>
         /// <param name="aObjAttachmentVersion">aObjAttachmentVersion.</param>
-        public CustomAttachmentResponse(int pkiAttachmentID = default, int fkiComputerID = default, int fkiAdjustmentID = default, int fkiAgentID = default, int fkiBankaccountID = default, int fkiBrokerID = default, int fkiCommissionadvanceID = default, int fkiCommunicationID = default, int fkiCustomerID = default, int fkiCustomertemplateID = default, int fkiDepositID = default, int fkiDeposittransitchequeID = default, int fkiElectronicfundstransferID = default, int fkiEmployeeID = default, int fkiExternalbrokerID = default, int fkiEzcomadvanceserverID = default, int fkiEzcomcompanyID = default, int fkiEzsigndocumentID = default, int fkiGhacqcontractID = default, int fkiInscriptionID = default, int fkiInscriptiontempID = default, int fkiInscriptionnotauthenticatedID = default, int fkiInvoiceID = default, int fkiBuyercontractID = default, int fkiFranchisebrokerID = default, int fkiFranchiseagenceID = default, int fkiFranchiseofficeID = default, int fkiFranchisefranchiseID = default, int fkiFranchisecomplaintID = default, int fkiLeadID = default, int fkiMarketingprogramID = default, int fkiMarketingfollowID = default, int fkiNotaryID = default, int fkiOfficetaxreportID = default, int fkiOtherincomeID = default, int fkiPaymentpreparationID = default, int fkiPurchaseID = default, int fkiSalaryID = default, int fkiSupplierID = default, int fkiTranqcontractID = default, int fkiTemplateID = default, int fkiInscriptionchecklistID = default, int fkiFolderID = default, int fkiRejectedoffertopurchaseID = default, int fkiDisclosureID = default, int fkiReconciliationID = default, int fkiEzsigndocumentIDReference = default, FieldEAttachmentDocumenttype eAttachmentDocumenttype = default, string sAttachmentName = default, FieldEAttachmentPrivacy eAttachmentPrivacy = default, int fkiUserIDSpecific = default, FieldEAttachmentType eAttachmentType = default, int iAttachmentSize = default, int iAttachmentEDMmoduleflag = default, string sAttachmentMD5 = default, bool bAttachmentDeleted = default, bool bAttachmentValid = default, FieldEAttachmentVerified eAttachmentVerified = default, string tAttachmentRejectioncomment = default, int fkiUserIDOwner = default, CommonAudit objAudit = default, AttachmentResponseCompound objAttachmentProof = default, AttachmentResponseCompound objAttachmentProofdocument = default, List<AttachmentResponseCompound> aObjAttachmentAttachment = default, List<AttachmentResponseCompound> aObjAttachmentVersion = default)
+        public CustomAttachmentResponse(int pkiAttachmentID = default, int fkiComputerID = default, int fkiAdjustmentID = default, int fkiAgentID = default, int fkiBankaccountID = default, int fkiBrokerID = default, int fkiCommissionadvanceID = default, int fkiCommunicationID = default, int fkiCustomerID = default, int fkiCustomertemplateID = default, int fkiDepositID = default, int fkiDeposittransitchequeID = default, int fkiElectronicfundstransferID = default, int fkiEmployeeID = default, int fkiExternalbrokerID = default, int fkiEzcomadvanceserverID = default, int fkiEzcomcompanyID = default, int fkiEzsigndocumentID = default, int fkiGhacqcontractID = default, int fkiInscriptionID = default, int fkiInscriptiontempID = default, int fkiInscriptionnotauthenticatedID = default, int fkiInvoiceID = default, int fkiBuyercontractID = default, int fkiFranchisebrokerID = default, int fkiFranchiseagenceID = default, int fkiFranchiseofficeID = default, int fkiFranchisefranchiseID = default, int fkiFranchisecomplaintID = default, int fkiLeadID = default, int fkiMarketingprogramID = default, int fkiMarketingfollowID = default, int fkiNotaryID = default, int fkiOfficetaxreportID = default, int fkiOtherincomeID = default, int fkiPaymentpreparationID = default, int fkiPurchaseID = default, int fkiSalaryID = default, int fkiSupplierID = default, int fkiTranqcontractID = default, int fkiTemplateID = default, int fkiInscriptionchecklistID = default, int fkiFolderID = default, int fkiRejectedoffertopurchaseID = default, int fkiDisclosureID = default, int fkiReconciliationID = default, int fkiEzsigndocumentIDReference = default, FieldEAttachmentDocumenttype eAttachmentDocumenttype = default, string sAttachmentName = default, string sAttachmentCategory = default, FieldEAttachmentPrivacy eAttachmentPrivacy = default, int fkiUserIDSpecific = default, FieldEAttachmentType eAttachmentType = default, int iAttachmentSize = default, int iAttachmentEDMmoduleflag = default, string sAttachmentMD5 = default, bool bAttachmentDeleted = default, bool bAttachmentValid = default, FieldEAttachmentVerified eAttachmentVerified = default, string tAttachmentRejectioncomment = default, int fkiUserIDOwner = default, CommonAudit objAudit = default, AttachmentResponseCompound objAttachmentProof = default, AttachmentResponseCompound objAttachmentProofdocument = default, List<AttachmentResponseCompound> aObjAttachmentAttachment = default, List<AttachmentResponseCompound> aObjAttachmentVersion = default)
         {
             this.PkiAttachmentID = pkiAttachmentID;
             this.EAttachmentDocumenttype = eAttachmentDocumenttype;
@@ -139,6 +140,12 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("sAttachmentName is a required property for CustomAttachmentResponse and cannot be null");
             }
             this.SAttachmentName = sAttachmentName;
+            // to ensure "sAttachmentCategory" is required (not null)
+            if (sAttachmentCategory == null)
+            {
+                throw new ArgumentNullException("sAttachmentCategory is a required property for CustomAttachmentResponse and cannot be null");
+            }
+            this.SAttachmentCategory = sAttachmentCategory;
             this.EAttachmentPrivacy = eAttachmentPrivacy;
             this.EAttachmentType = eAttachmentType;
             this.IAttachmentSize = iAttachmentSize;
@@ -689,6 +696,16 @@ namespace eZmaxApi.Model
         public string SAttachmentName { get; set; }
 
         /// <summary>
+        /// The attachment category
+        /// </summary>
+        /// <value>The attachment category</value>
+        /*
+        <example>Inscription</example>
+        */
+        [DataMember(Name = "sAttachmentCategory", IsRequired = true, EmitDefaultValue = true)]
+        public string SAttachmentCategory { get; set; }
+
+        /// <summary>
         /// The unique ID of the User
         /// </summary>
         /// <value>The unique ID of the User</value>
@@ -855,6 +872,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiEzsigndocumentIDReference: ").Append(FkiEzsigndocumentIDReference).Append("\n");
             sb.Append("  EAttachmentDocumenttype: ").Append(EAttachmentDocumenttype).Append("\n");
             sb.Append("  SAttachmentName: ").Append(SAttachmentName).Append("\n");
+            sb.Append("  SAttachmentCategory: ").Append(SAttachmentCategory).Append("\n");
             sb.Append("  EAttachmentPrivacy: ").Append(EAttachmentPrivacy).Append("\n");
             sb.Append("  FkiUserIDSpecific: ").Append(FkiUserIDSpecific).Append("\n");
             sb.Append("  EAttachmentType: ").Append(EAttachmentType).Append("\n");
@@ -1353,6 +1371,15 @@ namespace eZmaxApi.Model
                 if (!regexSAttachmentName.Match(this.SAttachmentName).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentName, must match a pattern of " + regexSAttachmentName, new [] { "SAttachmentName" });
+                }
+            }
+
+            if (this.SAttachmentCategory != null) {
+                // SAttachmentCategory (string) pattern
+                Regex regexSAttachmentCategory = new Regex(@"^(?!\.{1,2}$)(?!.*[ .]$)(?!(?:CON|PRN|AUX|NUL|COM(?:[1-9]|[¹²³])|LPT(?:[1-9]|[¹²³]))(?:\.|$))[^\x00-\x1F<>:""/\\\\|?*]{0,75}$", RegexOptions.CultureInvariant);
+                if (!regexSAttachmentCategory.Match(this.SAttachmentCategory).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentCategory, must match a pattern of " + regexSAttachmentCategory, new [] { "SAttachmentCategory" });
                 }
             }
 

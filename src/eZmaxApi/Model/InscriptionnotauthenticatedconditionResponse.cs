@@ -221,7 +221,7 @@ namespace eZmaxApi.Model
 
             if (this.TInscriptionnotauthenticatedconditionComment != null) {
                 // TInscriptionnotauthenticatedconditionComment (string) pattern
-                Regex regexTInscriptionnotauthenticatedconditionComment = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+                Regex regexTInscriptionnotauthenticatedconditionComment = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexTInscriptionnotauthenticatedconditionComment.Match(this.TInscriptionnotauthenticatedconditionComment).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TInscriptionnotauthenticatedconditionComment, must match a pattern of " + regexTInscriptionnotauthenticatedconditionComment, new [] { "TInscriptionnotauthenticatedconditionComment" });
