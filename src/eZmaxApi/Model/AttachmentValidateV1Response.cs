@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+    /// Response for POST /1/object/attachment/{pkiAttachmentID}/validate
     /// </summary>
     [DataContract(Name = "attachment-validate-v1-Response")]
     public partial class AttachmentValidateV1Response : IValidatableObject

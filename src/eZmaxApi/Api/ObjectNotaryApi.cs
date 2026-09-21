@@ -70,6 +70,114 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of NotaryGetAttachmentsV1Response</returns>
         ApiResponse<NotaryGetAttachmentsV1Response> NotaryGetAttachmentsV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationCountV1Response</returns>
+        NotaryGetCommunicationCountV1Response NotaryGetCommunicationCountV1(int pkiNotaryID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationCountV1Response</returns>
+        ApiResponse<NotaryGetCommunicationCountV1Response> NotaryGetCommunicationCountV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationListV1Response</returns>
+        NotaryGetCommunicationListV1Response NotaryGetCommunicationListV1(int pkiNotaryID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationListV1Response</returns>
+        ApiResponse<NotaryGetCommunicationListV1Response> NotaryGetCommunicationListV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationrecipientsV1Response</returns>
+        NotaryGetCommunicationrecipientsV1Response NotaryGetCommunicationrecipientsV1(int pkiNotaryID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<NotaryGetCommunicationrecipientsV1Response> NotaryGetCommunicationrecipientsV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationsendersV1Response</returns>
+        NotaryGetCommunicationsendersV1Response NotaryGetCommunicationsendersV1(int pkiNotaryID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationsendersV1Response</returns>
+        ApiResponse<NotaryGetCommunicationsendersV1Response> NotaryGetCommunicationsendersV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Notary list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetListV1Response</returns>
+        NotaryGetListV1Response NotaryGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Notary list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetListV1Response</returns>
+        ApiResponse<NotaryGetListV1Response> NotaryGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Notary
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +260,139 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (NotaryGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<NotaryGetAttachmentsV1Response>> NotaryGetAttachmentsV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<NotaryGetCommunicationCountV1Response> NotaryGetCommunicationCountV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotaryGetCommunicationCountV1Response>> NotaryGetCommunicationCountV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<NotaryGetCommunicationListV1Response> NotaryGetCommunicationListV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotaryGetCommunicationListV1Response>> NotaryGetCommunicationListV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<NotaryGetCommunicationrecipientsV1Response> NotaryGetCommunicationrecipientsV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotaryGetCommunicationrecipientsV1Response>> NotaryGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<NotaryGetCommunicationsendersV1Response> NotaryGetCommunicationsendersV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotaryGetCommunicationsendersV1Response>> NotaryGetCommunicationsendersV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Notary list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetListV1Response</returns>
+        System.Threading.Tasks.Task<NotaryGetListV1Response> NotaryGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Notary list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NotaryGetListV1Response>> NotaryGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Notary
         /// </summary>
@@ -600,6 +841,777 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("NotaryGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationCountV1Response</returns>
+        public NotaryGetCommunicationCountV1Response NotaryGetCommunicationCountV1(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationCountV1Response> localVarResponse = NotaryGetCommunicationCountV1WithHttpInfo(pkiNotaryID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<NotaryGetCommunicationCountV1Response> NotaryGetCommunicationCountV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<NotaryGetCommunicationCountV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<NotaryGetCommunicationCountV1Response> NotaryGetCommunicationCountV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationCountV1Response> localVarResponse = await NotaryGetCommunicationCountV1WithHttpInfoAsync(pkiNotaryID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotaryGetCommunicationCountV1Response>> NotaryGetCommunicationCountV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<NotaryGetCommunicationCountV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationListV1Response</returns>
+        public NotaryGetCommunicationListV1Response NotaryGetCommunicationListV1(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationListV1Response> localVarResponse = NotaryGetCommunicationListV1WithHttpInfo(pkiNotaryID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<NotaryGetCommunicationListV1Response> NotaryGetCommunicationListV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<NotaryGetCommunicationListV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<NotaryGetCommunicationListV1Response> NotaryGetCommunicationListV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationListV1Response> localVarResponse = await NotaryGetCommunicationListV1WithHttpInfoAsync(pkiNotaryID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotaryGetCommunicationListV1Response>> NotaryGetCommunicationListV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<NotaryGetCommunicationListV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationrecipientsV1Response</returns>
+        public NotaryGetCommunicationrecipientsV1Response NotaryGetCommunicationrecipientsV1(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationrecipientsV1Response> localVarResponse = NotaryGetCommunicationrecipientsV1WithHttpInfo(pkiNotaryID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<NotaryGetCommunicationrecipientsV1Response> NotaryGetCommunicationrecipientsV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<NotaryGetCommunicationrecipientsV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<NotaryGetCommunicationrecipientsV1Response> NotaryGetCommunicationrecipientsV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationrecipientsV1Response> localVarResponse = await NotaryGetCommunicationrecipientsV1WithHttpInfoAsync(pkiNotaryID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotaryGetCommunicationrecipientsV1Response>> NotaryGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<NotaryGetCommunicationrecipientsV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetCommunicationsendersV1Response</returns>
+        public NotaryGetCommunicationsendersV1Response NotaryGetCommunicationsendersV1(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationsendersV1Response> localVarResponse = NotaryGetCommunicationsendersV1WithHttpInfo(pkiNotaryID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<NotaryGetCommunicationsendersV1Response> NotaryGetCommunicationsendersV1WithHttpInfo(int pkiNotaryID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<NotaryGetCommunicationsendersV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<NotaryGetCommunicationsendersV1Response> NotaryGetCommunicationsendersV1Async(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetCommunicationsendersV1Response> localVarResponse = await NotaryGetCommunicationsendersV1WithHttpInfoAsync(pkiNotaryID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiNotaryID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotaryGetCommunicationsendersV1Response>> NotaryGetCommunicationsendersV1WithHttpInfoAsync(int pkiNotaryID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiNotaryID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiNotaryID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<NotaryGetCommunicationsendersV1Response>("/1/object/notary/{pkiNotaryID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Notary list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>NotaryGetListV1Response</returns>
+        public NotaryGetListV1Response NotaryGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetListV1Response> localVarResponse = NotaryGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Notary list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of NotaryGetListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<NotaryGetListV1Response> NotaryGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<NotaryGetListV1Response>("/1/object/notary/getList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Notary list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of NotaryGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<NotaryGetListV1Response> NotaryGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<NotaryGetListV1Response> localVarResponse = await NotaryGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Notary list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (NotaryGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<NotaryGetListV1Response>> NotaryGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectNotaryApi.NotaryGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<NotaryGetListV1Response>("/1/object/notary/getList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("NotaryGetListV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

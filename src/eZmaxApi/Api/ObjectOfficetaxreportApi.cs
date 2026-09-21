@@ -70,6 +70,114 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of OfficetaxreportGetAttachmentsV1Response</returns>
         ApiResponse<OfficetaxreportGetAttachmentsV1Response> OfficetaxreportGetAttachmentsV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationCountV1Response</returns>
+        OfficetaxreportGetCommunicationCountV1Response OfficetaxreportGetCommunicationCountV1(int pkiOfficetaxreportID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationCountV1Response</returns>
+        ApiResponse<OfficetaxreportGetCommunicationCountV1Response> OfficetaxreportGetCommunicationCountV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationListV1Response</returns>
+        OfficetaxreportGetCommunicationListV1Response OfficetaxreportGetCommunicationListV1(int pkiOfficetaxreportID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationListV1Response</returns>
+        ApiResponse<OfficetaxreportGetCommunicationListV1Response> OfficetaxreportGetCommunicationListV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        OfficetaxreportGetCommunicationrecipientsV1Response OfficetaxreportGetCommunicationrecipientsV1(int pkiOfficetaxreportID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> OfficetaxreportGetCommunicationrecipientsV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationsendersV1Response</returns>
+        OfficetaxreportGetCommunicationsendersV1Response OfficetaxreportGetCommunicationsendersV1(int pkiOfficetaxreportID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationsendersV1Response</returns>
+        ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> OfficetaxreportGetCommunicationsendersV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Officetaxreport list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetListV1Response</returns>
+        OfficetaxreportGetListV1Response OfficetaxreportGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Officetaxreport list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetListV1Response</returns>
+        ApiResponse<OfficetaxreportGetListV1Response> OfficetaxreportGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Officetaxreport
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +260,139 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OfficetaxreportGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetAttachmentsV1Response>> OfficetaxreportGetAttachmentsV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<OfficetaxreportGetCommunicationCountV1Response> OfficetaxreportGetCommunicationCountV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetCommunicationCountV1Response>> OfficetaxreportGetCommunicationCountV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<OfficetaxreportGetCommunicationListV1Response> OfficetaxreportGetCommunicationListV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetCommunicationListV1Response>> OfficetaxreportGetCommunicationListV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<OfficetaxreportGetCommunicationrecipientsV1Response> OfficetaxreportGetCommunicationrecipientsV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response>> OfficetaxreportGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<OfficetaxreportGetCommunicationsendersV1Response> OfficetaxreportGetCommunicationsendersV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetCommunicationsendersV1Response>> OfficetaxreportGetCommunicationsendersV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Officetaxreport list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetListV1Response</returns>
+        System.Threading.Tasks.Task<OfficetaxreportGetListV1Response> OfficetaxreportGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Officetaxreport list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OfficetaxreportGetListV1Response>> OfficetaxreportGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Officetaxreport
         /// </summary>
@@ -600,6 +841,777 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("OfficetaxreportGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationCountV1Response</returns>
+        public OfficetaxreportGetCommunicationCountV1Response OfficetaxreportGetCommunicationCountV1(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationCountV1Response> localVarResponse = OfficetaxreportGetCommunicationCountV1WithHttpInfo(pkiOfficetaxreportID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationCountV1Response> OfficetaxreportGetCommunicationCountV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OfficetaxreportGetCommunicationCountV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<OfficetaxreportGetCommunicationCountV1Response> OfficetaxreportGetCommunicationCountV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationCountV1Response> localVarResponse = await OfficetaxreportGetCommunicationCountV1WithHttpInfoAsync(pkiOfficetaxreportID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationCountV1Response>> OfficetaxreportGetCommunicationCountV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OfficetaxreportGetCommunicationCountV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationListV1Response</returns>
+        public OfficetaxreportGetCommunicationListV1Response OfficetaxreportGetCommunicationListV1(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationListV1Response> localVarResponse = OfficetaxreportGetCommunicationListV1WithHttpInfo(pkiOfficetaxreportID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationListV1Response> OfficetaxreportGetCommunicationListV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OfficetaxreportGetCommunicationListV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<OfficetaxreportGetCommunicationListV1Response> OfficetaxreportGetCommunicationListV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationListV1Response> localVarResponse = await OfficetaxreportGetCommunicationListV1WithHttpInfoAsync(pkiOfficetaxreportID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationListV1Response>> OfficetaxreportGetCommunicationListV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OfficetaxreportGetCommunicationListV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        public OfficetaxreportGetCommunicationrecipientsV1Response OfficetaxreportGetCommunicationrecipientsV1(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> localVarResponse = OfficetaxreportGetCommunicationrecipientsV1WithHttpInfo(pkiOfficetaxreportID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> OfficetaxreportGetCommunicationrecipientsV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OfficetaxreportGetCommunicationrecipientsV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<OfficetaxreportGetCommunicationrecipientsV1Response> OfficetaxreportGetCommunicationrecipientsV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> localVarResponse = await OfficetaxreportGetCommunicationrecipientsV1WithHttpInfoAsync(pkiOfficetaxreportID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response>> OfficetaxreportGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OfficetaxreportGetCommunicationrecipientsV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetCommunicationsendersV1Response</returns>
+        public OfficetaxreportGetCommunicationsendersV1Response OfficetaxreportGetCommunicationsendersV1(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> localVarResponse = OfficetaxreportGetCommunicationsendersV1WithHttpInfo(pkiOfficetaxreportID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> OfficetaxreportGetCommunicationsendersV1WithHttpInfo(int pkiOfficetaxreportID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OfficetaxreportGetCommunicationsendersV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<OfficetaxreportGetCommunicationsendersV1Response> OfficetaxreportGetCommunicationsendersV1Async(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> localVarResponse = await OfficetaxreportGetCommunicationsendersV1WithHttpInfoAsync(pkiOfficetaxreportID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiOfficetaxreportID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OfficetaxreportGetCommunicationsendersV1Response>> OfficetaxreportGetCommunicationsendersV1WithHttpInfoAsync(int pkiOfficetaxreportID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiOfficetaxreportID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiOfficetaxreportID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OfficetaxreportGetCommunicationsendersV1Response>("/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Officetaxreport list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>OfficetaxreportGetListV1Response</returns>
+        public OfficetaxreportGetListV1Response OfficetaxreportGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetListV1Response> localVarResponse = OfficetaxreportGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Officetaxreport list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of OfficetaxreportGetListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<OfficetaxreportGetListV1Response> OfficetaxreportGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<OfficetaxreportGetListV1Response>("/1/object/officetaxreport/getList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Officetaxreport list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of OfficetaxreportGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<OfficetaxreportGetListV1Response> OfficetaxreportGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<OfficetaxreportGetListV1Response> localVarResponse = await OfficetaxreportGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Officetaxreport list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (OfficetaxreportGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<OfficetaxreportGetListV1Response>> OfficetaxreportGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectOfficetaxreportApi.OfficetaxreportGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OfficetaxreportGetListV1Response>("/1/object/officetaxreport/getList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OfficetaxreportGetListV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

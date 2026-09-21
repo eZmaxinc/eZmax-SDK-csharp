@@ -105,7 +105,8 @@ namespace eZmaxApi.Model
         /// <param name="fkiSupplierID">The unique ID of the Supplier..</param>
         /// <param name="fkiTranqcontractID">The unique ID of the Tranqcontract.</param>
         /// <param name="fkiTemplateID">The unique ID of the Template.</param>
-        /// <param name="fkiInscriptionchecklistID">The unique ID of the Inscriptionchecklist.</param>
+        /// <param name="fkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist.</param>
+        /// <param name="sDocumenttypeNameX">The name of the Documenttype in the language of the requester.</param>
         /// <param name="fkiFolderID">The unique ID of the Folder.</param>
         /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
         /// <param name="fkiDisclosureID">The unique ID of the Disclosure.</param>
@@ -126,7 +127,7 @@ namespace eZmaxApi.Model
         /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
         /// <param name="fkiUserIDOwner">The unique ID of the User.</param>
         /// <param name="objAudit">objAudit.</param>
-        public AttachmentResponse(int pkiAttachmentID = default, int fkiComputerID = default, int fkiAdjustmentID = default, int fkiAgentID = default, int fkiBankaccountID = default, int fkiBrokerID = default, int fkiCommissionadvanceID = default, int fkiCommunicationID = default, int fkiCustomerID = default, int fkiCustomertemplateID = default, int fkiDepositID = default, int fkiDeposittransitchequeID = default, int fkiElectronicfundstransferID = default, int fkiEmployeeID = default, int fkiExternalbrokerID = default, int fkiEzcomadvanceserverID = default, int fkiEzcomcompanyID = default, int fkiEzsigndocumentID = default, int fkiGhacqcontractID = default, int fkiInscriptionID = default, int fkiInscriptiontempID = default, int fkiInscriptionnotauthenticatedID = default, int fkiInvoiceID = default, int fkiBuyercontractID = default, int fkiFranchisebrokerID = default, int fkiFranchiseagenceID = default, int fkiFranchiseofficeID = default, int fkiFranchisefranchiseID = default, int fkiFranchisecomplaintID = default, int fkiLeadID = default, int fkiMarketingprogramID = default, int fkiMarketingfollowID = default, int fkiNotaryID = default, int fkiOfficetaxreportID = default, int fkiOtherincomeID = default, int fkiPaymentpreparationID = default, int fkiPurchaseID = default, int fkiSalaryID = default, int fkiSupplierID = default, int fkiTranqcontractID = default, int fkiTemplateID = default, int fkiInscriptionchecklistID = default, int fkiFolderID = default, int fkiRejectedoffertopurchaseID = default, int fkiDisclosureID = default, int fkiReconciliationID = default, int fkiEzsigndocumentIDReference = default, FieldEAttachmentDocumenttype eAttachmentDocumenttype = default, string sAttachmentName = default, string sAttachmentCategory = default, FieldEAttachmentPrivacy eAttachmentPrivacy = default, int fkiUserIDSpecific = default, FieldEAttachmentType eAttachmentType = default, int iAttachmentSize = default, int iAttachmentEDMmoduleflag = default, string sAttachmentMD5 = default, bool bAttachmentDeleted = default, bool bAttachmentValid = default, FieldEAttachmentVerified eAttachmentVerified = default, string tAttachmentRejectioncomment = default, int fkiUserIDOwner = default, CommonAudit objAudit = default)
+        public AttachmentResponse(int pkiAttachmentID = default, int fkiComputerID = default, int fkiAdjustmentID = default, int fkiAgentID = default, int fkiBankaccountID = default, int fkiBrokerID = default, int fkiCommissionadvanceID = default, int fkiCommunicationID = default, int fkiCustomerID = default, int fkiCustomertemplateID = default, int fkiDepositID = default, int fkiDeposittransitchequeID = default, int fkiElectronicfundstransferID = default, int fkiEmployeeID = default, int fkiExternalbrokerID = default, int fkiEzcomadvanceserverID = default, int fkiEzcomcompanyID = default, int fkiEzsigndocumentID = default, int fkiGhacqcontractID = default, int fkiInscriptionID = default, int fkiInscriptiontempID = default, int fkiInscriptionnotauthenticatedID = default, int fkiInvoiceID = default, int fkiBuyercontractID = default, int fkiFranchisebrokerID = default, int fkiFranchiseagenceID = default, int fkiFranchiseofficeID = default, int fkiFranchisefranchiseID = default, int fkiFranchisecomplaintID = default, int fkiLeadID = default, int fkiMarketingprogramID = default, int fkiMarketingfollowID = default, int fkiNotaryID = default, int fkiOfficetaxreportID = default, int fkiOtherincomeID = default, int fkiPaymentpreparationID = default, int fkiPurchaseID = default, int fkiSalaryID = default, int fkiSupplierID = default, int fkiTranqcontractID = default, int fkiTemplateID = default, int fkiDocumenttypechecklistID = default, string sDocumenttypeNameX = default, int fkiFolderID = default, int fkiRejectedoffertopurchaseID = default, int fkiDisclosureID = default, int fkiReconciliationID = default, int fkiEzsigndocumentIDReference = default, FieldEAttachmentDocumenttype eAttachmentDocumenttype = default, string sAttachmentName = default, string sAttachmentCategory = default, FieldEAttachmentPrivacy eAttachmentPrivacy = default, int fkiUserIDSpecific = default, FieldEAttachmentType eAttachmentType = default, int iAttachmentSize = default, int iAttachmentEDMmoduleflag = default, string sAttachmentMD5 = default, bool bAttachmentDeleted = default, bool bAttachmentValid = default, FieldEAttachmentVerified eAttachmentVerified = default, string tAttachmentRejectioncomment = default, int fkiUserIDOwner = default, CommonAudit objAudit = default)
         {
             this.PkiAttachmentID = pkiAttachmentID;
             this.EAttachmentDocumenttype = eAttachmentDocumenttype;
@@ -194,7 +195,8 @@ namespace eZmaxApi.Model
             this.FkiSupplierID = fkiSupplierID;
             this.FkiTranqcontractID = fkiTranqcontractID;
             this.FkiTemplateID = fkiTemplateID;
-            this.FkiInscriptionchecklistID = fkiInscriptionchecklistID;
+            this.FkiDocumenttypechecklistID = fkiDocumenttypechecklistID;
+            this.SDocumenttypeNameX = sDocumenttypeNameX;
             this.FkiFolderID = fkiFolderID;
             this.FkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
             this.FkiDisclosureID = fkiDisclosureID;
@@ -618,14 +620,24 @@ namespace eZmaxApi.Model
         public int FkiTemplateID { get; set; }
 
         /// <summary>
-        /// The unique ID of the Inscriptionchecklist
+        /// The unique ID of the Documenttypechecklist
         /// </summary>
-        /// <value>The unique ID of the Inscriptionchecklist</value>
+        /// <value>The unique ID of the Documenttypechecklist</value>
         /*
         <example>191</example>
         */
-        [DataMember(Name = "fkiInscriptionchecklistID", EmitDefaultValue = false)]
-        public int FkiInscriptionchecklistID { get; set; }
+        [DataMember(Name = "fkiDocumenttypechecklistID", EmitDefaultValue = false)]
+        public int FkiDocumenttypechecklistID { get; set; }
+
+        /// <summary>
+        /// The name of the Documenttype in the language of the requester
+        /// </summary>
+        /// <value>The name of the Documenttype in the language of the requester</value>
+        /*
+        <example>Loan deed</example>
+        */
+        [DataMember(Name = "sDocumenttypeNameX", EmitDefaultValue = false)]
+        public string SDocumenttypeNameX { get; set; }
 
         /// <summary>
         /// The unique ID of the Folder
@@ -832,7 +844,8 @@ namespace eZmaxApi.Model
             sb.Append("  FkiSupplierID: ").Append(FkiSupplierID).Append("\n");
             sb.Append("  FkiTranqcontractID: ").Append(FkiTranqcontractID).Append("\n");
             sb.Append("  FkiTemplateID: ").Append(FkiTemplateID).Append("\n");
-            sb.Append("  FkiInscriptionchecklistID: ").Append(FkiInscriptionchecklistID).Append("\n");
+            sb.Append("  FkiDocumenttypechecklistID: ").Append(FkiDocumenttypechecklistID).Append("\n");
+            sb.Append("  SDocumenttypeNameX: ").Append(SDocumenttypeNameX).Append("\n");
             sb.Append("  FkiFolderID: ").Append(FkiFolderID).Append("\n");
             sb.Append("  FkiRejectedoffertopurchaseID: ").Append(FkiRejectedoffertopurchaseID).Append("\n");
             sb.Append("  FkiDisclosureID: ").Append(FkiDisclosureID).Append("\n");
@@ -1263,16 +1276,25 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for FkiTemplateID, must be a value greater than or equal to 0.", new [] { "FkiTemplateID" });
             }
 
-            // FkiInscriptionchecklistID (int) maximum
-            if (this.FkiInscriptionchecklistID > (int)16777215)
+            // FkiDocumenttypechecklistID (int) maximum
+            if (this.FkiDocumenttypechecklistID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
+                yield return new ValidationResult("Invalid value for FkiDocumenttypechecklistID, must be a value less than or equal to 16777215.", new [] { "FkiDocumenttypechecklistID" });
             }
 
-            // FkiInscriptionchecklistID (int) minimum
-            if (this.FkiInscriptionchecklistID < (int)0)
+            // FkiDocumenttypechecklistID (int) minimum
+            if (this.FkiDocumenttypechecklistID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
+                yield return new ValidationResult("Invalid value for FkiDocumenttypechecklistID, must be a value greater than or equal to 0.", new [] { "FkiDocumenttypechecklistID" });
+            }
+
+            if (this.SDocumenttypeNameX != null) {
+                // SDocumenttypeNameX (string) pattern
+                Regex regexSDocumenttypeNameX = new Regex(@"^.{0,55}$", RegexOptions.CultureInvariant);
+                if (!regexSDocumenttypeNameX.Match(this.SDocumenttypeNameX).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SDocumenttypeNameX, must match a pattern of " + regexSDocumenttypeNameX, new [] { "SDocumenttypeNameX" });
+                }
             }
 
             // FkiFolderID (int) maximum

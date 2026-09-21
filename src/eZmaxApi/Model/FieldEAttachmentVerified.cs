@@ -49,7 +49,13 @@ namespace eZmaxApi.Model
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 3
+        Rejected = 3,
+
+        /// <summary>
+        /// Enum Pending for value: Pending
+        /// </summary>
+        [EnumMember(Value = "Pending")]
+        Pending = 4
     }
 
 }

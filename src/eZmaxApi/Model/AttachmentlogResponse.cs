@@ -48,13 +48,20 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="fkiAttachmentID">The unique ID of the Attachment. (required).</param>
         /// <param name="fkiUserID">The unique ID of the User (required).</param>
+        /// <param name="objUser">objUser (required).</param>
         /// <param name="dtAttachmentlogDatetime">The created date (required).</param>
         /// <param name="eAttachmentlogType">eAttachmentlogType (required).</param>
         /// <param name="sAttachmentlogDetail">The additionnal detail.</param>
-        public AttachmentlogResponse(int fkiAttachmentID = default, int fkiUserID = default, string dtAttachmentlogDatetime = default, FieldEAttachmentlogType eAttachmentlogType = default, string sAttachmentlogDetail = default)
+        public AttachmentlogResponse(int fkiAttachmentID = default, int fkiUserID = default, CustomUserNameResponse objUser = default, string dtAttachmentlogDatetime = default, FieldEAttachmentlogType eAttachmentlogType = default, string sAttachmentlogDetail = default)
         {
             this.FkiAttachmentID = fkiAttachmentID;
             this.FkiUserID = fkiUserID;
+            // to ensure "objUser" is required (not null)
+            if (objUser == null)
+            {
+                throw new ArgumentNullException("objUser is a required property for AttachmentlogResponse and cannot be null");
+            }
+            this.ObjUser = objUser;
             // to ensure "dtAttachmentlogDatetime" is required (not null)
             if (dtAttachmentlogDatetime == null)
             {
@@ -86,6 +93,12 @@ namespace eZmaxApi.Model
         public int FkiUserID { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjUser
+        /// </summary>
+        [DataMember(Name = "objUser", IsRequired = true, EmitDefaultValue = true)]
+        public CustomUserNameResponse ObjUser { get; set; }
+
+        /// <summary>
         /// The created date
         /// </summary>
         /// <value>The created date</value>
@@ -115,6 +128,7 @@ namespace eZmaxApi.Model
             sb.Append("class AttachmentlogResponse {\n");
             sb.Append("  FkiAttachmentID: ").Append(FkiAttachmentID).Append("\n");
             sb.Append("  FkiUserID: ").Append(FkiUserID).Append("\n");
+            sb.Append("  ObjUser: ").Append(ObjUser).Append("\n");
             sb.Append("  DtAttachmentlogDatetime: ").Append(DtAttachmentlogDatetime).Append("\n");
             sb.Append("  EAttachmentlogType: ").Append(EAttachmentlogType).Append("\n");
             sb.Append("  SAttachmentlogDetail: ").Append(SAttachmentlogDetail).Append("\n");

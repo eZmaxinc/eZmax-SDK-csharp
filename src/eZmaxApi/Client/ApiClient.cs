@@ -403,7 +403,8 @@ namespace eZmaxApi.Client
 
             RequestSignature.injectSecurityHeaders(configuration: configuration, 
                                                          request: request, 
-                                                        jsonBody: jsonBody);
+                                                        jsonBody: jsonBody,
+														url: configuration.BasePath);
 
             return request;
         }

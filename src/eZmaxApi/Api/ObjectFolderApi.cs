@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of FolderGetAttachmentsV1Response</returns>
         ApiResponse<FolderGetAttachmentsV1Response> FolderGetAttachmentsV1WithHttpInfo(int pkiFolderID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationCountV1Response</returns>
+        FolderGetCommunicationCountV1Response FolderGetCommunicationCountV1(int pkiFolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationCountV1Response</returns>
+        ApiResponse<FolderGetCommunicationCountV1Response> FolderGetCommunicationCountV1WithHttpInfo(int pkiFolderID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationListV1Response</returns>
+        FolderGetCommunicationListV1Response FolderGetCommunicationListV1(int pkiFolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationListV1Response</returns>
+        ApiResponse<FolderGetCommunicationListV1Response> FolderGetCommunicationListV1WithHttpInfo(int pkiFolderID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationrecipientsV1Response</returns>
+        FolderGetCommunicationrecipientsV1Response FolderGetCommunicationrecipientsV1(int pkiFolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<FolderGetCommunicationrecipientsV1Response> FolderGetCommunicationrecipientsV1WithHttpInfo(int pkiFolderID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationsendersV1Response</returns>
+        FolderGetCommunicationsendersV1Response FolderGetCommunicationsendersV1(int pkiFolderID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationsendersV1Response</returns>
+        ApiResponse<FolderGetCommunicationsendersV1Response> FolderGetCommunicationsendersV1WithHttpInfo(int pkiFolderID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Folder
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FolderGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<FolderGetAttachmentsV1Response>> FolderGetAttachmentsV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<FolderGetCommunicationCountV1Response> FolderGetCommunicationCountV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FolderGetCommunicationCountV1Response>> FolderGetCommunicationCountV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<FolderGetCommunicationListV1Response> FolderGetCommunicationListV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FolderGetCommunicationListV1Response>> FolderGetCommunicationListV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<FolderGetCommunicationrecipientsV1Response> FolderGetCommunicationrecipientsV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FolderGetCommunicationrecipientsV1Response>> FolderGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<FolderGetCommunicationsendersV1Response> FolderGetCommunicationsendersV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FolderGetCommunicationsendersV1Response>> FolderGetCommunicationsendersV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Folder
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FolderGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationCountV1Response</returns>
+        public FolderGetCommunicationCountV1Response FolderGetCommunicationCountV1(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationCountV1Response> localVarResponse = FolderGetCommunicationCountV1WithHttpInfo(pkiFolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<FolderGetCommunicationCountV1Response> FolderGetCommunicationCountV1WithHttpInfo(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<FolderGetCommunicationCountV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<FolderGetCommunicationCountV1Response> FolderGetCommunicationCountV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationCountV1Response> localVarResponse = await FolderGetCommunicationCountV1WithHttpInfoAsync(pkiFolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FolderGetCommunicationCountV1Response>> FolderGetCommunicationCountV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<FolderGetCommunicationCountV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationListV1Response</returns>
+        public FolderGetCommunicationListV1Response FolderGetCommunicationListV1(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationListV1Response> localVarResponse = FolderGetCommunicationListV1WithHttpInfo(pkiFolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<FolderGetCommunicationListV1Response> FolderGetCommunicationListV1WithHttpInfo(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<FolderGetCommunicationListV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<FolderGetCommunicationListV1Response> FolderGetCommunicationListV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationListV1Response> localVarResponse = await FolderGetCommunicationListV1WithHttpInfoAsync(pkiFolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FolderGetCommunicationListV1Response>> FolderGetCommunicationListV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<FolderGetCommunicationListV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationrecipientsV1Response</returns>
+        public FolderGetCommunicationrecipientsV1Response FolderGetCommunicationrecipientsV1(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationrecipientsV1Response> localVarResponse = FolderGetCommunicationrecipientsV1WithHttpInfo(pkiFolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<FolderGetCommunicationrecipientsV1Response> FolderGetCommunicationrecipientsV1WithHttpInfo(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<FolderGetCommunicationrecipientsV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<FolderGetCommunicationrecipientsV1Response> FolderGetCommunicationrecipientsV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationrecipientsV1Response> localVarResponse = await FolderGetCommunicationrecipientsV1WithHttpInfoAsync(pkiFolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FolderGetCommunicationrecipientsV1Response>> FolderGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<FolderGetCommunicationrecipientsV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>FolderGetCommunicationsendersV1Response</returns>
+        public FolderGetCommunicationsendersV1Response FolderGetCommunicationsendersV1(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationsendersV1Response> localVarResponse = FolderGetCommunicationsendersV1WithHttpInfo(pkiFolderID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of FolderGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<FolderGetCommunicationsendersV1Response> FolderGetCommunicationsendersV1WithHttpInfo(int pkiFolderID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<FolderGetCommunicationsendersV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of FolderGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<FolderGetCommunicationsendersV1Response> FolderGetCommunicationsendersV1Async(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<FolderGetCommunicationsendersV1Response> localVarResponse = await FolderGetCommunicationsendersV1WithHttpInfoAsync(pkiFolderID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiFolderID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (FolderGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<FolderGetCommunicationsendersV1Response>> FolderGetCommunicationsendersV1WithHttpInfoAsync(int pkiFolderID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiFolderID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiFolderID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectFolderApi.FolderGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<FolderGetCommunicationsendersV1Response>("/1/object/folder/{pkiFolderID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FolderGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

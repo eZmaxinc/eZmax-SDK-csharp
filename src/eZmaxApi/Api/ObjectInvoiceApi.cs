@@ -150,6 +150,37 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of InvoiceGetCommunicationsendersV1Response</returns>
         ApiResponse<InvoiceGetCommunicationsendersV1Response> InvoiceGetCommunicationsendersV1WithHttpInfo(int pkiInvoiceID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Invoice list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetListV1Response</returns>
+        InvoiceGetListV1Response InvoiceGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Invoice list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetListV1Response</returns>
+        ApiResponse<InvoiceGetListV1Response> InvoiceGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Invoice
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -332,6 +363,39 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InvoiceGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<InvoiceGetCommunicationsendersV1Response>> InvoiceGetCommunicationsendersV1WithHttpInfoAsync(int pkiInvoiceID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Invoice list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetListV1Response</returns>
+        System.Threading.Tasks.Task<InvoiceGetListV1Response> InvoiceGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Invoice list
+        /// </summary>
+        /// <remarks>
+        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvoiceGetListV1Response>> InvoiceGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Invoice
         /// </summary>
@@ -1352,6 +1416,205 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InvoiceGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InvoiceGetListV1Response</returns>
+        public InvoiceGetListV1Response InvoiceGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetListV1Response> localVarResponse = InvoiceGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InvoiceGetListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InvoiceGetListV1Response> InvoiceGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<InvoiceGetListV1Response>("/1/object/invoice/getList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InvoiceGetListV1Response</returns>
+        public async System.Threading.Tasks.Task<InvoiceGetListV1Response> InvoiceGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<InvoiceGetListV1Response> localVarResponse = await InvoiceGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Invoice list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eInvoiceType | Commission&lt;br&gt;CommissionAdvance&lt;br&gt;Financed&lt;br&gt;Manual&lt;br&gt;Monthly |
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
+        /// <param name="iRowMax"> (optional)</param>
+        /// <param name="iRowOffset"> (optional, default to 0)</param>
+        /// <param name="acceptLanguage"> (optional)</param>
+        /// <param name="sFilter"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InvoiceGetListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InvoiceGetListV1Response>> InvoiceGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (eOrderBy != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
+            }
+            if (iRowMax != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
+            }
+            if (iRowOffset != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
+            }
+            if (sFilter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
+            }
+            if (acceptLanguage != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
+            }
+
+            localVarRequestOptions.Operation = "ObjectInvoiceApi.InvoiceGetListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<InvoiceGetListV1Response>("/1/object/invoice/getList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InvoiceGetListV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -43,8 +43,9 @@ namespace eZmaxApi.Model
         /// <param name="sContacttitleNameX">The name of the Contacttitle in the language of the requester.</param>
         /// <param name="sUserLastname">The last name of the user (required).</param>
         /// <param name="sUserFirstname">The first name of the user (required).</param>
+        /// <param name="sUserLoginname">The login name of the User..</param>
         /// <param name="sUserJobtitle">The job title of the user.</param>
-        public CustomUserNameResponse(string sContacttitleNameX = default, string sUserLastname = default, string sUserFirstname = default, string sUserJobtitle = default)
+        public CustomUserNameResponse(string sContacttitleNameX = default, string sUserLastname = default, string sUserFirstname = default, string sUserLoginname = default, string sUserJobtitle = default)
         {
             // to ensure "sUserLastname" is required (not null)
             if (sUserLastname == null)
@@ -59,6 +60,7 @@ namespace eZmaxApi.Model
             }
             this.SUserFirstname = sUserFirstname;
             this.SContacttitleNameX = sContacttitleNameX;
+            this.SUserLoginname = sUserLoginname;
             this.SUserJobtitle = sUserJobtitle;
         }
 
@@ -93,6 +95,16 @@ namespace eZmaxApi.Model
         public string SUserFirstname { get; set; }
 
         /// <summary>
+        /// The login name of the User.
+        /// </summary>
+        /// <value>The login name of the User.</value>
+        /*
+        <example>JohnDoe</example>
+        */
+        [DataMember(Name = "sUserLoginname", EmitDefaultValue = false)]
+        public string SUserLoginname { get; set; }
+
+        /// <summary>
         /// The job title of the user
         /// </summary>
         /// <value>The job title of the user</value>
@@ -113,6 +125,7 @@ namespace eZmaxApi.Model
             sb.Append("  SContacttitleNameX: ").Append(SContacttitleNameX).Append("\n");
             sb.Append("  SUserLastname: ").Append(SUserLastname).Append("\n");
             sb.Append("  SUserFirstname: ").Append(SUserFirstname).Append("\n");
+            sb.Append("  SUserLoginname: ").Append(SUserLoginname).Append("\n");
             sb.Append("  SUserJobtitle: ").Append(SUserJobtitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -140,6 +153,15 @@ namespace eZmaxApi.Model
                 if (!regexSContacttitleNameX.Match(this.SContacttitleNameX).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SContacttitleNameX, must match a pattern of " + regexSContacttitleNameX, new [] { "SContacttitleNameX" });
+                }
+            }
+
+            if (this.SUserLoginname != null) {
+                // SUserLoginname (string) pattern
+                Regex regexSUserLoginname = new Regex(@"^(?:([\w.%+\-!#$%&'*+\/=?^`{|}~]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20})|([a-zA-Z0-9]){1,32})$", RegexOptions.CultureInvariant);
+                if (!regexSUserLoginname.Match(this.SUserLoginname).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SUserLoginname, must match a pattern of " + regexSUserLoginname, new [] { "SUserLoginname" });
                 }
             }
 

@@ -15,7 +15,8 @@ namespace eZmaxApi.Api
 		////////////////////////////////////////////////////////////////////////////////
 		public static void injectSecurityHeaders(IReadableConfiguration configuration,
                                                             RestRequest request,
-                                                                 String jsonBody) 
+                                                                 String jsonBody,
+                                                                 String url) 
         {
             //Get required "Autorization" & possible "Secret"
             //If no secret is defined, we skiped all the processing 
@@ -33,7 +34,7 @@ namespace eZmaxApi.Api
 
 	        //We need to recreate the full URL
 	        //////////////////////////////////
-            var sURL =  eZmaxApi.Client.GlobalConfiguration.Instance.BasePath;
+            var sURL = url;
             sURL += request.Resource.ToString();
 
 

@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of LeadGetAttachmentsV1Response</returns>
         ApiResponse<LeadGetAttachmentsV1Response> LeadGetAttachmentsV1WithHttpInfo(int pkiLeadID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationCountV1Response</returns>
+        LeadGetCommunicationCountV1Response LeadGetCommunicationCountV1(int pkiLeadID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationCountV1Response</returns>
+        ApiResponse<LeadGetCommunicationCountV1Response> LeadGetCommunicationCountV1WithHttpInfo(int pkiLeadID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationListV1Response</returns>
+        LeadGetCommunicationListV1Response LeadGetCommunicationListV1(int pkiLeadID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationListV1Response</returns>
+        ApiResponse<LeadGetCommunicationListV1Response> LeadGetCommunicationListV1WithHttpInfo(int pkiLeadID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationrecipientsV1Response</returns>
+        LeadGetCommunicationrecipientsV1Response LeadGetCommunicationrecipientsV1(int pkiLeadID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<LeadGetCommunicationrecipientsV1Response> LeadGetCommunicationrecipientsV1WithHttpInfo(int pkiLeadID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationsendersV1Response</returns>
+        LeadGetCommunicationsendersV1Response LeadGetCommunicationsendersV1(int pkiLeadID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationsendersV1Response</returns>
+        ApiResponse<LeadGetCommunicationsendersV1Response> LeadGetCommunicationsendersV1WithHttpInfo(int pkiLeadID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Lead list
         /// </summary>
         /// <remarks>
@@ -183,6 +263,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (LeadGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<LeadGetAttachmentsV1Response>> LeadGetAttachmentsV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<LeadGetCommunicationCountV1Response> LeadGetCommunicationCountV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadGetCommunicationCountV1Response>> LeadGetCommunicationCountV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<LeadGetCommunicationListV1Response> LeadGetCommunicationListV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadGetCommunicationListV1Response>> LeadGetCommunicationListV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<LeadGetCommunicationrecipientsV1Response> LeadGetCommunicationrecipientsV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadGetCommunicationrecipientsV1Response>> LeadGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<LeadGetCommunicationsendersV1Response> LeadGetCommunicationsendersV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LeadGetCommunicationsendersV1Response>> LeadGetCommunicationsendersV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve Lead list
         /// </summary>
@@ -664,6 +844,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("LeadGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationCountV1Response</returns>
+        public LeadGetCommunicationCountV1Response LeadGetCommunicationCountV1(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationCountV1Response> localVarResponse = LeadGetCommunicationCountV1WithHttpInfo(pkiLeadID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<LeadGetCommunicationCountV1Response> LeadGetCommunicationCountV1WithHttpInfo(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<LeadGetCommunicationCountV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<LeadGetCommunicationCountV1Response> LeadGetCommunicationCountV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationCountV1Response> localVarResponse = await LeadGetCommunicationCountV1WithHttpInfoAsync(pkiLeadID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<LeadGetCommunicationCountV1Response>> LeadGetCommunicationCountV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<LeadGetCommunicationCountV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationListV1Response</returns>
+        public LeadGetCommunicationListV1Response LeadGetCommunicationListV1(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationListV1Response> localVarResponse = LeadGetCommunicationListV1WithHttpInfo(pkiLeadID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<LeadGetCommunicationListV1Response> LeadGetCommunicationListV1WithHttpInfo(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<LeadGetCommunicationListV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<LeadGetCommunicationListV1Response> LeadGetCommunicationListV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationListV1Response> localVarResponse = await LeadGetCommunicationListV1WithHttpInfoAsync(pkiLeadID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<LeadGetCommunicationListV1Response>> LeadGetCommunicationListV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<LeadGetCommunicationListV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationrecipientsV1Response</returns>
+        public LeadGetCommunicationrecipientsV1Response LeadGetCommunicationrecipientsV1(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationrecipientsV1Response> localVarResponse = LeadGetCommunicationrecipientsV1WithHttpInfo(pkiLeadID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<LeadGetCommunicationrecipientsV1Response> LeadGetCommunicationrecipientsV1WithHttpInfo(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<LeadGetCommunicationrecipientsV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<LeadGetCommunicationrecipientsV1Response> LeadGetCommunicationrecipientsV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationrecipientsV1Response> localVarResponse = await LeadGetCommunicationrecipientsV1WithHttpInfoAsync(pkiLeadID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<LeadGetCommunicationrecipientsV1Response>> LeadGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<LeadGetCommunicationrecipientsV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>LeadGetCommunicationsendersV1Response</returns>
+        public LeadGetCommunicationsendersV1Response LeadGetCommunicationsendersV1(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationsendersV1Response> localVarResponse = LeadGetCommunicationsendersV1WithHttpInfo(pkiLeadID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of LeadGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<LeadGetCommunicationsendersV1Response> LeadGetCommunicationsendersV1WithHttpInfo(int pkiLeadID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<LeadGetCommunicationsendersV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of LeadGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<LeadGetCommunicationsendersV1Response> LeadGetCommunicationsendersV1Async(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<LeadGetCommunicationsendersV1Response> localVarResponse = await LeadGetCommunicationsendersV1WithHttpInfoAsync(pkiLeadID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiLeadID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (LeadGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<LeadGetCommunicationsendersV1Response>> LeadGetCommunicationsendersV1WithHttpInfoAsync(int pkiLeadID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiLeadID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiLeadID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectLeadApi.LeadGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<LeadGetCommunicationsendersV1Response>("/1/object/lead/{pkiLeadID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("LeadGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

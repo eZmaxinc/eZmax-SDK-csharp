@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Request for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+    /// Request for POST /1/object/attachment/{pkiAttachmentID}/validate
     /// </summary>
     [DataContract(Name = "attachment-validate-v1-Request")]
     public partial class AttachmentValidateV1Request : IValidatableObject
@@ -46,11 +46,68 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AttachmentValidateV1Request" /> class.
         /// </summary>
+        /// <param name="fkiAttachmentrejectreasonID">The unique ID of the Attachmentrejectreason.</param>
         /// <param name="eAttachmentVerified">eAttachmentVerified (required).</param>
-        public AttachmentValidateV1Request(FieldEAttachmentVerified eAttachmentVerified = default)
+        /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
+        /// <param name="aSNotificationEmailAddress">A list of email addresses to send a rejection notification to..</param>
+        /// <param name="tNotificationMessage">The email body to send to the notification recipients..</param>
+        /// <param name="bNotificationIncludeAttachment">Should a copy of the attachment be included in the email..</param>
+        public AttachmentValidateV1Request(int fkiAttachmentrejectreasonID = default, FieldEAttachmentVerified eAttachmentVerified = default, string tAttachmentRejectioncomment = default, List<string> aSNotificationEmailAddress = default, string tNotificationMessage = default, bool bNotificationIncludeAttachment = default)
         {
             this.EAttachmentVerified = eAttachmentVerified;
+            this.FkiAttachmentrejectreasonID = fkiAttachmentrejectreasonID;
+            this.TAttachmentRejectioncomment = tAttachmentRejectioncomment;
+            this.ASNotificationEmailAddress = aSNotificationEmailAddress;
+            this.TNotificationMessage = tNotificationMessage;
+            this.BNotificationIncludeAttachment = bNotificationIncludeAttachment;
         }
+
+        /// <summary>
+        /// The unique ID of the Attachmentrejectreason
+        /// </summary>
+        /// <value>The unique ID of the Attachmentrejectreason</value>
+        /*
+        <example>41</example>
+        */
+        [DataMember(Name = "fkiAttachmentrejectreasonID", EmitDefaultValue = false)]
+        public int FkiAttachmentrejectreasonID { get; set; }
+
+        /// <summary>
+        /// The rejectioncomment of the Attachment
+        /// </summary>
+        /// <value>The rejectioncomment of the Attachment</value>
+        /*
+        <example>Unreadable</example>
+        */
+        [DataMember(Name = "tAttachmentRejectioncomment", EmitDefaultValue = false)]
+        public string TAttachmentRejectioncomment { get; set; }
+
+        /// <summary>
+        /// A list of email addresses to send a rejection notification to.
+        /// </summary>
+        /// <value>A list of email addresses to send a rejection notification to.</value>
+        [DataMember(Name = "a_sNotificationEmailAddress", EmitDefaultValue = false)]
+        public List<string> ASNotificationEmailAddress { get; set; }
+
+        /// <summary>
+        /// The email body to send to the notification recipients.
+        /// </summary>
+        /// <value>The email body to send to the notification recipients.</value>
+        /*
+        <example>The attached document was rejected.</example>
+        */
+        [DataMember(Name = "tNotificationMessage", EmitDefaultValue = false)]
+        public string TNotificationMessage { get; set; }
+
+        /// <summary>
+        /// Should a copy of the attachment be included in the email.
+        /// </summary>
+        /// <value>Should a copy of the attachment be included in the email.</value>
+        /*
+        <example>false</example>
+        */
+        [DataMember(Name = "bNotificationIncludeAttachment", EmitDefaultValue = true)]
+        public bool BNotificationIncludeAttachment { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,7 +117,12 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AttachmentValidateV1Request {\n");
+            sb.Append("  FkiAttachmentrejectreasonID: ").Append(FkiAttachmentrejectreasonID).Append("\n");
             sb.Append("  EAttachmentVerified: ").Append(EAttachmentVerified).Append("\n");
+            sb.Append("  TAttachmentRejectioncomment: ").Append(TAttachmentRejectioncomment).Append("\n");
+            sb.Append("  ASNotificationEmailAddress: ").Append(ASNotificationEmailAddress).Append("\n");
+            sb.Append("  TNotificationMessage: ").Append(TNotificationMessage).Append("\n");
+            sb.Append("  BNotificationIncludeAttachment: ").Append(BNotificationIncludeAttachment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -81,6 +143,36 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FkiAttachmentrejectreasonID (int) maximum
+            if (this.FkiAttachmentrejectreasonID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiAttachmentrejectreasonID, must be a value less than or equal to 255.", new [] { "FkiAttachmentrejectreasonID" });
+            }
+
+            // FkiAttachmentrejectreasonID (int) minimum
+            if (this.FkiAttachmentrejectreasonID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiAttachmentrejectreasonID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentrejectreasonID" });
+            }
+
+            if (this.TAttachmentRejectioncomment != null) {
+                // TAttachmentRejectioncomment (string) pattern
+                Regex regexTAttachmentRejectioncomment = new Regex(@"^.{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexTAttachmentRejectioncomment.Match(this.TAttachmentRejectioncomment).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TAttachmentRejectioncomment, must match a pattern of " + regexTAttachmentRejectioncomment, new [] { "TAttachmentRejectioncomment" });
+                }
+            }
+
+            if (this.TNotificationMessage != null) {
+                // TNotificationMessage (string) pattern
+                Regex regexTNotificationMessage = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexTNotificationMessage.Match(this.TNotificationMessage).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TNotificationMessage, must match a pattern of " + regexTNotificationMessage, new [] { "TNotificationMessage" });
+                }
+            }
+
             yield break;
         }
     }
