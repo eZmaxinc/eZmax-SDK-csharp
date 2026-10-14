@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **FkiBuyercontractID** | **int** | The unique ID of the Buyercontract | [optional] 
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | [optional] 
 **FkiInscriptionID** | **int** | The unique ID of the Inscription. | [optional] 
+**FkiInscriptionnotauthenticatedID** | **int** | The unique ID of the Inscriptionnotauthenticated. | [optional] 
 **FkiInscriptiontempID** | **int** | The unique ID of the Inscriptiontemp | [optional] 
 **FkiInvoiceID** | **int** | The unique ID of the Invoice. | [optional] 
 **FkiOtherincomeID** | **int** | The unique ID of the Otherincome | [optional] 

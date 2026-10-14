@@ -86,7 +86,9 @@ namespace eZmaxApi.Model
         /// <param name="eActivesessionOrigin">eActivesessionOrigin (required).</param>
         /// <param name="eActivesessionWeekdaystart">eActivesessionWeekdaystart (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
+        /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
         /// <param name="sCompanyNameX">The Name of the Company in the language of the requester (required).</param>
+        /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
@@ -101,18 +103,20 @@ namespace eZmaxApi.Model
         /// <param name="pksCustomerCode">The customer code assigned to your account (required).</param>
         /// <param name="fkiSystemconfigurationtypeID">The unique ID of the Systemconfigurationtype (required).</param>
         /// <param name="fkiSignatureID">The unique ID of the Signature.</param>
-        public ActivesessionResponse(FieldEActivesessionUsertype eActivesessionUsertype = default, FieldEActivesessionOrigin eActivesessionOrigin = default, FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default, int fkiLanguageID = default, string sCompanyNameX = default, string sDepartmentNameX = default, bool bActivesessionDebug = default, bool bActivesessionIssuperadmin = default, bool bActivesessionAttachment = default, bool bActivesessionCanafe = default, bool bActivesessionFinancial = default, bool bActivesessionRealestatecompleted = default, FieldEActivesessionEzsign? eActivesessionEzsign = default, FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default, FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default, FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default, string pksCustomerCode = default, int fkiSystemconfigurationtypeID = default, int fkiSignatureID = default)
+        public ActivesessionResponse(FieldEActivesessionUsertype eActivesessionUsertype = default, FieldEActivesessionOrigin eActivesessionOrigin = default, FieldEActivesessionWeekdaystart eActivesessionWeekdaystart = default, int fkiLanguageID = default, int fkiCompanyID = default, string sCompanyNameX = default, int fkiDepartmentID = default, string sDepartmentNameX = default, bool bActivesessionDebug = default, bool bActivesessionIssuperadmin = default, bool bActivesessionAttachment = default, bool bActivesessionCanafe = default, bool bActivesessionFinancial = default, bool bActivesessionRealestatecompleted = default, FieldEActivesessionEzsign? eActivesessionEzsign = default, FieldEActivesessionEzsignaccess eActivesessionEzsignaccess = default, FieldEActivesessionEzsignprepaid? eActivesessionEzsignprepaid = default, FieldEActivesessionRealestateinprogress? eActivesessionRealestateinprogress = default, string pksCustomerCode = default, int fkiSystemconfigurationtypeID = default, int fkiSignatureID = default)
         {
             this.EActivesessionUsertype = eActivesessionUsertype;
             this.EActivesessionOrigin = eActivesessionOrigin;
             this.EActivesessionWeekdaystart = eActivesessionWeekdaystart;
             this.FkiLanguageID = fkiLanguageID;
+            this.FkiCompanyID = fkiCompanyID;
             // to ensure "sCompanyNameX" is required (not null)
             if (sCompanyNameX == null)
             {
                 throw new ArgumentNullException("sCompanyNameX is a required property for ActivesessionResponse and cannot be null");
             }
             this.SCompanyNameX = sCompanyNameX;
+            this.FkiDepartmentID = fkiDepartmentID;
             // to ensure "sDepartmentNameX" is required (not null)
             if (sDepartmentNameX == null)
             {
@@ -150,6 +154,16 @@ namespace eZmaxApi.Model
         public int FkiLanguageID { get; set; }
 
         /// <summary>
+        /// The unique ID of the Company
+        /// </summary>
+        /// <value>The unique ID of the Company</value>
+        /*
+        <example>1</example>
+        */
+        [DataMember(Name = "fkiCompanyID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiCompanyID { get; set; }
+
+        /// <summary>
         /// The Name of the Company in the language of the requester
         /// </summary>
         /// <value>The Name of the Company in the language of the requester</value>
@@ -158,6 +172,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "sCompanyNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SCompanyNameX { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Department
+        /// </summary>
+        /// <value>The unique ID of the Department</value>
+        /*
+        <example>21</example>
+        */
+        [DataMember(Name = "fkiDepartmentID", IsRequired = true, EmitDefaultValue = true)]
+        public int FkiDepartmentID { get; set; }
 
         /// <summary>
         /// The Name of the Department in the language of the requester
@@ -271,7 +295,9 @@ namespace eZmaxApi.Model
             sb.Append("  EActivesessionOrigin: ").Append(EActivesessionOrigin).Append("\n");
             sb.Append("  EActivesessionWeekdaystart: ").Append(EActivesessionWeekdaystart).Append("\n");
             sb.Append("  FkiLanguageID: ").Append(FkiLanguageID).Append("\n");
+            sb.Append("  FkiCompanyID: ").Append(FkiCompanyID).Append("\n");
             sb.Append("  SCompanyNameX: ").Append(SCompanyNameX).Append("\n");
+            sb.Append("  FkiDepartmentID: ").Append(FkiDepartmentID).Append("\n");
             sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
             sb.Append("  BActivesessionDebug: ").Append(BActivesessionDebug).Append("\n");
             sb.Append("  BActivesessionIssuperadmin: ").Append(BActivesessionIssuperadmin).Append("\n");
@@ -316,6 +342,24 @@ namespace eZmaxApi.Model
             if (this.FkiLanguageID < (int)1)
             {
                 yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+            }
+
+            // FkiCompanyID (int) maximum
+            if (this.FkiCompanyID > (int)255)
+            {
+                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
+            }
+
+            // FkiCompanyID (int) minimum
+            if (this.FkiCompanyID < (int)1)
+            {
+                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
+            }
+
+            // FkiDepartmentID (int) minimum
+            if (this.FkiDepartmentID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             // PksCustomerCode (string) maxLength

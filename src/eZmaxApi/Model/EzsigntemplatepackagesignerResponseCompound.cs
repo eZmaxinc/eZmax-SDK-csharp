@@ -244,9 +244,9 @@ namespace eZmaxApi.Model
             }
 
             // FkiUsergroupID (int) maximum
-            if (this.FkiUsergroupID > (int)255)
+            if (this.FkiUsergroupID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 255.", new [] { "FkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 65535.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum

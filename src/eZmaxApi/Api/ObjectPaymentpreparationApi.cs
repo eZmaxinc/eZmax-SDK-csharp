@@ -70,6 +70,86 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of PaymentpreparationGetAttachmentsV1Response</returns>
         ApiResponse<PaymentpreparationGetAttachmentsV1Response> PaymentpreparationGetAttachmentsV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationCountV1Response</returns>
+        PaymentpreparationGetCommunicationCountV1Response PaymentpreparationGetCommunicationCountV1(int pkiPaymentpreparationID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationCountV1Response</returns>
+        ApiResponse<PaymentpreparationGetCommunicationCountV1Response> PaymentpreparationGetCommunicationCountV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationListV1Response</returns>
+        PaymentpreparationGetCommunicationListV1Response PaymentpreparationGetCommunicationListV1(int pkiPaymentpreparationID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationListV1Response</returns>
+        ApiResponse<PaymentpreparationGetCommunicationListV1Response> PaymentpreparationGetCommunicationListV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        PaymentpreparationGetCommunicationrecipientsV1Response PaymentpreparationGetCommunicationrecipientsV1(int pkiPaymentpreparationID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response> PaymentpreparationGetCommunicationrecipientsV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationsendersV1Response</returns>
+        PaymentpreparationGetCommunicationsendersV1Response PaymentpreparationGetCommunicationsendersV1(int pkiPaymentpreparationID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationsendersV1Response</returns>
+        ApiResponse<PaymentpreparationGetCommunicationsendersV1Response> PaymentpreparationGetCommunicationsendersV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0);
+        /// <summary>
         /// Import attachments into the Paymentpreparation
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -152,6 +232,106 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PaymentpreparationGetAttachmentsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<PaymentpreparationGetAttachmentsV1Response>> PaymentpreparationGetAttachmentsV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationCountV1Response</returns>
+        System.Threading.Tasks.Task<PaymentpreparationGetCommunicationCountV1Response> PaymentpreparationGetCommunicationCountV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication count
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationCountV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymentpreparationGetCommunicationCountV1Response>> PaymentpreparationGetCommunicationCountV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationListV1Response</returns>
+        System.Threading.Tasks.Task<PaymentpreparationGetCommunicationListV1Response> PaymentpreparationGetCommunicationListV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationListV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymentpreparationGetCommunicationListV1Response>> PaymentpreparationGetCommunicationListV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        System.Threading.Tasks.Task<PaymentpreparationGetCommunicationrecipientsV1Response> PaymentpreparationGetCommunicationrecipientsV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication recipients
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationrecipientsV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response>> PaymentpreparationGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationsendersV1Response</returns>
+        System.Threading.Tasks.Task<PaymentpreparationGetCommunicationsendersV1Response> PaymentpreparationGetCommunicationsendersV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Communication senders
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationsendersV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymentpreparationGetCommunicationsendersV1Response>> PaymentpreparationGetCommunicationsendersV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Import attachments into the Paymentpreparation
         /// </summary>
@@ -600,6 +780,578 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("PaymentpreparationGetAttachmentsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationCountV1Response</returns>
+        public PaymentpreparationGetCommunicationCountV1Response PaymentpreparationGetCommunicationCountV1(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationCountV1Response> localVarResponse = PaymentpreparationGetCommunicationCountV1WithHttpInfo(pkiPaymentpreparationID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationCountV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationCountV1Response> PaymentpreparationGetCommunicationCountV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<PaymentpreparationGetCommunicationCountV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationCountV1Response</returns>
+        public async System.Threading.Tasks.Task<PaymentpreparationGetCommunicationCountV1Response> PaymentpreparationGetCommunicationCountV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationCountV1Response> localVarResponse = await PaymentpreparationGetCommunicationCountV1WithHttpInfoAsync(pkiPaymentpreparationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication count 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationCountV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationCountV1Response>> PaymentpreparationGetCommunicationCountV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationCountV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentpreparationGetCommunicationCountV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationCount", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationCountV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationListV1Response</returns>
+        public PaymentpreparationGetCommunicationListV1Response PaymentpreparationGetCommunicationListV1(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationListV1Response> localVarResponse = PaymentpreparationGetCommunicationListV1WithHttpInfo(pkiPaymentpreparationID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationListV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationListV1Response> PaymentpreparationGetCommunicationListV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<PaymentpreparationGetCommunicationListV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationListV1Response</returns>
+        public async System.Threading.Tasks.Task<PaymentpreparationGetCommunicationListV1Response> PaymentpreparationGetCommunicationListV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationListV1Response> localVarResponse = await PaymentpreparationGetCommunicationListV1WithHttpInfoAsync(pkiPaymentpreparationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication list 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationListV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationListV1Response>> PaymentpreparationGetCommunicationListV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationListV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentpreparationGetCommunicationListV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationListV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        public PaymentpreparationGetCommunicationrecipientsV1Response PaymentpreparationGetCommunicationrecipientsV1(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response> localVarResponse = PaymentpreparationGetCommunicationrecipientsV1WithHttpInfo(pkiPaymentpreparationID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response> PaymentpreparationGetCommunicationrecipientsV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<PaymentpreparationGetCommunicationrecipientsV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationrecipientsV1Response</returns>
+        public async System.Threading.Tasks.Task<PaymentpreparationGetCommunicationrecipientsV1Response> PaymentpreparationGetCommunicationrecipientsV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response> localVarResponse = await PaymentpreparationGetCommunicationrecipientsV1WithHttpInfoAsync(pkiPaymentpreparationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication recipients 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationrecipientsV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationrecipientsV1Response>> PaymentpreparationGetCommunicationrecipientsV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationrecipientsV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentpreparationGetCommunicationrecipientsV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationrecipientsV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>PaymentpreparationGetCommunicationsendersV1Response</returns>
+        public PaymentpreparationGetCommunicationsendersV1Response PaymentpreparationGetCommunicationsendersV1(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationsendersV1Response> localVarResponse = PaymentpreparationGetCommunicationsendersV1WithHttpInfo(pkiPaymentpreparationID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of PaymentpreparationGetCommunicationsendersV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationsendersV1Response> PaymentpreparationGetCommunicationsendersV1WithHttpInfo(int pkiPaymentpreparationID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<PaymentpreparationGetCommunicationsendersV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationsendersV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentpreparationGetCommunicationsendersV1Response</returns>
+        public async System.Threading.Tasks.Task<PaymentpreparationGetCommunicationsendersV1Response> PaymentpreparationGetCommunicationsendersV1Async(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationsendersV1Response> localVarResponse = await PaymentpreparationGetCommunicationsendersV1WithHttpInfoAsync(pkiPaymentpreparationID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Communication senders 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiPaymentpreparationID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentpreparationGetCommunicationsendersV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<PaymentpreparationGetCommunicationsendersV1Response>> PaymentpreparationGetCommunicationsendersV1WithHttpInfoAsync(int pkiPaymentpreparationID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiPaymentpreparationID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiPaymentpreparationID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectPaymentpreparationApi.PaymentpreparationGetCommunicationsendersV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentpreparationGetCommunicationsendersV1Response>("/1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("PaymentpreparationGetCommunicationsendersV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

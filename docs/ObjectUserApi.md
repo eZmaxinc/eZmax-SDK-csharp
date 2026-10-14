@@ -610,7 +610,7 @@ catch (ApiException e)
 
 <a id="usergetautocompletev2"></a>
 # **UserGetAutocompleteV2**
-> UserGetAutocompleteV2Response UserGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
+> UserGetAutocompleteV2Response UserGetAutocompleteV2 (string sSelector, string? eFilterActive = null, string? fkiAttachmentID = null, string? sQuery = null, HeaderAcceptLanguage? acceptLanguage = null)
 
 Retrieve Users and IDs
 
@@ -640,13 +640,14 @@ namespace Example
             var apiInstance = new ObjectUserApi(config);
             var sSelector = "AgentBrokerAssistant";  // string | The type of Users to return
             var eFilterActive = "All";  // string? | Specify which results we want to display. (optional)  (default to Active)
+            var fkiAttachmentID = "fkiAttachmentID_example";  // string? | Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional) 
             var sQuery = "sQuery_example";  // string? | Allow to filter the returned results (optional) 
             var acceptLanguage = new HeaderAcceptLanguage?(); // HeaderAcceptLanguage? |  (optional) 
 
             try
             {
                 // Retrieve Users and IDs
-                UserGetAutocompleteV2Response result = apiInstance.UserGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+                UserGetAutocompleteV2Response result = apiInstance.UserGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -667,7 +668,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Retrieve Users and IDs
-    ApiResponse<UserGetAutocompleteV2Response> response = apiInstance.UserGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    ApiResponse<UserGetAutocompleteV2Response> response = apiInstance.UserGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -686,6 +687,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **sSelector** | **string** | The type of Users to return |  |
 | **eFilterActive** | **string?** | Specify which results we want to display. | [optional] [default to Active] |
+| **fkiAttachmentID** | **string?** | Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. | [optional]  |
 | **sQuery** | **string?** | Allow to filter the returned results | [optional]  |
 | **acceptLanguage** | [**HeaderAcceptLanguage?**](HeaderAcceptLanguage?.md) |  | [optional]  |
 

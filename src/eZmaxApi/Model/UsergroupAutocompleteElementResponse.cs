@@ -126,9 +126,9 @@ namespace eZmaxApi.Model
             }
 
             // PkiUsergroupID (int) maximum
-            if (this.PkiUsergroupID > (int)255)
+            if (this.PkiUsergroupID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 255.", new [] { "PkiUsergroupID" });
+                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupID" });
             }
 
             // PkiUsergroupID (int) minimum

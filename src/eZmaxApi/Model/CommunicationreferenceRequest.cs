@@ -39,17 +39,19 @@ namespace eZmaxApi.Model
         /// <param name="fkiBuyercontractID">The unique ID of the Buyercontract.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
         /// <param name="fkiInscriptionID">The unique ID of the Inscription..</param>
+        /// <param name="fkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated..</param>
         /// <param name="fkiInscriptiontempID">The unique ID of the Inscriptiontemp.</param>
         /// <param name="fkiInvoiceID">The unique ID of the Invoice..</param>
         /// <param name="fkiOtherincomeID">The unique ID of the Otherincome.</param>
         /// <param name="fkiElectronicfundstransferID">The unique ID of the Electronicfundstransfer.</param>
         /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
-        public CommunicationreferenceRequest(int pkiCommunicationreferenceID = default, int fkiBuyercontractID = default, int fkiEzsignfolderID = default, int fkiInscriptionID = default, int fkiInscriptiontempID = default, int fkiInvoiceID = default, int fkiOtherincomeID = default, int fkiElectronicfundstransferID = default, int fkiRejectedoffertopurchaseID = default)
+        public CommunicationreferenceRequest(int pkiCommunicationreferenceID = default, int fkiBuyercontractID = default, int fkiEzsignfolderID = default, int fkiInscriptionID = default, int fkiInscriptionnotauthenticatedID = default, int fkiInscriptiontempID = default, int fkiInvoiceID = default, int fkiOtherincomeID = default, int fkiElectronicfundstransferID = default, int fkiRejectedoffertopurchaseID = default)
         {
             this.PkiCommunicationreferenceID = pkiCommunicationreferenceID;
             this.FkiBuyercontractID = fkiBuyercontractID;
             this.FkiEzsignfolderID = fkiEzsignfolderID;
             this.FkiInscriptionID = fkiInscriptionID;
+            this.FkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
             this.FkiInscriptiontempID = fkiInscriptiontempID;
             this.FkiInvoiceID = fkiInvoiceID;
             this.FkiOtherincomeID = fkiOtherincomeID;
@@ -96,6 +98,16 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiInscriptionID", EmitDefaultValue = false)]
         public int FkiInscriptionID { get; set; }
+
+        /// <summary>
+        /// The unique ID of the Inscriptionnotauthenticated.
+        /// </summary>
+        /// <value>The unique ID of the Inscriptionnotauthenticated.</value>
+        /*
+        <example>24</example>
+        */
+        [DataMember(Name = "fkiInscriptionnotauthenticatedID", EmitDefaultValue = false)]
+        public int FkiInscriptionnotauthenticatedID { get; set; }
 
         /// <summary>
         /// The unique ID of the Inscriptiontemp
@@ -159,6 +171,7 @@ namespace eZmaxApi.Model
             sb.Append("  FkiBuyercontractID: ").Append(FkiBuyercontractID).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");
             sb.Append("  FkiInscriptionID: ").Append(FkiInscriptionID).Append("\n");
+            sb.Append("  FkiInscriptionnotauthenticatedID: ").Append(FkiInscriptionnotauthenticatedID).Append("\n");
             sb.Append("  FkiInscriptiontempID: ").Append(FkiInscriptiontempID).Append("\n");
             sb.Append("  FkiInvoiceID: ").Append(FkiInvoiceID).Append("\n");
             sb.Append("  FkiOtherincomeID: ").Append(FkiOtherincomeID).Append("\n");
@@ -218,6 +231,12 @@ namespace eZmaxApi.Model
             if (this.FkiInscriptionID < (int)0)
             {
                 yield return new ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
+            }
+
+            // FkiInscriptionnotauthenticatedID (int) minimum
+            if (this.FkiInscriptionnotauthenticatedID < (int)0)
+            {
+                yield return new ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
             }
 
             // FkiInscriptiontempID (int) maximum

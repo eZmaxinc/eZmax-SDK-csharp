@@ -54,44 +54,44 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiCustomerID">The unique ID of the Customer. (required).</param>
         /// <param name="fkiCompanyID">The unique ID of the Company (required).</param>
-        /// <param name="fkiCustomergroupID">The unique ID of the Customergroup (required).</param>
+        /// <param name="fkiCustomergroupID">The unique ID of the Customergroup.</param>
         /// <param name="sCustomerName">The name of the Customer (required).</param>
         /// <param name="sCustomerNote">A note for the Customer.</param>
         /// <param name="fkiContactinformationsID">The unique ID of the Contactinformations (required).</param>
         /// <param name="fkiContactcontainerID">The unique ID of the Contactcontainer (required).</param>
-        /// <param name="fkiImageID">The unique ID of the Image (required).</param>
+        /// <param name="fkiImageID">The unique ID of the Image.</param>
         /// <param name="fkiGlaccountcontainerID">The unique ID of the Glaccountcontainer (required).</param>
         /// <param name="fkiLanguageID">The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| (required).</param>
         /// <param name="fkiDepartmentID">The unique ID of the Department (required).</param>
         /// <param name="fkiPaymentmethodID">The unique ID of the Paymentmethod (required).</param>
-        /// <param name="fkiElectronicfundstransferbankaccountID">The unique ID of the Electronicfundstransferbankaccount (required).</param>
-        /// <param name="fkiElectronicfundstransferbankaccountIDDirectdebit">The unique ID of the Electronicfundstransferbankaccount (required).</param>
+        /// <param name="fkiElectronicfundstransferbankaccountID">The unique ID of the Electronicfundstransferbankaccount.</param>
+        /// <param name="fkiElectronicfundstransferbankaccountIDDirectdebit">The unique ID of the Electronicfundstransferbankaccount.</param>
         /// <param name="fkiSendingmethodID">The unique ID of the Sendingmethod (required).</param>
         /// <param name="fkiTaxassignmentID">The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable| (required).</param>
         /// <param name="fkiAttendancestatusID">The unique ID of the Attendancestatus (required).</param>
-        /// <param name="fkiAgentIDVariableexpensechargeto">The unique ID of the Agent. (required).</param>
-        /// <param name="fkiBrokerIDVariableexpensechargeto">The unique ID of the Broker. (required).</param>
-        /// <param name="fkiCustomerIDVariableexpensechargeto">The unique ID of the Customer. (required).</param>
-        /// <param name="fkiGlaccountcontainerIDVariableexpensechargeto">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="fkiAgentIDSupplychargechargeto">The unique ID of the Agent. (required).</param>
-        /// <param name="fkiBrokerIDSupplychargechargeto">The unique ID of the Broker. (required).</param>
-        /// <param name="fkiCustomerIDSupplychargechargeto">The unique ID of the Customer. (required).</param>
-        /// <param name="fkiGlaccountcontainerIDSupplychargechargeto">The unique ID of the Glaccountcontainer (required).</param>
-        /// <param name="fkiInvoicealternatelogoID">The unique ID of the Invoicealternatelogo (required).</param>
-        /// <param name="fkiSynchronizationlinkserverID">The unique ID of the Synchronizationlinkserver (required).</param>
+        /// <param name="fkiAgentIDVariableexpensechargeto">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerIDVariableexpensechargeto">The unique ID of the Broker..</param>
+        /// <param name="fkiCustomerIDVariableexpensechargeto">The unique ID of the Customer..</param>
+        /// <param name="fkiGlaccountcontainerIDVariableexpensechargeto">The unique ID of the Glaccountcontainer.</param>
+        /// <param name="fkiAgentIDSupplychargechargeto">The unique ID of the Agent..</param>
+        /// <param name="fkiBrokerIDSupplychargechargeto">The unique ID of the Broker..</param>
+        /// <param name="fkiCustomerIDSupplychargechargeto">The unique ID of the Customer..</param>
+        /// <param name="fkiGlaccountcontainerIDSupplychargechargeto">The unique ID of the Glaccountcontainer.</param>
+        /// <param name="fkiInvoicealternatelogoID">The unique ID of the Invoicealternatelogo.</param>
+        /// <param name="fkiSynchronizationlinkserverID">The unique ID of the Synchronizationlinkserver.</param>
         /// <param name="efkiUserID">The unique ID of the User.</param>
         /// <param name="efksCustomerCode">The code of the Customer.</param>
         /// <param name="sCustomerCode">The code of the Customer (required).</param>
-        /// <param name="dCustomerFulltimeequivalent">The fulltimeequivalent of the Customer (required).</param>
+        /// <param name="dCustomerFulltimeequivalent">The fulltimeequivalent of the Customer.</param>
         /// <param name="iCustomerPhotocopiercode">The photocopiercode of the Customer (required).</param>
         /// <param name="iCustomerLongdistancecode">The longdistancecode of the Customer (required).</param>
         /// <param name="iCustomerTimewindowstart">The timewindowstart of the Customer (required).</param>
         /// <param name="iCustomerTimewindowend">The timewindowend of the Customer (required).</param>
         /// <param name="dCustomerMinimumchargeableinterests">The minimumchargeableinterests of the Customer (required).</param>
-        /// <param name="dtCustomerBirthdate">The birthdate of the Customer (required).</param>
+        /// <param name="dtCustomerBirthdate">The birthdate of the Customer.</param>
         /// <param name="dtCustomerTransfer">The transfer of the Customer (required).</param>
         /// <param name="dtCustomerTransferappointment">The transferappointment of the Customer (required).</param>
-        /// <param name="dtCustomerTransfersurvey">The transfersurvey of the Customer (required).</param>
+        /// <param name="dtCustomerTransfersurvey">The transfersurvey of the Customer.</param>
         /// <param name="bCustomerIsactive">Whether the customer is active or not (required).</param>
         /// <param name="bCustomerVariableexpensefinanced">Whether if it&#39;s an variableexpensefinanced (required).</param>
         /// <param name="bCustomerVariableexpensefinancedtaxes">Whether if it&#39;s an variableexpensefinancedtaxes (required).</param>
@@ -108,7 +108,6 @@ namespace eZmaxApi.Model
         {
             this.PkiCustomerID = pkiCustomerID;
             this.FkiCompanyID = fkiCompanyID;
-            this.FkiCustomergroupID = fkiCustomergroupID;
             // to ensure "sCustomerName" is required (not null)
             if (sCustomerName == null)
             {
@@ -117,38 +116,19 @@ namespace eZmaxApi.Model
             this.SCustomerName = sCustomerName;
             this.FkiContactinformationsID = fkiContactinformationsID;
             this.FkiContactcontainerID = fkiContactcontainerID;
-            this.FkiImageID = fkiImageID;
             this.FkiGlaccountcontainerID = fkiGlaccountcontainerID;
             this.FkiLanguageID = fkiLanguageID;
             this.FkiDepartmentID = fkiDepartmentID;
             this.FkiPaymentmethodID = fkiPaymentmethodID;
-            this.FkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
-            this.FkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
             this.FkiSendingmethodID = fkiSendingmethodID;
             this.FkiTaxassignmentID = fkiTaxassignmentID;
             this.FkiAttendancestatusID = fkiAttendancestatusID;
-            this.FkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
-            this.FkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
-            this.FkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
-            this.FkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
-            this.FkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
-            this.FkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
-            this.FkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
-            this.FkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
-            this.FkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
-            this.FkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
             // to ensure "sCustomerCode" is required (not null)
             if (sCustomerCode == null)
             {
                 throw new ArgumentNullException("sCustomerCode is a required property for CustomerResponseCompound and cannot be null");
             }
             this.SCustomerCode = sCustomerCode;
-            // to ensure "dCustomerFulltimeequivalent" is required (not null)
-            if (dCustomerFulltimeequivalent == null)
-            {
-                throw new ArgumentNullException("dCustomerFulltimeequivalent is a required property for CustomerResponseCompound and cannot be null");
-            }
-            this.DCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
             this.ICustomerPhotocopiercode = iCustomerPhotocopiercode;
             this.ICustomerLongdistancecode = iCustomerLongdistancecode;
             this.ICustomerTimewindowstart = iCustomerTimewindowstart;
@@ -159,12 +139,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("dCustomerMinimumchargeableinterests is a required property for CustomerResponseCompound and cannot be null");
             }
             this.DCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
-            // to ensure "dtCustomerBirthdate" is required (not null)
-            if (dtCustomerBirthdate == null)
-            {
-                throw new ArgumentNullException("dtCustomerBirthdate is a required property for CustomerResponseCompound and cannot be null");
-            }
-            this.DtCustomerBirthdate = dtCustomerBirthdate;
             // to ensure "dtCustomerTransfer" is required (not null)
             if (dtCustomerTransfer == null)
             {
@@ -177,12 +151,6 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("dtCustomerTransferappointment is a required property for CustomerResponseCompound and cannot be null");
             }
             this.DtCustomerTransferappointment = dtCustomerTransferappointment;
-            // to ensure "dtCustomerTransfersurvey" is required (not null)
-            if (dtCustomerTransfersurvey == null)
-            {
-                throw new ArgumentNullException("dtCustomerTransfersurvey is a required property for CustomerResponseCompound and cannot be null");
-            }
-            this.DtCustomerTransfersurvey = dtCustomerTransfersurvey;
             this.BCustomerIsactive = bCustomerIsactive;
             this.BCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
             this.BCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
@@ -199,9 +167,26 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("tCustomerComment is a required property for CustomerResponseCompound and cannot be null");
             }
             this.TCustomerComment = tCustomerComment;
+            this.FkiCustomergroupID = fkiCustomergroupID;
             this.SCustomerNote = sCustomerNote;
+            this.FkiImageID = fkiImageID;
+            this.FkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
+            this.FkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
+            this.FkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
+            this.FkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
+            this.FkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
+            this.FkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
+            this.FkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
+            this.FkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
+            this.FkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
+            this.FkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
+            this.FkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
+            this.FkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
             this.EfkiUserID = efkiUserID;
             this.EfksCustomerCode = efksCustomerCode;
+            this.DCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
+            this.DtCustomerBirthdate = dtCustomerBirthdate;
+            this.DtCustomerTransfersurvey = dtCustomerTransfersurvey;
             this.IMPORTID = iMPORTID;
         }
 
@@ -232,7 +217,7 @@ namespace eZmaxApi.Model
         /*
         <example>229</example>
         */
-        [DataMember(Name = "fkiCustomergroupID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiCustomergroupID", EmitDefaultValue = false)]
         public int FkiCustomergroupID { get; set; }
 
         /// <summary>
@@ -282,7 +267,7 @@ namespace eZmaxApi.Model
         /*
         <example>164</example>
         */
-        [DataMember(Name = "fkiImageID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiImageID", EmitDefaultValue = false)]
         public int FkiImageID { get; set; }
 
         /// <summary>
@@ -332,7 +317,7 @@ namespace eZmaxApi.Model
         /*
         <example>36</example>
         */
-        [DataMember(Name = "fkiElectronicfundstransferbankaccountID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiElectronicfundstransferbankaccountID", EmitDefaultValue = false)]
         public int FkiElectronicfundstransferbankaccountID { get; set; }
 
         /// <summary>
@@ -342,7 +327,7 @@ namespace eZmaxApi.Model
         /*
         <example>36</example>
         */
-        [DataMember(Name = "fkiElectronicfundstransferbankaccountIDDirectdebit", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiElectronicfundstransferbankaccountIDDirectdebit", EmitDefaultValue = false)]
         public int FkiElectronicfundstransferbankaccountIDDirectdebit { get; set; }
 
         /// <summary>
@@ -382,7 +367,7 @@ namespace eZmaxApi.Model
         /*
         <example>1</example>
         */
-        [DataMember(Name = "fkiAgentIDVariableexpensechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiAgentIDVariableexpensechargeto", EmitDefaultValue = false)]
         public int FkiAgentIDVariableexpensechargeto { get; set; }
 
         /// <summary>
@@ -392,7 +377,7 @@ namespace eZmaxApi.Model
         /*
         <example>26</example>
         */
-        [DataMember(Name = "fkiBrokerIDVariableexpensechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiBrokerIDVariableexpensechargeto", EmitDefaultValue = false)]
         public int FkiBrokerIDVariableexpensechargeto { get; set; }
 
         /// <summary>
@@ -402,7 +387,7 @@ namespace eZmaxApi.Model
         /*
         <example>18</example>
         */
-        [DataMember(Name = "fkiCustomerIDVariableexpensechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiCustomerIDVariableexpensechargeto", EmitDefaultValue = false)]
         public int FkiCustomerIDVariableexpensechargeto { get; set; }
 
         /// <summary>
@@ -412,7 +397,7 @@ namespace eZmaxApi.Model
         /*
         <example>66</example>
         */
-        [DataMember(Name = "fkiGlaccountcontainerIDVariableexpensechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiGlaccountcontainerIDVariableexpensechargeto", EmitDefaultValue = false)]
         public int FkiGlaccountcontainerIDVariableexpensechargeto { get; set; }
 
         /// <summary>
@@ -422,7 +407,7 @@ namespace eZmaxApi.Model
         /*
         <example>1</example>
         */
-        [DataMember(Name = "fkiAgentIDSupplychargechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiAgentIDSupplychargechargeto", EmitDefaultValue = false)]
         public int FkiAgentIDSupplychargechargeto { get; set; }
 
         /// <summary>
@@ -432,7 +417,7 @@ namespace eZmaxApi.Model
         /*
         <example>26</example>
         */
-        [DataMember(Name = "fkiBrokerIDSupplychargechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiBrokerIDSupplychargechargeto", EmitDefaultValue = false)]
         public int FkiBrokerIDSupplychargechargeto { get; set; }
 
         /// <summary>
@@ -442,7 +427,7 @@ namespace eZmaxApi.Model
         /*
         <example>18</example>
         */
-        [DataMember(Name = "fkiCustomerIDSupplychargechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiCustomerIDSupplychargechargeto", EmitDefaultValue = false)]
         public int FkiCustomerIDSupplychargechargeto { get; set; }
 
         /// <summary>
@@ -452,7 +437,7 @@ namespace eZmaxApi.Model
         /*
         <example>66</example>
         */
-        [DataMember(Name = "fkiGlaccountcontainerIDSupplychargechargeto", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiGlaccountcontainerIDSupplychargechargeto", EmitDefaultValue = false)]
         public int FkiGlaccountcontainerIDSupplychargechargeto { get; set; }
 
         /// <summary>
@@ -462,7 +447,7 @@ namespace eZmaxApi.Model
         /*
         <example>242</example>
         */
-        [DataMember(Name = "fkiInvoicealternatelogoID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiInvoicealternatelogoID", EmitDefaultValue = false)]
         public int FkiInvoicealternatelogoID { get; set; }
 
         /// <summary>
@@ -472,7 +457,7 @@ namespace eZmaxApi.Model
         /*
         <example>107</example>
         */
-        [DataMember(Name = "fkiSynchronizationlinkserverID", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "fkiSynchronizationlinkserverID", EmitDefaultValue = false)]
         public int FkiSynchronizationlinkserverID { get; set; }
 
         /// <summary>
@@ -512,7 +497,7 @@ namespace eZmaxApi.Model
         /*
         <example>4.00</example>
         */
-        [DataMember(Name = "dCustomerFulltimeequivalent", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "dCustomerFulltimeequivalent", EmitDefaultValue = false)]
         public string DCustomerFulltimeequivalent { get; set; }
 
         /// <summary>
@@ -572,7 +557,7 @@ namespace eZmaxApi.Model
         /*
         <example>2020-12-31</example>
         */
-        [DataMember(Name = "dtCustomerBirthdate", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "dtCustomerBirthdate", EmitDefaultValue = false)]
         public string DtCustomerBirthdate { get; set; }
 
         /// <summary>
@@ -602,7 +587,7 @@ namespace eZmaxApi.Model
         /*
         <example>2020-12-31 23:59:59</example>
         */
-        [DataMember(Name = "dtCustomerTransfersurvey", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "dtCustomerTransfersurvey", EmitDefaultValue = false)]
         public string DtCustomerTransfersurvey { get; set; }
 
         /// <summary>

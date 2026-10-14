@@ -40,22 +40,22 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InvoiceImportIntoEDMV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiAttachmentID">aPkiAttachmentID (required).</param>
-        public InvoiceImportIntoEDMV1ResponseMPayload(List<int> aPkiAttachmentID = default)
+        /// <param name="aObjAttachment">aObjAttachment (required).</param>
+        public InvoiceImportIntoEDMV1ResponseMPayload(List<CustomAttachmentImportIntoEDMResponse> aObjAttachment = default)
         {
-            // to ensure "aPkiAttachmentID" is required (not null)
-            if (aPkiAttachmentID == null)
+            // to ensure "aObjAttachment" is required (not null)
+            if (aObjAttachment == null)
             {
-                throw new ArgumentNullException("aPkiAttachmentID is a required property for InvoiceImportIntoEDMV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("aObjAttachment is a required property for InvoiceImportIntoEDMV1ResponseMPayload and cannot be null");
             }
-            this.APkiAttachmentID = aPkiAttachmentID;
+            this.AObjAttachment = aObjAttachment;
         }
 
         /// <summary>
-        /// Gets or Sets APkiAttachmentID
+        /// Gets or Sets AObjAttachment
         /// </summary>
-        [DataMember(Name = "a_pkiAttachmentID", IsRequired = true, EmitDefaultValue = true)]
-        public List<int> APkiAttachmentID { get; set; }
+        [DataMember(Name = "a_objAttachment", IsRequired = true, EmitDefaultValue = true)]
+        public List<CustomAttachmentImportIntoEDMResponse> AObjAttachment { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -65,7 +65,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class InvoiceImportIntoEDMV1ResponseMPayload {\n");
-            sb.Append("  APkiAttachmentID: ").Append(APkiAttachmentID).Append("\n");
+            sb.Append("  AObjAttachment: ").Append(AObjAttachment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

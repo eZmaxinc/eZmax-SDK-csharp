@@ -176,11 +176,12 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UserGetAutocompleteV2Response</returns>
-        UserGetAutocompleteV2Response UserGetAutocompleteV2(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
+        UserGetAutocompleteV2Response UserGetAutocompleteV2(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
 
         /// <summary>
         /// Retrieve Users and IDs
@@ -191,11 +192,12 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserGetAutocompleteV2Response</returns>
-        ApiResponse<UserGetAutocompleteV2Response> UserGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
+        ApiResponse<UserGetAutocompleteV2Response> UserGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
         /// <summary>
         /// Retrieve an existing User&#39;s Colleagues
         /// </summary>
@@ -619,12 +621,13 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetAutocompleteV2Response</returns>
-        System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Retrieve Users and IDs
@@ -635,12 +638,13 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetAutocompleteV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        System.Threading.Tasks.Task<ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Retrieve an existing User&#39;s Colleagues
         /// </summary>
@@ -2004,13 +2008,14 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UserGetAutocompleteV2Response</returns>
-        public UserGetAutocompleteV2Response UserGetAutocompleteV2(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
+        public UserGetAutocompleteV2Response UserGetAutocompleteV2(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> localVarResponse = UserGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+            eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> localVarResponse = UserGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
             return localVarResponse.Data;
         }
 
@@ -2020,11 +2025,12 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UserGetAutocompleteV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> UserGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
+        public eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> UserGetAutocompleteV2WithHttpInfo(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -2059,6 +2065,10 @@ namespace eZmaxApi.Api
             if (eFilterActive != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));
+            }
+            if (fkiAttachmentID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiAttachmentID", fkiAttachmentID));
             }
             if (sQuery != null)
             {
@@ -2098,14 +2108,15 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UserGetAutocompleteV2Response</returns>
-        public async System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        public async System.Threading.Tasks.Task<UserGetAutocompleteV2Response> UserGetAutocompleteV2Async(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> localVarResponse = await UserGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response> localVarResponse = await UserGetAutocompleteV2WithHttpInfoAsync(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2115,12 +2126,13 @@ namespace eZmaxApi.Api
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sSelector">The type of Users to return</param>
         /// <param name="eFilterActive">Specify which results we want to display. (optional, default to Active)</param>
+        /// <param name="fkiAttachmentID">Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)</param>
         /// <param name="sQuery">Allow to filter the returned results (optional)</param>
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserGetAutocompleteV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<UserGetAutocompleteV2Response>> UserGetAutocompleteV2WithHttpInfoAsync(string sSelector, string? eFilterActive = default, string? fkiAttachmentID = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'sSelector' is set
             if (sSelector == null)
@@ -2155,6 +2167,10 @@ namespace eZmaxApi.Api
             if (eFilterActive != null)
             {
                 localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eFilterActive", eFilterActive));
+            }
+            if (fkiAttachmentID != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "fkiAttachmentID", fkiAttachmentID));
             }
             if (sQuery != null)
             {
