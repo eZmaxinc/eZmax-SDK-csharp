@@ -118,7 +118,7 @@ namespace eZmaxApi.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.3.4/csharp");
+            UserAgent = "OpenAPI-Generator/1.3.4/csharp";
             BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
