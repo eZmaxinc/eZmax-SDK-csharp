@@ -175,7 +175,7 @@ namespace eZmaxApi.Model
 
             if (this.SAttachmentlogDetail != null) {
                 // SAttachmentlogDetail (string) pattern
-                Regex regexSAttachmentlogDetail = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                Regex regexSAttachmentlogDetail = new Regex(@"[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
                 if (!regexSAttachmentlogDetail.Match(this.SAttachmentlogDetail).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentlogDetail, must match a pattern of " + regexSAttachmentlogDetail, new [] { "SAttachmentlogDetail" });

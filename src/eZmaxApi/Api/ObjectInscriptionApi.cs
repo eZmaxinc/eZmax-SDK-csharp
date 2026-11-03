@@ -264,6 +264,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InscriptionPrepareFilesTransferV1Response</returns>
         ApiResponse<InscriptionPrepareFilesTransferV1Response> InscriptionPrepareFilesTransferV1WithHttpInfo(int pkiInscriptionID, InscriptionPrepareFilesTransferV1Request inscriptionPrepareFilesTransferV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptionSynchronizationDocumenttypeV1Response</returns>
+        InscriptionSynchronizationDocumenttypeV1Response InscriptionSynchronizationDocumenttypeV1(int pkiInscriptionID, Object body, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptionSynchronizationDocumenttypeV1Response</returns>
+        ApiResponse<InscriptionSynchronizationDocumenttypeV1Response> InscriptionSynchronizationDocumenttypeV1WithHttpInfo(int pkiInscriptionID, Object body, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -562,6 +584,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionPrepareFilesTransferV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<InscriptionPrepareFilesTransferV1Response>> InscriptionPrepareFilesTransferV1WithHttpInfoAsync(int pkiInscriptionID, InscriptionPrepareFilesTransferV1Request inscriptionPrepareFilesTransferV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptionSynchronizationDocumenttypeV1Response</returns>
+        System.Threading.Tasks.Task<InscriptionSynchronizationDocumenttypeV1Response> InscriptionSynchronizationDocumenttypeV1Async(int pkiInscriptionID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptionSynchronizationDocumenttypeV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InscriptionSynchronizationDocumenttypeV1Response>> InscriptionSynchronizationDocumenttypeV1WithHttpInfoAsync(int pkiInscriptionID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -2366,6 +2415,169 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("InscriptionPrepareFilesTransferV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>InscriptionSynchronizationDocumenttypeV1Response</returns>
+        public InscriptionSynchronizationDocumenttypeV1Response InscriptionSynchronizationDocumenttypeV1(int pkiInscriptionID, Object body, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptionSynchronizationDocumenttypeV1Response> localVarResponse = InscriptionSynchronizationDocumenttypeV1WithHttpInfo(pkiInscriptionID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of InscriptionSynchronizationDocumenttypeV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<InscriptionSynchronizationDocumenttypeV1Response> InscriptionSynchronizationDocumenttypeV1WithHttpInfo(int pkiInscriptionID, Object body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'body' when calling ObjectInscriptionApi->InscriptionSynchronizationDocumenttypeV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptionID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptionID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectInscriptionApi.InscriptionSynchronizationDocumenttypeV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<InscriptionSynchronizationDocumenttypeV1Response>("/1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptionSynchronizationDocumenttypeV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of InscriptionSynchronizationDocumenttypeV1Response</returns>
+        public async System.Threading.Tasks.Task<InscriptionSynchronizationDocumenttypeV1Response> InscriptionSynchronizationDocumenttypeV1Async(int pkiInscriptionID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<InscriptionSynchronizationDocumenttypeV1Response> localVarResponse = await InscriptionSynchronizationDocumenttypeV1WithHttpInfoAsync(pkiInscriptionID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronization of the Documenttype in the Inscription 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiInscriptionID"></param>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (InscriptionSynchronizationDocumenttypeV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionSynchronizationDocumenttypeV1Response>> InscriptionSynchronizationDocumenttypeV1WithHttpInfoAsync(int pkiInscriptionID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'body' when calling ObjectInscriptionApi->InscriptionSynchronizationDocumenttypeV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiInscriptionID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiInscriptionID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectInscriptionApi.InscriptionSynchronizationDocumenttypeV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<InscriptionSynchronizationDocumenttypeV1Response>("/1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("InscriptionSynchronizationDocumenttypeV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -46,6 +46,12 @@ namespace eZmaxApi.Model
         public CustomEWebhookEzsignevent? EWebhookEzsignevent { get; set; }
 
         /// <summary>
+        /// Gets or Sets EWebhookEzmaxpartnerevent
+        /// </summary>
+        [DataMember(Name = "eWebhookEzmaxpartnerevent", EmitDefaultValue = false)]
+        public FieldEWebhookEzmaxpartnerevent? EWebhookEzmaxpartnerevent { get; set; }
+
+        /// <summary>
         /// Gets or Sets EWebhookManagementevent
         /// </summary>
         [DataMember(Name = "eWebhookManagementevent", EmitDefaultValue = false)]
@@ -66,6 +72,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="eWebhookModule">eWebhookModule (required).</param>
         /// <param name="eWebhookEzsignevent">eWebhookEzsignevent.</param>
+        /// <param name="eWebhookEzmaxpartnerevent">eWebhookEzmaxpartnerevent.</param>
         /// <param name="eWebhookManagementevent">eWebhookManagementevent.</param>
         /// <param name="eWebhookRealestateevent">eWebhookRealestateevent.</param>
         /// <param name="fkiEzsignfolderID">The unique ID of the Ezsignfolder.</param>
@@ -73,10 +80,11 @@ namespace eZmaxApi.Model
         /// <param name="fkiEzsignsignerID">The unique ID of the Ezsignsigner.</param>
         /// <param name="fkiUserID">The unique ID of the User.</param>
         /// <param name="fkiUserstagedID">The unique ID of the Userstaged.</param>
-        public WebhookSendWebhookV1Request(FieldEWebhookModule eWebhookModule = default, CustomEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, FieldEWebhookRealestateevent? eWebhookRealestateevent = default, int fkiEzsignfolderID = default, int fkiEzsigndocumentID = default, int fkiEzsignsignerID = default, int fkiUserID = default, int fkiUserstagedID = default)
+        public WebhookSendWebhookV1Request(FieldEWebhookModule eWebhookModule = default, CustomEWebhookEzsignevent? eWebhookEzsignevent = default, FieldEWebhookEzmaxpartnerevent? eWebhookEzmaxpartnerevent = default, FieldEWebhookManagementevent? eWebhookManagementevent = default, FieldEWebhookRealestateevent? eWebhookRealestateevent = default, int fkiEzsignfolderID = default, int fkiEzsigndocumentID = default, int fkiEzsignsignerID = default, int fkiUserID = default, int fkiUserstagedID = default)
         {
             this.EWebhookModule = eWebhookModule;
             this.EWebhookEzsignevent = eWebhookEzsignevent;
+            this.EWebhookEzmaxpartnerevent = eWebhookEzmaxpartnerevent;
             this.EWebhookManagementevent = eWebhookManagementevent;
             this.EWebhookRealestateevent = eWebhookRealestateevent;
             this.FkiEzsignfolderID = fkiEzsignfolderID;
@@ -146,6 +154,7 @@ namespace eZmaxApi.Model
             sb.Append("class WebhookSendWebhookV1Request {\n");
             sb.Append("  EWebhookModule: ").Append(EWebhookModule).Append("\n");
             sb.Append("  EWebhookEzsignevent: ").Append(EWebhookEzsignevent).Append("\n");
+            sb.Append("  EWebhookEzmaxpartnerevent: ").Append(EWebhookEzmaxpartnerevent).Append("\n");
             sb.Append("  EWebhookManagementevent: ").Append(EWebhookManagementevent).Append("\n");
             sb.Append("  EWebhookRealestateevent: ").Append(EWebhookRealestateevent).Append("\n");
             sb.Append("  FkiEzsignfolderID: ").Append(FkiEzsignfolderID).Append("\n");

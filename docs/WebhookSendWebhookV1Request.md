@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EWebhookModule** | **FieldEWebhookModule** |  | 
 **EWebhookEzsignevent** | **CustomEWebhookEzsignevent** |  | [optional] 
+**EWebhookEzmaxpartnerevent** | **FieldEWebhookEzmaxpartnerevent** |  | [optional] 
 **EWebhookManagementevent** | **FieldEWebhookManagementevent** |  | [optional] 
 **EWebhookRealestateevent** | **FieldEWebhookRealestateevent** |  | [optional] 
 **FkiEzsignfolderID** | **int** | The unique ID of the Ezsignfolder | [optional] 

@@ -66,6 +66,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated. (required).</param>
         /// <param name="fkiInscriptionID">The unique ID of the Inscription. (required).</param>
+        /// <param name="objInscription">objInscription (required).</param>
         /// <param name="fkiDepartmentID">The unique ID of the Department.</param>
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester.</param>
         /// <param name="fkiFinancialinstitutionID">The unique ID of the Financialinstitution.</param>
@@ -103,10 +104,16 @@ namespace eZmaxApi.Model
         /// <param name="tInscriptionnotauthenticatedChecklistnote">The checklist note of the Inscriptionnotauthenticated (required).</param>
         /// <param name="dInscriptionnotauthenticatedSelleronlyretribution">The amount retribution for the seller only of the Inscriptionnotauthenticated (required).</param>
         /// <param name="bInscriptionnotauthenticatedDraft">Whether the Inscriptionnotauthenticated is a draft or not (required).</param>
-        public InscriptionnotauthenticatedResponse(int pkiInscriptionnotauthenticatedID = default, int fkiInscriptionID = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiFinancialinstitutionID = default, string sFinancialinstitutionNameX = default, int fkiBuyercontractID = default, string sBuyercontractContract = default, int fkiMortgagesupplierID = default, string sMortgagesupplierNameX = default, int fkiTaxassignmentID = default, string sTaxassignmentDescriptionX = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, string dtInscriptionnotauthenticatedDepositdate = default, FieldEInscriptionnotauthenticatedType eInscriptionnotauthenticatedType = default, string dInscriptionnotauthenticatedMortgageloan = default, FieldEtInscriptionnotauthenticatedMortgagetype etInscriptionnotauthenticatedMortgagetype = default, string dInscriptionnotauthenticatedTransactionprice = default, FieldEInscriptionnotauthenticatedRemunerationtype eInscriptionnotauthenticatedRemunerationtype = default, string dInscriptionnotauthenticatedRemuneration = default, string dInscriptionnotauthenticatedRemunerationsubtotal = default, string dInscriptionnotauthenticatedRemunerationtotal = default, string dtInscriptionnotauthenticatedCancellationdate = default, string dtInscriptionnotauthenticatedPossessiondate = default, string sInscriptionnotauthenticatedOffertopurchasenumber = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedFinancingscheduledate = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedMortgageisreferenced = default, bool bInscriptionnotauthenticatedHomeowner = default, string tInscriptionnotauthenticatedConditions = default, string dtInscriptionnotauthenticatedConditiondeadlinedate = default, int iInscriptionnotauthenticatedOrder = default, bool bInscriptionnotauthenticatedIsactive = default, FieldEInscriptionnotauthenticatedResidenceType eInscriptionnotauthenticatedResidenceType = default, string tInscriptionnotauthenticatedChecklistnote = default, string dInscriptionnotauthenticatedSelleronlyretribution = default, bool bInscriptionnotauthenticatedDraft = default)
+        public InscriptionnotauthenticatedResponse(int pkiInscriptionnotauthenticatedID = default, int fkiInscriptionID = default, CustomInscription objInscription = default, int fkiDepartmentID = default, string sDepartmentNameX = default, int fkiFinancialinstitutionID = default, string sFinancialinstitutionNameX = default, int fkiBuyercontractID = default, string sBuyercontractContract = default, int fkiMortgagesupplierID = default, string sMortgagesupplierNameX = default, int fkiTaxassignmentID = default, string sTaxassignmentDescriptionX = default, string dtInscriptionnotauthenticatedTransactiondate = default, string dtInscriptionnotauthenticatedTransactiondateReal = default, string dtInscriptionnotauthenticatedDepositdate = default, FieldEInscriptionnotauthenticatedType eInscriptionnotauthenticatedType = default, string dInscriptionnotauthenticatedMortgageloan = default, FieldEtInscriptionnotauthenticatedMortgagetype etInscriptionnotauthenticatedMortgagetype = default, string dInscriptionnotauthenticatedTransactionprice = default, FieldEInscriptionnotauthenticatedRemunerationtype eInscriptionnotauthenticatedRemunerationtype = default, string dInscriptionnotauthenticatedRemuneration = default, string dInscriptionnotauthenticatedRemunerationsubtotal = default, string dInscriptionnotauthenticatedRemunerationtotal = default, string dtInscriptionnotauthenticatedCancellationdate = default, string dtInscriptionnotauthenticatedPossessiondate = default, string sInscriptionnotauthenticatedOffertopurchasenumber = default, string dtInscriptionnotauthenticatedNotaryscheduledate = default, string dtInscriptionnotauthenticatedFinancingscheduledate = default, bool bInscriptionnotauthenticatedConditional = default, bool bInscriptionnotauthenticatedMortgageisreferenced = default, bool bInscriptionnotauthenticatedHomeowner = default, string tInscriptionnotauthenticatedConditions = default, string dtInscriptionnotauthenticatedConditiondeadlinedate = default, int iInscriptionnotauthenticatedOrder = default, bool bInscriptionnotauthenticatedIsactive = default, FieldEInscriptionnotauthenticatedResidenceType eInscriptionnotauthenticatedResidenceType = default, string tInscriptionnotauthenticatedChecklistnote = default, string dInscriptionnotauthenticatedSelleronlyretribution = default, bool bInscriptionnotauthenticatedDraft = default)
         {
             this.PkiInscriptionnotauthenticatedID = pkiInscriptionnotauthenticatedID;
             this.FkiInscriptionID = fkiInscriptionID;
+            // to ensure "objInscription" is required (not null)
+            if (objInscription == null)
+            {
+                throw new ArgumentNullException("objInscription is a required property for InscriptionnotauthenticatedResponse and cannot be null");
+            }
+            this.ObjInscription = objInscription;
             this.FkiTaxassignmentID = fkiTaxassignmentID;
             this.EInscriptionnotauthenticatedType = eInscriptionnotauthenticatedType;
             // to ensure "dInscriptionnotauthenticatedMortgageloan" is required (not null)
@@ -210,6 +217,12 @@ namespace eZmaxApi.Model
         */
         [DataMember(Name = "fkiInscriptionID", IsRequired = true, EmitDefaultValue = true)]
         public int FkiInscriptionID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ObjInscription
+        /// </summary>
+        [DataMember(Name = "objInscription", IsRequired = true, EmitDefaultValue = true)]
+        public CustomInscription ObjInscription { get; set; }
 
         /// <summary>
         /// The unique ID of the Department
@@ -551,6 +564,7 @@ namespace eZmaxApi.Model
             sb.Append("class InscriptionnotauthenticatedResponse {\n");
             sb.Append("  PkiInscriptionnotauthenticatedID: ").Append(PkiInscriptionnotauthenticatedID).Append("\n");
             sb.Append("  FkiInscriptionID: ").Append(FkiInscriptionID).Append("\n");
+            sb.Append("  ObjInscription: ").Append(ObjInscription).Append("\n");
             sb.Append("  FkiDepartmentID: ").Append(FkiDepartmentID).Append("\n");
             sb.Append("  SDepartmentNameX: ").Append(SDepartmentNameX).Append("\n");
             sb.Append("  FkiFinancialinstitutionID: ").Append(FkiFinancialinstitutionID).Append("\n");

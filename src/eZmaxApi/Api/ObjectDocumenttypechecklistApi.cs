@@ -28,29 +28,6 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistCreateObjectV1Response</returns>
-        DocumenttypechecklistCreateObjectV1Response DocumenttypechecklistCreateObjectV1(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Create a new Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistCreateObjectV1Response</returns>
-        ApiResponse<DocumenttypechecklistCreateObjectV1Response> DocumenttypechecklistCreateObjectV1WithHttpInfo(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0);
-        /// <summary>
         /// Delete an existing Documenttypechecklist
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -71,78 +48,27 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DocumenttypechecklistDeleteObjectV1Response</returns>
         ApiResponse<DocumenttypechecklistDeleteObjectV1Response> DocumenttypechecklistDeleteObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, int operationIndex = 0);
         /// <summary>
-        /// Edit an existing Documenttypechecklist
+        /// Patch an existing Documenttypechecklist
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistEditObjectV1Response</returns>
-        DocumenttypechecklistEditObjectV1Response DocumenttypechecklistEditObjectV1(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0);
+        /// <returns>DocumenttypechecklistPatchObjectV1Response</returns>
+        DocumenttypechecklistPatchObjectV1Response DocumenttypechecklistPatchObjectV1(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0);
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist
+        /// Patch an existing Documenttypechecklist
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistEditObjectV1Response</returns>
-        ApiResponse<DocumenttypechecklistEditObjectV1Response> DocumenttypechecklistEditObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0);
-        /// <summary>
-        /// Retrieve Documenttypechecklist list
-        /// </summary>
-        /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistGetListV1Response</returns>
-        DocumenttypechecklistGetListV1Response DocumenttypechecklistGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list
-        /// </summary>
-        /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistGetListV1Response</returns>
-        ApiResponse<DocumenttypechecklistGetListV1Response> DocumenttypechecklistGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0);
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistGetObjectV2Response</returns>
-        DocumenttypechecklistGetObjectV2Response DocumenttypechecklistGetObjectV2(int pkiDocumenttypechecklistID, int operationIndex = 0);
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistGetObjectV2Response</returns>
-        ApiResponse<DocumenttypechecklistGetObjectV2Response> DocumenttypechecklistGetObjectV2WithHttpInfo(int pkiDocumenttypechecklistID, int operationIndex = 0);
+        /// <returns>ApiResponse of DocumenttypechecklistPatchObjectV1Response</returns>
+        ApiResponse<DocumenttypechecklistPatchObjectV1Response> DocumenttypechecklistPatchObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -152,31 +78,6 @@ namespace eZmaxApi.Api
     public interface IObjectDocumenttypechecklistApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
-        /// <summary>
-        /// Create a new Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistCreateObjectV1Response</returns>
-        System.Threading.Tasks.Task<DocumenttypechecklistCreateObjectV1Response> DocumenttypechecklistCreateObjectV1Async(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Create a new Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to create one or many elements at once.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistCreateObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistCreateObjectV1Response>> DocumenttypechecklistCreateObjectV1WithHttpInfoAsync(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete an existing Documenttypechecklist
         /// </summary>
@@ -203,90 +104,32 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (DocumenttypechecklistDeleteObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistDeleteObjectV1Response>> DocumenttypechecklistDeleteObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Edit an existing Documenttypechecklist
+        /// Patch an existing Documenttypechecklist
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistEditObjectV1Response</returns>
-        System.Threading.Tasks.Task<DocumenttypechecklistEditObjectV1Response> DocumenttypechecklistEditObjectV1Async(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of DocumenttypechecklistPatchObjectV1Response</returns>
+        System.Threading.Tasks.Task<DocumenttypechecklistPatchObjectV1Response> DocumenttypechecklistPatchObjectV1Async(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist
+        /// Patch an existing Documenttypechecklist
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistEditObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistEditObjectV1Response>> DocumenttypechecklistEditObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
-        /// Retrieve Documenttypechecklist list
-        /// </summary>
-        /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistGetListV1Response</returns>
-        System.Threading.Tasks.Task<DocumenttypechecklistGetListV1Response> DocumenttypechecklistGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list
-        /// </summary>
-        /// <remarks>
-        /// Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistGetListV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistGetListV1Response>> DocumenttypechecklistGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistGetObjectV2Response</returns>
-        System.Threading.Tasks.Task<DocumenttypechecklistGetObjectV2Response> DocumenttypechecklistGetObjectV2Async(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistGetObjectV2Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistGetObjectV2Response>> DocumenttypechecklistGetObjectV2WithHttpInfoAsync(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <returns>Task of ApiResponse (DocumenttypechecklistPatchObjectV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistPatchObjectV1Response>> DocumenttypechecklistPatchObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -405,163 +248,6 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
-        }
-
-        /// <summary>
-        /// Create a new Documenttypechecklist The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistCreateObjectV1Response</returns>
-        public DocumenttypechecklistCreateObjectV1Response DocumenttypechecklistCreateObjectV1(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistCreateObjectV1Response> localVarResponse = DocumenttypechecklistCreateObjectV1WithHttpInfo(documenttypechecklistCreateObjectV1Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Documenttypechecklist The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistCreateObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistCreateObjectV1Response> DocumenttypechecklistCreateObjectV1WithHttpInfo(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'documenttypechecklistCreateObjectV1Request' is set
-            if (documenttypechecklistCreateObjectV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistCreateObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistCreateObjectV1");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = documenttypechecklistCreateObjectV1Request;
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistCreateObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<DocumenttypechecklistCreateObjectV1Response>("/1/object/documenttypechecklist", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Create a new Documenttypechecklist The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistCreateObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypechecklistCreateObjectV1Response> DocumenttypechecklistCreateObjectV1Async(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistCreateObjectV1Response> localVarResponse = await DocumenttypechecklistCreateObjectV1WithHttpInfoAsync(documenttypechecklistCreateObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create a new Documenttypechecklist The endpoint allows to create one or many elements at once.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="documenttypechecklistCreateObjectV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistCreateObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistCreateObjectV1Response>> DocumenttypechecklistCreateObjectV1WithHttpInfoAsync(DocumenttypechecklistCreateObjectV1Request documenttypechecklistCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            // verify the required parameter 'documenttypechecklistCreateObjectV1Request' is set
-            if (documenttypechecklistCreateObjectV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistCreateObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistCreateObjectV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.Data = documenttypechecklistCreateObjectV1Request;
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistCreateObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<DocumenttypechecklistCreateObjectV1Response>("/1/object/documenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
         }
 
         /// <summary>
@@ -708,33 +394,33 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist 
+        /// Patch an existing Documenttypechecklist 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistEditObjectV1Response</returns>
-        public DocumenttypechecklistEditObjectV1Response DocumenttypechecklistEditObjectV1(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0)
+        /// <returns>DocumenttypechecklistPatchObjectV1Response</returns>
+        public DocumenttypechecklistPatchObjectV1Response DocumenttypechecklistPatchObjectV1(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0)
         {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistEditObjectV1Response> localVarResponse = DocumenttypechecklistEditObjectV1WithHttpInfo(pkiDocumenttypechecklistID, documenttypechecklistEditObjectV1Request);
+            eZmaxApi.Client.ApiResponse<DocumenttypechecklistPatchObjectV1Response> localVarResponse = DocumenttypechecklistPatchObjectV1WithHttpInfo(pkiDocumenttypechecklistID, documenttypechecklistPatchObjectV1Request);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist 
+        /// Patch an existing Documenttypechecklist 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistEditObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistEditObjectV1Response> DocumenttypechecklistEditObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0)
+        /// <returns>ApiResponse of DocumenttypechecklistPatchObjectV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistPatchObjectV1Response> DocumenttypechecklistPatchObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0)
         {
-            // verify the required parameter 'documenttypechecklistEditObjectV1Request' is set
-            if (documenttypechecklistEditObjectV1Request == null)
+            // verify the required parameter 'documenttypechecklistPatchObjectV1Request' is set
+            if (documenttypechecklistPatchObjectV1Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistEditObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistPatchObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistPatchObjectV1");
             }
 
             eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
@@ -762,9 +448,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-            localVarRequestOptions.Data = documenttypechecklistEditObjectV1Request;
+            localVarRequestOptions.Data = documenttypechecklistPatchObjectV1Request;
 
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistPatchObjectV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -774,10 +460,10 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<DocumenttypechecklistEditObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Patch<DocumenttypechecklistPatchObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistEditObjectV1", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DocumenttypechecklistPatchObjectV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -788,35 +474,35 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist 
+        /// Patch an existing Documenttypechecklist 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistEditObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypechecklistEditObjectV1Response> DocumenttypechecklistEditObjectV1Async(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of DocumenttypechecklistPatchObjectV1Response</returns>
+        public async System.Threading.Tasks.Task<DocumenttypechecklistPatchObjectV1Response> DocumenttypechecklistPatchObjectV1Async(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistEditObjectV1Response> localVarResponse = await DocumenttypechecklistEditObjectV1WithHttpInfoAsync(pkiDocumenttypechecklistID, documenttypechecklistEditObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            eZmaxApi.Client.ApiResponse<DocumenttypechecklistPatchObjectV1Response> localVarResponse = await DocumenttypechecklistPatchObjectV1WithHttpInfoAsync(pkiDocumenttypechecklistID, documenttypechecklistPatchObjectV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Edit an existing Documenttypechecklist 
+        /// Patch an existing Documenttypechecklist 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="documenttypechecklistEditObjectV1Request"></param>
+        /// <param name="documenttypechecklistPatchObjectV1Request"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistEditObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistEditObjectV1Response>> DocumenttypechecklistEditObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, DocumenttypechecklistEditObjectV1Request documenttypechecklistEditObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        /// <returns>Task of ApiResponse (DocumenttypechecklistPatchObjectV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistPatchObjectV1Response>> DocumenttypechecklistPatchObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, DocumenttypechecklistPatchObjectV1Request documenttypechecklistPatchObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
-            // verify the required parameter 'documenttypechecklistEditObjectV1Request' is set
-            if (documenttypechecklistEditObjectV1Request == null)
+            // verify the required parameter 'documenttypechecklistPatchObjectV1Request' is set
+            if (documenttypechecklistPatchObjectV1Request == null)
             {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistEditObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistEditObjectV1");
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'documenttypechecklistPatchObjectV1Request' when calling ObjectDocumenttypechecklistApi->DocumenttypechecklistPatchObjectV1");
             }
 
 
@@ -844,9 +530,9 @@ namespace eZmaxApi.Api
             }
 
             localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-            localVarRequestOptions.Data = documenttypechecklistEditObjectV1Request;
+            localVarRequestOptions.Data = documenttypechecklistPatchObjectV1Request;
 
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistEditObjectV1";
+            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistPatchObjectV1";
             localVarRequestOptions.OperationIndex = operationIndex;
 
             // authentication (Authorization) required
@@ -856,353 +542,11 @@ namespace eZmaxApi.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<DocumenttypechecklistEditObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PatchAsync<DocumenttypechecklistPatchObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistEditObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistGetListV1Response</returns>
-        public DocumenttypechecklistGetListV1Response DocumenttypechecklistGetListV1(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetListV1Response> localVarResponse = DocumenttypechecklistGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistGetListV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetListV1Response> DocumenttypechecklistGetListV1WithHttpInfo(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json",
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            if (eOrderBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
-            }
-            if (iRowMax != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
-            }
-            if (iRowOffset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
-            }
-            if (sFilter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
-            }
-            if (acceptLanguage != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
-            }
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistGetListV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<DocumenttypechecklistGetListV1Response>("/1/object/documenttypechecklist/getList", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistGetListV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistGetListV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypechecklistGetListV1Response> DocumenttypechecklistGetListV1Async(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetListV1Response> localVarResponse = await DocumenttypechecklistGetListV1WithHttpInfoAsync(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve Documenttypechecklist list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eDocumenttypechecklistStatus | Not required&lt;br&gt;Required&lt;br&gt;Filed&lt;br&gt;Justified |
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="eOrderBy">Specify how you want the results to be sorted (optional)</param>
-        /// <param name="iRowMax"> (optional)</param>
-        /// <param name="iRowOffset"> (optional, default to 0)</param>
-        /// <param name="acceptLanguage"> (optional)</param>
-        /// <param name="sFilter"> (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistGetListV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetListV1Response>> DocumenttypechecklistGetListV1WithHttpInfoAsync(string? eOrderBy = default, int? iRowMax = default, int? iRowOffset = default, HeaderAcceptLanguage? acceptLanguage = default, string? sFilter = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json",
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            if (eOrderBy != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "eOrderBy", eOrderBy));
-            }
-            if (iRowMax != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowMax", iRowMax));
-            }
-            if (iRowOffset != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "iRowOffset", iRowOffset));
-            }
-            if (sFilter != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(eZmaxApi.Client.ClientUtils.ParameterToMultiMap("", "sFilter", sFilter));
-            }
-            if (acceptLanguage != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept-Language", eZmaxApi.Client.ClientUtils.ParameterToString(acceptLanguage)); // header parameter
-            }
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistGetListV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<DocumenttypechecklistGetListV1Response>("/1/object/documenttypechecklist/getList", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistGetListV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistGetObjectV2Response</returns>
-        public DocumenttypechecklistGetObjectV2Response DocumenttypechecklistGetObjectV2(int pkiDocumenttypechecklistID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetObjectV2Response> localVarResponse = DocumenttypechecklistGetObjectV2WithHttpInfo(pkiDocumenttypechecklistID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistGetObjectV2Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetObjectV2Response> DocumenttypechecklistGetObjectV2WithHttpInfo(int pkiDocumenttypechecklistID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistGetObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Get<DocumenttypechecklistGetObjectV2Response>("/2/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistGetObjectV2", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistGetObjectV2Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypechecklistGetObjectV2Response> DocumenttypechecklistGetObjectV2Async(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetObjectV2Response> localVarResponse = await DocumenttypechecklistGetObjectV2WithHttpInfoAsync(pkiDocumenttypechecklistID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistGetObjectV2Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistGetObjectV2Response>> DocumenttypechecklistGetObjectV2WithHttpInfoAsync(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistGetObjectV2";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<DocumenttypechecklistGetObjectV2Response>("/2/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistGetObjectV2", localVarResponse);
+                Exception _exception = this.ExceptionFactory("DocumenttypechecklistPatchObjectV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

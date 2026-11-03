@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiDocumenttypeID** | **int** | The unique ID of the Documenttype | 
 **ObjDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  | 
+**EDocumenttypeStep** | **ComputedEDocumenttypeStep** |  | 
 **SDocumenttypeDefaultfilename** | **string** | The defaultfilename of the Documenttype | 
 **BDocumenttypeShowagent** | **bool** | Whether if it&#39;s an showagent | 
 **BDocumenttypeIsactive** | **bool** | Whether the documenttype is active or not | 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 **EDocumenttypeSaledisplaybyrole** | **FieldEDocumenttypeSaledisplaybyrole** |  | [optional] 
 **EDocumenttypeTransactiontype** | **FieldEDocumenttypeTransactiontype** |  | [optional] 
 **EDocumenttypeRepossession** | **FieldEDocumenttypeRepossession** |  | [optional] 
+**AFkiInscriptiontypeID** | **List&lt;int&gt;** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

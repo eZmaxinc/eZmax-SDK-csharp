@@ -53,31 +53,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of AttachmentDeleteV1Response</returns>
         ApiResponse<AttachmentDeleteV1Response> AttachmentDeleteV1WithHttpInfo(int pkiAttachmentID, Object body, int operationIndex = 0);
         /// <summary>
-        /// Change attachment document type
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentDocumentTypeV1Response</returns>
-        AttachmentDocumentTypeV1Response AttachmentDocumentTypeV1(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Change attachment document type
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentDocumentTypeV1Response</returns>
-        ApiResponse<AttachmentDocumentTypeV1Response> AttachmentDocumentTypeV1WithHttpInfo(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0);
-        /// <summary>
         /// Retrieve the content
         /// </summary>
         /// <remarks>
@@ -123,31 +98,6 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttachmentGetAttachmentlogsV1Response</returns>
         ApiResponse<AttachmentGetAttachmentlogsV1Response> AttachmentGetAttachmentlogsV1WithHttpInfo(int pkiAttachmentID, int operationIndex = 0);
-        /// <summary>
-        /// Change the attachment privacy
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change an attachment&#39;s access privacy.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentPrivacyV1Response</returns>
-        AttachmentPrivacyV1Response AttachmentPrivacyV1(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0);
-
-        /// <summary>
-        /// Change the attachment privacy
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change an attachment&#39;s access privacy.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentPrivacyV1Response</returns>
-        ApiResponse<AttachmentPrivacyV1Response> AttachmentPrivacyV1WithHttpInfo(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0);
         /// <summary>
         /// Rename an attachment
         /// </summary>
@@ -198,6 +148,56 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AttachmentRestoreV1Response</returns>
         ApiResponse<AttachmentRestoreV1Response> AttachmentRestoreV1WithHttpInfo(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Change attachment document type
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the checklist document type for an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentSetDocumentTypeV1Response</returns>
+        AttachmentSetDocumentTypeV1Response AttachmentSetDocumentTypeV1(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Change attachment document type
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the checklist document type for an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentSetDocumentTypeV1Response</returns>
+        ApiResponse<AttachmentSetDocumentTypeV1Response> AttachmentSetDocumentTypeV1WithHttpInfo(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Change the attachment privacy
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change an attachment&#39;s access privacy.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentSetPrivacyV1Response</returns>
+        AttachmentSetPrivacyV1Response AttachmentSetPrivacyV1(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Change the attachment privacy
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change an attachment&#39;s access privacy.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentSetPrivacyV1Response</returns>
+        ApiResponse<AttachmentSetPrivacyV1Response> AttachmentSetPrivacyV1WithHttpInfo(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0);
         /// <summary>
         /// Validate an existing attachment
         /// </summary>
@@ -260,33 +260,6 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (AttachmentDeleteV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentDeleteV1Response>> AttachmentDeleteV1WithHttpInfoAsync(int pkiAttachmentID, Object body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Change attachment document type
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentDocumentTypeV1Response</returns>
-        System.Threading.Tasks.Task<AttachmentDocumentTypeV1Response> AttachmentDocumentTypeV1Async(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Change attachment document type
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentDocumentTypeV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttachmentDocumentTypeV1Response>> AttachmentDocumentTypeV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
         /// Retrieve the content
         /// </summary>
         /// <remarks>
@@ -336,33 +309,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentGetAttachmentlogsV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentGetAttachmentlogsV1Response>> AttachmentGetAttachmentlogsV1WithHttpInfoAsync(int pkiAttachmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
-        /// Change the attachment privacy
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change an attachment&#39;s access privacy.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentPrivacyV1Response</returns>
-        System.Threading.Tasks.Task<AttachmentPrivacyV1Response> AttachmentPrivacyV1Async(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Change the attachment privacy
-        /// </summary>
-        /// <remarks>
-        /// The endpoint allows to change an attachment&#39;s access privacy.
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentPrivacyV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttachmentPrivacyV1Response>> AttachmentPrivacyV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Rename an attachment
         /// </summary>
@@ -417,6 +363,60 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AttachmentRestoreV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentRestoreV1Response>> AttachmentRestoreV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentRestoreV1Request attachmentRestoreV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Change attachment document type
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the checklist document type for an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentSetDocumentTypeV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentSetDocumentTypeV1Response> AttachmentSetDocumentTypeV1Async(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Change attachment document type
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change the checklist document type for an attachment.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentSetDocumentTypeV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentSetDocumentTypeV1Response>> AttachmentSetDocumentTypeV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Change the attachment privacy
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change an attachment&#39;s access privacy.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentSetPrivacyV1Response</returns>
+        System.Threading.Tasks.Task<AttachmentSetPrivacyV1Response> AttachmentSetPrivacyV1Async(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Change the attachment privacy
+        /// </summary>
+        /// <remarks>
+        /// The endpoint allows to change an attachment&#39;s access privacy.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentSetPrivacyV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttachmentSetPrivacyV1Response>> AttachmentSetPrivacyV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Validate an existing attachment
         /// </summary>
@@ -728,169 +728,6 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentDocumentTypeV1Response</returns>
-        public AttachmentDocumentTypeV1Response AttachmentDocumentTypeV1(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<AttachmentDocumentTypeV1Response> localVarResponse = AttachmentDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentDocumentTypeV1Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentDocumentTypeV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AttachmentDocumentTypeV1Response> AttachmentDocumentTypeV1WithHttpInfo(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'attachmentDocumentTypeV1Request' is set
-            if (attachmentDocumentTypeV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentDocumentTypeV1Request' when calling ObjectAttachmentApi->AttachmentDocumentTypeV1");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
-            localVarRequestOptions.Data = attachmentDocumentTypeV1Request;
-
-            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentDocumentTypeV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<AttachmentDocumentTypeV1Response>("/1/object/attachment/{pkiAttachmentID}/documentType", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("AttachmentDocumentTypeV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentDocumentTypeV1Response</returns>
-        public async System.Threading.Tasks.Task<AttachmentDocumentTypeV1Response> AttachmentDocumentTypeV1Async(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<AttachmentDocumentTypeV1Response> localVarResponse = await AttachmentDocumentTypeV1WithHttpInfoAsync(pkiAttachmentID, attachmentDocumentTypeV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentDocumentTypeV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentDocumentTypeV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentDocumentTypeV1Response>> AttachmentDocumentTypeV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            // verify the required parameter 'attachmentDocumentTypeV1Request' is set
-            if (attachmentDocumentTypeV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentDocumentTypeV1Request' when calling ObjectAttachmentApi->AttachmentDocumentTypeV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
-            localVarRequestOptions.Data = attachmentDocumentTypeV1Request;
-
-            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentDocumentTypeV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentDocumentTypeV1Response>("/1/object/attachment/{pkiAttachmentID}/documentType", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("AttachmentDocumentTypeV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// Retrieve the content Using this endpoint, you can retrieve the content of an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1175,169 +1012,6 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentGetAttachmentlogsV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>AttachmentPrivacyV1Response</returns>
-        public AttachmentPrivacyV1Response AttachmentPrivacyV1(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<AttachmentPrivacyV1Response> localVarResponse = AttachmentPrivacyV1WithHttpInfo(pkiAttachmentID, attachmentPrivacyV1Request);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of AttachmentPrivacyV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<AttachmentPrivacyV1Response> AttachmentPrivacyV1WithHttpInfo(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0)
-        {
-            // verify the required parameter 'attachmentPrivacyV1Request' is set
-            if (attachmentPrivacyV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentPrivacyV1Request' when calling ObjectAttachmentApi->AttachmentPrivacyV1");
-            }
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
-            localVarRequestOptions.Data = attachmentPrivacyV1Request;
-
-            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentPrivacyV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Post<AttachmentPrivacyV1Response>("/1/object/attachment/{pkiAttachmentID}/privacy", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("AttachmentPrivacyV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AttachmentPrivacyV1Response</returns>
-        public async System.Threading.Tasks.Task<AttachmentPrivacyV1Response> AttachmentPrivacyV1Async(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<AttachmentPrivacyV1Response> localVarResponse = await AttachmentPrivacyV1WithHttpInfoAsync(pkiAttachmentID, attachmentPrivacyV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiAttachmentID"></param>
-        /// <param name="attachmentPrivacyV1Request"></param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AttachmentPrivacyV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentPrivacyV1Response>> AttachmentPrivacyV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentPrivacyV1Request attachmentPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            // verify the required parameter 'attachmentPrivacyV1Request' is set
-            if (attachmentPrivacyV1Request == null)
-            {
-                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentPrivacyV1Request' when calling ObjectAttachmentApi->AttachmentPrivacyV1");
-            }
-
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
-            localVarRequestOptions.Data = attachmentPrivacyV1Request;
-
-            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentPrivacyV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentPrivacyV1Response>("/1/object/attachment/{pkiAttachmentID}/privacy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("AttachmentPrivacyV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1664,6 +1338,332 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AttachmentRestoreV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentSetDocumentTypeV1Response</returns>
+        public AttachmentSetDocumentTypeV1Response AttachmentSetDocumentTypeV1(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentSetDocumentTypeV1Response> localVarResponse = AttachmentSetDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentSetDocumentTypeV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentSetDocumentTypeV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentSetDocumentTypeV1Response> AttachmentSetDocumentTypeV1WithHttpInfo(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'attachmentSetDocumentTypeV1Request' is set
+            if (attachmentSetDocumentTypeV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentSetDocumentTypeV1Request' when calling ObjectAttachmentApi->AttachmentSetDocumentTypeV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentSetDocumentTypeV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentSetDocumentTypeV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttachmentSetDocumentTypeV1Response>("/1/object/attachment/{pkiAttachmentID}/setDocumentType", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentSetDocumentTypeV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentSetDocumentTypeV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentSetDocumentTypeV1Response> AttachmentSetDocumentTypeV1Async(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentSetDocumentTypeV1Response> localVarResponse = await AttachmentSetDocumentTypeV1WithHttpInfoAsync(pkiAttachmentID, attachmentSetDocumentTypeV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetDocumentTypeV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentSetDocumentTypeV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentSetDocumentTypeV1Response>> AttachmentSetDocumentTypeV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'attachmentSetDocumentTypeV1Request' is set
+            if (attachmentSetDocumentTypeV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentSetDocumentTypeV1Request' when calling ObjectAttachmentApi->AttachmentSetDocumentTypeV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentSetDocumentTypeV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentSetDocumentTypeV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentSetDocumentTypeV1Response>("/1/object/attachment/{pkiAttachmentID}/setDocumentType", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentSetDocumentTypeV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AttachmentSetPrivacyV1Response</returns>
+        public AttachmentSetPrivacyV1Response AttachmentSetPrivacyV1(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentSetPrivacyV1Response> localVarResponse = AttachmentSetPrivacyV1WithHttpInfo(pkiAttachmentID, attachmentSetPrivacyV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AttachmentSetPrivacyV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AttachmentSetPrivacyV1Response> AttachmentSetPrivacyV1WithHttpInfo(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'attachmentSetPrivacyV1Request' is set
+            if (attachmentSetPrivacyV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentSetPrivacyV1Request' when calling ObjectAttachmentApi->AttachmentSetPrivacyV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentSetPrivacyV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentSetPrivacyV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AttachmentSetPrivacyV1Response>("/1/object/attachment/{pkiAttachmentID}/setPrivacy", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentSetPrivacyV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AttachmentSetPrivacyV1Response</returns>
+        public async System.Threading.Tasks.Task<AttachmentSetPrivacyV1Response> AttachmentSetPrivacyV1Async(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AttachmentSetPrivacyV1Response> localVarResponse = await AttachmentSetPrivacyV1WithHttpInfoAsync(pkiAttachmentID, attachmentSetPrivacyV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Change the attachment privacy The endpoint allows to change an attachment&#39;s access privacy.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAttachmentID"></param>
+        /// <param name="attachmentSetPrivacyV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AttachmentSetPrivacyV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AttachmentSetPrivacyV1Response>> AttachmentSetPrivacyV1WithHttpInfoAsync(int pkiAttachmentID, AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'attachmentSetPrivacyV1Request' is set
+            if (attachmentSetPrivacyV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'attachmentSetPrivacyV1Request' when calling ObjectAttachmentApi->AttachmentSetPrivacyV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAttachmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAttachmentID)); // path parameter
+            localVarRequestOptions.Data = attachmentSetPrivacyV1Request;
+
+            localVarRequestOptions.Operation = "ObjectAttachmentApi.AttachmentSetPrivacyV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AttachmentSetPrivacyV1Response>("/1/object/attachment/{pkiAttachmentID}/setPrivacy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AttachmentSetPrivacyV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

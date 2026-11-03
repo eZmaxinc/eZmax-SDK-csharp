@@ -15,6 +15,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**InscriptionGetObjectV2**](ObjectInscriptionApi.md#inscriptiongetobjectv2) | **GET** /2/object/inscription/{pkiInscriptionID} | Retrieve an existing Inscription |
 | [**InscriptionImportIntoEDMV1**](ObjectInscriptionApi.md#inscriptionimportintoedmv1) | **POST** /1/object/inscription/{pkiInscriptionID}/importIntoEDM | Import attachments into the Inscription |
 | [**InscriptionPrepareFilesTransferV1**](ObjectInscriptionApi.md#inscriptionpreparefilestransferv1) | **POST** /1/object/inscription/{pkiInscriptionID}/prepareFilesTransfer | Prepares file transfer into EDM |
+| [**InscriptionSynchronizationDocumenttypeV1**](ObjectInscriptionApi.md#inscriptionsynchronizationdocumenttypev1) | **POST** /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype | Synchronization of the Documenttype in the Inscription |
 
 <a id="inscriptionbatchdownloadv1"></a>
 # **InscriptionBatchDownloadV1**
@@ -1060,6 +1061,103 @@ catch (ApiException e)
 ### Return type
 
 [**InscriptionPrepareFilesTransferV1Response**](InscriptionPrepareFilesTransferV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="inscriptionsynchronizationdocumenttypev1"></a>
+# **InscriptionSynchronizationDocumenttypeV1**
+> InscriptionSynchronizationDocumenttypeV1Response InscriptionSynchronizationDocumenttypeV1 (int pkiInscriptionID, Object body)
+
+Synchronization of the Documenttype in the Inscription
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class InscriptionSynchronizationDocumenttypeV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectInscriptionApi(config);
+            var pkiInscriptionID = 56;  // int | 
+            var body = null;  // Object | 
+
+            try
+            {
+                // Synchronization of the Documenttype in the Inscription
+                InscriptionSynchronizationDocumenttypeV1Response result = apiInstance.InscriptionSynchronizationDocumenttypeV1(pkiInscriptionID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectInscriptionApi.InscriptionSynchronizationDocumenttypeV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the InscriptionSynchronizationDocumenttypeV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Synchronization of the Documenttype in the Inscription
+    ApiResponse<InscriptionSynchronizationDocumenttypeV1Response> response = apiInstance.InscriptionSynchronizationDocumenttypeV1WithHttpInfo(pkiInscriptionID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectInscriptionApi.InscriptionSynchronizationDocumenttypeV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiInscriptionID** | **int** |  |  |
+| **body** | **Object** |  |  |
+
+### Return type
+
+[**InscriptionSynchronizationDocumenttypeV1Response**](InscriptionSynchronizationDocumenttypeV1Response.md)
 
 ### Authorization
 

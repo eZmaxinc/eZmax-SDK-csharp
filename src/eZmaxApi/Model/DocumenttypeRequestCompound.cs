@@ -34,10 +34,16 @@ namespace eZmaxApi.Model
     {
 
         /// <summary>
+        /// Gets or Sets EDocumenttypeStep
+        /// </summary>
+        [DataMember(Name = "eDocumenttypeStep", IsRequired = true, EmitDefaultValue = true)]
+        public ComputedEDocumenttypeStep EDocumenttypeStep { get; set; }
+
+        /// <summary>
         /// Gets or Sets EDocumenttypeEzcom
         /// </summary>
-        [DataMember(Name = "eDocumenttypeEzcom", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEDocumenttypeEzcom EDocumenttypeEzcom { get; set; }
+        [DataMember(Name = "eDocumenttypeEzcom", EmitDefaultValue = false)]
+        public FieldEDocumenttypeEzcom? EDocumenttypeEzcom { get; set; }
 
         /// <summary>
         /// Gets or Sets EDocumenttypePrivacydefault
@@ -84,6 +90,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype.</param>
         /// <param name="objDocumenttypeName">objDocumenttypeName (required).</param>
+        /// <param name="eDocumenttypeStep">eDocumenttypeStep (required).</param>
         /// <param name="sDocumenttypeDefaultfilename">The defaultfilename of the Documenttype (required).</param>
         /// <param name="bDocumenttypeShowagent">Whether if it&#39;s an showagent (required).</param>
         /// <param name="bDocumenttypeIsactive">Whether the documenttype is active or not (required).</param>
@@ -98,14 +105,15 @@ namespace eZmaxApi.Model
         /// <param name="bDocumenttypeForeclosedsale">Whether if it&#39;s an foreclosedsale (required).</param>
         /// <param name="bDocumenttypeCommercialfunding">Whether if it&#39;s an commercialfunding (required).</param>
         /// <param name="bDocumenttypeCanafe">Whether if it&#39;s an canafe (required).</param>
-        /// <param name="eDocumenttypeEzcom">eDocumenttypeEzcom (required).</param>
+        /// <param name="eDocumenttypeEzcom">eDocumenttypeEzcom.</param>
         /// <param name="eDocumenttypePrivacydefault">eDocumenttypePrivacydefault (required).</param>
         /// <param name="eDocumenttypeStatusdefault">eDocumenttypeStatusdefault (required).</param>
         /// <param name="eDocumenttypeSalebyowner">eDocumenttypeSalebyowner (required).</param>
         /// <param name="eDocumenttypeSaledisplaybyrole">eDocumenttypeSaledisplaybyrole (required).</param>
         /// <param name="eDocumenttypeTransactiontype">eDocumenttypeTransactiontype (required).</param>
         /// <param name="eDocumenttypeRepossession">eDocumenttypeRepossession (required).</param>
-        public DocumenttypeRequestCompound(int pkiDocumenttypeID = default, MultilingualDocumenttypeName objDocumenttypeName = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeIsrequired = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default)
+        /// <param name="aFkiInscriptiontypeID">aFkiInscriptiontypeID (required).</param>
+        public DocumenttypeRequestCompound(int pkiDocumenttypeID = default, MultilingualDocumenttypeName objDocumenttypeName = default, ComputedEDocumenttypeStep eDocumenttypeStep = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeIsrequired = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom? eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default, List<int> aFkiInscriptiontypeID = default)
         {
             // to ensure "objDocumenttypeName" is required (not null)
             if (objDocumenttypeName == null)
@@ -113,6 +121,7 @@ namespace eZmaxApi.Model
                 throw new ArgumentNullException("objDocumenttypeName is a required property for DocumenttypeRequestCompound and cannot be null");
             }
             this.ObjDocumenttypeName = objDocumenttypeName;
+            this.EDocumenttypeStep = eDocumenttypeStep;
             // to ensure "sDocumenttypeDefaultfilename" is required (not null)
             if (sDocumenttypeDefaultfilename == null)
             {
@@ -132,14 +141,20 @@ namespace eZmaxApi.Model
             this.BDocumenttypeForeclosedsale = bDocumenttypeForeclosedsale;
             this.BDocumenttypeCommercialfunding = bDocumenttypeCommercialfunding;
             this.BDocumenttypeCanafe = bDocumenttypeCanafe;
-            this.EDocumenttypeEzcom = eDocumenttypeEzcom;
             this.EDocumenttypePrivacydefault = eDocumenttypePrivacydefault;
             this.EDocumenttypeStatusdefault = eDocumenttypeStatusdefault;
             this.EDocumenttypeSalebyowner = eDocumenttypeSalebyowner;
             this.EDocumenttypeSaledisplaybyrole = eDocumenttypeSaledisplaybyrole;
             this.EDocumenttypeTransactiontype = eDocumenttypeTransactiontype;
             this.EDocumenttypeRepossession = eDocumenttypeRepossession;
+            // to ensure "aFkiInscriptiontypeID" is required (not null)
+            if (aFkiInscriptiontypeID == null)
+            {
+                throw new ArgumentNullException("aFkiInscriptiontypeID is a required property for DocumenttypeRequestCompound and cannot be null");
+            }
+            this.AFkiInscriptiontypeID = aFkiInscriptiontypeID;
             this.PkiDocumenttypeID = pkiDocumenttypeID;
+            this.EDocumenttypeEzcom = eDocumenttypeEzcom;
         }
 
         /// <summary>
@@ -299,6 +314,12 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeCanafe { get; set; }
 
         /// <summary>
+        /// Gets or Sets AFkiInscriptiontypeID
+        /// </summary>
+        [DataMember(Name = "a_fkiInscriptiontypeID", IsRequired = true, EmitDefaultValue = true)]
+        public List<int> AFkiInscriptiontypeID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -308,6 +329,7 @@ namespace eZmaxApi.Model
             sb.Append("class DocumenttypeRequestCompound {\n");
             sb.Append("  PkiDocumenttypeID: ").Append(PkiDocumenttypeID).Append("\n");
             sb.Append("  ObjDocumenttypeName: ").Append(ObjDocumenttypeName).Append("\n");
+            sb.Append("  EDocumenttypeStep: ").Append(EDocumenttypeStep).Append("\n");
             sb.Append("  SDocumenttypeDefaultfilename: ").Append(SDocumenttypeDefaultfilename).Append("\n");
             sb.Append("  BDocumenttypeShowagent: ").Append(BDocumenttypeShowagent).Append("\n");
             sb.Append("  BDocumenttypeIsactive: ").Append(BDocumenttypeIsactive).Append("\n");
@@ -329,6 +351,7 @@ namespace eZmaxApi.Model
             sb.Append("  EDocumenttypeSaledisplaybyrole: ").Append(EDocumenttypeSaledisplaybyrole).Append("\n");
             sb.Append("  EDocumenttypeTransactiontype: ").Append(EDocumenttypeTransactiontype).Append("\n");
             sb.Append("  EDocumenttypeRepossession: ").Append(EDocumenttypeRepossession).Append("\n");
+            sb.Append("  AFkiInscriptiontypeID: ").Append(AFkiInscriptiontypeID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

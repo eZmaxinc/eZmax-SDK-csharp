@@ -148,64 +148,70 @@ namespace eZmaxApi.Model
         OpenFromEmail = 19,
 
         /// <summary>
+        /// Enum Pending for value: Pending
+        /// </summary>
+        [EnumMember(Value = "Pending")]
+        Pending = 20,
+
+        /// <summary>
         /// Enum Purged for value: Purged
         /// </summary>
         [EnumMember(Value = "Purged")]
-        Purged = 20,
+        Purged = 21,
 
         /// <summary>
         /// Enum Reject for value: Reject
         /// </summary>
         [EnumMember(Value = "Reject")]
-        Reject = 21,
+        Reject = 22,
 
         /// <summary>
         /// Enum Rename for value: Rename
         /// </summary>
         [EnumMember(Value = "Rename")]
-        Rename = 22,
+        Rename = 23,
 
         /// <summary>
         /// Enum Restore for value: Restore
         /// </summary>
         [EnumMember(Value = "Restore")]
-        Restore = 23,
+        Restore = 24,
 
         /// <summary>
         /// Enum Scanned for value: Scanned
         /// </summary>
         [EnumMember(Value = "Scanned")]
-        Scanned = 24,
+        Scanned = 25,
 
         /// <summary>
         /// Enum SendToGED for value: SendToGED
         /// </summary>
         [EnumMember(Value = "SendToGED")]
-        SendToGED = 25,
+        SendToGED = 26,
 
         /// <summary>
         /// Enum UnvalidatedBy for value: UnvalidatedBy
         /// </summary>
         [EnumMember(Value = "UnvalidatedBy")]
-        UnvalidatedBy = 26,
+        UnvalidatedBy = 27,
 
         /// <summary>
         /// Enum Upload for value: Upload
         /// </summary>
         [EnumMember(Value = "Upload")]
-        Upload = 27,
+        Upload = 28,
 
         /// <summary>
         /// Enum ValidatedBy for value: ValidatedBy
         /// </summary>
         [EnumMember(Value = "ValidatedBy")]
-        ValidatedBy = 28,
+        ValidatedBy = 29,
 
         /// <summary>
         /// Enum VetinfoUpload for value: VetinfoUpload
         /// </summary>
         [EnumMember(Value = "VetinfoUpload")]
-        VetinfoUpload = 29
+        VetinfoUpload = 30
     }
 
 }

@@ -51,26 +51,6 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DocumenttypeCreateObjectV1Response</returns>
         ApiResponse<DocumenttypeCreateObjectV1Response> DocumenttypeCreateObjectV1WithHttpInfo(DocumenttypeCreateObjectV1Request documenttypeCreateObjectV1Request, int operationIndex = 0);
         /// <summary>
-        /// Delete an existing Documenttype
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypeDeleteObjectV1Response</returns>
-        DocumenttypeDeleteObjectV1Response DocumenttypeDeleteObjectV1(int pkiDocumenttypeID, int operationIndex = 0);
-
-        /// <summary>
-        /// Delete an existing Documenttype
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypeDeleteObjectV1Response</returns>
-        ApiResponse<DocumenttypeDeleteObjectV1Response> DocumenttypeDeleteObjectV1WithHttpInfo(int pkiDocumenttypeID, int operationIndex = 0);
-        /// <summary>
         /// Edit an existing Documenttype
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -206,31 +186,6 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DocumenttypeCreateObjectV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumenttypeCreateObjectV1Response>> DocumenttypeCreateObjectV1WithHttpInfoAsync(DocumenttypeCreateObjectV1Request documenttypeCreateObjectV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
-        /// Delete an existing Documenttype
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypeDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<DocumenttypeDeleteObjectV1Response> DocumenttypeDeleteObjectV1Async(int pkiDocumenttypeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Delete an existing Documenttype
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypeDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypeDeleteObjectV1Response>> DocumenttypeDeleteObjectV1WithHttpInfoAsync(int pkiDocumenttypeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Edit an existing Documenttype
         /// </summary>
@@ -615,149 +570,6 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DocumenttypeCreateObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttype 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypeDeleteObjectV1Response</returns>
-        public DocumenttypeDeleteObjectV1Response DocumenttypeDeleteObjectV1(int pkiDocumenttypeID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypeDeleteObjectV1Response> localVarResponse = DocumenttypeDeleteObjectV1WithHttpInfo(pkiDocumenttypeID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttype 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypeDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypeDeleteObjectV1Response> DocumenttypeDeleteObjectV1WithHttpInfo(int pkiDocumenttypeID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypeID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypeApi.DocumenttypeDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Delete<DocumenttypeDeleteObjectV1Response>("/1/object/documenttype/{pkiDocumenttypeID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypeDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttype 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypeDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypeDeleteObjectV1Response> DocumenttypeDeleteObjectV1Async(int pkiDocumenttypeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypeDeleteObjectV1Response> localVarResponse = await DocumenttypeDeleteObjectV1WithHttpInfoAsync(pkiDocumenttypeID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttype 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypeDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypeDeleteObjectV1Response>> DocumenttypeDeleteObjectV1WithHttpInfoAsync(int pkiDocumenttypeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypeID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypeApi.DocumenttypeDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DocumenttypeDeleteObjectV1Response>("/1/object/documenttype/{pkiDocumenttypeID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypeDeleteObjectV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

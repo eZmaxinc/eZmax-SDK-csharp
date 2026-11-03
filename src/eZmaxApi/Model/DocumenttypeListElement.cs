@@ -36,8 +36,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Gets or Sets EDocumenttypeEzcom
         /// </summary>
-        [DataMember(Name = "eDocumenttypeEzcom", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEDocumenttypeEzcom EDocumenttypeEzcom { get; set; }
+        [DataMember(Name = "eDocumenttypeEzcom", EmitDefaultValue = false)]
+        public FieldEDocumenttypeEzcom? EDocumenttypeEzcom { get; set; }
 
         /// <summary>
         /// Gets or Sets EDocumenttypePrivacydefault
@@ -98,14 +98,14 @@ namespace eZmaxApi.Model
         /// <param name="bDocumenttypeForeclosedsale">Whether if it&#39;s an foreclosedsale (required).</param>
         /// <param name="bDocumenttypeCommercialfunding">Whether if it&#39;s an commercialfunding (required).</param>
         /// <param name="bDocumenttypeCanafe">Whether if it&#39;s an canafe (required).</param>
-        /// <param name="eDocumenttypeEzcom">eDocumenttypeEzcom (required).</param>
+        /// <param name="eDocumenttypeEzcom">eDocumenttypeEzcom.</param>
         /// <param name="eDocumenttypePrivacydefault">eDocumenttypePrivacydefault (required).</param>
         /// <param name="eDocumenttypeStatusdefault">eDocumenttypeStatusdefault (required).</param>
         /// <param name="eDocumenttypeSalebyowner">eDocumenttypeSalebyowner (required).</param>
         /// <param name="eDocumenttypeSaledisplaybyrole">eDocumenttypeSaledisplaybyrole (required).</param>
         /// <param name="eDocumenttypeTransactiontype">eDocumenttypeTransactiontype (required).</param>
         /// <param name="eDocumenttypeRepossession">eDocumenttypeRepossession (required).</param>
-        public DocumenttypeListElement(int pkiDocumenttypeID = default, string sDocumenttypeNameX = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeIsrequired = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default)
+        public DocumenttypeListElement(int pkiDocumenttypeID = default, string sDocumenttypeNameX = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeIsrequired = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom? eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default)
         {
             this.PkiDocumenttypeID = pkiDocumenttypeID;
             // to ensure "sDocumenttypeNameX" is required (not null)
@@ -133,13 +133,13 @@ namespace eZmaxApi.Model
             this.BDocumenttypeForeclosedsale = bDocumenttypeForeclosedsale;
             this.BDocumenttypeCommercialfunding = bDocumenttypeCommercialfunding;
             this.BDocumenttypeCanafe = bDocumenttypeCanafe;
-            this.EDocumenttypeEzcom = eDocumenttypeEzcom;
             this.EDocumenttypePrivacydefault = eDocumenttypePrivacydefault;
             this.EDocumenttypeStatusdefault = eDocumenttypeStatusdefault;
             this.EDocumenttypeSalebyowner = eDocumenttypeSalebyowner;
             this.EDocumenttypeSaledisplaybyrole = eDocumenttypeSaledisplaybyrole;
             this.EDocumenttypeTransactiontype = eDocumenttypeTransactiontype;
             this.EDocumenttypeRepossession = eDocumenttypeRepossession;
+            this.EDocumenttypeEzcom = eDocumenttypeEzcom;
         }
 
         /// <summary>

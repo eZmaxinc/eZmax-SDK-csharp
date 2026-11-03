@@ -41,17 +41,17 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="AttachmentrejectreasonAutocompleteElementResponse" /> class.
         /// </summary>
         /// <param name="pkiAttachmentrejectreasonID">The unique ID of the Attachmentrejectreason (required).</param>
-        /// <param name="sAttachmentrejectreasonnameX">The name of the Attachmentrejectreason in the language of the requester (required).</param>
+        /// <param name="sAttachmentrejectreasonNameX">The name of the Attachmentrejectreason in the language of the requester (required).</param>
         /// <param name="bAttachmentrejectreasonIsactive">Whether the Attachmentrejectreason is active or not (required).</param>
-        public AttachmentrejectreasonAutocompleteElementResponse(int pkiAttachmentrejectreasonID = default, string sAttachmentrejectreasonnameX = default, bool bAttachmentrejectreasonIsactive = default)
+        public AttachmentrejectreasonAutocompleteElementResponse(int pkiAttachmentrejectreasonID = default, string sAttachmentrejectreasonNameX = default, bool bAttachmentrejectreasonIsactive = default)
         {
             this.PkiAttachmentrejectreasonID = pkiAttachmentrejectreasonID;
-            // to ensure "sAttachmentrejectreasonnameX" is required (not null)
-            if (sAttachmentrejectreasonnameX == null)
+            // to ensure "sAttachmentrejectreasonNameX" is required (not null)
+            if (sAttachmentrejectreasonNameX == null)
             {
-                throw new ArgumentNullException("sAttachmentrejectreasonnameX is a required property for AttachmentrejectreasonAutocompleteElementResponse and cannot be null");
+                throw new ArgumentNullException("sAttachmentrejectreasonNameX is a required property for AttachmentrejectreasonAutocompleteElementResponse and cannot be null");
             }
-            this.SAttachmentrejectreasonnameX = sAttachmentrejectreasonnameX;
+            this.SAttachmentrejectreasonNameX = sAttachmentrejectreasonNameX;
             this.BAttachmentrejectreasonIsactive = bAttachmentrejectreasonIsactive;
         }
 
@@ -72,8 +72,8 @@ namespace eZmaxApi.Model
         /*
         <example>Wrong Document</example>
         */
-        [DataMember(Name = "sAttachmentrejectreasonnameX", IsRequired = true, EmitDefaultValue = true)]
-        public string SAttachmentrejectreasonnameX { get; set; }
+        [DataMember(Name = "sAttachmentrejectreasonNameX", IsRequired = true, EmitDefaultValue = true)]
+        public string SAttachmentrejectreasonNameX { get; set; }
 
         /// <summary>
         /// Whether the Attachmentrejectreason is active or not
@@ -94,7 +94,7 @@ namespace eZmaxApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AttachmentrejectreasonAutocompleteElementResponse {\n");
             sb.Append("  PkiAttachmentrejectreasonID: ").Append(PkiAttachmentrejectreasonID).Append("\n");
-            sb.Append("  SAttachmentrejectreasonnameX: ").Append(SAttachmentrejectreasonnameX).Append("\n");
+            sb.Append("  SAttachmentrejectreasonNameX: ").Append(SAttachmentrejectreasonNameX).Append("\n");
             sb.Append("  BAttachmentrejectreasonIsactive: ").Append(BAttachmentrejectreasonIsactive).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -128,12 +128,12 @@ namespace eZmaxApi.Model
                 yield return new ValidationResult("Invalid value for PkiAttachmentrejectreasonID, must be a value greater than or equal to 0.", new [] { "PkiAttachmentrejectreasonID" });
             }
 
-            if (this.SAttachmentrejectreasonnameX != null) {
-                // SAttachmentrejectreasonnameX (string) pattern
-                Regex regexSAttachmentrejectreasonnameX = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
-                if (!regexSAttachmentrejectreasonnameX.Match(this.SAttachmentrejectreasonnameX).Success)
+            if (this.SAttachmentrejectreasonNameX != null) {
+                // SAttachmentrejectreasonNameX (string) pattern
+                Regex regexSAttachmentrejectreasonNameX = new Regex(@"^.{0,75}$", RegexOptions.CultureInvariant);
+                if (!regexSAttachmentrejectreasonNameX.Match(this.SAttachmentrejectreasonNameX).Success)
                 {
-                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentrejectreasonnameX, must match a pattern of " + regexSAttachmentrejectreasonnameX, new [] { "SAttachmentrejectreasonnameX" });
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SAttachmentrejectreasonNameX, must match a pattern of " + regexSAttachmentrejectreasonNameX, new [] { "SAttachmentrejectreasonNameX" });
                 }
             }
 

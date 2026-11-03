@@ -112,7 +112,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.</value>
         /*
-        <example>[B@6f012914</example>
+        <example>[B@7bc9e6ab</example>
         */
         [DataMember(Name = "sBrandingBase64", EmitDefaultValue = false)]
         public byte[] SBrandingBase64 { get; set; }

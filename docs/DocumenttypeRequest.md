@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PkiDocumenttypeID** | **int** | The unique ID of the Documenttype | [optional] 
 **ObjDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  | 
+**EDocumenttypeStep** | **ComputedEDocumenttypeStep** |  | 
 **SDocumenttypeDefaultfilename** | **string** | The defaultfilename of the Documenttype | 
 **BDocumenttypeShowagent** | **bool** | Whether if it&#39;s an showagent | 
 **BDocumenttypeIsactive** | **bool** | Whether the documenttype is active or not | 
@@ -21,13 +22,14 @@ Name | Type | Description | Notes
 **BDocumenttypeForeclosedsale** | **bool** | Whether if it&#39;s an foreclosedsale | 
 **BDocumenttypeCommercialfunding** | **bool** | Whether if it&#39;s an commercialfunding | 
 **BDocumenttypeCanafe** | **bool** | Whether if it&#39;s an canafe | 
-**EDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  | 
+**EDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  | [optional] 
 **EDocumenttypePrivacydefault** | **FieldEDocumenttypePrivacydefault** |  | 
 **EDocumenttypeStatusdefault** | **FieldEDocumenttypeStatusdefault** |  | 
 **EDocumenttypeSalebyowner** | **FieldEDocumenttypeSalebyowner** |  | 
 **EDocumenttypeSaledisplaybyrole** | **FieldEDocumenttypeSaledisplaybyrole** |  | 
 **EDocumenttypeTransactiontype** | **FieldEDocumenttypeTransactiontype** |  | 
 **EDocumenttypeRepossession** | **FieldEDocumenttypeRepossession** |  | 
+**AFkiInscriptiontypeID** | **List&lt;int&gt;** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
