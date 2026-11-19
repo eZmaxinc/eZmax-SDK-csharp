@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Variableexpense in French</value>
         /*
-        <example>Ã‰quipements de bureau</example>
+        <example>Équipements de bureau</example>
         */
         [DataMember(Name = "sVariableexpenseDescription1", EmitDefaultValue = false)]
         public string SVariableexpenseDescription1 { get; set; }
@@ -91,7 +91,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SVariableexpenseDescription1 != null) {
                 // SVariableexpenseDescription1 (string) pattern

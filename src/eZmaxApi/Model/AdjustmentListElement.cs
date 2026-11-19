@@ -215,30 +215,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAdjustmentID (int) maximum
             if (this.PkiAdjustmentID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiAdjustmentID, must be a value less than or equal to 65535.", new [] { "PkiAdjustmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAdjustmentID, must be a value less than or equal to 65535.", new [] { "PkiAdjustmentID" });
             }
 
             // PkiAdjustmentID (int) minimum
             if (this.PkiAdjustmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiAdjustmentID, must be a value greater than or equal to 0.", new [] { "PkiAdjustmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAdjustmentID, must be a value greater than or equal to 0.", new [] { "PkiAdjustmentID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             // FkiUserIDCreated (int) minimum
             if (this.FkiUserIDCreated < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
             }
 
             if (this.SUserLoginname != null) {
@@ -280,13 +280,13 @@ namespace eZmaxApi.Model
             // DAdjustmentTotaldebit (string) maxLength
             if (this.DAdjustmentTotaldebit != null && this.DAdjustmentTotaldebit.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DAdjustmentTotaldebit, length must be less than 13.", new [] { "DAdjustmentTotaldebit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DAdjustmentTotaldebit, length must be less than 13.", new [] { "DAdjustmentTotaldebit" });
             }
 
             // DAdjustmentTotaldebit (string) minLength
             if (this.DAdjustmentTotaldebit != null && this.DAdjustmentTotaldebit.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DAdjustmentTotaldebit, length must be greater than 4.", new [] { "DAdjustmentTotaldebit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DAdjustmentTotaldebit, length must be greater than 4.", new [] { "DAdjustmentTotaldebit" });
             }
 
             if (this.DAdjustmentTotaldebit != null) {
@@ -301,13 +301,13 @@ namespace eZmaxApi.Model
             // DAdjustmentTotalcredit (string) maxLength
             if (this.DAdjustmentTotalcredit != null && this.DAdjustmentTotalcredit.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DAdjustmentTotalcredit, length must be less than 13.", new [] { "DAdjustmentTotalcredit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DAdjustmentTotalcredit, length must be less than 13.", new [] { "DAdjustmentTotalcredit" });
             }
 
             // DAdjustmentTotalcredit (string) minLength
             if (this.DAdjustmentTotalcredit != null && this.DAdjustmentTotalcredit.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DAdjustmentTotalcredit, length must be greater than 4.", new [] { "DAdjustmentTotalcredit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DAdjustmentTotalcredit, length must be greater than 4.", new [] { "DAdjustmentTotalcredit" });
             }
 
             if (this.DAdjustmentTotalcredit != null) {

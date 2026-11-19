@@ -193,54 +193,54 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiContactinformationsID (int) maximum
             if (this.PkiContactinformationsID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "PkiContactinformationsID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContactinformationsID, must be a value less than or equal to 16777215.", new [] { "PkiContactinformationsID" });
             }
 
             // PkiContactinformationsID (int) minimum
             if (this.PkiContactinformationsID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "PkiContactinformationsID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiContactinformationsID, must be a value greater than or equal to 0.", new [] { "PkiContactinformationsID" });
             }
 
             // FkiAddressIDDefault (int) minimum
             if (this.FkiAddressIDDefault < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAddressIDDefault, must be a value greater than or equal to 0.", new [] { "FkiAddressIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAddressIDDefault, must be a value greater than or equal to 0.", new [] { "FkiAddressIDDefault" });
             }
 
             // FkiPhoneIDDefault (int) minimum
             if (this.FkiPhoneIDDefault < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPhoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiPhoneIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhoneIDDefault, must be a value greater than or equal to 0.", new [] { "FkiPhoneIDDefault" });
             }
 
             // FkiEmailIDDefault (int) maximum
             if (this.FkiEmailIDDefault > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiEmailIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiEmailIDDefault" });
             }
 
             // FkiEmailIDDefault (int) minimum
             if (this.FkiEmailIDDefault < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEmailIDDefault, must be a value greater than or equal to 1.", new [] { "FkiEmailIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailIDDefault, must be a value greater than or equal to 1.", new [] { "FkiEmailIDDefault" });
             }
 
             // FkiWebsiteIDDefault (int) maximum
             if (this.FkiWebsiteIDDefault > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiWebsiteIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value less than or equal to 16777215.", new [] { "FkiWebsiteIDDefault" });
             }
 
             // FkiWebsiteIDDefault (int) minimum
             if (this.FkiWebsiteIDDefault < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value greater than or equal to 0.", new [] { "FkiWebsiteIDDefault" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiWebsiteIDDefault, must be a value greater than or equal to 0.", new [] { "FkiWebsiteIDDefault" });
             }
 
             if (this.SContactinformationsUrl != null) {

@@ -483,48 +483,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfolderID (int) minimum
             if (this.PkiEzsignfolderID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfolderID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignbulksendID (int) minimum
             if (this.FkiEzsignbulksendID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
             }
 
             // FkiEzsignbulksendtransmissionID (int) minimum
             if (this.FkiEzsignbulksendtransmissionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendtransmissionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendtransmissionID" });
             }
 
             // FkiEzsigntemplatepublicID (int) maximum
             if (this.FkiEzsigntemplatepublicID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value less than or equal to 65535.", new [] { "FkiEzsigntemplatepublicID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value less than or equal to 65535.", new [] { "FkiEzsigntemplatepublicID" });
             }
 
             // FkiEzsigntemplatepublicID (int) minimum
             if (this.FkiEzsigntemplatepublicID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepublicID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepublicID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepublicID" });
             }
 
             if (this.SEzsigntemplatepublicDescription != null) {

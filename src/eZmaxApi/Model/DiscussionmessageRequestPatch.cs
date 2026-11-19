@@ -91,18 +91,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiDiscussionmembershipIDActionrequired (int) maximum
             if (this.FkiDiscussionmembershipIDActionrequired > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             // FkiDiscussionmembershipIDActionrequired (int) minimum
             if (this.FkiDiscussionmembershipIDActionrequired < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionmembershipIDActionrequired, must be a value greater than or equal to 0.", new [] { "FkiDiscussionmembershipIDActionrequired" });
             }
 
             if (this.TDiscussionmessageContent != null) {

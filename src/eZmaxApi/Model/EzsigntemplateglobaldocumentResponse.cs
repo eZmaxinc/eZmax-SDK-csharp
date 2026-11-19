@@ -136,18 +136,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateglobaldocumentID (int) minimum
             if (this.PkiEzsigntemplateglobaldocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobaldocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateglobaldocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateglobaldocumentID" });
             }
 
             // IEzsigntemplateglobaldocumentPagetotal (int) minimum
             if (this.IEzsigntemplateglobaldocumentPagetotal < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateglobaldocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateglobaldocumentPagetotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateglobaldocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigntemplateglobaldocumentPagetotal" });
             }
 
             yield break;

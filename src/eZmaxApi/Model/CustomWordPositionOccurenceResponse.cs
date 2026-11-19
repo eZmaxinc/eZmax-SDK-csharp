@@ -95,24 +95,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // IPage (int) minimum
             if (this.IPage < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IPage, must be a value greater than or equal to 1.", new [] { "IPage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IPage, must be a value greater than or equal to 1.", new [] { "IPage" });
             }
 
             // IX (int) minimum
             if (this.IX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IX, must be a value greater than or equal to 0.", new [] { "IX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IX, must be a value greater than or equal to 0.", new [] { "IX" });
             }
 
             // IY (int) minimum
             if (this.IY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IY, must be a value greater than or equal to 0.", new [] { "IY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IY, must be a value greater than or equal to 0.", new [] { "IY" });
             }
 
             yield break;

@@ -217,42 +217,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDeposittransitchequeID (int) maximum
             if (this.PkiDeposittransitchequeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiDeposittransitchequeID, must be a value less than or equal to 65535.", new [] { "PkiDeposittransitchequeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDeposittransitchequeID, must be a value less than or equal to 65535.", new [] { "PkiDeposittransitchequeID" });
             }
 
             // PkiDeposittransitchequeID (int) minimum
             if (this.PkiDeposittransitchequeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiDeposittransitchequeID, must be a value greater than or equal to 0.", new [] { "PkiDeposittransitchequeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDeposittransitchequeID, must be a value greater than or equal to 0.", new [] { "PkiDeposittransitchequeID" });
             }
 
             // FkiBankaccountID (int) maximum
             if (this.FkiBankaccountID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
             }
 
             // FkiBankaccountID (int) minimum
             if (this.FkiBankaccountID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
             }
 
             // FkiDepositID (int) maximum
             if (this.FkiDepositID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value less than or equal to 16777215.", new [] { "FkiDepositID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepositID, must be a value less than or equal to 16777215.", new [] { "FkiDepositID" });
             }
 
             // FkiDepositID (int) minimum
             if (this.FkiDepositID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDepositID, must be a value greater than or equal to 0.", new [] { "FkiDepositID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepositID, must be a value greater than or equal to 0.", new [] { "FkiDepositID" });
             }
 
             if (this.SDeposittransitchequeNumber != null) {
@@ -276,13 +276,13 @@ namespace eZmaxApi.Model
             // DDeposittransitchequeAmount (string) maxLength
             if (this.DDeposittransitchequeAmount != null && this.DDeposittransitchequeAmount.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DDeposittransitchequeAmount, length must be less than 13.", new [] { "DDeposittransitchequeAmount" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DDeposittransitchequeAmount, length must be less than 13.", new [] { "DDeposittransitchequeAmount" });
             }
 
             // DDeposittransitchequeAmount (string) minLength
             if (this.DDeposittransitchequeAmount != null && this.DDeposittransitchequeAmount.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DDeposittransitchequeAmount, length must be greater than 4.", new [] { "DDeposittransitchequeAmount" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DDeposittransitchequeAmount, length must be greater than 4.", new [] { "DDeposittransitchequeAmount" });
             }
 
             if (this.DDeposittransitchequeAmount != null) {

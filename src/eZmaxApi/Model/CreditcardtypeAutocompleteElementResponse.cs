@@ -110,7 +110,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SCreditcardtypeName != null) {
                 // SCreditcardtypeName (string) pattern
@@ -124,13 +124,13 @@ namespace eZmaxApi.Model
             // PkiCreditcardtypeID (int) maximum
             if (this.PkiCreditcardtypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "PkiCreditcardtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "PkiCreditcardtypeID" });
             }
 
             // PkiCreditcardtypeID (int) minimum
             if (this.PkiCreditcardtypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardtypeID" });
             }
 
             yield break;

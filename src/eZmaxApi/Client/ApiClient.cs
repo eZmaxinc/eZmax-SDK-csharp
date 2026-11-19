@@ -30,8 +30,6 @@ using RestSharp.Serializers;
 using RestSharpMethod = RestSharp.Method;
 using FileIO = System.IO.File;
 using Polly;
-using eZmaxApi.Model;
-
 using eZmaxApi.Api;
 
 namespace eZmaxApi.Client
@@ -73,10 +71,10 @@ namespace eZmaxApi.Client
         /// <returns>A JSON string.</returns>
         public string Serialize(object obj)
         {
-            if (obj != null && obj is AbstractOpenAPISchema)
+            if (obj != null && obj is eZmaxApi.Model.AbstractOpenAPISchema)
             {
                 // the object to be serialized is an oneOf/anyOf schema
-                return ((AbstractOpenAPISchema)obj).ToJson();
+                return ((eZmaxApi.Model.AbstractOpenAPISchema)obj).ToJson();
             }
             else
             {
@@ -493,7 +491,7 @@ namespace eZmaxApi.Client
                 RestResponse<T> response = await getResponse(client).ConfigureAwait(false);
 
                 // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
-                if (typeof(AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+                if (typeof(eZmaxApi.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
                 {
                     try
                     {

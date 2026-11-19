@@ -239,42 +239,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignformfieldID (int) minimum
             if (this.PkiEzsignformfieldID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "PkiEzsignformfieldID" });
             }
 
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             // IEzsignformfieldX (int) minimum
             if (this.IEzsignformfieldX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldX, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldX" });
             }
 
             // IEzsignformfieldY (int) minimum
             if (this.IEzsignformfieldY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldY, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldY" });
             }
 
             // IEzsignformfieldWidth (int) minimum
             if (this.IEzsignformfieldWidth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldWidth, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldWidth" });
             }
 
             // IEzsignformfieldHeight (int) minimum
             if (this.IEzsignformfieldHeight < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignformfieldHeight, must be a value greater than or equal to 0.", new [] { "IEzsignformfieldHeight" });
             }
 
             yield break;

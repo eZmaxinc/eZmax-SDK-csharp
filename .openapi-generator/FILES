@@ -410,6 +410,7 @@ docs/CustomCommunicationsenderResponse.md
 docs/CustomContactNameResponse.md
 docs/CustomCreateEzsignelementsPositionedByWordRequest.md
 docs/CustomCreditcardRequest.md
+docs/CustomCreditcardmerchantResponse.md
 docs/CustomCreditcardtransactionResponse.md
 docs/CustomCreditcardtransactionresponseResponse.md
 docs/CustomDiscussionconfigurationResponse.md
@@ -3225,6 +3226,7 @@ src/eZmaxApi/Model/CustomCommunicationsenderResponse.cs
 src/eZmaxApi/Model/CustomContactNameResponse.cs
 src/eZmaxApi/Model/CustomCreateEzsignelementsPositionedByWordRequest.cs
 src/eZmaxApi/Model/CustomCreditcardRequest.cs
+src/eZmaxApi/Model/CustomCreditcardmerchantResponse.cs
 src/eZmaxApi/Model/CustomCreditcardtransactionResponse.cs
 src/eZmaxApi/Model/CustomCreditcardtransactionresponseResponse.cs
 src/eZmaxApi/Model/CustomDiscussionconfigurationResponse.cs

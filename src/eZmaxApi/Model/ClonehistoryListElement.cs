@@ -248,30 +248,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiClonehistoryID (int) maximum
             if (this.PkiClonehistoryID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiClonehistoryID, must be a value less than or equal to 16777215.", new [] { "PkiClonehistoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiClonehistoryID, must be a value less than or equal to 16777215.", new [] { "PkiClonehistoryID" });
             }
 
             // PkiClonehistoryID (int) minimum
             if (this.PkiClonehistoryID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiClonehistoryID, must be a value greater than or equal to 1.", new [] { "PkiClonehistoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiClonehistoryID, must be a value greater than or equal to 1.", new [] { "PkiClonehistoryID" });
             }
 
             // FkiUserIDCloning (int) minimum
             if (this.FkiUserIDCloning < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDCloning, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloning" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCloning, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloning" });
             }
 
             // FkiUserIDCloned (int) minimum
             if (this.FkiUserIDCloned < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDCloned, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloned" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCloned, must be a value greater than or equal to 0.", new [] { "FkiUserIDCloned" });
             }
 
             if (this.DtClonehistoryFirsthit != null) {

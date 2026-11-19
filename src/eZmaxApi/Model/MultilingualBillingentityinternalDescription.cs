@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Billingentityinternal in French</value>
         /*
-        <example>DÃ©faut</example>
+        <example>Défaut</example>
         */
         [DataMember(Name = "sBillingentityinternalDescription1", EmitDefaultValue = false)]
         public string SBillingentityinternalDescription1 { get; set; }
@@ -91,7 +91,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SBillingentityinternalDescription1 != null) {
                 // SBillingentityinternalDescription1 (string) pattern

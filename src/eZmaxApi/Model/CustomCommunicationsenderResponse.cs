@@ -223,48 +223,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiMailboxsharedID (int) maximum
             if (this.FkiMailboxsharedID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value less than or equal to 255.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiMailboxsharedID (int) minimum
             if (this.FkiMailboxsharedID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMailboxsharedID, must be a value greater than or equal to 0.", new [] { "FkiMailboxsharedID" });
             }
 
             // FkiPhonelinesharedID (int) maximum
             if (this.FkiPhonelinesharedID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value less than or equal to 255.", new [] { "FkiPhonelinesharedID" });
             }
 
             // FkiPhonelinesharedID (int) minimum
             if (this.FkiPhonelinesharedID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonelinesharedID, must be a value greater than or equal to 0.", new [] { "FkiPhonelinesharedID" });
             }
 
             yield break;

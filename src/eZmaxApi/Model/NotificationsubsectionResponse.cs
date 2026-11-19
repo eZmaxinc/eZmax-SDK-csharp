@@ -136,18 +136,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiNotificationsubsectionID (int) minimum
             if (this.PkiNotificationsubsectionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "PkiNotificationsubsectionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiNotificationsubsectionID, must be a value greater than or equal to 0.", new [] { "PkiNotificationsubsectionID" });
             }
 
             // FkiNotificationsectionID (int) minimum
             if (this.FkiNotificationsectionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiNotificationsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsectionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiNotificationsectionID, must be a value greater than or equal to 0.", new [] { "FkiNotificationsectionID" });
             }
 
             yield break;

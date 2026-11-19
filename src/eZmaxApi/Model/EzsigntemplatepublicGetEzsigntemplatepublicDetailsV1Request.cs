@@ -106,18 +106,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PksEzmaxcustomerCode (string) maxLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length > 6)
             {
-                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
             }
 
             // PksEzmaxcustomerCode (string) minLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length < 2)
             {
-                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
             }
 
             if (this.PksEzmaxcustomerCode != null) {

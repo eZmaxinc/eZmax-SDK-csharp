@@ -255,30 +255,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDisclosureID (int) maximum
             if (this.PkiDisclosureID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiDisclosureID, must be a value less than or equal to 65535.", new [] { "PkiDisclosureID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDisclosureID, must be a value less than or equal to 65535.", new [] { "PkiDisclosureID" });
             }
 
             // PkiDisclosureID (int) minimum
             if (this.PkiDisclosureID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiDisclosureID, must be a value greater than or equal to 0.", new [] { "PkiDisclosureID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDisclosureID, must be a value greater than or equal to 0.", new [] { "PkiDisclosureID" });
             }
 
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             if (this.SDisclosureRelation != null) {

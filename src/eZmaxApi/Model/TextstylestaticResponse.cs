@@ -192,18 +192,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiTextstylestaticID (int) minimum
             if (this.PkiTextstylestaticID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiTextstylestaticID, must be a value greater than or equal to 0.", new [] { "PkiTextstylestaticID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiTextstylestaticID, must be a value greater than or equal to 0.", new [] { "PkiTextstylestaticID" });
             }
 
             // FkiFontID (int) minimum
             if (this.FkiFontID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontID, must be a value greater than or equal to 0.", new [] { "FkiFontID" });
             }
 
             if (this.SFontName != null) {
@@ -218,25 +218,25 @@ namespace eZmaxApi.Model
             // ITextstylestaticFontcolor (int) maximum
             if (this.ITextstylestaticFontcolor > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value less than or equal to 16777215.", new [] { "ITextstylestaticFontcolor" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value less than or equal to 16777215.", new [] { "ITextstylestaticFontcolor" });
             }
 
             // ITextstylestaticFontcolor (int) minimum
             if (this.ITextstylestaticFontcolor < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value greater than or equal to 0.", new [] { "ITextstylestaticFontcolor" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticFontcolor, must be a value greater than or equal to 0.", new [] { "ITextstylestaticFontcolor" });
             }
 
             // ITextstylestaticSize (int) maximum
             if (this.ITextstylestaticSize > (int)255)
             {
-                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value less than or equal to 255.", new [] { "ITextstylestaticSize" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticSize, must be a value less than or equal to 255.", new [] { "ITextstylestaticSize" });
             }
 
             // ITextstylestaticSize (int) minimum
             if (this.ITextstylestaticSize < (int)1)
             {
-                yield return new ValidationResult("Invalid value for ITextstylestaticSize, must be a value greater than or equal to 1.", new [] { "ITextstylestaticSize" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ITextstylestaticSize, must be a value greater than or equal to 1.", new [] { "ITextstylestaticSize" });
             }
 
             yield break;

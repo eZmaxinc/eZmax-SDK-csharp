@@ -185,30 +185,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiLeadID (int) maximum
             if (this.PkiLeadID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiLeadID, must be a value less than or equal to 65535.", new [] { "PkiLeadID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiLeadID, must be a value less than or equal to 65535.", new [] { "PkiLeadID" });
             }
 
             // PkiLeadID (int) minimum
             if (this.PkiLeadID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiLeadID, must be a value greater than or equal to 0.", new [] { "PkiLeadID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiLeadID, must be a value greater than or equal to 0.", new [] { "PkiLeadID" });
             }
 
             // FkiLeadsourceID (int) maximum
             if (this.FkiLeadsourceID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiLeadsourceID, must be a value less than or equal to 255.", new [] { "FkiLeadsourceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLeadsourceID, must be a value less than or equal to 255.", new [] { "FkiLeadsourceID" });
             }
 
             // FkiLeadsourceID (int) minimum
             if (this.FkiLeadsourceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiLeadsourceID, must be a value greater than or equal to 0.", new [] { "FkiLeadsourceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLeadsourceID, must be a value greater than or equal to 0.", new [] { "FkiLeadsourceID" });
             }
 
             if (this.SLeadsourceNameX != null) {

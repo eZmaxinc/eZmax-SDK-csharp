@@ -179,42 +179,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignelementdependencyID (int) maximum
             if (this.PkiEzsignelementdependencyID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // PkiEzsignelementdependencyID (int) minimum
             if (this.PkiEzsignelementdependencyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // FkiEzsignformfieldID (int) minimum
             if (this.FkiEzsignformfieldID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldID" });
             }
 
             // FkiEzsignsignatureID (int) minimum
             if (this.FkiEzsignsignatureID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignatureID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignsignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsignsignatureID" });
             }
 
             // FkiEzsignformfieldIDValidation (int) minimum
             if (this.FkiEzsignformfieldIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
             }
 
             // FkiEzsignformfieldgroupIDValidation (int) minimum
             if (this.FkiEzsignformfieldgroupIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
             }
 
             if (this.SEzsignelementdependencyValue != null) {

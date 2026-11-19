@@ -153,24 +153,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignsignaturecustomdateID (int) minimum
             if (this.PkiEzsignsignaturecustomdateID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignsignaturecustomdateID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignaturecustomdateID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignsignaturecustomdateID, must be a value greater than or equal to 0.", new [] { "PkiEzsignsignaturecustomdateID" });
             }
 
             // IEzsignsignaturecustomdateX (int) minimum
             if (this.IEzsignsignaturecustomdateX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignsignaturecustomdateX, must be a value greater than or equal to 0.", new [] { "IEzsignsignaturecustomdateX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignaturecustomdateX, must be a value greater than or equal to 0.", new [] { "IEzsignsignaturecustomdateX" });
             }
 
             // IEzsignsignaturecustomdateY (int) minimum
             if (this.IEzsignsignaturecustomdateY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignsignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsignsignaturecustomdateY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignsignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsignsignaturecustomdateY" });
             }
 
             yield break;

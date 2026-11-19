@@ -153,18 +153,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignimportdocumentID (int) maximum
             if (this.PkiEzsignimportdocumentID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignimportdocumentID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignimportdocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignimportdocumentID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignimportdocumentID" });
             }
 
             // PkiEzsignimportdocumentID (int) minimum
             if (this.PkiEzsignimportdocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignimportdocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsignimportdocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignimportdocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsignimportdocumentID" });
             }
 
             if (this.SEzsignimportdocumentName != null) {
@@ -179,13 +179,13 @@ namespace eZmaxApi.Model
             // FkiEzsigntemplateglobalID (int) minimum
             if (this.FkiEzsigntemplateglobalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateglobalID" });
             }
 
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             if (this.SEzsignfolderDescription != null) {

@@ -168,30 +168,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserstagedID (int) maximum
             if (this.PkiUserstagedID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiUserstagedID, must be a value less than or equal to 65535.", new [] { "PkiUserstagedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value less than or equal to 65535.", new [] { "PkiUserstagedID" });
             }
 
             // PkiUserstagedID (int) minimum
             if (this.PkiUserstagedID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiUserstagedID, must be a value greater than or equal to 1.", new [] { "PkiUserstagedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserstagedID, must be a value greater than or equal to 1.", new [] { "PkiUserstagedID" });
             }
 
             // FkiEmailID (int) maximum
             if (this.FkiEmailID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value less than or equal to 16777215.", new [] { "FkiEmailID" });
             }
 
             // FkiEmailID (int) minimum
             if (this.FkiEmailID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEmailID, must be a value greater than or equal to 1.", new [] { "FkiEmailID" });
             }
 
             if (this.SEmailAddress != null) {

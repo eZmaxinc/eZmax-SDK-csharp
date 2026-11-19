@@ -270,42 +270,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSalaryID (int) maximum
             if (this.PkiSalaryID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiSalaryID, must be a value less than or equal to 16777215.", new [] { "PkiSalaryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSalaryID, must be a value less than or equal to 16777215.", new [] { "PkiSalaryID" });
             }
 
             // PkiSalaryID (int) minimum
             if (this.PkiSalaryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiSalaryID, must be a value greater than or equal to 0.", new [] { "PkiSalaryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSalaryID, must be a value greater than or equal to 0.", new [] { "PkiSalaryID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             // FkiSalaryperiodID (int) maximum
             if (this.FkiSalaryperiodID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiSalaryperiodID, must be a value less than or equal to 65535.", new [] { "FkiSalaryperiodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalaryperiodID, must be a value less than or equal to 65535.", new [] { "FkiSalaryperiodID" });
             }
 
             // FkiSalaryperiodID (int) minimum
             if (this.FkiSalaryperiodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiSalaryperiodID, must be a value greater than or equal to 0.", new [] { "FkiSalaryperiodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSalaryperiodID, must be a value greater than or equal to 0.", new [] { "FkiSalaryperiodID" });
             }
 
             // FkiUSerIDCreated (int) minimum
             if (this.FkiUSerIDCreated < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUSerIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUSerIDCreated" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUSerIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUSerIDCreated" });
             }
 
             if (this.DtSalaryPaymentdate != null) {
@@ -329,13 +329,13 @@ namespace eZmaxApi.Model
             // DSalarypreparationTotal (string) maxLength
             if (this.DSalarypreparationTotal != null && this.DSalarypreparationTotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DSalarypreparationTotal, length must be less than 13.", new [] { "DSalarypreparationTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSalarypreparationTotal, length must be less than 13.", new [] { "DSalarypreparationTotal" });
             }
 
             // DSalarypreparationTotal (string) minLength
             if (this.DSalarypreparationTotal != null && this.DSalarypreparationTotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DSalarypreparationTotal, length must be greater than 4.", new [] { "DSalarypreparationTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSalarypreparationTotal, length must be greater than 4.", new [] { "DSalarypreparationTotal" });
             }
 
             if (this.DSalarypreparationTotal != null) {
@@ -377,13 +377,13 @@ namespace eZmaxApi.Model
             // ISalaryperiodgroupYear (int) maximum
             if (this.ISalaryperiodgroupYear > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for ISalaryperiodgroupYear, must be a value less than or equal to 65535.", new [] { "ISalaryperiodgroupYear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISalaryperiodgroupYear, must be a value less than or equal to 65535.", new [] { "ISalaryperiodgroupYear" });
             }
 
             // ISalaryperiodgroupYear (int) minimum
             if (this.ISalaryperiodgroupYear < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ISalaryperiodgroupYear, must be a value greater than or equal to 0.", new [] { "ISalaryperiodgroupYear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISalaryperiodgroupYear, must be a value greater than or equal to 0.", new [] { "ISalaryperiodgroupYear" });
             }
 
             yield break;

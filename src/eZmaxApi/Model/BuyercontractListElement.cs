@@ -261,30 +261,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBuyercontractID (int) maximum
             if (this.PkiBuyercontractID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "PkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "PkiBuyercontractID" });
             }
 
             // PkiBuyercontractID (int) minimum
             if (this.PkiBuyercontractID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "PkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "PkiBuyercontractID" });
             }
 
             // FkiInscriptiontypeID (int) maximum
             if (this.FkiInscriptiontypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptiontypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptiontypeID" });
             }
 
             // FkiInscriptiontypeID (int) minimum
             if (this.FkiInscriptiontypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
             }
 
             if (this.SInscriptiontypeNameX != null) {
@@ -299,13 +299,13 @@ namespace eZmaxApi.Model
             // DBuyercontractMinimumprice (string) maxLength
             if (this.DBuyercontractMinimumprice != null && this.DBuyercontractMinimumprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DBuyercontractMinimumprice, length must be less than 13.", new [] { "DBuyercontractMinimumprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DBuyercontractMinimumprice, length must be less than 13.", new [] { "DBuyercontractMinimumprice" });
             }
 
             // DBuyercontractMinimumprice (string) minLength
             if (this.DBuyercontractMinimumprice != null && this.DBuyercontractMinimumprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DBuyercontractMinimumprice, length must be greater than 4.", new [] { "DBuyercontractMinimumprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DBuyercontractMinimumprice, length must be greater than 4.", new [] { "DBuyercontractMinimumprice" });
             }
 
             if (this.DBuyercontractMinimumprice != null) {
@@ -320,13 +320,13 @@ namespace eZmaxApi.Model
             // DBuyercontractMaximumprice (string) maxLength
             if (this.DBuyercontractMaximumprice != null && this.DBuyercontractMaximumprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DBuyercontractMaximumprice, length must be less than 13.", new [] { "DBuyercontractMaximumprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DBuyercontractMaximumprice, length must be less than 13.", new [] { "DBuyercontractMaximumprice" });
             }
 
             // DBuyercontractMaximumprice (string) minLength
             if (this.DBuyercontractMaximumprice != null && this.DBuyercontractMaximumprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DBuyercontractMaximumprice, length must be greater than 4.", new [] { "DBuyercontractMaximumprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DBuyercontractMaximumprice, length must be greater than 4.", new [] { "DBuyercontractMaximumprice" });
             }
 
             if (this.DBuyercontractMaximumprice != null) {

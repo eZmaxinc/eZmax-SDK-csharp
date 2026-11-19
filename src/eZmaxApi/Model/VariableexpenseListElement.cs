@@ -85,7 +85,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Variableexpense in the language of the requester</value>
         /*
-        <example>Ã‰quipements de bureau</example>
+        <example>Équipements de bureau</example>
         */
         [DataMember(Name = "sVariableexpenseDescriptionX", EmitDefaultValue = false)]
         public string SVariableexpenseDescriptionX { get; set; }
@@ -131,18 +131,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiVariableexpenseID (int) maximum
             if (this.PkiVariableexpenseID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "PkiVariableexpenseID" });
             }
 
             // PkiVariableexpenseID (int) minimum
             if (this.PkiVariableexpenseID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "PkiVariableexpenseID" });
             }
 
             if (this.SVariableexpenseCode != null) {

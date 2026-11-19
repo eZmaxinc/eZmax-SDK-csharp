@@ -163,6 +163,39 @@ namespace eZmaxApi.Client
                 },
                 {
                     new Dictionary<string, object> {
+                        {"url", "https://{sInfrastructureenvironmenttypeDescription}.payment.{sInfrastructureregionCode}.ezmax.com/rest"},
+                        {"description", "No description provided"},
+                        {
+                            "variables", new Dictionary<string, object> {
+                                {
+                                    "sInfrastructureenvironmenttypeDescription", new Dictionary<string, object> {
+                                        {"description", "The environment on on which to call the API. Should always be \"prod\" unless instructed otherwise by support."},
+                                        {"default_value", "prod"},
+                                        {
+                                            "enum_values", new List<string>() {
+                                                "prod",
+                                                "dev"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "sInfrastructureregionCode", new Dictionary<string, object> {
+                                        {"description", "The region where your services are hosted."},
+                                        {"default_value", "ca-central-1"},
+                                        {
+                                            "enum_values", new List<string>() {
+                                                "ca-central-1"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    new Dictionary<string, object> {
                         {"url", "https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com"},
                         {"description", "The server endpoint where to send your global API requests."},
                         {
@@ -217,6 +250,12 @@ namespace eZmaxApi.Client
                                 }
                             }
                         }
+                    }
+                },
+                {
+                    new Dictionary<string, object> {
+                        {"url", "https://www.example.com"},
+                        {"description", "This is an example of an external server."},
                     }
                 }
             };

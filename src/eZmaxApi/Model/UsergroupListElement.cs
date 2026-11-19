@@ -127,18 +127,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUsergroupID (int) maximum
             if (this.PkiUsergroupID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value less than or equal to 65535.", new [] { "PkiUsergroupID" });
             }
 
             // PkiUsergroupID (int) minimum
             if (this.PkiUsergroupID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUsergroupID, must be a value greater than or equal to 0.", new [] { "PkiUsergroupID" });
             }
 
             if (this.SUsergroupNameX != null) {
@@ -153,25 +153,25 @@ namespace eZmaxApi.Model
             // ICountUser (int) maximum
             if (this.ICountUser > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for ICountUser, must be a value less than or equal to 16777215.", new [] { "ICountUser" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value less than or equal to 16777215.", new [] { "ICountUser" });
             }
 
             // ICountUser (int) minimum
             if (this.ICountUser < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICountUser, must be a value greater than or equal to 0.", new [] { "ICountUser" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountUser, must be a value greater than or equal to 0.", new [] { "ICountUser" });
             }
 
             // ICountInactiveuser (int) maximum
             if (this.ICountInactiveuser > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for ICountInactiveuser, must be a value less than or equal to 16777215.", new [] { "ICountInactiveuser" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountInactiveuser, must be a value less than or equal to 16777215.", new [] { "ICountInactiveuser" });
             }
 
             // ICountInactiveuser (int) minimum
             if (this.ICountInactiveuser < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICountInactiveuser, must be a value greater than or equal to 0.", new [] { "ICountInactiveuser" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICountInactiveuser, must be a value greater than or equal to 0.", new [] { "ICountInactiveuser" });
             }
 
             yield break;

@@ -132,42 +132,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiElectronicfundstransfertransactionID (int) maximum
             if (this.PkiElectronicfundstransfertransactionID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiElectronicfundstransfertransactionID, must be a value less than or equal to 16777215.", new [] { "PkiElectronicfundstransfertransactionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiElectronicfundstransfertransactionID, must be a value less than or equal to 16777215.", new [] { "PkiElectronicfundstransfertransactionID" });
             }
 
             // PkiElectronicfundstransfertransactionID (int) minimum
             if (this.PkiElectronicfundstransfertransactionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiElectronicfundstransfertransactionID, must be a value greater than or equal to 0.", new [] { "PkiElectronicfundstransfertransactionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiElectronicfundstransfertransactionID, must be a value greater than or equal to 0.", new [] { "PkiElectronicfundstransfertransactionID" });
             }
 
             // IElectronicfundstransferNumber (int) maximum
             if (this.IElectronicfundstransferNumber > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value less than or equal to 65535.", new [] { "IElectronicfundstransferNumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value less than or equal to 65535.", new [] { "IElectronicfundstransferNumber" });
             }
 
             // IElectronicfundstransferNumber (int) minimum
             if (this.IElectronicfundstransferNumber < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value greater than or equal to 0.", new [] { "IElectronicfundstransferNumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value greater than or equal to 0.", new [] { "IElectronicfundstransferNumber" });
             }
 
             // DElectronicfundstransfertransactionAmount (string) maxLength
             if (this.DElectronicfundstransfertransactionAmount != null && this.DElectronicfundstransfertransactionAmount.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DElectronicfundstransfertransactionAmount, length must be less than 13.", new [] { "DElectronicfundstransfertransactionAmount" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DElectronicfundstransfertransactionAmount, length must be less than 13.", new [] { "DElectronicfundstransfertransactionAmount" });
             }
 
             // DElectronicfundstransfertransactionAmount (string) minLength
             if (this.DElectronicfundstransfertransactionAmount != null && this.DElectronicfundstransfertransactionAmount.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DElectronicfundstransfertransactionAmount, length must be greater than 4.", new [] { "DElectronicfundstransfertransactionAmount" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DElectronicfundstransfertransactionAmount, length must be greater than 4.", new [] { "DElectronicfundstransfertransactionAmount" });
             }
 
             if (this.DElectronicfundstransfertransactionAmount != null) {

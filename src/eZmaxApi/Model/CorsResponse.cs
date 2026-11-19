@@ -114,24 +114,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCorsID (int) maximum
             if (this.PkiCorsID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value less than or equal to 65535.", new [] { "PkiCorsID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCorsID, must be a value less than or equal to 65535.", new [] { "PkiCorsID" });
             }
 
             // PkiCorsID (int) minimum
             if (this.PkiCorsID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiCorsID, must be a value greater than or equal to 0.", new [] { "PkiCorsID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCorsID, must be a value greater than or equal to 0.", new [] { "PkiCorsID" });
             }
 
             // FkiApikeyID (int) minimum
             if (this.FkiApikeyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
             }
 
             if (this.SCorsEntryurl != null) {

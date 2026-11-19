@@ -169,7 +169,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SErrorMessage != null) {
                 // SErrorMessage (string) pattern
@@ -183,19 +183,19 @@ namespace eZmaxApi.Model
             // FkiFranchiseagenceID (int) maximum
             if (this.FkiFranchiseagenceID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value less than or equal to 65535.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseagenceID (int) minimum
             if (this.FkiFranchiseagenceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseagenceID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseagenceID" });
             }
 
             // FkiFranchiseofficeID (int) minimum
             if (this.FkiFranchiseofficeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFranchiseofficeID, must be a value greater than or equal to 0.", new [] { "FkiFranchiseofficeID" });
             }
 
             yield break;

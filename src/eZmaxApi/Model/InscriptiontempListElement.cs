@@ -172,18 +172,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiInscriptiontempID (int) maximum
             if (this.PkiInscriptiontempID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiInscriptiontempID, must be a value less than or equal to 16777215.", new [] { "PkiInscriptiontempID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInscriptiontempID, must be a value less than or equal to 16777215.", new [] { "PkiInscriptiontempID" });
             }
 
             // PkiInscriptiontempID (int) minimum
             if (this.PkiInscriptiontempID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiInscriptiontempID, must be a value greater than or equal to 1.", new [] { "PkiInscriptiontempID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInscriptiontempID, must be a value greater than or equal to 1.", new [] { "PkiInscriptiontempID" });
             }
 
             if (this.SInscriptiontempMLS != null) {

@@ -255,24 +255,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAttachmentID (int) minimum
             if (this.FkiAttachmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAttachmentID, must be a value greater than or equal to 0.", new [] { "FkiAttachmentID" });
             }
 
             // FkiInscriptionchecklistID (int) maximum
             if (this.FkiInscriptionchecklistID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value less than or equal to 16777215.", new [] { "FkiInscriptionchecklistID" });
             }
 
             // FkiInscriptionchecklistID (int) minimum
             if (this.FkiInscriptionchecklistID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionchecklistID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionchecklistID" });
             }
 
             if (this.SAttachmentUrl != null) {
@@ -305,7 +305,7 @@ namespace eZmaxApi.Model
             // FkiUserIDSpecific (int) minimum
             if (this.FkiUserIDSpecific < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDSpecific, must be a value greater than or equal to 0.", new [] { "FkiUserIDSpecific" });
             }
 
             if (this.SAttachmentMD5 != null) {

@@ -251,78 +251,78 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateannotationID (int) maximum
             if (this.PkiEzsigntemplateannotationID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateannotationID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigntemplateannotationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateannotationID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigntemplateannotationID" });
             }
 
             // PkiEzsigntemplateannotationID (int) minimum
             if (this.PkiEzsigntemplateannotationID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateannotationID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateannotationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateannotationID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateannotationID" });
             }
 
             // FkiEzsigntemplatedocumentID (int) minimum
             if (this.FkiEzsigntemplatedocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
             }
 
             // IEzsigntemplateannotationX (int) maximum
             if (this.IEzsigntemplateannotationX > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationX, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationX, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationX" });
             }
 
             // IEzsigntemplateannotationX (int) minimum
             if (this.IEzsigntemplateannotationX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationX" });
             }
 
             // IEzsigntemplateannotationY (int) maximum
             if (this.IEzsigntemplateannotationY > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationY, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationY, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationY" });
             }
 
             // IEzsigntemplateannotationY (int) minimum
             if (this.IEzsigntemplateannotationY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationY" });
             }
 
             // IEzsigntemplateannotationWidth (int) maximum
             if (this.IEzsigntemplateannotationWidth > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationWidth, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationWidth, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationWidth" });
             }
 
             // IEzsigntemplateannotationWidth (int) minimum
             if (this.IEzsigntemplateannotationWidth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationWidth" });
             }
 
             // IEzsigntemplateannotationHeight (int) maximum
             if (this.IEzsigntemplateannotationHeight > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationHeight, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationHeight, must be a value less than or equal to 65535.", new [] { "IEzsigntemplateannotationHeight" });
             }
 
             // IEzsigntemplateannotationHeight (int) minimum
             if (this.IEzsigntemplateannotationHeight < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplateannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplateannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplateannotationHeight" });
             }
 
             // IEzsigntemplatedocumentpagePagenumber (int) minimum
             if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
             }
 
             if (this.SEzsigntemplateannotationDescription != null) {

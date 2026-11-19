@@ -48,7 +48,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in French</value>
         /*
-        <example>DÃ©faut</example>
+        <example>Défaut</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescription1", EmitDefaultValue = false)]
         public string SEzmaxinvoicingsummaryinternalDescription1 { get; set; }
@@ -58,7 +58,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in English</value>
         /*
-        <example>DÃ©fault</example>
+        <example>Défault</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescription2", EmitDefaultValue = false)]
         public string SEzmaxinvoicingsummaryinternalDescription2 { get; set; }
@@ -91,18 +91,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SEzmaxinvoicingsummaryinternalDescription1 (string) maxLength
             if (this.SEzmaxinvoicingsummaryinternalDescription1 != null && this.SEzmaxinvoicingsummaryinternalDescription1.Length > 70)
             {
-                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription1, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription1" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription1, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription1" });
             }
 
             // SEzmaxinvoicingsummaryinternalDescription2 (string) maxLength
             if (this.SEzmaxinvoicingsummaryinternalDescription2 != null && this.SEzmaxinvoicingsummaryinternalDescription2.Length > 70)
             {
-                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription2, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription2" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescription2, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescription2" });
             }
 
             yield break;

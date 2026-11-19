@@ -155,24 +155,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignbulksendtransmissionID (int) minimum
             if (this.PkiEzsignbulksendtransmissionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendtransmissionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignbulksendtransmissionID, must be a value greater than or equal to 0.", new [] { "PkiEzsignbulksendtransmissionID" });
             }
 
             // FkiEzsignbulksendID (int) minimum
             if (this.FkiEzsignbulksendID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignbulksendID, must be a value greater than or equal to 0.", new [] { "FkiEzsignbulksendID" });
             }
 
             // IEzsignbulksendtransmissionErrors (int) minimum
             if (this.IEzsignbulksendtransmissionErrors < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignbulksendtransmissionErrors, must be a value greater than or equal to 0.", new [] { "IEzsignbulksendtransmissionErrors" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignbulksendtransmissionErrors, must be a value greater than or equal to 0.", new [] { "IEzsignbulksendtransmissionErrors" });
             }
 
             yield break;

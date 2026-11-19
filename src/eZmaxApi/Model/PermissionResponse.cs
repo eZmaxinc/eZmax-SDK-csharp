@@ -161,60 +161,60 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPermissionID (int) maximum
             if (this.PkiPermissionID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiPermissionID, must be a value less than or equal to 65535.", new [] { "PkiPermissionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPermissionID, must be a value less than or equal to 65535.", new [] { "PkiPermissionID" });
             }
 
             // PkiPermissionID (int) minimum
             if (this.PkiPermissionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiPermissionID, must be a value greater than or equal to 0.", new [] { "PkiPermissionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPermissionID, must be a value greater than or equal to 0.", new [] { "PkiPermissionID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiApikeyID (int) minimum
             if (this.FkiApikeyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiApikeyID, must be a value greater than or equal to 0.", new [] { "FkiApikeyID" });
             }
 
             // FkiUsergroupID (int) maximum
             if (this.FkiUsergroupID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 65535.", new [] { "FkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value less than or equal to 65535.", new [] { "FkiUsergroupID" });
             }
 
             // FkiUsergroupID (int) minimum
             if (this.FkiUsergroupID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUsergroupID, must be a value greater than or equal to 0.", new [] { "FkiUsergroupID" });
             }
 
             // FkiCompanyID (int) maximum
             if (this.FkiCompanyID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value less than or equal to 255.", new [] { "FkiCompanyID" });
             }
 
             // FkiCompanyID (int) minimum
             if (this.FkiCompanyID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCompanyID, must be a value greater than or equal to 1.", new [] { "FkiCompanyID" });
             }
 
             // FkiModulesectionID (int) minimum
             if (this.FkiModulesectionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiModulesectionID, must be a value greater than or equal to 0.", new [] { "FkiModulesectionID" });
             }
 
             yield break;

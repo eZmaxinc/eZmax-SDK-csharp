@@ -114,12 +114,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBillingentityexternalID (int) minimum
             if (this.PkiBillingentityexternalID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "PkiBillingentityexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "PkiBillingentityexternalID" });
             }
 
             yield break;

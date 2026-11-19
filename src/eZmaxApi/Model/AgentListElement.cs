@@ -686,24 +686,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAgentID (int) minimum
             if (this.PkiAgentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiAgentID, must be a value greater than or equal to 0.", new [] { "PkiAgentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAgentID, must be a value greater than or equal to 0.", new [] { "PkiAgentID" });
             }
 
             // FkiAgenttypeID (int) maximum
             if (this.FkiAgenttypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiAgenttypeID, must be a value less than or equal to 255.", new [] { "FkiAgenttypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgenttypeID, must be a value less than or equal to 255.", new [] { "FkiAgenttypeID" });
             }
 
             // FkiAgenttypeID (int) minimum
             if (this.FkiAgenttypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAgenttypeID, must be a value greater than or equal to 0.", new [] { "FkiAgenttypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgenttypeID, must be a value greater than or equal to 0.", new [] { "FkiAgenttypeID" });
             }
 
             if (this.SAgenttypeNameX != null) {
@@ -718,7 +718,7 @@ namespace eZmaxApi.Model
             // FkiAgentincorporationID (int) minimum
             if (this.FkiAgentincorporationID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAgentincorporationID, must be a value greater than or equal to 0.", new [] { "FkiAgentincorporationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentincorporationID, must be a value greater than or equal to 0.", new [] { "FkiAgentincorporationID" });
             }
 
             if (this.SAgentincorporationName != null) {
@@ -733,19 +733,19 @@ namespace eZmaxApi.Model
             // FkiDepartmentID (int) minimum
             if (this.FkiDepartmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             if (this.SRealestateboardnumberNumber != null) {
@@ -769,37 +769,37 @@ namespace eZmaxApi.Model
             // IAgentPhotocopiercode (int) maximum
             if (this.IAgentPhotocopiercode > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for IAgentPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "IAgentPhotocopiercode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "IAgentPhotocopiercode" });
             }
 
             // IAgentPhotocopiercode (int) minimum
             if (this.IAgentPhotocopiercode < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IAgentPhotocopiercode, must be a value greater than or equal to 0.", new [] { "IAgentPhotocopiercode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentPhotocopiercode, must be a value greater than or equal to 0.", new [] { "IAgentPhotocopiercode" });
             }
 
             // IAgentLongdistancecode (int) maximum
             if (this.IAgentLongdistancecode > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for IAgentLongdistancecode, must be a value less than or equal to 16777215.", new [] { "IAgentLongdistancecode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentLongdistancecode, must be a value less than or equal to 16777215.", new [] { "IAgentLongdistancecode" });
             }
 
             // IAgentLongdistancecode (int) minimum
             if (this.IAgentLongdistancecode < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IAgentLongdistancecode, must be a value greater than or equal to 0.", new [] { "IAgentLongdistancecode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentLongdistancecode, must be a value greater than or equal to 0.", new [] { "IAgentLongdistancecode" });
             }
 
             // IAgentBannernumber (long) maximum
             if (this.IAgentBannernumber > (long)4294967295)
             {
-                yield return new ValidationResult("Invalid value for IAgentBannernumber, must be a value less than or equal to 4294967295.", new [] { "IAgentBannernumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentBannernumber, must be a value less than or equal to 4294967295.", new [] { "IAgentBannernumber" });
             }
 
             // IAgentBannernumber (long) minimum
             if (this.IAgentBannernumber < (long)0)
             {
-                yield return new ValidationResult("Invalid value for IAgentBannernumber, must be a value greater than or equal to 0.", new [] { "IAgentBannernumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentBannernumber, must be a value greater than or equal to 0.", new [] { "IAgentBannernumber" });
             }
 
             if (this.SAgentRealestateassociationlicense != null) {
@@ -931,7 +931,7 @@ namespace eZmaxApi.Model
             // FkiProvinceID (int) minimum
             if (this.FkiProvinceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
             }
 
             if (this.SProvinceNameX != null) {
@@ -946,7 +946,7 @@ namespace eZmaxApi.Model
             // FkiCountryID (int) minimum
             if (this.FkiCountryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

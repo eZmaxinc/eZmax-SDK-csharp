@@ -481,66 +481,66 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigndocumentID (int) minimum
             if (this.PkiEzsigndocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "PkiEzsigndocumentID" });
             }
 
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             // FkiEzsignfoldersignerassociationIDDeclinedtosign (int) minimum
             if (this.FkiEzsignfoldersignerassociationIDDeclinedtosign < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDDeclinedtosign, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDDeclinedtosign" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldersignerassociationIDDeclinedtosign, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldersignerassociationIDDeclinedtosign" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // IEzsigndocumentOrder (int) minimum
             if (this.IEzsigndocumentOrder < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentOrder, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentOrder" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentOrder, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentOrder" });
             }
 
             // IEzsigndocumentPagetotal (int) minimum
             if (this.IEzsigndocumentPagetotal < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentPagetotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentPagetotal, must be a value greater than or equal to 1.", new [] { "IEzsigndocumentPagetotal" });
             }
 
             // IEzsigndocumentSignaturesigned (int) minimum
             if (this.IEzsigndocumentSignaturesigned < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentSignaturesigned, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturesigned" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturesigned, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturesigned" });
             }
 
             // IEzsigndocumentSignaturetotal (int) minimum
             if (this.IEzsigndocumentSignaturetotal < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentSignaturetotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentSignaturetotal" });
             }
 
             // IEzsigndocumentFormfieldtotal (int) minimum
             if (this.IEzsigndocumentFormfieldtotal < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentFormfieldtotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentFormfieldtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentFormfieldtotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentFormfieldtotal" });
             }
 
             if (this.SEzsigndocumentMD5initial != null) {
@@ -573,7 +573,7 @@ namespace eZmaxApi.Model
             // IEzsigndocumentEzsignsignatureattachmenttotal (int) minimum
             if (this.IEzsigndocumentEzsignsignatureattachmenttotal < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigndocumentEzsignsignatureattachmenttotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentEzsignsignatureattachmenttotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigndocumentEzsignsignatureattachmenttotal, must be a value greater than or equal to 0.", new [] { "IEzsigndocumentEzsignsignatureattachmenttotal" });
             }
 
             yield break;

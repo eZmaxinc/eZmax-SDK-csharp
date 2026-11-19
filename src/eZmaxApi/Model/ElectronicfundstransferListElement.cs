@@ -192,36 +192,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiElectronicfundstransferID (int) maximum
             if (this.PkiElectronicfundstransferID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiElectronicfundstransferID, must be a value less than or equal to 65535.", new [] { "PkiElectronicfundstransferID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiElectronicfundstransferID, must be a value less than or equal to 65535.", new [] { "PkiElectronicfundstransferID" });
             }
 
             // PkiElectronicfundstransferID (int) minimum
             if (this.PkiElectronicfundstransferID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiElectronicfundstransferID, must be a value greater than or equal to 1.", new [] { "PkiElectronicfundstransferID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiElectronicfundstransferID, must be a value greater than or equal to 1.", new [] { "PkiElectronicfundstransferID" });
             }
 
             // FkiPaymentmethodID (int) maximum
             if (this.FkiPaymentmethodID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiPaymentmethodID, must be a value less than or equal to 255.", new [] { "FkiPaymentmethodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentmethodID, must be a value less than or equal to 255.", new [] { "FkiPaymentmethodID" });
             }
 
             // FkiPaymentmethodID (int) minimum
             if (this.FkiPaymentmethodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPaymentmethodID, must be a value greater than or equal to 0.", new [] { "FkiPaymentmethodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentmethodID, must be a value greater than or equal to 0.", new [] { "FkiPaymentmethodID" });
             }
 
             // FkiUserIDCreated (int) minimum
             if (this.FkiUserIDCreated < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
             }
 
             if (this.SPaymentmethodDescriptionX != null) {
@@ -245,13 +245,13 @@ namespace eZmaxApi.Model
             // IElectronicfundstransferNumber (int) maximum
             if (this.IElectronicfundstransferNumber > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value less than or equal to 65535.", new [] { "IElectronicfundstransferNumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value less than or equal to 65535.", new [] { "IElectronicfundstransferNumber" });
             }
 
             // IElectronicfundstransferNumber (int) minimum
             if (this.IElectronicfundstransferNumber < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value greater than or equal to 0.", new [] { "IElectronicfundstransferNumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IElectronicfundstransferNumber, must be a value greater than or equal to 0.", new [] { "IElectronicfundstransferNumber" });
             }
 
             if (this.DtElectronicfundstransferDate != null) {
@@ -266,13 +266,13 @@ namespace eZmaxApi.Model
             // DElectronicfundstransferAmountvisible (string) maxLength
             if (this.DElectronicfundstransferAmountvisible != null && this.DElectronicfundstransferAmountvisible.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DElectronicfundstransferAmountvisible, length must be less than 13.", new [] { "DElectronicfundstransferAmountvisible" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DElectronicfundstransferAmountvisible, length must be less than 13.", new [] { "DElectronicfundstransferAmountvisible" });
             }
 
             // DElectronicfundstransferAmountvisible (string) minLength
             if (this.DElectronicfundstransferAmountvisible != null && this.DElectronicfundstransferAmountvisible.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DElectronicfundstransferAmountvisible, length must be greater than 4.", new [] { "DElectronicfundstransferAmountvisible" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DElectronicfundstransferAmountvisible, length must be greater than 4.", new [] { "DElectronicfundstransferAmountvisible" });
             }
 
             if (this.DElectronicfundstransferAmountvisible != null) {

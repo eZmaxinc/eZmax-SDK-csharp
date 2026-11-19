@@ -96,18 +96,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateformfieldgroupsignerID (int) minimum
             if (this.PkiEzsigntemplateformfieldgroupsignerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldgroupsignerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateformfieldgroupsignerID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateformfieldgroupsignerID" });
             }
 
             // FkiEzsigntemplatesignerID (int) minimum
             if (this.FkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
             }
 
             yield break;

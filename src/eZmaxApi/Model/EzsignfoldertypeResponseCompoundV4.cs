@@ -1032,72 +1032,72 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfoldertypeID (int) maximum
             if (this.PkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             // PkiEzsignfoldertypeID (int) minimum
             if (this.PkiEzsignfoldertypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldertypeID" });
             }
 
             // FkiBrandingID (int) minimum
             if (this.FkiBrandingID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             // FkiEzsigntsarequirementID (int) maximum
             if (this.FkiEzsigntsarequirementID > (int)3)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value less than or equal to 3.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiEzsigntsarequirementID (int) minimum
             if (this.FkiEzsigntsarequirementID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntsarequirementID, must be a value greater than or equal to 1.", new [] { "FkiEzsigntsarequirementID" });
             }
 
             // FkiFontIDAnnotation (int) minimum
             if (this.FkiFontIDAnnotation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFontIDAnnotation, must be a value greater than or equal to 0.", new [] { "FkiFontIDAnnotation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDAnnotation, must be a value greater than or equal to 0.", new [] { "FkiFontIDAnnotation" });
             }
 
             // FkiFontIDFormfield (int) minimum
             if (this.FkiFontIDFormfield < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFontIDFormfield, must be a value greater than or equal to 0.", new [] { "FkiFontIDFormfield" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDFormfield, must be a value greater than or equal to 0.", new [] { "FkiFontIDFormfield" });
             }
 
             // FkiFontIDSignature (int) minimum
             if (this.FkiFontIDSignature < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFontIDSignature, must be a value greater than or equal to 0.", new [] { "FkiFontIDSignature" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFontIDSignature, must be a value greater than or equal to 0.", new [] { "FkiFontIDSignature" });
             }
 
             // FkiPdfalevelIDConvert (int) maximum
             if (this.FkiPdfalevelIDConvert > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value less than or equal to 255.", new [] { "FkiPdfalevelIDConvert" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value less than or equal to 255.", new [] { "FkiPdfalevelIDConvert" });
             }
 
             // FkiPdfalevelIDConvert (int) minimum
             if (this.FkiPdfalevelIDConvert < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value greater than or equal to 0.", new [] { "FkiPdfalevelIDConvert" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPdfalevelIDConvert, must be a value greater than or equal to 0.", new [] { "FkiPdfalevelIDConvert" });
             }
 
             if (this.SEmailAddressSigned != null) {
@@ -1121,97 +1121,97 @@ namespace eZmaxApi.Model
             // IEzsignfoldertypeFontsizeannotation (int) maximum
             if (this.IEzsignfoldertypeFontsizeannotation > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeannotation" });
             }
 
             // IEzsignfoldertypeFontsizeannotation (int) minimum
             if (this.IEzsignfoldertypeFontsizeannotation < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeannotation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeannotation, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeannotation" });
             }
 
             // IEzsignfoldertypeFontsizeformfield (int) maximum
             if (this.IEzsignfoldertypeFontsizeformfield > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeformfield" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeFontsizeformfield" });
             }
 
             // IEzsignfoldertypeFontsizeformfield (int) minimum
             if (this.IEzsignfoldertypeFontsizeformfield < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeformfield" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeFontsizeformfield, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeFontsizeformfield" });
             }
 
             // IEzsignfoldertypeSendreminderfirstdays (int) maximum
             if (this.IEzsignfoldertypeSendreminderfirstdays > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
             }
 
             // IEzsignfoldertypeSendreminderfirstdays (int) minimum
             if (this.IEzsignfoldertypeSendreminderfirstdays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderfirstdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderfirstdays" });
             }
 
             // IEzsignfoldertypeSendreminderotherdays (int) maximum
             if (this.IEzsignfoldertypeSendreminderotherdays > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
             }
 
             // IEzsignfoldertypeSendreminderotherdays (int) minimum
             if (this.IEzsignfoldertypeSendreminderotherdays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeSendreminderotherdays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeSendreminderotherdays" });
             }
 
             // IEzsignfoldertypeArchivaldays (int) maximum
             if (this.IEzsignfoldertypeArchivaldays > (int)180)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value less than or equal to 180.", new [] { "IEzsignfoldertypeArchivaldays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value less than or equal to 180.", new [] { "IEzsignfoldertypeArchivaldays" });
             }
 
             // IEzsignfoldertypeArchivaldays (int) minimum
             if (this.IEzsignfoldertypeArchivaldays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeArchivaldays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeArchivaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeArchivaldays" });
             }
 
             // IEzsignfoldertypeDisposaldays (int) maximum
             if (this.IEzsignfoldertypeDisposaldays > (int)9999)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value less than or equal to 9999.", new [] { "IEzsignfoldertypeDisposaldays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value less than or equal to 9999.", new [] { "IEzsignfoldertypeDisposaldays" });
             }
 
             // IEzsignfoldertypeDisposaldays (int) minimum
             if (this.IEzsignfoldertypeDisposaldays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeDisposaldays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDisposaldays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypeDisposaldays" });
             }
 
             // IEzsignfoldertypeDeadlinedays (int) maximum
             if (this.IEzsignfoldertypeDeadlinedays > (int)60)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value less than or equal to 60.", new [] { "IEzsignfoldertypeDeadlinedays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value less than or equal to 60.", new [] { "IEzsignfoldertypeDeadlinedays" });
             }
 
             // IEzsignfoldertypeDeadlinedays (int) minimum
             if (this.IEzsignfoldertypeDeadlinedays < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeDeadlinedays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypeDeadlinedays, must be a value greater than or equal to 1.", new [] { "IEzsignfoldertypeDeadlinedays" });
             }
 
             // IEzsignfoldertypePrematurelyendautomaticallydays (int) maximum
             if (this.IEzsignfoldertypePrematurelyendautomaticallydays > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value less than or equal to 255.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
             }
 
             // IEzsignfoldertypePrematurelyendautomaticallydays (int) minimum
             if (this.IEzsignfoldertypePrematurelyendautomaticallydays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignfoldertypePrematurelyendautomaticallydays, must be a value greater than or equal to 0.", new [] { "IEzsignfoldertypePrematurelyendautomaticallydays" });
             }
 
             yield break;

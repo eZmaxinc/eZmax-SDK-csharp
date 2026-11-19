@@ -179,42 +179,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplateelementdependencyID (int) maximum
             if (this.PkiEzsigntemplateelementdependencyID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigntemplateelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsigntemplateelementdependencyID" });
             }
 
             // PkiEzsigntemplateelementdependencyID (int) minimum
             if (this.PkiEzsigntemplateelementdependencyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplateelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplateelementdependencyID" });
             }
 
             // FkiEzsigntemplateformfieldID (int) minimum
             if (this.FkiEzsigntemplateformfieldID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldID" });
             }
 
             // FkiEzsigntemplatesignatureID (int) minimum
             if (this.FkiEzsigntemplatesignatureID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignatureID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignatureID" });
             }
 
             // FkiEzsigntemplateformfieldIDValidation (int) minimum
             if (this.FkiEzsigntemplateformfieldIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldIDValidation" });
             }
 
             // FkiEzsigntemplateformfieldgroupIDValidation (int) minimum
             if (this.FkiEzsigntemplateformfieldgroupIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldgroupIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateformfieldgroupIDValidation" });
             }
 
             if (this.SEzsigntemplateelementdependencyValue != null) {

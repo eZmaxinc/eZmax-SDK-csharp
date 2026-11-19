@@ -101,18 +101,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // IBrandingColor (int) maximum
             if (this.IBrandingColor > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value less than or equal to 16777215.", new [] { "IBrandingColor" });
             }
 
             // IBrandingColor (int) minimum
             if (this.IBrandingColor < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrandingColor, must be a value greater than or equal to 0.", new [] { "IBrandingColor" });
             }
 
             if (this.SBrandingLogointerfaceurl != null) {

@@ -155,24 +155,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatesignaturecustomdateID (int) minimum
             if (this.PkiEzsigntemplatesignaturecustomdateID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignaturecustomdateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignaturecustomdateID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignaturecustomdateID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignaturecustomdateID" });
             }
 
             // IEzsigntemplatesignaturecustomdateX (int) minimum
             if (this.IEzsigntemplatesignaturecustomdateX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateX" });
             }
 
             // IEzsigntemplatesignaturecustomdateY (int) minimum
             if (this.IEzsigntemplatesignaturecustomdateY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignaturecustomdateY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignaturecustomdateY" });
             }
 
             yield break;

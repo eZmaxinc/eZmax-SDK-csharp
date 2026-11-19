@@ -287,42 +287,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiDepositID (int) maximum
             if (this.PkiDepositID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiDepositID, must be a value less than or equal to 16777215.", new [] { "PkiDepositID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDepositID, must be a value less than or equal to 16777215.", new [] { "PkiDepositID" });
             }
 
             // PkiDepositID (int) minimum
             if (this.PkiDepositID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiDepositID, must be a value greater than or equal to 0.", new [] { "PkiDepositID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiDepositID, must be a value greater than or equal to 0.", new [] { "PkiDepositID" });
             }
 
             // FkiBankaccountID (int) maximum
             if (this.FkiBankaccountID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
             }
 
             // FkiBankaccountID (int) minimum
             if (this.FkiBankaccountID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             // FkiUserIDCreated (int) minimum
             if (this.FkiUserIDCreated < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserIDCreated, must be a value greater than or equal to 0.", new [] { "FkiUserIDCreated" });
             }
 
             if (this.SDepositNumber != null) {
@@ -346,13 +346,13 @@ namespace eZmaxApi.Model
             // DDepositTotal (string) maxLength
             if (this.DDepositTotal != null && this.DDepositTotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DDepositTotal, length must be less than 13.", new [] { "DDepositTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DDepositTotal, length must be less than 13.", new [] { "DDepositTotal" });
             }
 
             // DDepositTotal (string) minLength
             if (this.DDepositTotal != null && this.DDepositTotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DDepositTotal, length must be greater than 4.", new [] { "DDepositTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DDepositTotal, length must be greater than 4.", new [] { "DDepositTotal" });
             }
 
             if (this.DDepositTotal != null) {
@@ -367,13 +367,13 @@ namespace eZmaxApi.Model
             // FkiReconciliationID (int) maximum
             if (this.FkiReconciliationID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value less than or equal to 65535.", new [] { "FkiReconciliationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiReconciliationID, must be a value less than or equal to 65535.", new [] { "FkiReconciliationID" });
             }
 
             // FkiReconciliationID (int) minimum
             if (this.FkiReconciliationID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiReconciliationID, must be a value greater than or equal to 0.", new [] { "FkiReconciliationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiReconciliationID, must be a value greater than or equal to 0.", new [] { "FkiReconciliationID" });
             }
 
             if (this.SUserLoginname != null) {

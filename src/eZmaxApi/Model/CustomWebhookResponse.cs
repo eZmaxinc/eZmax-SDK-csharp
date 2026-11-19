@@ -415,30 +415,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiAuthenticationexternalID (int) maximum
             if (this.FkiAuthenticationexternalID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "FkiAuthenticationexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "FkiAuthenticationexternalID" });
             }
 
             // FkiAuthenticationexternalID (int) minimum
             if (this.FkiAuthenticationexternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "FkiAuthenticationexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "FkiAuthenticationexternalID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             if (this.SWebhookUrl != null) {
@@ -462,25 +462,25 @@ namespace eZmaxApi.Model
             // PksCustomerCode (string) maxLength
             if (this.PksCustomerCode != null && this.PksCustomerCode.Length > 6)
             {
-                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be less than 6.", new [] { "PksCustomerCode" });
             }
 
             // PksCustomerCode (string) minLength
             if (this.PksCustomerCode != null && this.PksCustomerCode.Length < 2)
             {
-                yield return new ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksCustomerCode, length must be greater than 2.", new [] { "PksCustomerCode" });
             }
 
             // FkiEzmaxpartnerproductstagewebhookID (int) maximum
             if (this.FkiEzmaxpartnerproductstagewebhookID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value less than or equal to 65535.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value less than or equal to 65535.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
             }
 
             // FkiEzmaxpartnerproductstagewebhookID (int) minimum
             if (this.FkiEzmaxpartnerproductstagewebhookID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductstagewebhookID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstagewebhookID" });
             }
 
             yield break;

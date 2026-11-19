@@ -135,36 +135,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatepackagesignermembershipID (int) minimum
             if (this.PkiEzsigntemplatepackagesignermembershipID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepackagesignermembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagesignermembershipID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepackagesignermembershipID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepackagesignermembershipID" });
             }
 
             // FkiEzsigntemplatepackagemembershipID (int) minimum
             if (this.FkiEzsigntemplatepackagemembershipID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagemembershipID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackagemembershipID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagemembershipID" });
             }
 
             // FkiEzsigntemplatepackagesignerID (int) minimum
             if (this.FkiEzsigntemplatepackagesignerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackagesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagesignerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackagesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackagesignerID" });
             }
 
             // FkiEzsigntemplatesignerID (int) minimum
             if (this.FkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
             }
 
             // IEzsigntemplatepackagesignermembershipCopy (int) minimum
             if (this.IEzsigntemplatepackagesignermembershipCopy < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatepackagesignermembershipCopy, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagesignermembershipCopy" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepackagesignermembershipCopy, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatepackagesignermembershipCopy" });
             }
 
             yield break;

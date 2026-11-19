@@ -259,48 +259,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCreditcardmerchantID (int) maximum
             if (this.PkiCreditcardmerchantID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardmerchantID, must be a value less than or equal to 255.", new [] { "PkiCreditcardmerchantID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardmerchantID, must be a value less than or equal to 255.", new [] { "PkiCreditcardmerchantID" });
             }
 
             // PkiCreditcardmerchantID (int) minimum
             if (this.PkiCreditcardmerchantID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardmerchantID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardmerchantID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardmerchantID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardmerchantID" });
             }
 
             // FkiBankaccountID (int) maximum
             if (this.FkiBankaccountID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value less than or equal to 255.", new [] { "FkiBankaccountID" });
             }
 
             // FkiBankaccountID (int) minimum
             if (this.FkiBankaccountID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBankaccountID, must be a value greater than or equal to 0.", new [] { "FkiBankaccountID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             // FkiCurrencyID (int) minimum
             if (this.FkiCurrencyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCurrencyID, must be a value greater than or equal to 0.", new [] { "FkiCurrencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCurrencyID, must be a value greater than or equal to 0.", new [] { "FkiCurrencyID" });
             }
 
             if (this.SCurrencyDescriptionX != null) {

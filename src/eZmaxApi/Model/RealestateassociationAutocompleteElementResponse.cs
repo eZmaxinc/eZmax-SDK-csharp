@@ -77,7 +77,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Realestateassociation</value>
         /*
-        <example>Organisme d’autoréglementation du courtage immobilier du Québec</example>
+        <example>Organisme d‧autoréglementation du courtage immobilier du Québec</example>
         */
         [DataMember(Name = "sRealestateassociationNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SRealestateassociationNameX { get; set; }
@@ -132,18 +132,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiRealestateassociationID (int) maximum
             if (this.PkiRealestateassociationID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for PkiRealestateassociationID, must be a value less than or equal to 255.", new [] { "PkiRealestateassociationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiRealestateassociationID, must be a value less than or equal to 255.", new [] { "PkiRealestateassociationID" });
             }
 
             // PkiRealestateassociationID (int) minimum
             if (this.PkiRealestateassociationID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiRealestateassociationID, must be a value greater than or equal to 1.", new [] { "PkiRealestateassociationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiRealestateassociationID, must be a value greater than or equal to 1.", new [] { "PkiRealestateassociationID" });
             }
 
             if (this.SRealestateassociationNameX != null) {

@@ -216,30 +216,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiOtherincomeID (int) maximum
             if (this.PkiOtherincomeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiOtherincomeID, must be a value less than or equal to 65535.", new [] { "PkiOtherincomeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiOtherincomeID, must be a value less than or equal to 65535.", new [] { "PkiOtherincomeID" });
             }
 
             // PkiOtherincomeID (int) minimum
             if (this.PkiOtherincomeID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiOtherincomeID, must be a value greater than or equal to 1.", new [] { "PkiOtherincomeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiOtherincomeID, must be a value greater than or equal to 1.", new [] { "PkiOtherincomeID" });
             }
 
             // FkiOtherincometypeID (int) maximum
             if (this.FkiOtherincometypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiOtherincometypeID, must be a value less than or equal to 255.", new [] { "FkiOtherincometypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOtherincometypeID, must be a value less than or equal to 255.", new [] { "FkiOtherincometypeID" });
             }
 
             // FkiOtherincometypeID (int) minimum
             if (this.FkiOtherincometypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiOtherincometypeID, must be a value greater than or equal to 0.", new [] { "FkiOtherincometypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiOtherincometypeID, must be a value greater than or equal to 0.", new [] { "FkiOtherincometypeID" });
             }
 
             if (this.SOtherincometypeDescriptionX != null) {
@@ -263,13 +263,13 @@ namespace eZmaxApi.Model
             // DOtherincomeRemunerationsubtotal (string) maxLength
             if (this.DOtherincomeRemunerationsubtotal != null && this.DOtherincomeRemunerationsubtotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationsubtotal, length must be less than 13.", new [] { "DOtherincomeRemunerationsubtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationsubtotal, length must be less than 13.", new [] { "DOtherincomeRemunerationsubtotal" });
             }
 
             // DOtherincomeRemunerationsubtotal (string) minLength
             if (this.DOtherincomeRemunerationsubtotal != null && this.DOtherincomeRemunerationsubtotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationsubtotal, length must be greater than 4.", new [] { "DOtherincomeRemunerationsubtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationsubtotal, length must be greater than 4.", new [] { "DOtherincomeRemunerationsubtotal" });
             }
 
             if (this.DOtherincomeRemunerationsubtotal != null) {
@@ -284,13 +284,13 @@ namespace eZmaxApi.Model
             // DOtherincomeRemunerationtaxes (string) maxLength
             if (this.DOtherincomeRemunerationtaxes != null && this.DOtherincomeRemunerationtaxes.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationtaxes, length must be less than 13.", new [] { "DOtherincomeRemunerationtaxes" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationtaxes, length must be less than 13.", new [] { "DOtherincomeRemunerationtaxes" });
             }
 
             // DOtherincomeRemunerationtaxes (string) minLength
             if (this.DOtherincomeRemunerationtaxes != null && this.DOtherincomeRemunerationtaxes.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationtaxes, length must be greater than 4.", new [] { "DOtherincomeRemunerationtaxes" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationtaxes, length must be greater than 4.", new [] { "DOtherincomeRemunerationtaxes" });
             }
 
             if (this.DOtherincomeRemunerationtaxes != null) {
@@ -305,13 +305,13 @@ namespace eZmaxApi.Model
             // DOtherincomeRemunerationtotal (string) maxLength
             if (this.DOtherincomeRemunerationtotal != null && this.DOtherincomeRemunerationtotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationtotal, length must be less than 13.", new [] { "DOtherincomeRemunerationtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationtotal, length must be less than 13.", new [] { "DOtherincomeRemunerationtotal" });
             }
 
             // DOtherincomeRemunerationtotal (string) minLength
             if (this.DOtherincomeRemunerationtotal != null && this.DOtherincomeRemunerationtotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DOtherincomeRemunerationtotal, length must be greater than 4.", new [] { "DOtherincomeRemunerationtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DOtherincomeRemunerationtotal, length must be greater than 4.", new [] { "DOtherincomeRemunerationtotal" });
             }
 
             if (this.DOtherincomeRemunerationtotal != null) {

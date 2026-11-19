@@ -115,18 +115,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FksEzmaxcustomerCode (string) maxLength
             if (this.FksEzmaxcustomerCode != null && this.FksEzmaxcustomerCode.Length > 6)
             {
-                yield return new ValidationResult("Invalid value for FksEzmaxcustomerCode, length must be less than 6.", new [] { "FksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FksEzmaxcustomerCode, length must be less than 6.", new [] { "FksEzmaxcustomerCode" });
             }
 
             // FksEzmaxcustomerCode (string) minLength
             if (this.FksEzmaxcustomerCode != null && this.FksEzmaxcustomerCode.Length < 2)
             {
-                yield return new ValidationResult("Invalid value for FksEzmaxcustomerCode, length must be greater than 2.", new [] { "FksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FksEzmaxcustomerCode, length must be greater than 2.", new [] { "FksEzmaxcustomerCode" });
             }
 
             if (this.FksEzmaxcustomerCode != null) {
@@ -141,7 +141,7 @@ namespace eZmaxApi.Model
             // FkiSystemconfigurationtypeID (int) minimum
             if (this.FkiSystemconfigurationtypeID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
             }
 
             yield break;

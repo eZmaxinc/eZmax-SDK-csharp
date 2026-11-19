@@ -218,42 +218,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCreditcardclientID (int) maximum
             if (this.PkiCreditcardclientID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value less than or equal to 65535.", new [] { "PkiCreditcardclientID" });
             }
 
             // PkiCreditcardclientID (int) minimum
             if (this.PkiCreditcardclientID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCreditcardclientID, must be a value greater than or equal to 0.", new [] { "PkiCreditcardclientID" });
             }
 
             // FkiCreditcarddetailID (int) maximum
             if (this.FkiCreditcarddetailID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value less than or equal to 65535.", new [] { "FkiCreditcarddetailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value less than or equal to 65535.", new [] { "FkiCreditcarddetailID" });
             }
 
             // FkiCreditcarddetailID (int) minimum
             if (this.FkiCreditcarddetailID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value greater than or equal to 0.", new [] { "FkiCreditcarddetailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcarddetailID, must be a value greater than or equal to 0.", new [] { "FkiCreditcarddetailID" });
             }
 
             // FkiCreditcardtypeID (int) maximum
             if (this.FkiCreditcardtypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "FkiCreditcardtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value less than or equal to 255.", new [] { "FkiCreditcardtypeID" });
             }
 
             // FkiCreditcardtypeID (int) minimum
             if (this.FkiCreditcardtypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "FkiCreditcardtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCreditcardtypeID, must be a value greater than or equal to 0.", new [] { "FkiCreditcardtypeID" });
             }
 
             if (this.SCreditcardclientDescription != null) {
@@ -268,37 +268,37 @@ namespace eZmaxApi.Model
             // ICreditcarddetailExpirationmonth (int) maximum
             if (this.ICreditcarddetailExpirationmonth > (int)12)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationmonth (int) minimum
             if (this.ICreditcarddetailExpirationmonth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationyear (int) maximum
             if (this.ICreditcarddetailExpirationyear > (int)2200)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             // ICreditcarddetailExpirationyear (int) minimum
             if (this.ICreditcarddetailExpirationyear < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             // ICreditcarddetailLastdigits (int) maximum
             if (this.ICreditcarddetailLastdigits > (int)9999)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value less than or equal to 9999.", new [] { "ICreditcarddetailLastdigits" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value less than or equal to 9999.", new [] { "ICreditcarddetailLastdigits" });
             }
 
             // ICreditcarddetailLastdigits (int) minimum
             if (this.ICreditcarddetailLastdigits < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailLastdigits" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailLastdigits, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailLastdigits" });
             }
 
             yield break;

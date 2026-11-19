@@ -198,7 +198,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The description of the Variableexpense in the language of the requester</value>
         /*
-        <example>Ã‰quipements de bureau</example>
+        <example>Équipements de bureau</example>
         */
         [DataMember(Name = "sVariableexpenseDescriptionX", EmitDefaultValue = false)]
         public string SVariableexpenseDescriptionX { get; set; }
@@ -241,42 +241,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSupplyID (int) maximum
             if (this.PkiSupplyID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiSupplyID, must be a value less than or equal to 65535.", new [] { "PkiSupplyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSupplyID, must be a value less than or equal to 65535.", new [] { "PkiSupplyID" });
             }
 
             // PkiSupplyID (int) minimum
             if (this.PkiSupplyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiSupplyID, must be a value greater than or equal to 0.", new [] { "PkiSupplyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSupplyID, must be a value greater than or equal to 0.", new [] { "PkiSupplyID" });
             }
 
             // FkiGlaccountID (int) minimum
             if (this.FkiGlaccountID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiGlaccountID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountID" });
             }
 
             // FkiGlaccountcontainerID (int) minimum
             if (this.FkiGlaccountcontainerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
             }
 
             // FkiVariableexpenseID (int) maximum
             if (this.FkiVariableexpenseID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "FkiVariableexpenseID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiVariableexpenseID, must be a value less than or equal to 255.", new [] { "FkiVariableexpenseID" });
             }
 
             // FkiVariableexpenseID (int) minimum
             if (this.FkiVariableexpenseID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "FkiVariableexpenseID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiVariableexpenseID, must be a value greater than or equal to 1.", new [] { "FkiVariableexpenseID" });
             }
 
             if (this.SSupplyCode != null) {
@@ -300,13 +300,13 @@ namespace eZmaxApi.Model
             // DSupplyUnitprice (string) maxLength
             if (this.DSupplyUnitprice != null && this.DSupplyUnitprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DSupplyUnitprice, length must be less than 13.", new [] { "DSupplyUnitprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSupplyUnitprice, length must be less than 13.", new [] { "DSupplyUnitprice" });
             }
 
             // DSupplyUnitprice (string) minLength
             if (this.DSupplyUnitprice != null && this.DSupplyUnitprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DSupplyUnitprice, length must be greater than 4.", new [] { "DSupplyUnitprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DSupplyUnitprice, length must be greater than 4.", new [] { "DSupplyUnitprice" });
             }
 
             if (this.DSupplyUnitprice != null) {

@@ -1291,6 +1291,7 @@ Class | Method | HTTP request | Description
  - [Model.CustomContactNameResponse](docs/CustomContactNameResponse.md)
  - [Model.CustomCreateEzsignelementsPositionedByWordRequest](docs/CustomCreateEzsignelementsPositionedByWordRequest.md)
  - [Model.CustomCreditcardRequest](docs/CustomCreditcardRequest.md)
+ - [Model.CustomCreditcardmerchantResponse](docs/CustomCreditcardmerchantResponse.md)
  - [Model.CustomCreditcardtransactionResponse](docs/CustomCreditcardtransactionResponse.md)
  - [Model.CustomCreditcardtransactionresponseResponse](docs/CustomCreditcardtransactionresponseResponse.md)
  - [Model.CustomDiscussionconfigurationResponse](docs/CustomDiscussionconfigurationResponse.md)

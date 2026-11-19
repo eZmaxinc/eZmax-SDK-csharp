@@ -163,42 +163,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatedocumentpageID (int) minimum
             if (this.PkiEzsigntemplatedocumentpageID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpageID" });
             }
 
             // IEzsigntemplatedocumentpageWidthimage (int) minimum
             if (this.IEzsigntemplatedocumentpageWidthimage < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthimage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthimage" });
             }
 
             // IEzsigntemplatedocumentpageHeightimage (int) minimum
             if (this.IEzsigntemplatedocumentpageHeightimage < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightimage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightimage, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightimage" });
             }
 
             // IEzsigntemplatedocumentpageWidthpdf (int) minimum
             if (this.IEzsigntemplatedocumentpageWidthpdf < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthpdf" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageWidthpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageWidthpdf" });
             }
 
             // IEzsigntemplatedocumentpageHeightpdf (int) minimum
             if (this.IEzsigntemplatedocumentpageHeightpdf < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightpdf" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpageHeightpdf, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpageHeightpdf" });
             }
 
             // IEzsigntemplatedocumentpagePagenumber (int) minimum
             if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
             }
 
             yield break;

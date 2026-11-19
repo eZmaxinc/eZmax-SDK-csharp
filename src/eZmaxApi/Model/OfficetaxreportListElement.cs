@@ -150,24 +150,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiOfficetaxreportID (int) maximum
             if (this.PkiOfficetaxreportID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiOfficetaxreportID, must be a value less than or equal to 65535.", new [] { "PkiOfficetaxreportID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiOfficetaxreportID, must be a value less than or equal to 65535.", new [] { "PkiOfficetaxreportID" });
             }
 
             // PkiOfficetaxreportID (int) minimum
             if (this.PkiOfficetaxreportID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiOfficetaxreportID, must be a value greater than or equal to 0.", new [] { "PkiOfficetaxreportID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiOfficetaxreportID, must be a value greater than or equal to 0.", new [] { "PkiOfficetaxreportID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             if (this.SUserLoginname != null) {

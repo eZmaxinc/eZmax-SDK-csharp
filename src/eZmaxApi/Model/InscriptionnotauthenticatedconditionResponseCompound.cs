@@ -184,7 +184,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             if (this.SInscriptionnotauthenticatedconditiontypeNameX != null) {
                 // SInscriptionnotauthenticatedconditiontypeNameX (string) pattern
@@ -198,7 +198,7 @@ namespace eZmaxApi.Model
             // FkiInscriptionnotauthenticatedID (int) minimum
             if (this.FkiInscriptionnotauthenticatedID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionnotauthenticatedID" });
             }
 
             if (this.DtInscriptionnotauthenticatedconditionCompleted != null) {

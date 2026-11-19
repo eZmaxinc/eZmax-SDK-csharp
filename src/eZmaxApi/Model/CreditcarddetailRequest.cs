@@ -150,30 +150,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // ICreditcarddetailExpirationmonth (int) maximum
             if (this.ICreditcarddetailExpirationmonth > (int)12)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value less than or equal to 12.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationmonth (int) minimum
             if (this.ICreditcarddetailExpirationmonth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationmonth, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationmonth" });
             }
 
             // ICreditcarddetailExpirationyear (int) maximum
             if (this.ICreditcarddetailExpirationyear > (int)2200)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value less than or equal to 2200.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             // ICreditcarddetailExpirationyear (int) minimum
             if (this.ICreditcarddetailExpirationyear < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICreditcarddetailExpirationyear, must be a value greater than or equal to 0.", new [] { "ICreditcarddetailExpirationyear" });
             }
 
             if (this.SCreditcarddetailCivic != null) {

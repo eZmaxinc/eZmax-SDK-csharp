@@ -263,48 +263,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiInvoiceID (int) minimum
             if (this.PkiInvoiceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiInvoiceID, must be a value greater than or equal to 0.", new [] { "PkiInvoiceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInvoiceID, must be a value greater than or equal to 0.", new [] { "PkiInvoiceID" });
             }
 
             // FkiAgentID (int) minimum
             if (this.FkiAgentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiAgentID, must be a value greater than or equal to 0.", new [] { "FkiAgentID" });
             }
 
             // FkiBrokerID (int) minimum
             if (this.FkiBrokerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokerID, must be a value greater than or equal to 0.", new [] { "FkiBrokerID" });
             }
 
             // FkiCustomerID (int) minimum
             if (this.FkiCustomerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCustomerID, must be a value greater than or equal to 0.", new [] { "FkiCustomerID" });
             }
 
             // FkiPeriodID (int) minimum
             if (this.FkiPeriodID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPeriodID, must be a value greater than or equal to 0.", new [] { "FkiPeriodID" });
             }
 
             // DInvoiceTotal (string) maxLength
             if (this.DInvoiceTotal != null && this.DInvoiceTotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInvoiceTotal, length must be less than 13.", new [] { "DInvoiceTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoiceTotal, length must be less than 13.", new [] { "DInvoiceTotal" });
             }
 
             // DInvoiceTotal (string) minLength
             if (this.DInvoiceTotal != null && this.DInvoiceTotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInvoiceTotal, length must be greater than 4.", new [] { "DInvoiceTotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoiceTotal, length must be greater than 4.", new [] { "DInvoiceTotal" });
             }
 
             if (this.DInvoiceTotal != null) {
@@ -319,13 +319,13 @@ namespace eZmaxApi.Model
             // DInvoicePaid (string) maxLength
             if (this.DInvoicePaid != null && this.DInvoicePaid.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInvoicePaid, length must be less than 13.", new [] { "DInvoicePaid" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoicePaid, length must be less than 13.", new [] { "DInvoicePaid" });
             }
 
             // DInvoicePaid (string) minLength
             if (this.DInvoicePaid != null && this.DInvoicePaid.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInvoicePaid, length must be greater than 4.", new [] { "DInvoicePaid" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoicePaid, length must be greater than 4.", new [] { "DInvoicePaid" });
             }
 
             if (this.DInvoicePaid != null) {
@@ -340,13 +340,13 @@ namespace eZmaxApi.Model
             // DInvoiceBalance (string) maxLength
             if (this.DInvoiceBalance != null && this.DInvoiceBalance.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInvoiceBalance, length must be less than 13.", new [] { "DInvoiceBalance" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoiceBalance, length must be less than 13.", new [] { "DInvoiceBalance" });
             }
 
             // DInvoiceBalance (string) minLength
             if (this.DInvoiceBalance != null && this.DInvoiceBalance.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInvoiceBalance, length must be greater than 4.", new [] { "DInvoiceBalance" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInvoiceBalance, length must be greater than 4.", new [] { "DInvoiceBalance" });
             }
 
             if (this.DInvoiceBalance != null) {

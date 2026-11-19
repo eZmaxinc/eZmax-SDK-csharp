@@ -216,36 +216,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSessionhistoryID (int) maximum
             if (this.PkiSessionhistoryID > (int)2147483647)
             {
-                yield return new ValidationResult("Invalid value for PkiSessionhistoryID, must be a value less than or equal to 2147483647.", new [] { "PkiSessionhistoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value less than or equal to 2147483647.", new [] { "PkiSessionhistoryID" });
             }
 
             // PkiSessionhistoryID (int) minimum
             if (this.PkiSessionhistoryID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiSessionhistoryID, must be a value greater than or equal to 1.", new [] { "PkiSessionhistoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSessionhistoryID, must be a value greater than or equal to 1.", new [] { "PkiSessionhistoryID" });
             }
 
             // FkiComputerID (int) maximum
             if (this.FkiComputerID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value less than or equal to 65535.", new [] { "FkiComputerID" });
             }
 
             // FkiComputerID (int) minimum
             if (this.FkiComputerID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiComputerID, must be a value greater than or equal to 1.", new [] { "FkiComputerID" });
             }
 
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             if (this.DtSessionhistoryFirsthit != null) {

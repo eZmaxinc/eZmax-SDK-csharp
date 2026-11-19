@@ -352,18 +352,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PksEzmaxcustomerCode (string) maxLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length > 6)
             {
-                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be less than 6.", new [] { "PksEzmaxcustomerCode" });
             }
 
             // PksEzmaxcustomerCode (string) minLength
             if (this.PksEzmaxcustomerCode != null && this.PksEzmaxcustomerCode.Length < 2)
             {
-                yield return new ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PksEzmaxcustomerCode, length must be greater than 2.", new [] { "PksEzmaxcustomerCode" });
             }
 
             if (this.PksEzmaxcustomerCode != null) {
@@ -378,13 +378,13 @@ namespace eZmaxApi.Model
             // FkiSystemconfigurationtypeID (int) minimum
             if (this.FkiSystemconfigurationtypeID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiSystemconfigurationtypeID, must be a value greater than or equal to 1.", new [] { "FkiSystemconfigurationtypeID" });
             }
 
             // FkiEzmaxpartnerID (int) minimum
             if (this.FkiEzmaxpartnerID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
             }
 
             if (this.SEzmaxpartnerName1 != null) {
@@ -408,13 +408,13 @@ namespace eZmaxApi.Model
             // FkiEzmaxpartnerproductID (int) maximum
             if (this.FkiEzmaxpartnerproductID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductID, must be a value less than or equal to 255.", new [] { "FkiEzmaxpartnerproductID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductID, must be a value less than or equal to 255.", new [] { "FkiEzmaxpartnerproductID" });
             }
 
             // FkiEzmaxpartnerproductID (int) minimum
             if (this.FkiEzmaxpartnerproductID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductID" });
             }
 
             if (this.SEzmaxpartnerproductName1 != null) {
@@ -438,13 +438,13 @@ namespace eZmaxApi.Model
             // FkiEzmaxpartnerproductstageID (int) maximum
             if (this.FkiEzmaxpartnerproductstageID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value less than or equal to 255.", new [] { "FkiEzmaxpartnerproductstageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value less than or equal to 255.", new [] { "FkiEzmaxpartnerproductstageID" });
             }
 
             // FkiEzmaxpartnerproductstageID (int) minimum
             if (this.FkiEzmaxpartnerproductstageID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstageID" });
             }
 
             if (this.SEzmaxpartnerproductstageCode != null) {
@@ -468,19 +468,19 @@ namespace eZmaxApi.Model
             // FkiUserID (int) minimum
             if (this.FkiUserID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserID, must be a value greater than or equal to 0.", new [] { "FkiUserID" });
             }
 
             // FkiLanguageID (int) maximum
             if (this.FkiLanguageID > (int)2)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value less than or equal to 2.", new [] { "FkiLanguageID" });
             }
 
             // FkiLanguageID (int) minimum
             if (this.FkiLanguageID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiLanguageID, must be a value greater than or equal to 1.", new [] { "FkiLanguageID" });
             }
 
             yield break;

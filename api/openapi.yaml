@@ -35,6 +35,29 @@ servers:
       description: The region where your services are hosted.
       enum:
       - ca-central-1
+  x-tag-groups:
+  - Module
+  - Object
+  - Report
+  - Scim
+  - Tool
+- description: ""
+  url: "https://{sInfrastructureenvironmenttypeDescription}.payment.{sInfrastructureregionCode}.ezmax.com/rest"
+  variables:
+    sInfrastructureenvironmenttypeDescription:
+      default: prod
+      description: The environment on on which to call the API. Should always be "prod"
+        unless instructed otherwise by support.
+      enum:
+      - prod
+      - dev
+    sInfrastructureregionCode:
+      default: ca-central-1
+      description: The region where your services are hosted.
+      enum:
+      - ca-central-1
+  x-tag-groups:
+  - Payment
 - description: The server endpoint where to send your global API requests.
   url: "https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com"
   variables:
@@ -45,6 +68,8 @@ servers:
       enum:
       - prod
       - dev
+  x-tag-groups:
+  - Global
 - description: The server endpoint where to send your websocket requests.
   url: "wss://ws.{sInfrastructureregionCode}.ezmax.com/{sInfrastructureenvironmenttypeDescription}"
   variables:
@@ -63,248 +88,17 @@ servers:
       description: The region where your services are hosted.
       enum:
       - ca-central-1
+  x-tag-groups:
+  - Websocket
+- description: This is an example of an external server.
+  url: https://www.example.com
+  x-tag-groups:
+  - External
 tags:
 - description: External Ezmaxpartner contains detail about the format of the webhook
     we will return to you in the context of Ezmaxpartner
   name: External_Ezmaxpartner
   x-displayName: Ezmaxpartner
-- description: "All notable changes to this project will be documented in this section.\n\
-    \nVersion numbers are using **MAJOR**.**MINOR**.**PATCH** numbering format for\
-    \ example 1.2.34\n\n**MAJOR** will be incremented only if there is an incompatible\
-    \ breaking change. New distinct documentation and specification files will be\
-    \ published.\n\n**MINOR** will be incremented only if a function becomes deprecated\
-    \ or deleted (after being deprecated in a previous version)\n\n**PATCH** will\
-    \ be incremented everytime changes and additions are released.\n\nFor each version,\
-    \ there will be the list of changes:\n* **Breaking Changes** for breaking changes\
-    \ you need to take into consideration before updating.\n* **Added** for new features.\n\
-    * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
-    \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
-    \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n**Removal lifecycle**<br>\n\
-    Once a function becomes **Deprecated**, we monitor its usage to track how many\
-    \ users are still using it.\nAfter a long period of time, if a minority of users\
-    \ are still using the function, we might ask users to update to the newer version\
-    \ of the function and give them ample time to do so.\nOnly after that delay expires\
-    \ (or no more users are still using it), we will have the function **Removed**.\n\
-    \n## 1.3.X Releases\n\n### ⚠️ Compatibility Warning\n\nStarting with **version\
-    \ 1.3.0**, several API endpoints have been updated to support a **major enhancement**:\n\
-    You can now **combine and alternate form steps and signature steps** within the\
-    \ same signing workflow.\n\nThis provides greater flexibility, but it also changes\
-    \ how **step numbers** are defined and managed.\n\n\n* **Endpoints introduced\
-    \ in 1.3.0** (listed below) use the *new step numbering model*.\n* **Endpoints\
-    \ from previous versions (≤ 1.2.2)** use the *old step numbering model*.\n* These\
-    \ two models are **not compatible** — mixing old and new endpoints within the\
-    \ same implementation could cause inconsistencies.\n\nYou may continue using the\
-    \ old routes or migrate fully to the new ones, but **do not mix both** in a single\
-    \ integration.\n\n### Endpoints with Step Numbers (pre-1.3.0)\n\n* GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\n\
-    * GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\n* GET\
-    \ /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\n* GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\n\
-    * GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n* GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\n\
-    * GET /2/object/ezsigndocument/{pkiEzsigndocumentID}\n* GET /3/object/ezsignsignature/{pkiEzsignsignatureID}\n\
-    * GET /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n* POST\
-    \ /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord\n\
-    * POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\n\
-    * POST /2/object/ezsigntemplatesignature\n* POST /3/object/ezsignsignature\n*\
-    \ PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups\n\
-    * PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n* PUT\
-    \ /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\n\
-    * PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}\n* PUT /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    \n### Updated endpoints with Step Numbers (introduced in 1.3.0)\n\n* GET /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\n\
-    * GET /2/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\n* GET\
-    \ /2/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\n* GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\n\
-    * GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n* GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\n\
-    * GET /3/object/ezsigndocument/{pkiEzsigndocumentID}\n* GET /4/object/ezsignsignature/{pkiEzsignsignatureID}\n\
-    * GET /4/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n* POST\
-    \ /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord\n\
-    * POST /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\n\
-    * POST /3/object/ezsigntemplatesignature\n* POST /4/object/ezsignsignature\n*\
-    \ PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups\n\
-    * PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n* PUT\
-    \ /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\n\
-    * PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    \n---\n\n### [1.3.4] - 2026-XX-XX\n\n#### Added\n- DELETE /1/object/documenttype/{pkiDocumenttypeID}\n\
-    - DELETE /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n- GET /1/object/adjustment/{pkiAdjustmentID}/getAttachments\n\
-    - GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationCount\n- GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList\n\
-    - GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients\n- GET\
-    \ /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders\n- GET /1/object/adjustment/getList\n\
-    - GET /1/object/adjustmentreminder/getList\n- GET /1/object/bankaccount/getList\n\
-    - GET /1/object/deposit/getList\n- GET /1/object/deposittransitcheque/getList\n\
-    - GET /1/object/disclosure/getList\n- GET /1/object/electronicfundstransfer/getList\n\
-    - GET /1/object/electronicfundstransfertransaction/getList\n- GET /1/object/invoice/getList\n\
-    - GET /1/object/notary/getList\n- GET /1/object/officetaxreport/getList\n- GET\
-    \ /1/object/purchase/getList\n- GET /1/object/salary/getList\n- GET /2/module/ezsign/suggestTemplates\n\
-    - GET /2/object/attachmentrejectreason/getAutocomplete/{sSelector}\n- GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
-    - GET /3/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\n\
-    - GET /3/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- GET /3/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\n\
-    - GET /3/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - GET /3/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- GET /4/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - GET /4/object/ezsigntemplate/{pkiEzsigntemplateID}\n- GET /1/object/documenttype/getList\n\
-    - GET /2/object/documenttype/{pkiDocumenttypeID}\n- GET /2/object/documenttype/getAutocomplete/{sSelector}\n\
-    - PUT /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\n\
-    - PUT /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - PUT /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- PUT /1/object/documenttype/{pkiDocumenttypeID}\n\
-    - POST /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM\n- POST /2/object/ezsignbulksendsignermapping\n\
-    - POST /2/object/ezsigntemplatepackagesigner\n- POST /2/object/ezsigntemplatesigner\n\
-    - POST /1/object/attachment/{pkiAttachmentID}/delete\n- POST /1/object/attachment/{pkiAttachmentID}/rename\n\
-    - POST /1/object/attachment/{pkiAttachmentID}/restore\n- POST /1/object/attachment/{pkiAttachmentID}/validate\n\
-    - POST /1/object/documenttype\n- PATCH /1/object/attachment/{pkiAttachmentID}/setDocumentType\n\
-    - PATCH /1/object/attachment/{pkiAttachmentID}/setPrivacy\n- PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n\
-    - Selector AttachmentSpecificUser in GET /2/object/user/getAutocomplete/{sSelector}\n\
-    - Parameter fkiAttachmentID in GET /2/object/user/getAutocomplete/{sSelector}\n\
-    - Property dtAgentPermitexpiration in agent-ListElement\n- Property dtEzsignformfieldgroupCompleted\
-    \ in ezsignformfieldgroup-Response\n- Property eEzmaxcaseGooddaytaskstatus in\
-    \ ezmaxcase-Response and ezmaxcase-Listelement\n- Property eEzsignfoldersignerassociationRole\
-    \ in ezsignfoldersignerassociation-RequestPatch\n- Property fkiAgentID in user-ListElement\n\
-    - Property fkiBrokerID in user-ListElement\n- Property sAttachmentCategory in\
-    \ attachment-Response\n- Property objUserSpecific in attachment-Response\n- Property\
-    \ eWebhookEzmaxpartnerevent in webhook-sendWebhook-v1-Request\n- Enum value 'Optional'\
-    \ for Field-eEzsigntemplatesignatureConsultationtrigger\n- Enum value 'CCDeleted'\
-    \ for Field-eEzsignfoldersignerassociationRole\n- Enum value 'BuyercontractCreated'\
-    \ for Field-eWebhookRealestateevent\n- Enum value 'BuyercontractModified' for\
-    \ Field-eWebhookRealestateevent\n- Enum value 'CONFLICT' for Field-eErrorCode\n\
-    - Enum value 'Pending' for Field-eAttachmentVerified\n- Enum value 'Pending' for\
-    \ Field-eAttachmentlogType\n- Webhook Buyercontract BuyercontractCreated\n- Webhook\
-    \ Buyercontract BuyercontractModified\n\n\n### [1.3.3] - 2026-07-22\n\n#### Fixed\n\
-    - Minor structurals changes\n\n\n### [1.3.2] - 2026-07-21\n\n#### Added\n- GET\
-    \ /2/module/ezsign/suggestSigners\n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
-    - GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - GET /2/object/inscription/{pkiInscriptionID}\n- GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds\n\
-    - GET /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}\n\
-    - POST /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - POST /3/object/ezsignfoldersignerassociation\n- Enum value 'Realestate' for\
-    \ eWebhookModule\n- Properties pkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX,\
-    \ pkiInscriptioncategoryID, sInscriptioncategoryNameX, iInscriptionUnit in inscription-Listelement\n\
-    - Properties pkiInscriptionbuildingtypeID, sInscriptionbuildingtypeNameX, pkiInscriptioncategoryID,\
-    \ sInscriptioncategoryNameX, iInscriptionUnit in inscriptionnotauthenticated-Listelement\n\
-    - Property eAgentSchedule in agent-ListElement\n- Property bInscriptionnotauthenticatedDraft\
-    \ in inscriptionnotauthenticated-ListElement\n- Webhook Realestate InscriptionCreated\n\
-    - Webhook Realestate InscriptionModified\n- Webhook Realestate InscriptionnotauthenticatedCreated\n\
-    - Webhook Realestate InscriptionnotauthenticatedModified\n\n\n### [1.3.1] - 2026-06-17\n\
-    \n#### Added\n- DELETE /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\n\
-    - GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions\n\
-    - GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks\n\
-    - GET /1/object/ezmaxmaillinglist/getList\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateannotations\n\
-    - POST /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate\n- POST /1/object/ezsigntemplateannotation\n\
-    - POST /4/object/ezsignfoldertype\n- PUT /1/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\n\
-    - PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateannotations\n\
-    - PUT /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignannotations\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignformfieldgroups\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignatures\n- GET /2/object/ezsigntemplateannotation/{pkiEzsigntemplateannotationID}\n\
-    - GET /2/object/ezsigntemplateglobalannotation/{pkiEzsigntemplateglobalannotationID}\n\
-    - POST /1/module/ezmaxmaillinglist/subscribe\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal\n\
-    - POST /3/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n- POST\
-    \ /3/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\n- Selector\
-    \ AgentBrokerEmployeeEzsignUserNormal in GET /2/object/user/getAutocomplete/{sSelector}\n\
-    - Properties dtAgentContractdate, dtAgentTransferdate, dtAgentSenioritydate, dtAgentSickleavestart\
-    \ and dtAgentSickleaveend in agent-ListElement\n- Properties fkiCountryID and\
-    \ fkiProvinceID in agent-ListElement, broker-ListElement, customer-ListElement,\
-    \ employee-ListElement, inscription-ListElement, inscriptionnotauthenticated-ListElement,\
-    \ rejectedoffertopurchase-ListElement and supplier-ListElement  \n- Properties\
-    \ fkiEzsignbulksendID, sEzsignbulksendDescription, fkiEzsignbulksendtransmissionID,\
-    \ sEzsignbulksendtransmissionDescription, fkiEzsigntemplatepublicID, sEzsigntemplatepublicDescription,\
-    \ eEzsignfolderSource in object ezsignfolder-ListElement\n- Properties bEzsignfoldertypeSenddocumentmergetoemail,\
-    \ bEzsignfoldertypeSenddocumentmergetoezsignsigner, bEzsignfoldertypeSenddocumentmergetoreceivealldocument\
-    \ and bEzsignfoldertypeSenddocumentmergetouser in ezsignfoldertype-RequestV3 and\
-    \ ezsignfoldertype-ResponseV4\n- Property a_objEzsigntemplateannotation in ezsigntemplate-ResponseCompound\n\
-    - Property a_objEzsigntemplateannotation in ezsigntemplate-ResponseCompoundV3\n\
-    - Property a_objEzsigntemplateglobalannotation in ezsigntemplateglobal-ResponseCompound\n\
-    - Property fkiEzmaxpartnerID in user-Response\n- Property fkiEzmaxpartnerproductstageID\
-    \ in apikey-ResponseCompound\n- Property iEzsignfolderStepcurrent in ezsignfolder-ResponseV3\n\
-    - Property iEzsignfoldertypeArchivaldays in ezsignfoldertype-getDefaults-v2-Response-mPayload\n\
-    - Property sBuyercontractContract in buyercontract-ListElement\n- Property objInscription\
-    \ in inscriptionnotauthenticated-Response\n- Value Optional in Field-eEzsignsignatureConsultationtrigger\n\
-    - Value Suspended in Field-eSessionhistoryEndby\n\n\n### [1.3.0] - 2026-01-24\n\
-    \n#### Added\n- GET /1/object/agent/getList\n- GET /1/object/broker/getList\n\
-    - GET /1/object/buyercontract/getList\n- GET /1/object/customer/getList\n- GET\
-    \ /1/object/employee/getList\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile\n\
-    - GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download\n\
-    - GET /1/object/inscriptiontemp/getList\n- GET /1/object/lead/getList\n- GET /1/object/otherincome/getList\n\
-    - GET /1/object/rejectedoffertopurchase/getList\n- GET /1/object/supplier/getList\n\
-    - GET /2/object/agent/getAutocomplete/{sSelector}\n- GET /2/object/agenttype/getAutocomplete/{sSelector}\n\
-    - GET /2/object/broker/getAutocomplete/{sSelector}\n- GET /2/object/brokertype/getAutocomplete/{sSelector}\n\
-    - GET /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\n-\
-    \ GET /2/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\n- GET\
-    \ /2/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\n\
-    - GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n- GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\n\
-    - GET /2/object/inscriptionchecklist/getAutocomplete/{sSelector}\n- GET /2/object/leadsource/getAutocomplete/{sSelector}\n\
-    - GET /2/object/notificationtest/{pkiNotificationtestID}/getElements\n- GET /2/object/otherincometype/getAutocomplete/{sSelector}\n\
-    - GET /2/object/paymentmethod/getAutocomplete/{sSelector}\n- GET /3/object/ezsigndocument/{pkiEzsigndocumentID}\n\
-    - GET /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\n-\
-    \ GET /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\n- GET\
-    \ /4/object/ezsignsignature/{pkiEzsignsignatureID}\n- GET /4/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    - POST /1/module/ezmaxcustomer/createCustomer\n- POST /1/object/activesession/setGoal\n\
-    - POST /1/object/agent/{pkiAgentID}/importIntoEDM\n- POST /1/object/broker/{pkiBrokerID}/importIntoEDM\n\
-    - POST /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM\n- POST /1/object/customer/{pkiCustomerID}/importIntoEDM\n\
-    - POST /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/importIntoEDM\n\
-    - POST /1/object/employee/{pkiEmployeeID}/importIntoEDM\n- POST /1/object/externalbroker/{pkiExternalbrokerID}/importIntoEDM\n\
-    - POST /1/object/inscription/{pkiInscriptionID}/importIntoEDM\n- POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/importIntoEDM\n\
-    - POST /1/object/inscriptiontemp/{pkiInscriptiontempID}/importIntoEDM\n- POST\
-    \ /1/object/invoice/{pkiInvoiceID}/importIntoEDM\n- POST /1/object/lead/{pkiLeadID}/importIntoEDM\n\
-    - POST /1/object/otherincome/{pkiOtherincomeID}/importIntoEDM\n- POST /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM\n\
-    - POST /1/object/supplier/{pkiSupplierID}/importIntoEDM\n- POST /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM\n\
-    - POST /1/report/accountspayable/accountspayable\n- POST /1/report/accountsreceivablevscommission/accountsreceivablevscommission\n\
-    - POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord\n\
-    - POST /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\n\
-    - POST /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl\n\
-    - POST /3/object/ezsigntemplatesignature\n- POST /4/object/ezsignsignature\n-\
-    \ PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups\n\
-    - PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n- PUT\
-    \ /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\n\
-    - PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\n- PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    - Properties a_objContactPrivate, a_objContactShared in ezsign-suggestSigners-v1-Response-mPayload\n\
-    - Properties bEzsignfoldertypeSendsignatureattachmentezsignsigner, bEzsignfoldertypeSendsignatureattachment,\
-    \ bEzsignfoldertypeSendsignatureattachmentuser, bEzsignfoldertypeAllowdownloadsignatureattachmentezsignsigner,\
-    \ bEzsignfoldertypeSendsignatureattachmentreceivealldocument in ezsignfoldertype-RequestV3\
-    \ and- ezsignfoldertype-ResponseV4\n- Properties eEzsignsignatureSignaturepadrequired,\
-    \ eEzsignsignatureSignaturepadrequired in ezsignsignature-Request and ezsignsignature-Response\n\
-    - Properties eEzsigntemplatesignatureSignaturepadrequired, eEzsigntemplatesignatureSignaturepadrequired\
-    \ in ezsigntemplatesignature-Request and ezsigntemplatesignature-Response\n- Property\
-    \ a_objEzsignsignaturepaymentdetail in ezsignsignature-RequestCompound\n- Property\
-    \ a_objEzsigntemplatesignaturepaymentdetail in ezsigntemplatesignature-RequestCompound,\
-    \ ezsigntemplatesignature-RequestCompoundV2, ezsigntemplatesignature-ResponseCompoundV3\n\
-    - Property bInscriptionInspection in inscription-ListElement\n- Property bInscriptionInspection\
-    \ in inscriptionnotauthenticated-ListElement\n- Property bInscriptionnotauthenticatedConditional\
-    \ in inscription-ListElement\n- Property bInscriptionnotauthenticatedConditional\
-    \ in inscriptionnotauthenticated-ListElement\n- Property bUserAddmeinezsignfolder\
-    \ in activesession-ResponseCompound-User\n- Property bUserAddmeinezsignfolder\
-    \ in user-getPreferences-v1-Response\n- Property bUserAddmeinezsignfolder in user-setPreferences-v1-Request\n\
-    - Property dtUserNpsrequest in activesession-ResponseCompound\n- Property eEzsignfolderCompletion\
-    \ in ezsignfolder-ListElement\n- Property eEzsignfolderDocumentmerge in ezsignfoldertype-RequestV3\
-    \ and ezsignfoldertype-ResponseV4\n- Property eEzsignfolderMessageorder in ezsignfolder-Response\n\
-    - Property eUserType in ezsignfoldersignerassociation-ResponseCompound-User\n\
-    - Property fkiDepartmentID in agent-AutocompleteElement-Response\n- Property fkiDepartmentID\
-    \ in broker-AutocompleteElement-Response\n- Property fkiDepartmentID in customer-AutocompleteElement-Response\n\
-    - Property fkiEzsigntemplateglobalID in Custom-Ezsignimportdocument-Response\n\
-    - Property fkiModuleIDForm in user-getPreferences-v1-Response-mPayload\n- Property\
-    \ fkiModuleIDForm in user-setPreferences-v1-Request\n- Property fkiPaymentgatewayID\
-    \ in ezsignsignature-Response, ezsigntemplatesignature-Request, ezsigntemplatesignature-Response\n\
-    - Property iUserFrontendgoal in activesession-ResponseCompound-User\n- Property\
-    \ iSystemconfigurationEzsignreminderhoursend in systemconfiguration-Request and\
-    \ systemconfiguration-Response\n- Property objReportcellstyleCustom in Common-Reportrow\n\
-    - Property sEzsignsignergroupDescriptionX in Custom-EzsignfoldertransmissionSigner-Response\n\
-    - Property sEzsigntemplateglobalDescription in Custom-Ezsignimportdocument-Response\n\
-    - Property sCustomerCode in customer-AutocompleteElement-Response\n- Property\
-    \ sModuleNameX in user-getPreferences-v1-Response-mPayload\n- Property sReportsectionTabname\
-    \ in Common-Reportsection\n- Property sWebhookAuthentificationexternalerror in\
-    \ webhook-ResponseCompound\n- Selector EzsignfoldertypeReassign in /2/object/userlogintype/getAutocomplete/{sSelector}\n\
-    - Value PerEzsignfolderStepSync in eEzsignfolderCompletion\n- Value PerEzsignfolderStepSync\
-    \ in eEzsignfoldertypeCompletion\n- Value PendingPrematurelyEnded in eEzsigndocumentStep\n\
-    \n#### Deprecated\n- POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl\n\
-    \n#### Removed\n- Property bEzsignfolderPaymentused in Custom-EzmaxinvoicingEzsignfolder-Response\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\n\
-    - GET /1/object/notificationtest/{pkiNotificationtestID}/getElements\n- GET /2/object/inscriptionchecklist/getAutocomplete\n\
-    - GET /2/object/signature/{pkiSignatureID}\n- GET /3/object/ezsignsignature/{pkiEzsignsignatureID}\n\
-    - GET /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID} \n- POST\
-    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder\n- POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl\n\
-    - PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}\n\
-    - PUT /2/object/ezsignsignature/{pkiEzsignsignatureID}\n- PUT /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    \n## Older Releases\nDocumentation and changelog for older releases can be found\
-    \ here\n- [1.2.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.2.html)\n\
-    - [1.1.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\n\
-    - [1.0.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)\n"
-  name: General_Changelog
-  x-displayName: Changelog
 - description: |-
     Welcome to the eZmax API Reference.
 
@@ -15861,12 +15655,14 @@ paths:
       - All
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend:
     post:
-      description: "Once an Ezsigndocument has been sent to signatories, it cannot\
-        \ be modified.\n\nUsing this endpoint, you can unsend the Ezsigndocument and\
-        \ make it modifiable again.\n\nSignatories will receive an email informing\
-        \ them the signature process was aborted and they might receive a new invitation\
-        \ to sign.\n\nâš\_ï¸\x8f Warning: Any signature previously made by signatories\
-        \ on this Ezsigndocumentswill be lost."
+      description: |-
+        Once an Ezsigndocument has been sent to signatories, it cannot be modified.
+
+        Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.
+
+        Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.
+
+        ⚠ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
       operationId: Ezsigndocument_Unsend_V1
       parameters:
       - explode: false
@@ -17664,12 +17460,14 @@ paths:
       - All
   /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend:
     post:
-      description: "Once an Ezsignfolder has been sent to signatories, it cannot be\
-        \ modified.\n\nUsing this endpoint, you can unsend the Ezsignfolder and make\
-        \ it modifiable again.\n\nSignatories will receive an email informing them\
-        \ the signature process was aborted and they might receive a new invitation\
-        \ to sign.\n\nâš\_ï¸\x8f Warning: Any signature previously made by signatories\
-        \ on \"Non-completed\" Ezsigndocuments will be lost."
+      description: |-
+        Once an Ezsignfolder has been sent to signatories, it cannot be modified.
+
+        Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.
+
+        Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.
+
+        ⚠ Warning: Any signature previously made by signatories on "Non-completed" Ezsigndocuments will be lost.
       operationId: Ezsignfolder_Unsend_V1
       parameters:
       - explode: false
@@ -25589,6 +25387,7 @@ paths:
         schema:
           enum:
           - All
+          - Required
           type: string
         style: simple
       - description: Specify which Buyercontract we want to display.
@@ -46670,6 +46469,26 @@ components:
       - objCreditcarddetail
       - sCreditcardCVV
       type: object
+    Custom-Creditcardmerchant-Response:
+      description: A Creditcardmerchant Response
+      example:
+        bCreditcardmerchantDenyamex: true
+        bCreditcardmerchantDenymastercard: true
+        bCreditcardmerchantDenyvisa: true
+      properties:
+        bCreditcardmerchantDenyamex:
+          description: Whether if amex are denied
+          example: true
+          type: boolean
+        bCreditcardmerchantDenymastercard:
+          description: Whether if mastercard are denied
+          example: true
+          type: boolean
+        bCreditcardmerchantDenyvisa:
+          description: Whether if visa are denied
+          example: true
+          type: boolean
+      type: object
     Custom-Creditcardtransaction-Response:
       description: A custom Creditcardtransaction Object
       example:
@@ -47764,6 +47583,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -47874,6 +47697,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
       properties:
         pkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
@@ -49048,7 +48875,7 @@ components:
         pkiNotificationsubsectionID: 3
         fkiNotificationsectionID: 1
         objNotificationsubsectionName:
-          sNotificationsubsectionName1: Signature Ã©lectronique
+          sNotificationsubsectionName1: Signature électronique
           sNotificationsubsectionName2: Electronic signature
         sNotificationsectionNameX: Homepage
         sNotificationsubsectionNameX: Default
@@ -52234,11 +52061,12 @@ components:
       example: Description
       type: string
     Field-eEzsignsignatureConsultationtrigger:
-      description: "Indicates when the â€œconsultationâ€\x9d type signature must be\
-        \ signed.\n\n1. **Automatic** When the document is displayed .\n2. **Manual**\
-        \ The user must indicate that he has viewed the document.\n3. **Optional**\
-        \ The user can view the document, but they are not required to do so. Same\
-        \ as **Automatic** when user view the document."
+      description: |-
+        Indicates when the "consultation" type signature must be signed.
+
+        1. **Automatic** When the document is displayed .
+        2. **Manual** The user must indicate that he has viewed the document.
+        3. **Optional** The user can view the document, but they are not required to do so. Same as **Automatic** when user view the document.
       enum:
       - Automatic
       - Manual
@@ -52567,11 +52395,12 @@ components:
       example: Description
       type: string
     Field-eEzsigntemplatesignatureConsultationtrigger:
-      description: "Indicates when the â€œconsultationâ€\x9d type signature must be\
-        \ signed.\n\n1. **Automatic** When the document is displayed .\n2. **Manual**\
-        \ The user must indicate that he has viewed the document.\n3. **Optional**\
-        \ The user can view the document, but they are not required to do so. Same\
-        \ as **Automatic** when user view the document."
+      description: |-
+        Indicates when the "consultation" type signature must be signed.
+
+        1. **Automatic** When the document is displayed .
+        2. **Manual** The user must indicate that he has viewed the document.
+        3. **Optional** The user can view the document, but they are not required to do so. Same as **Automatic** when user view the document.
       enum:
       - Automatic
       - Manual
@@ -55335,7 +55164,7 @@ components:
         |25|What are the last 4 digits of your SIN|
         |26|What is your postal code|
         |27|What is your employee number|
-        |28|What is your managerâ€™s first name|
+        |28|What is your manager's first name|
         |29|What is your file number|
         |30|What is your client/member number|
         |31|What is your license number|
@@ -55684,7 +55513,7 @@ components:
     Field-sAttachmentlogDetail:
       description: The additionnal detail
       example: System
-      pattern: "[\\s\\S]{0,65535}$"
+      pattern: "^[\\s\\S]{0,65535}$"
       type: string
     Field-sAttachmentrejectreasonNameX:
       description: The name of the Attachmentrejectreason in the language of the requester
@@ -55721,7 +55550,7 @@ components:
       type: string
     Field-sBillingentityinternalDescription1:
       description: The description of the Billingentityinternal in French
-      example: DÃ©faut
+      example: Défaut
       pattern: "^.{0,70}$"
       type: string
     Field-sBillingentityinternalDescription2:
@@ -55771,7 +55600,7 @@ components:
       type: string
     Field-sBrokertypeNameX:
       description: The name of the Brokertype in the language of the requester
-      example: Agence immobiliÃ¨re
+      example: Agence immobilère
       pattern: "^.{0,30}$"
       type: string
     Field-sBuyercontractContract:
@@ -56085,18 +55914,18 @@ components:
       type: string
     Field-sEzmaxinvoicingsummaryinternalDescription1:
       description: The Ezmaxinvoicingsummaryinternal description in French
-      example: DÃ©faut
+      example: Défaut
       maxLength: 70
       type: string
     Field-sEzmaxinvoicingsummaryinternalDescription2:
       description: The Ezmaxinvoicingsummaryinternal description in English
-      example: DÃ©fault
+      example: Défault
       maxLength: 70
       type: string
     Field-sEzmaxinvoicingsummaryinternalDescriptionX:
       description: The Ezmaxinvoicingsummaryinternal description in the language of
         the requester
-      example: DÃ©faut
+      example: Défaut
       maxLength: 70
       type: string
     Field-sEzmaxmaillinglistDescriptionX:
@@ -56761,7 +56590,7 @@ components:
       type: string
     Field-sNotificationsubsectionName1:
       description: The name of the Notificationsubsection in French
-      example: Signature Ã©lectronique
+      example: Signature électronique
       type: string
     Field-sNotificationsubsectionName2:
       description: The name of the Notificationsubsection in English
@@ -56908,7 +56737,7 @@ components:
       type: string
     Field-sRealestateassociationNameX:
       description: The name of the Realestateassociation
-      example: Organisme d’autoréglementation du courtage immobilier du Québec
+      example: Organisme d‧autoréglementation du courtage immobilier du Québec
       pattern: "^.{1,65}$"
       type: string
     Field-sRealestateboardNameX:
@@ -57053,7 +56882,7 @@ components:
       type: string
     Field-sUserlogintypeDescription1:
       description: The description of the Userlogintype in French
-      example: Courriel et tÃ©lÃ©phone ou SMS
+      example: Courriel et téléphone ou SMS
       pattern: "^.{0,50}$"
       type: string
     Field-sUserlogintypeDescription2:
@@ -57087,7 +56916,7 @@ components:
       type: string
     Field-sVariableexpenseDescription1:
       description: The description of the Variableexpense in French
-      example: Ã‰quipements de bureau
+      example: Équipements de bureau
       pattern: "^.{0,40}$"
       type: string
     Field-sVariableexpenseDescription2:
@@ -57097,7 +56926,7 @@ components:
       type: string
     Field-sVariableexpenseDescriptionX:
       description: The description of the Variableexpense in the language of the requester
-      example: Ã‰quipements de bureau
+      example: Équipements de bureau
       pattern: "^.{0,40}$"
       type: string
     Field-sVariableobjectProperty:
@@ -57394,12 +57223,12 @@ components:
     Multilingual-BillingentityinternalDescription:
       description: The description of the Billingentityinternal
       example:
-        sBillingentityinternalDescription1: DÃ©faut
+        sBillingentityinternalDescription1: Défaut
         sBillingentityinternalDescription2: Default
       properties:
         sBillingentityinternalDescription1:
           description: The description of the Billingentityinternal in French
-          example: DÃ©faut
+          example: Défaut
           pattern: "^.{0,70}$"
           type: string
         sBillingentityinternalDescription2:
@@ -57499,17 +57328,17 @@ components:
     Multilingual-EzmaxinvoicingsummaryinternalDescription:
       description: Description of the Ezmaxinvoicingsummaryinternal
       example:
-        sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-        sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
+        sEzmaxinvoicingsummaryinternalDescription1: Défaut
+        sEzmaxinvoicingsummaryinternalDescription2: Défault
       properties:
         sEzmaxinvoicingsummaryinternalDescription1:
           description: The Ezmaxinvoicingsummaryinternal description in French
-          example: DÃ©faut
+          example: Défaut
           maxLength: 70
           type: string
         sEzmaxinvoicingsummaryinternalDescription2:
           description: The Ezmaxinvoicingsummaryinternal description in English
-          example: DÃ©fault
+          example: Défault
           maxLength: 70
           type: string
       type: object
@@ -57699,12 +57528,12 @@ components:
     Multilingual-NotificationsubsectionName:
       description: Name of the Notificationsubsection
       example:
-        sNotificationsubsectionName1: Signature Ã©lectronique
+        sNotificationsubsectionName1: Signature électronique
         sNotificationsubsectionName2: Electronic signature
       properties:
         sNotificationsubsectionName1:
           description: The name of the Notificationsubsection in French
-          example: Signature Ã©lectronique
+          example: Signature électronique
           type: string
         sNotificationsubsectionName2:
           description: The name of the Notificationsubsection in English
@@ -57814,12 +57643,12 @@ components:
     Multilingual-UserlogintypeDescription:
       description: The description of the Userlogintype
       example:
-        sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+        sUserlogintypeDescription1: Courriel et téléphone ou SMS
         sUserlogintypeDescription2: Email and phone or SMS
       properties:
         sUserlogintypeDescription1:
           description: The description of the Userlogintype in French
-          example: Courriel et tÃ©lÃ©phone ou SMS
+          example: Courriel et téléphone ou SMS
           pattern: "^.{0,50}$"
           type: string
         sUserlogintypeDescription2:
@@ -57831,12 +57660,12 @@ components:
     Multilingual-VariableexpenseDescription:
       description: The description of the Variableexpense
       example:
-        sVariableexpenseDescription1: Ã‰quipements de bureau
+        sVariableexpenseDescription1: Équipements de bureau
         sVariableexpenseDescription2: Office equipment
       properties:
         sVariableexpenseDescription1:
           description: The description of the Variableexpense in French
-          example: Ã‰quipements de bureau
+          example: Équipements de bureau
           pattern: "^.{0,40}$"
           type: string
         sVariableexpenseDescription2:
@@ -74280,7 +74109,7 @@ components:
         sAttachmentlogDetail:
           description: The additionnal detail
           example: System
-          pattern: "[\\s\\S]{0,65535}$"
+          pattern: "^[\\s\\S]{0,65535}$"
           type: string
       required:
       - dtAttachmentlogDatetime
@@ -81027,7 +80856,7 @@ components:
       example:
         pkiBillingentityinternalID: 1
         objBillingentityinternalDescription:
-          sBillingentityinternalDescription1: DÃ©faut
+          sBillingentityinternalDescription1: Défaut
           sBillingentityinternalDescription2: Default
         a_objBillingentityinternalproduct:
         - pkiBillingentityinternalproductID: 254
@@ -81284,7 +81113,7 @@ components:
           objBillingentityinternal:
             pkiBillingentityinternalID: 1
             objBillingentityinternalDescription:
-              sBillingentityinternalDescription1: DÃ©faut
+              sBillingentityinternalDescription1: Défaut
               sBillingentityinternalDescription2: Default
             a_objBillingentityinternalproduct:
             - pkiBillingentityinternalproductID: 254
@@ -81326,7 +81155,7 @@ components:
         objBillingentityinternal:
           pkiBillingentityinternalID: 1
           objBillingentityinternalDescription:
-            sBillingentityinternalDescription1: DÃ©faut
+            sBillingentityinternalDescription1: Défaut
             sBillingentityinternalDescription2: Default
           a_objBillingentityinternalproduct:
           - pkiBillingentityinternalproductID: 254
@@ -82072,7 +81901,7 @@ components:
         fkiDepartmentID: 21
         sDepartmentNameX: Head Office
         fkiBrokertypeID: 1
-        sBrokertypeNameX: Agence immobiliÃ¨re
+        sBrokertypeNameX: Agence immobilère
         sBrokerCode: AAA
         sRealestateboardnumberNumber: A123456
         iAgentBannernumber: 4228739532
@@ -82127,7 +81956,7 @@ components:
           type: integer
         sBrokertypeNameX:
           description: The name of the Brokertype in the language of the requester
-          example: Agence immobiliÃ¨re
+          example: Agence immobilère
           pattern: "^.{0,30}$"
           type: string
         sBrokerCode:
@@ -87955,7 +87784,7 @@ components:
             fkiDepartmentID: 21
             sDepartmentNameX: Head Office
             fkiBrokertypeID: 1
-            sBrokertypeNameX: Agence immobiliÃ¨re
+            sBrokertypeNameX: Agence immobilère
             sBrokerCode: AAA
             sRealestateboardnumberNumber: A123456
             iAgentBannernumber: 4228739532
@@ -87991,7 +87820,7 @@ components:
             fkiDepartmentID: 21
             sDepartmentNameX: Head Office
             fkiBrokertypeID: 1
-            sBrokertypeNameX: Agence immobiliÃ¨re
+            sBrokertypeNameX: Agence immobilère
             sBrokerCode: AAA
             sRealestateboardnumberNumber: A123456
             iAgentBannernumber: 4228739532
@@ -88074,7 +87903,7 @@ components:
           fkiDepartmentID: 21
           sDepartmentNameX: Head Office
           fkiBrokertypeID: 1
-          sBrokertypeNameX: Agence immobiliÃ¨re
+          sBrokertypeNameX: Agence immobilère
           sBrokerCode: AAA
           sRealestateboardnumberNumber: A123456
           iAgentBannernumber: 4228739532
@@ -88110,7 +87939,7 @@ components:
           fkiDepartmentID: 21
           sDepartmentNameX: Head Office
           fkiBrokertypeID: 1
-          sBrokertypeNameX: Agence immobiliÃ¨re
+          sBrokertypeNameX: Agence immobilère
           sBrokerCode: AAA
           sRealestateboardnumberNumber: A123456
           iAgentBannernumber: 4228739532
@@ -88219,7 +88048,7 @@ components:
       description: A Brokertype AutocompleteElement Response
       example:
         pkiBrokertypeID: 1
-        sBrokertypeNameX: Agence immobiliÃ¨re
+        sBrokertypeNameX: Agence immobilère
         bBrokertypeIsactive: true
       properties:
         pkiBrokertypeID:
@@ -88230,7 +88059,7 @@ components:
           type: integer
         sBrokertypeNameX:
           description: The name of the Brokertype in the language of the requester
-          example: Agence immobiliÃ¨re
+          example: Agence immobilère
           pattern: "^.{0,30}$"
           type: string
         bBrokertypeIsactive:
@@ -88256,10 +88085,10 @@ components:
         mPayload:
           a_objBrokertype:
           - pkiBrokertypeID: 1
-            sBrokertypeNameX: Agence immobiliÃ¨re
+            sBrokertypeNameX: Agence immobilère
             bBrokertypeIsactive: true
           - pkiBrokertypeID: 1
-            sBrokertypeNameX: Agence immobiliÃ¨re
+            sBrokertypeNameX: Agence immobilère
             bBrokertypeIsactive: true
         objDebugPayload:
           iVersionMin: 1
@@ -88285,10 +88114,10 @@ components:
       example:
         a_objBrokertype:
         - pkiBrokertypeID: 1
-          sBrokertypeNameX: Agence immobiliÃ¨re
+          sBrokertypeNameX: Agence immobilère
           bBrokertypeIsactive: true
         - pkiBrokertypeID: 1
-          sBrokertypeNameX: Agence immobiliÃ¨re
+          sBrokertypeNameX: Agence immobilère
           bBrokertypeIsactive: true
       properties:
         a_objBrokertype:
@@ -147827,9 +147656,9 @@ components:
         a_objEzmaxinvoicingsummaryinternal:
         - pkiEzmaxinvoicingsummaryinternalID: 57
           objEzmaxinvoicingsummaryinternalDescription:
-            sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-            sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-          sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+            sEzmaxinvoicingsummaryinternalDescription1: Défaut
+            sEzmaxinvoicingsummaryinternalDescription2: Défault
+          sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
           fkiEzmaxinvoicingID: 28
           fkiBillingentityinternalID: 1
           sBillingentityinternalDescriptionX: Default
@@ -147860,9 +147689,9 @@ components:
             tEzmaxproductHelpX: This is an exemple of help message
         - pkiEzmaxinvoicingsummaryinternalID: 57
           objEzmaxinvoicingsummaryinternalDescription:
-            sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-            sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-          sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+            sEzmaxinvoicingsummaryinternalDescription1: Défaut
+            sEzmaxinvoicingsummaryinternalDescription2: Défault
+          sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
           fkiEzmaxinvoicingID: 28
           fkiBillingentityinternalID: 1
           sBillingentityinternalDescriptionX: Default
@@ -148269,9 +148098,9 @@ components:
             a_objEzmaxinvoicingsummaryinternal:
             - pkiEzmaxinvoicingsummaryinternalID: 57
               objEzmaxinvoicingsummaryinternalDescription:
-                sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-                sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-              sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+                sEzmaxinvoicingsummaryinternalDescription1: Défaut
+                sEzmaxinvoicingsummaryinternalDescription2: Défault
+              sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
               fkiEzmaxinvoicingID: 28
               fkiBillingentityinternalID: 1
               sBillingentityinternalDescriptionX: Default
@@ -148302,9 +148131,9 @@ components:
                 tEzmaxproductHelpX: This is an exemple of help message
             - pkiEzmaxinvoicingsummaryinternalID: 57
               objEzmaxinvoicingsummaryinternalDescription:
-                sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-                sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-              sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+                sEzmaxinvoicingsummaryinternalDescription1: Défaut
+                sEzmaxinvoicingsummaryinternalDescription2: Défault
+              sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
               fkiEzmaxinvoicingID: 28
               fkiBillingentityinternalID: 1
               sBillingentityinternalDescriptionX: Default
@@ -148663,9 +148492,9 @@ components:
           a_objEzmaxinvoicingsummaryinternal:
           - pkiEzmaxinvoicingsummaryinternalID: 57
             objEzmaxinvoicingsummaryinternalDescription:
-              sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-              sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-            sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+              sEzmaxinvoicingsummaryinternalDescription1: Défaut
+              sEzmaxinvoicingsummaryinternalDescription2: Défault
+            sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
             fkiEzmaxinvoicingID: 28
             fkiBillingentityinternalID: 1
             sBillingentityinternalDescriptionX: Default
@@ -148696,9 +148525,9 @@ components:
               tEzmaxproductHelpX: This is an exemple of help message
           - pkiEzmaxinvoicingsummaryinternalID: 57
             objEzmaxinvoicingsummaryinternalDescription:
-              sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-              sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-            sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+              sEzmaxinvoicingsummaryinternalDescription1: Défaut
+              sEzmaxinvoicingsummaryinternalDescription2: Défault
+            sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
             fkiEzmaxinvoicingID: 28
             fkiBillingentityinternalID: 1
             sBillingentityinternalDescriptionX: Default
@@ -149052,9 +148881,9 @@ components:
           a_objEzmaxinvoicingsummaryinternal:
           - pkiEzmaxinvoicingsummaryinternalID: 57
             objEzmaxinvoicingsummaryinternalDescription:
-              sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-              sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-            sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+              sEzmaxinvoicingsummaryinternalDescription1: Défaut
+              sEzmaxinvoicingsummaryinternalDescription2: Défault
+            sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
             fkiEzmaxinvoicingID: 28
             fkiBillingentityinternalID: 1
             sBillingentityinternalDescriptionX: Default
@@ -149085,9 +148914,9 @@ components:
               tEzmaxproductHelpX: This is an exemple of help message
           - pkiEzmaxinvoicingsummaryinternalID: 57
             objEzmaxinvoicingsummaryinternalDescription:
-              sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-              sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-            sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+              sEzmaxinvoicingsummaryinternalDescription1: Défaut
+              sEzmaxinvoicingsummaryinternalDescription2: Défault
+            sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
             fkiEzmaxinvoicingID: 28
             fkiBillingentityinternalID: 1
             sBillingentityinternalDescriptionX: Default
@@ -149447,9 +149276,9 @@ components:
         a_objEzmaxinvoicingsummaryinternal:
         - pkiEzmaxinvoicingsummaryinternalID: 57
           objEzmaxinvoicingsummaryinternalDescription:
-            sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-            sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-          sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+            sEzmaxinvoicingsummaryinternalDescription1: Défaut
+            sEzmaxinvoicingsummaryinternalDescription2: Défault
+          sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
           fkiEzmaxinvoicingID: 28
           fkiBillingentityinternalID: 1
           sBillingentityinternalDescriptionX: Default
@@ -149480,9 +149309,9 @@ components:
             tEzmaxproductHelpX: This is an exemple of help message
         - pkiEzmaxinvoicingsummaryinternalID: 57
           objEzmaxinvoicingsummaryinternalDescription:
-            sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-            sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-          sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+            sEzmaxinvoicingsummaryinternalDescription1: Défaut
+            sEzmaxinvoicingsummaryinternalDescription2: Défault
+          sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
           fkiEzmaxinvoicingID: 28
           fkiBillingentityinternalID: 1
           sBillingentityinternalDescriptionX: Default
@@ -150244,7 +150073,7 @@ components:
         sEzmaxinvoicingsummaryinternalDescriptionX:
           description: The Ezmaxinvoicingsummaryinternal description in the language
             of the requester
-          example: DÃ©faut
+          example: Défaut
           maxLength: 70
           type: string
         fkiEzmaxinvoicingID:
@@ -150284,9 +150113,9 @@ components:
       example:
         pkiEzmaxinvoicingsummaryinternalID: 57
         objEzmaxinvoicingsummaryinternalDescription:
-          sEzmaxinvoicingsummaryinternalDescription1: DÃ©faut
-          sEzmaxinvoicingsummaryinternalDescription2: DÃ©fault
-        sEzmaxinvoicingsummaryinternalDescriptionX: DÃ©faut
+          sEzmaxinvoicingsummaryinternalDescription1: Défaut
+          sEzmaxinvoicingsummaryinternalDescription2: Défault
+        sEzmaxinvoicingsummaryinternalDescriptionX: Défaut
         fkiEzmaxinvoicingID: 28
         fkiBillingentityinternalID: 1
         sBillingentityinternalDescriptionX: Default
@@ -154474,7 +154303,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -167129,6 +166958,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -167239,6 +167072,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -167599,6 +167436,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -167709,6 +167550,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -168072,6 +167917,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -168182,6 +168031,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -168542,6 +168395,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -168652,6 +168509,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -169015,6 +168876,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -169125,6 +168990,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -169485,6 +169354,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -169595,6 +169468,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -169958,6 +169835,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -170068,6 +169949,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -170428,6 +170313,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -170538,6 +170427,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -175745,6 +175638,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -175855,6 +175752,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -176215,6 +176116,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -176325,6 +176230,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -176688,6 +176597,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -176798,6 +176711,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -177158,6 +177075,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -177268,6 +177189,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -178766,6 +178691,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -178876,6 +178805,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -179009,6 +178942,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -179119,6 +179056,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
       properties:
         a_objEzsignsignature:
           items:
@@ -179250,6 +179191,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -179360,6 +179305,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -179493,6 +179442,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -179603,6 +179556,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
       properties:
         a_objEzsignsignature:
           items:
@@ -182451,6 +182408,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -182561,6 +182522,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -182921,6 +182886,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -183031,6 +183000,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -183394,6 +183367,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -183504,6 +183481,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -183864,6 +183845,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -183974,6 +183959,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -184337,6 +184326,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -184447,6 +184440,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -184807,6 +184804,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -184917,6 +184918,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -185280,6 +185285,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -185390,6 +185399,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           a_objEzsignformfieldgroup:
           - pkiEzsignformfieldgroupID: 26
             fkiEzsigndocumentID: 97
@@ -185750,6 +185763,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         - pkiEzsignsignatureID: 49
           fkiEzsigndocumentID: 97
           fkiEzsignfoldersignerassociationID: 20
@@ -185860,6 +185877,10 @@ components:
             tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
             dEzsignsignaturepaymentdetailAmount: "167.58"
             eEzsignsignaturepaymentdetailTaxable: "Yes"
+          objCreditcardmerchant:
+            bCreditcardmerchantDenyamex: true
+            bCreditcardmerchantDenymastercard: true
+            bCreditcardmerchantDenyvisa: true
         a_objEzsignformfieldgroup:
         - pkiEzsignformfieldgroupID: 26
           fkiEzsigndocumentID: 97
@@ -194142,6 +194163,10 @@ components:
                 tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
                 dEzsignsignaturepaymentdetailAmount: "167.58"
                 eEzsignsignaturepaymentdetailTaxable: "Yes"
+              objCreditcardmerchant:
+                bCreditcardmerchantDenyamex: true
+                bCreditcardmerchantDenymastercard: true
+                bCreditcardmerchantDenyvisa: true
             - pkiEzsignsignatureID: 49
               fkiEzsigndocumentID: 97
               fkiEzsignfoldersignerassociationID: 20
@@ -194252,6 +194277,10 @@ components:
                 tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
                 dEzsignsignaturepaymentdetailAmount: "167.58"
                 eEzsignsignaturepaymentdetailTaxable: "Yes"
+              objCreditcardmerchant:
+                bCreditcardmerchantDenyamex: true
+                bCreditcardmerchantDenymastercard: true
+                bCreditcardmerchantDenyvisa: true
           - pkiEzsigndocumentID: 97
             sEzsigndocumentName: "Contract #123"
             a_objEzsignsignature:
@@ -194365,6 +194394,10 @@ components:
                 tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
                 dEzsignsignaturepaymentdetailAmount: "167.58"
                 eEzsignsignaturepaymentdetailTaxable: "Yes"
+              objCreditcardmerchant:
+                bCreditcardmerchantDenyamex: true
+                bCreditcardmerchantDenymastercard: true
+                bCreditcardmerchantDenyvisa: true
             - pkiEzsignsignatureID: 49
               fkiEzsigndocumentID: 97
               fkiEzsignfoldersignerassociationID: 20
@@ -194475,6 +194508,10 @@ components:
                 tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
                 dEzsignsignaturepaymentdetailAmount: "167.58"
                 eEzsignsignaturepaymentdetailTaxable: "Yes"
+              objCreditcardmerchant:
+                bCreditcardmerchantDenyamex: true
+                bCreditcardmerchantDenymastercard: true
+                bCreditcardmerchantDenyvisa: true
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -194611,6 +194648,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -194721,6 +194762,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
         - pkiEzsigndocumentID: 97
           sEzsigndocumentName: "Contract #123"
           a_objEzsignsignature:
@@ -194834,6 +194879,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
           - pkiEzsignsignatureID: 49
             fkiEzsigndocumentID: 97
             fkiEzsignfoldersignerassociationID: 20
@@ -194944,6 +194993,10 @@ components:
               tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
               dEzsignsignaturepaymentdetailAmount: "167.58"
               eEzsignsignaturepaymentdetailTaxable: "Yes"
+            objCreditcardmerchant:
+              bCreditcardmerchantDenyamex: true
+              bCreditcardmerchantDenymastercard: true
+              bCreditcardmerchantDenyvisa: true
       properties:
         a_objEzsigndocument:
           items:
@@ -199952,12 +200005,12 @@ components:
         a_objUserlogintype:
         - pkiUserlogintypeID: 2
           objUserlogintypeDescription:
-            sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+            sUserlogintypeDescription1: Courriel et téléphone ou SMS
             sUserlogintypeDescription2: Email and phone or SMS
           sUserlogintypeDescriptionX: Email and phone or SMS
         - pkiUserlogintypeID: 2
           objUserlogintypeDescription:
-            sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+            sUserlogintypeDescription1: Courriel et téléphone ou SMS
             sUserlogintypeDescription2: Email and phone or SMS
           sUserlogintypeDescriptionX: Email and phone or SMS
         a_fkiUserIDSigned:
@@ -200061,12 +200114,12 @@ components:
         a_objUserlogintype:
         - pkiUserlogintypeID: 2
           objUserlogintypeDescription:
-            sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+            sUserlogintypeDescription1: Courriel et téléphone ou SMS
             sUserlogintypeDescription2: Email and phone or SMS
           sUserlogintypeDescriptionX: Email and phone or SMS
         - pkiUserlogintypeID: 2
           objUserlogintypeDescription:
-            sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+            sUserlogintypeDescription1: Courriel et téléphone ou SMS
             sUserlogintypeDescription2: Email and phone or SMS
           sUserlogintypeDescriptionX: Email and phone or SMS
         a_objUsergroupAll:
@@ -200940,12 +200993,12 @@ components:
             a_objUserlogintype:
             - pkiUserlogintypeID: 2
               objUserlogintypeDescription:
-                sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+                sUserlogintypeDescription1: Courriel et téléphone ou SMS
                 sUserlogintypeDescription2: Email and phone or SMS
               sUserlogintypeDescriptionX: Email and phone or SMS
             - pkiUserlogintypeID: 2
               objUserlogintypeDescription:
-                sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+                sUserlogintypeDescription1: Courriel et téléphone ou SMS
                 sUserlogintypeDescription2: Email and phone or SMS
               sUserlogintypeDescriptionX: Email and phone or SMS
             a_fkiUserIDSigned:
@@ -201030,12 +201083,12 @@ components:
           a_objUserlogintype:
           - pkiUserlogintypeID: 2
             objUserlogintypeDescription:
-              sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+              sUserlogintypeDescription1: Courriel et téléphone ou SMS
               sUserlogintypeDescription2: Email and phone or SMS
             sUserlogintypeDescriptionX: Email and phone or SMS
           - pkiUserlogintypeID: 2
             objUserlogintypeDescription:
-              sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+              sUserlogintypeDescription1: Courriel et téléphone ou SMS
               sUserlogintypeDescription2: Email and phone or SMS
             sUserlogintypeDescriptionX: Email and phone or SMS
           a_fkiUserIDSigned:
@@ -201142,12 +201195,12 @@ components:
             a_objUserlogintype:
             - pkiUserlogintypeID: 2
               objUserlogintypeDescription:
-                sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+                sUserlogintypeDescription1: Courriel et téléphone ou SMS
                 sUserlogintypeDescription2: Email and phone or SMS
               sUserlogintypeDescriptionX: Email and phone or SMS
             - pkiUserlogintypeID: 2
               objUserlogintypeDescription:
-                sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+                sUserlogintypeDescription1: Courriel et téléphone ou SMS
                 sUserlogintypeDescription2: Email and phone or SMS
               sUserlogintypeDescriptionX: Email and phone or SMS
             a_objUsergroupAll:
@@ -201332,12 +201385,12 @@ components:
           a_objUserlogintype:
           - pkiUserlogintypeID: 2
             objUserlogintypeDescription:
-              sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+              sUserlogintypeDescription1: Courriel et téléphone ou SMS
               sUserlogintypeDescription2: Email and phone or SMS
             sUserlogintypeDescriptionX: Email and phone or SMS
           - pkiUserlogintypeID: 2
             objUserlogintypeDescription:
-              sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+              sUserlogintypeDescription1: Courriel et téléphone ou SMS
               sUserlogintypeDescription2: Email and phone or SMS
             sUserlogintypeDescriptionX: Email and phone or SMS
           a_objUsergroupAll:
@@ -203382,6 +203435,8 @@ components:
             items:
               $ref: "#/components/schemas/ezsignsignaturepaymentdetail-ResponseCompound"
             type: array
+          objCreditcardmerchant:
+            $ref: "#/components/schemas/Custom-Creditcardmerchant-Response"
         type: object
       description: An Ezsignsignature Object and children to create a complete structure
       example:
@@ -203495,6 +203550,10 @@ components:
           tEzsignsignaturepaymentdetailDescription: Subscription to ezsign.ca
           dEzsignsignaturepaymentdetailAmount: "167.58"
           eEzsignsignaturepaymentdetailTaxable: "Yes"
+        objCreditcardmerchant:
+          bCreditcardmerchantDenyamex: true
+          bCreditcardmerchantDenymastercard: true
+          bCreditcardmerchantDenyvisa: true
       type: object
     ezsignsignature-ResponseCompoundV3:
       allOf:
@@ -205006,7 +205065,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -205183,7 +205242,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -265613,7 +265672,7 @@ components:
           - pkiNotificationsubsectionID: 3
             fkiNotificationsectionID: 1
             objNotificationsubsectionName:
-              sNotificationsubsectionName1: Signature Ã©lectronique
+              sNotificationsubsectionName1: Signature électronique
               sNotificationsubsectionName2: Electronic signature
             sNotificationsectionNameX: Homepage
             sNotificationsubsectionNameX: Default
@@ -265639,7 +265698,7 @@ components:
           - pkiNotificationsubsectionID: 3
             fkiNotificationsectionID: 1
             objNotificationsubsectionName:
-              sNotificationsubsectionName1: Signature Ã©lectronique
+              sNotificationsubsectionName1: Signature électronique
               sNotificationsubsectionName2: Electronic signature
             sNotificationsectionNameX: Homepage
             sNotificationsubsectionNameX: Default
@@ -265688,7 +265747,7 @@ components:
         - pkiNotificationsubsectionID: 3
           fkiNotificationsectionID: 1
           objNotificationsubsectionName:
-            sNotificationsubsectionName1: Signature Ã©lectronique
+            sNotificationsubsectionName1: Signature électronique
             sNotificationsubsectionName2: Electronic signature
           sNotificationsectionNameX: Homepage
           sNotificationsubsectionNameX: Default
@@ -265714,7 +265773,7 @@ components:
         - pkiNotificationsubsectionID: 3
           fkiNotificationsectionID: 1
           objNotificationsubsectionName:
-            sNotificationsubsectionName1: Signature Ã©lectronique
+            sNotificationsubsectionName1: Signature électronique
             sNotificationsubsectionName2: Electronic signature
           sNotificationsectionNameX: Homepage
           sNotificationsubsectionNameX: Default
@@ -290719,7 +290778,7 @@ components:
       description: A Realestateassociation AutocompleteElement Response
       example:
         pkiRealestateassociationID: 16
-        sRealestateassociationNameX: Organisme d’autoréglementation du courtage immobilier
+        sRealestateassociationNameX: Organisme d‧autoréglementation du courtage immobilier
           du Québec
         sRealestateassociationAcronymX: OACIQ
         bRealestateassociationIsactive: true
@@ -290732,7 +290791,7 @@ components:
           type: integer
         sRealestateassociationNameX:
           description: The name of the Realestateassociation
-          example: Organisme d’autoréglementation du courtage immobilier du Québec
+          example: Organisme d‧autoréglementation du courtage immobilier du Québec
           pattern: "^.{1,65}$"
           type: string
         sRealestateassociationAcronymX:
@@ -290765,12 +290824,12 @@ components:
         mPayload:
           a_objRealestateassociation:
           - pkiRealestateassociationID: 16
-            sRealestateassociationNameX: Organisme d’autoréglementation du courtage
+            sRealestateassociationNameX: Organisme d‧autoréglementation du courtage
               immobilier du Québec
             sRealestateassociationAcronymX: OACIQ
             bRealestateassociationIsactive: true
           - pkiRealestateassociationID: 16
-            sRealestateassociationNameX: Organisme d’autoréglementation du courtage
+            sRealestateassociationNameX: Organisme d‧autoréglementation du courtage
               immobilier du Québec
             sRealestateassociationAcronymX: OACIQ
             bRealestateassociationIsactive: true
@@ -290798,12 +290857,12 @@ components:
       example:
         a_objRealestateassociation:
         - pkiRealestateassociationID: 16
-          sRealestateassociationNameX: Organisme d’autoréglementation du courtage
+          sRealestateassociationNameX: Organisme d‧autoréglementation du courtage
             immobilier du Québec
           sRealestateassociationAcronymX: OACIQ
           bRealestateassociationIsactive: true
         - pkiRealestateassociationID: 16
-          sRealestateassociationNameX: Organisme d’autoréglementation du courtage
+          sRealestateassociationNameX: Organisme d‧autoréglementation du courtage
             immobilier du Québec
           sRealestateassociationAcronymX: OACIQ
           bRealestateassociationIsactive: true
@@ -308198,7 +308257,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -315014,7 +315073,7 @@ components:
         bSupplyVariableprice: true
         sGlaccountDescriptionX: Supplies income
         sGlaccountcontainerLongdescriptionX: Quebec
-        sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        sVariableexpenseDescriptionX: Équipements de bureau
       properties:
         pkiSupplyID:
           description: The unique ID of the Supply
@@ -315075,7 +315134,7 @@ components:
         sVariableexpenseDescriptionX:
           description: The description of the Variableexpense in the language of the
             requester
-          example: Ã‰quipements de bureau
+          example: Équipements de bureau
           pattern: "^.{0,40}$"
           type: string
       required:
@@ -315207,7 +315266,7 @@ components:
         sVariableexpenseDescriptionX:
           description: The description of the Variableexpense in the language of the
             requester
-          example: Ã‰quipements de bureau
+          example: Équipements de bureau
           pattern: "^.{0,40}$"
           type: string
       required:
@@ -315238,7 +315297,7 @@ components:
         bSupplyVariableprice: true
         sGlaccountDescriptionX: Supplies income
         sGlaccountcontainerLongdescriptionX: Quebec
-        sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        sVariableexpenseDescriptionX: Équipements de bureau
       type: object
     supply-createObject-v1-Request:
       description: Request for POST /1/object/supply
@@ -315440,7 +315499,7 @@ components:
             bSupplyVariableprice: true
             sGlaccountDescriptionX: Supplies income
             sGlaccountcontainerLongdescriptionX: Quebec
-            sVariableexpenseDescriptionX: Ã‰quipements de bureau
+            sVariableexpenseDescriptionX: Équipements de bureau
           - pkiSupplyID: 85
             fkiGlaccountID: 35
             fkiGlaccountcontainerID: 66
@@ -315452,7 +315511,7 @@ components:
             bSupplyVariableprice: true
             sGlaccountDescriptionX: Supplies income
             sGlaccountcontainerLongdescriptionX: Quebec
-            sVariableexpenseDescriptionX: Ã‰quipements de bureau
+            sVariableexpenseDescriptionX: Équipements de bureau
           iRowReturned: 100
           iRowFiltered: 533
         objDebugPayload:
@@ -315511,7 +315570,7 @@ components:
           bSupplyVariableprice: true
           sGlaccountDescriptionX: Supplies income
           sGlaccountcontainerLongdescriptionX: Quebec
-          sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          sVariableexpenseDescriptionX: Équipements de bureau
         - pkiSupplyID: 85
           fkiGlaccountID: 35
           fkiGlaccountcontainerID: 66
@@ -315523,7 +315582,7 @@ components:
           bSupplyVariableprice: true
           sGlaccountDescriptionX: Supplies income
           sGlaccountcontainerLongdescriptionX: Quebec
-          sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          sVariableexpenseDescriptionX: Équipements de bureau
         iRowReturned: 100
         iRowFiltered: 533
       type: object
@@ -315553,7 +315612,7 @@ components:
             bSupplyVariableprice: true
             sGlaccountDescriptionX: Supplies income
             sGlaccountcontainerLongdescriptionX: Quebec
-            sVariableexpenseDescriptionX: Ã‰quipements de bureau
+            sVariableexpenseDescriptionX: Équipements de bureau
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -315590,7 +315649,7 @@ components:
           bSupplyVariableprice: true
           sGlaccountDescriptionX: Supplies income
           sGlaccountcontainerLongdescriptionX: Quebec
-          sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          sVariableexpenseDescriptionX: Équipements de bureau
       properties:
         objSupply:
           $ref: "#/components/schemas/supply-ResponseCompound"
@@ -317245,7 +317304,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -317445,7 +317504,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -317659,7 +317718,7 @@ components:
             |25|What are the last 4 digits of your SIN|
             |26|What is your postal code|
             |27|What is your employee number|
-            |28|What is your managerâ€™s first name|
+            |28|What is your manager's first name|
             |29|What is your file number|
             |30|What is your client/member number|
             |31|What is your license number|
@@ -322814,7 +322873,7 @@ components:
       example:
         pkiUserlogintypeID: 2
         objUserlogintypeDescription:
-          sUserlogintypeDescription1: Courriel et tÃ©lÃ©phone ou SMS
+          sUserlogintypeDescription1: Courriel et téléphone ou SMS
           sUserlogintypeDescription2: Email and phone or SMS
         sUserlogintypeDescriptionX: Email and phone or SMS
       properties:
@@ -323259,14 +323318,14 @@ components:
     variableexpense-AutocompleteElement-Response:
       description: A Variableexpense AutocompleteElement Response
       example:
-        sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        sVariableexpenseDescriptionX: Équipements de bureau
         pkiVariableexpenseID: 2
         bVariableexpenseIsactive: true
       properties:
         sVariableexpenseDescriptionX:
           description: The description of the Variableexpense in the language of the
             requester
-          example: Ã‰quipements de bureau
+          example: Équipements de bureau
           pattern: "^.{0,40}$"
           type: string
         pkiVariableexpenseID:
@@ -323289,7 +323348,7 @@ components:
       example:
         pkiVariableexpenseID: 2
         sVariableexpenseCode: EQBUR
-        sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        sVariableexpenseDescriptionX: Équipements de bureau
         eVariableexpenseTaxable: "Yes"
         bVariableexpenseIsactive: true
       properties:
@@ -323307,7 +323366,7 @@ components:
         sVariableexpenseDescriptionX:
           description: The description of the Variableexpense in the language of the
             requester
-          example: Ã‰quipements de bureau
+          example: Équipements de bureau
           pattern: "^.{0,40}$"
           type: string
         eVariableexpenseTaxable:
@@ -323388,7 +323447,7 @@ components:
         pkiVariableexpenseID: 2
         sVariableexpenseCode: EQBUR
         objVariableexpenseDescription:
-          sVariableexpenseDescription1: Ã‰quipements de bureau
+          sVariableexpenseDescription1: Équipements de bureau
           sVariableexpenseDescription2: Office equipment
         eVariableexpenseTaxable: "Yes"
         bVariableexpenseIsactive: true
@@ -323501,10 +323560,10 @@ components:
       example:
         mPayload:
           a_objVariableexpense:
-          - sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          - sVariableexpenseDescriptionX: Équipements de bureau
             pkiVariableexpenseID: 2
             bVariableexpenseIsactive: true
-          - sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          - sVariableexpenseDescriptionX: Équipements de bureau
             pkiVariableexpenseID: 2
             bVariableexpenseIsactive: true
         objDebugPayload:
@@ -323530,10 +323589,10 @@ components:
       description: Payload for POST /2/object/variableexpense/getAutocomplete
       example:
         a_objVariableexpense:
-        - sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        - sVariableexpenseDescriptionX: Équipements de bureau
           pkiVariableexpenseID: 2
           bVariableexpenseIsactive: true
-        - sVariableexpenseDescriptionX: Ã‰quipements de bureau
+        - sVariableexpenseDescriptionX: Équipements de bureau
           pkiVariableexpenseID: 2
           bVariableexpenseIsactive: true
       properties:
@@ -323560,12 +323619,12 @@ components:
           a_objVariableexpense:
           - pkiVariableexpenseID: 2
             sVariableexpenseCode: EQBUR
-            sVariableexpenseDescriptionX: Ã‰quipements de bureau
+            sVariableexpenseDescriptionX: Équipements de bureau
             eVariableexpenseTaxable: "Yes"
             bVariableexpenseIsactive: true
           - pkiVariableexpenseID: 2
             sVariableexpenseCode: EQBUR
-            sVariableexpenseDescriptionX: Ã‰quipements de bureau
+            sVariableexpenseDescriptionX: Équipements de bureau
             eVariableexpenseTaxable: "Yes"
             bVariableexpenseIsactive: true
           iRowReturned: 100
@@ -323617,12 +323676,12 @@ components:
         a_objVariableexpense:
         - pkiVariableexpenseID: 2
           sVariableexpenseCode: EQBUR
-          sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          sVariableexpenseDescriptionX: Équipements de bureau
           eVariableexpenseTaxable: "Yes"
           bVariableexpenseIsactive: true
         - pkiVariableexpenseID: 2
           sVariableexpenseCode: EQBUR
-          sVariableexpenseDescriptionX: Ã‰quipements de bureau
+          sVariableexpenseDescriptionX: Équipements de bureau
           eVariableexpenseTaxable: "Yes"
           bVariableexpenseIsactive: true
         iRowReturned: 100
@@ -323644,7 +323703,7 @@ components:
             pkiVariableexpenseID: 2
             sVariableexpenseCode: EQBUR
             objVariableexpenseDescription:
-              sVariableexpenseDescription1: Ã‰quipements de bureau
+              sVariableexpenseDescription1: Équipements de bureau
               sVariableexpenseDescription2: Office equipment
             eVariableexpenseTaxable: "Yes"
             bVariableexpenseIsactive: true
@@ -323674,7 +323733,7 @@ components:
           pkiVariableexpenseID: 2
           sVariableexpenseCode: EQBUR
           objVariableexpenseDescription:
-            sVariableexpenseDescription1: Ã‰quipements de bureau
+            sVariableexpenseDescription1: Équipements de bureau
             sVariableexpenseDescription2: Office equipment
           eVariableexpenseTaxable: "Yes"
           bVariableexpenseIsactive: true
@@ -325653,7 +325712,6 @@ x-tagGroups:
 - name: General
   tags:
   - General_Introduction
-  - General_Changelog
 - name: Global
   tags:
   - Global_Customer
@@ -325829,4 +325887,6 @@ x-tagGroups:
 x-presentations:
 - Ezsign
 - RemaxQC
+- PowerAutomate
+- Salesforce
 

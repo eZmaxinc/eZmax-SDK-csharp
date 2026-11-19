@@ -159,30 +159,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicingsummaryexternalID (int) minimum
             if (this.PkiEzmaxinvoicingsummaryexternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternalID" });
             }
 
             // FkiEzmaxinvoicingID (int) minimum
             if (this.FkiEzmaxinvoicingID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
             }
 
             // FkiBillingentityexternalID (int) minimum
             if (this.FkiBillingentityexternalID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityexternalID, must be a value greater than or equal to 1.", new [] { "FkiBillingentityexternalID" });
             }
 
             // SEzmaxinvoicingsummaryexternalDescription (string) maxLength
             if (this.SEzmaxinvoicingsummaryexternalDescription != null && this.SEzmaxinvoicingsummaryexternalDescription.Length > 70)
             {
-                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryexternalDescription, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryexternalDescription" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryexternalDescription, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryexternalDescription" });
             }
 
             yield break;

@@ -179,42 +179,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignelementdependencyID (int) maximum
             if (this.PkiEzsignelementdependencyID > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value less than or equal to 16777215.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // PkiEzsignelementdependencyID (int) minimum
             if (this.PkiEzsignelementdependencyID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignelementdependencyID, must be a value greater than or equal to 0.", new [] { "PkiEzsignelementdependencyID" });
             }
 
             // FkiEzsignformfieldIDValidation (int) minimum
             if (this.FkiEzsignformfieldIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldIDValidation" });
             }
 
             // FkiEzsignformfieldgroupIDValidation (int) minimum
             if (this.FkiEzsignformfieldgroupIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignformfieldgroupIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsignformfieldgroupIDValidation" });
             }
 
             // SEzsignelementdependencyEzsignformfieldgrouplabel (string) maxLength
             if (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null && this.SEzsignelementdependencyEzsignformfieldgrouplabel.Length > 50)
             {
-                yield return new ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be less than 50.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be less than 50.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
             }
 
             // SEzsignelementdependencyEzsignformfieldgrouplabel (string) minLength
             if (this.SEzsignelementdependencyEzsignformfieldgrouplabel != null && this.SEzsignelementdependencyEzsignformfieldgrouplabel.Length < 1)
             {
-                yield return new ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be greater than 1.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsignelementdependencyEzsignformfieldgrouplabel, length must be greater than 1.", new [] { "SEzsignelementdependencyEzsignformfieldgrouplabel" });
             }
 
             if (this.SEzsignelementdependencyValue != null) {

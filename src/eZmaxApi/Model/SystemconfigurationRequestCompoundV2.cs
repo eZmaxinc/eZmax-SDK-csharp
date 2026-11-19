@@ -210,24 +210,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiSystemconfigurationID (int) maximum
             if (this.PkiSystemconfigurationID > (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value less than or equal to 1.", new [] { "PkiSystemconfigurationID" });
             }
 
             // PkiSystemconfigurationID (int) minimum
             if (this.PkiSystemconfigurationID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiSystemconfigurationID, must be a value greater than or equal to 1.", new [] { "PkiSystemconfigurationID" });
             }
 
             // FkiBrandingID (int) minimum
             if (this.FkiBrandingID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrandingID, must be a value greater than or equal to 0.", new [] { "FkiBrandingID" });
             }
 
             if (this.DtSystemconfigurationReadonlyexpirationstart != null) {
@@ -251,13 +251,13 @@ namespace eZmaxApi.Model
             // ISystemconfigurationEzsignreminderhoursend (int) maximum
             if (this.ISystemconfigurationEzsignreminderhoursend > (int)23)
             {
-                yield return new ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value less than or equal to 23.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value less than or equal to 23.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
             }
 
             // ISystemconfigurationEzsignreminderhoursend (int) minimum
             if (this.ISystemconfigurationEzsignreminderhoursend < (int)0)
             {
-                yield return new ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value greater than or equal to 0.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ISystemconfigurationEzsignreminderhoursend, must be a value greater than or equal to 0.", new [] { "ISystemconfigurationEzsignreminderhoursend" });
             }
 
             yield break;

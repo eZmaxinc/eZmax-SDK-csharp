@@ -353,18 +353,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEmployeeID (int) minimum
             if (this.PkiEmployeeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEmployeeID, must be a value greater than or equal to 0.", new [] { "PkiEmployeeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEmployeeID, must be a value greater than or equal to 0.", new [] { "PkiEmployeeID" });
             }
 
             // FkiDepartmentID (int) minimum
             if (this.FkiDepartmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             if (this.SEmployeeCode != null) {
@@ -442,7 +442,7 @@ namespace eZmaxApi.Model
             // FkiProvinceID (int) minimum
             if (this.FkiProvinceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
             }
 
             if (this.SProvinceNameX != null) {
@@ -457,7 +457,7 @@ namespace eZmaxApi.Model
             // FkiCountryID (int) minimum
             if (this.FkiCountryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

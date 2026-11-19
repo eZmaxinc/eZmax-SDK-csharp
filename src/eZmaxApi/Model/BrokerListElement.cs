@@ -186,7 +186,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The name of the Brokertype in the language of the requester</value>
         /*
-        <example>Agence immobiliÃ¨re</example>
+        <example>Agence immobilère</example>
         */
         [DataMember(Name = "sBrokertypeNameX", IsRequired = true, EmitDefaultValue = true)]
         public string SBrokertypeNameX { get; set; }
@@ -563,30 +563,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiBrokerID (int) minimum
             if (this.PkiBrokerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiBrokerID, must be a value greater than or equal to 0.", new [] { "PkiBrokerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiBrokerID, must be a value greater than or equal to 0.", new [] { "PkiBrokerID" });
             }
 
             // FkiDepartmentID (int) minimum
             if (this.FkiDepartmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             // FkiBrokertypeID (int) maximum
             if (this.FkiBrokertypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiBrokertypeID, must be a value less than or equal to 255.", new [] { "FkiBrokertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokertypeID, must be a value less than or equal to 255.", new [] { "FkiBrokertypeID" });
             }
 
             // FkiBrokertypeID (int) minimum
             if (this.FkiBrokertypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBrokertypeID, must be a value greater than or equal to 0.", new [] { "FkiBrokertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBrokertypeID, must be a value greater than or equal to 0.", new [] { "FkiBrokertypeID" });
             }
 
             if (this.SBrokertypeNameX != null) {
@@ -619,37 +619,37 @@ namespace eZmaxApi.Model
             // IAgentBannernumber (long) maximum
             if (this.IAgentBannernumber > (long)4294967295)
             {
-                yield return new ValidationResult("Invalid value for IAgentBannernumber, must be a value less than or equal to 4294967295.", new [] { "IAgentBannernumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentBannernumber, must be a value less than or equal to 4294967295.", new [] { "IAgentBannernumber" });
             }
 
             // IAgentBannernumber (long) minimum
             if (this.IAgentBannernumber < (long)0)
             {
-                yield return new ValidationResult("Invalid value for IAgentBannernumber, must be a value greater than or equal to 0.", new [] { "IAgentBannernumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IAgentBannernumber, must be a value greater than or equal to 0.", new [] { "IAgentBannernumber" });
             }
 
             // IBrokerPhotocopiercode (int) maximum
             if (this.IBrokerPhotocopiercode > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for IBrokerPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "IBrokerPhotocopiercode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrokerPhotocopiercode, must be a value less than or equal to 16777215.", new [] { "IBrokerPhotocopiercode" });
             }
 
             // IBrokerPhotocopiercode (int) minimum
             if (this.IBrokerPhotocopiercode < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IBrokerPhotocopiercode, must be a value greater than or equal to 0.", new [] { "IBrokerPhotocopiercode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrokerPhotocopiercode, must be a value greater than or equal to 0.", new [] { "IBrokerPhotocopiercode" });
             }
 
             // IBrokerLongdistancecode (int) maximum
             if (this.IBrokerLongdistancecode > (int)16777215)
             {
-                yield return new ValidationResult("Invalid value for IBrokerLongdistancecode, must be a value less than or equal to 16777215.", new [] { "IBrokerLongdistancecode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrokerLongdistancecode, must be a value less than or equal to 16777215.", new [] { "IBrokerLongdistancecode" });
             }
 
             // IBrokerLongdistancecode (int) minimum
             if (this.IBrokerLongdistancecode < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IBrokerLongdistancecode, must be a value greater than or equal to 0.", new [] { "IBrokerLongdistancecode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IBrokerLongdistancecode, must be a value greater than or equal to 0.", new [] { "IBrokerLongdistancecode" });
             }
 
             if (this.SBrokerName != null) {
@@ -736,7 +736,7 @@ namespace eZmaxApi.Model
             // FkiProvinceID (int) minimum
             if (this.FkiProvinceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
             }
 
             if (this.SProvinceNameX != null) {
@@ -751,7 +751,7 @@ namespace eZmaxApi.Model
             // FkiCountryID (int) minimum
             if (this.FkiCountryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {

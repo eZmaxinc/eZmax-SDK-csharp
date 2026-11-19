@@ -197,84 +197,84 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatedocumentpagerecognitionID (int) maximum
             if (this.PkiEzsigntemplatedocumentpagerecognitionID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
             }
 
             // PkiEzsigntemplatedocumentpagerecognitionID (int) minimum
             if (this.PkiEzsigntemplatedocumentpagerecognitionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatedocumentpagerecognitionID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatedocumentpagerecognitionID" });
             }
 
             // FkiEzsigntemplatedocumentpageID (int) minimum
             if (this.FkiEzsigntemplatedocumentpageID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentpageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatedocumentpageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentpageID" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionSimilarpercentage (int) maximum
             if (this.IEzsigntemplatedocumentpagerecognitionSimilarpercentage > (int)100)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value less than or equal to 100.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value less than or equal to 100.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionSimilarpercentage (int) minimum
             if (this.IEzsigntemplatedocumentpagerecognitionSimilarpercentage < (int)60)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value greater than or equal to 60.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionSimilarpercentage, must be a value greater than or equal to 60.", new [] { "IEzsigntemplatedocumentpagerecognitionSimilarpercentage" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionX (int) maximum
             if (this.IEzsigntemplatedocumentpagerecognitionX > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionX (int) minimum
             if (this.IEzsigntemplatedocumentpagerecognitionX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionX" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionY (int) maximum
             if (this.IEzsigntemplatedocumentpagerecognitionY > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionY (int) minimum
             if (this.IEzsigntemplatedocumentpagerecognitionY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionY" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionWidth (int) maximum
             if (this.IEzsigntemplatedocumentpagerecognitionWidth > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionWidth (int) minimum
             if (this.IEzsigntemplatedocumentpagerecognitionWidth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionWidth" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionHeight (int) maximum
             if (this.IEzsigntemplatedocumentpagerecognitionHeight > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
             }
 
             // IEzsigntemplatedocumentpagerecognitionHeight (int) minimum
             if (this.IEzsigntemplatedocumentpagerecognitionHeight < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagerecognitionHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatedocumentpagerecognitionHeight" });
             }
 
             if (this.TEzsigntemplatedocumentpagerecognitionText != null) {

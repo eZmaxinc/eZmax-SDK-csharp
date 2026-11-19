@@ -111,18 +111,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiAuthenticationexternalID (int) maximum
             if (this.PkiAuthenticationexternalID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value less than or equal to 255.", new [] { "PkiAuthenticationexternalID" });
             }
 
             // PkiAuthenticationexternalID (int) minimum
             if (this.PkiAuthenticationexternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiAuthenticationexternalID, must be a value greater than or equal to 0.", new [] { "PkiAuthenticationexternalID" });
             }
 
             if (this.SAuthenticationexternalDescription != null) {

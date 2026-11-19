@@ -257,12 +257,12 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiCommunicationID (int) minimum
             if (this.PkiCommunicationID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiCommunicationID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiCommunicationID, must be a value greater than or equal to 0.", new [] { "PkiCommunicationID" });
             }
 
             if (this.SCommunicationSubject != null) {
@@ -277,13 +277,13 @@ namespace eZmaxApi.Model
             // ICommunicationAttachmentlinkexpiration (int) maximum
             if (this.ICommunicationAttachmentlinkexpiration > (int)30)
             {
-                yield return new ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value less than or equal to 30.", new [] { "ICommunicationAttachmentlinkexpiration" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value less than or equal to 30.", new [] { "ICommunicationAttachmentlinkexpiration" });
             }
 
             // ICommunicationAttachmentlinkexpiration (int) minimum
             if (this.ICommunicationAttachmentlinkexpiration < (int)1)
             {
-                yield return new ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value greater than or equal to 1.", new [] { "ICommunicationAttachmentlinkexpiration" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ICommunicationAttachmentlinkexpiration, must be a value greater than or equal to 1.", new [] { "ICommunicationAttachmentlinkexpiration" });
             }
 
             yield break;

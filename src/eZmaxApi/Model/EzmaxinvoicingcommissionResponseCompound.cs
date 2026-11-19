@@ -198,30 +198,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzmaxinvoicingsummaryglobalID (int) minimum
             if (this.FkiEzmaxinvoicingsummaryglobalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryglobalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryglobalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryglobalID" });
             }
 
             // FkiEzmaxpartnerID (int) minimum
             if (this.FkiEzmaxpartnerID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxpartnerID" });
             }
 
             // FkiEzmaxrepresentativeID (int) minimum
             if (this.FkiEzmaxrepresentativeID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxrepresentativeID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxrepresentativeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxrepresentativeID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxrepresentativeID" });
             }
 
             // IEzmaxinvoicingcommissionDays (int) minimum
             if (this.IEzmaxinvoicingcommissionDays < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzmaxinvoicingcommissionDays, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingcommissionDays" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzmaxinvoicingcommissionDays, must be a value greater than or equal to 0.", new [] { "IEzmaxinvoicingcommissionDays" });
             }
 
             if (this.DEzmaxinvoicingcommissionAmount != null) {

@@ -145,18 +145,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiPhoneID (int) minimum
             if (this.PkiPhoneID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiPhoneID, must be a value greater than or equal to 0.", new [] { "PkiPhoneID" });
             }
 
             // FkiPhonetypeID (int) minimum
             if (this.FkiPhonetypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPhonetypeID, must be a value greater than or equal to 0.", new [] { "FkiPhonetypeID" });
             }
 
             if (this.SPhoneE164 != null) {

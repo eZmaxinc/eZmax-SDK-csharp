@@ -511,90 +511,90 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatesignatureID (int) minimum
             if (this.PkiEzsigntemplatesignatureID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignatureID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignatureID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignatureID" });
             }
 
             // FkiEzsigntemplatedocumentID (int) minimum
             if (this.FkiEzsigntemplatedocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatedocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatedocumentID" });
             }
 
             // FkiEzsigntemplatesignerID (int) minimum
             if (this.FkiEzsigntemplatesignerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerID" });
             }
 
             // FkiEzsigntemplatesignerIDValidation (int) minimum
             if (this.FkiEzsigntemplatesignerIDValidation < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatesignerIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerIDValidation" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatesignerIDValidation, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatesignerIDValidation" });
             }
 
             // FkiPaymentgatewayID (int) maximum
             if (this.FkiPaymentgatewayID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value less than or equal to 255.", new [] { "FkiPaymentgatewayID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value less than or equal to 255.", new [] { "FkiPaymentgatewayID" });
             }
 
             // FkiPaymentgatewayID (int) minimum
             if (this.FkiPaymentgatewayID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value greater than or equal to 0.", new [] { "FkiPaymentgatewayID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiPaymentgatewayID, must be a value greater than or equal to 0.", new [] { "FkiPaymentgatewayID" });
             }
 
             // IEzsigntemplatedocumentpagePagenumber (int) minimum
             if (this.IEzsigntemplatedocumentpagePagenumber < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatedocumentpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatedocumentpagePagenumber" });
             }
 
             // IEzsigntemplatesignatureX (int) minimum
             if (this.IEzsigntemplatesignatureX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureX, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureX" });
             }
 
             // IEzsigntemplatesignatureY (int) minimum
             if (this.IEzsigntemplatesignatureY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureY, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureY" });
             }
 
             // IEzsigntemplatesignatureWidth (int) minimum
             if (this.IEzsigntemplatesignatureWidth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureWidth, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureWidth" });
             }
 
             // IEzsigntemplatesignatureHeight (int) minimum
             if (this.IEzsigntemplatesignatureHeight < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureHeight, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureHeight" });
             }
 
             // IEzsigntemplatesignatureStep (int) minimum
             if (this.IEzsigntemplatesignatureStep < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureStep, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatesignatureStep" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureStep, must be a value greater than or equal to 1.", new [] { "IEzsigntemplatesignatureStep" });
             }
 
             // IEzsigntemplatesignatureMaxlength (int) maximum
             if (this.IEzsigntemplatesignatureMaxlength > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatesignatureMaxlength" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatesignatureMaxlength" });
             }
 
             // IEzsigntemplatesignatureMaxlength (int) minimum
             if (this.IEzsigntemplatesignatureMaxlength < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureMaxlength" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatesignatureMaxlength, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatesignatureMaxlength" });
             }
 
             if (this.SEzsigntemplatesignatureRegexp != null) {
@@ -609,13 +609,13 @@ namespace eZmaxApi.Model
             // SEzsigntemplatesignatureTextvalidationcustommessage (string) maxLength
             if (this.SEzsigntemplatesignatureTextvalidationcustommessage != null && this.SEzsigntemplatesignatureTextvalidationcustommessage.Length > 50)
             {
-                yield return new ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be less than 50.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
             }
 
             // SEzsigntemplatesignatureTextvalidationcustommessage (string) minLength
             if (this.SEzsigntemplatesignatureTextvalidationcustommessage != null && this.SEzsigntemplatesignatureTextvalidationcustommessage.Length < 0)
             {
-                yield return new ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzsigntemplatesignatureTextvalidationcustommessage, length must be greater than 0.", new [] { "SEzsigntemplatesignatureTextvalidationcustommessage" });
             }
 
             if (this.SEzsigntemplatesignaturePositioningpattern != null) {

@@ -141,24 +141,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatesignaturepaymentdetailID (int) maximum
             if (this.PkiEzsigntemplatesignaturepaymentdetailID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignaturepaymentdetailID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatesignaturepaymentdetailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignaturepaymentdetailID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatesignaturepaymentdetailID" });
             }
 
             // PkiEzsigntemplatesignaturepaymentdetailID (int) minimum
             if (this.PkiEzsigntemplatesignaturepaymentdetailID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatesignaturepaymentdetailID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignaturepaymentdetailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatesignaturepaymentdetailID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatesignaturepaymentdetailID" });
             }
 
             // FkiGlaccountcontainerID (int) minimum
             if (this.FkiGlaccountcontainerID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiGlaccountcontainerID, must be a value greater than or equal to 0.", new [] { "FkiGlaccountcontainerID" });
             }
 
             if (this.DEzsigntemplatesignaturepaymentdetailAmount != null) {

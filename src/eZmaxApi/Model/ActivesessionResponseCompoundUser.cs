@@ -232,18 +232,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiUserID (int) minimum
             if (this.PkiUserID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiUserID, must be a value greater than or equal to 0.", new [] { "PkiUserID" });
             }
 
             // FkiTimezoneID (int) minimum
             if (this.FkiTimezoneID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTimezoneID, must be a value greater than or equal to 0.", new [] { "FkiTimezoneID" });
             }
 
             if (this.SAvatarUrl != null) {
@@ -267,25 +267,25 @@ namespace eZmaxApi.Model
             // IUserInterfacecolor (int) minimum
             if (this.IUserInterfacecolor < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IUserInterfacecolor, must be a value greater than or equal to 0.", new [] { "IUserInterfacecolor" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserInterfacecolor, must be a value greater than or equal to 0.", new [] { "IUserInterfacecolor" });
             }
 
             // IUserListresult (int) maximum
             if (this.IUserListresult > (int)500)
             {
-                yield return new ValidationResult("Invalid value for IUserListresult, must be a value less than or equal to 500.", new [] { "IUserListresult" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value less than or equal to 500.", new [] { "IUserListresult" });
             }
 
             // IUserListresult (int) minimum
             if (this.IUserListresult < (int)5)
             {
-                yield return new ValidationResult("Invalid value for IUserListresult, must be a value greater than or equal to 5.", new [] { "IUserListresult" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserListresult, must be a value greater than or equal to 5.", new [] { "IUserListresult" });
             }
 
             // IUserFrontendgoal (int) minimum
             if (this.IUserFrontendgoal < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IUserFrontendgoal, must be a value greater than or equal to 0.", new [] { "IUserFrontendgoal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IUserFrontendgoal, must be a value greater than or equal to 0.", new [] { "IUserFrontendgoal" });
             }
 
             yield break;

@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <value>The Ezmaxinvoicingsummaryinternal description in the language of the requester</value>
         /*
-        <example>DÃ©faut</example>
+        <example>Défaut</example>
         */
         [DataMember(Name = "sEzmaxinvoicingsummaryinternalDescriptionX", IsRequired = true, EmitDefaultValue = true)]
         public string SEzmaxinvoicingsummaryinternalDescriptionX { get; set; }
@@ -159,30 +159,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicingsummaryinternalID (int) minimum
             if (this.PkiEzmaxinvoicingsummaryinternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryinternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryinternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryinternalID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryinternalID" });
             }
 
             // SEzmaxinvoicingsummaryinternalDescriptionX (string) maxLength
             if (this.SEzmaxinvoicingsummaryinternalDescriptionX != null && this.SEzmaxinvoicingsummaryinternalDescriptionX.Length > 70)
             {
-                yield return new ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescriptionX, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescriptionX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxinvoicingsummaryinternalDescriptionX, length must be less than 70.", new [] { "SEzmaxinvoicingsummaryinternalDescriptionX" });
             }
 
             // FkiEzmaxinvoicingID (int) minimum
             if (this.FkiEzmaxinvoicingID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingID" });
             }
 
             // FkiBillingentityinternalID (int) minimum
             if (this.FkiBillingentityinternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBillingentityinternalID, must be a value greater than or equal to 0.", new [] { "FkiBillingentityinternalID" });
             }
 
             yield break;

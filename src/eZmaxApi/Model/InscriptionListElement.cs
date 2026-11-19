@@ -609,30 +609,30 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiInscriptionID (int) minimum
             if (this.PkiInscriptionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiInscriptionID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInscriptionID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionID" });
             }
 
             // PkiInscriptionnotauthenticatedID (int) minimum
             if (this.PkiInscriptionnotauthenticatedID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionnotauthenticatedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionnotauthenticatedID" });
             }
 
             // FkiInscriptiontypeID (int) maximum
             if (this.FkiInscriptiontypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptiontypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptiontypeID" });
             }
 
             // FkiInscriptiontypeID (int) minimum
             if (this.FkiInscriptiontypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptiontypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptiontypeID" });
             }
 
             if (this.SInscriptiontypeNameX != null) {
@@ -647,13 +647,13 @@ namespace eZmaxApi.Model
             // FkiInscriptionbuildingtypeID (int) maximum
             if (this.FkiInscriptionbuildingtypeID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptionbuildingtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value less than or equal to 255.", new [] { "FkiInscriptionbuildingtypeID" });
             }
 
             // FkiInscriptionbuildingtypeID (int) minimum
             if (this.FkiInscriptionbuildingtypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionbuildingtypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionbuildingtypeID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionbuildingtypeID" });
             }
 
             if (this.SInscriptionbuildingtypeNameX != null) {
@@ -668,13 +668,13 @@ namespace eZmaxApi.Model
             // FkiInscriptioncategoryID (int) maximum
             if (this.FkiInscriptioncategoryID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value less than or equal to 255.", new [] { "FkiInscriptioncategoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value less than or equal to 255.", new [] { "FkiInscriptioncategoryID" });
             }
 
             // FkiInscriptioncategoryID (int) minimum
             if (this.FkiInscriptioncategoryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value greater than or equal to 0.", new [] { "FkiInscriptioncategoryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptioncategoryID, must be a value greater than or equal to 0.", new [] { "FkiInscriptioncategoryID" });
             }
 
             if (this.SInscriptioncategoryNameX != null) {
@@ -689,13 +689,13 @@ namespace eZmaxApi.Model
             // FkiBuyercontractID (int) maximum
             if (this.FkiBuyercontractID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
             }
 
             // FkiBuyercontractID (int) minimum
             if (this.FkiBuyercontractID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
             }
 
             if (this.SInscriptionCivicend != null) {
@@ -728,13 +728,13 @@ namespace eZmaxApi.Model
             // DInscriptionSaleprice (string) maxLength
             if (this.DInscriptionSaleprice != null && this.DInscriptionSaleprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionSaleprice, length must be less than 13.", new [] { "DInscriptionSaleprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionSaleprice, length must be less than 13.", new [] { "DInscriptionSaleprice" });
             }
 
             // DInscriptionSaleprice (string) minLength
             if (this.DInscriptionSaleprice != null && this.DInscriptionSaleprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionSaleprice, length must be greater than 4.", new [] { "DInscriptionSaleprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionSaleprice, length must be greater than 4.", new [] { "DInscriptionSaleprice" });
             }
 
             if (this.DInscriptionSaleprice != null) {
@@ -749,13 +749,13 @@ namespace eZmaxApi.Model
             // DInscriptionRentprice (string) maxLength
             if (this.DInscriptionRentprice != null && this.DInscriptionRentprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionRentprice, length must be less than 13.", new [] { "DInscriptionRentprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionRentprice, length must be less than 13.", new [] { "DInscriptionRentprice" });
             }
 
             // DInscriptionRentprice (string) minLength
             if (this.DInscriptionRentprice != null && this.DInscriptionRentprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionRentprice, length must be greater than 4.", new [] { "DInscriptionRentprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionRentprice, length must be greater than 4.", new [] { "DInscriptionRentprice" });
             }
 
             if (this.DInscriptionRentprice != null) {
@@ -824,7 +824,7 @@ namespace eZmaxApi.Model
             // FkiProvinceID (int) minimum
             if (this.FkiProvinceID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiProvinceID, must be a value greater than or equal to 0.", new [] { "FkiProvinceID" });
             }
 
             if (this.SProvinceNameX != null) {
@@ -839,7 +839,7 @@ namespace eZmaxApi.Model
             // FkiCountryID (int) minimum
             if (this.FkiCountryID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiCountryID, must be a value greater than or equal to 0.", new [] { "FkiCountryID" });
             }
 
             if (this.SCountryNameX != null) {
@@ -854,13 +854,13 @@ namespace eZmaxApi.Model
             // IInscriptionUnit (int) maximum
             if (this.IInscriptionUnit > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IInscriptionUnit, must be a value less than or equal to 255.", new [] { "IInscriptionUnit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IInscriptionUnit, must be a value less than or equal to 255.", new [] { "IInscriptionUnit" });
             }
 
             // IInscriptionUnit (int) minimum
             if (this.IInscriptionUnit < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IInscriptionUnit, must be a value greater than or equal to 0.", new [] { "IInscriptionUnit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IInscriptionUnit, must be a value greater than or equal to 0.", new [] { "IInscriptionUnit" });
             }
 
             yield break;

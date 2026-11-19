@@ -620,36 +620,36 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiInscriptionnotauthenticatedID (int) minimum
             if (this.PkiInscriptionnotauthenticatedID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionnotauthenticatedID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiInscriptionnotauthenticatedID, must be a value greater than or equal to 0.", new [] { "PkiInscriptionnotauthenticatedID" });
             }
 
             // FkiInscriptionID (int) minimum
             if (this.FkiInscriptionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiInscriptionID, must be a value greater than or equal to 0.", new [] { "FkiInscriptionID" });
             }
 
             // FkiDepartmentID (int) minimum
             if (this.FkiDepartmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDepartmentID, must be a value greater than or equal to 0.", new [] { "FkiDepartmentID" });
             }
 
             // FkiFinancialinstitutionID (int) maximum
             if (this.FkiFinancialinstitutionID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiFinancialinstitutionID, must be a value less than or equal to 65535.", new [] { "FkiFinancialinstitutionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFinancialinstitutionID, must be a value less than or equal to 65535.", new [] { "FkiFinancialinstitutionID" });
             }
 
             // FkiFinancialinstitutionID (int) minimum
             if (this.FkiFinancialinstitutionID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiFinancialinstitutionID, must be a value greater than or equal to 0.", new [] { "FkiFinancialinstitutionID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiFinancialinstitutionID, must be a value greater than or equal to 0.", new [] { "FkiFinancialinstitutionID" });
             }
 
             if (this.SFinancialinstitutionNameX != null) {
@@ -664,25 +664,25 @@ namespace eZmaxApi.Model
             // FkiBuyercontractID (int) maximum
             if (this.FkiBuyercontractID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value less than or equal to 65535.", new [] { "FkiBuyercontractID" });
             }
 
             // FkiBuyercontractID (int) minimum
             if (this.FkiBuyercontractID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiBuyercontractID, must be a value greater than or equal to 1.", new [] { "FkiBuyercontractID" });
             }
 
             // FkiMortgagesupplierID (int) maximum
             if (this.FkiMortgagesupplierID > (int)255)
             {
-                yield return new ValidationResult("Invalid value for FkiMortgagesupplierID, must be a value less than or equal to 255.", new [] { "FkiMortgagesupplierID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMortgagesupplierID, must be a value less than or equal to 255.", new [] { "FkiMortgagesupplierID" });
             }
 
             // FkiMortgagesupplierID (int) minimum
             if (this.FkiMortgagesupplierID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiMortgagesupplierID, must be a value greater than or equal to 0.", new [] { "FkiMortgagesupplierID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiMortgagesupplierID, must be a value greater than or equal to 0.", new [] { "FkiMortgagesupplierID" });
             }
 
             if (this.SMortgagesupplierNameX != null) {
@@ -697,13 +697,13 @@ namespace eZmaxApi.Model
             // FkiTaxassignmentID (int) maximum
             if (this.FkiTaxassignmentID > (int)15)
             {
-                yield return new ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value less than or equal to 15.", new [] { "FkiTaxassignmentID" });
             }
 
             // FkiTaxassignmentID (int) minimum
             if (this.FkiTaxassignmentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiTaxassignmentID, must be a value greater than or equal to 0.", new [] { "FkiTaxassignmentID" });
             }
 
             if (this.DtInscriptionnotauthenticatedTransactiondate != null) {
@@ -736,13 +736,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedMortgageloan (string) maxLength
             if (this.DInscriptionnotauthenticatedMortgageloan != null && this.DInscriptionnotauthenticatedMortgageloan.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedMortgageloan, length must be less than 13.", new [] { "DInscriptionnotauthenticatedMortgageloan" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedMortgageloan, length must be less than 13.", new [] { "DInscriptionnotauthenticatedMortgageloan" });
             }
 
             // DInscriptionnotauthenticatedMortgageloan (string) minLength
             if (this.DInscriptionnotauthenticatedMortgageloan != null && this.DInscriptionnotauthenticatedMortgageloan.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedMortgageloan, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedMortgageloan" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedMortgageloan, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedMortgageloan" });
             }
 
             if (this.DInscriptionnotauthenticatedMortgageloan != null) {
@@ -757,13 +757,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedTransactionprice (string) maxLength
             if (this.DInscriptionnotauthenticatedTransactionprice != null && this.DInscriptionnotauthenticatedTransactionprice.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedTransactionprice, length must be less than 13.", new [] { "DInscriptionnotauthenticatedTransactionprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedTransactionprice, length must be less than 13.", new [] { "DInscriptionnotauthenticatedTransactionprice" });
             }
 
             // DInscriptionnotauthenticatedTransactionprice (string) minLength
             if (this.DInscriptionnotauthenticatedTransactionprice != null && this.DInscriptionnotauthenticatedTransactionprice.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedTransactionprice, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedTransactionprice" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedTransactionprice, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedTransactionprice" });
             }
 
             if (this.DInscriptionnotauthenticatedTransactionprice != null) {
@@ -778,13 +778,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedRemuneration (string) maxLength
             if (this.DInscriptionnotauthenticatedRemuneration != null && this.DInscriptionnotauthenticatedRemuneration.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemuneration, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemuneration" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemuneration, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemuneration" });
             }
 
             // DInscriptionnotauthenticatedRemuneration (string) minLength
             if (this.DInscriptionnotauthenticatedRemuneration != null && this.DInscriptionnotauthenticatedRemuneration.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemuneration, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemuneration" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemuneration, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemuneration" });
             }
 
             if (this.DInscriptionnotauthenticatedRemuneration != null) {
@@ -799,13 +799,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedRemunerationsubtotal (string) maxLength
             if (this.DInscriptionnotauthenticatedRemunerationsubtotal != null && this.DInscriptionnotauthenticatedRemunerationsubtotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationsubtotal, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemunerationsubtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationsubtotal, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemunerationsubtotal" });
             }
 
             // DInscriptionnotauthenticatedRemunerationsubtotal (string) minLength
             if (this.DInscriptionnotauthenticatedRemunerationsubtotal != null && this.DInscriptionnotauthenticatedRemunerationsubtotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationsubtotal, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemunerationsubtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationsubtotal, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemunerationsubtotal" });
             }
 
             if (this.DInscriptionnotauthenticatedRemunerationsubtotal != null) {
@@ -820,13 +820,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedRemunerationtotal (string) maxLength
             if (this.DInscriptionnotauthenticatedRemunerationtotal != null && this.DInscriptionnotauthenticatedRemunerationtotal.Length > 13)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationtotal, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemunerationtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationtotal, length must be less than 13.", new [] { "DInscriptionnotauthenticatedRemunerationtotal" });
             }
 
             // DInscriptionnotauthenticatedRemunerationtotal (string) minLength
             if (this.DInscriptionnotauthenticatedRemunerationtotal != null && this.DInscriptionnotauthenticatedRemunerationtotal.Length < 4)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationtotal, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemunerationtotal" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedRemunerationtotal, length must be greater than 4.", new [] { "DInscriptionnotauthenticatedRemunerationtotal" });
             }
 
             if (this.DInscriptionnotauthenticatedRemunerationtotal != null) {
@@ -904,13 +904,13 @@ namespace eZmaxApi.Model
             // IInscriptionnotauthenticatedOrder (int) maximum
             if (this.IInscriptionnotauthenticatedOrder > (int)255)
             {
-                yield return new ValidationResult("Invalid value for IInscriptionnotauthenticatedOrder, must be a value less than or equal to 255.", new [] { "IInscriptionnotauthenticatedOrder" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IInscriptionnotauthenticatedOrder, must be a value less than or equal to 255.", new [] { "IInscriptionnotauthenticatedOrder" });
             }
 
             // IInscriptionnotauthenticatedOrder (int) minimum
             if (this.IInscriptionnotauthenticatedOrder < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IInscriptionnotauthenticatedOrder, must be a value greater than or equal to 0.", new [] { "IInscriptionnotauthenticatedOrder" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IInscriptionnotauthenticatedOrder, must be a value greater than or equal to 0.", new [] { "IInscriptionnotauthenticatedOrder" });
             }
 
             if (this.TInscriptionnotauthenticatedChecklistnote != null) {
@@ -925,13 +925,13 @@ namespace eZmaxApi.Model
             // DInscriptionnotauthenticatedSelleronlyretribution (string) maxLength
             if (this.DInscriptionnotauthenticatedSelleronlyretribution != null && this.DInscriptionnotauthenticatedSelleronlyretribution.Length > 8)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedSelleronlyretribution, length must be less than 8.", new [] { "DInscriptionnotauthenticatedSelleronlyretribution" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedSelleronlyretribution, length must be less than 8.", new [] { "DInscriptionnotauthenticatedSelleronlyretribution" });
             }
 
             // DInscriptionnotauthenticatedSelleronlyretribution (string) minLength
             if (this.DInscriptionnotauthenticatedSelleronlyretribution != null && this.DInscriptionnotauthenticatedSelleronlyretribution.Length < 5)
             {
-                yield return new ValidationResult("Invalid value for DInscriptionnotauthenticatedSelleronlyretribution, length must be greater than 5.", new [] { "DInscriptionnotauthenticatedSelleronlyretribution" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DInscriptionnotauthenticatedSelleronlyretribution, length must be greater than 5.", new [] { "DInscriptionnotauthenticatedSelleronlyretribution" });
             }
 
             if (this.DInscriptionnotauthenticatedSelleronlyretribution != null) {

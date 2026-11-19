@@ -210,42 +210,42 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // FkiEzsigndocumentID (int) minimum
             if (this.FkiEzsigndocumentID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigndocumentID, must be a value greater than or equal to 0.", new [] { "FkiEzsigndocumentID" });
             }
 
             // IEzsignannotationX (int) minimum
             if (this.IEzsignannotationX < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignannotationX, must be a value greater than or equal to 0.", new [] { "IEzsignannotationX" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationX, must be a value greater than or equal to 0.", new [] { "IEzsignannotationX" });
             }
 
             // IEzsignannotationY (int) minimum
             if (this.IEzsignannotationY < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignannotationY, must be a value greater than or equal to 0.", new [] { "IEzsignannotationY" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationY, must be a value greater than or equal to 0.", new [] { "IEzsignannotationY" });
             }
 
             // IEzsignannotationWidth (int) minimum
             if (this.IEzsignannotationWidth < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsignannotationWidth" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationWidth, must be a value greater than or equal to 0.", new [] { "IEzsignannotationWidth" });
             }
 
             // IEzsignannotationHeight (int) minimum
             if (this.IEzsignannotationHeight < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsignannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsignannotationHeight" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignannotationHeight, must be a value greater than or equal to 0.", new [] { "IEzsignannotationHeight" });
             }
 
             // IEzsignpagePagenumber (int) minimum
             if (this.IEzsignpagePagenumber < (int)1)
             {
-                yield return new ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsignpagePagenumber, must be a value greater than or equal to 1.", new [] { "IEzsignpagePagenumber" });
             }
 
             yield break;

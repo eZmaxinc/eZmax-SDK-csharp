@@ -333,48 +333,48 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsigntemplatepublicID (int) maximum
             if (this.PkiEzsigntemplatepublicID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepublicID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatepublicID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepublicID, must be a value less than or equal to 65535.", new [] { "PkiEzsigntemplatepublicID" });
             }
 
             // PkiEzsigntemplatepublicID (int) minimum
             if (this.PkiEzsigntemplatepublicID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsigntemplatepublicID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepublicID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsigntemplatepublicID, must be a value greater than or equal to 0.", new [] { "PkiEzsigntemplatepublicID" });
             }
 
             // FkiEzsignfoldertypeID (int) maximum
             if (this.FkiEzsignfoldertypeID > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value less than or equal to 65535.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiEzsignfoldertypeID (int) minimum
             if (this.FkiEzsignfoldertypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfoldertypeID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfoldertypeID" });
             }
 
             // FkiUserlogintypeID (int) minimum
             if (this.FkiUserlogintypeID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiUserlogintypeID, must be a value greater than or equal to 0.", new [] { "FkiUserlogintypeID" });
             }
 
             // FkiEzsigntemplateID (int) minimum
             if (this.FkiEzsigntemplateID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplateID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplateID" });
             }
 
             // FkiEzsigntemplatepackageID (int) minimum
             if (this.FkiEzsigntemplatepackageID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsigntemplatepackageID, must be a value greater than or equal to 0.", new [] { "FkiEzsigntemplatepackageID" });
             }
 
             if (this.SEzsigntemplatepublicDescription != null) {
@@ -407,25 +407,25 @@ namespace eZmaxApi.Model
             // IEzsigntemplatepublicLimit (int) maximum
             if (this.IEzsigntemplatepublicLimit > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatepublicLimit, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatepublicLimit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepublicLimit, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatepublicLimit" });
             }
 
             // IEzsigntemplatepublicLimit (int) minimum
             if (this.IEzsigntemplatepublicLimit < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatepublicLimit, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatepublicLimit" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepublicLimit, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatepublicLimit" });
             }
 
             // IEzsigntemplatepublicLimitexceeded (int) maximum
             if (this.IEzsigntemplatepublicLimitexceeded > (int)65535)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatepublicLimitexceeded, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatepublicLimitexceeded" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepublicLimitexceeded, must be a value less than or equal to 65535.", new [] { "IEzsigntemplatepublicLimitexceeded" });
             }
 
             // IEzsigntemplatepublicLimitexceeded (int) minimum
             if (this.IEzsigntemplatepublicLimitexceeded < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IEzsigntemplatepublicLimitexceeded, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatepublicLimitexceeded" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IEzsigntemplatepublicLimitexceeded, must be a value greater than or equal to 0.", new [] { "IEzsigntemplatepublicLimitexceeded" });
             }
 
             if (this.DtEzsigntemplatepublicLimitexceededsince != null) {

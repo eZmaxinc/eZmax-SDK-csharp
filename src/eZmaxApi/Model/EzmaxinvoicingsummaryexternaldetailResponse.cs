@@ -230,24 +230,24 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzmaxinvoicingsummaryexternaldetailID (int) minimum
             if (this.PkiEzmaxinvoicingsummaryexternaldetailID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternaldetailID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternaldetailID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzmaxinvoicingsummaryexternaldetailID, must be a value greater than or equal to 0.", new [] { "PkiEzmaxinvoicingsummaryexternaldetailID" });
             }
 
             // FkiEzmaxinvoicingsummaryexternalID (int) minimum
             if (this.FkiEzmaxinvoicingsummaryexternalID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryexternalID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxinvoicingsummaryexternalID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxinvoicingsummaryexternalID" });
             }
 
             // FkiEzmaxproductID (int) minimum
             if (this.FkiEzmaxproductID < (int)1)
             {
-                yield return new ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxproductID, must be a value greater than or equal to 1.", new [] { "FkiEzmaxproductID" });
             }
 
             if (this.DEzmaxinvoicingsummaryexternaldetailCountreal != null) {

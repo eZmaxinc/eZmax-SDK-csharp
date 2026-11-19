@@ -127,18 +127,18 @@ namespace eZmaxApi.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiGlaccountID (int) minimum
             if (this.PkiGlaccountID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiGlaccountID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiGlaccountID, must be a value greater than or equal to 0.", new [] { "PkiGlaccountID" });
             }
 
             // IGlaccountCode (int) minimum
             if (this.IGlaccountCode < (int)0)
             {
-                yield return new ValidationResult("Invalid value for IGlaccountCode, must be a value greater than or equal to 0.", new [] { "IGlaccountCode" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IGlaccountCode, must be a value greater than or equal to 0.", new [] { "IGlaccountCode" });
             }
 
             yield break;

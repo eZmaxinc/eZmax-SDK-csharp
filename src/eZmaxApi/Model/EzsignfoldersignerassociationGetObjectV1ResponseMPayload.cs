@@ -182,18 +182,18 @@ Mary</example>
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PkiEzsignfoldersignerassociationID (int) minimum
             if (this.PkiEzsignfoldersignerassociationID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PkiEzsignfoldersignerassociationID, must be a value greater than or equal to 0.", new [] { "PkiEzsignfoldersignerassociationID" });
             }
 
             // FkiEzsignfolderID (int) minimum
             if (this.FkiEzsignfolderID < (int)0)
             {
-                yield return new ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzsignfolderID, must be a value greater than or equal to 0.", new [] { "FkiEzsignfolderID" });
             }
 
             yield break;
