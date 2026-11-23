@@ -44,8 +44,8 @@ namespace eZmaxApi.Model
         /// <param name="aObjAttempt">An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt. (required).</param>
         /// <param name="objEzmaxpartnerproduct">objEzmaxpartnerproduct (required).</param>
         /// <param name="sExternalID">sExternalID.</param>
-        /// <param name="sApikeyApikey">sApikeyApikey (required).</param>
-        /// <param name="sApikeySecret">sApikeySecret (required).</param>
+        /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. (required).</param>
+        /// <param name="sApikeySecret">The secret of the Apikey (required).</param>
         public WebhookEzmaxpartnerproductSubscribe(CustomWebhookResponse objWebhook = default, List<AttemptResponseCompound> aObjAttempt = default, CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct = default, string sExternalID = default, string sApikeyApikey = default, string sApikeySecret = default)
         {
             // to ensure "objWebhook" is required (not null)
@@ -107,14 +107,19 @@ namespace eZmaxApi.Model
         public string SExternalID { get; set; }
 
         /// <summary>
-        /// Gets or Sets SApikeyApikey
+        /// The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
         /// </summary>
+        /// <value>The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.</value>
         [DataMember(Name = "sApikeyApikey", IsRequired = true, EmitDefaultValue = true)]
         public string SApikeyApikey { get; set; }
 
         /// <summary>
-        /// Gets or Sets SApikeySecret
+        /// The secret of the Apikey
         /// </summary>
+        /// <value>The secret of the Apikey</value>
+        /*
+        <example>f514d7a0008a9f6dee03e60734624d04</example>
+        */
         [DataMember(Name = "sApikeySecret", IsRequired = true, EmitDefaultValue = true)]
         public string SApikeySecret { get; set; }
 
@@ -158,6 +163,15 @@ namespace eZmaxApi.Model
                 if (!regexSExternalID.Match(this.SExternalID).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SExternalID, must match a pattern of " + regexSExternalID, new [] { "SExternalID" });
+                }
+            }
+
+            if (this.SApikeySecret != null) {
+                // SApikeySecret (string) pattern
+                Regex regexSApikeySecret = new Regex(@"^[0-9a-fA-F]{1,32}$", RegexOptions.CultureInvariant);
+                if (!regexSApikeySecret.Match(this.SApikeySecret).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SApikeySecret, must match a pattern of " + regexSApikeySecret, new [] { "SApikeySecret" });
                 }
             }
 

@@ -93,6 +93,24 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.SEzmaxpartnerDescription1 != null) {
+                // SEzmaxpartnerDescription1 (string) pattern
+                Regex regexSEzmaxpartnerDescription1 = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexSEzmaxpartnerDescription1.Match(this.SEzmaxpartnerDescription1).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxpartnerDescription1, must match a pattern of " + regexSEzmaxpartnerDescription1, new [] { "SEzmaxpartnerDescription1" });
+                }
+            }
+
+            if (this.SEzmaxpartnerDescription2 != null) {
+                // SEzmaxpartnerDescription2 (string) pattern
+                Regex regexSEzmaxpartnerDescription2 = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexSEzmaxpartnerDescription2.Match(this.SEzmaxpartnerDescription2).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SEzmaxpartnerDescription2, must match a pattern of " + regexSEzmaxpartnerDescription2, new [] { "SEzmaxpartnerDescription2" });
+                }
+            }
+
             yield break;
         }
     }

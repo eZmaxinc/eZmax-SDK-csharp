@@ -46,7 +46,7 @@ namespace eZmaxApi.Model
         /// <param name="objApikeyDescription">objApikeyDescription (required).</param>
         /// <param name="objContactName">objContactName (required).</param>
         /// <param name="sApikeyApikey">The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
-        /// <param name="sApikeySecret">The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey..</param>
+        /// <param name="sApikeySecret">The secret of the Apikey.</param>
         /// <param name="bApikeyIsactive">Whether the apikey is active or not (required).</param>
         /// <param name="bApikeyIssigned">Whether the apikey is signed or not.</param>
         /// <param name="objAudit">objAudit (required).</param>
@@ -129,9 +129,12 @@ namespace eZmaxApi.Model
         public string SApikeyApikey { get; set; }
 
         /// <summary>
-        /// The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+        /// The secret of the Apikey
         /// </summary>
-        /// <value>The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.</value>
+        /// <value>The secret of the Apikey</value>
+        /*
+        <example>f514d7a0008a9f6dee03e60734624d04</example>
+        */
         [DataMember(Name = "sApikeySecret", EmitDefaultValue = false)]
         public string SApikeySecret { get; set; }
 
@@ -221,6 +224,15 @@ namespace eZmaxApi.Model
             if (this.FkiEzmaxpartnerproductstageID < (int)0)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiEzmaxpartnerproductstageID, must be a value greater than or equal to 0.", new [] { "FkiEzmaxpartnerproductstageID" });
+            }
+
+            if (this.SApikeySecret != null) {
+                // SApikeySecret (string) pattern
+                Regex regexSApikeySecret = new Regex(@"^[0-9a-fA-F]{1,32}$", RegexOptions.CultureInvariant);
+                if (!regexSApikeySecret.Match(this.SApikeySecret).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SApikeySecret, must match a pattern of " + regexSApikeySecret, new [] { "SApikeySecret" });
+                }
             }
 
             yield break;

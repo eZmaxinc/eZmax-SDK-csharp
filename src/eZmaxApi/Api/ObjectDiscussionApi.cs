@@ -114,6 +114,29 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DiscussionGetObjectV2Response</returns>
         ApiResponse<DiscussionGetObjectV2Response> DiscussionGetObjectV2WithHttpInfo(int pkiDiscussionID, int operationIndex = 0);
         /// <summary>
+        /// Improve a message using the AI
+        /// </summary>
+        /// <remarks>
+        /// Improve a message using the AI.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DiscussionImproveMessageV1Response</returns>
+        DiscussionImproveMessageV1Response DiscussionImproveMessageV1(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0);
+
+        /// <summary>
+        /// Improve a message using the AI
+        /// </summary>
+        /// <remarks>
+        /// Improve a message using the AI.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DiscussionImproveMessageV1Response</returns>
+        ApiResponse<DiscussionImproveMessageV1Response> DiscussionImproveMessageV1WithHttpInfo(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0);
+        /// <summary>
         /// Patch an existing Discussion
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -266,6 +289,31 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DiscussionGetObjectV2Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DiscussionGetObjectV2Response>> DiscussionGetObjectV2WithHttpInfoAsync(int pkiDiscussionID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Improve a message using the AI
+        /// </summary>
+        /// <remarks>
+        /// Improve a message using the AI.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DiscussionImproveMessageV1Response</returns>
+        System.Threading.Tasks.Task<DiscussionImproveMessageV1Response> DiscussionImproveMessageV1Async(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Improve a message using the AI
+        /// </summary>
+        /// <remarks>
+        /// Improve a message using the AI.
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DiscussionImproveMessageV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DiscussionImproveMessageV1Response>> DiscussionImproveMessageV1WithHttpInfoAsync(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Patch an existing Discussion
         /// </summary>
@@ -1031,6 +1079,163 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DiscussionGetObjectV2", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Improve a message using the AI Improve a message using the AI.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DiscussionImproveMessageV1Response</returns>
+        public DiscussionImproveMessageV1Response DiscussionImproveMessageV1(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DiscussionImproveMessageV1Response> localVarResponse = DiscussionImproveMessageV1WithHttpInfo(discussionImproveMessageV1Request);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Improve a message using the AI Improve a message using the AI.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DiscussionImproveMessageV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DiscussionImproveMessageV1Response> DiscussionImproveMessageV1WithHttpInfo(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0)
+        {
+            // verify the required parameter 'discussionImproveMessageV1Request' is set
+            if (discussionImproveMessageV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'discussionImproveMessageV1Request' when calling ObjectDiscussionApi->DiscussionImproveMessageV1");
+            }
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = discussionImproveMessageV1Request;
+
+            localVarRequestOptions.Operation = "ObjectDiscussionApi.DiscussionImproveMessageV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<DiscussionImproveMessageV1Response>("/1/object/discussion/improveMessage", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DiscussionImproveMessageV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Improve a message using the AI Improve a message using the AI.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DiscussionImproveMessageV1Response</returns>
+        public async System.Threading.Tasks.Task<DiscussionImproveMessageV1Response> DiscussionImproveMessageV1Async(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DiscussionImproveMessageV1Response> localVarResponse = await DiscussionImproveMessageV1WithHttpInfoAsync(discussionImproveMessageV1Request, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Improve a message using the AI Improve a message using the AI.
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="discussionImproveMessageV1Request"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DiscussionImproveMessageV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DiscussionImproveMessageV1Response>> DiscussionImproveMessageV1WithHttpInfoAsync(DiscussionImproveMessageV1Request discussionImproveMessageV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            // verify the required parameter 'discussionImproveMessageV1Request' is set
+            if (discussionImproveMessageV1Request == null)
+            {
+                throw new eZmaxApi.Client.ApiException(400, "Missing required parameter 'discussionImproveMessageV1Request' when calling ObjectDiscussionApi->DiscussionImproveMessageV1");
+            }
+
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = discussionImproveMessageV1Request;
+
+            localVarRequestOptions.Operation = "ObjectDiscussionApi.DiscussionImproveMessageV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DiscussionImproveMessageV1Response>("/1/object/discussion/improveMessage", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DiscussionImproveMessageV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

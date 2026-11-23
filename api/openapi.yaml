@@ -286,6 +286,9 @@ tags:
 - description: Ezmaxpartnerproduct contains details about Ezmaxpartnerproducts
   name: Object_Ezmaxpartnerproduct
   x-displayName: Ezmaxpartnerproduct
+- description: Ezmaxpartnerproductstage contains details about Ezmaxpartnerproductstages
+  name: Object_Ezmaxpartnerproductstage
+  x-displayName: Ezmaxpartnerproductstage
 - description: Ezmaxproduct contains details about Ezmaxproducts
   name: Object_Ezmaxproduct
   x-displayName: Ezmaxproduct
@@ -686,6 +689,20 @@ paths:
               schema:
                 $ref: "#/components/schemas/ezmaxpartner-subscribe-v1-Response"
           description: Successful response
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request is not allowed to be executed. Look for detail
+            about the error in the body.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
       security:
       - Authorization: []
       summary: Subscribe to an Ezmaxparnerproductstage
@@ -8786,6 +8803,42 @@ paths:
       - AgentBroker
       x-systemconfigurationtype:
       - All
+  /1/object/discussion/improveMessage:
+    description: ""
+    post:
+      description: Improve a message using the AI.
+      operationId: Discussion_ImproveMessage_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/discussion-improveMessage-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/discussion-improveMessage-v1-Response"
+          description: Successful response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Improve a message using the AI
+      tags:
+      - Object_Discussion
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-systemconfigurationtype:
+      - All
   /1/object/discussionmembership:
     description: ""
     post:
@@ -11732,6 +11785,293 @@ paths:
       x-usertypeextra: []
       x-permissions:
       - All
+      x-systemconfigurationtype:
+      - All
+  /2/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezmaxpartnerproductstage_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezmaxpartnerproductstage
+        explode: false
+        in: path
+        name: pkiEzmaxpartnerproductstageID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzmaxpartnerproductstageID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-getObject-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezmaxpartnerproductstage
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra: []
+  /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions:
+    description: ""
+    get:
+      operationId: Ezmaxpartnerproductstage_GetEzmaxpartnerproductstagepermissions_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxpartnerproductstageID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzmaxpartnerproductstageID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-getEzmaxpartnerproductstagepermissions-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezmaxpartnerproductstage's Ezmaxpartnerproductstagepermissions
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra: []
+  /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks:
+    description: ""
+    get:
+      operationId: Ezmaxpartnerproductstage_GetEzmaxpartnerproductstagewebhooks_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxpartnerproductstageID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzmaxpartnerproductstageID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-getEzmaxpartnerproductstagewebhooks-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezmaxpartnerproductstage's Ezmaxpartnerproductstagewebhooks
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra: []
+  /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/subscribe:
+    description: ""
+    post:
+      operationId: Ezmaxpartnerproductstage_Subscribe_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxpartnerproductstageID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzmaxpartnerproductstageID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ezmaxpartnerproductstage-subscribe-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-subscribe-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Subscribe to the Ezmaxpartnerproductstage
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - Management_EzmaxpartnerproductCompany
+      x-usertypeextra: []
+  /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/unsubscribe:
+    description: ""
+    post:
+      operationId: Ezmaxpartnerproductstage_Unsubscribe_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxpartnerproductstageID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiEzmaxpartnerproductstageID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ezmaxpartnerproductstage-unsubscribe-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-unsubscribe-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Unsubscribe to the Ezmaxpartnerproductstage
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - Management_EzmaxpartnerproductCompany
+      x-usertypeextra: []
+  /1/object/ezmaxpartnerproductstage/getList:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezmaxpartnerproductstage_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiEzmaxpartnerproductstageID_ASC
+          - pkiEzmaxpartnerproductstageID_DESC
+          - efksEzmaxcustomerCode_ASC
+          - efksEzmaxcustomerCode_DESC
+          - fkiEzmaxpartnerproductID_ASC
+          - fkiEzmaxpartnerproductID_DESC
+          - sEzmaxpartnerproductNameX_ASC
+          - sEzmaxpartnerproductNameX_DESC
+          - sEzmaxpartnerproductShortdescriptionX_ASC
+          - sEzmaxpartnerproductShortdescriptionX_DESC
+          - sEzmaxpartnerproductLogourlX_ASC
+          - sEzmaxpartnerproductLogourlX_DESC
+          - fkiEzmaxpartnerID_ASC
+          - fkiEzmaxpartnerID_DESC
+          - sEzmaxpartnerNameX_ASC
+          - sEzmaxpartnerNameX_DESC
+          - eEzmaxpartnerproductstageCode_ASC
+          - eEzmaxpartnerproductstageCode_DESC
+          - bEzmaxpartnerproductstagePublished_ASC
+          - bEzmaxpartnerproductstagePublished_DESC
+          - bEzmaxpartnerproductstageInstalled_ASC
+          - bEzmaxpartnerproductstageInstalled_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowMax"
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowOffset"
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: "#/components/schemas/Header-Accept-Language"
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-sFilter"
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ezmaxpartnerproductstage-getList-v1-Response"
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: "#/components/schemas/File-Xlsx"
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Ezmaxpartnerproductstage list
+      tags:
+      - Object_Ezmaxpartnerproductstage
+      x-permissions:
+      - All
+      x-usertypeextra: []
       x-systemconfigurationtype:
       - All
   /2/object/ezmaxproduct/getAutocomplete/{sSelector}:
@@ -26105,7 +26445,8 @@ paths:
       - RealEstate
       x-permissions:
       - Inscription_TemporaryListingsAccess
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments:
     get:
       operationId: Inscriptiontemp_getAttachments_V1
@@ -26140,7 +26481,8 @@ paths:
       - RealEstate
       x-permissions:
       - Inscription_TemporaryListingsAccess
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationCount:
     get:
       description: ""
@@ -28339,7 +28681,8 @@ paths:
       - RealEstate
       x-permissions:
       - Inscription_OtherIncomeAccess
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/otherincome/{pkiOtherincomeID}/getAttachments:
     get:
       operationId: Otherincome_getAttachments_V1
@@ -28374,7 +28717,8 @@ paths:
       - RealEstate
       x-permissions:
       - Inscription_OtherIncomeAccess
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/otherincome/{pkiOtherincomeID}/getCommunicationCount:
     get:
       description: ""
@@ -30927,7 +31271,8 @@ paths:
       - RealEstate
       x-permissions:
       - Management_RefusedPromisestoPurchase
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments:
     get:
       operationId: Rejectedoffertopurchase_getAttachments_V1
@@ -30962,7 +31307,8 @@ paths:
       - RealEstate
       x-permissions:
       - Management_RefusedPromisestoPurchase
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
   /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount:
     get:
       description: ""
@@ -43521,6 +43867,10 @@ components:
       description: Whether the user subscribed to this Ezmaxmaillinglistor not
       example: true
       type: boolean
+    Computed-bEzmaxpartnerproductstageInstalled:
+      description: Whether the Ezmaxpartnerproductstage is installed or not
+      example: false
+      type: boolean
     Computed-bEzsigndocumentEzsignform:
       description: If the Ezsigndocument contains an Ezsignform or not
       example: true
@@ -48859,6 +49209,88 @@ components:
       - dtInscriptionnotauthenticatedconditionCompleted
       - pkiInscriptionnotauthenticatedconditionID
       type: object
+    Custom-Module-Partner-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/module-Response"
+      - properties:
+          a_objModulesection:
+            items:
+              $ref: "#/components/schemas/Custom-Modulesection-Partner-ResponseCompound"
+            type: array
+        type: object
+      description: A Module Object
+      example:
+        pkiModuleID: 40
+        fkiModulegroupID: 46
+        eModuleInternalname: Purchases
+        sModuleNameX: Purchase
+        bModuleRegistered: true
+        bModuleRegisteredapi: true
+        a_objModulesection:
+        - pkiModulesectionID: 53
+          fkiModuleID: 40
+          sModulesectionInternalname: Access
+          sModulesectionNameX: Access
+        - pkiModulesectionID: 53
+          fkiModuleID: 40
+          sModulesectionInternalname: Access
+          sModulesectionNameX: Access
+      type: object
+    Custom-Modulegroup-Partner-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/modulegroup-Response"
+      - properties:
+          a_objModule:
+            items:
+              $ref: "#/components/schemas/Custom-Module-Partner-ResponseCompound"
+            type: array
+        type: object
+      description: A Modulegroup Object
+      example:
+        pkiModulegroupID: 46
+        sModulegroupNameX: Management
+        a_objModule:
+        - pkiModuleID: 40
+          fkiModulegroupID: 46
+          eModuleInternalname: Purchases
+          sModuleNameX: Purchase
+          bModuleRegistered: true
+          bModuleRegisteredapi: true
+          a_objModulesection:
+          - pkiModulesectionID: 53
+            fkiModuleID: 40
+            sModulesectionInternalname: Access
+            sModulesectionNameX: Access
+          - pkiModulesectionID: 53
+            fkiModuleID: 40
+            sModulesectionInternalname: Access
+            sModulesectionNameX: Access
+        - pkiModuleID: 40
+          fkiModulegroupID: 46
+          eModuleInternalname: Purchases
+          sModuleNameX: Purchase
+          bModuleRegistered: true
+          bModuleRegisteredapi: true
+          a_objModulesection:
+          - pkiModulesectionID: 53
+            fkiModuleID: 40
+            sModulesectionInternalname: Access
+            sModulesectionNameX: Access
+          - pkiModulesectionID: 53
+            fkiModuleID: 40
+            sModulesectionInternalname: Access
+            sModulesectionNameX: Access
+      type: object
+    Custom-Modulesection-Partner-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/modulesection-Response"
+      description: A Modulesection Object
+      example:
+        pkiModulesectionID: 53
+        fkiModuleID: 40
+        sModulesectionInternalname: Access
+        sModulesectionNameX: Access
+      type: object
     Custom-Notificationsubsectiongetnotificationtests-Response:
       allOf:
       - $ref: "#/components/schemas/notificationsubsection-Response"
@@ -49594,6 +50026,15 @@ components:
       type: boolean
     Field-bEzmaxpartnerIsactive:
       description: Whether the Ezmaxpartner is active or not
+      example: false
+      type: boolean
+    Field-bEzmaxpartnerproductstagePublished:
+      description: Whether the Ezmaxpartnerproducstage is published or not
+      example: false
+      type: boolean
+    Field-bEzmaxpartnerproductstagesubscriptionIsinstalled:
+      description: Whether the Ezmaxpartnerproductstagesubscription is installed or
+        not
       example: false
       type: boolean
     Field-bEzmaxproductIsactive:
@@ -51730,6 +52171,70 @@ components:
       - NotListed
       - Listed
       example: Listed
+      type: string
+    Field-eEzmaxpartnerproductstageCode:
+      description: The code of the Ezmaxpartnerproductstage
+      enum:
+      - Beta
+      - Production
+      example: Beta
+      type: string
+    Field-eEzmaxpartnerproductstageInstallationtype:
+      description: The installation type of the Ezmaxpartnerproductstage
+      enum:
+      - Automated
+      - ContactEzmax
+      - ContactPartner
+      example: Automated
+      type: string
+    Field-eEzmaxpartnerproductstagewebhookEzmaxpartnerevent:
+      description: The Ezmaxpartnerevent of the Ezmaxpartnerproductstagewebhook
+      enum:
+      - ProductstageSubscribe
+      - ProductstageUnsubscribe
+      example: ProductstageSubscribe
+      type: string
+    Field-eEzmaxpartnerproductstagewebhookEzsignevent:
+      description: The ezsignevent of the Ezmaxpartnerproductstagewebhook
+      enum:
+      - DocumentCompleted
+      - DocumentFormCompleted
+      - DocumentUnsent
+      - EzsignsignerAcceptclause
+      - EzsignsignerConnect
+      - FolderCompleted
+      - FolderDisposed
+      - FolderSent
+      - FolderUnsent
+      - SignatureSigned
+      example: DocumentCompleted
+      type: string
+    Field-eEzmaxpartnerproductstagewebhookManagementevent:
+      description: The managementevent of the Ezmaxpartnerproductstagewebhook
+      enum:
+      - UserCreated
+      - UserstagedCreated
+      example: UserCreated
+      type: string
+    Field-eEzmaxpartnerproductstagewebhookModule:
+      description: The module of the Ezmaxpartnerproductstagewebhook
+      enum:
+      - Ezmaxpartner
+      - Ezsign
+      - Management
+      - Realestate
+      example: Ezsign
+      type: string
+    Field-eEzmaxpartnerproductstagewebhookRealestateevent:
+      description: The realestateevent of the Ezmaxpartnerproductstagewebhook
+      enum:
+      - BuyercontractCreated
+      - BuyercontractModified
+      - InscriptionCreated
+      - InscriptionModified
+      - InscriptionnotauthenticatedCreated
+      - InscriptionnotauthenticatedModified
+      example: InscriptionCreated
       type: string
     Field-eEzsignannotationType:
       description: |-
@@ -54395,6 +54900,10 @@ components:
       maximum: 255
       minimum: 0
       type: integer
+    Field-pkiEzmaxpartnerproductstagesubscriptionID:
+      description: The unique ID of the Ezmaxpartnerproductstagesubscription
+      example: 16
+      type: integer
     Field-pkiEzmaxpartnerproductstagewebhookID:
       description: The unique ID of the Ezmaxpartnerproductstagewebhook
       example: 182
@@ -55463,6 +55972,12 @@ components:
       example: Real Estate Broker
       pattern: "^.{0,35}$"
       type: string
+    Field-sApikeyApikey:
+      description: |-
+        The Apikey for the API key.
+
+        This will be hidden if we are not creating or regenerating the Apikey.
+      type: string
     Field-sApikeyDescription1:
       description: The description of the Apikey in French
       example: Projet X
@@ -55943,10 +56458,12 @@ components:
     Field-sEzmaxpartnerDescription1:
       description: The description of the Ezmaxpartner in french
       example: The name of the hospital in which you were born
+      pattern: "^[\\s\\S]{0,65535}$"
       type: string
     Field-sEzmaxpartnerDescription2:
       description: The description of the Ezmaxpartner in english
       example: The name of the hospital in which you were born
+      pattern: "^[\\s\\S]{0,65535}$"
       type: string
     Field-sEzmaxpartnerLogourl1:
       description: The url of the french logo of the Ezmaxpartner
@@ -56004,6 +56521,11 @@ components:
       example: http://www.website.com/avatar.jpg
       pattern: "^(https|http):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
       type: string
+    Field-sEzmaxpartnerproductLogourlX:
+      description: The url of the logo in the language of the requester
+      example: http://www.website.com/avatar.jpg
+      pattern: "^(https|http):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
+      type: string
     Field-sEzmaxpartnerproductName1:
       description: The name1 of the Ezmaxpartnerproduct
       example: "1"
@@ -56014,10 +56536,36 @@ components:
       example: "1"
       pattern: "^.{0,35}$"
       type: string
+    Field-sEzmaxpartnerproductNameX:
+      description: The name of the Ezmaxpartnerproduct in the language of the requester
+      example: eZsign
+      pattern: "^.{0,35}$"
+      type: string
+    Field-sEzmaxpartnerproductShortdescriptionX:
+      description: The short description of the Ezmaxpartnerproduct in the language
+        of the requester
+      example: This is a software to e-sign documents
+      pattern: "^.{0,256}$"
+      type: string
     Field-sEzmaxpartnerproductstageCode:
       description: The code of the sEzmaxpartnerproductstage
       example: Default
       pattern: "^.{0,15}$"
+      type: string
+    Field-sEzmaxpartnerproductstagewebhookDescription:
+      description: The description of the Ezmaxpartnerproductstagewebhook
+      example: Default
+      pattern: "^.{0,80}$"
+      type: string
+    Field-sEzmaxpartnerproductstagewebhookEmailfailed:
+      description: The emailfailed of the Ezmaxpartnerproductstagewebhook
+      example: email@example.com
+      pattern: "^.{0,75}$"
+      type: string
+    Field-sEzmaxpartnerproductstagewebhookUrl:
+      description: The url of the Ezmaxpartnerproductstagewebhook
+      example: https://www.example.com
+      pattern: "^.{0,65535}$"
       type: string
     Field-sEzmaxproductDescriptionX:
       description: The description of the Ezmaxproduct in the language of the requester
@@ -57370,10 +57918,12 @@ components:
         sEzmaxpartnerDescription1:
           description: The description of the Ezmaxpartner in french
           example: The name of the hospital in which you were born
+          pattern: "^[\\s\\S]{0,65535}$"
           type: string
         sEzmaxpartnerDescription2:
           description: The description of the Ezmaxpartner in english
           example: The name of the hospital in which you were born
+          pattern: "^[\\s\\S]{0,65535}$"
           type: string
       type: object
     Multilingual-EzmaxpartnerEmailaddress:
@@ -57916,9 +58466,9 @@ components:
             pattern: "^.{0,128}$"
             type: string
           sApikeyApikey:
-            type: string
+            $ref: "#/components/schemas/Field-sApikeyApikey"
           sApikeySecret:
-            type: string
+            $ref: "#/components/schemas/Field-sApikeySecret"
         required:
         - objEzmaxpartnerproduct
         - sApikeyApikey
@@ -71950,10 +72500,9 @@ components:
             This will be hidden if we are not creating or regenerating the Apikey.
           type: string
         sApikeySecret:
-          description: |-
-            The Secret for the API key.
-
-            This will be hidden if we are not creating or regenerating the Apikey.
+          description: The secret of the Apikey
+          example: f514d7a0008a9f6dee03e60734624d04
+          pattern: "^[0-9a-fA-F]{1,32}$"
           type: string
         bApikeyIsactive:
           description: Whether the apikey is active or not
@@ -71989,7 +72538,7 @@ components:
           sContactLastname: Doe
           sContactCompany: eZmax Solutions Inc.
         sApikeyApikey: sApikeyApikey
-        sApikeySecret: sApikeySecret
+        sApikeySecret: f514d7a0008a9f6dee03e60734624d04
         bApikeyIsactive: true
         bApikeyIssigned: true
         objAudit:
@@ -72045,7 +72594,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -72076,7 +72625,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -72130,7 +72679,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -72161,7 +72710,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -72504,7 +73053,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -72558,7 +73107,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -73108,7 +73657,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -73162,7 +73711,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -126958,6 +127507,78 @@ components:
       required:
       - objDiscussion
       type: object
+    discussion-improveMessage-v1-Request:
+      description: Request for POST /1/object/discussion/improveMessage
+      properties:
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        eDiscussionRobot:
+          $ref: "#/components/schemas/Field-eDiscussionRobot"
+        tDiscussionMessage:
+          description: The Message of the Discussion
+          example: "Hello, this is an example of content in a message"
+          pattern: "^[\\s\\S]{0,65535}$"
+          type: string
+      required:
+      - eDiscussionRobot
+      - tDiscussionMessage
+      type: object
+    discussion-improveMessage-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/discussion-improveMessage-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for POST /1/object/discussion
+      example:
+        mPayload:
+          a_pkiDiscussionID:
+          - 125
+          - 125
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    discussion-improveMessage-v1-Response-mPayload:
+      description: Payload for POST /1/object/discussion
+      example:
+        a_pkiDiscussionID:
+        - 125
+        - 125
+      properties:
+        a_pkiDiscussionID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: "#/components/schemas/Field-pkiDiscussionID"
+          type: array
+      required:
+      - a_pkiDiscussionID
+      type: object
     discussion-patchObject-v1-Request:
       description: "Request for PATCH /1/object/discussion/{pkiDiscussionID}"
       properties:
@@ -150836,6 +151457,810 @@ components:
       properties:
         sExternalID:
           type: string
+      type: object
+    ezmaxpartnerproductstage-ListElement:
+      description: A Ezmaxpartnerproductstage List Element
+      example:
+        pkiEzmaxpartnerproductstageID: 16
+        efksEzmaxcustomerCode: demo
+        fkiEzmaxpartnerproductID: 16
+        sEzmaxpartnerproductNameX: eZsign
+        sEzmaxpartnerproductShortdescriptionX: This is a software to e-sign documents
+        sEzmaxpartnerproductLogourlX: http://www.website.com/avatar.jpg
+        fkiEzmaxpartnerID: 12
+        sEzmaxpartnerNameX: eZmax
+        eEzmaxpartnerproductstageCode: Beta
+        eEzmaxpartnerproductstageInstallationtype: Automated
+        bEzmaxpartnerproductstagePublished: false
+        bEzmaxpartnerproductstageInstalled: false
+      properties:
+        pkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        efksEzmaxcustomerCode:
+          description: The Ezmaxcustomer code
+          example: demo
+          maxLength: 6
+          minLength: 2
+          pattern: "^[a-z\\d]{2,6}$"
+          type: string
+        fkiEzmaxpartnerproductID:
+          description: The unique ID of the Ezmaxpartnerproduct
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductNameX:
+          description: The name of the Ezmaxpartnerproduct in the language of the
+            requester
+          example: eZsign
+          pattern: "^.{0,35}$"
+          type: string
+        sEzmaxpartnerproductShortdescriptionX:
+          description: The short description of the Ezmaxpartnerproduct in the language
+            of the requester
+          example: This is a software to e-sign documents
+          pattern: "^.{0,256}$"
+          type: string
+        sEzmaxpartnerproductLogourlX:
+          description: The url of the logo in the language of the requester
+          example: http://www.website.com/avatar.jpg
+          pattern: "^(https|http):\\/\\/[^\\s\\/$.?#].[^\\s]*$"
+          type: string
+        fkiEzmaxpartnerID:
+          description: The unique ID of the Ezmaxpartner
+          example: 12
+          minimum: 1
+          type: integer
+        sEzmaxpartnerNameX:
+          description: The name of the Ezmaxpartner in the language of the requester
+          example: eZmax
+          pattern: "^.{0,50}$"
+          type: string
+        eEzmaxpartnerproductstageCode:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstageCode"
+        eEzmaxpartnerproductstageInstallationtype:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstageInstallationtype"
+        bEzmaxpartnerproductstagePublished:
+          description: Whether the Ezmaxpartnerproducstage is published or not
+          example: false
+          type: boolean
+        bEzmaxpartnerproductstageInstalled:
+          description: Whether the Ezmaxpartnerproductstage is installed or not
+          example: false
+          type: boolean
+      required:
+      - bEzmaxpartnerproductstageInstalled
+      - bEzmaxpartnerproductstagePublished
+      - eEzmaxpartnerproductstageCode
+      - eEzmaxpartnerproductstageInstallationtype
+      - efksEzmaxcustomerCode
+      - fkiEzmaxpartnerID
+      - fkiEzmaxpartnerproductID
+      - pkiEzmaxpartnerproductstageID
+      - sEzmaxpartnerNameX
+      - sEzmaxpartnerproductLogourlX
+      - sEzmaxpartnerproductNameX
+      - sEzmaxpartnerproductShortdescriptionX
+      type: object
+    ezmaxpartnerproductstage-Response:
+      description: A Ezmaxpartnerproductstage Object
+      properties:
+        pkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiEzmaxpartnerproductID:
+          description: The unique ID of the Ezmaxpartnerproduct
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        eEzmaxpartnerproductstageCode:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstageCode"
+        eEzmaxpartnerproductstageInstallationtype:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstageInstallationtype"
+        bEzmaxpartnerproductstagePublished:
+          description: Whether the Ezmaxpartnerproducstage is published or not
+          example: false
+          type: boolean
+        bEzmaxpartnerproductstageInstalled:
+          description: Whether the Ezmaxpartnerproductstage is installed or not
+          example: false
+          type: boolean
+        objEzmaxpartnerproductstagesubscription:
+          $ref: "#/components/schemas/ezmaxpartnerproductstagesubscription-Response"
+      required:
+      - bEzmaxpartnerproductstageInstalled
+      - bEzmaxpartnerproductstagePublished
+      - eEzmaxpartnerproductstageCode
+      - eEzmaxpartnerproductstageInstallationtype
+      - fkiEzmaxpartnerproductID
+      - pkiEzmaxpartnerproductstageID
+      type: object
+    ezmaxpartnerproductstage-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/ezmaxpartnerproductstage-Response"
+      - type: object
+      description: A Ezmaxpartnerproductstage Object
+      example:
+        pkiEzmaxpartnerproductstageID: 16
+        fkiEzmaxpartnerproductID: 16
+        eEzmaxpartnerproductstageCode: Beta
+        eEzmaxpartnerproductstageInstallationtype: Automated
+        bEzmaxpartnerproductstagePublished: false
+        bEzmaxpartnerproductstageInstalled: false
+        objEzmaxpartnerproductstagesubscription:
+          pkiEzmaxpartnerproductstagesubscriptionID: 16
+          fkiEzmaxpartnerproductstageID: 16
+          bEzmaxpartnerproductstagesubscriptionIsinstalled: false
+          objAudit:
+            objAuditdetailCreated:
+              fkiUserID: 70
+              fkiApikeyID: 99
+              sUserLoginname: JohnDoe
+              sUserLastname: Doe
+              sUserFirstname: John
+              sApikeyDescriptionX: Project X
+              dtAuditdetailDate: 2020-12-31 23:59:59
+            objAuditdetailModified:
+              fkiUserID: 70
+              fkiApikeyID: 99
+              sUserLoginname: JohnDoe
+              sUserLastname: Doe
+              sUserFirstname: John
+              sApikeyDescriptionX: Project X
+              dtAuditdetailDate: 2020-12-31 23:59:59
+      type: object
+    ezmaxpartnerproductstage-getEzmaxpartnerproductstagepermissions-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezmaxpartnerproductstage-getEzmaxpartnerproductstagepermissions-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions"
+      example:
+        mPayload:
+          a_objModulegroup:
+          - pkiModulegroupID: 46
+            sModulegroupNameX: Management
+            a_objModule:
+            - pkiModuleID: 40
+              fkiModulegroupID: 46
+              eModuleInternalname: Purchases
+              sModuleNameX: Purchase
+              bModuleRegistered: true
+              bModuleRegisteredapi: true
+              a_objModulesection:
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+            - pkiModuleID: 40
+              fkiModulegroupID: 46
+              eModuleInternalname: Purchases
+              sModuleNameX: Purchase
+              bModuleRegistered: true
+              bModuleRegisteredapi: true
+              a_objModulesection:
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+          - pkiModulegroupID: 46
+            sModulegroupNameX: Management
+            a_objModule:
+            - pkiModuleID: 40
+              fkiModulegroupID: 46
+              eModuleInternalname: Purchases
+              sModuleNameX: Purchase
+              bModuleRegistered: true
+              bModuleRegisteredapi: true
+              a_objModulesection:
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+            - pkiModuleID: 40
+              fkiModulegroupID: 46
+              eModuleInternalname: Purchases
+              sModuleNameX: Purchase
+              bModuleRegistered: true
+              bModuleRegisteredapi: true
+              a_objModulesection:
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+              - pkiModulesectionID: 53
+                fkiModuleID: 40
+                sModulesectionInternalname: Access
+                sModulesectionNameX: Access
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstage-getEzmaxpartnerproductstagepermissions-v1-Response-mPayload:
+      description: "Response for GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagepermissions"
+      example:
+        a_objModulegroup:
+        - pkiModulegroupID: 46
+          sModulegroupNameX: Management
+          a_objModule:
+          - pkiModuleID: 40
+            fkiModulegroupID: 46
+            eModuleInternalname: Purchases
+            sModuleNameX: Purchase
+            bModuleRegistered: true
+            bModuleRegisteredapi: true
+            a_objModulesection:
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+          - pkiModuleID: 40
+            fkiModulegroupID: 46
+            eModuleInternalname: Purchases
+            sModuleNameX: Purchase
+            bModuleRegistered: true
+            bModuleRegisteredapi: true
+            a_objModulesection:
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+        - pkiModulegroupID: 46
+          sModulegroupNameX: Management
+          a_objModule:
+          - pkiModuleID: 40
+            fkiModulegroupID: 46
+            eModuleInternalname: Purchases
+            sModuleNameX: Purchase
+            bModuleRegistered: true
+            bModuleRegisteredapi: true
+            a_objModulesection:
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+          - pkiModuleID: 40
+            fkiModulegroupID: 46
+            eModuleInternalname: Purchases
+            sModuleNameX: Purchase
+            bModuleRegistered: true
+            bModuleRegisteredapi: true
+            a_objModulesection:
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+            - pkiModulesectionID: 53
+              fkiModuleID: 40
+              sModulesectionInternalname: Access
+              sModulesectionNameX: Access
+      properties:
+        a_objModulegroup:
+          items:
+            $ref: "#/components/schemas/Custom-Modulegroup-Partner-ResponseCompound"
+          type: array
+      required:
+      - a_objModulegroup
+      type: object
+    ezmaxpartnerproductstage-getEzmaxpartnerproductstagewebhooks-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezmaxpartnerproductstage-getEzmaxpartnerproductstagewebhooks-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks"
+      example:
+        mPayload:
+          a_objEzmaxpartnerproductstagewebhook:
+          - pkiEzmaxpartnerproductstagewebhookID: 182
+            fkiEzmaxpartnerproductstageID: 16
+            sEzmaxpartnerproductstageCode: Default
+            eEzmaxpartnerproductstagewebhookModule: Ezsign
+            eEzmaxpartnerproductstagewebhookEzmaxpartnerevent: ProductstageSubscribe
+            eEzmaxpartnerproductstagewebhookEzsignevent: DocumentCompleted
+            eEzmaxpartnerproductstagewebhookManagementevent: UserCreated
+            eEzmaxpartnerproductstagewebhookRealestateevent: InscriptionCreated
+            sEzmaxpartnerproductstagewebhookDescription: Default
+            sEzmaxpartnerproductstagewebhookUrl: https://www.example.com
+            sEzmaxpartnerproductstagewebhookEmailfailed: email@example.com
+          - pkiEzmaxpartnerproductstagewebhookID: 182
+            fkiEzmaxpartnerproductstageID: 16
+            sEzmaxpartnerproductstageCode: Default
+            eEzmaxpartnerproductstagewebhookModule: Ezsign
+            eEzmaxpartnerproductstagewebhookEzmaxpartnerevent: ProductstageSubscribe
+            eEzmaxpartnerproductstagewebhookEzsignevent: DocumentCompleted
+            eEzmaxpartnerproductstagewebhookManagementevent: UserCreated
+            eEzmaxpartnerproductstagewebhookRealestateevent: InscriptionCreated
+            sEzmaxpartnerproductstagewebhookDescription: Default
+            sEzmaxpartnerproductstagewebhookUrl: https://www.example.com
+            sEzmaxpartnerproductstagewebhookEmailfailed: email@example.com
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstage-getEzmaxpartnerproductstagewebhooks-v1-Response-mPayload:
+      description: "Response for GET /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/getEzmaxpartnerproductstagewebhooks"
+      example:
+        a_objEzmaxpartnerproductstagewebhook:
+        - pkiEzmaxpartnerproductstagewebhookID: 182
+          fkiEzmaxpartnerproductstageID: 16
+          sEzmaxpartnerproductstageCode: Default
+          eEzmaxpartnerproductstagewebhookModule: Ezsign
+          eEzmaxpartnerproductstagewebhookEzmaxpartnerevent: ProductstageSubscribe
+          eEzmaxpartnerproductstagewebhookEzsignevent: DocumentCompleted
+          eEzmaxpartnerproductstagewebhookManagementevent: UserCreated
+          eEzmaxpartnerproductstagewebhookRealestateevent: InscriptionCreated
+          sEzmaxpartnerproductstagewebhookDescription: Default
+          sEzmaxpartnerproductstagewebhookUrl: https://www.example.com
+          sEzmaxpartnerproductstagewebhookEmailfailed: email@example.com
+        - pkiEzmaxpartnerproductstagewebhookID: 182
+          fkiEzmaxpartnerproductstageID: 16
+          sEzmaxpartnerproductstageCode: Default
+          eEzmaxpartnerproductstagewebhookModule: Ezsign
+          eEzmaxpartnerproductstagewebhookEzmaxpartnerevent: ProductstageSubscribe
+          eEzmaxpartnerproductstagewebhookEzsignevent: DocumentCompleted
+          eEzmaxpartnerproductstagewebhookManagementevent: UserCreated
+          eEzmaxpartnerproductstagewebhookRealestateevent: InscriptionCreated
+          sEzmaxpartnerproductstagewebhookDescription: Default
+          sEzmaxpartnerproductstagewebhookUrl: https://www.example.com
+          sEzmaxpartnerproductstagewebhookEmailfailed: email@example.com
+      properties:
+        a_objEzmaxpartnerproductstagewebhook:
+          items:
+            $ref: "#/components/schemas/ezmaxpartnerproductstagewebhook-ResponseCompound"
+          type: array
+      required:
+      - a_objEzmaxpartnerproductstagewebhook
+      type: object
+    ezmaxpartnerproductstage-getList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezmaxpartnerproductstage-getList-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response_getList"
+      description: Response for GET /1/object/ezmaxpartnerproductstage/getList
+      example:
+        mPayload:
+          a_objEzmaxpartnerproductstage:
+          - pkiEzmaxpartnerproductstageID: 16
+            efksEzmaxcustomerCode: demo
+            fkiEzmaxpartnerproductID: 16
+            sEzmaxpartnerproductNameX: eZsign
+            sEzmaxpartnerproductShortdescriptionX: This is a software to e-sign documents
+            sEzmaxpartnerproductLogourlX: http://www.website.com/avatar.jpg
+            fkiEzmaxpartnerID: 12
+            sEzmaxpartnerNameX: eZmax
+            eEzmaxpartnerproductstageCode: Beta
+            eEzmaxpartnerproductstageInstallationtype: Automated
+            bEzmaxpartnerproductstagePublished: false
+            bEzmaxpartnerproductstageInstalled: false
+          - pkiEzmaxpartnerproductstageID: 16
+            efksEzmaxcustomerCode: demo
+            fkiEzmaxpartnerproductID: 16
+            sEzmaxpartnerproductNameX: eZsign
+            sEzmaxpartnerproductShortdescriptionX: This is a software to e-sign documents
+            sEzmaxpartnerproductLogourlX: http://www.website.com/avatar.jpg
+            fkiEzmaxpartnerID: 12
+            sEzmaxpartnerNameX: eZmax
+            eEzmaxpartnerproductstageCode: Beta
+            eEzmaxpartnerproductstageInstallationtype: Automated
+            bEzmaxpartnerproductstagePublished: false
+            bEzmaxpartnerproductstageInstalled: false
+          iRowReturned: 100
+          iRowFiltered: 533
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+          a_Filter:
+            a_AutoType:
+              key: a_AutoType
+            a_AutoTypeHaving:
+              key: a_AutoTypeHaving
+            a_Enum:
+              key:
+                key: a_Enum
+          a_OrderBy:
+            key: a_OrderBy
+          iRowMax: 100
+          iRowOffset: 0
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstage-getList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objEzmaxpartnerproductstage:
+            items:
+              $ref: "#/components/schemas/ezmaxpartnerproductstage-ListElement"
+            type: array
+        required:
+        - a_objEzmaxpartnerproductstage
+        type: object
+      - $ref: "#/components/schemas/Common-getList-v1-Response-mPayload"
+      description: Payload for GET /1/object/ezmaxpartnerproductstage/getList
+      example:
+        a_objEzmaxpartnerproductstage:
+        - pkiEzmaxpartnerproductstageID: 16
+          efksEzmaxcustomerCode: demo
+          fkiEzmaxpartnerproductID: 16
+          sEzmaxpartnerproductNameX: eZsign
+          sEzmaxpartnerproductShortdescriptionX: This is a software to e-sign documents
+          sEzmaxpartnerproductLogourlX: http://www.website.com/avatar.jpg
+          fkiEzmaxpartnerID: 12
+          sEzmaxpartnerNameX: eZmax
+          eEzmaxpartnerproductstageCode: Beta
+          eEzmaxpartnerproductstageInstallationtype: Automated
+          bEzmaxpartnerproductstagePublished: false
+          bEzmaxpartnerproductstageInstalled: false
+        - pkiEzmaxpartnerproductstageID: 16
+          efksEzmaxcustomerCode: demo
+          fkiEzmaxpartnerproductID: 16
+          sEzmaxpartnerproductNameX: eZsign
+          sEzmaxpartnerproductShortdescriptionX: This is a software to e-sign documents
+          sEzmaxpartnerproductLogourlX: http://www.website.com/avatar.jpg
+          fkiEzmaxpartnerID: 12
+          sEzmaxpartnerNameX: eZmax
+          eEzmaxpartnerproductstageCode: Beta
+          eEzmaxpartnerproductstageInstallationtype: Automated
+          bEzmaxpartnerproductstagePublished: false
+          bEzmaxpartnerproductstageInstalled: false
+        iRowReturned: 100
+        iRowFiltered: 533
+      type: object
+    ezmaxpartnerproductstage-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/ezmaxpartnerproductstage-getObject-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /2/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}"
+      example:
+        mPayload:
+          objEzmaxpartnerproductstage:
+            pkiEzmaxpartnerproductstageID: 16
+            fkiEzmaxpartnerproductID: 16
+            eEzmaxpartnerproductstageCode: Beta
+            eEzmaxpartnerproductstageInstallationtype: Automated
+            bEzmaxpartnerproductstagePublished: false
+            bEzmaxpartnerproductstageInstalled: false
+            objEzmaxpartnerproductstagesubscription:
+              pkiEzmaxpartnerproductstagesubscriptionID: 16
+              fkiEzmaxpartnerproductstageID: 16
+              bEzmaxpartnerproductstagesubscriptionIsinstalled: false
+              objAudit:
+                objAuditdetailCreated:
+                  fkiUserID: 70
+                  fkiApikeyID: 99
+                  sUserLoginname: JohnDoe
+                  sUserLastname: Doe
+                  sUserFirstname: John
+                  sApikeyDescriptionX: Project X
+                  dtAuditdetailDate: 2020-12-31 23:59:59
+                objAuditdetailModified:
+                  fkiUserID: 70
+                  fkiApikeyID: 99
+                  sUserLoginname: JohnDoe
+                  sUserLastname: Doe
+                  sUserFirstname: John
+                  sApikeyDescriptionX: Project X
+                  dtAuditdetailDate: 2020-12-31 23:59:59
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstage-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}"
+      example:
+        objEzmaxpartnerproductstage:
+          pkiEzmaxpartnerproductstageID: 16
+          fkiEzmaxpartnerproductID: 16
+          eEzmaxpartnerproductstageCode: Beta
+          eEzmaxpartnerproductstageInstallationtype: Automated
+          bEzmaxpartnerproductstagePublished: false
+          bEzmaxpartnerproductstageInstalled: false
+          objEzmaxpartnerproductstagesubscription:
+            pkiEzmaxpartnerproductstagesubscriptionID: 16
+            fkiEzmaxpartnerproductstageID: 16
+            bEzmaxpartnerproductstagesubscriptionIsinstalled: false
+            objAudit:
+              objAuditdetailCreated:
+                fkiUserID: 70
+                fkiApikeyID: 99
+                sUserLoginname: JohnDoe
+                sUserLastname: Doe
+                sUserFirstname: John
+                sApikeyDescriptionX: Project X
+                dtAuditdetailDate: 2020-12-31 23:59:59
+              objAuditdetailModified:
+                fkiUserID: 70
+                fkiApikeyID: 99
+                sUserLoginname: JohnDoe
+                sUserLastname: Doe
+                sUserFirstname: John
+                sApikeyDescriptionX: Project X
+                dtAuditdetailDate: 2020-12-31 23:59:59
+      properties:
+        objEzmaxpartnerproductstage:
+          $ref: "#/components/schemas/ezmaxpartnerproductstage-ResponseCompound"
+      required:
+      - objEzmaxpartnerproductstage
+      type: object
+    ezmaxpartnerproductstage-subscribe-v1-Request:
+      description: |-
+        Request for POST /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/subscribe
+
+        Intentionally empty for future-proofing
+      type: object
+    ezmaxpartnerproductstage-subscribe-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for POST /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/subscribe"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstage-unsubscribe-v1-Request:
+      description: |-
+        Request for POST /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/subscribe
+
+        Intentionally empty for future-proofing
+      type: object
+    ezmaxpartnerproductstage-unsubscribe-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for POST /1/object/ezmaxpartnerproductstage/{pkiEzmaxpartnerproductstageID}/unsubscribe"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    ezmaxpartnerproductstagesubscription-Response:
+      description: A Ezmaxpartnerproductstagesubscription-Response Object
+      example:
+        pkiEzmaxpartnerproductstagesubscriptionID: 16
+        fkiEzmaxpartnerproductstageID: 16
+        bEzmaxpartnerproductstagesubscriptionIsinstalled: false
+        objAudit:
+          objAuditdetailCreated:
+            fkiUserID: 70
+            fkiApikeyID: 99
+            sUserLoginname: JohnDoe
+            sUserLastname: Doe
+            sUserFirstname: John
+            sApikeyDescriptionX: Project X
+            dtAuditdetailDate: 2020-12-31 23:59:59
+          objAuditdetailModified:
+            fkiUserID: 70
+            fkiApikeyID: 99
+            sUserLoginname: JohnDoe
+            sUserLastname: Doe
+            sUserFirstname: John
+            sApikeyDescriptionX: Project X
+            dtAuditdetailDate: 2020-12-31 23:59:59
+      properties:
+        pkiEzmaxpartnerproductstagesubscriptionID:
+          description: The unique ID of the Ezmaxpartnerproductstagesubscription
+          example: 16
+          type: integer
+        fkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        bEzmaxpartnerproductstagesubscriptionIsinstalled:
+          description: Whether the Ezmaxpartnerproductstagesubscription is installed
+            or not
+          example: false
+          type: boolean
+        objAudit:
+          $ref: "#/components/schemas/Common-Audit"
+      required:
+      - bEzmaxpartnerproductstagesubscriptionIsinstalled
+      - fkiEzmaxpartnerproductstageID
+      - objAudit
+      - pkiEzmaxpartnerproductstagesubscriptionID
+      type: object
+    ezmaxpartnerproductstagewebhook-Response:
+      description: A Ezmaxpartnerproductstagewebhook Object
+      properties:
+        pkiEzmaxpartnerproductstagewebhookID:
+          description: The unique ID of the Ezmaxpartnerproductstagewebhook
+          example: 182
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzmaxpartnerproductstageID:
+          description: The unique ID of the Ezmaxpartnerproductstage
+          example: 16
+          maximum: 255
+          minimum: 0
+          type: integer
+        sEzmaxpartnerproductstageCode:
+          description: The code of the sEzmaxpartnerproductstage
+          example: Default
+          pattern: "^.{0,15}$"
+          type: string
+        eEzmaxpartnerproductstagewebhookModule:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstagewebhookModule"
+        eEzmaxpartnerproductstagewebhookEzmaxpartnerevent:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstagewebhookEzmaxpartnerevent"
+        eEzmaxpartnerproductstagewebhookEzsignevent:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstagewebhookEzsignevent"
+        eEzmaxpartnerproductstagewebhookManagementevent:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstagewebhookManagementevent"
+        eEzmaxpartnerproductstagewebhookRealestateevent:
+          $ref: "#/components/schemas/Field-eEzmaxpartnerproductstagewebhookRealestateevent"
+        sEzmaxpartnerproductstagewebhookDescription:
+          description: The description of the Ezmaxpartnerproductstagewebhook
+          example: Default
+          pattern: "^.{0,80}$"
+          type: string
+        sEzmaxpartnerproductstagewebhookUrl:
+          description: The url of the Ezmaxpartnerproductstagewebhook
+          example: https://www.example.com
+          pattern: "^.{0,65535}$"
+          type: string
+        sEzmaxpartnerproductstagewebhookEmailfailed:
+          description: The emailfailed of the Ezmaxpartnerproductstagewebhook
+          example: email@example.com
+          pattern: "^.{0,75}$"
+          type: string
+      required:
+      - eEzmaxpartnerproductstagewebhookModule
+      - fkiEzmaxpartnerproductstageID
+      type: object
+    ezmaxpartnerproductstagewebhook-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/ezmaxpartnerproductstagewebhook-Response"
+      - type: object
+      description: A Ezmaxpartnerproductstagewebhook Object
+      example:
+        pkiEzmaxpartnerproductstagewebhookID: 182
+        fkiEzmaxpartnerproductstageID: 16
+        sEzmaxpartnerproductstageCode: Default
+        eEzmaxpartnerproductstagewebhookModule: Ezsign
+        eEzmaxpartnerproductstagewebhookEzmaxpartnerevent: ProductstageSubscribe
+        eEzmaxpartnerproductstagewebhookEzsignevent: DocumentCompleted
+        eEzmaxpartnerproductstagewebhookManagementevent: UserCreated
+        eEzmaxpartnerproductstagewebhookRealestateevent: InscriptionCreated
+        sEzmaxpartnerproductstagewebhookDescription: Default
+        sEzmaxpartnerproductstagewebhookUrl: https://www.example.com
+        sEzmaxpartnerproductstagewebhookEmailfailed: email@example.com
       type: object
     ezmaxproduct-AutocompleteElement-Response:
       description: A Ezmaxproduct AutocompleteElement Response
@@ -318341,7 +319766,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -318372,7 +319797,7 @@ components:
               sContactLastname: Doe
               sContactCompany: eZmax Solutions Inc.
             sApikeyApikey: sApikeyApikey
-            sApikeySecret: sApikeySecret
+            sApikeySecret: f514d7a0008a9f6dee03e60734624d04
             bApikeyIsactive: true
             bApikeyIssigned: true
             objAudit:
@@ -318426,7 +319851,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -318457,7 +319882,7 @@ components:
             sContactLastname: Doe
             sContactCompany: eZmax Solutions Inc.
           sApikeyApikey: sApikeyApikey
-          sApikeySecret: sApikeySecret
+          sApikeySecret: f514d7a0008a9f6dee03e60734624d04
           bApikeyIsactive: true
           bApikeyIssigned: true
           objAudit:
@@ -325779,6 +327204,7 @@ x-tagGroups:
   - Object_Ezmaxmaillinglist
   - Object_Ezmaxpartner
   - Object_Ezmaxpartnerproduct
+  - Object_Ezmaxpartnerproductstage
   - Object_Ezmaxproduct
   - Object_Ezsignannotation
   - Object_Ezsignbulksend
