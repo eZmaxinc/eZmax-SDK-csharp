@@ -55,7 +55,13 @@ namespace eZmaxApi.Model
         /// Enum Justified for value: Justified
         /// </summary>
         [EnumMember(Value = "Justified")]
-        Justified = 4
+        Justified = 4,
+
+        /// <summary>
+        /// Enum Mandatory for value: Mandatory
+        /// </summary>
+        [EnumMember(Value = "Mandatory")]
+        Mandatory = 5
     }
 
 }

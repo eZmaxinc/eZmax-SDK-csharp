@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The ezcom of the Documenttype
+    /// The ezcom document type category
     /// </summary>
-    /// <value>The ezcom of the Documenttype</value>
+    /// <value>The ezcom document type category</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEDocumenttypeEzcom
     {

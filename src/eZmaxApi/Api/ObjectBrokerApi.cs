@@ -179,6 +179,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of BrokerGetCommunicationsendersV1Response</returns>
         ApiResponse<BrokerGetCommunicationsendersV1Response> BrokerGetCommunicationsendersV1WithHttpInfo(int pkiBrokerID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerGetDocumenttypechecklistV1Response</returns>
+        BrokerGetDocumenttypechecklistV1Response BrokerGetDocumenttypechecklistV1(int pkiBrokerID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<BrokerGetDocumenttypechecklistV1Response> BrokerGetDocumenttypechecklistV1WithHttpInfo(int pkiBrokerID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Broker list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -228,6 +248,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrokerImportIntoEDMV1Response</returns>
         ApiResponse<BrokerImportIntoEDMV1Response> BrokerImportIntoEDMV1WithHttpInfo(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerSyncDocumenttypechecklistV1Response</returns>
+        BrokerSyncDocumenttypechecklistV1Response BrokerSyncDocumenttypechecklistV1(int pkiBrokerID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<BrokerSyncDocumenttypechecklistV1Response> BrokerSyncDocumenttypechecklistV1WithHttpInfo(int pkiBrokerID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -421,6 +463,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (BrokerGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BrokerGetCommunicationsendersV1Response>> BrokerGetCommunicationsendersV1WithHttpInfoAsync(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BrokerGetDocumenttypechecklistV1Response> BrokerGetDocumenttypechecklistV1Async(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrokerGetDocumenttypechecklistV1Response>> BrokerGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Broker list
         /// </summary>
         /// <remarks>
@@ -480,6 +547,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrokerImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BrokerImportIntoEDMV1Response>> BrokerImportIntoEDMV1WithHttpInfoAsync(int pkiBrokerID, BrokerImportIntoEDMV1Request brokerImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BrokerSyncDocumenttypechecklistV1Response> BrokerSyncDocumenttypechecklistV1Async(int pkiBrokerID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BrokerSyncDocumenttypechecklistV1Response>> BrokerSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBrokerID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1674,6 +1768,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerGetDocumenttypechecklistV1Response</returns>
+        public BrokerGetDocumenttypechecklistV1Response BrokerGetDocumenttypechecklistV1(int pkiBrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerGetDocumenttypechecklistV1Response> localVarResponse = BrokerGetDocumenttypechecklistV1WithHttpInfo(pkiBrokerID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrokerGetDocumenttypechecklistV1Response> BrokerGetDocumenttypechecklistV1WithHttpInfo(int pkiBrokerID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BrokerGetDocumenttypechecklistV1Response>("/1/object/broker/{pkiBrokerID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BrokerGetDocumenttypechecklistV1Response> BrokerGetDocumenttypechecklistV1Async(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerGetDocumenttypechecklistV1Response> localVarResponse = await BrokerGetDocumenttypechecklistV1WithHttpInfoAsync(pkiBrokerID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrokerGetDocumenttypechecklistV1Response>> BrokerGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBrokerID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BrokerGetDocumenttypechecklistV1Response>("/1/object/broker/{pkiBrokerID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Broker list 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2026,6 +2263,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BrokerImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BrokerSyncDocumenttypechecklistV1Response</returns>
+        public BrokerSyncDocumenttypechecklistV1Response BrokerSyncDocumenttypechecklistV1(int pkiBrokerID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerSyncDocumenttypechecklistV1Response> localVarResponse = BrokerSyncDocumenttypechecklistV1WithHttpInfo(pkiBrokerID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BrokerSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BrokerSyncDocumenttypechecklistV1Response> BrokerSyncDocumenttypechecklistV1WithHttpInfo(int pkiBrokerID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<BrokerSyncDocumenttypechecklistV1Response>("/1/object/broker/{pkiBrokerID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BrokerSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BrokerSyncDocumenttypechecklistV1Response> BrokerSyncDocumenttypechecklistV1Async(int pkiBrokerID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BrokerSyncDocumenttypechecklistV1Response> localVarResponse = await BrokerSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiBrokerID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBrokerID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BrokerSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BrokerSyncDocumenttypechecklistV1Response>> BrokerSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBrokerID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBrokerID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBrokerID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBrokerApi.BrokerSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<BrokerSyncDocumenttypechecklistV1Response>("/1/object/broker/{pkiBrokerID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BrokerSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -31,7 +31,7 @@ namespace eZmaxApi.Api
         /// Delete an existing attachment
         /// </summary>
         /// <remarks>
-        /// Te endpoint allows to delete an attachment.
+        /// The endpoint allows to delete an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -44,7 +44,7 @@ namespace eZmaxApi.Api
         /// Delete an existing attachment
         /// </summary>
         /// <remarks>
-        /// Te endpoint allows to delete an attachment.
+        /// The endpoint allows to delete an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -127,7 +127,7 @@ namespace eZmaxApi.Api
         /// Restore a deleted attachment
         /// </summary>
         /// <remarks>
-        /// The endpoints allows to restore a previously deleted attachment.
+        /// The endpoint allows to restore a previously deleted attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -140,7 +140,7 @@ namespace eZmaxApi.Api
         /// Restore a deleted attachment
         /// </summary>
         /// <remarks>
-        /// The endpoints allows to restore a previously deleted attachment.
+        /// The endpoint allows to restore a previously deleted attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -152,7 +152,7 @@ namespace eZmaxApi.Api
         /// Change attachment document type
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
+        /// The endpoint allows to change the document type for an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -165,7 +165,7 @@ namespace eZmaxApi.Api
         /// Change attachment document type
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
+        /// The endpoint allows to change the document type for an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -236,7 +236,7 @@ namespace eZmaxApi.Api
         /// Delete an existing attachment
         /// </summary>
         /// <remarks>
-        /// Te endpoint allows to delete an attachment.
+        /// The endpoint allows to delete an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -250,7 +250,7 @@ namespace eZmaxApi.Api
         /// Delete an existing attachment
         /// </summary>
         /// <remarks>
-        /// Te endpoint allows to delete an attachment.
+        /// The endpoint allows to delete an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -340,7 +340,7 @@ namespace eZmaxApi.Api
         /// Restore a deleted attachment
         /// </summary>
         /// <remarks>
-        /// The endpoints allows to restore a previously deleted attachment.
+        /// The endpoint allows to restore a previously deleted attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -354,7 +354,7 @@ namespace eZmaxApi.Api
         /// Restore a deleted attachment
         /// </summary>
         /// <remarks>
-        /// The endpoints allows to restore a previously deleted attachment.
+        /// The endpoint allows to restore a previously deleted attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -367,7 +367,7 @@ namespace eZmaxApi.Api
         /// Change attachment document type
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
+        /// The endpoint allows to change the document type for an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -381,7 +381,7 @@ namespace eZmaxApi.Api
         /// Change attachment document type
         /// </summary>
         /// <remarks>
-        /// The endpoint allows to change the checklist document type for an attachment.
+        /// The endpoint allows to change the document type for an attachment.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -565,7 +565,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// Delete an existing attachment The endpoint allows to delete an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -579,7 +579,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// Delete an existing attachment The endpoint allows to delete an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -645,7 +645,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// Delete an existing attachment The endpoint allows to delete an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -660,7 +660,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Delete an existing attachment Te endpoint allows to delete an attachment.
+        /// Delete an existing attachment The endpoint allows to delete an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1185,7 +1185,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// Restore a deleted attachment The endpoint allows to restore a previously deleted attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1199,7 +1199,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// Restore a deleted attachment The endpoint allows to restore a previously deleted attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1265,7 +1265,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// Restore a deleted attachment The endpoint allows to restore a previously deleted attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1280,7 +1280,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Restore a deleted attachment The endpoints allows to restore a previously deleted attachment.
+        /// Restore a deleted attachment The endpoint allows to restore a previously deleted attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1348,7 +1348,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// Change attachment document type The endpoint allows to change the document type for an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1362,7 +1362,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// Change attachment document type The endpoint allows to change the document type for an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1428,7 +1428,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// Change attachment document type The endpoint allows to change the document type for an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>
@@ -1443,7 +1443,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Change attachment document type The endpoint allows to change the checklist document type for an attachment.
+        /// Change attachment document type The endpoint allows to change the document type for an attachment.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pkiAttachmentID"></param>

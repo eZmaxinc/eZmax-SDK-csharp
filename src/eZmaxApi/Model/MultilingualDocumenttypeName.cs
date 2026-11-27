@@ -35,8 +35,8 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultilingualDocumenttypeName" /> class.
         /// </summary>
-        /// <param name="sDocumenttypeName1">The name1 of the Documenttype.</param>
-        /// <param name="sDocumenttypeName2">The name2 of the Documenttype.</param>
+        /// <param name="sDocumenttypeName1">The name of the document type in French.</param>
+        /// <param name="sDocumenttypeName2">The name of the document type in English.</param>
         public MultilingualDocumenttypeName(string sDocumenttypeName1 = default, string sDocumenttypeName2 = default)
         {
             this.SDocumenttypeName1 = sDocumenttypeName1;
@@ -44,9 +44,9 @@ namespace eZmaxApi.Model
         }
 
         /// <summary>
-        /// The name1 of the Documenttype
+        /// The name of the document type in French
         /// </summary>
-        /// <value>The name1 of the Documenttype</value>
+        /// <value>The name of the document type in French</value>
         /*
         <example>Facture</example>
         */
@@ -54,9 +54,9 @@ namespace eZmaxApi.Model
         public string SDocumenttypeName1 { get; set; }
 
         /// <summary>
-        /// The name2 of the Documenttype
+        /// The name of the document type in English
         /// </summary>
-        /// <value>The name2 of the Documenttype</value>
+        /// <value>The name of the document type in English</value>
         /*
         <example>Invoice</example>
         */

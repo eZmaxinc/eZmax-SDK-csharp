@@ -400,7 +400,7 @@ catch (ApiException e)
 
 Improve a message using the AI
 
-Improve a message using the AI.
+The endpoint allows to improve a discussion message using the AI.
 
 ### Example
 ```csharp

@@ -150,6 +150,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of ElectronicfundstransferGetCommunicationsendersV1Response</returns>
         ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfo(int pkiElectronicfundstransferID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        ElectronicfundstransferGetDocumenttypechecklistV1Response ElectronicfundstransferGetDocumenttypechecklistV1(int pkiElectronicfundstransferID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response> ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfo(int pkiElectronicfundstransferID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Electronicfundstransfer list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -199,6 +219,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ElectronicfundstransferImportIntoEDMV1Response</returns>
         ApiResponse<ElectronicfundstransferImportIntoEDMV1Response> ElectronicfundstransferImportIntoEDMV1WithHttpInfo(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        ElectronicfundstransferSyncDocumenttypechecklistV1Response ElectronicfundstransferSyncDocumenttypechecklistV1(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response> ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfo(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -361,6 +403,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (ElectronicfundstransferGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response>> ElectronicfundstransferGetCommunicationsendersV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<ElectronicfundstransferGetDocumenttypechecklistV1Response> ElectronicfundstransferGetDocumenttypechecklistV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response>> ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Electronicfundstransfer list
         /// </summary>
         /// <remarks>
@@ -420,6 +487,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ElectronicfundstransferImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferImportIntoEDMV1Response>> ElectronicfundstransferImportIntoEDMV1WithHttpInfoAsync(int pkiElectronicfundstransferID, ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<ElectronicfundstransferSyncDocumenttypechecklistV1Response> ElectronicfundstransferSyncDocumenttypechecklistV1Async(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response>> ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1423,6 +1517,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        public ElectronicfundstransferGetDocumenttypechecklistV1Response ElectronicfundstransferGetDocumenttypechecklistV1(int pkiElectronicfundstransferID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response> localVarResponse = ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfo(pkiElectronicfundstransferID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response> ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfo(int pkiElectronicfundstransferID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ElectronicfundstransferGetDocumenttypechecklistV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<ElectronicfundstransferGetDocumenttypechecklistV1Response> ElectronicfundstransferGetDocumenttypechecklistV1Async(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response> localVarResponse = await ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfoAsync(pkiElectronicfundstransferID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferGetDocumenttypechecklistV1Response>> ElectronicfundstransferGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiElectronicfundstransferID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ElectronicfundstransferGetDocumenttypechecklistV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Electronicfundstransfer list 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1775,6 +2012,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ElectronicfundstransferImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        public ElectronicfundstransferSyncDocumenttypechecklistV1Response ElectronicfundstransferSyncDocumenttypechecklistV1(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response> localVarResponse = ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfo(pkiElectronicfundstransferID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response> ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfo(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ElectronicfundstransferSyncDocumenttypechecklistV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ElectronicfundstransferSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<ElectronicfundstransferSyncDocumenttypechecklistV1Response> ElectronicfundstransferSyncDocumenttypechecklistV1Async(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response> localVarResponse = await ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiElectronicfundstransferID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiElectronicfundstransferID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ElectronicfundstransferSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<ElectronicfundstransferSyncDocumenttypechecklistV1Response>> ElectronicfundstransferSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiElectronicfundstransferID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiElectronicfundstransferID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiElectronicfundstransferID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectElectronicfundstransferApi.ElectronicfundstransferSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ElectronicfundstransferSyncDocumenttypechecklistV1Response>("/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ElectronicfundstransferSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

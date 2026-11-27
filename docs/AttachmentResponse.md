@@ -47,7 +47,7 @@ Name | Type | Description | Notes
 **FkiTranqcontractID** | **int** | The unique ID of the Tranqcontract | [optional] 
 **FkiTemplateID** | **int** | The unique ID of the Template | [optional] 
 **FkiDocumenttypechecklistID** | **int** | The unique ID of the Documenttypechecklist | [optional] 
-**SDocumenttypeNameX** | **string** | The name of the Documenttype in the language of the requester | [optional] 
+**SDocumenttypeNameX** | **string** | The name of the document type in the requester&#39;s language | [optional] 
 **FkiFolderID** | **int** | The unique ID of the Folder | [optional] 
 **FkiRejectedoffertopurchaseID** | **int** | The unique ID of the Rejectedoffertopurchase | [optional] 
 **FkiDisclosureID** | **int** | The unique ID of the Disclosure | [optional] 
@@ -63,8 +63,8 @@ Name | Type | Description | Notes
 **IAttachmentSize** | **long** | The size of the Attachment | 
 **IAttachmentEDMmoduleflag** | **int** | The edmmoduleflag of the Attachment | [optional] 
 **SAttachmentMD5** | **string** | The MD5 of the Attachment | 
-**BAttachmentDeleted** | **bool** | Whether if it&#39;s deleted | 
-**BAttachmentValid** | **bool** | Whether if it&#39;s valid | 
+**BAttachmentDeleted** | **bool** | Whether the Attachment is deleted or not | 
+**BAttachmentValid** | **bool** | Whether the Attachment is valid or not | 
 **EAttachmentVerified** | **FieldEAttachmentVerified** |  | 
 **TAttachmentRejectioncomment** | **string** | The rejectioncomment of the Attachment | [optional] 
 **FkiUserIDOwner** | **int** | The unique ID of the User | [optional] 

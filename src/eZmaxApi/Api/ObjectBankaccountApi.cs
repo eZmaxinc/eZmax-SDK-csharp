@@ -179,6 +179,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of BankaccountGetCommunicationsendersV1Response</returns>
         ApiResponse<BankaccountGetCommunicationsendersV1Response> BankaccountGetCommunicationsendersV1WithHttpInfo(int pkiBankaccountID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountGetDocumenttypechecklistV1Response</returns>
+        BankaccountGetDocumenttypechecklistV1Response BankaccountGetDocumenttypechecklistV1(int pkiBankaccountID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<BankaccountGetDocumenttypechecklistV1Response> BankaccountGetDocumenttypechecklistV1WithHttpInfo(int pkiBankaccountID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Bankaccount list
         /// </summary>
         /// <remarks>
@@ -231,6 +251,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BankaccountImportIntoEDMV1Response</returns>
         ApiResponse<BankaccountImportIntoEDMV1Response> BankaccountImportIntoEDMV1WithHttpInfo(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountSyncDocumenttypechecklistV1Response</returns>
+        BankaccountSyncDocumenttypechecklistV1Response BankaccountSyncDocumenttypechecklistV1(int pkiBankaccountID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<BankaccountSyncDocumenttypechecklistV1Response> BankaccountSyncDocumenttypechecklistV1WithHttpInfo(int pkiBankaccountID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -424,6 +466,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (BankaccountGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BankaccountGetCommunicationsendersV1Response>> BankaccountGetCommunicationsendersV1WithHttpInfoAsync(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BankaccountGetDocumenttypechecklistV1Response> BankaccountGetDocumenttypechecklistV1Async(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BankaccountGetDocumenttypechecklistV1Response>> BankaccountGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Bankaccount list
         /// </summary>
         /// <remarks>
@@ -483,6 +550,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BankaccountImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BankaccountImportIntoEDMV1Response>> BankaccountImportIntoEDMV1WithHttpInfoAsync(int pkiBankaccountID, BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BankaccountSyncDocumenttypechecklistV1Response> BankaccountSyncDocumenttypechecklistV1Async(int pkiBankaccountID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BankaccountSyncDocumenttypechecklistV1Response>> BankaccountSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBankaccountID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1677,6 +1771,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountGetDocumenttypechecklistV1Response</returns>
+        public BankaccountGetDocumenttypechecklistV1Response BankaccountGetDocumenttypechecklistV1(int pkiBankaccountID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountGetDocumenttypechecklistV1Response> localVarResponse = BankaccountGetDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BankaccountGetDocumenttypechecklistV1Response> BankaccountGetDocumenttypechecklistV1WithHttpInfo(int pkiBankaccountID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BankaccountGetDocumenttypechecklistV1Response>("/1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BankaccountGetDocumenttypechecklistV1Response> BankaccountGetDocumenttypechecklistV1Async(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountGetDocumenttypechecklistV1Response> localVarResponse = await BankaccountGetDocumenttypechecklistV1WithHttpInfoAsync(pkiBankaccountID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BankaccountGetDocumenttypechecklistV1Response>> BankaccountGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBankaccountID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BankaccountGetDocumenttypechecklistV1Response>("/1/object/bankaccount/{pkiBankaccountID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Bankaccount list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBankaccountType | Chequing&lt;br&gt;Trust |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2029,6 +2266,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BankaccountImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BankaccountSyncDocumenttypechecklistV1Response</returns>
+        public BankaccountSyncDocumenttypechecklistV1Response BankaccountSyncDocumenttypechecklistV1(int pkiBankaccountID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountSyncDocumenttypechecklistV1Response> localVarResponse = BankaccountSyncDocumenttypechecklistV1WithHttpInfo(pkiBankaccountID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BankaccountSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BankaccountSyncDocumenttypechecklistV1Response> BankaccountSyncDocumenttypechecklistV1WithHttpInfo(int pkiBankaccountID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<BankaccountSyncDocumenttypechecklistV1Response>("/1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BankaccountSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BankaccountSyncDocumenttypechecklistV1Response> BankaccountSyncDocumenttypechecklistV1Async(int pkiBankaccountID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BankaccountSyncDocumenttypechecklistV1Response> localVarResponse = await BankaccountSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiBankaccountID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBankaccountID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BankaccountSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BankaccountSyncDocumenttypechecklistV1Response>> BankaccountSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBankaccountID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBankaccountID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBankaccountID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBankaccountApi.BankaccountSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<BankaccountSyncDocumenttypechecklistV1Response>("/1/object/bankaccount/{pkiBankaccountID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BankaccountSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

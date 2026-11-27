@@ -117,7 +117,7 @@ namespace eZmaxApi.Api
         /// Improve a message using the AI
         /// </summary>
         /// <remarks>
-        /// Improve a message using the AI.
+        /// The endpoint allows to improve a discussion message using the AI.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -129,7 +129,7 @@ namespace eZmaxApi.Api
         /// Improve a message using the AI
         /// </summary>
         /// <remarks>
-        /// Improve a message using the AI.
+        /// The endpoint allows to improve a discussion message using the AI.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -293,7 +293,7 @@ namespace eZmaxApi.Api
         /// Improve a message using the AI
         /// </summary>
         /// <remarks>
-        /// Improve a message using the AI.
+        /// The endpoint allows to improve a discussion message using the AI.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -306,7 +306,7 @@ namespace eZmaxApi.Api
         /// Improve a message using the AI
         /// </summary>
         /// <remarks>
-        /// Improve a message using the AI.
+        /// The endpoint allows to improve a discussion message using the AI.
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -1089,7 +1089,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Improve a message using the AI Improve a message using the AI.
+        /// Improve a message using the AI The endpoint allows to improve a discussion message using the AI.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -1102,7 +1102,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Improve a message using the AI Improve a message using the AI.
+        /// Improve a message using the AI The endpoint allows to improve a discussion message using the AI.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -1166,7 +1166,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Improve a message using the AI Improve a message using the AI.
+        /// Improve a message using the AI The endpoint allows to improve a discussion message using the AI.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>
@@ -1180,7 +1180,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Improve a message using the AI Improve a message using the AI.
+        /// Improve a message using the AI The endpoint allows to improve a discussion message using the AI.
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="discussionImproveMessageV1Request"></param>

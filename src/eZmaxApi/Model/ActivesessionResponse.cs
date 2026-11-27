@@ -92,7 +92,7 @@ namespace eZmaxApi.Model
         /// <param name="sDepartmentNameX">The Name of the Department in the language of the requester (required).</param>
         /// <param name="bActivesessionDebug">Whether the active session is in debug or not (required).</param>
         /// <param name="bActivesessionIssuperadmin">Whether the active session is superadmin or not (required).</param>
-        /// <param name="bActivesessionAttachment">Can access attachment when we clone a user.</param>
+        /// <param name="bActivesessionAttachment">Whether the user can access attachments when their session is cloned.</param>
         /// <param name="bActivesessionCanafe">Can access canafe when we clone a user.</param>
         /// <param name="bActivesessionFinancial">Can access financial element when we clone a user.</param>
         /// <param name="bActivesessionRealestatecompleted">Can access closed realestate folders when we clone a user.</param>
@@ -214,9 +214,9 @@ namespace eZmaxApi.Model
         public bool BActivesessionIssuperadmin { get; set; }
 
         /// <summary>
-        /// Can access attachment when we clone a user
+        /// Whether the user can access attachments when their session is cloned
         /// </summary>
-        /// <value>Can access attachment when we clone a user</value>
+        /// <value>Whether the user can access attachments when their session is cloned</value>
         /*
         <example>false</example>
         */

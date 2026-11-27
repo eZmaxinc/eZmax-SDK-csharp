@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEDocumenttypeTransactiontype
-The transactiontype of the Documenttype
+The transaction type for which the document is applicable
 
 ## Properties
 

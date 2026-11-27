@@ -10,8 +10,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**DeposittransitchequeGetCommunicationListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationlistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationList | Retrieve Communication list |
 | [**DeposittransitchequeGetCommunicationrecipientsV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationrecipientsv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**DeposittransitchequeGetCommunicationsendersV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetcommunicationsendersv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getCommunicationsenders | Retrieve Communication senders |
+| [**DeposittransitchequeGetDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetdocumenttypechecklistv1) | **GET** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**DeposittransitchequeGetListV1**](ObjectDeposittransitchequeApi.md#deposittransitchequegetlistv1) | **GET** /1/object/deposittransitcheque/getList | Retrieve Deposittransitcheque list |
 | [**DeposittransitchequeImportIntoEDMV1**](ObjectDeposittransitchequeApi.md#deposittransitchequeimportintoedmv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/importIntoEDM | Import attachments into the Deposittransitcheque |
+| [**DeposittransitchequeSyncDocumenttypechecklistV1**](ObjectDeposittransitchequeApi.md#deposittransitchequesyncdocumenttypechecklistv1) | **POST** /1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="deposittransitchequebatchdownloadv1"></a>
 # **DeposittransitchequeBatchDownloadV1**
@@ -587,6 +589,101 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="deposittransitchequegetdocumenttypechecklistv1"></a>
+# **DeposittransitchequeGetDocumenttypechecklistV1**
+> DeposittransitchequeGetDocumenttypechecklistV1Response DeposittransitchequeGetDocumenttypechecklistV1 (int pkiDeposittransitchequeID)
+
+Retrieve Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class DeposittransitchequeGetDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectDeposittransitchequeApi(config);
+            var pkiDeposittransitchequeID = 56;  // int | 
+
+            try
+            {
+                // Retrieve Document type checklist
+                DeposittransitchequeGetDocumenttypechecklistV1Response result = apiInstance.DeposittransitchequeGetDocumenttypechecklistV1(pkiDeposittransitchequeID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectDeposittransitchequeApi.DeposittransitchequeGetDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Document type checklist
+    ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response> response = apiInstance.DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectDeposittransitchequeApi.DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiDeposittransitchequeID** | **int** |  |  |
+
+### Return type
+
+[**DeposittransitchequeGetDocumenttypechecklistV1Response**](DeposittransitchequeGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="deposittransitchequegetlistv1"></a>
 # **DeposittransitchequeGetListV1**
 > DeposittransitchequeGetListV1Response DeposittransitchequeGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
@@ -768,6 +865,103 @@ catch (ApiException e)
 ### Return type
 
 [**DeposittransitchequeImportIntoEDMV1Response**](DeposittransitchequeImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="deposittransitchequesyncdocumenttypechecklistv1"></a>
+# **DeposittransitchequeSyncDocumenttypechecklistV1**
+> DeposittransitchequeSyncDocumenttypechecklistV1Response DeposittransitchequeSyncDocumenttypechecklistV1 (int pkiDeposittransitchequeID, Object? body = null)
+
+Synchronize Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class DeposittransitchequeSyncDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectDeposittransitchequeApi(config);
+            var pkiDeposittransitchequeID = 56;  // int | 
+            var body = null;  // Object? |  (optional) 
+
+            try
+            {
+                // Synchronize Document type checklist
+                DeposittransitchequeSyncDocumenttypechecklistV1Response result = apiInstance.DeposittransitchequeSyncDocumenttypechecklistV1(pkiDeposittransitchequeID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectDeposittransitchequeApi.DeposittransitchequeSyncDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Synchronize Document type checklist
+    ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response> response = apiInstance.DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectDeposittransitchequeApi.DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiDeposittransitchequeID** | **int** |  |  |
+| **body** | **Object?** |  | [optional]  |
+
+### Return type
+
+[**DeposittransitchequeSyncDocumenttypechecklistV1Response**](DeposittransitchequeSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

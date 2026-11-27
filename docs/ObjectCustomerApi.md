@@ -11,8 +11,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**CustomerGetCommunicationListV1**](ObjectCustomerApi.md#customergetcommunicationlistv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationList | Retrieve Communication list |
 | [**CustomerGetCommunicationrecipientsV1**](ObjectCustomerApi.md#customergetcommunicationrecipientsv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**CustomerGetCommunicationsendersV1**](ObjectCustomerApi.md#customergetcommunicationsendersv1) | **GET** /1/object/customer/{pkiCustomerID}/getCommunicationsenders | Retrieve Communication senders |
+| [**CustomerGetDocumenttypechecklistV1**](ObjectCustomerApi.md#customergetdocumenttypechecklistv1) | **GET** /1/object/customer/{pkiCustomerID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**CustomerGetObjectV2**](ObjectCustomerApi.md#customergetobjectv2) | **GET** /2/object/customer/{pkiCustomerID} | Retrieve an existing Customer |
 | [**CustomerImportIntoEDMV1**](ObjectCustomerApi.md#customerimportintoedmv1) | **POST** /1/object/customer/{pkiCustomerID}/importIntoEDM | Import attachments into the Customer |
+| [**CustomerSyncDocumenttypechecklistV1**](ObjectCustomerApi.md#customersyncdocumenttypechecklistv1) | **POST** /1/object/customer/{pkiCustomerID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="customerbatchdownloadv1"></a>
 # **CustomerBatchDownloadV1**
@@ -688,6 +690,101 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="customergetdocumenttypechecklistv1"></a>
+# **CustomerGetDocumenttypechecklistV1**
+> CustomerGetDocumenttypechecklistV1Response CustomerGetDocumenttypechecklistV1 (int pkiCustomerID)
+
+Retrieve Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class CustomerGetDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectCustomerApi(config);
+            var pkiCustomerID = 56;  // int | 
+
+            try
+            {
+                // Retrieve Document type checklist
+                CustomerGetDocumenttypechecklistV1Response result = apiInstance.CustomerGetDocumenttypechecklistV1(pkiCustomerID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectCustomerApi.CustomerGetDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CustomerGetDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Document type checklist
+    ApiResponse<CustomerGetDocumenttypechecklistV1Response> response = apiInstance.CustomerGetDocumenttypechecklistV1WithHttpInfo(pkiCustomerID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectCustomerApi.CustomerGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiCustomerID** | **int** |  |  |
+
+### Return type
+
+[**CustomerGetDocumenttypechecklistV1Response**](CustomerGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="customergetobjectv2"></a>
 # **CustomerGetObjectV2**
 > CustomerGetObjectV2Response CustomerGetObjectV2 (int pkiCustomerID)
@@ -861,6 +958,103 @@ catch (ApiException e)
 ### Return type
 
 [**CustomerImportIntoEDMV1Response**](CustomerImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="customersyncdocumenttypechecklistv1"></a>
+# **CustomerSyncDocumenttypechecklistV1**
+> CustomerSyncDocumenttypechecklistV1Response CustomerSyncDocumenttypechecklistV1 (int pkiCustomerID, Object? body = null)
+
+Synchronize Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class CustomerSyncDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectCustomerApi(config);
+            var pkiCustomerID = 56;  // int | 
+            var body = null;  // Object? |  (optional) 
+
+            try
+            {
+                // Synchronize Document type checklist
+                CustomerSyncDocumenttypechecklistV1Response result = apiInstance.CustomerSyncDocumenttypechecklistV1(pkiCustomerID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectCustomerApi.CustomerSyncDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CustomerSyncDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Synchronize Document type checklist
+    ApiResponse<CustomerSyncDocumenttypechecklistV1Response> response = apiInstance.CustomerSyncDocumenttypechecklistV1WithHttpInfo(pkiCustomerID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectCustomerApi.CustomerSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiCustomerID** | **int** |  |  |
+| **body** | **Object?** |  | [optional]  |
+
+### Return type
+
+[**CustomerSyncDocumenttypechecklistV1Response**](CustomerSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

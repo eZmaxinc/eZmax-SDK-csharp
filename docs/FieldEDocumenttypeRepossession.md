@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEDocumenttypeRepossession
-The repossession of the Documenttype
+Whether the document type applies to repossession transactions
 
 ## Properties
 

@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The privacydefault of the Documenttype
+    /// The default privacy setting for the document type
     /// </summary>
-    /// <value>The privacydefault of the Documenttype</value>
+    /// <value>The default privacy setting for the document type</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEDocumenttypePrivacydefault
     {

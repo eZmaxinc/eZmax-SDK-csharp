@@ -1,11 +1,11 @@
 # eZmaxApi.Model.DiscussionImproveMessageV1ResponseMPayload
-Payload for POST /1/object/discussion
+Payload for POST /1/object/discussion/improveMessage
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**APkiDiscussionID** | **List&lt;int&gt;** | An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. | 
+**TDiscussionMessage** | **string** | The Message of the Discussion | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

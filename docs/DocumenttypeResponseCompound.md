@@ -8,20 +8,19 @@ Name | Type | Description | Notes
 **PkiDocumenttypeID** | **int** | The unique ID of the Documenttype | 
 **ObjDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  | 
 **EDocumenttypeStep** | **ComputedEDocumenttypeStep** |  | 
-**SDocumenttypeDefaultfilename** | **string** | The defaultfilename of the Documenttype | 
-**BDocumenttypeShowagent** | **bool** | Whether if it&#39;s an showagent | 
+**SDocumenttypeDefaultfilename** | **string** | The default filename for the document type | 
+**BDocumenttypeShowagent** | **bool** | Whether the document type should be shown to the agent | 
 **BDocumenttypeIsactive** | **bool** | Whether the documenttype is active or not | 
-**BDocumenttypeIsrequired** | **bool** | Whether if it&#39;s an isrequired | 
-**BDocumenttypeSale** | **bool** | Whether if it&#39;s an sale | [optional] 
-**BDocumenttypeRental** | **bool** | Whether if it&#39;s an rental | [optional] 
-**BDocumenttypeReference** | **bool** | Whether if it&#39;s an reference | [optional] 
-**BDocumenttypeMortgagereference** | **bool** | Whether if it&#39;s an mortgagereference | [optional] 
-**BDocumenttypeEvaluation** | **bool** | Whether if it&#39;s an evaluation | [optional] 
-**BDocumenttypeConsultation** | **bool** | Whether if it&#39;s an consultation | [optional] 
-**BDocumenttypeOtherservices** | **bool** | Whether if it&#39;s an otherservices | [optional] 
-**BDocumenttypeForeclosedsale** | **bool** | Whether if it&#39;s an foreclosedsale | [optional] 
-**BDocumenttypeCommercialfunding** | **bool** | Whether if it&#39;s an commercialfunding | [optional] 
-**BDocumenttypeCanafe** | **bool** | Whether if it&#39;s an canafe | [optional] 
+**BDocumenttypeSale** | **bool** | Whether the document type applies to sale transactions | [optional] 
+**BDocumenttypeRental** | **bool** | Whether the document type applies to rental transactions | [optional] 
+**BDocumenttypeReference** | **bool** | Whether the document type is a reference document | [optional] 
+**BDocumenttypeMortgagereference** | **bool** | Whether the document type is a mortgage reference | [optional] 
+**BDocumenttypeEvaluation** | **bool** | Whether the document type applies to evaluation transactions | [optional] 
+**BDocumenttypeConsultation** | **bool** | Whether the document type applies to consultation transactions | [optional] 
+**BDocumenttypeOtherservices** | **bool** | Whether the document type applies to other services | [optional] 
+**BDocumenttypeForeclosedsale** | **bool** | Whether the document type applies to foreclosed sale transactions | [optional] 
+**BDocumenttypeCommercialfunding** | **bool** | Whether the document type applies to commercial funding transactions | [optional] 
+**BDocumenttypeCanafe** | **bool** | Whether the document type applies to Canafe transactions | [optional] 
 **EDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  | [optional] 
 **EDocumenttypePrivacydefault** | **FieldEDocumenttypePrivacydefault** |  | [optional] 
 **EDocumenttypeStatusdefault** | **FieldEDocumenttypeStatusdefault** |  | [optional] 

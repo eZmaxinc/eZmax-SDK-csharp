@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Response for POST /1/object/discussion
+    /// Response for POST /1/object/discussion/improveMessage
     /// </summary>
     [DataContract(Name = "discussion-improveMessage-v1-Response")]
     public partial class DiscussionImproveMessageV1Response : IValidatableObject

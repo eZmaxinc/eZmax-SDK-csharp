@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The repossession of the Documenttype
+    /// Whether the document type applies to repossession transactions
     /// </summary>
-    /// <value>The repossession of the Documenttype</value>
+    /// <value>Whether the document type applies to repossession transactions</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEDocumenttypeRepossession
     {

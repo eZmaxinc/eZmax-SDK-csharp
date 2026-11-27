@@ -150,6 +150,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of AdjustmentGetCommunicationsendersV1Response</returns>
         ApiResponse<AdjustmentGetCommunicationsendersV1Response> AdjustmentGetCommunicationsendersV1WithHttpInfo(int pkiAdjustmentID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AdjustmentGetDocumenttypechecklistV1Response</returns>
+        AdjustmentGetDocumenttypechecklistV1Response AdjustmentGetDocumenttypechecklistV1(int pkiAdjustmentID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AdjustmentGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<AdjustmentGetDocumenttypechecklistV1Response> AdjustmentGetDocumenttypechecklistV1WithHttpInfo(int pkiAdjustmentID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Adjustment list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -199,6 +219,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AdjustmentImportIntoEDMV1Response</returns>
         ApiResponse<AdjustmentImportIntoEDMV1Response> AdjustmentImportIntoEDMV1WithHttpInfo(int pkiAdjustmentID, AdjustmentImportIntoEDMV1Request adjustmentImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        AdjustmentSyncDocumenttypechecklistV1Response AdjustmentSyncDocumenttypechecklistV1(int pkiAdjustmentID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response> AdjustmentSyncDocumenttypechecklistV1WithHttpInfo(int pkiAdjustmentID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -361,6 +403,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (AdjustmentGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdjustmentGetCommunicationsendersV1Response>> AdjustmentGetCommunicationsendersV1WithHttpInfoAsync(int pkiAdjustmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AdjustmentGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<AdjustmentGetDocumenttypechecklistV1Response> AdjustmentGetDocumenttypechecklistV1Async(int pkiAdjustmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AdjustmentGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdjustmentGetDocumenttypechecklistV1Response>> AdjustmentGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiAdjustmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Adjustment list
         /// </summary>
         /// <remarks>
@@ -420,6 +487,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AdjustmentImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdjustmentImportIntoEDMV1Response>> AdjustmentImportIntoEDMV1WithHttpInfoAsync(int pkiAdjustmentID, AdjustmentImportIntoEDMV1Request adjustmentImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<AdjustmentSyncDocumenttypechecklistV1Response> AdjustmentSyncDocumenttypechecklistV1Async(int pkiAdjustmentID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AdjustmentSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response>> AdjustmentSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiAdjustmentID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1423,6 +1517,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AdjustmentGetDocumenttypechecklistV1Response</returns>
+        public AdjustmentGetDocumenttypechecklistV1Response AdjustmentGetDocumenttypechecklistV1(int pkiAdjustmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AdjustmentGetDocumenttypechecklistV1Response> localVarResponse = AdjustmentGetDocumenttypechecklistV1WithHttpInfo(pkiAdjustmentID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AdjustmentGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AdjustmentGetDocumenttypechecklistV1Response> AdjustmentGetDocumenttypechecklistV1WithHttpInfo(int pkiAdjustmentID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAdjustmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAdjustmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAdjustmentApi.AdjustmentGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AdjustmentGetDocumenttypechecklistV1Response>("/1/object/adjustment/{pkiAdjustmentID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AdjustmentGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AdjustmentGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<AdjustmentGetDocumenttypechecklistV1Response> AdjustmentGetDocumenttypechecklistV1Async(int pkiAdjustmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AdjustmentGetDocumenttypechecklistV1Response> localVarResponse = await AdjustmentGetDocumenttypechecklistV1WithHttpInfoAsync(pkiAdjustmentID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AdjustmentGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AdjustmentGetDocumenttypechecklistV1Response>> AdjustmentGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiAdjustmentID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAdjustmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAdjustmentID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectAdjustmentApi.AdjustmentGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AdjustmentGetDocumenttypechecklistV1Response>("/1/object/adjustment/{pkiAdjustmentID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AdjustmentGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Adjustment list 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1775,6 +2012,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AdjustmentImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        public AdjustmentSyncDocumenttypechecklistV1Response AdjustmentSyncDocumenttypechecklistV1(int pkiAdjustmentID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response> localVarResponse = AdjustmentSyncDocumenttypechecklistV1WithHttpInfo(pkiAdjustmentID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response> AdjustmentSyncDocumenttypechecklistV1WithHttpInfo(int pkiAdjustmentID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAdjustmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAdjustmentID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectAdjustmentApi.AdjustmentSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AdjustmentSyncDocumenttypechecklistV1Response>("/1/object/adjustment/{pkiAdjustmentID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AdjustmentSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AdjustmentSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<AdjustmentSyncDocumenttypechecklistV1Response> AdjustmentSyncDocumenttypechecklistV1Async(int pkiAdjustmentID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response> localVarResponse = await AdjustmentSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiAdjustmentID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiAdjustmentID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AdjustmentSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<AdjustmentSyncDocumenttypechecklistV1Response>> AdjustmentSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiAdjustmentID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiAdjustmentID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiAdjustmentID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectAdjustmentApi.AdjustmentSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AdjustmentSyncDocumenttypechecklistV1Response>("/1/object/adjustment/{pkiAdjustmentID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("AdjustmentSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

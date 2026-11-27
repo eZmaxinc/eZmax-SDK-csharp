@@ -10,7 +10,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ReconciliationGetCommunicationListV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationlistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationList | Retrieve Communication list |
 | [**ReconciliationGetCommunicationrecipientsV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationrecipientsv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**ReconciliationGetCommunicationsendersV1**](ObjectReconciliationApi.md#reconciliationgetcommunicationsendersv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders | Retrieve Communication senders |
+| [**ReconciliationGetDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationgetdocumenttypechecklistv1) | **GET** /1/object/reconciliation/{pkiReconciliationID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**ReconciliationImportIntoEDMV1**](ObjectReconciliationApi.md#reconciliationimportintoedmv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/importIntoEDM | Import attachments into the Reconciliation |
+| [**ReconciliationSyncDocumenttypechecklistV1**](ObjectReconciliationApi.md#reconciliationsyncdocumenttypechecklistv1) | **POST** /1/object/reconciliation/{pkiReconciliationID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="reconciliationbatchdownloadv1"></a>
 # **ReconciliationBatchDownloadV1**
@@ -586,6 +588,101 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="reconciliationgetdocumenttypechecklistv1"></a>
+# **ReconciliationGetDocumenttypechecklistV1**
+> ReconciliationGetDocumenttypechecklistV1Response ReconciliationGetDocumenttypechecklistV1 (int pkiReconciliationID)
+
+Retrieve Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class ReconciliationGetDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectReconciliationApi(config);
+            var pkiReconciliationID = 56;  // int | 
+
+            try
+            {
+                // Retrieve Document type checklist
+                ReconciliationGetDocumenttypechecklistV1Response result = apiInstance.ReconciliationGetDocumenttypechecklistV1(pkiReconciliationID);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectReconciliationApi.ReconciliationGetDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ReconciliationGetDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Retrieve Document type checklist
+    ApiResponse<ReconciliationGetDocumenttypechecklistV1Response> response = apiInstance.ReconciliationGetDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectReconciliationApi.ReconciliationGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiReconciliationID** | **int** |  |  |
+
+### Return type
+
+[**ReconciliationGetDocumenttypechecklistV1Response**](ReconciliationGetDocumenttypechecklistV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="reconciliationimportintoedmv1"></a>
 # **ReconciliationImportIntoEDMV1**
 > ReconciliationImportIntoEDMV1Response ReconciliationImportIntoEDMV1 (int pkiReconciliationID, ReconciliationImportIntoEDMV1Request reconciliationImportIntoEDMV1Request)
@@ -664,6 +761,103 @@ catch (ApiException e)
 ### Return type
 
 [**ReconciliationImportIntoEDMV1Response**](ReconciliationImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="reconciliationsyncdocumenttypechecklistv1"></a>
+# **ReconciliationSyncDocumenttypechecklistV1**
+> ReconciliationSyncDocumenttypechecklistV1Response ReconciliationSyncDocumenttypechecklistV1 (int pkiReconciliationID, Object? body = null)
+
+Synchronize Document type checklist
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using eZmaxApi.Api;
+using eZmaxApi.Client;
+using eZmaxApi.Model;
+
+namespace Example
+{
+    public class ReconciliationSyncDocumenttypechecklistV1Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new ObjectReconciliationApi(config);
+            var pkiReconciliationID = 56;  // int | 
+            var body = null;  // Object? |  (optional) 
+
+            try
+            {
+                // Synchronize Document type checklist
+                ReconciliationSyncDocumenttypechecklistV1Response result = apiInstance.ReconciliationSyncDocumenttypechecklistV1(pkiReconciliationID, body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ObjectReconciliationApi.ReconciliationSyncDocumenttypechecklistV1: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ReconciliationSyncDocumenttypechecklistV1WithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Synchronize Document type checklist
+    ApiResponse<ReconciliationSyncDocumenttypechecklistV1Response> response = apiInstance.ReconciliationSyncDocumenttypechecklistV1WithHttpInfo(pkiReconciliationID, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ObjectReconciliationApi.ReconciliationSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **pkiReconciliationID** | **int** |  |  |
+| **body** | **Object?** |  | [optional]  |
+
+### Return type
+
+[**ReconciliationSyncDocumenttypechecklistV1Response**](ReconciliationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

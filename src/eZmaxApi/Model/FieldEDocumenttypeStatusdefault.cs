@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The statusdefault of the Documenttype
+    /// The default status requirement for the document type
     /// </summary>
-    /// <value>The statusdefault of the Documenttype</value>
+    /// <value>The default status requirement for the document type</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEDocumenttypeStatusdefault
     {
@@ -43,7 +43,13 @@ namespace eZmaxApi.Model
         /// Enum Required for value: Required
         /// </summary>
         [EnumMember(Value = "Required")]
-        Required = 2
+        Required = 2,
+
+        /// <summary>
+        /// Enum Mandatory for value: Mandatory
+        /// </summary>
+        [EnumMember(Value = "Mandatory")]
+        Mandatory = 3
     }
 
 }

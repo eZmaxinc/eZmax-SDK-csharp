@@ -28,10 +28,10 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <remarks>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -40,10 +40,10 @@ namespace eZmaxApi.Api
         EzmaxpartnerSubscribeV1Response EzmaxpartnerSubscribeV1(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0);
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <remarks>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -60,10 +60,10 @@ namespace eZmaxApi.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <remarks>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -73,10 +73,10 @@ namespace eZmaxApi.Api
         System.Threading.Tasks.Task<EzmaxpartnerSubscribeV1Response> EzmaxpartnerSubscribeV1Async(EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <remarks>
-        /// Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage
         /// </remarks>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -205,7 +205,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -218,7 +218,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -282,7 +282,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>
@@ -296,7 +296,7 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
-        /// Subscribe to an Ezmaxparnerproductstage Subscribe to an Ezmaxparnerproductstage
+        /// Subscribe to an Ezmaxpartnerproductstage Subscribe to an Ezmaxpartnerproductstage
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ezmaxpartnerSubscribeV1Request"></param>

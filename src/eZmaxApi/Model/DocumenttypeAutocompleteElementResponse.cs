@@ -41,7 +41,7 @@ namespace eZmaxApi.Model
         /// Initializes a new instance of the <see cref="DocumenttypeAutocompleteElementResponse" /> class.
         /// </summary>
         /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype (required).</param>
-        /// <param name="sDocumenttypeNameX">The name of the Documenttype in the language of the requester (required).</param>
+        /// <param name="sDocumenttypeNameX">The name of the document type in the requester&#39;s language (required).</param>
         /// <param name="bDocumenttypeIsactive">Whether the documenttype is active or not (required).</param>
         public DocumenttypeAutocompleteElementResponse(int pkiDocumenttypeID = default, string sDocumenttypeNameX = default, bool bDocumenttypeIsactive = default)
         {
@@ -66,9 +66,9 @@ namespace eZmaxApi.Model
         public int PkiDocumenttypeID { get; set; }
 
         /// <summary>
-        /// The name of the Documenttype in the language of the requester
+        /// The name of the document type in the requester&#39;s language
         /// </summary>
-        /// <value>The name of the Documenttype in the language of the requester</value>
+        /// <value>The name of the document type in the requester&#39;s language</value>
         /*
         <example>Loan deed</example>
         */

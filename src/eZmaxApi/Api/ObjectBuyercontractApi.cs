@@ -150,6 +150,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of BuyercontractGetCommunicationsendersV1Response</returns>
         ApiResponse<BuyercontractGetCommunicationsendersV1Response> BuyercontractGetCommunicationsendersV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetDocumenttypechecklistV1Response</returns>
+        BuyercontractGetDocumenttypechecklistV1Response BuyercontractGetDocumenttypechecklistV1(int pkiBuyercontractID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<BuyercontractGetDocumenttypechecklistV1Response> BuyercontractGetDocumenttypechecklistV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Buyercontract list
         /// </summary>
         /// <remarks>
@@ -202,6 +222,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BuyercontractImportIntoEDMV1Response</returns>
         ApiResponse<BuyercontractImportIntoEDMV1Response> BuyercontractImportIntoEDMV1WithHttpInfo(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        BuyercontractSyncDocumenttypechecklistV1Response BuyercontractSyncDocumenttypechecklistV1(int pkiBuyercontractID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response> BuyercontractSyncDocumenttypechecklistV1WithHttpInfo(int pkiBuyercontractID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -364,6 +406,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (BuyercontractGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuyercontractGetCommunicationsendersV1Response>> BuyercontractGetCommunicationsendersV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractGetDocumenttypechecklistV1Response> BuyercontractGetDocumenttypechecklistV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractGetDocumenttypechecklistV1Response>> BuyercontractGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Buyercontract list
         /// </summary>
         /// <remarks>
@@ -423,6 +490,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BuyercontractImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<BuyercontractImportIntoEDMV1Response>> BuyercontractImportIntoEDMV1WithHttpInfoAsync(int pkiBuyercontractID, BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<BuyercontractSyncDocumenttypechecklistV1Response> BuyercontractSyncDocumenttypechecklistV1Async(int pkiBuyercontractID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response>> BuyercontractSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBuyercontractID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1426,6 +1520,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractGetDocumenttypechecklistV1Response</returns>
+        public BuyercontractGetDocumenttypechecklistV1Response BuyercontractGetDocumenttypechecklistV1(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetDocumenttypechecklistV1Response> localVarResponse = BuyercontractGetDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractGetDocumenttypechecklistV1Response> BuyercontractGetDocumenttypechecklistV1WithHttpInfo(int pkiBuyercontractID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<BuyercontractGetDocumenttypechecklistV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractGetDocumenttypechecklistV1Response> BuyercontractGetDocumenttypechecklistV1Async(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractGetDocumenttypechecklistV1Response> localVarResponse = await BuyercontractGetDocumenttypechecklistV1WithHttpInfoAsync(pkiBuyercontractID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractGetDocumenttypechecklistV1Response>> BuyercontractGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiBuyercontractID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<BuyercontractGetDocumenttypechecklistV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Buyercontract list Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |- --|- --| | eBuyercontractStep | Imported&lt;br&gt;Active&lt;br&gt;Modified&lt;br&gt;ContractEnded&lt;br&gt;ExpiredContract&lt;br&gt;Bought | | eBuyercontractType | Rent&lt;br&gt;Sale&lt;br&gt;RentOrSale |
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1778,6 +2015,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BuyercontractImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        public BuyercontractSyncDocumenttypechecklistV1Response BuyercontractSyncDocumenttypechecklistV1(int pkiBuyercontractID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response> localVarResponse = BuyercontractSyncDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response> BuyercontractSyncDocumenttypechecklistV1WithHttpInfo(int pkiBuyercontractID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<BuyercontractSyncDocumenttypechecklistV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of BuyercontractSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<BuyercontractSyncDocumenttypechecklistV1Response> BuyercontractSyncDocumenttypechecklistV1Async(int pkiBuyercontractID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response> localVarResponse = await BuyercontractSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiBuyercontractID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiBuyercontractID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (BuyercontractSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response>> BuyercontractSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiBuyercontractID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiBuyercontractID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiBuyercontractID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectBuyercontractApi.BuyercontractSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<BuyercontractSyncDocumenttypechecklistV1Response>("/1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("BuyercontractSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

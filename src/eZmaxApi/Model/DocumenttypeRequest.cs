@@ -91,20 +91,19 @@ namespace eZmaxApi.Model
         /// <param name="pkiDocumenttypeID">The unique ID of the Documenttype.</param>
         /// <param name="objDocumenttypeName">objDocumenttypeName (required).</param>
         /// <param name="eDocumenttypeStep">eDocumenttypeStep (required).</param>
-        /// <param name="sDocumenttypeDefaultfilename">The defaultfilename of the Documenttype (required).</param>
-        /// <param name="bDocumenttypeShowagent">Whether if it&#39;s an showagent (required).</param>
+        /// <param name="sDocumenttypeDefaultfilename">The default filename for the document type (required).</param>
+        /// <param name="bDocumenttypeShowagent">Whether the document type should be shown to the agent (required).</param>
         /// <param name="bDocumenttypeIsactive">Whether the documenttype is active or not (required).</param>
-        /// <param name="bDocumenttypeIsrequired">Whether if it&#39;s an isrequired (required).</param>
-        /// <param name="bDocumenttypeSale">Whether if it&#39;s an sale (required).</param>
-        /// <param name="bDocumenttypeRental">Whether if it&#39;s an rental (required).</param>
-        /// <param name="bDocumenttypeReference">Whether if it&#39;s an reference (required).</param>
-        /// <param name="bDocumenttypeMortgagereference">Whether if it&#39;s an mortgagereference (required).</param>
-        /// <param name="bDocumenttypeEvaluation">Whether if it&#39;s an evaluation (required).</param>
-        /// <param name="bDocumenttypeConsultation">Whether if it&#39;s an consultation (required).</param>
-        /// <param name="bDocumenttypeOtherservices">Whether if it&#39;s an otherservices (required).</param>
-        /// <param name="bDocumenttypeForeclosedsale">Whether if it&#39;s an foreclosedsale (required).</param>
-        /// <param name="bDocumenttypeCommercialfunding">Whether if it&#39;s an commercialfunding (required).</param>
-        /// <param name="bDocumenttypeCanafe">Whether if it&#39;s an canafe (required).</param>
+        /// <param name="bDocumenttypeSale">Whether the document type applies to sale transactions (required).</param>
+        /// <param name="bDocumenttypeRental">Whether the document type applies to rental transactions (required).</param>
+        /// <param name="bDocumenttypeReference">Whether the document type is a reference document (required).</param>
+        /// <param name="bDocumenttypeMortgagereference">Whether the document type is a mortgage reference (required).</param>
+        /// <param name="bDocumenttypeEvaluation">Whether the document type applies to evaluation transactions (required).</param>
+        /// <param name="bDocumenttypeConsultation">Whether the document type applies to consultation transactions (required).</param>
+        /// <param name="bDocumenttypeOtherservices">Whether the document type applies to other services (required).</param>
+        /// <param name="bDocumenttypeForeclosedsale">Whether the document type applies to foreclosed sale transactions (required).</param>
+        /// <param name="bDocumenttypeCommercialfunding">Whether the document type applies to commercial funding transactions (required).</param>
+        /// <param name="bDocumenttypeCanafe">Whether the document type applies to Canafe transactions (required).</param>
         /// <param name="eDocumenttypeEzcom">eDocumenttypeEzcom.</param>
         /// <param name="eDocumenttypePrivacydefault">eDocumenttypePrivacydefault (required).</param>
         /// <param name="eDocumenttypeStatusdefault">eDocumenttypeStatusdefault (required).</param>
@@ -113,7 +112,7 @@ namespace eZmaxApi.Model
         /// <param name="eDocumenttypeTransactiontype">eDocumenttypeTransactiontype (required).</param>
         /// <param name="eDocumenttypeRepossession">eDocumenttypeRepossession (required).</param>
         /// <param name="aFkiInscriptiontypeID">aFkiInscriptiontypeID (required).</param>
-        public DocumenttypeRequest(int pkiDocumenttypeID = default, MultilingualDocumenttypeName objDocumenttypeName = default, ComputedEDocumenttypeStep eDocumenttypeStep = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeIsrequired = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom? eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default, List<int> aFkiInscriptiontypeID = default)
+        public DocumenttypeRequest(int pkiDocumenttypeID = default, MultilingualDocumenttypeName objDocumenttypeName = default, ComputedEDocumenttypeStep eDocumenttypeStep = default, string sDocumenttypeDefaultfilename = default, bool bDocumenttypeShowagent = default, bool bDocumenttypeIsactive = default, bool bDocumenttypeSale = default, bool bDocumenttypeRental = default, bool bDocumenttypeReference = default, bool bDocumenttypeMortgagereference = default, bool bDocumenttypeEvaluation = default, bool bDocumenttypeConsultation = default, bool bDocumenttypeOtherservices = default, bool bDocumenttypeForeclosedsale = default, bool bDocumenttypeCommercialfunding = default, bool bDocumenttypeCanafe = default, FieldEDocumenttypeEzcom? eDocumenttypeEzcom = default, FieldEDocumenttypePrivacydefault eDocumenttypePrivacydefault = default, FieldEDocumenttypeStatusdefault eDocumenttypeStatusdefault = default, FieldEDocumenttypeSalebyowner eDocumenttypeSalebyowner = default, FieldEDocumenttypeSaledisplaybyrole eDocumenttypeSaledisplaybyrole = default, FieldEDocumenttypeTransactiontype eDocumenttypeTransactiontype = default, FieldEDocumenttypeRepossession eDocumenttypeRepossession = default, List<int> aFkiInscriptiontypeID = default)
         {
             // to ensure "objDocumenttypeName" is required (not null)
             if (objDocumenttypeName == null)
@@ -130,7 +129,6 @@ namespace eZmaxApi.Model
             this.SDocumenttypeDefaultfilename = sDocumenttypeDefaultfilename;
             this.BDocumenttypeShowagent = bDocumenttypeShowagent;
             this.BDocumenttypeIsactive = bDocumenttypeIsactive;
-            this.BDocumenttypeIsrequired = bDocumenttypeIsrequired;
             this.BDocumenttypeSale = bDocumenttypeSale;
             this.BDocumenttypeRental = bDocumenttypeRental;
             this.BDocumenttypeReference = bDocumenttypeReference;
@@ -174,9 +172,9 @@ namespace eZmaxApi.Model
         public MultilingualDocumenttypeName ObjDocumenttypeName { get; set; }
 
         /// <summary>
-        /// The defaultfilename of the Documenttype
+        /// The default filename for the document type
         /// </summary>
-        /// <value>The defaultfilename of the Documenttype</value>
+        /// <value>The default filename for the document type</value>
         /*
         <example>invoice.pdf</example>
         */
@@ -184,9 +182,9 @@ namespace eZmaxApi.Model
         public string SDocumenttypeDefaultfilename { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an showagent
+        /// Whether the document type should be shown to the agent
         /// </summary>
-        /// <value>Whether if it&#39;s an showagent</value>
+        /// <value>Whether the document type should be shown to the agent</value>
         /*
         <example>true</example>
         */
@@ -204,19 +202,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeIsactive { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an isrequired
+        /// Whether the document type applies to sale transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an isrequired</value>
-        /*
-        <example>true</example>
-        */
-        [DataMember(Name = "bDocumenttypeIsrequired", IsRequired = true, EmitDefaultValue = true)]
-        public bool BDocumenttypeIsrequired { get; set; }
-
-        /// <summary>
-        /// Whether if it&#39;s an sale
-        /// </summary>
-        /// <value>Whether if it&#39;s an sale</value>
+        /// <value>Whether the document type applies to sale transactions</value>
         /*
         <example>true</example>
         */
@@ -224,9 +212,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeSale { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an rental
+        /// Whether the document type applies to rental transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an rental</value>
+        /// <value>Whether the document type applies to rental transactions</value>
         /*
         <example>true</example>
         */
@@ -234,9 +222,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeRental { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an reference
+        /// Whether the document type is a reference document
         /// </summary>
-        /// <value>Whether if it&#39;s an reference</value>
+        /// <value>Whether the document type is a reference document</value>
         /*
         <example>true</example>
         */
@@ -244,9 +232,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeReference { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an mortgagereference
+        /// Whether the document type is a mortgage reference
         /// </summary>
-        /// <value>Whether if it&#39;s an mortgagereference</value>
+        /// <value>Whether the document type is a mortgage reference</value>
         /*
         <example>true</example>
         */
@@ -254,9 +242,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeMortgagereference { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an evaluation
+        /// Whether the document type applies to evaluation transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an evaluation</value>
+        /// <value>Whether the document type applies to evaluation transactions</value>
         /*
         <example>true</example>
         */
@@ -264,9 +252,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeEvaluation { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an consultation
+        /// Whether the document type applies to consultation transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an consultation</value>
+        /// <value>Whether the document type applies to consultation transactions</value>
         /*
         <example>true</example>
         */
@@ -274,9 +262,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeConsultation { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an otherservices
+        /// Whether the document type applies to other services
         /// </summary>
-        /// <value>Whether if it&#39;s an otherservices</value>
+        /// <value>Whether the document type applies to other services</value>
         /*
         <example>true</example>
         */
@@ -284,9 +272,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeOtherservices { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an foreclosedsale
+        /// Whether the document type applies to foreclosed sale transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an foreclosedsale</value>
+        /// <value>Whether the document type applies to foreclosed sale transactions</value>
         /*
         <example>true</example>
         */
@@ -294,9 +282,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeForeclosedsale { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an commercialfunding
+        /// Whether the document type applies to commercial funding transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an commercialfunding</value>
+        /// <value>Whether the document type applies to commercial funding transactions</value>
         /*
         <example>true</example>
         */
@@ -304,9 +292,9 @@ namespace eZmaxApi.Model
         public bool BDocumenttypeCommercialfunding { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s an canafe
+        /// Whether the document type applies to Canafe transactions
         /// </summary>
-        /// <value>Whether if it&#39;s an canafe</value>
+        /// <value>Whether the document type applies to Canafe transactions</value>
         /*
         <example>true</example>
         */
@@ -333,7 +321,6 @@ namespace eZmaxApi.Model
             sb.Append("  SDocumenttypeDefaultfilename: ").Append(SDocumenttypeDefaultfilename).Append("\n");
             sb.Append("  BDocumenttypeShowagent: ").Append(BDocumenttypeShowagent).Append("\n");
             sb.Append("  BDocumenttypeIsactive: ").Append(BDocumenttypeIsactive).Append("\n");
-            sb.Append("  BDocumenttypeIsrequired: ").Append(BDocumenttypeIsrequired).Append("\n");
             sb.Append("  BDocumenttypeSale: ").Append(BDocumenttypeSale).Append("\n");
             sb.Append("  BDocumenttypeRental: ").Append(BDocumenttypeRental).Append("\n");
             sb.Append("  BDocumenttypeReference: ").Append(BDocumenttypeReference).Append("\n");

@@ -150,6 +150,26 @@ namespace eZmaxApi.Api
         /// <returns>ApiResponse of DeposittransitchequeGetCommunicationsendersV1Response</returns>
         ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response> DeposittransitchequeGetCommunicationsendersV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        DeposittransitchequeGetDocumenttypechecklistV1Response DeposittransitchequeGetDocumenttypechecklistV1(int pkiDeposittransitchequeID, int operationIndex = 0);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response> DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0);
+        /// <summary>
         /// Retrieve Deposittransitcheque list
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -199,6 +219,28 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeposittransitchequeImportIntoEDMV1Response</returns>
         ApiResponse<DeposittransitchequeImportIntoEDMV1Response> DeposittransitchequeImportIntoEDMV1WithHttpInfo(int pkiDeposittransitchequeID, DeposittransitchequeImportIntoEDMV1Request deposittransitchequeImportIntoEDMV1Request, int operationIndex = 0);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        DeposittransitchequeSyncDocumenttypechecklistV1Response DeposittransitchequeSyncDocumenttypechecklistV1(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response> DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
 
@@ -361,6 +403,31 @@ namespace eZmaxApi.Api
         /// <returns>Task of ApiResponse (DeposittransitchequeGetCommunicationsendersV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetCommunicationsendersV1Response>> DeposittransitchequeGetCommunicationsendersV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeGetDocumenttypechecklistV1Response> DeposittransitchequeGetDocumenttypechecklistV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Retrieve Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response>> DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
         /// Retrieve Deposittransitcheque list
         /// </summary>
         /// <remarks>
@@ -420,6 +487,33 @@ namespace eZmaxApi.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeposittransitchequeImportIntoEDMV1Response)</returns>
         System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeImportIntoEDMV1Response>> DeposittransitchequeImportIntoEDMV1WithHttpInfoAsync(int pkiDeposittransitchequeID, DeposittransitchequeImportIntoEDMV1Request deposittransitchequeImportIntoEDMV1Request, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        System.Threading.Tasks.Task<DeposittransitchequeSyncDocumenttypechecklistV1Response> DeposittransitchequeSyncDocumenttypechecklistV1Async(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Synchronize Document type checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeSyncDocumenttypechecklistV1Response)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response>> DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1423,6 +1517,149 @@ namespace eZmaxApi.Api
         }
 
         /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        public DeposittransitchequeGetDocumenttypechecklistV1Response DeposittransitchequeGetDocumenttypechecklistV1(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response> localVarResponse = DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response> DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<DeposittransitchequeGetDocumenttypechecklistV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeGetDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeGetDocumenttypechecklistV1Response> DeposittransitchequeGetDocumenttypechecklistV1Async(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response> localVarResponse = await DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfoAsync(pkiDeposittransitchequeID, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeGetDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeGetDocumenttypechecklistV1Response>> DeposittransitchequeGetDocumenttypechecklistV1WithHttpInfoAsync(int pkiDeposittransitchequeID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeGetDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<DeposittransitchequeGetDocumenttypechecklistV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/getDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeGetDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Retrieve Deposittransitcheque list 
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1775,6 +2012,157 @@ namespace eZmaxApi.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeposittransitchequeImportIntoEDMV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        public DeposittransitchequeSyncDocumenttypechecklistV1Response DeposittransitchequeSyncDocumenttypechecklistV1(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response> localVarResponse = DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(pkiDeposittransitchequeID, body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        public eZmaxApi.Client.ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response> DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfo(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0)
+        {
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<DeposittransitchequeSyncDocumenttypechecklistV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeSyncDocumenttypechecklistV1", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of DeposittransitchequeSyncDocumenttypechecklistV1Response</returns>
+        public async System.Threading.Tasks.Task<DeposittransitchequeSyncDocumenttypechecklistV1Response> DeposittransitchequeSyncDocumenttypechecklistV1Async(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+            eZmaxApi.Client.ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response> localVarResponse = await DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfoAsync(pkiDeposittransitchequeID, body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Synchronize Document type checklist 
+        /// </summary>
+        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pkiDeposittransitchequeID"></param>
+        /// <param name="body"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (DeposittransitchequeSyncDocumenttypechecklistV1Response)</returns>
+        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DeposittransitchequeSyncDocumenttypechecklistV1Response>> DeposittransitchequeSyncDocumenttypechecklistV1WithHttpInfoAsync(int pkiDeposittransitchequeID, Object? body = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
+        {
+
+            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("pkiDeposittransitchequeID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDeposittransitchequeID)); // path parameter
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "ObjectDeposittransitchequeApi.DeposittransitchequeSyncDocumenttypechecklistV1";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<DeposittransitchequeSyncDocumenttypechecklistV1Response>("/1/object/deposittransitcheque/{pkiDeposittransitchequeID}/syncDocumenttypechecklist", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeposittransitchequeSyncDocumenttypechecklistV1", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

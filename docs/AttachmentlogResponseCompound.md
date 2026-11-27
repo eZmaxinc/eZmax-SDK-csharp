@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **ObjUser** | [**CustomUserNameResponse**](CustomUserNameResponse.md) |  | 
 **DtAttachmentlogDatetime** | **string** | The created date | 
 **EAttachmentlogType** | **FieldEAttachmentlogType** |  | 
-**SAttachmentlogDetail** | **string** | The additionnal detail | [optional] 
+**SAttachmentlogDetail** | **string** | The additional detail for the Attachmentlog | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

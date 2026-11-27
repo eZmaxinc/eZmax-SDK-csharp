@@ -27,7 +27,7 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// Payload for POST /1/object/discussion
+    /// Payload for POST /1/object/discussion/improveMessage
     /// </summary>
     [DataContract(Name = "discussion-improveMessage-v1-Response-mPayload")]
     public partial class DiscussionImproveMessageV1ResponseMPayload : IValidatableObject
@@ -40,23 +40,26 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionImproveMessageV1ResponseMPayload" /> class.
         /// </summary>
-        /// <param name="aPkiDiscussionID">An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. (required).</param>
-        public DiscussionImproveMessageV1ResponseMPayload(List<int> aPkiDiscussionID = default)
+        /// <param name="tDiscussionMessage">The Message of the Discussion (required).</param>
+        public DiscussionImproveMessageV1ResponseMPayload(string tDiscussionMessage = default)
         {
-            // to ensure "aPkiDiscussionID" is required (not null)
-            if (aPkiDiscussionID == null)
+            // to ensure "tDiscussionMessage" is required (not null)
+            if (tDiscussionMessage == null)
             {
-                throw new ArgumentNullException("aPkiDiscussionID is a required property for DiscussionImproveMessageV1ResponseMPayload and cannot be null");
+                throw new ArgumentNullException("tDiscussionMessage is a required property for DiscussionImproveMessageV1ResponseMPayload and cannot be null");
             }
-            this.APkiDiscussionID = aPkiDiscussionID;
+            this.TDiscussionMessage = tDiscussionMessage;
         }
 
         /// <summary>
-        /// An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
+        /// The Message of the Discussion
         /// </summary>
-        /// <value>An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.</value>
-        [DataMember(Name = "a_pkiDiscussionID", IsRequired = true, EmitDefaultValue = true)]
-        public List<int> APkiDiscussionID { get; set; }
+        /// <value>The Message of the Discussion</value>
+        /*
+        <example>Hello, this is an example of content in a message</example>
+        */
+        [DataMember(Name = "tDiscussionMessage", IsRequired = true, EmitDefaultValue = true)]
+        public string TDiscussionMessage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -66,7 +69,7 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DiscussionImproveMessageV1ResponseMPayload {\n");
-            sb.Append("  APkiDiscussionID: ").Append(APkiDiscussionID).Append("\n");
+            sb.Append("  TDiscussionMessage: ").Append(TDiscussionMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -87,6 +90,15 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            if (this.TDiscussionMessage != null) {
+                // TDiscussionMessage (string) pattern
+                Regex regexTDiscussionMessage = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);
+                if (!regexTDiscussionMessage.Match(this.TDiscussionMessage).Success)
+                {
+                    yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TDiscussionMessage, must match a pattern of " + regexTDiscussionMessage, new [] { "TDiscussionMessage" });
+                }
+            }
+
             yield break;
         }
     }

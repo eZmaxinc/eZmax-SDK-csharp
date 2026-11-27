@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEDocumenttypePrivacydefault
-The privacydefault of the Documenttype
+The default privacy setting for the document type
 
 ## Properties
 

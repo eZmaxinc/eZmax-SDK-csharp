@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The verified of the Attachment
+    /// The verification status of the Attachment
     /// </summary>
-    /// <value>The verified of the Attachment</value>
+    /// <value>The verification status of the Attachment</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEAttachmentVerified
     {

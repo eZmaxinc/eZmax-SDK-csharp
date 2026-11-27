@@ -51,7 +51,7 @@ namespace eZmaxApi.Model
         /// <param name="objUser">objUser (required).</param>
         /// <param name="dtAttachmentlogDatetime">The created date (required).</param>
         /// <param name="eAttachmentlogType">eAttachmentlogType (required).</param>
-        /// <param name="sAttachmentlogDetail">The additionnal detail.</param>
+        /// <param name="sAttachmentlogDetail">The additional detail for the Attachmentlog.</param>
         public AttachmentlogResponseCompound(int fkiAttachmentID = default, int fkiUserID = default, CustomUserNameResponse objUser = default, string dtAttachmentlogDatetime = default, FieldEAttachmentlogType eAttachmentlogType = default, string sAttachmentlogDetail = default)
         {
             this.FkiAttachmentID = fkiAttachmentID;
@@ -109,9 +109,9 @@ namespace eZmaxApi.Model
         public string DtAttachmentlogDatetime { get; set; }
 
         /// <summary>
-        /// The additionnal detail
+        /// The additional detail for the Attachmentlog
         /// </summary>
-        /// <value>The additionnal detail</value>
+        /// <value>The additional detail for the Attachmentlog</value>
         /*
         <example>System</example>
         */

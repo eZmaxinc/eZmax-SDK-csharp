@@ -32,12 +32,6 @@ namespace eZmaxApi.Model
     [DataContract(Name = "discussion-improveMessage-v1-Request")]
     public partial class DiscussionImproveMessageV1Request : IValidatableObject
     {
-
-        /// <summary>
-        /// Gets or Sets EDiscussionRobot
-        /// </summary>
-        [DataMember(Name = "eDiscussionRobot", IsRequired = true, EmitDefaultValue = true)]
-        public FieldEDiscussionRobot EDiscussionRobot { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionImproveMessageV1Request" /> class.
         /// </summary>
@@ -46,30 +40,16 @@ namespace eZmaxApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscussionImproveMessageV1Request" /> class.
         /// </summary>
-        /// <param name="fkiDiscussionID">The unique ID of the Discussion.</param>
-        /// <param name="eDiscussionRobot">eDiscussionRobot (required).</param>
         /// <param name="tDiscussionMessage">The Message of the Discussion (required).</param>
-        public DiscussionImproveMessageV1Request(int fkiDiscussionID = default, FieldEDiscussionRobot eDiscussionRobot = default, string tDiscussionMessage = default)
+        public DiscussionImproveMessageV1Request(string tDiscussionMessage = default)
         {
-            this.EDiscussionRobot = eDiscussionRobot;
             // to ensure "tDiscussionMessage" is required (not null)
             if (tDiscussionMessage == null)
             {
                 throw new ArgumentNullException("tDiscussionMessage is a required property for DiscussionImproveMessageV1Request and cannot be null");
             }
             this.TDiscussionMessage = tDiscussionMessage;
-            this.FkiDiscussionID = fkiDiscussionID;
         }
-
-        /// <summary>
-        /// The unique ID of the Discussion
-        /// </summary>
-        /// <value>The unique ID of the Discussion</value>
-        /*
-        <example>125</example>
-        */
-        [DataMember(Name = "fkiDiscussionID", EmitDefaultValue = false)]
-        public int FkiDiscussionID { get; set; }
 
         /// <summary>
         /// The Message of the Discussion
@@ -89,8 +69,6 @@ namespace eZmaxApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DiscussionImproveMessageV1Request {\n");
-            sb.Append("  FkiDiscussionID: ").Append(FkiDiscussionID).Append("\n");
-            sb.Append("  EDiscussionRobot: ").Append(EDiscussionRobot).Append("\n");
             sb.Append("  TDiscussionMessage: ").Append(TDiscussionMessage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -112,18 +90,6 @@ namespace eZmaxApi.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // FkiDiscussionID (int) maximum
-            if (this.FkiDiscussionID > (int)16777215)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value less than or equal to 16777215.", new [] { "FkiDiscussionID" });
-            }
-
-            // FkiDiscussionID (int) minimum
-            if (this.FkiDiscussionID < (int)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FkiDiscussionID, must be a value greater than or equal to 0.", new [] { "FkiDiscussionID" });
-            }
-
             if (this.TDiscussionMessage != null) {
                 // TDiscussionMessage (string) pattern
                 Regex regexTDiscussionMessage = new Regex(@"^[\s\S]{0,65535}$", RegexOptions.CultureInvariant);

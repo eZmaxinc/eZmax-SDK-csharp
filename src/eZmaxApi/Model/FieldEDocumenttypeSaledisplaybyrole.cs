@@ -27,9 +27,9 @@ using OpenAPIDateConverter = eZmaxApi.Client.OpenAPIDateConverter;
 namespace eZmaxApi.Model
 {
     /// <summary>
-    /// The saledisplaybyrole of the Documenttype
+    /// The role that determines document display in sale transactions
     /// </summary>
-    /// <value>The saledisplaybyrole of the Documenttype</value>
+    /// <value>The role that determines document display in sale transactions</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldEDocumenttypeSaledisplaybyrole
     {

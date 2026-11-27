@@ -106,7 +106,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiTranqcontractID">The unique ID of the Tranqcontract.</param>
         /// <param name="fkiTemplateID">The unique ID of the Template.</param>
         /// <param name="fkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist.</param>
-        /// <param name="sDocumenttypeNameX">The name of the Documenttype in the language of the requester.</param>
+        /// <param name="sDocumenttypeNameX">The name of the document type in the requester&#39;s language.</param>
         /// <param name="fkiFolderID">The unique ID of the Folder.</param>
         /// <param name="fkiRejectedoffertopurchaseID">The unique ID of the Rejectedoffertopurchase.</param>
         /// <param name="fkiDisclosureID">The unique ID of the Disclosure.</param>
@@ -122,8 +122,8 @@ namespace eZmaxApi.Model
         /// <param name="iAttachmentSize">The size of the Attachment (required).</param>
         /// <param name="iAttachmentEDMmoduleflag">The edmmoduleflag of the Attachment.</param>
         /// <param name="sAttachmentMD5">The MD5 of the Attachment (required).</param>
-        /// <param name="bAttachmentDeleted">Whether if it&#39;s deleted (required).</param>
-        /// <param name="bAttachmentValid">Whether if it&#39;s valid (required).</param>
+        /// <param name="bAttachmentDeleted">Whether the Attachment is deleted or not (required).</param>
+        /// <param name="bAttachmentValid">Whether the Attachment is valid or not (required).</param>
         /// <param name="eAttachmentVerified">eAttachmentVerified (required).</param>
         /// <param name="tAttachmentRejectioncomment">The rejectioncomment of the Attachment.</param>
         /// <param name="fkiUserIDOwner">The unique ID of the User.</param>
@@ -632,9 +632,9 @@ namespace eZmaxApi.Model
         public int FkiDocumenttypechecklistID { get; set; }
 
         /// <summary>
-        /// The name of the Documenttype in the language of the requester
+        /// The name of the document type in the requester&#39;s language
         /// </summary>
-        /// <value>The name of the Documenttype in the language of the requester</value>
+        /// <value>The name of the document type in the requester&#39;s language</value>
         /*
         <example>Loan deed</example>
         */
@@ -758,9 +758,9 @@ namespace eZmaxApi.Model
         public string SAttachmentMD5 { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s deleted
+        /// Whether the Attachment is deleted or not
         /// </summary>
-        /// <value>Whether if it&#39;s deleted</value>
+        /// <value>Whether the Attachment is deleted or not</value>
         /*
         <example>false</example>
         */
@@ -768,9 +768,9 @@ namespace eZmaxApi.Model
         public bool BAttachmentDeleted { get; set; }
 
         /// <summary>
-        /// Whether if it&#39;s valid
+        /// Whether the Attachment is valid or not
         /// </summary>
-        /// <value>Whether if it&#39;s valid</value>
+        /// <value>Whether the Attachment is valid or not</value>
         /*
         <example>true</example>
         */

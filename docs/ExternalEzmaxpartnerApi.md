@@ -4,15 +4,15 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**EzmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| [**EzmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnersubscribev1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxpartnerproductstage |
 
 <a id="ezmaxpartnersubscribev1"></a>
 # **EzmaxpartnerSubscribeV1**
 > EzmaxpartnerSubscribeV1Response EzmaxpartnerSubscribeV1 (EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request)
 
-Subscribe to an Ezmaxparnerproductstage
+Subscribe to an Ezmaxpartnerproductstage
 
-Subscribe to an Ezmaxparnerproductstage
+Subscribe to an Ezmaxpartnerproductstage
 
 ### Example
 ```csharp
@@ -40,7 +40,7 @@ namespace Example
 
             try
             {
-                // Subscribe to an Ezmaxparnerproductstage
+                // Subscribe to an Ezmaxpartnerproductstage
                 EzmaxpartnerSubscribeV1Response result = apiInstance.EzmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
                 Debug.WriteLine(result);
             }
@@ -61,7 +61,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Subscribe to an Ezmaxparnerproductstage
+    // Subscribe to an Ezmaxpartnerproductstage
     ApiResponse<EzmaxpartnerSubscribeV1Response> response = apiInstance.EzmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

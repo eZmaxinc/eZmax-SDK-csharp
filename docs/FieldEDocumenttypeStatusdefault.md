@@ -1,5 +1,5 @@
 # eZmaxApi.Model.FieldEDocumenttypeStatusdefault
-The statusdefault of the Documenttype
+The default status requirement for the document type
 
 ## Properties
 

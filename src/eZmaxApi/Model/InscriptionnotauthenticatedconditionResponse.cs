@@ -44,7 +44,7 @@ namespace eZmaxApi.Model
         /// <param name="fkiInscriptionnotauthenticatedconditiontypeID">The unique ID of the Inscriptionnotauthenticatedconditiontype (required).</param>
         /// <param name="sInscriptionnotauthenticatedconditiontypeNameX">The name of the Inscriptionnotauthenticatedconditiontype in the language of the requester (required).</param>
         /// <param name="fkiInscriptionnotauthenticatedID">The unique ID of the Inscriptionnotauthenticated. (required).</param>
-        /// <param name="bInscriptionnotauthenticatedconditionFilled">Can access attachment when we clone a user (required).</param>
+        /// <param name="bInscriptionnotauthenticatedconditionFilled">Whether the user can access attachments when their session is cloned (required).</param>
         /// <param name="dtInscriptionnotauthenticatedconditionCompleted">The date the Inscriptionnotauthenticatedcondition was completed.</param>
         /// <param name="dtInscriptionnotauthenticatedconditionDue">The date the Inscriptionnotauthenticatedcondition is due.</param>
         /// <param name="tInscriptionnotauthenticatedconditionComment">The comment of the Inscriptionnotauthenticatedcondition (required).</param>
@@ -111,9 +111,9 @@ namespace eZmaxApi.Model
         public int FkiInscriptionnotauthenticatedID { get; set; }
 
         /// <summary>
-        /// Can access attachment when we clone a user
+        /// Whether the user can access attachments when their session is cloned
         /// </summary>
-        /// <value>Can access attachment when we clone a user</value>
+        /// <value>Whether the user can access attachments when their session is cloned</value>
         /*
         <example>false</example>
         */
