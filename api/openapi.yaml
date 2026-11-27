@@ -235,9 +235,6 @@ tags:
 - description: Discussionmessage contains details about Discussionmessages
   name: Object_Discussionmessage
   x-displayName: Discussionmessage
-- description: Documenttypechecklist contains details about Documenttypechecklists
-  name: Object_Documenttypechecklist
-  x-displayName: Documenttypechecklist
 - description: Domain contains details about Domains
   name: Object_Domain
   x-displayName: Domain
@@ -9122,58 +9119,6 @@ paths:
       x-presentations: []
       x-systemconfigurationtype:
       - All
-  /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}:
-    description: ""
-    patch:
-      description: ""
-      operationId: Documenttypechecklist_PatchObject_V1
-      parameters:
-      - description: The unique ID of the Documenttypechecklist
-        explode: false
-        in: path
-        name: pkiDocumenttypechecklistID
-        required: true
-        schema:
-          $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/documenttypechecklist-patchObject-v1-Request"
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/documenttypechecklist-patchObject-v1-Response"
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body.
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request was syntactically valid but failed because of an
-            interdependance condition. Look for detail about the error in the body.
-      security:
-      - Authorization: []
-      summary: Patch an existing Documenttypechecklist
-      tags:
-      - Object_Documenttypechecklist
-      x-systemconfigurationtype:
-      - All
-      x-permissions:
-      - All
-      x-usertypeextra: []
-      x-presentations: []
   /1/object/domain:
     description: ""
     post:
@@ -52414,16 +52359,6 @@ components:
       - Deleted
       example: New
       type: string
-    Field-eDocumenttypechecklistStatus:
-      description: The status of the Documenttypechecklist
-      enum:
-      - Not required
-      - Required
-      - Filed
-      - Justified
-      - Mandatory
-      example: Not required
-      type: string
     Field-eErrorCode:
       description: The error code. See documentation for valid values
       enum:
@@ -57883,11 +57818,6 @@ components:
       description: The content of the Discussionmessage
       example: "Hello, this is an example of content in a message"
       pattern: "^[\\s\\S]{0,65535}$"
-      type: string
-    Field-tDocumenttypechecklistComment:
-      description: The comment of the Documenttypechecklist
-      example: This document is optional.
-      pattern: "^.{0,255}$"
       type: string
     Field-tExtraMessage:
       description: A custom text message that will be added to the email sent.
@@ -128269,49 +128199,6 @@ components:
       allOf:
       - $ref: "#/components/schemas/Common-Response"
       description: "Response for PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}"
-      example:
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    documenttypechecklist-RequestPatch:
-      description: A Documenttypechecklist Object
-      properties:
-        eDocumenttypechecklistStatus:
-          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
-        tDocumenttypechecklistComment:
-          description: The comment of the Documenttypechecklist
-          example: This document is optional.
-          pattern: "^.{0,255}$"
-          type: string
-      type: object
-    documenttypechecklist-patchObject-v1-Request:
-      description: "Request for PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
-      properties:
-        objDocumenttypechecklist:
-          $ref: "#/components/schemas/documenttypechecklist-RequestPatch"
-      required:
-      - objDocumenttypechecklist
-      type: object
-    documenttypechecklist-patchObject-v1-Response:
-      allOf:
-      - $ref: "#/components/schemas/Common-Response"
-      description: "Response for PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
       example:
         objDebugPayload:
           iVersionMin: 1
@@ -326549,7 +326436,6 @@ x-tagGroups:
   - Object_Discussion
   - Object_Discussionmembership
   - Object_Discussionmessage
-  - Object_Documenttypechecklist
   - Object_Domain
   - Object_Electronicfundstransfer
   - Object_Electronicfundstransfertransaction

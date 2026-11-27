@@ -581,9 +581,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumenttypechecklistPatchObjectV1Request.md
-docs/DocumenttypechecklistPatchObjectV1Response.md
-docs/DocumenttypechecklistRequestPatch.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -1603,7 +1600,6 @@ docs/FieldECustomerType.md
 docs/FieldEDisclosureInteresttype.md
 docs/FieldEDiscussionRobot.md
 docs/FieldEDiscussionmessageStatus.md
-docs/FieldEDocumenttypechecklistStatus.md
 docs/FieldEErrorCode.md
 docs/FieldEEzdoctemplatedocumentPrivacylevel.md
 docs/FieldEEzmaxinvoicingPaymenttype.md
@@ -1995,7 +1991,6 @@ docs/ObjectDisclosureApi.md
 docs/ObjectDiscussionApi.md
 docs/ObjectDiscussionmembershipApi.md
 docs/ObjectDiscussionmessageApi.md
-docs/ObjectDocumenttypechecklistApi.md
 docs/ObjectDomainApi.md
 docs/ObjectElectronicfundstransferApi.md
 docs/ObjectElectronicfundstransfertransactionApi.md
@@ -2681,7 +2676,6 @@ src/eZmaxApi/Api/ObjectDisclosureApi.cs
 src/eZmaxApi/Api/ObjectDiscussionApi.cs
 src/eZmaxApi/Api/ObjectDiscussionmembershipApi.cs
 src/eZmaxApi/Api/ObjectDiscussionmessageApi.cs
-src/eZmaxApi/Api/ObjectDocumenttypechecklistApi.cs
 src/eZmaxApi/Api/ObjectDomainApi.cs
 src/eZmaxApi/Api/ObjectElectronicfundstransferApi.cs
 src/eZmaxApi/Api/ObjectElectronicfundstransfertransactionApi.cs
@@ -3392,9 +3386,6 @@ src/eZmaxApi/Model/DiscussionmessageRequestCompound.cs
 src/eZmaxApi/Model/DiscussionmessageRequestPatch.cs
 src/eZmaxApi/Model/DiscussionmessageResponse.cs
 src/eZmaxApi/Model/DiscussionmessageResponseCompound.cs
-src/eZmaxApi/Model/DocumenttypechecklistPatchObjectV1Request.cs
-src/eZmaxApi/Model/DocumenttypechecklistPatchObjectV1Response.cs
-src/eZmaxApi/Model/DocumenttypechecklistRequestPatch.cs
 src/eZmaxApi/Model/DomainAutocompleteElementResponse.cs
 src/eZmaxApi/Model/DomainCreateObjectV1Request.cs
 src/eZmaxApi/Model/DomainCreateObjectV1Response.cs
@@ -4413,7 +4404,6 @@ src/eZmaxApi/Model/FieldECustomerType.cs
 src/eZmaxApi/Model/FieldEDisclosureInteresttype.cs
 src/eZmaxApi/Model/FieldEDiscussionRobot.cs
 src/eZmaxApi/Model/FieldEDiscussionmessageStatus.cs
-src/eZmaxApi/Model/FieldEDocumenttypechecklistStatus.cs
 src/eZmaxApi/Model/FieldEErrorCode.cs
 src/eZmaxApi/Model/FieldEEzdoctemplatedocumentPrivacylevel.cs
 src/eZmaxApi/Model/FieldEEzmaxinvoicingPaymenttype.cs
