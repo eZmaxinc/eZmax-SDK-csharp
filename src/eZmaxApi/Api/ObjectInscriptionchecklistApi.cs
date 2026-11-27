@@ -48,6 +48,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         InscriptionchecklistGetAutocompleteV3Response InscriptionchecklistGetAutocompleteV3(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
 
         /// <summary>
@@ -71,6 +72,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         ApiResponse<InscriptionchecklistGetAutocompleteV3Response> InscriptionchecklistGetAutocompleteV3WithHttpInfo(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0);
         #endregion Synchronous Operations
     }
@@ -103,6 +105,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<InscriptionchecklistGetAutocompleteV3Response> InscriptionchecklistGetAutocompleteV3Async(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -127,6 +130,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionchecklistGetAutocompleteV3Response)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<InscriptionchecklistGetAutocompleteV3Response>> InscriptionchecklistGetAutocompleteV3WithHttpInfoAsync(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
@@ -266,6 +270,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         public InscriptionchecklistGetAutocompleteV3Response InscriptionchecklistGetAutocompleteV3(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
         {
             eZmaxApi.Client.ApiResponse<InscriptionchecklistGetAutocompleteV3Response> localVarResponse = InscriptionchecklistGetAutocompleteV3WithHttpInfo(sSelector, fkiBuyercontractID, fkiInscriptionID, fkiInscriptionnotauthenticatedID, fkiInscriptiontempID, fkiAgentID, fkiBrokerID, fkiOtherincomeID, fkiRejectedoffertopurchaseID, eFilterActive, sQuery, acceptLanguage);
@@ -290,6 +295,7 @@ namespace eZmaxApi.Api
         /// <param name="acceptLanguage"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         public eZmaxApi.Client.ApiResponse<InscriptionchecklistGetAutocompleteV3Response> InscriptionchecklistGetAutocompleteV3WithHttpInfo(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0)
         {
             // verify the required parameter 'sSelector' is set
@@ -409,6 +415,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InscriptionchecklistGetAutocompleteV3Response</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<InscriptionchecklistGetAutocompleteV3Response> InscriptionchecklistGetAutocompleteV3Async(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             eZmaxApi.Client.ApiResponse<InscriptionchecklistGetAutocompleteV3Response> localVarResponse = await InscriptionchecklistGetAutocompleteV3WithHttpInfoAsync(sSelector, fkiBuyercontractID, fkiInscriptionID, fkiInscriptionnotauthenticatedID, fkiInscriptiontempID, fkiAgentID, fkiBrokerID, fkiOtherincomeID, fkiRejectedoffertopurchaseID, eFilterActive, sQuery, acceptLanguage, operationIndex, cancellationToken).ConfigureAwait(false);
@@ -434,6 +441,7 @@ namespace eZmaxApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InscriptionchecklistGetAutocompleteV3Response)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<InscriptionchecklistGetAutocompleteV3Response>> InscriptionchecklistGetAutocompleteV3WithHttpInfoAsync(string sSelector, string? fkiBuyercontractID = default, string? fkiInscriptionID = default, string? fkiInscriptionnotauthenticatedID = default, string? fkiInscriptiontempID = default, string? fkiAgentID = default, string? fkiBrokerID = default, string? fkiOtherincomeID = default, string? fkiRejectedoffertopurchaseID = default, string? eFilterActive = default, string? sQuery = default, HeaderAcceptLanguage? acceptLanguage = default, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
         {
             // verify the required parameter 'sSelector' is set

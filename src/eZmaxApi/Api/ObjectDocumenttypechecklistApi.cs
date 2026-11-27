@@ -28,26 +28,6 @@ namespace eZmaxApi.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Delete an existing Documenttypechecklist
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistDeleteObjectV1Response</returns>
-        DocumenttypechecklistDeleteObjectV1Response DocumenttypechecklistDeleteObjectV1(int pkiDocumenttypechecklistID, int operationIndex = 0);
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistDeleteObjectV1Response</returns>
-        ApiResponse<DocumenttypechecklistDeleteObjectV1Response> DocumenttypechecklistDeleteObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, int operationIndex = 0);
-        /// <summary>
         /// Patch an existing Documenttypechecklist
         /// </summary>
         /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -78,31 +58,6 @@ namespace eZmaxApi.Api
     public interface IObjectDocumenttypechecklistApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
-        /// <summary>
-        /// Delete an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistDeleteObjectV1Response</returns>
-        System.Threading.Tasks.Task<DocumenttypechecklistDeleteObjectV1Response> DocumenttypechecklistDeleteObjectV1Async(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistDeleteObjectV1Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumenttypechecklistDeleteObjectV1Response>> DocumenttypechecklistDeleteObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Patch an existing Documenttypechecklist
         /// </summary>
@@ -248,149 +203,6 @@ namespace eZmaxApi.Api
                 return _exceptionFactory;
             }
             set { _exceptionFactory = value; }
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>DocumenttypechecklistDeleteObjectV1Response</returns>
-        public DocumenttypechecklistDeleteObjectV1Response DocumenttypechecklistDeleteObjectV1(int pkiDocumenttypechecklistID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistDeleteObjectV1Response> localVarResponse = DocumenttypechecklistDeleteObjectV1WithHttpInfo(pkiDocumenttypechecklistID);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <returns>ApiResponse of DocumenttypechecklistDeleteObjectV1Response</returns>
-        public eZmaxApi.Client.ApiResponse<DocumenttypechecklistDeleteObjectV1Response> DocumenttypechecklistDeleteObjectV1WithHttpInfo(int pkiDocumenttypechecklistID, int operationIndex = 0)
-        {
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            var localVarMultipartFormData = localVarContentType == "multipart/form-data";
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Delete<DocumenttypechecklistDeleteObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration);
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of DocumenttypechecklistDeleteObjectV1Response</returns>
-        public async System.Threading.Tasks.Task<DocumenttypechecklistDeleteObjectV1Response> DocumenttypechecklistDeleteObjectV1Async(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-            eZmaxApi.Client.ApiResponse<DocumenttypechecklistDeleteObjectV1Response> localVarResponse = await DocumenttypechecklistDeleteObjectV1WithHttpInfoAsync(pkiDocumenttypechecklistID, operationIndex, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete an existing Documenttypechecklist 
-        /// </summary>
-        /// <exception cref="eZmaxApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiDocumenttypechecklistID">The unique ID of the Documenttypechecklist</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (DocumenttypechecklistDeleteObjectV1Response)</returns>
-        public async System.Threading.Tasks.Task<eZmaxApi.Client.ApiResponse<DocumenttypechecklistDeleteObjectV1Response>> DocumenttypechecklistDeleteObjectV1WithHttpInfoAsync(int pkiDocumenttypechecklistID, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default)
-        {
-
-            eZmaxApi.Client.RequestOptions localVarRequestOptions = new eZmaxApi.Client.RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-                "application/json"
-            };
-
-            var localVarContentType = eZmaxApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
-
-            var localVarAccept = eZmaxApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
-
-            localVarRequestOptions.PathParameters.Add("pkiDocumenttypechecklistID", eZmaxApi.Client.ClientUtils.ParameterToString(pkiDocumenttypechecklistID)); // path parameter
-
-            localVarRequestOptions.Operation = "ObjectDocumenttypechecklistApi.DocumenttypechecklistDeleteObjectV1";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
-            // authentication (Authorization) required
-            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<DocumenttypechecklistDeleteObjectV1Response>("/1/object/documenttypechecklist/{pkiDocumenttypechecklistID}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("DocumenttypechecklistDeleteObjectV1", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
-            }
-
-            return localVarResponse;
         }
 
         /// <summary>

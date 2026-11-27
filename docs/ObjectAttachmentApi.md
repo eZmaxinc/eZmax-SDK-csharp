@@ -9,7 +9,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**AttachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentgetattachmentlogsv1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
 | [**AttachmentRenameV1**](ObjectAttachmentApi.md#attachmentrenamev1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | [**AttachmentRestoreV1**](ObjectAttachmentApi.md#attachmentrestorev1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
-| [**AttachmentSetDocumentTypeV1**](ObjectAttachmentApi.md#attachmentsetdocumenttypev1) | **POST** /1/object/attachment/{pkiAttachmentID}/setDocumentType | Change attachment document type |
 | [**AttachmentSetPrivacyV1**](ObjectAttachmentApi.md#attachmentsetprivacyv1) | **POST** /1/object/attachment/{pkiAttachmentID}/setPrivacy | Change the attachment privacy |
 | [**AttachmentValidateV1**](ObjectAttachmentApi.md#attachmentvalidatev1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 
@@ -508,107 +507,6 @@ catch (ApiException e)
 | **403** | The request is not allowed to be executed. Look for detail about the error in the body. |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 | **409** | The request failed due to a conflict with the resource state. Look for detail about the error in the body. |  -  |
-| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="attachmentsetdocumenttypev1"></a>
-# **AttachmentSetDocumentTypeV1**
-> AttachmentSetDocumentTypeV1Response AttachmentSetDocumentTypeV1 (int pkiAttachmentID, AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request)
-
-Change attachment document type
-
-The endpoint allows to change the document type for an attachment.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class AttachmentSetDocumentTypeV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectAttachmentApi(config);
-            var pkiAttachmentID = 56;  // int | 
-            var attachmentSetDocumentTypeV1Request = new AttachmentSetDocumentTypeV1Request(); // AttachmentSetDocumentTypeV1Request | 
-
-            try
-            {
-                // Change attachment document type
-                AttachmentSetDocumentTypeV1Response result = apiInstance.AttachmentSetDocumentTypeV1(pkiAttachmentID, attachmentSetDocumentTypeV1Request);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentSetDocumentTypeV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the AttachmentSetDocumentTypeV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Change attachment document type
-    ApiResponse<AttachmentSetDocumentTypeV1Response> response = apiInstance.AttachmentSetDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentSetDocumentTypeV1Request);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectAttachmentApi.AttachmentSetDocumentTypeV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiAttachmentID** | **int** |  |  |
-| **attachmentSetDocumentTypeV1Request** | [**AttachmentSetDocumentTypeV1Request**](AttachmentSetDocumentTypeV1Request.md) |  |  |
-
-### Return type
-
-[**AttachmentSetDocumentTypeV1Response**](AttachmentSetDocumentTypeV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **403** | The request is not allowed to be executed. Look for detail about the error in the body. |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
