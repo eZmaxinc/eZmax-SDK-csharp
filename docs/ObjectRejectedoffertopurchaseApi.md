@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**RejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationlistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list |
 | [**RejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationrecipientsv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient |
 | [**RejectedoffertopurchaseGetCommunicationsendersV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetcommunicationsendersv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders | Retrieve Rejectedoffertopurchase&#39;s Communicationsender |
-| [**RejectedoffertopurchaseGetDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetdocumenttypechecklistv1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**RejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasegetlistv1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list |
 | [**RejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseimportintoedmv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase |
-| [**RejectedoffertopurchaseSyncDocumenttypechecklistV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchasesyncdocumenttypechecklistv1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="rejectedoffertopurchasebatchdownloadv1"></a>
 # **RejectedoffertopurchaseBatchDownloadV1**
@@ -587,101 +585,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="rejectedoffertopurchasegetdocumenttypechecklistv1"></a>
-# **RejectedoffertopurchaseGetDocumenttypechecklistV1**
-> RejectedoffertopurchaseGetDocumenttypechecklistV1Response RejectedoffertopurchaseGetDocumenttypechecklistV1 (int pkiRejectedoffertopurchaseID)
-
-Retrieve Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class RejectedoffertopurchaseGetDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectRejectedoffertopurchaseApi(config);
-            var pkiRejectedoffertopurchaseID = 56;  // int | 
-
-            try
-            {
-                // Retrieve Document type checklist
-                RejectedoffertopurchaseGetDocumenttypechecklistV1Response result = apiInstance.RejectedoffertopurchaseGetDocumenttypechecklistV1(pkiRejectedoffertopurchaseID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the RejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve Document type checklist
-    ApiResponse<RejectedoffertopurchaseGetDocumenttypechecklistV1Response> response = apiInstance.RejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiRejectedoffertopurchaseID** | **int** |  |  |
-
-### Return type
-
-[**RejectedoffertopurchaseGetDocumenttypechecklistV1Response**](RejectedoffertopurchaseGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="rejectedoffertopurchasegetlistv1"></a>
 # **RejectedoffertopurchaseGetListV1**
 > RejectedoffertopurchaseGetListV1Response RejectedoffertopurchaseGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
@@ -863,103 +766,6 @@ catch (ApiException e)
 ### Return type
 
 [**RejectedoffertopurchaseImportIntoEDMV1Response**](RejectedoffertopurchaseImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="rejectedoffertopurchasesyncdocumenttypechecklistv1"></a>
-# **RejectedoffertopurchaseSyncDocumenttypechecklistV1**
-> RejectedoffertopurchaseSyncDocumenttypechecklistV1Response RejectedoffertopurchaseSyncDocumenttypechecklistV1 (int pkiRejectedoffertopurchaseID, Object? body = null)
-
-Synchronize Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class RejectedoffertopurchaseSyncDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectRejectedoffertopurchaseApi(config);
-            var pkiRejectedoffertopurchaseID = 56;  // int | 
-            var body = null;  // Object? |  (optional) 
-
-            try
-            {
-                // Synchronize Document type checklist
-                RejectedoffertopurchaseSyncDocumenttypechecklistV1Response result = apiInstance.RejectedoffertopurchaseSyncDocumenttypechecklistV1(pkiRejectedoffertopurchaseID, body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseSyncDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the RejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Synchronize Document type checklist
-    ApiResponse<RejectedoffertopurchaseSyncDocumenttypechecklistV1Response> response = apiInstance.RejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo(pkiRejectedoffertopurchaseID, body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectRejectedoffertopurchaseApi.RejectedoffertopurchaseSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiRejectedoffertopurchaseID** | **int** |  |  |
-| **body** | **Object?** |  | [optional]  |
-
-### Return type
-
-[**RejectedoffertopurchaseSyncDocumenttypechecklistV1Response**](RejectedoffertopurchaseSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

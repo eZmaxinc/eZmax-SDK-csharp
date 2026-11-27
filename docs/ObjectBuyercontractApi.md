@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**BuyercontractGetCommunicationListV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationlistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList | Retrieve Communication list |
 | [**BuyercontractGetCommunicationrecipientsV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationrecipientsv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients | Retrieve Buyercontract&#39;s Communicationrecipient |
 | [**BuyercontractGetCommunicationsendersV1**](ObjectBuyercontractApi.md#buyercontractgetcommunicationsendersv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders | Retrieve Buyercontract&#39;s Communicationsender |
-| [**BuyercontractGetDocumenttypechecklistV1**](ObjectBuyercontractApi.md#buyercontractgetdocumenttypechecklistv1) | **GET** /1/object/buyercontract/{pkiBuyercontractID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**BuyercontractGetListV1**](ObjectBuyercontractApi.md#buyercontractgetlistv1) | **GET** /1/object/buyercontract/getList | Retrieve Buyercontract list |
 | [**BuyercontractImportIntoEDMV1**](ObjectBuyercontractApi.md#buyercontractimportintoedmv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/importIntoEDM | Import attachments into the Buyercontract |
-| [**BuyercontractSyncDocumenttypechecklistV1**](ObjectBuyercontractApi.md#buyercontractsyncdocumenttypechecklistv1) | **POST** /1/object/buyercontract/{pkiBuyercontractID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="buyercontractbatchdownloadv1"></a>
 # **BuyercontractBatchDownloadV1**
@@ -587,101 +585,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="buyercontractgetdocumenttypechecklistv1"></a>
-# **BuyercontractGetDocumenttypechecklistV1**
-> BuyercontractGetDocumenttypechecklistV1Response BuyercontractGetDocumenttypechecklistV1 (int pkiBuyercontractID)
-
-Retrieve Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class BuyercontractGetDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectBuyercontractApi(config);
-            var pkiBuyercontractID = 56;  // int | 
-
-            try
-            {
-                // Retrieve Document type checklist
-                BuyercontractGetDocumenttypechecklistV1Response result = apiInstance.BuyercontractGetDocumenttypechecklistV1(pkiBuyercontractID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectBuyercontractApi.BuyercontractGetDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the BuyercontractGetDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve Document type checklist
-    ApiResponse<BuyercontractGetDocumenttypechecklistV1Response> response = apiInstance.BuyercontractGetDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectBuyercontractApi.BuyercontractGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiBuyercontractID** | **int** |  |  |
-
-### Return type
-
-[**BuyercontractGetDocumenttypechecklistV1Response**](BuyercontractGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="buyercontractgetlistv1"></a>
 # **BuyercontractGetListV1**
 > BuyercontractGetListV1Response BuyercontractGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
@@ -865,103 +768,6 @@ catch (ApiException e)
 ### Return type
 
 [**BuyercontractImportIntoEDMV1Response**](BuyercontractImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="buyercontractsyncdocumenttypechecklistv1"></a>
-# **BuyercontractSyncDocumenttypechecklistV1**
-> BuyercontractSyncDocumenttypechecklistV1Response BuyercontractSyncDocumenttypechecklistV1 (int pkiBuyercontractID, Object? body = null)
-
-Synchronize Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class BuyercontractSyncDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectBuyercontractApi(config);
-            var pkiBuyercontractID = 56;  // int | 
-            var body = null;  // Object? |  (optional) 
-
-            try
-            {
-                // Synchronize Document type checklist
-                BuyercontractSyncDocumenttypechecklistV1Response result = apiInstance.BuyercontractSyncDocumenttypechecklistV1(pkiBuyercontractID, body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectBuyercontractApi.BuyercontractSyncDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the BuyercontractSyncDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Synchronize Document type checklist
-    ApiResponse<BuyercontractSyncDocumenttypechecklistV1Response> response = apiInstance.BuyercontractSyncDocumenttypechecklistV1WithHttpInfo(pkiBuyercontractID, body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectBuyercontractApi.BuyercontractSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiBuyercontractID** | **int** |  |  |
-| **body** | **Object?** |  | [optional]  |
-
-### Return type
-
-[**BuyercontractSyncDocumenttypechecklistV1Response**](BuyercontractSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

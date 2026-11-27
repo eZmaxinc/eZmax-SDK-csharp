@@ -10,9 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**PaymentpreparationGetCommunicationListV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationlistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationList | Retrieve Communication list |
 | [**PaymentpreparationGetCommunicationrecipientsV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationrecipientsv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**PaymentpreparationGetCommunicationsendersV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetcommunicationsendersv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getCommunicationsenders | Retrieve Communication senders |
-| [**PaymentpreparationGetDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationgetdocumenttypechecklistv1) | **GET** /1/object/paymentpreparation/{pkiPaymentpreparationID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**PaymentpreparationImportIntoEDMV1**](ObjectPaymentpreparationApi.md#paymentpreparationimportintoedmv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/importIntoEDM | Import attachments into the Paymentpreparation |
-| [**PaymentpreparationSyncDocumenttypechecklistV1**](ObjectPaymentpreparationApi.md#paymentpreparationsyncdocumenttypechecklistv1) | **POST** /1/object/paymentpreparation/{pkiPaymentpreparationID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="paymentpreparationbatchdownloadv1"></a>
 # **PaymentpreparationBatchDownloadV1**
@@ -588,101 +586,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="paymentpreparationgetdocumenttypechecklistv1"></a>
-# **PaymentpreparationGetDocumenttypechecklistV1**
-> PaymentpreparationGetDocumenttypechecklistV1Response PaymentpreparationGetDocumenttypechecklistV1 (int pkiPaymentpreparationID)
-
-Retrieve Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class PaymentpreparationGetDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectPaymentpreparationApi(config);
-            var pkiPaymentpreparationID = 56;  // int | 
-
-            try
-            {
-                // Retrieve Document type checklist
-                PaymentpreparationGetDocumenttypechecklistV1Response result = apiInstance.PaymentpreparationGetDocumenttypechecklistV1(pkiPaymentpreparationID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectPaymentpreparationApi.PaymentpreparationGetDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PaymentpreparationGetDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve Document type checklist
-    ApiResponse<PaymentpreparationGetDocumenttypechecklistV1Response> response = apiInstance.PaymentpreparationGetDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectPaymentpreparationApi.PaymentpreparationGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiPaymentpreparationID** | **int** |  |  |
-
-### Return type
-
-[**PaymentpreparationGetDocumenttypechecklistV1Response**](PaymentpreparationGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="paymentpreparationimportintoedmv1"></a>
 # **PaymentpreparationImportIntoEDMV1**
 > PaymentpreparationImportIntoEDMV1Response PaymentpreparationImportIntoEDMV1 (int pkiPaymentpreparationID, PaymentpreparationImportIntoEDMV1Request paymentpreparationImportIntoEDMV1Request)
@@ -761,103 +664,6 @@ catch (ApiException e)
 ### Return type
 
 [**PaymentpreparationImportIntoEDMV1Response**](PaymentpreparationImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="paymentpreparationsyncdocumenttypechecklistv1"></a>
-# **PaymentpreparationSyncDocumenttypechecklistV1**
-> PaymentpreparationSyncDocumenttypechecklistV1Response PaymentpreparationSyncDocumenttypechecklistV1 (int pkiPaymentpreparationID, Object? body = null)
-
-Synchronize Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class PaymentpreparationSyncDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectPaymentpreparationApi(config);
-            var pkiPaymentpreparationID = 56;  // int | 
-            var body = null;  // Object? |  (optional) 
-
-            try
-            {
-                // Synchronize Document type checklist
-                PaymentpreparationSyncDocumenttypechecklistV1Response result = apiInstance.PaymentpreparationSyncDocumenttypechecklistV1(pkiPaymentpreparationID, body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectPaymentpreparationApi.PaymentpreparationSyncDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the PaymentpreparationSyncDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Synchronize Document type checklist
-    ApiResponse<PaymentpreparationSyncDocumenttypechecklistV1Response> response = apiInstance.PaymentpreparationSyncDocumenttypechecklistV1WithHttpInfo(pkiPaymentpreparationID, body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectPaymentpreparationApi.PaymentpreparationSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiPaymentpreparationID** | **int** |  |  |
-| **body** | **Object?** |  | [optional]  |
-
-### Return type
-
-[**PaymentpreparationSyncDocumenttypechecklistV1Response**](PaymentpreparationSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 

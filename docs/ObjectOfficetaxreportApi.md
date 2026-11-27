@@ -10,10 +10,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**OfficetaxreportGetCommunicationListV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationlistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList | Retrieve Communication list |
 | [**OfficetaxreportGetCommunicationrecipientsV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationrecipientsv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**OfficetaxreportGetCommunicationsendersV1**](ObjectOfficetaxreportApi.md#officetaxreportgetcommunicationsendersv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders | Retrieve Communication senders |
-| [**OfficetaxreportGetDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportgetdocumenttypechecklistv1) | **GET** /1/object/officetaxreport/{pkiOfficetaxreportID}/getDocumenttypechecklist | Retrieve Document type checklist |
 | [**OfficetaxreportGetListV1**](ObjectOfficetaxreportApi.md#officetaxreportgetlistv1) | **GET** /1/object/officetaxreport/getList | Retrieve Officetaxreport list |
 | [**OfficetaxreportImportIntoEDMV1**](ObjectOfficetaxreportApi.md#officetaxreportimportintoedmv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/importIntoEDM | Import attachments into the Officetaxreport |
-| [**OfficetaxreportSyncDocumenttypechecklistV1**](ObjectOfficetaxreportApi.md#officetaxreportsyncdocumenttypechecklistv1) | **POST** /1/object/officetaxreport/{pkiOfficetaxreportID}/syncDocumenttypechecklist | Synchronize Document type checklist |
 
 <a id="officetaxreportbatchdownloadv1"></a>
 # **OfficetaxreportBatchDownloadV1**
@@ -589,101 +587,6 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a id="officetaxreportgetdocumenttypechecklistv1"></a>
-# **OfficetaxreportGetDocumenttypechecklistV1**
-> OfficetaxreportGetDocumenttypechecklistV1Response OfficetaxreportGetDocumenttypechecklistV1 (int pkiOfficetaxreportID)
-
-Retrieve Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class OfficetaxreportGetDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectOfficetaxreportApi(config);
-            var pkiOfficetaxreportID = 56;  // int | 
-
-            try
-            {
-                // Retrieve Document type checklist
-                OfficetaxreportGetDocumenttypechecklistV1Response result = apiInstance.OfficetaxreportGetDocumenttypechecklistV1(pkiOfficetaxreportID);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectOfficetaxreportApi.OfficetaxreportGetDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the OfficetaxreportGetDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Retrieve Document type checklist
-    ApiResponse<OfficetaxreportGetDocumenttypechecklistV1Response> response = apiInstance.OfficetaxreportGetDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectOfficetaxreportApi.OfficetaxreportGetDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiOfficetaxreportID** | **int** |  |  |
-
-### Return type
-
-[**OfficetaxreportGetDocumenttypechecklistV1Response**](OfficetaxreportGetDocumenttypechecklistV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a id="officetaxreportgetlistv1"></a>
 # **OfficetaxreportGetListV1**
 > OfficetaxreportGetListV1Response OfficetaxreportGetListV1 (string? eOrderBy = null, int? iRowMax = null, int? iRowOffset = null, HeaderAcceptLanguage? acceptLanguage = null, string? sFilter = null)
@@ -865,103 +768,6 @@ catch (ApiException e)
 ### Return type
 
 [**OfficetaxreportImportIntoEDMV1Response**](OfficetaxreportImportIntoEDMV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a id="officetaxreportsyncdocumenttypechecklistv1"></a>
-# **OfficetaxreportSyncDocumenttypechecklistV1**
-> OfficetaxreportSyncDocumenttypechecklistV1Response OfficetaxreportSyncDocumenttypechecklistV1 (int pkiOfficetaxreportID, Object? body = null)
-
-Synchronize Document type checklist
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using eZmaxApi.Api;
-using eZmaxApi.Client;
-using eZmaxApi.Model;
-
-namespace Example
-{
-    public class OfficetaxreportSyncDocumenttypechecklistV1Example
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://prod.api.appcluster01.ca-central-1.ezmax.com/rest";
-            // Configure API key authorization: Authorization
-            config.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new ObjectOfficetaxreportApi(config);
-            var pkiOfficetaxreportID = 56;  // int | 
-            var body = null;  // Object? |  (optional) 
-
-            try
-            {
-                // Synchronize Document type checklist
-                OfficetaxreportSyncDocumenttypechecklistV1Response result = apiInstance.OfficetaxreportSyncDocumenttypechecklistV1(pkiOfficetaxreportID, body);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling ObjectOfficetaxreportApi.OfficetaxreportSyncDocumenttypechecklistV1: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the OfficetaxreportSyncDocumenttypechecklistV1WithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Synchronize Document type checklist
-    ApiResponse<OfficetaxreportSyncDocumenttypechecklistV1Response> response = apiInstance.OfficetaxreportSyncDocumenttypechecklistV1WithHttpInfo(pkiOfficetaxreportID, body);
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling ObjectOfficetaxreportApi.OfficetaxreportSyncDocumenttypechecklistV1WithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **pkiOfficetaxreportID** | **int** |  |  |
-| **body** | **Object?** |  | [optional]  |
-
-### Return type
-
-[**OfficetaxreportSyncDocumenttypechecklistV1Response**](OfficetaxreportSyncDocumenttypechecklistV1Response.md)
 
 ### Authorization
 
